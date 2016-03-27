@@ -1,0 +1,126 @@
+<!-- Registro de Cliente -->
+<div class="container-fluid signUpView">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-1">
+			<h2>Registro de Usuario</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<form name="clientSignup" ng-submit="" novalidate>
+				<div class="col-sm-10 col-sm-offset-1">
+					<div class="form-group">
+						<div class="col-sm-4">
+			                <label>Tipo de usuario:</label>
+							<div class="dropdown">
+							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Cliente
+							  <span class="caret"></span></button>
+							  <ul class="dropdown-menu">
+							    <li><a ng-href="#/promotor-signup">Promotor</a></li>
+							    <li><a ng-href="#/cashier-signup">Cajero</a></li>
+							  </ul>
+							</div>
+		                </div>
+		            </div> <!-- form group end -->
+		        </div>
+	            <div class="col-sm-10 col-sm-offset-1">
+	            	<div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="firstname">Primer nombre*</label>
+		            		<input type="text" class="form-control" id="firstname" placeholder="Primer nombre">
+		            	</div>
+		               <div class="col-sm-6 signUpSecondColumn">
+		               		<label for="secondname">Segundo nombre</label>
+		            		<input type="text" class="form-control" id="secondname" placeholder="Segundo nombre">
+		               </div>
+		            </div> <!-- form group end -->
+	            </div>
+	            <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="firstlastname">Primer apellido*</label>
+		            		<input type="text" class="form-control" id="firstlastname" placeholder="Primer apellido">
+		            	</div>
+		               <div class="col-sm-6 signUpSecondColumn">
+		               		<label for="secondlastname">Segundo apellido</label>
+		            		<input type="text" class="form-control" id="secondlastname" placeholder="Segundo apellido">
+		               </div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="personalId">Cédula de identidad*</label>
+		            		<input type="text" class="form-control" id="personalId" placeholder="1 0111 0111">
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="email">Correo electrónico*</label>
+		            		<input type="email" class="form-control" id="email" placeholder="juan@ejemplo.com">
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="password">Contraseña*</label>
+		            		<input type="password" class="form-control" id="password">
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn">
+		            		<label for="repeatPass">Repita contraseña*</label>
+		            		<input type="email" class="form-control" id="repeatPass">
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="phone">Teléfono*</label>
+		            		<input type="number" ng-minlength="8" ng-maxlength="8" class="form-control" id="phone">
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="phone">Fecha de nacimiento*</label>
+		            		<input type="date" class="form-control">
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn">
+		            		<label>Género</label>
+		            		<select>
+		            			<option>Masculino</option>
+		            			<option>Femenino</option>
+		            		</select>
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6 checkbox">
+		            		<label><input type="checkbox" value="userHasImpairment">Presenta alguna discapacidad</label>
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group col-sm-6">
+		            	<label>Subir fotografía</label>
+		            	<input type="file">
+		            	<sub>Max 2mb</sub>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Registrarse">
+		                </div>
+		            </div> <!-- form group end -->
+		        </div>
+		        
+			</form>
+		</div>
+	</div>
+</div>
