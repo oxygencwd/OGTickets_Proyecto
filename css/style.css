@@ -224,7 +224,7 @@ header .navbar-nav>li>a {
 	background-color: #000;
 }
 
-.upcoming-events .buy-button{
+.upcoming-events .buy-button, .client-profile .event-details-btn{
 	width: 100%;
 	font-size: 2.2em;
 	color: #fff;
@@ -378,7 +378,7 @@ display: block;
 	padding: 8px 10px 5px 11px;
 }
 
-.user-list ul, .gen-list ul{
+.user-list ul, .gen-list ul, .client-reserv ul{
 	margin-top: 12px;
 	margin-bottom: 25px;
 	list-style: none;
@@ -388,7 +388,7 @@ display: block;
 	overflow-y: scroll;
 }
 
-.user-list li, .gen-list li{
+.user-list li, .gen-list li, .client-reserv li{
 	border-bottom: 2px solid #a7a7a7;
 	border-right: 3px;
 	font-size: 1.1em;
@@ -396,13 +396,13 @@ display: block;
 	max-height: 20em;
 }
 
-.user-list a, .gen-list a{
+.user-list a, .gen-list a, .client-reserv a{
 	text-decoration: none;
 	color: #000;
 	display: block;
 }
 
-.user-list a:hover, .gen-list a:hover{
+.user-list a:hover, .gen-list a:hover, .client-profile a:hover{
 	color: #e67d20;
 }
 
@@ -433,6 +433,8 @@ display: block;
 	margin-bottom: 20px;
 }
 
+/*redeem tickets*/
+
 .redeem-tickets label, .redeem-tickets p{
 	font-size: 1.2em;
 }
@@ -461,11 +463,11 @@ display: block;
 	background-color: #286090;
 }
 
-.redeem-tickets .btn-danger{
+.redeem-tickets .btn-danger, .client-profile .user-info-container button{
 	background-color: #fb1b3f;
 }
 
-.redeem-tickets .btn-danger:hover{
+.redeem-tickets .btn-danger:hover, .client-profile .user-info-container button:hover{
 	background-color: #c9302c;
 }
 
@@ -478,6 +480,52 @@ label{
 	font-weight: normal;
 	display: block;
 }
+
+/*client-profile*/
+
+.client-profile-container{
+	margin-top: 80px;
+	background-color: #ebebeb;
+}
+
+.client-profile .profile-img{
+	margin: 30px auto 60px;
+	display: block;
+}
+
+.client-profile .left-panel a{
+	display: block;
+	text-decoration: none;
+	color:#000;
+	font-size: 1.3em;
+}
+
+.client-profile .upcoming-events-item{
+	margin-bottom: 30px;
+}
+
+.client-profile h2{
+	margin-top: 2.8em;
+	margin-bottom: 30px;
+}
+
+.client-profile .event-details-btn{
+	background-color: #e77e23;
+	margin-bottom: 25px;
+}
+
+.client-profile .event-details-btn:hover{
+	color: #000;
+}
+
+.client-profile .upcoming-events-item img{
+	max-width: 100%;
+	height: 15em;
+}
+
+
+
+
 
 .p1{
 	background-color: gray;
@@ -510,11 +558,11 @@ label{
 	}
 
 	.upcoming-events-item{
-		background-color: #fff;
+		background-color: #ebebeb;
 	}
 
-	.upcoming-events img, .upcoming-events .buy-button{
-		width: 50%;
+	.upcoming-events img, .upcoming-events .buy-button, .client-profile .upcoming-events-item img{
+		width: 65%;
 	}
 
 	.upcoming-events-item{
@@ -526,8 +574,20 @@ label{
 		top:15px;
 	}
 
+	.client-profile .upcoming-event-info{
+		left: 138px;
+	}
+
 	.upcoming-events h2{
 		margin-bottom: 25px;
+	}
+
+	.redeem-tickets .info-container{
+		padding-left: 12%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 65%;
 	}
 
 }
@@ -579,6 +639,23 @@ label{
  		margin-top: 30px;
  	}
 
+ 	.client-profile h2{
+ 		margin-top: 0.8em;
+ 	}
+
+ 	.client-profile .upcoming-events-item img{
+ 		height: 13.5em;
+ 		width: 50%;
+ 	}
+
+ 	.client-profile .event-details-btn{
+ 		width: 50%;
+ 	}
+
+ 	.client-profile .upcoming-event-info{
+		left: 29%;
+	}
+
 }
 
 @media (max-width: 600px){
@@ -603,12 +680,21 @@ label{
 		height: 13em;
 	}
 
+	.client-profile .upcoming-events-item img{
+		height: 13em;
+		width: 70%;
+	}
+
 	.upcoming-event-info{
 		left: 22%;
 	}
 
 	.upcoming-events .buy-button{
 		width: 67%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 70%;
 	}
 }
 
@@ -653,12 +739,26 @@ label{
 		height: 13em;
 	}
 
+	.client-profile .upcoming-events-item img{
+		width: 95%;
+		height: 13em;
+	}
+
 	.upcoming-event-info{
 		left: 14%;
 	}
 
 	.upcoming-events .buy-button{
 		width: 90%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 95%;
+		font-size: 1.5em;
+	}
+
+	.client-profile .upcoming-event-info{
+		left: 14%;
 	}
 }
 
