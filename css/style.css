@@ -193,7 +193,7 @@ header .navbar-nav>li>a {
 }
 
 
-.main-search .btn-absolute, .user-list .btn-absolute{
+.main-search .btn-absolute, .user-list .btn-absolute, .gen-list .btn-absolute{
 	position: absolute;
 	right: 5%;
 	top: 3px;
@@ -349,13 +349,13 @@ display: block;
 
 
 /*********user list******/
-.user-list-container{
+.user-list-container, .gen-list-container{
 	background-color: #ebebeb;
 	margin-top: 70px;
 }
 
-.user-list h1{
-	margin-top: 3em;
+.user-list h1, .gen-list h1{
+	margin-top: 1.5em;
 	margin-bottom: 25px;
 }
 
@@ -365,10 +365,71 @@ display: block;
 	margin-right: auto;
 }
 
-.user-list .btn-absolute{
+.width90{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.user-list .btn-absolute, .gen-list .btn-absolute{
 	right: 10%;
 	top: 0;
 	padding: 8px 10px 5px 11px;
+}
+
+.user-list ul, .gen-list ul{
+	margin-top: 12px;
+	margin-bottom: 25px;
+	list-style: none;
+	border: 1px solid #6d6d6d;
+	padding: 0;
+	height: 20em;
+	overflow-y: scroll;
+}
+
+.user-list li, .gen-list li{
+	border-bottom: 2px solid #a7a7a7;
+	border-right: 3px;
+	font-size: 1.1em;
+	padding: 7px 15px;
+	max-height: 20em;
+}
+
+.user-list a, .gen-list a{
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
+
+.user-list a:hover, .gen-list a:hover{
+	color: #e67d20;
+}
+
+.user-info-container{
+	border: 2px solid #3598dc;
+	background-color: #fff;
+	height: 20em;
+	overflow-y: scroll;
+	margin-top: 12px;
+	margin-bottom: 25px;
+	padding: 7px 15px;
+}
+
+.user-info-container h3{
+	margin-top: 10px;
+}
+
+.user-info-container button{
+	background-color: #e67d20;
+	border: none;
+}
+
+.user-info-container button:hover{
+	background-color: #f0ad4e;
+}
+
+.user-item-info{
+	margin-bottom: 20px;
 }
 
 
