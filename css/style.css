@@ -328,20 +328,20 @@ header .navbar-nav>li>a {
 
 
 /*forms*/
-.signUpView{
+.signUpView, .registrationView{
 	background-color: #cdcdcd;
 	padding-top: 80px;
 }
 
-.signUpView .form-group{
+.signUpView .form-group, .registrationView .form-group{
  	margin-top: 30px;
 }
 
-.signUpView select{
+.signUpView select, .registrationView select{
 display: block;
 }
 
-.signUpView input[type="submit"]{
+.signUpView input[type="submit"], .registrationView input[type="submit"]{
 	background-color: #3598dc;
 	color: white;
 	margin-bottom: 50px;
