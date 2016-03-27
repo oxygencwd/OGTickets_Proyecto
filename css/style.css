@@ -349,17 +349,18 @@ display: block;
 
 
 /*********user list******/
-.user-list-container, .gen-list-container{
+.user-list-container, .gen-list-container, .redeem-tickets-container{
 	background-color: #ebebeb;
 	margin-top: 70px;
 }
 
-.user-list h1, .gen-list h1{
+.user-list h1, .gen-list h1, .redeem-tickets h1{
 	margin-top: 1.5em;
 	margin-bottom: 25px;
 }
 
 .width80{
+	display: block;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
@@ -432,6 +433,51 @@ display: block;
 	margin-bottom: 20px;
 }
 
+.redeem-tickets label, .redeem-tickets p{
+	font-size: 1.2em;
+}
+
+.redeem-tickets input, .redeem-tickets button{
+	border: none;
+	border-radius: 0;
+}
+
+.redeem-tickets input[type="text"]{
+	padding:10px;
+	font-size: 1.1em;
+}
+
+.redeem-tickets .btn-primary, .redeem-tickets .btn-danger{
+	padding: 10px;
+	margin-top: 28px;
+	font-size: 1.1em;
+}
+
+.redeem-tickets .btn-primary{
+	background-color: #3598dc;
+}
+
+.redeem-tickets .btn-primary:hover{
+	background-color: #286090;
+}
+
+.redeem-tickets .btn-danger{
+	background-color: #fb1b3f;
+}
+
+.redeem-tickets .btn-danger:hover{
+	background-color: #c9302c;
+}
+
+.redeem-tickets .info-container{
+	padding-left: 5%;
+	margin: 25px 0 70px;
+}
+
+label{
+	font-weight: normal;
+	display: block;
+}
 
 .p1{
 	background-color: gray;
