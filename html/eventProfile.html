@@ -1,0 +1,141 @@
+
+	<div class="signUpView ">
+		<div class="container eventBanner">
+			<div>
+				<div class="col-md-8 eventPicture nopadding">
+					<img src="images/event-default-images/imagen5.jpg" alt="">
+				</div>
+				<div class="col-md-4 eventDetalle nopadding">
+					<div class="eventDetalleTexto">
+						<h3>Malpaís</h3>
+						<h5>Teatro Nacional</h5>
+						<p>Fecha:</p>
+						<p>22 de Abril</p>
+						<p>Precio:</p>
+						<p>c 8000 - c 35000</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container container-events">
+		<div class="row eventSeccionCompra">
+			<div class="col-md-8">
+				<div class="eventMembersPrice">
+					<div class="eventMembersPriceText">
+						<h4>Con Jaime Gamboa, Daniela Rodriguez, Manuel Obrego, Carlos Tapao Vargas, entre otros</h4>
+						<p>Precios:</p>
+						<p>Segundo Piso: c8000</p>
+						<p>Primer Piso: c8000</p>
+						<p>Balcón: c20000</p>
+						<p>Luneta: c35000</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 centered">
+				<div class="eventBtnComprar">
+					<div>
+						<a href="#signupModal" title="" class="btn btn-warning btn-lg"  data-toggle="modal"> <span class="glyphicon glyphicon-tags"></span> Comprar Boletos</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <a href="#signupModal" data-toggle="modal" class=""><i class="icon-user"></i>Sign Up<i class="icon-sort-down"></i></a> -->
+
+	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+	    <div class="modal-dialog modal-sm">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	                 <h3 class="modal-title text-center" id="myModalLabel">Datos Tarjeta Crédito o Débito</h3>
+
+	            </div>
+	            <div class="modal-body">
+	                <div class="row text-center">
+	                    <form class="col-md-10 col-md-offset-1" style="padding:0">
+		                    <div class="form-group col-md-12">
+		                        <input type="text" class="form-control" id="signupE" placeholder="Nombre Tarjetahabiente" contenteditable="false">
+		                    </div>
+	                        <div class="form-group col-md-12">
+	                            <input type="text" class="form-control" id="signupEmail1" placeholder="Número Tarjeta" contenteditable="false">
+	                        </div>
+	                      <p>Expiration</p>
+	                        <div class="form-group col-md-6">                            
+	                            <input type="text" class="form-control" id="signupPassword" placeholder="Mes" contenteditable="false">
+	                        </div>
+	                        <div class="form-group col-md-6">                            
+	                            <input type="text" class="form-control" id="signupPassword" placeholder="Año" contenteditable="false">
+	                        </div>
+	                        <p>Código Seguridad</p>
+	                        <div class="form-group col-md-6">
+	                        	
+	                            <input type="text" class="form-control" id="access-code" placeholder="3 digitos">
+	                        </div>
+	                      <div class="clearfix"></div>
+	                    </form>
+	                </div>
+	                <div class="row text-center">
+	                  <hr>
+	                    <button type="button" class="btn btn-danger col-md-8 col-md-offset-2">Comprar</button>
+	                    <br class="">
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- end of credit card modal -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="content">
+
+				    <h2 class="title">Butacas</h2>
+				    
+
+				    <p>------ Tarima ------</p>
+
+				    <table class="seatLayout">
+				        <tr>
+				            <td class="padding-bottom"></td>
+				            <td class="padding-bottom" ng-repeat="col in cols track by $index" ng-bind="col"></td>
+				        </tr>
+				        <tr ng-repeat="row in rows">
+				            <td class="padding-right" ng-bind="row"></td>
+				            <td class="seat" ng-repeat="col in cols" ng-click="seatClicked(row + col)" ng-switch on="getStatus(row + col)">
+				                <img ng-switch-when="selected" src="images/seat_selected.png">
+				                <img ng-switch-when="reserved" src="images/seat_reserved.png">
+				                <img ng-switch-default src="images/seat_available.png">
+				            </td>
+				        </tr>
+				    </table>
+
+				    <div class="legend">
+				        <img src="images/seats/seat_available.png">  Available
+				        <img src="images/seats/seat_reserved.png" class="padding-left">  Reserved
+				        <img src="images/seats/seat_selected.png" class="padding-left">  Selected
+				    </div>
+
+				   
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div>
+					<p>Usted tiene X boletos seleccionados para Malpaís en el Teatro Nacional</p>
+					<p>Precio Total: c9999</p>
+				</div>
+				 <div>
+				        <button ng-click="showSelected()" class="btn btn-danger btn-lg">Comprar</button>
+				        <p></p>
+				        <button ng-click="clearSelected()" class="btn btn-primary btn-lg">Clear</button>
+				        
+				  </div>
+			</div>
+		</div>
+	</div> 
+	
+
+
+
