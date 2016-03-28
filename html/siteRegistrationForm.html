@@ -7,42 +7,46 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-			<form name="siteRegistration" ng-submit="" novalidate>
-				
+			<form name="siteRegistration" ng-submit="registreSite()" novalidate>
 	            <div class="col-sm-10 col-sm-offset-1">
 	            	<div class="form-group">
-		            	<div class="col-sm-6">
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.nameSite.$invalid && siteRegistration.nameSite.$touched}">
 		            		<label for="name">Nombre</label>
-		            		<input type="text" class="form-control" id="name">
+		            		<input type="text" class="form-control" ng-required="true" name="nameSite" id="name" ng-model="nameSite">
+		            		<span ng-if="siteRegistration.nameSite.$invalid && siteRegistration.nameSite.$touched" class="help-block">El nombre es requerido.</span>
 		            	</div>
-		              
 		            </div> <!-- form group end -->
 	            </div>
 	            <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
-		            	<div class="col-sm-6">
-		            		<label for="phone">Teléfono 1*</label>
-		            		<input type="number" ng-minlength="8" ng-maxlength="8" class="form-control" id="phone">
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.phoneOne.$invalid && siteRegistration.phoneOne.$touched}">
+		            		<label for="phoneOne">Teléfono 1*</label>
+		            		<input type="number" min="0" minlength="8" maxlength="8" ng-required="true" class="form-control" name="phoneOne" id="phone" ng-model="phoneOne">
+		            		<span ng-if="siteRegistration.phoneOne.$error.required && siteRegistration.phoneOne.$touched" class="help-block">El primer numero de telefono es requerido.</span>
+                			<span ng-if="siteRegistration.phoneOne.$error.minlength && siteRegistration.phoneOne.$touched" class="help-block">El primer numero de telefono no es valido.</span>
+                			<span ng-if="siteRegistration.phoneOne.$error.maxlength && siteRegistration.phoneOne.$touched" class="help-block">El primer numero de telefono no es valido.</span>
 		            	</div>
-		            	<div class="col-sm-6 signUpSecondColumn">
+		            	<div class="col-sm-6 signUpSecondColumn" ng-class="{'has-error':siteRegistration.phonetwo.$invalid && siteRegistration.phonetwo.$touched}">
 		            		<label for="phonetwo">Teléfono 2</label>
-		            		<input type="number" ng-minlength="8" ng-maxlength="8" class="form-control" id="phonetwo">
+		            		<input type="number" min="0" minlength="8" maxlength="8" class="form-control" name="phonetwo" id="phonetwo" ng-model="phoneTwo">
+		            		<span ng-if="siteRegistration.phonetwo.$error.minlength && siteRegistration.phonetwo.$touched" class="help-block">El segundo numero de telefono no es valido.</span>
+                			<span ng-if="siteRegistration.phonetwo.$error.maxlength && siteRegistration.phonetwo.$touched" class="help-block">El segundo numero de telefono no es valido.</span>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
-		            	<div class="col-sm-6">
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.capacity.$invalid && siteRegistration.capacity.$touched}">
 		            		<label for="capacity">Capacidad</label>
-		            		<input type="number" class="form-control" id="capacity">
+		            		<input type="number" class="form-control" name="capacity" id="capacity" min="0" max="35000" ng-required="true" ng-model="capacity">
+		            		<span ng-if="siteRegistration.capacity.$error.required && siteRegistration.capacity.$touched" class="help-block">La capacidad es requerida.</span>
+                			<span ng-if="siteRegistration.capacity.$error.max && siteRegistration.capacity.$touched" class="help-block">La capacidad supera el limite de 35.000.</span>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
-		        	<label>Coordenadas</label>
-		        </div>
-		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
+		            <h4 class="container">Coordenadas</h4>
 		            	<div class="col-sm-6">
 		            		<label for="lat">Latitud</label>
 		            		<input type="number" class="form-control" id="lat">
@@ -55,9 +59,10 @@
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
-		            	<div class="col-sm-6">
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.address.$invalid && siteRegistration.address.$touched}">
 		            		<label for="address">Dirección*</label>
-		            		<input type="text" lass="form-control" id="address">
+		            		<input type="text" class="form-control" name="address" id="address" ng-required="true" ng-model="address">
+		            		<span ng-if="siteRegistration.address.$error.required && siteRegistration.address.$touched" class="help-block">La direccion es requerida.</span>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
