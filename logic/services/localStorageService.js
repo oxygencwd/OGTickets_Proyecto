@@ -7,7 +7,7 @@ angular.module('OGTicketsApp.services')
     };
 
     //obtener un objeto en del local storage
-    var get = function(key) {
+    var getAll = function(key) {
         return angular.fromJson(localStorage.getItem(key));
     };
 
@@ -16,16 +16,26 @@ angular.module('OGTicketsApp.services')
         localStorage.removeItem(key);
     };
 
+    //revisa si el objeto "key" esta inicializado en el local storage, si esta inicializado devuelve su contenido y si no lo esta lo inicializa
     var setIf= function(key) {
-    		
+    	return angular.fromJson(localStorage.getItem(key)) || [];	
+    };
+
+
+    //actualiza la coleccion "key" en el local storage
+    var watchCollection = function(key, $scope) {
+        $scope.$watchCollection(key, function() {
+            localStorage.setItem(key, JSON.stringify($scope.key));
+        });
     };
 
 
 //puntos de acceso de los metodos del servicio:
 	return{
 		set: set,
-		get: get,
+		getAll: getAll,
 		remove: remove,
-		setIf:setIf
+		setIf:setIf,
+        watchCollection: watchCollection
 	}
 });
