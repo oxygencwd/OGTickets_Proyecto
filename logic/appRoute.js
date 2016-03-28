@@ -81,7 +81,7 @@ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies
                 controller: 'cashierEditController'
                 //registro de Cajeros y Promotores. Permisos: Admin
             })
-            .when('/redeem-tickets/:cashierId', {
+            .when('/redeem-tickets', {
                 templateUrl: 'html/redeemTickets.html',
                 controller: 'redeemTicketsController'
                 //Forulario para redimir tiquetes. permisos: Cajeros.
