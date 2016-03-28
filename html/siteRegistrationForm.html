@@ -21,16 +21,18 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.phoneOne.$invalid && siteRegistration.phoneOne.$touched}">
 		            		<label for="phoneOne">Teléfono 1*</label>
-		            		<input type="number" min="0" minlength="8" maxlength="8" ng-required="true" class="form-control" name="phoneOne" id="phone" ng-model="phoneOne">
+		            		<input type="number" min="0" minlength="8" maxlength="8" ng-required="true" class="form-control" name="phoneOne" id="phone" ng-model="phone">
 		            		<span ng-if="siteRegistration.phoneOne.$error.required && siteRegistration.phoneOne.$touched" class="help-block">El primer numero de telefono es requerido.</span>
                 			<span ng-if="siteRegistration.phoneOne.$error.minlength && siteRegistration.phoneOne.$touched" class="help-block">El primer numero de telefono no es valido.</span>
                 			<span ng-if="siteRegistration.phoneOne.$error.maxlength && siteRegistration.phoneOne.$touched" class="help-block">El primer numero de telefono no es valido.</span>
+                			<span ng-if="siteRegistration.phoneOne.$error.min && siteRegistration.phoneOne.$touched" class="help-block">No se permiten numeros negativos.</span>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn" ng-class="{'has-error':siteRegistration.phonetwo.$invalid && siteRegistration.phonetwo.$touched}">
 		            		<label for="phonetwo">Teléfono 2</label>
 		            		<input type="number" min="0" minlength="8" maxlength="8" class="form-control" name="phonetwo" id="phonetwo" ng-model="phoneTwo">
 		            		<span ng-if="siteRegistration.phonetwo.$error.minlength && siteRegistration.phonetwo.$touched" class="help-block">El segundo numero de telefono no es valido.</span>
                 			<span ng-if="siteRegistration.phonetwo.$error.maxlength && siteRegistration.phonetwo.$touched" class="help-block">El segundo numero de telefono no es valido.</span>
+                			<span ng-if="siteRegistration.phonetwo.$error.min && siteRegistration.phonetwo.$touched" class="help-block">No se permiten numeros negativos.</span>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -49,11 +51,11 @@
 		            <h4 class="container">Coordenadas</h4>
 		            	<div class="col-sm-6">
 		            		<label for="lat">Latitud</label>
-		            		<input type="number" class="form-control" id="lat">
+		            		<input type="number" class="form-control" id="lat" max="-99.9999" max="99.9999">
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="lon">Longitud</label>
-		            		<input type="number" class="form-control" id="lon">
+		            		<input type="number" class="form-control" id="lon" max="-99.9999" max="99.9999">
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
