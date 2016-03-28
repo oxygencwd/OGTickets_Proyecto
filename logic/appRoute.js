@@ -1,4 +1,4 @@
-angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers'])
+angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/home', {
@@ -130,6 +130,7 @@ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies
 }]);
 
 angular.module('OGTicketsApp.controllers', []);
+angular.module('OGTicketsApp.services', []);
 
 
 
