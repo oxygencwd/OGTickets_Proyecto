@@ -606,7 +606,77 @@ label{
 	height: 250px;
 }
 
+/*Eventos*/
+.eventsSearch{
+	margin-top: 13px;
+}
+.btn-events{
+	background-color: #fd1c3e;
+	color: #fff;
+}
 
+.eventBanner{
+	padding:30px;
+}
+.eventPicture img{
+	width: 100%
+}
+.eventDetalle{
+	background-color: #fd1c3e;
+	color: #fff;
+	height: 370px;
+}
+.eventDetalleTexto{
+	padding: 15px;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.eventSeccionCompra{
+	padding: 50px;
+}
+.eventMembersPrice{
+	background-color: #3598dc;
+	color: #fff;
+	width: 90%;
+}
+.eventMembersPriceText h4,p{
+	padding: 14px;
+}
+.eventBtnComprar{
+	width: 80%;
+	height: 370px;
+}
+.eventBtnComprar div{
+	margin-top: 150px;
+	margin-left: 75px;
+}
+
+/* seat reservation */
+.content {
+  text-align: center;
+}
+
+.seatLayout {
+  margin: 30px auto;
+}
+
+.seat {
+  cursor: pointer;
+}
+
+.buttons {
+  margin: 30px auto;
+}
+
+.legend img{
+  vertical-align: bottom;
+}
+
+
+
+/*Final Eventos*/
 
 
 /*********************************************************************
