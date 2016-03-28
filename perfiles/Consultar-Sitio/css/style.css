@@ -1,0 +1,224 @@
+.header-page{
+    height: 1,000em; /*70px*/
+    background-color: #4f5457;
+}
+
+#img-header{
+    margin: 0.3875em;
+    left: 17.6125em;
+    width: 9em;
+    height: 0,417em;
+    display: inline;
+    position: absolute;
+}
+
+#header-title{
+    color: white;
+    display: block;
+    position: absolute;
+    margin-top: 1,5625em;
+    margin-left: 46.875em; 
+}
+
+#img-perfil{
+    width: 3.5625em;
+    height: 3.5625em;
+    padding: 0;
+    margin-top: 0.375em;
+    margin-left: 95.25em;
+    display: inline;
+   
+}
+/********************  header * ya no aplica ***************/
+
+.secction-sitio{
+    background-color: #cdcdcd;
+    
+}
+
+#img-sitio{
+    margin: 1.875em 0 3.175em 16.5em;/* 30px 0 50px 232px*/
+    height: 70.4075em;
+    width: 80.52%;
+    max-height: 551px;
+    max-width: 889px;
+}
+
+.info-sitio{
+    height: 524px;
+    width: 280px;
+    height: 39.34em;
+    width: 20.5em;
+    padding: 0;
+    margin: 1.875em 4.375em 3.125em 0;
+    background-color: #fb1b3f;
+    color: white;
+    
+}
+
+#title-desc-sitio{
+    padding: 100px 60px 0 20px;
+    font-size: 2.575em;
+    text-align: left;
+}
+
+#dir-sitio{
+    padding: 20px 70px 0  20px;
+    font-size: 1.0625em;
+    text-align: left ;
+    
+}
+/************** detalles del sitio*****************/
+#title-map{
+    margin: 30px 0 50px 232px
+}
+
+
+google-map{
+    margin: 1.875em 0 1.875em 17.5em;
+    width: 61.1875em;
+    height: 37.5625em;
+}
+
+/**************** Footer ya no aplica**************/
+
+.footer{
+    height: 114px;
+    background-color: #4f5457;
+    position: absolute;
+}
+
+
+#img-footer{
+    position: absolute;
+    width: 160px;
+    height: 72px;
+    margin-top: 7px;
+    left: 720px;
+    
+}
+
+#footer-copyright{
+    position: absolute;
+    margin: 0 auto;
+    left: 735px;
+    color: white;
+    bottom: 10px;
+    
+}
+
+@media (max-width: 1200px){
+    
+    #img-sitio{
+        width: 100%;
+        height: 30.45em;
+        margin:0 auto;
+        padding: 0;
+    }
+    
+    .cont-img-sitio{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .info-sitio{
+        margin: 0;
+        height: 30.45em;
+        width: 32%;
+    }
+    
+    #title-desc-sitio{
+        padding: 0.232em 2.3em 0.1em 0;
+        font-size: 2.575em;
+        text-align: left;
+        
+    }
+    #dir-sitio{
+        padding: 0.1em 2.3em 0.6223em 0;
+        font-size: 1.0625em;
+        text-align: left ;
+        font-size: 1.102em;        
+    }
+    #title-map{
+        margin: 1.32em 2.5em 2em 0;
+    }
+    google-map{
+         margin: 0 auto;
+        padding: 0;
+         width: 100%;
+        height: 27.5625em;
+        
+    }
+    
+    
+}
+
+
+@media (max-width: 768px){
+    #img-sitio{
+        width: 100%;
+        height: 30.45em;
+        margin:0 auto;
+        padding: 0;
+    }
+    
+    .cont-img-sitio{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .info-sitio{
+        margin: 0 0 2em;
+        height: 10.5em;
+        width: 100%;
+    }
+    
+    #title-desc-sitio{
+        padding: 0.232em 2.3em 0.1em 0;
+        font-size: 2.575em;
+        text-align: left;
+        
+    }
+    #dir-sitio{
+        padding: 0.1em 2.3em 0.6223em 0;
+        font-size: 1.0625em;
+        text-align: left ;
+        font-size: 1.102em;        
+    }
+    #title-map{
+        margin: 1.32em 2.5em 2em 0;
+    }
+    google-map{
+         margin: 0 auto;
+        padding: 0;
+         width: 100%;
+        height: 27.5625em;
+        
+    }
+    
+    
+    
+}
+
+@media (max-width: 600px){
+    
+    
+}
+
+@media (max-width: 480px){
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

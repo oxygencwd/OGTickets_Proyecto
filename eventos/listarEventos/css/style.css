@@ -1,0 +1,11 @@
+.content{
+    width: 960px;
+    margin: 0 auto;
+    background-color: #ebebeb;
+}
+
+.cont-evento {
+    width: 100px;
+    height: 100px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,202 @@
+.header-page{
+    height: 1,000em; /*70px*/
+    background-color: #4f5457;
+}
+
+#img-header{
+    margin: 0.3875em;
+    left: 17.6125em;
+    width: 9em;
+    height: 0,417em;
+    display: inline;
+    position: absolute;
+}
+
+#header-title{
+    color: white;
+    display: block;
+    position: absolute;
+    margin-top: 1,5625em;
+    margin-left: 46.875em; 
+}
+
+#img-perfil{
+    width: 3.5625em;
+    height: 3.5625em;
+    padding: 0;
+    margin-top: 0.375em;
+    margin-left: 95.25em;
+    display: inline;
+   
+}
+/********************  header * ya no aplica ***************/
+
+.secction-sitio{
+    background-color: #cdcdcd;
+    
+}
+
+#img-sitio{
+    margin: 1.875em 0 3.175em 16.5em;/* 30px 0 50px 232px*/
+    padding: 0;
+    height: 70.4075em;
+    width: 75.52%;
+    max-height: 551px;
+    max-width: 889px;
+}
+
+.info-sitio{
+    height: 39.3199em;
+    width: 17%;
+    margin: 1.875em 0em 1.875em 0;
+    background-color: #fb1b3f;
+    color: white;
+    
+}
+
+#title-desc-sitio{
+    padding: 100px 60px 0 20px;
+    font-size: 2.575em;
+    text-align: left;
+}
+
+/************** detalles del sitio*****************/
+
+.desc-evento{
+    background-color: #3598dc;
+    margin: 2.9em 1.7625em 2.9em 16.975em;
+    width: 49.89%;
+    height: 5.76em;
+}
+
+.even-cant{
+    background-color: #e77e23;
+    margin: 2.9em 1.25em;
+    width: 17.8%;
+    height: 5.76em;
+    
+}
+
+.text-evento{
+    margin: 2.3em;
+    color: white;
+    font-family: serif;
+    font-size: 1.1em;
+    
+}
+/**************** Footer ya no aplica**************/
+
+.footer{
+    height: 114px;
+    background-color: #4f5457;
+    position: absolute;
+}
+
+
+#img-footer{
+    position: absolute;
+    width: 160px;
+    height: 72px;
+    margin-top: 7px;
+    left: 720px;
+    
+}
+
+#footer-copyright{
+    position: absolute;
+    margin: 0 auto;
+    left: 735px;
+    color: white;
+    bottom: 10px;
+    
+}
+
+@media (max-width: 1200px){
+        
+    #img-sitio{
+        position: relative;
+        margin: 1.5em 0;
+    
+    }
+    
+     .cont-img-sitio{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .info-sitio{
+        position: absolute;
+        margin: 1.5em 0 0 42.4em ;
+    
+    }
+    
+    .desc-evento{
+        margin: 2.9em 0;
+        
+        
+    }
+    
+    .even-cant{
+    margin: 2.9em 0;
+    
+}
+    
+    
+    
+}
+
+
+@media (max-width: 768px){
+     #img-sitio{
+        position: relative;
+        margin: 1.5em 0;
+    
+    }
+    
+     .cont-img-sitio{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .info-sitio{
+        position: absolute;
+        margin: 1.5em 0 0 42.4em ;
+    
+    }
+    
+    .desc-evento{
+        margin: 2.9em 0;
+        
+        
+    }
+    
+    .even-cant{
+    margin: 2.9em 0;
+    
+}
+
+    
+}
+
+@media (max-width: 600px){
+    
+    
+}
+
+@media (max-width: 480px){
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
