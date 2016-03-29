@@ -41,19 +41,11 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedEventTypeList = [
-<<<<<<< HEAD
-		{"name": "Música", "id": "et01"}, 
-		{"name": "Cultura", "id": "et02"}, 
-		{"name": "Deportes", "id": "et03"}, 
-		{"name": "Teatro", "id": "et04"}, 
-		{"name": "Arte", "id": "et05"}
-=======
-		{"name": "Música", "id": 1, "value": "musica"}, 
-		{"name": "Cultura", "id": 2, "value": "cultura"}, 
-		{"name": "Deportes", "id": 3, "value": "deportes"}, 
-		{"name": "Teatro", "id": 4, "value": "teatro"}, 
-		{"name": "Arte", "id": 5, "value": "arte"}
->>>>>>> 0d07f20b8ce77b99599b905cc34b75c914c125a1
+		{"name": "Música", "id": "et01", "value": "musica"}, 
+		{"name": "Cultura", "id": "et02", "value": "cultura"}, 
+		{"name": "Deportes", "id": "et03", "value": "deportes"}, 
+		{"name": "Teatro", "id": "et04", "value": "teatro"}, 
+		{"name": "Arte", "id": "et05", "value": "arte"}
 	];
 
 	var savedPromoterRegisterRequest = [
