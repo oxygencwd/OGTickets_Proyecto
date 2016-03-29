@@ -16,3 +16,11 @@ angular.module('OGTicketsApp.controllers')
 
 }]); //end -controller-
 
+/*
+//actualiza la coleccion "key" en el local storage
+var watchCollection = function(array, key, $scope) {
+    $scope.$watchCollection(array, function() {
+        localStorage.setItem(key, angular.toJson(array));
+    });
+};
+*/
