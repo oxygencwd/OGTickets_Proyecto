@@ -3,27 +3,27 @@ angular.module('OGTicketsApp.services')
 
 	//listas quemadas
 	var savedClientList=[
-		{ "name": "Manuel Mendoza", "id": "cl01", "active": true, "email": "manuelmendoza@gmail.com", "password": "Abcdefg1", "gender": "Masculino", "personalId": "115290295", "birthday": "1994-04-29T06:00:00.000Z", "userType": 2 },
-		{ "name": "Juan Pérez", "id": "cl02", "active": true, "email": "juanperez@gmail.com", "password": "Juanperez2", "gender": "Masculino", "personalId": "109820432", "birthday": "1984-06-22T06:00:00.000Z", "userType": 2 },
-		{ "name": "Karla Jiménez", "id": "cl03", "active": true, "email": "karlajimenez@yahoo.es", "password": "Karlita26", "gender": "Femenino", "personalId": "112980324", "birthday": "1990-06-26T06:00:00.000Z", "userType": 2 }
+		{ "name": "Manuel Mendoza", "id": "cl01", "active": true, "email": "manuelmendoza@gmail.com", "password": "Abcdefg1", "gender": "Masculino", "personalId": "115290295", "birthday": "1994-04-29T06:00:00.000Z", "userType": "ut02" },
+		{ "name": "Juan Pérez", "id": "cl02", "active": true, "email": "juanperez@gmail.com", "password": "Juanperez2", "gender": "Masculino", "personalId": "109820432", "birthday": "1984-06-22T06:00:00.000Z", "userType": "ut02" },
+		{ "name": "Karla Jiménez", "id": "cl03", "active": true, "email": "karlajimenez@yahoo.es", "password": "Karlita26", "gender": "Femenino", "personalId": "112980324", "birthday": "1990-06-26T06:00:00.000Z", "userType": "ut02" }
 	];
 
 	var savedPromotorList=[
-		{ "name": "Cheese Productions", "password": "Holahola77", "id": "pr01", "active": true, "email": "cheeseproductions@gmail.com", "personalId": "3816497372", "areaOfSpecialization": "Conciertos", "phoneOne": "60324127", "address": "Desamparados, San José", "phoneTwo": "22236543", "userType": 3 },
-		{ "name": "Jonathan Ryzowy", "password": "Distrito55", "active": true, "email": "ryzowy@gmail.com", "personalId": "105720123", "areaOfSpecialization": "Cultura", "phoneOne": "88328319", "id": "pr02", "address": "Santa Ana, Costa Rica", "userType": 3 },
-		{ "name": "Francisca Productions", "password": "Francisquita2", "active": true, "id": "pr03", "email": "info@franciscaproductions.com", "personalId": "3692134812", "areaOfSpecialization": "Deportes", "phoneOne": "22138844", "address": "Santo Domingo, Heredia", "userType": 3}
+		{ "name": "Cheese Productions", "password": "Holahola77", "id": "pr01", "active": true, "email": "cheeseproductions@gmail.com", "personalId": "3816497372", "areaOfSpecialization": "Conciertos", "phoneOne": "60324127", "address": "Desamparados, San José", "phoneTwo": "22236543", "userType": "ut03" },
+		{ "name": "Jonathan Ryzowy", "password": "Distrito55", "active": true, "email": "ryzowy@gmail.com", "personalId": "105720123", "areaOfSpecialization": "Cultura", "phoneOne": "88328319", "id": "pr02", "address": "Santa Ana, Costa Rica", "userType": "ut03" },
+		{ "name": "Francisca Productions", "password": "Francisquita2", "active": true, "id": "pr03", "email": "info@franciscaproductions.com", "personalId": "3692134812", "areaOfSpecialization": "Deportes", "phoneOne": "22138844", "address": "Santo Domingo, Heredia", "userType": "ut03"}
 	];
 
 	var savedCashierList=[
-		{ "name": "Juanita Hidalgo Rodríguez", "active": true, "password": "Hidalgo92", "id": "cs01", "gender": "Femenino", "email": "j.hidalgo.rodriguez@hotmail.com", "phone": "88120922", "birthday": "1991-10-21T06:00:00.000Z", "userType": 4 },
-		{ "name": "Josefina Duarte", "password": "Duarte7621", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": 4 },
-		{ "name": "Carlos Ugalde", "password": "Ugalde2223", "active": true, "id": "cs03", "gender": "Masculino", "email": "carlosugalde_8732@hotmail.com", "phone": "73902476", "birthday": "1993-01-29T06:00:00.000Z", "userType": 4}
+		{ "name": "Juanita Hidalgo Rodríguez", "active": true, "password": "Hidalgo92", "id": "cs01", "gender": "Femenino", "email": "j.hidalgo.rodriguez@hotmail.com", "phone": "88120922", "birthday": "1991-10-21T06:00:00.000Z", "userType": "ut04" },
+		{ "name": "Josefina Duarte", "password": "Duarte7621", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": "ut04" },
+		{ "name": "Carlos Ugalde", "password": "Ugalde2223", "active": true, "id": "cs03", "gender": "Masculino", "email": "carlosugalde_8732@hotmail.com", "phone": "73902476", "birthday": "1993-01-29T06:00:00.000Z", "userType": "ut04"}
 	];
 
 	var savedEventsList=[
-		{ "startHour": "7:00pm", "endHour": "10:00pm",  "siteId": "si03", "active": true, "description": "Viene Rihanna con su World Tour, un verdadero show que no te podés perder", "date": "2016-04-27T06:00:00.000Z", "id": "ev01", "name": "Rihanna World Tour", "ticketsPrice": 35500, "eventType": "Música", "capacity": 6000 },
-		{ "startHour": "7:00pm", "endHour": "9:30pm", "active": true, "siteId": "si03", "description": "Costa Rica recibe a Jamaica", "name": "Costa Rica vs Jamaica", "id": "ev02", "date": "2016-04-17T06:00:00.000Z", "eventType": "Deportes", "ticketsPrice": 8000, "capacity": 7000 },
-		{ "startHour": "7:00pm", "endHour": "9:00pm", "active": true, "siteId": "si02", "description": "Revive y canta junto con Jaime Gamboa y Malpaís las canciones inolvidables que nos dejó Fidel Gamboa", "name": "Malpaís en concierto" , "id": "ev03", "date": "2016-05-16T06:00:00.000Z", "eventType": "Música", "ticketsPrice": 5000, "capacity": 3000 }
+		{ "startHour": "7:00pm", "endHour": "10:00pm",  "siteId": "si03", "active": true, "description": "Viene Rihanna con su World Tour, un verdadero show que no te podés perder", "date": "2016-04-27T06:00:00.000Z", "id": "ev01", "name": "Rihanna World Tour", "ticketsPrice": 35500, "eventType": "et01", "capacity": 6000 },
+		{ "startHour": "7:00pm", "endHour": "9:30pm", "active": true, "siteId": "si03", "description": "Costa Rica recibe a Jamaica", "name": "Costa Rica vs Jamaica", "id": "ev02", "date": "2016-04-17T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 8000, "capacity": 7000 },
+		{ "startHour": "7:00pm", "endHour": "9:00pm", "active": true, "siteId": "si02", "description": "Revive y canta junto con Jaime Gamboa y Malpaís las canciones inolvidables que nos dejó Fidel Gamboa", "name": "Malpaís en concierto" , "id": "ev03", "date": "2016-05-16T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 5000, "capacity": 3000 }
 	];
 
 	var savedSiteList=[
@@ -33,19 +33,19 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedTransactionList=[
-		{"id": "tr01", "cancelled": true, "transactionType": 1, "eventId": "ev02", "ticketsAmount" : 2}
+		{"id": "tr01", "cancelled": true, "transactionType": "tt01", "eventId": "ev02", "ticketsAmount" : 2, "idClient": "cl02", "active": true, "trCode":"pu-cl02-ev02-0329-tr01" }
 	];
 
 	var savedAdminList = [
-		{"id": "ad01", "password": "admin", "email": "oxyGenAdmin@gmail.com", "userType": 1}
+		{"id": "ad01", "password": "admin", "email": "oxyGenAdmin@gmail.com", "userType": "ut01"}
 	];
 
 	var savedEventTypeList = [
-		{"name": "Música", "id": 1}, 
-		{"name": "Cultura", "id": 2}, 
-		{"name": "Deportes", "id": 3}, 
-		{"name": "Teatro", "id": 4}, 
-		{"name": "Arte", "id": 5}
+		{"name": "Música", "id": "et01"}, 
+		{"name": "Cultura", "id": "et02"}, 
+		{"name": "Deportes", "id": "et03"}, 
+		{"name": "Teatro", "id": "et04"}, 
+		{"name": "Arte", "id": "et05"}
 	];
 
 	var savedPromoterRegisterRequest = [
