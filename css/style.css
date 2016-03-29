@@ -678,6 +678,34 @@ label{
 
 /*Final Eventos Carmiol*/
 
+/*Site Profile*/
+
+.siteProfile{
+	margin-top: 2em;
+}
+
+.heroBanner{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	background-color: #d9d9d9;
+	padding-bottom: 3em;
+	padding-top: 7em;
+}
+
+.heroImage{
+	padding-right: 0;
+}
+
+.atAGlanceBox{
+	background-color: #fd1c3e;
+	position: relative;
+}
+
+.atAGlanceInfo{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+}
 
 /*********************************************************************
 **************************MEDIA QUERYS********************************
@@ -727,6 +755,14 @@ label{
 
 	.client-profile .event-details-btn{
 		width: 65%;
+	}
+
+	.atAGlanceInfo h3{
+		font-size: 20px;
+	}
+
+	.atAGlanceInfo p{
+		font-size: 10px;
 	}
 
 }
@@ -793,6 +829,25 @@ label{
 
  	.client-profile .upcoming-event-info{
 		left: 29%;
+	}
+
+	.heroBanner{
+		display: block;
+	}
+
+	.atAGlanceBox{
+		height: 10em;
+	}
+
+	.atAGlanceBox p:first-of-type {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.heroImage{
+		max-height: 25em;
+		overflow: hidden;
+		padding-left: 0;
 	}
 
 }
