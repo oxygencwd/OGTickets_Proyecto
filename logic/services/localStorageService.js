@@ -17,8 +17,13 @@ angular.module('OGTicketsApp.services')
     };
 
     //revisa si el objeto "key" esta inicializado en el local storage, si esta inicializado devuelve su contenido y si no lo esta lo inicializa
-    var setIf= function(key) {
+    var getOrEmpty= function(key) {
     	return angular.fromJson(localStorage.getItem(key)) || [];	
+    };
+
+    //revisa si el objeto "key" esta inicializado en el local storage, si esta inicializado devuelve su contenido y si no lo inicaliza con un array quemado
+    var getOrArray= function(key, array) {
+        return angular.fromJson(localStorage.getItem(key)) || localStorage.setItem(key, angular.toJson(array));
     };
 
 
@@ -35,7 +40,8 @@ angular.module('OGTicketsApp.services')
 		set: set,
 		getAll: getAll,
 		remove: remove,
-		setIf:setIf,
+		getOrEmpty:getOrEmpty,
+        getOrArray: getOrArray,
         watchCollection: watchCollection
 	}
 });
