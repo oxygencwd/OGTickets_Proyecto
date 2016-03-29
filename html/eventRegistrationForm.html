@@ -1,0 +1,86 @@
+<!-- Registro de Promotor -->
+<div class="container-fluid registrationView">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-1">
+			<h2>Registro de evento</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<form name="eventRegistrationForm" ng-submit="" novalidate>
+				<div class="col-sm-10 col-sm-offset-1">
+					<div class="form-group">
+		                <div class="col-sm-4">
+			                <label>Tipo de evento:</label>
+			                <select ng-model="singleEvent.eventType" class="selectpicker"
+		                    ng-options="eventType.value as eventType.name for eventType in eventTypes">
+		                    </select>
+		                </div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+	            	<div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="eventName">Nombre del evento*</label>
+		            		<input type="text" class="form-control" id="eventName" ng-model="singleEvent.name" required>
+		            	</div>
+		            </div> <!-- form group end -->
+	            </div>
+
+	            <div class="col-sm-10 col-sm-offset-1">
+	            	<div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="description">Descripción*</label>
+		            		<input type="text" class="form-control" id="description">
+		            	</div>
+		            </div> <!-- form group end -->
+	            </div>
+	       		<div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="eventDate">Fecha del evento*</label>
+		            		<input type="date" class="form-control" id="eventDate">
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="startHour">Hora de inicio*</label>
+		            		<input type="text" class="form-control" id="startHour">
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn">
+		            		<label for="endHour">Hora de finalización*</label>
+		            		<input type="text" class="form-control" id="endHour">
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="ticketsCost">Costo de entradas*</label>
+		            		<input type="number" class="form-control" id="ticketsCost">
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group col-sm-6">
+		            	<label>Subir fotografía</label>
+		            	<input type="file">
+		            	<sub>Max 2mb</sub>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Crear evento">
+		                </div>
+		            </div> <!-- form group end -->
+		        </div>
+		        
+			</form>
+		</div>
+	</div>
+</div>
+
+

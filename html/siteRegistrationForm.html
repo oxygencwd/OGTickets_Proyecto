@@ -1,0 +1,89 @@
+<!-- Registro de sitios -->
+<div class="container-fluid registrationView">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-1">
+			<h2>Registro de sitio</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<form name="siteRegistration" ng-submit="siteRegistration.$valid && registreSite()" novalidate>
+	            <div class="col-sm-10 col-sm-offset-1">
+	            	<div class="form-group">
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.nameSite.$invalid && siteRegistration.nameSite.$touched}">
+		            		<label for="name">Nombre*</label>
+		            		<input type="text" class="form-control" ng-required="true" name="nameSite" id="name" ng-model="nameSite">
+		            		<span ng-if="siteRegistration.nameSite.$invalid && siteRegistration.nameSite.$touched" class="help-block">El nombre es requerido.</span>
+		            	</div>
+		            </div> <!-- form group end -->
+	            </div>
+	            <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.phoneOne.$invalid && siteRegistration.phoneOne.$touched}">
+		            		<label for="phoneOne">Teléfono 1*</label>
+		            		<input type="number" min="0" ng-required="true" class="form-control" name="phoneOne" id="phone" ng-model="phoneOne" ng-pattern="expNumberPhone">
+		            		<span ng-if="siteRegistration.phoneOne.$error.required && siteRegistration.phoneOne.$touched" class="help-block">El primer numero de telefono es requerido.</span>
+                			<span ng-if="siteRegistration.phoneOne.$error.pattern && siteRegistration.phoneOne.$touched" class="help-block">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</span>
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn" ng-class="{'has-error':siteRegistration.phonetwo.$invalid && siteRegistration.phonetwo.$touched}">
+		            		<label for="phonetwo">Teléfono 2</label>
+		            		<input type="number" min="0" class="form-control" name="phonetwo" id="phonetwo" ng-model="phoneTwo" ng-pattern="expNumberPhone">
+		            		<span ng-if="siteRegistration.phonetwo.$error.pattern && siteRegistration.phonetwo.$touched" class="help-block">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</span>
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.capacity.$invalid && siteRegistration.capacity.$touched}">
+		            		<label for="capacity">Capacidad*</label>
+		            		<input type="number" class="form-control" name="capacity" id="capacity" min="0" max="35000" ng-required="true" ng-model="capacity">
+		            		<span ng-if="siteRegistration.capacity.$error.required && siteRegistration.capacity.$touched" class="help-block">La capacidad es requerida.</span>
+                			<span ng-if="siteRegistration.capacity.$error.max && siteRegistration.capacity.$touched" class="help-block">La capacidad supera el limite de 35.000.</span>
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            <h4 class="container">Coordenadas</h4>
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.lat.$invalid && siteRegistration.lat.$touched}">
+		            		<label for="lat">Latitud*</label>
+		            		<input type="number" class="form-control" name="lat" id="lat" ng-required="true" ng-model="lat" ng-pattern="expDecimalLatitud">
+		            		<span ng-if="siteRegistration.lat.$error.required && siteRegistration.lat.$touched" class="help-block">La latitud es requerida.</span>
+                			<span ng-if="siteRegistration.lat.$error.pattern && siteRegistration.lat.$touched" class="help-block">El formato de la latitud no es aceptado, solo grados decimales.</span>
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn" ng-class="{'has-error':siteRegistration.long.$invalid && siteRegistration.long.$touched}">
+		            		<label for="lon">Longitud*</label>
+		            		<input type="number" class="form-control" name="long" id="lon" ng-required="true" ng-model="long" ng-pattern="expDecimalLongitud">
+		            		<span ng-if="siteRegistration.long.$error.required && siteRegistration.long.$touched" class="help-block">La longitud es requerida.</span>
+                			<span ng-if="siteRegistration.long.$error.pattern && siteRegistration.long.$touched" class="help-block">El formato de la longitud no es aceptado, solo grados decimales.</span>
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.address.$invalid && siteRegistration.address.$touched}">
+		            		<label for="address">Dirección*</label>
+		            		<input type="text" class="form-control" name="address" id="address" ng-required="true" ng-model="address">
+		            		<span ng-if="siteRegistration.address.$error.required && siteRegistration.address.$touched" class="help-block">La direccion es requerida.</span>
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group col-sm-6">
+		            	<label>Subir fotografía</label>
+		            	<input type="file">
+		            	<sub>Max 2mb</sub>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Crear sitio">
+		                </div>
+		            </div> <!-- form group end -->
+		        </div>
+		        
+			</form>
+		</div>
+	</div>
+</div>

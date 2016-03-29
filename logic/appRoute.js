@@ -1,4 +1,4 @@
-angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers'])
+angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/home', {
@@ -81,7 +81,7 @@ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies
                 controller: 'cashierEditController'
                 //registro de Cajeros y Promotores. Permisos: Admin
             })
-            .when('/redeem-tickets/:cashierId', {
+            .when('/redeem-tickets', {
                 templateUrl: 'html/redeemTickets.html',
                 controller: 'redeemTicketsController'
                 //Forulario para redimir tiquetes. permisos: Cajeros.
@@ -130,6 +130,7 @@ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies
 }]);
 
 angular.module('OGTicketsApp.controllers', []);
+angular.module('OGTicketsApp.services', []);
 
 
 
