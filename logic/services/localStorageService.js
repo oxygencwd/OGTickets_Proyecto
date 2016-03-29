@@ -23,8 +23,12 @@ angular.module('OGTicketsApp.services')
 
     //revisa si el objeto "key" esta inicializado en el local storage, si esta inicializado devuelve su contenido y si no lo inicaliza con un array quemado
     var getOrArray= function(key, array) {
-        return angular.fromJson(localStorage.getItem(key)) || localStorage.setItem(key, angular.toJson(array));
+       return angular.fromJson(localStorage.getItem(key)) || localStorage.setItem(key, JSON.stringify(array));
     };
+
+    // var getOrArray= function(key, array) {
+    //    return localStorage.getItem(key) || localStorage.setItem(key,(array));
+    // };
 
 
     //actualiza la coleccion "key" en el local storage

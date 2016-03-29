@@ -64,7 +64,8 @@ angular.module('OGTicketsApp.services')
 
 	//quemar los datos de promotor
 	var promoterList= function () {
-		return localStorageService.getOrArray("promoterList", savedPromotorList);
+		return angular.fromJson(localStorage.getItem("promoterList")) || localStorage.setItem("promoterList", JSON.stringify(savedPromotorList));
+		// return localStorageService.getOrArray("promoterList", savedPromotorList);
 	};
 
 	//quemar los datos de cajero
