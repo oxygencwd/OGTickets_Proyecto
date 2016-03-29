@@ -365,7 +365,7 @@ input[type=number] {
 
 
 /*********user list******/
-.user-list-container, .gen-list-container, .redeem-tickets-container{
+.user-list-container, .gen-list-container, .redeem-tickets-container, .event-type-container{
 	background-color: #ebebeb;
 	margin-top: 70px;
 }
@@ -611,17 +611,6 @@ label{
 
 
 
-
-.p1{
-	background-color: gray;
-	height: 250px;
-}
-
-.p2{
-	background-color: red;
-	height: 250px;
-}
-
 /*CSS Eventos Carmiol*/
 .eventsSearch{
 	margin-top: 13px;
@@ -702,10 +691,119 @@ label{
   vertical-align: bottom;
 }
 
-
-
 /*Final Eventos Carmiol*/
 
+
+.p1{
+	background-color: gray;
+	height: 250px;
+}
+
+.p2{
+	background-color: red;
+	height: 250px;
+}
+
+/*event-type-profile*/
+
+.event-type{
+	margin-top: 3em;
+}
+
+.event-type .event-type-img{
+	background-color: #000;
+	padding: 0;
+
+}
+
+.event-type-img img{
+	height: 28em;  
+	max-width:100%;
+}
+
+.event-type-name{
+	background-color: #fb1b3f;
+	height: 28em;
+	margin-bottom: 4em;
+}
+
+.event-type h2{
+	color:#fff;
+}
+
+.text-middle{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.event-type-description{
+	margin-top: 2.5em;
+	color: #fff;
+}
+
+.event-type-description p, .event-type-description a{
+	margin: 0;
+	padding: 0;
+	padding: 25px 8%;
+	font-size: 18px;
+}
+
+.event-type-description a{
+	font-size: 1em;
+}
+
+
+.event-type-description .c-left{
+	background-color: #3598dc;
+}
+
+.event-type-description .btn-warning{
+	background-color: #e77e23;
+	margin-bottom: 4em;
+	/*width: 100%;
+	border-radius: 0;*/
+}
+
+/*.event-type-description .c-rigth{
+	padding-left: 0;
+	padding-right: 0;
+}*/
+
+/*Site Profile*/
+
+.siteProfile{
+	margin-top: 2em;
+}
+
+.heroBanner{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	background-color: #d9d9d9;
+	padding-bottom: 3em;
+	padding-top: 7em;
+}
+
+.heroImage{
+	padding-right: 0;
+}
+
+.atAGlanceBox{
+	background-color: #fd1c3e;
+	position: relative;
+}
+
+.atAGlanceInfo{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+}
+
+.mapSection{
+	background-color: white;
+}
+
+/*Ends site profile*/
 
 /*********************************************************************
 **************************MEDIA QUERYS********************************
@@ -756,6 +854,27 @@ label{
 	.client-profile .event-details-btn{
 		width: 65%;
 	}
+
+	.event-type-img img{
+		height: 25em;
+	}
+
+	.event-type-name{
+		height: 25em;
+	}
+
+
+/*Site Profile*/
+
+	.atAGlanceInfo h3{
+		font-size: 20px;
+	}
+
+	.atAGlanceInfo p{
+		font-size: 10px;
+	}
+
+/*Ends site profile*/
 
 }
 
@@ -823,6 +942,49 @@ label{
 		left: 29%;
 	}
 
+
+	.event-type-name{
+		height: 11em;
+	}
+
+	.event-type-img img{
+		height: 22.5em;
+	}
+
+
+	.event-type-description .btn-warning{
+		width: 100%;
+		margin-top: 2em;
+	}
+
+	.event-type-description .c-rigth{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+/*Site Profile*/
+
+	.heroBanner{
+		display: block;
+	}
+
+	.atAGlanceBox{
+		height: 10em;
+	}
+
+	.atAGlanceBox p:first-of-type {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.heroImage{
+		max-height: 25em;
+		overflow: hidden;
+		padding-left: 0;
+	}
+
+/*Ends Site Profile*/
+
 }
 
 @media (max-width: 600px){
@@ -862,6 +1024,10 @@ label{
 
 	.client-profile .event-details-btn{
 		width: 70%;
+	}
+
+	.event-type-img img{
+		height: 18em;
 	}
 }
 
@@ -926,6 +1092,10 @@ label{
 
 	.client-profile .upcoming-event-info{
 		left: 14%;
+	}
+
+	.event-type-img img{
+		height: 13em;
 	}
 }
 
