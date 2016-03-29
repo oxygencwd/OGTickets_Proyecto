@@ -22,7 +22,7 @@ angular.module('OGTicketsApp.controllers')
 					$scope.userEmail="";
 					$scope.pass="";
 					$scope.clearForm();
-					$window.location.href = ('#/profile/' + loggedUser.id);
+					$window.location.href = ('#/home/');
 				}else{
 					$scope.userError= "Usuario o contraseña invalidos";
 				}

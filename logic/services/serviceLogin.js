@@ -29,6 +29,7 @@ angular.module('OGTicketsApp.services')
 		getloggedUser:getloggedUser,
 		logOut:logOut
 	};
+	
 }]);
 
 

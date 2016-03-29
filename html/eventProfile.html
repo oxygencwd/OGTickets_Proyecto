@@ -43,50 +43,7 @@
 		</div>
 	</div>
 
-	<!-- <a href="#signupModal" data-toggle="modal" class=""><i class="icon-user"></i>Sign Up<i class="icon-sort-down"></i></a> -->
-<!-- 
-	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
-	    <div class="modal-dialog modal-sm">
-	        <div class="modal-content">
-	            <div class="modal-header">
-	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	                 <h3 class="modal-title text-center" id="myModalLabel">Datos Tarjeta Crédito o Débito</h3>
-
-	            </div>
-	            <div class="modal-body">
-	                <div class="row text-center">
-	                    <form class="col-md-10 col-md-offset-1" style="padding:0">
-		                    <div class="form-group col-md-12">
-		                        <input type="text" class="form-control" id="signupE" placeholder="Nombre Tarjetahabiente" contenteditable="false">
-		                    </div>
-	                        <div class="form-group col-md-12">
-	                            <input type="text" class="form-control" id="signupEmail1" placeholder="Número Tarjeta" contenteditable="false">
-	                        </div>
-	                      <p>Expiration</p>
-	                        <div class="form-group col-md-6">                            
-	                            <input type="text" class="form-control" id="signupPassword" placeholder="Mes" contenteditable="false">
-	                        </div>
-	                        <div class="form-group col-md-6">                            
-	                            <input type="text" class="form-control" id="signupPassword" placeholder="Año" contenteditable="false">
-	                        </div>
-	                        <p>Código Seguridad</p>
-	                        <div class="form-group col-md-6">
-	                        	
-	                            <input type="text" class="form-control" id="access-code" placeholder="3 digitos">
-	                        </div>
-	                      <div class="clearfix"></div>
-	                    </form>
-	                </div>
-	                <div class="row text-center">
-	                  <hr>
-	                    <button type="button" class="btn  btn-block ">Comprar</button>
-	                    <br class="">
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</div> -->
-	<!-- end of credit card modal -->
+	<!-- Seats left section -->
 	<div class="container" ng-show="addSeatsSectionShow">
 		<div class="row">
 			<div class="col-md-6">
@@ -105,9 +62,9 @@
 				        <tr ng-repeat="row in rows">
 				            <td class="padding-right" ng-bind="row"></td>
 				            <td class="seat" ng-repeat="col in cols" ng-click="seatClicked(row + col)" ng-switch on="getStatus(row + col)">
-				               <!--  <img ng-switch-when="selected" src="images/seat_selected.png">
-				                <img ng-switch-when="reserved" src="images/seat_reserved.png">
-				                <img ng-switch-default src="images/seat_available.png"> -->
+				               <img ng-switch-when="selected" src="images/seats/seat_selected.png">
+				                <img ng-switch-when="reserved" src="images/seats/seat_reserved.png">
+				                <img ng-switch-default src="images/seats/seat_available.png">
 				            </td>
 				        </tr>
 				    </table>
@@ -117,10 +74,13 @@
 				        <img src="images/seats/seat_reserved.png" class="padding-left">  Reservada
 				        <img src="images/seats/seat_selected.png" class="padding-left">  Seleccionada
 				    </div>
-
-				   
+				    <div class="buttons">
+				        <button ng-click="clearSelected()">Limpiar</button>
+				        <button ng-click="showSelected()">Mostrar asientos</button>
+				    </div>
 				</div>
 			</div>
+			<!-- end of left side butacas -->
 			<div class="col-md-6">
 				<div>
 					<p>Usted tiene X boletos seleccionados para Malpaís en el Teatro Nacional</p>
@@ -130,7 +90,7 @@
 				        <!--<button ng-click="showSelected()" class="btn btn-block btn-lg eventsBtnRed">Comprar</button>-->
 				        <button  class="btn btn-block btn-lg eventsBtnRed" data-toggle="modal" data-target="#myModal">Comprar</button>
 				        <p></p>
-				        <button ng-click="clearSelected()" class="btn btn-block btn-lg eventsBtnBlue">Reservar</button>
+				        <button class="btn btn-block btn-lg eventsBtnBlue">Reservar</button>
 				        
 				  </div>
 			</div>
