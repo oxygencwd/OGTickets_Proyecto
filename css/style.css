@@ -258,6 +258,31 @@ header .navbar-nav>li>a {
 	left: 30px;
 }
 
+.allEventsDisplay{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.allEventsDisplay button{
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+.allEventsDisplay button a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.allEventsDisplay button a:hover{
+	color:#000;
+}
+
+.display-none{
+	display: none;
+}
+
 .today-events p, .today-events a{
 	font-size: 20px;
 	color: #444;
