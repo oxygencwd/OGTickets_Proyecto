@@ -754,6 +754,40 @@ label{
 	padding-right: 0;
 }*/
 
+/*Site Profile*/
+
+.siteProfile{
+	margin-top: 2em;
+}
+
+.heroBanner{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	background-color: #d9d9d9;
+	padding-bottom: 3em;
+	padding-top: 7em;
+}
+
+.heroImage{
+	padding-right: 0;
+}
+
+.atAGlanceBox{
+	background-color: #fd1c3e;
+	position: relative;
+}
+
+.atAGlanceInfo{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+}
+
+.mapSection{
+	background-color: white;
+}
+
+/*Ends site profile*/
 
 /*********************************************************************
 **************************MEDIA QUERYS********************************
@@ -812,6 +846,19 @@ label{
 	.event-type-name{
 		height: 25em;
 	}
+
+
+/*Site Profile*/
+
+	.atAGlanceInfo h3{
+		font-size: 20px;
+	}
+
+	.atAGlanceInfo p{
+		font-size: 10px;
+	}
+
+/*Ends site profile*/
 
 }
 
@@ -879,6 +926,7 @@ label{
 		left: 29%;
 	}
 
+
 	.event-type-name{
 		height: 11em;
 	}
@@ -898,6 +946,28 @@ label{
 		padding-right: 0;
 	}
 
+/*Site Profile*/
+
+	.heroBanner{
+		display: block;
+	}
+
+	.atAGlanceBox{
+		height: 10em;
+	}
+
+	.atAGlanceBox p:first-of-type {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.heroImage{
+		max-height: 25em;
+		overflow: hidden;
+		padding-left: 0;
+	}
+
+/*Ends Site Profile*/
 
 }
 
