@@ -1,33 +1,20 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventRegistrationController', ['$scope', function ($scope) {
+.controller('eventRegistrationController', ['$scope', 'localStorageService', function ($scope, localStorageService) {
 
-	$scope.eventTypes=[
-		{
-			value: 'music',
-			name: 'Música'
-		},
-		{
-			value: 'drama',
-			name: 'Teatro'
-		},
-		{
-			value: 'culture',
-			name: 'Cultura'
-		},
-		{
-			value: 'sports',
-			name: 'Deportes'
-		},
-		{
-			value: 'art',
-			name: 'Arte'
-		},
-	]
+	$scope.eventTypes = localStorageService.getAll("eventTypeList");
 
 	$scope.singleEvent = {
 		name: '',
 		eventType: 'music',
+		description: '',
+		startHour: '',
+		endHour: ''
+	}
 
+	var registerEvent = function (){
+		localStorageService.set("eventsList", $scope.singleEvent);
+		
+		$scope.singleEvent = {}
 	}
 
 
