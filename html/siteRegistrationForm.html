@@ -12,7 +12,7 @@
 	            	<div class="form-group">
 		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.nameSite.$invalid && siteRegistration.nameSite.$touched}">
 		            		<label for="name">Nombre*</label>
-		            		<input type="text" class="form-control" ng-required="true" name="nameSite" id="name" ng-model="newSite.newSite.nameSite">
+		            		<input type="text" class="form-control" ng-required="true" name="nameSite" id="name" ng-model="newSite.nameSite">
 		            		<span ng-if="siteRegistration.nameSite.$invalid && siteRegistration.nameSite.$touched" class="help-block">El nombre es requerido.</span>
 		            	</div>
 		            </div> <!-- form group end -->
@@ -45,17 +45,17 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            <h4 class="container">Coordenadas</h4>
-		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.lat.$invalid && siteRegistration.lat.$touched}">
-		            		<label for="lat">Latitud*</label>
-		            		<input type="number" class="form-control" name="lat" id="lat" ng-required="true" ng-model="newSite.lat" ng-pattern="expDecimalLatitud">
-		            		<span ng-if="siteRegistration.lat.$error.required && siteRegistration.lat.$touched" class="help-block">La latitud es requerida.</span>
-                			<span ng-if="siteRegistration.lat.$error.pattern && siteRegistration.lat.$touched" class="help-block">El formato de la latitud no es aceptado, solo grados decimales.</span>
+		            	<div class="col-sm-6" ng-class="{'has-error':siteRegistration.latitude.$invalid && siteRegistration.latitude.$touched}">
+		            		<label for="latitude">Latitud*</label>
+		            		<input type="number" class="form-control" name="latitude" id="latitude" ng-required="true" ng-model="newSite.latitude" ng-pattern="expDecimalLatitud">
+		            		<span ng-if="siteRegistration.latitude.$error.required && siteRegistration.latitude.$touched" class="help-block">La latitudeitud es requerida.</span>
+                			<span ng-if="siteRegistration.latitude.$error.pattern && siteRegistration.latitude.$touched" class="help-block">El formato de la latitud no es aceptado, solo grados decimales.</span>
 		            	</div>
-		            	<div class="col-sm-6 signUpSecondColumn" ng-class="{'has-error':siteRegistration.long.$invalid && siteRegistration.long.$touched}">
+		            	<div class="col-sm-6 signUpSecondColumn" ng-class="{'has-error':siteRegistration.longitude.$invalid && siteRegistration.longitude.$touched}">
 		            		<label for="lon">Longitud*</label>
-		            		<input type="number" class="form-control" name="long" id="lon" ng-required="true" ng-model="newSite.long" ng-pattern="expDecimalLongitud">
-		            		<span ng-if="siteRegistration.long.$error.required && siteRegistration.long.$touched" class="help-block">La longitud es requerida.</span>
-                			<span ng-if="siteRegistration.long.$error.pattern && siteRegistration.long.$touched" class="help-block">El formato de la longitud no es aceptado, solo grados decimales.</span>
+		            		<input type="number" class="form-control" name="longitude" id="longitude" ng-required="true" ng-model="newSite.longitude" ng-pattern="expDecimalLongitud">
+		            		<span ng-if="siteRegistration.longitude.$error.required && siteRegistration.longitude.$touched" class="help-block">La longitudeitud es requerida.</span>
+                			<span ng-if="siteRegistration.longitude.$error.pattern && siteRegistration.longitude.$touched" class="help-block">El formato de la longitud no es aceptado, solo grados decimales.</span>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -71,12 +71,11 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group col-sm-6">
 		            	<label>Subir fotografía</label>
-		            	<input type="file" data-max-size="2048" ng-model="newSite.imageUrl">
+		            	<input type="file">
 		            	<sub>Max 2mb</sub>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
-		        	<h3 class="text-center">{{siteError}}</h3>
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Crear sitio">
