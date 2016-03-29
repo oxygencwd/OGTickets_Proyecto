@@ -193,7 +193,7 @@ header .navbar-nav>li>a {
 }
 
 
-.main-search .btn-absolute, .user-list .btn-absolute{
+.main-search .btn-absolute, .user-list .btn-absolute, .gen-list .btn-absolute, .promoter-events-search button{
 	position: absolute;
 	right: 5%;
 	top: 3px;
@@ -224,7 +224,7 @@ header .navbar-nav>li>a {
 	background-color: #000;
 }
 
-.upcoming-events .buy-button{
+.upcoming-events .buy-button, .client-profile .event-details-btn{
 	width: 100%;
 	font-size: 2.2em;
 	color: #fff;
@@ -365,27 +365,251 @@ input[type=number] {
 
 
 /*********user list******/
-.user-list-container{
+.user-list-container, .gen-list-container, .redeem-tickets-container{
 	background-color: #ebebeb;
 	margin-top: 70px;
 }
 
-.user-list h1{
-	margin-top: 3em;
+.user-list h1, .gen-list h1, .redeem-tickets h1{
+	margin-top: 1.5em;
 	margin-bottom: 25px;
 }
 
 .width80{
+	display: block;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.user-list .btn-absolute{
+.width90{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.user-list .btn-absolute, .gen-list .btn-absolute, .promoter-events-search button{
 	right: 10%;
 	top: 0;
 	padding: 8px 10px 5px 11px;
 }
+
+.user-list ul, .gen-list ul, .client-reserv ul, .promoter-event-item ul{
+	margin-top: 12px;
+	margin-bottom: 25px;
+	list-style: none;
+	border: 1px solid #6d6d6d;
+	padding: 0;
+	height: 20em;
+	overflow-y: scroll;
+}
+
+.user-list li, .gen-list li, .client-reserv li, .promoter-event-item li{
+	border-bottom: 2px solid #a7a7a7;
+	border-right: 3px;
+	font-size: 1.1em;
+	padding: 7px 15px;
+	max-height: 20em;
+}
+
+.user-list a, .gen-list a, .client-reserv a, .promoter-event-item a{
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
+
+.user-list a:hover, .gen-list a:hover, .client-profile a:hover{
+	color: #e67d20;
+}
+
+.user-info-container, .promoter-event-container{
+	border: 2px solid #3598dc;
+	background-color: #fff;
+	height: 20em;
+	overflow-y: scroll;
+	margin-top: 12px;
+	margin-bottom: 25px;
+	padding: 7px 15px;
+}
+
+.user-info-container h3{
+	margin-top: 10px;
+}
+
+.user-info-container button, .promoter-event-item li button{
+	background-color: #e67d20;
+	border: none;
+	border-radius: 0;
+}
+
+.user-info-container button:hover, .promoter-event-item li button:hover{
+	background-color: #f0ad4e;
+}
+
+.user-item-info{
+	margin-bottom: 20px;
+}
+
+/*redeem tickets*/
+
+.redeem-tickets label, .redeem-tickets p{
+	font-size: 1.2em;
+}
+
+.redeem-tickets input, .redeem-tickets button, .promoter-event-container .btn-danger{
+	border: none;
+	border-radius: 0;
+}
+
+.redeem-tickets input[type="text"]{
+	padding:10px;
+	font-size: 1.1em;
+}
+
+.redeem-tickets .btn-primary, .redeem-tickets .btn-danger, .promoter-event-container .btn-danger{
+	padding: 10px;
+	margin-top: 28px;
+	font-size: 1.1em;
+}
+
+.redeem-tickets .btn-primary{
+	background-color: #3598dc;
+}
+
+.redeem-tickets .btn-primary:hover{
+	background-color: #286090;
+}
+
+.redeem-tickets .btn-danger, .client-profile .user-info-container button,  .promoter-event-container .btn-danger{
+	background-color: #fb1b3f;
+}
+
+.redeem-tickets .btn-danger:hover, .client-profile .user-info-container button:hover, .promoter-event-container .btn-danger:hover{
+	background-color: #c9302c;
+}
+
+.redeem-tickets .info-container{
+	padding-left: 5%;
+	margin: 25px 0 70px;
+}
+
+label{
+	font-weight: normal;
+	display: block;
+}
+
+/*client-profile*/
+
+.client-profile-container, .promoter-profile-container{
+	margin-top: 80px;
+	background-color: #ebebeb;
+}
+
+.client-profile .profile-img{
+	margin: 30px auto 60px;
+	display: block;
+}
+
+.client-profile .left-panel a, .promoter-profile .left-panel a{
+	display: block;
+	text-decoration: none;
+	color:#000;
+	font-size: 1.3em;
+}
+
+.client-profile .left-panel a:hover, .promoter-profile .left-panel a:hover{
+	color:#e77e23;
+}
+
+
+.client-profile .upcoming-events-item{
+	margin-bottom: 30px;
+}
+
+.client-profile h2{
+	margin-top: 2.8em;
+	margin-bottom: 30px;
+}
+
+.client-profile .event-details-btn{
+	background-color: #e77e23;
+	margin-bottom: 25px;
+}
+
+.client-profile .event-details-btn:hover{
+	color: #000;
+}
+
+.client-profile .upcoming-events-item img{
+	max-width: 100%;
+	height: 15em;
+}
+
+/*promoter-profile*/
+.promoter-profile .left-panel{
+	margin-top: 100px;
+}
+
+.promoter-profile h2{
+	margin-top: 1.2em;
+	margin-bottom: 25px;
+}
+
+.promoter-events h4{
+	margin-left: 18px;
+}
+
+.promoter-event-item ul{
+	height: 28em;
+}
+
+.promoter-event-item li{
+	height: 9em;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.promoter-event-item li img{
+	height: 100%;
+	width: 100%;
+}
+
+.promoter-event-item li button{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-radius: 0;
+}
+
+.promoter-event-item .pei-info{
+	position: absolute;
+	bottom: 4em;
+	left: 5%;
+	color:#fff;
+}
+
+.promoter-event-container{
+	height: 28em;
+	background-color: #3598dc;
+	color:#fff;
+	overflow: auto;
+}
+
+.promoter-event-container .user-item-info{
+	font-size: 1.2em;
+}
+
+.promoter-event-container .user-item-info a, .promoter-event-container .btn-danger a{
+	color:#fff;
+	text-decoration: none;
+}
+
+.promoter-event-container .user-item-info a:hover{
+	color:#fb1b3f;
+}
+
+
 
 
 .p1{
@@ -398,7 +622,77 @@ input[type=number] {
 	height: 250px;
 }
 
+/*CSS Eventos Carmiol*/
+.eventsSearch{
+	margin-top: 13px;
+}
+.btn-events{
+	background-color: #fd1c3e;
+	color: #fff;
+}
 
+.eventBanner{
+	padding:30px;
+}
+.eventPicture img{
+	width: 100%
+}
+.eventDetalle{
+	background-color: #fd1c3e;
+	color: #fff;
+	height: 370px;
+}
+.eventDetalleTexto{
+	padding: 15px;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.eventSeccionCompra{
+	padding: 50px;
+}
+.eventMembersPrice{
+	background-color: #3598dc;
+	color: #fff;
+	width: 90%;
+}
+.eventMembersPriceText h4,p{
+	padding: 14px;
+}
+.eventBtnComprar{
+	width: 80%;
+	height: 370px;
+}
+.eventBtnComprar div{
+	margin-top: 150px;
+	margin-left: 75px;
+}
+
+/* seat reservation */
+.content {
+  text-align: center;
+}
+
+.seatLayout {
+  margin: 30px auto;
+}
+
+.seat {
+  cursor: pointer;
+}
+
+.buttons {
+  margin: 30px auto;
+}
+
+.legend img{
+  vertical-align: bottom;
+}
+
+
+
+/*Final Eventos Carmiol*/
 
 
 /*********************************************************************
@@ -419,11 +713,11 @@ input[type=number] {
 	}
 
 	.upcoming-events-item{
-		background-color: #fff;
+		background-color: #ebebeb;
 	}
 
-	.upcoming-events img, .upcoming-events .buy-button{
-		width: 50%;
+	.upcoming-events img, .upcoming-events .buy-button, .client-profile .upcoming-events-item img{
+		width: 65%;
 	}
 
 	.upcoming-events-item{
@@ -435,8 +729,20 @@ input[type=number] {
 		top:15px;
 	}
 
+	.client-profile .upcoming-event-info{
+		left: 138px;
+	}
+
 	.upcoming-events h2{
 		margin-bottom: 25px;
+	}
+
+	.redeem-tickets .info-container{
+		padding-left: 12%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 65%;
 	}
 
 }
@@ -488,6 +794,23 @@ input[type=number] {
  		margin-top: 30px;
  	}
 
+ 	.client-profile h2{
+ 		margin-top: 0.8em;
+ 	}
+
+ 	.client-profile .upcoming-events-item img{
+ 		height: 13.5em;
+ 		width: 50%;
+ 	}
+
+ 	.client-profile .event-details-btn{
+ 		width: 50%;
+ 	}
+
+ 	.client-profile .upcoming-event-info{
+		left: 29%;
+	}
+
 }
 
 @media (max-width: 600px){
@@ -512,12 +835,21 @@ input[type=number] {
 		height: 13em;
 	}
 
+	.client-profile .upcoming-events-item img{
+		height: 13em;
+		width: 70%;
+	}
+
 	.upcoming-event-info{
 		left: 22%;
 	}
 
 	.upcoming-events .buy-button{
 		width: 67%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 70%;
 	}
 }
 
@@ -562,12 +894,26 @@ input[type=number] {
 		height: 13em;
 	}
 
+	.client-profile .upcoming-events-item img{
+		width: 95%;
+		height: 13em;
+	}
+
 	.upcoming-event-info{
 		left: 14%;
 	}
 
 	.upcoming-events .buy-button{
 		width: 90%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 95%;
+		font-size: 1.5em;
+	}
+
+	.client-profile .upcoming-event-info{
+		left: 14%;
 	}
 }
 
