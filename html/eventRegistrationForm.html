@@ -12,11 +12,8 @@
 					<div class="form-group">
 		                <div class="col-sm-4">
 			                <label>Tipo de evento:</label>
-		                    <select>
-		                    	<option>Música</option>
-		                    	<option>Teatro</option>
-		                    	<option>Cultura</option>
-		                    	<option>Deporte</option>
+			                <select ng-model="singleEvent.eventType" class="selectpicker"
+		                    ng-options="eventType.value as eventType.name for eventType in eventTypes">
 		                    </select>
 		                </div>
 		            </div> <!-- form group end -->
@@ -25,7 +22,7 @@
 	            	<div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="eventName">Nombre del evento*</label>
-		            		<input type="text" class="form-control" id="eventName" required>
+		            		<input type="text" class="form-control" id="eventName" ng-model="singleEvent.name" required>
 		            	</div>
 		            </div> <!-- form group end -->
 	            </div>
