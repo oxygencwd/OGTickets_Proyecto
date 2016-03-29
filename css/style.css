@@ -707,6 +707,12 @@ label{
 	color: white;
 }
 
+.mapSection{
+	background-color: white;
+}
+
+/*Ends site profile*/
+
 /*********************************************************************
 **************************MEDIA QUERYS********************************
 **********************************************************************/
@@ -757,6 +763,8 @@ label{
 		width: 65%;
 	}
 
+/*Site Profile*/
+
 	.atAGlanceInfo h3{
 		font-size: 20px;
 	}
@@ -764,6 +772,8 @@ label{
 	.atAGlanceInfo p{
 		font-size: 10px;
 	}
+
+/*Ends site profile*/
 
 }
 
@@ -831,6 +841,8 @@ label{
 		left: 29%;
 	}
 
+/*Site Profile*/
+
 	.heroBanner{
 		display: block;
 	}
@@ -849,6 +861,8 @@ label{
 		overflow: hidden;
 		padding-left: 0;
 	}
+
+/*Ends Site Profile*/
 
 }
 
