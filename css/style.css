@@ -787,6 +787,11 @@ label{
 	background-color: white;
 }
 
+google-map{
+    width: 600px;
+    height: 400px;
+}
+
 /*Ends site profile*/
 
 /*********************************************************************
