@@ -1,17 +1,24 @@
 angular.module('OGTicketsApp.controllers')
 .controller('siteRegistrationController', ['$scope', function ($scope) {
-	
+
+
+	$scope.newSite={};
+
 	$scope.addTransact= function () {
 			var transacIds= BDService.getTransactCount();
-			$scope.newTransat.id= transacIds;
-			loggedUser.transac.push($scope.newTransat);
+			$scope.newSite.id= transacIds;
+			loggedUser.transac.push($scope.newSite);
 			BDService.updateTransactCount();
-			$scope.msj= "Movimiento agregado con éxito";
+			$scope.msj= "Sitio creado";
 			clearForm();
 			BDService.updateLoggedUser();
-			$scope.newTransat={};
-			//$window.location.href = ('#/detail/' + $scope.userId+'/' + $scope.newTransat.id );
+			$scope.newSite={};
+			//$window.location.href = ('#/detail/' + $scope.userId+'/' + $scope.newSite.id );
 		};
+
+	$scope.expNumberPhone = /^[\ |0-9]{8}$/;
+	$scope.expDecimalLatitud = /^-?\d{0,2}(?:,\s?\d{3})*(?:\.\d*)?$/;
+	$scope.expDecimalLongitud = /^-?\d{0,3}(?:,\s?\d{3})*(?:\.\d*)?$/;
 
 	var	clearForm= function () {
 		if ($scope.addTransactForm) {
@@ -19,7 +26,5 @@ angular.module('OGTicketsApp.controllers')
                 $scope.addTransactForm.$setUntouched();
         }
 	}; //fin function
-
-
 
 }]); //end -controller-
