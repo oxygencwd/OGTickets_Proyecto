@@ -648,9 +648,21 @@ label{
 	width: 80%;
 	height: 370px;
 }
-.eventBtnComprar div{
+.eventBtnComprar div {
 	margin-top: 150px;
-	margin-left: 75px;
+	
+}
+.eventBtnComprar div a{
+	background-color: #e77e23;
+	color: white;
+}
+.eventsBtnBlue{
+	background-color: #3598dc;
+	color: white;
+}
+.eventsBtnRed{
+	background-color: #fb1b3f;
+	color: white;
 }
 
 /* seat reservation */
