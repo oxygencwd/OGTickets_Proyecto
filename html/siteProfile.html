@@ -8,17 +8,18 @@
 		</div>
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
-				<h3>{{transact.name}}</h3>
-				<p>{{transact.adress}}</p>
-				<p>Telefono: {{transact.phoneOne}}</p>
+				<h3>{{site.name}}</h3>
+				<p>{{site.adress}}</p>
+				<p>Telefono: {{site.phoneOne}}</p>
+				<p>Telefono 2: {{site.phoneTwo}}</p>
 			</div>
 		</div>
 	</div>
 	<section class="mapSection row">
 		<div class="col-sm-6 col-sm-offset-2 col-xs-12">
 			<h3>¿Cómo llegar?</h3>
-			<google-map latitude="{{transact.latitude}}" longitude="{{transact.longitude}}" zoom=17>
-                <google-map-marker latitude= "{{transact.latitude}}" longitude= "{{transact.longitude}}" title="{{transact.name}}"></google-map-marker>
+			<google-map latitude="22" longitude="33" zoom=17>
+                <google-map-marker latitude= "22" longitude= "33" title="{{site.name}}"></google-map-marker>
             </google-map>   
 		</div>
 	</section>

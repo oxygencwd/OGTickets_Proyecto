@@ -1,17 +1,18 @@
 angular.module('OGTicketsApp.controllers')
-.controller('siteProfileController', ['$scope','$routeParams','BDService', function ($scope,$routeParams,BDService) {
+.controller('siteProfileController', ['$scope','$routeParams','localStorageService', function ($scope,$routeParams,localStorageService) {
 	
-	var site = BDService.siteList;
-	var transactId= Number($routeParams.trsId);
-	$scope.userId= side.id;
+	var sites = localStorageService.siteList;
+
+	var sideId= Number($routeParams.sideId);
+	$scope.siteId= sites.id;
 	
-	var objeto= angular.fromJson(site);
+	var objeto= angular.fromJson(sites);
 	
-	objeto.getTransact= function () {
-		return objeto.transac;
+	objeto.getSite= function () {
+		return objeto.site;
 	};
 
-	var transactList= objeto.getTransact();
+	var transactList= objeto.getSite();
 	
 	var getSelectedObject= function (pId) {
 		var result= transactList.filter(function (item) {
@@ -20,8 +21,8 @@ angular.module('OGTicketsApp.controllers')
 		return result;
 	};
 
-	$scope.transact=[];
-	$scope.transact=(getSelectedObject(transactId));
-	$scope.transact= $scope.transact[0];
+	$scope.site=[];
+	$scope.site=(getSelectedObject(sideId));
+	$scope.site= $scope.site[0];
 
 }]); //end -controller-
