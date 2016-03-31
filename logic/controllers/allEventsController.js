@@ -4,6 +4,4 @@ angular.module('OGTicketsApp.controllers')
 	$scope.eventsList= localStorageService.getAll("eventsList");
 	
 
-
-
 }]); //end -controller-

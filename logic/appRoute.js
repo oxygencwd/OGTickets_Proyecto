@@ -1,4 +1,4 @@
-angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services'])
+angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services', 'OGTicketsApp.directives', 'OGTicketsApp.filters'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/home', {
@@ -126,11 +126,18 @@ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies
                 controller: 'eventTypeRegistrationController'
                 //Registro de un tipo de evento. Permisos: admin
             })
+            .when('/admin', {
+                templateUrl: 'html/admin.html',
+                controller: 'adminController'
+                //Registro de un tipo de evento. Permisos: admin
+            })
             .otherwise({redirectTo: '/home'});
 }]);
 
 angular.module('OGTicketsApp.controllers', []);
 angular.module('OGTicketsApp.services', []);
+angular.module('OGTicketsApp.filters', []);
+angular.module('OGTicketsApp.directives', []);
 
 
 
