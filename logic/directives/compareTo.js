@@ -1,4 +1,4 @@
-angular.module('OGTicketsApp')
+angular.module('OGTicketsApp.directives')
 .directive('compareTo', function () {
   return {
     require: 'ngModel',
@@ -10,3 +10,4 @@ angular.module('OGTicketsApp')
     }
   };
 });
+ 
