@@ -374,6 +374,16 @@ display: block;
 }
 
 
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button, input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] , input[type=date] {
+    -moz-appearance:textfield;
+}
+
+
 /*********user list******/
 .user-list-container, .gen-list-container, .redeem-tickets-container, .event-type-container{
 	background-color: #ebebeb;
