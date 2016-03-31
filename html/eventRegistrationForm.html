@@ -12,9 +12,9 @@
 					<div class="form-group">
 		                <div class="col-sm-4">
 			                <label>Tipo de evento:</label>
-			                <select ng-model="singleEvent.eventType" class="selectpicker"
-		                    ng-options="eventType.value as eventType.name for eventType in eventTypes">
-		                    </select>
+								 <select name="" ng-model="selectedType">
+								  <option ng-repeat="option in eventTypes" value="{{option.value}}">{{option.name}}</option>
+								</select>
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>

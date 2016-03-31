@@ -1,6 +1,39 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventProfileController', ['$scope', function ($scope) {
-	
+.controller('eventProfileController', ['$scope', 'eventService', '$routeParams', 'localStorageService', function ($scope, eventService, $routeParams, localStorageService) {
+
+        eventId= $routeParams.eventId;
+        console.log(eventId);
+        // event= eventService.event(eventId);
+        // console.log(event);
+
+       /* var eventsList= localStorageService.getAll("eventsList");
+        console.log(eventsList);
+
+        var event= function (eventId) {
+        result= eventsList.filter(function (item) {
+            return item.id== eventId;
+        });
+        console.log(event);*/
+
+        var eventsList= localStorageService.getAll("eventsList");
+        console.log(eventsList);
+        console.log()
+
+        var event= function (eventId) {
+            result= eventsList.filter(function (item) {
+                return item.id == eventId;
+            });
+            return result;
+        };
+
+        event= event();
+
+        console.log(event);
+        
+
+
+
+//////CARMOL ESTO NO PUEDE ESTAR AQUI, SE DEBE CREAR UN SERVICIO PARA ESTO, EL CONTROLLER SOLO DEBE DECIRLA A LAVISTA QUE MOSTRAR//////
 	$scope.showSeatsSection = function(){
 			$scope.addSeatsSectionShow = true;
 		}
@@ -50,7 +83,7 @@ angular.module('OGTicketsApp.controllers')
             }
         }
         //end of seats
-
+//////CARMOL ESTO NO PUEDE ESTAR AQUI, SE DEBE CREAR UN SERVICIO PARA ESTO//////
 
 
 }]); //end -controller-
