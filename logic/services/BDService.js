@@ -5,7 +5,8 @@ angular.module('OGTicketsApp.services')
 	var savedClientList=[
 		{ "name": "Manuel Mendoza", "id": "cl01", "active": true, "email": "manuelmendoza@gmail.com", "password": "Abcdefg1", "gender": "Masculino", "personalId": "115290295", "birthday": "1994-04-29T06:00:00.000Z", "userType": "ut02" },
 		{ "name": "Juan Pérez", "id": "cl02", "active": true, "email": "juanperez@gmail.com", "password": "Juanperez2", "gender": "Masculino", "personalId": "109820432", "birthday": "1984-06-22T06:00:00.000Z", "userType": "ut02" },
-		{ "name": "Karla Jiménez", "id": "cl03", "active": true, "email": "karlajimenez@yahoo.es", "password": "Karlita26", "gender": "Femenino", "personalId": "112980324", "birthday": "1990-06-26T06:00:00.000Z", "userType": "ut02" }
+		{ "name": "Karla Jiménez", "id": "cl03", "active": false, "email": "karlajimenez@yahoo.es", "password": "Karlita26", "gender": "Femenino", "personalId": "112980324", "birthday": "1990-06-26T06:00:00.000Z", "userType": "ut02" },
+		{ "name": "Naty Mata", "id": "cl04", "active": true, "email": "natymata@gmail.com", "password": "123", "gender": "Femenino", "personalId": "304080245", "birthday": "1986-01-26T06:00:00.000Z", "userType": "ut02" }
 	];
 
 	var savedPromotorList=[
