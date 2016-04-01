@@ -6,9 +6,11 @@ angular.module('OGTicketsApp.controllers')
 
 	$scope.login= function () {
 		var result= userService.canLogin(user);
+		console.log(result);
 		var canLogin= result.canLogin;
 		var usuario = result.user;
-		console.log(usuario);
+	
+		
 		//var user= result.user.id;
 		//console.log(user);
 		// var usuario = angular.fromJson(usuario);
@@ -27,8 +29,6 @@ angular.module('OGTicketsApp.controllers')
 		//formService.clear($scope.loginForm);
 		return result;
 	};
-
-	$scope.login();
 
 	$scope.closeModal= function () {	
 		$('#loginModal').modal('hide');
