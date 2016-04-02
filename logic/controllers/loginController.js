@@ -3,12 +3,11 @@ angular.module('OGTicketsApp.controllers')
 
 	//recoje los datos que vienen del formulario.
 	$scope.cUser={};
-	var cUser= $scope.cUser;
 
 	//autentica el usuario y ejecuta el inicio de sesión
 	$scope.canLogin= function () {
 		var result={};
-		result= userService.canLogin(cUser);
+		result= userService.canLogin($scope.cUser);
 		if(result.canLogin){
 			userService.login($scope.appLoggedUser, result.user);
 			$scope.error="";

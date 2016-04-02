@@ -5,8 +5,4 @@ angular.module('OGTicketsApp.controllers')
 		userService.logout($scope.appLoggedUser);	
 	};
 
-	$scope.isLoggedIn= userService.isLoggedIn($scope.appLoggedUser);
-
-
-
 }]); //end -controller-

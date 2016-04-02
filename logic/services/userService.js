@@ -5,7 +5,7 @@ angular.module('OGTicketsApp.services')
 	
 
 	var accountExists= function (user) {
-		var users= localStorageService.getAll("clientList");
+		var users= localStorageService.getAll("userList");
 		var userExists= users.filter(function (item) {
 			return item.email== user.email;
 		});
@@ -14,6 +14,7 @@ angular.module('OGTicketsApp.services')
 
 	var canLogin= function (user) {
 		var saved= accountExists(user);
+
 		var loggedUser={};
 		var msg="user found";
 		var canLogin= false;
