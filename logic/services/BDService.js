@@ -16,7 +16,7 @@ angular.module('OGTicketsApp.services')
 		{ "name": "Josefina Duarte", "password": "Duarte7621", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": "ut04" },
 		{ "name": "Carlos Ugalde", "password": "Ugalde2223", "active": true, "id": "cs03", "gender": "Masculino", "email": "carlosugalde_8732@hotmail.com", "phone": "73902476", "birthday": "1993-01-29T06:00:00.000Z", "userType": "ut04"},
 /*admin*/		
-		{"id": "ad01", "password": "admin", "email": "oxyGenAdmin@gmail.com", "userType": "ut01", "active": true}
+		{"name": "Admin", "id": "ad01", "password": "admin", "email": "oxyGenAdmin@gmail.com", "userType": "ut01", "active": true}
 	];
 
 	var savedEventsList=[
