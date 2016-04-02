@@ -2,23 +2,21 @@ angular.module('OGTicketsApp.services')
 .service('BDService', ['localStorageService', function(localStorageService) {
 
 	//listas quemadas
-	var savedClientList=[
+	var savedUserList=[
 		{ "name": "Manuel Mendoza", "id": "cl01", "active": true, "email": "manuelmendoza@gmail.com", "password": "Abcdefg1", "gender": "Masculino", "personalId": "115290295", "birthday": "1994-04-29T06:00:00.000Z", "userType": "ut02" },
 		{ "name": "Juan Pérez", "id": "cl02", "active": true, "email": "juanperez@gmail.com", "password": "Juanperez2", "gender": "Masculino", "personalId": "109820432", "birthday": "1984-06-22T06:00:00.000Z", "userType": "ut02" },
 		{ "name": "Karla Jiménez", "id": "cl03", "active": false, "email": "karlajimenez@yahoo.es", "password": "Karlita26", "gender": "Femenino", "personalId": "112980324", "birthday": "1990-06-26T06:00:00.000Z", "userType": "ut02" },
-		{ "name": "Naty Mata", "id": "cl04", "active": true, "email": "natymata@gmail.com", "password": "123", "gender": "Femenino", "personalId": "304080245", "birthday": "1986-01-26T06:00:00.000Z", "userType": "ut02" }
-	];
-
-	var savedPromotorList=[
+		{ "name": "Naty Mata", "id": "cl04", "active": true, "email": "natymata@gmail.com", "password": "123", "gender": "Femenino", "personalId": "304080245", "birthday": "1986-01-26T06:00:00.000Z", "userType": "ut02" },
+/*promotores*/
 		{ "name": "Cheese Productions", "password": "Holahola77", "id": "pr01", "active": true, "email": "cheeseproductions@gmail.com", "personalId": "3816497372", "areaOfSpecialization": "Conciertos", "phoneOne": "60324127", "address": "Desamparados, San José", "phoneTwo": "22236543", "userType": "ut03" },
 		{ "name": "Jonathan Ryzowy", "password": "Distrito55", "active": true, "email": "ryzowy@gmail.com", "personalId": "105720123", "areaOfSpecialization": "Cultura", "phoneOne": "88328319", "id": "pr02", "address": "Santa Ana, Costa Rica", "userType": "ut03" },
-		{ "name": "Francisca Productions", "password": "Francisquita2", "active": true, "id": "pr03", "email": "info@franciscaproductions.com", "personalId": "3692134812", "areaOfSpecialization": "Deportes", "phoneOne": "22138844", "address": "Santo Domingo, Heredia", "userType": "ut03"}
-	];
-
-	var savedCashierList=[
+		{ "name": "Francisca Productions", "password": "Francisquita2", "active": true, "id": "pr03", "email": "info@franciscaproductions.com", "personalId": "3692134812", "areaOfSpecialization": "Deportes", "phoneOne": "22138844", "address": "Santo Domingo, Heredia", "userType": "ut03"},
+/*cajeros*/
 		{ "name": "Juanita Hidalgo Rodríguez", "active": true, "password": "Hidalgo92", "id": "cs01", "gender": "Femenino", "email": "j.hidalgo.rodriguez@hotmail.com", "phone": "88120922", "birthday": "1991-10-21T06:00:00.000Z", "userType": "ut04" },
 		{ "name": "Josefina Duarte", "password": "Duarte7621", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": "ut04" },
-		{ "name": "Carlos Ugalde", "password": "Ugalde2223", "active": true, "id": "cs03", "gender": "Masculino", "email": "carlosugalde_8732@hotmail.com", "phone": "73902476", "birthday": "1993-01-29T06:00:00.000Z", "userType": "ut04"}
+		{ "name": "Carlos Ugalde", "password": "Ugalde2223", "active": true, "id": "cs03", "gender": "Masculino", "email": "carlosugalde_8732@hotmail.com", "phone": "73902476", "birthday": "1993-01-29T06:00:00.000Z", "userType": "ut04"},
+/*admin*/		
+		{"id": "ad01", "password": "admin", "email": "oxyGenAdmin@gmail.com", "userType": "ut01", "active": true}
 	];
 
 	var savedEventsList=[
@@ -35,10 +33,6 @@ angular.module('OGTicketsApp.services')
 
 	var savedTransactionList=[
 		{"id": "tr01", "cancelled": true, "transactionType": "tt01", "eventId": "ev02", "ticketsAmount" : 2, "idClient": "cl02", "active": true, "trCode":"pu-cl02-ev02-0329-tr01" }
-	];
-
-	var savedAdminList = [
-		{"id": "ad01", "password": "admin", "email": "oxyGenAdmin@gmail.com", "userType": "ut01"}
 	];
 
 	var savedEventTypeList = [
@@ -58,19 +52,9 @@ angular.module('OGTicketsApp.services')
 
 	//metodos ara cargar la base de datos con datos
 
-	//quemar los datos de cliente
-	var clientList= function () {
-		return localStorageService.getOrArray("clientList", savedClientList);
-	};
-
-	//quemar los datos de promotor
-	var promoterList= function () {
-		return localStorageService.getOrArray("promoterList", savedPromotorList);
-	};
-
-	//quemar los datos de cajero
-	var cashierList= function () {
-		return localStorageService.getOrArray("cashierList", savedCashierList);
+	//quemar los datos de usuarios
+	var userList= function () {
+		return localStorageService.getOrArray("userList", savedUserList);
 	};
 
 	//quemar los datos de evento
@@ -87,11 +71,6 @@ angular.module('OGTicketsApp.services')
 	var transactionList= function () {
 		return localStorageService.getOrArray("transactionList", savedTransactionList);
 	};
-
-	//quemar los datos del admin
-	var adminList= function () {
-		return localStorageService.getOrArray("adminList", savedAdminList);
-	};
 	 
 	//quemar los datos del tipo de evento
 	var eventTypeList= function () {
@@ -103,19 +82,13 @@ angular.module('OGTicketsApp.services')
 		return localStorageService.getOrArray("promoterRegisterRequest", savedPromoterRegisterRequest);
 	};
 
-	
-
-
 
 //puntos de acceso de los metodos del servicio:
 	return{
-		clientList:clientList,
-		promoterList:promoterList,
-		cashierList:cashierList,
+		userList:userList,
 		eventsList:eventsList,
 		siteList:siteList,
 		transactionList:transactionList,
-		adminList:adminList,
 		eventTypeList:eventTypeList,
 		promoterRegisterRequest:promoterRegisterRequest
 	};
