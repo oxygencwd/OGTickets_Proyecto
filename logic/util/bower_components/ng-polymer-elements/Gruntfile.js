@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
 @toc
 2. load grunt plugins
@@ -76,6 +77,8 @@ module.exports = function(grunt) {
 
 };
 =======
+=======
+>>>>>>> davModelSiteRegister.v01
 /**
 @toc
 2. load grunt plugins
@@ -152,4 +155,7 @@ module.exports = function(grunt) {
 	init({});		//initialize here for defaults (init may be called again later within a task)
 
 };
+<<<<<<< HEAD
+>>>>>>> davModelSiteRegister.v01
+=======
 >>>>>>> davModelSiteRegister.v01
