@@ -18,36 +18,18 @@ angular.module('OGTicketsApp.services')
 		var msg="user found";
 		var canLogin= false;
 		var result={};
-		if(saved.length>0){
-			if(saved[0].active==true){
-				if(saved[0].email==user.email){
-					if(saved[0].password==user.password){
-						loggedUser= {
-							name: saved[0].name,
-							id: saved[0].id,
-							userType: saved[0].userType
-						};
-						canLogin= true;
-						result={
-							user: loggedUser,
-							msg: msg,
-							canLogin: canLogin
-						};
-					}else{
-						msg= "user not found";
-						result={
-							msg:msg,
-							canLogin: canLogin
-						};	
-					}
-				}
-			}else{
-				msg= "user not found";
-				result={
-					msg:msg,
-					canLogin: canLogin
-				};	
-			}
+		if(saved.length>0 && saved[0].active==true && saved[0].email==user.email && saved[0].password==user.password){
+			loggedUser= {
+				name: saved[0].name,
+				id: saved[0].id,
+				userType: saved[0].userType
+			};
+			canLogin= true;
+			result={
+				user: loggedUser,
+				msg: msg,
+				canLogin: canLogin
+			};
 		}else{
 			msg= "user not found";
 			result={

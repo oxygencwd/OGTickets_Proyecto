@@ -6,17 +6,12 @@ angular.module('OGTicketsApp.controllers')
 
 	$scope.login= function () {
 		var result= userService.canLogin(user);
-		console.log(result);
+		console.debug(result);
 		var canLogin= result.canLogin;
-		var usuario = result.user;
-	
 		
-		//var user= result.user.id;
-		//console.log(user);
-		// var usuario = angular.fromJson(usuario);
-		// console.log(usuario);
 		if(canLogin){
-			$location.path('/client-profile/userId');
+			var userId = result.user.id;
+			//$location.path('/client-profile/{{userId}}');
 			$scope.msg="";
 			$scope.closeModal();
 			formService.clear($scope, $scope.loginForm);
