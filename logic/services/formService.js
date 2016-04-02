@@ -1,11 +1,9 @@
 angular.module('OGTicketsApp.services')
 .service('formService', function() {
 
-	var clear= function ($scope, form) {
-		if ($scope.form) {
-                $scope.form.$setPristine();
-                $scope.form.$setUntouched();
-        }
+	var clear= function (form) {
+        form.$setPristine();
+        form.$setUntouched();
 	}; //fin function
 
 
@@ -15,7 +13,5 @@ angular.module('OGTicketsApp.services')
 		clear:clear
 	};
 });//end -service-
-
-
 
 

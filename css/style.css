@@ -33,7 +33,7 @@ header .navbar-nav>li>a{
 	color:#e67d20;
 }
 
-header .navbar-nav>li>a {
+header .navbar-nav>li>a{
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
@@ -45,6 +45,10 @@ header .navbar-nav>li>a {
 
 .navbar-inverse{
 	background-color: #4f5457;
+}
+
+header span.user-icon{
+	margin-right: 8px;
 }
 
 
@@ -259,18 +263,6 @@ header .navbar-nav>li>a {
 	left: 30px;
 }
 
-.allEventsDisplay{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.allEventsDisplay button{
-	margin: 0;
-	padding: 0;
-	margin-bottom: 1em;
-}
-
 .allEventsDisplay button a{
 	text-decoration: none;
 	color: #fff;
@@ -278,6 +270,10 @@ header .navbar-nav>li>a {
 
 .allEventsDisplay button a:hover{
 	color:#000;
+}
+
+.allEventsDisplay button{
+	margin-bottom: 1em;
 }
 
 .display-none{
@@ -707,16 +703,6 @@ label{
 /*Final Eventos Carmiol*/
 
 
-.p1{
-	background-color: gray;
-	height: 250px;
-}
-
-.p2{
-	background-color: red;
-	height: 250px;
-}
-
 /*event-type-profile*/
 
 .event-type{
@@ -830,7 +816,7 @@ input.ng-invalid.ng-touched.ng-invalid-required, select.ng-invalid.ng-touched.ng
 	border: 1px solid #fa787e;
 }
 
-form sub{
+form sub, .error{
 	color: #fa787e;
 }
 
@@ -854,7 +840,7 @@ form sub{
 	}
 
 	.upcoming-events-item{
-		background-color: #ebebeb;
+		background-color: #fff;
 	}
 
 	.upcoming-events img, .upcoming-events .buy-button, .client-profile .upcoming-events-item img{

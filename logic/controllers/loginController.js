@@ -1,28 +1,23 @@
 angular.module('OGTicketsApp.controllers')
-.controller('loginController', ['$scope', 'userService', 'formService', '$location', '$routeParams', function ($scope, userService, formService, $location, $routeParams) {
+.controller('loginController', ['$scope', 'userService', 'formService', function ($scope, userService, formService) {
 
-	$scope.user={};
-	var user= $scope.user;
+	//recoje los datos que vienen del formulario.
+	$scope.cUser={};
+	var cUser= $scope.cUser;
 
-	$scope.login= function () {
-		var result= userService.canLogin(user);
-		console.debug(result);
-		var canLogin= result.canLogin;
-		
-		if(canLogin){
-			var userId = result.user.id;
-			//$location.path('/client-profile/{{userId}}');
-			$scope.msg="";
+	//autentica el usuario y ejecuta el inicio de sesión
+	$scope.canLogin= function () {
+		var result={};
+		result= userService.canLogin(cUser);
+		if(result.canLogin){
+			userService.login($scope.appLoggedUser, result.user);
+			$scope.error="";
+			$scope.cUser={};
+			formService.clear($scope.loginForm);
 			$scope.closeModal();
-			formService.clear($scope, $scope.loginForm);
 		}else{
-			$scope.msg= result.msg;
+			$scope.error= "E-mail o contraseña inválidos";
 		}
-
-		
-		
-		//formService.clear($scope.loginForm);
-		return result;
 	};
 
 	$scope.closeModal= function () {	
@@ -30,3 +25,4 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 }]); //end -controller-
+

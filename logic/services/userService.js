@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('userService', ['localStorageService', function(localStorageService) {
+.service('userService', ['localStorageService', '$cookieStore', function(localStorageService, $cookieStore) {
 
 	/* login, logout, register, isLoggedIn, getCurrentUser*/
 	
@@ -37,16 +37,50 @@ angular.module('OGTicketsApp.services')
 				canLogin: canLogin
 			};	
 		};
-
 		return result;
+	}; //end -canLogin
+
+	var login= function (appLoggedUser, usr) {
+		appLoggedUser.name= usr.name;
+		appLoggedUser.id= usr.id;
+		appLoggedUser.userType= usr.userType;
+		appLoggedUser.isConnected= true;
+
+		$cookieStore.put('isConnected', true);
+      	$cookieStore.put('loggedUser', usr);
 	};
 
+	var logout= function (appLoggedUser) {
+		appLoggedUser.name ="";
+		appLoggedUser.id ="";
+		appLoggedUser.userType ="";
+		appLoggedUser.isConnected =false;
+
+		$cookieStore.remove('isConnected');
+		$cookieStore.remove('loggedUser');
+	};//end -logout
+
+	var isLoggedIn= function (appLoggedUser) {
+		//var result;
+		cUser= $cookieStore.get('loggedUser');
+		if(cUser){
+			login(appLoggedUser, cUser);
+		};
+	};
+
+		
+		
+		
+		
 	
     
 
 //puntos de acceso de los metodos del servicio:
 	return{
-		canLogin:canLogin
+		canLogin:canLogin,
+		login:login,
+		logout:logout,
+		isLoggedIn:isLoggedIn
 	};
 }]);//end -service-
 
