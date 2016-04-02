@@ -4,10 +4,10 @@
         $rootScope.$on('$routeChangeStart', function(event, next, current) {
           
         if ($cookieStore.get('isConnected') == false || $cookieStore.get('isConnected') == null) {
-
-            if(next.controller == 'allUsersController' || next.controller == 'allEventsAdminController' ) {
-              $location.path('/home');
-            }
+            
+            // if(next.controller == 'allUsersController' || next.controller == 'allEventsAdminController' ) {
+            //   $location.path('/home');
+            // }
         }
         else {
             var loggedUser = $cookieStore.get('loggedUser');

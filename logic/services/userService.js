@@ -79,7 +79,7 @@ angular.module('OGTicketsApp.services')
 		}else{
 			return {
 				conected: false,
-				msg: "User not conected";
+				msg: "User not conected"
 			};
 		};
 	};

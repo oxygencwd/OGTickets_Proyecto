@@ -10,7 +10,7 @@ angular.module('OGTicketsApp.services')
 /*promotores*/
 		{ "name": "Cheese Productions", "password": "Holahola77", "id": "pr01", "active": true, "email": "cheeseproductions@gmail.com", "personalId": "3816497372", "areaOfSpecialization": "Conciertos", "phoneOne": "60324127", "address": "Desamparados, San José", "phoneTwo": "22236543", "userType": "ut03" },
 		{ "name": "Jonathan Ryzowy", "password": "Distrito55", "active": true, "email": "ryzowy@gmail.com", "personalId": "105720123", "areaOfSpecialization": "Cultura", "phoneOne": "88328319", "id": "pr02", "address": "Santa Ana, Costa Rica", "userType": "ut03" },
-		{ "name": "Francisca Productions", "password": "Francisquita2", "active": true, "id": "pr03", "email": "info@franciscaproductions.com", "personalId": "3692134812", "areaOfSpecialization": "Deportes", "phoneOne": "22138844", "address": "Santo Domingo, Heredia", "userType": "ut03"},
+		{ "name": "Francisca Productions", "password": "Francisquita2", "active": false, "id": "pr03", "email": "info@franciscaproductions.com", "personalId": "3692134812", "areaOfSpecialization": "Deportes", "phoneOne": "22138844", "address": "Santo Domingo, Heredia", "userType": "ut03"},
 /*cajeros*/
 		{ "name": "Juanita Hidalgo Rodríguez", "active": true, "password": "Hidalgo92", "id": "cs01", "gender": "Femenino", "email": "j.hidalgo.rodriguez@hotmail.com", "phone": "88120922", "birthday": "1991-10-21T06:00:00.000Z", "userType": "ut04" },
 		{ "name": "Josefina Duarte", "password": "Duarte7621", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": "ut04" },
@@ -20,9 +20,9 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedEventsList=[
-		{ "startHour": "7:00pm", "endHour": "10:00pm",  "siteId": "si03", "active": true, "description": "Viene Rihanna con su World Tour, un verdadero show que no te podés perder", "date": "2016-04-27T06:00:00.000Z", "id": "ev01", "name": "Rihanna World Tour", "ticketsPrice": 35500, "eventType": "et01", "capacity": 6000, "image": "imagen6.jpg" },
-		{ "startHour": "10:00pm", "endHour": "9:30pm", "active": true, "siteId": "si03", "description": "Costa Rica recibe a Jamaica", "name": "Costa Rica vs Jamaica", "id": "ev02", "date": "2016-04-17T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 8000, "capacity": 7000, "image": "imagen4.jpg" },
-		{ "startHour": "8:00pm", "endHour": "9:00pm", "active": true, "siteId": "si02", "description": "Revive y canta junto con Jaime Gamboa y Malpaís las canciones inolvidables que nos dejó Fidel Gamboa", "name": "Malpaís en concierto" , "id": "ev03", "date": "2016-05-16T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 5000, "capacity": 3000, "image": "imagen2.jpg"}
+		{ "startHour": "7:00pm", "endHour": "10:00pm",  "siteId": "si03", "active": true, "description": "Viene Rihanna con su World Tour, un verdadero show que no te podés perder", "date": "2016-04-27T06:00:00.000Z", "id": "ev01", "name": "Rihanna World Tour", "ticketsPrice": 35500, "eventType": "et01", "capacity": 6000, "image": "imagen6.jpg", "promoterId": "pr02" },
+		{ "startHour": "10:00pm", "endHour": "9:30pm", "active": true, "siteId": "si03", "description": "Costa Rica recibe a Jamaica", "name": "Costa Rica vs Jamaica", "id": "ev02", "date": "2016-04-17T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 8000, "capacity": 7000, "image": "imagen4.jpg", "promoterId": "pr02"  },
+		{ "startHour": "8:00pm", "endHour": "9:00pm", "active": true, "siteId": "si02", "description": "Revive y canta junto con Jaime Gamboa y Malpaís las canciones inolvidables que nos dejó Fidel Gamboa", "name": "Malpaís en concierto" , "id": "ev03", "date": "2016-05-16T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 5000, "capacity": 3000, "image": "imagen2.jpg", "promoterId": "pr01" }
 	];
 
 	var savedSiteList=[
@@ -44,9 +44,15 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedPromoterRegisterRequest = [
-		{ "approved": false, "pendingCheck": true, "name": "Cheese Productions", "password": "Holahola77", "id": "pr01", "active": true, "email": "cheeseproductions@gmail.com", "personalId": "3816497372", "areaOfSpecialization": "Conciertos", "phoneOne": "60324127", "address": "Desamparados, San José", "phoneTwo": "22236543", "userType": 3 },
-		{ "approved": false, "pendingCheck": true, "name": "Jonathan Ryzowy", "password": "Distrito55", "active": true, "email": "ryzowy@gmail.com", "personalId": "105720123", "areaOfSpecialization": "Cultura", "phoneOne": "88328319", "id": "pr02", "address": "Santa Ana, Costa Rica", "userType": 3 },
-		{ "approved": false, "pendingCheck": true, "name": "Francisca Productions", "password": "Francisquita2", "active": true, "id": "pr03", "email": "info@franciscaproductions.com", "personalId": "3692134812", "areaOfSpecialization": "Deportes", "phoneOne": "22138844", "address": "Santo Domingo, Heredia", "userType": 3 }
+		//solicitudes aprobadas
+		{ "approved": true, "pendingCheck": false, "name": "Cheese Productions", "password": "Holahola77", "id": "rq01", "email": "cheeseproductions@gmail.com", "personalId": "3816497372", "areaOfSpecialization": "Conciertos", "phoneOne": "60324127", "address": "Desamparados, San José", "phoneTwo": "22236543", "userType": 3 },
+		{ "approved": true, "pendingCheck": false, "name": "Jonathan Ryzowy", "password": "Distrito55", "email": "ryzowy@gmail.com", "personalId": "105720123", "areaOfSpecialization": "Cultura", "phoneOne": "88328319", "id": "rq02", "address": "Santa Ana, Costa Rica", "userType": 3 },
+		{ "approved": true, "pendingCheck": false, "name": "Francisca Productions", "password": "Francisquita2", "id": "rq03", "email": "info@franciscaproductions.com", "personalId": "3692134812", "areaOfSpecialization": "Deportes", "phoneOne": "22138844", "address": "Santo Domingo, Heredia", "userType": 3 },
+		//solicitudes no aprovadas
+		{ "approved": false, "pendingCheck": true, "name": "Degree Productions", "password": "degree1", "id": "rq04", "email": "degree@gmail.com", "personalId": "5864597372", "areaOfSpecialization": "Arte", "phoneOne": "75632589", "address": "Escazu, San José", "phoneTwo": "25639856", "userType": 3 },
+		{ "approved": false, "pendingCheck": true, "name": "Yoda Productions", "password": "yoda1", "email": "yadainfo@gmail.com", "personalId": "305690589", "areaOfSpecialization": "Teatro", "phoneOne": "75698632", "id": "rq05", "address": "Moravia, Costa Rica", "userType": 3 },
+		{ "approved": false, "pendingCheck": true, "name": "Backstage Productions", "password": "bs1234", "id": "rq06", "email": "bsinfo@backstage.com", "personalId": "13698756", "areaOfSpecialization": "Música", "phoneOne": "29865647", "address": "Paraíso, Cartago", "userType": 3 },
+
 	];
 
 
