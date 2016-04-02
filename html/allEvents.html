@@ -22,24 +22,19 @@
 						<h2></h2>
 					</div>
 				</div> <!-- row -->
-				<ul class="allEventsDisplay">
-					<li ng-repeat="event in eventsList track by $index">
-						<div class="col-md-4">
-							<div class="upcoming-events-item">
-								<div class="upcoming-event-info">
-									<h5>{{event.name}}</h5>
-									<p>{{event.date | date}}</p>
-									<p>{{event.startHour}}</p>
-								</div>
-								<div class="event-item-img">
-									<img src="images/event-default-images/{{event.image}}" class="img-responsive center-block" alt="">
-									<button class="buy-button first center-block" ><a ng-href="#/event-profile/{{event.id}}">Comprar</a></button>
-								</div>
-							</div><!-- upcoming-events-item -->
-						</div>
-					</li>
-				</ul><!-- allEventsDisplay -->
-
+					<div class="col-md-4 allEventsDisplay" ng-repeat="event in eventsList track by $index">
+						<div class="upcoming-events-item">
+							<div class="upcoming-event-info">
+								<h5>{{event.name}}</h5>
+								<p>{{event.date | date}}</p>
+								<p>{{event.startHour}}</p>
+							</div>
+							<div class="event-item-img">
+								<img src="images/event-default-images/{{event.image}}" class="img-responsive center-block" alt="">
+								<button class="buy-button first center-block" ><a ng-href="#/event-profile/{{event.id}}">Comprar</a></button>
+							</div>
+						</div><!-- upcoming-events-item -->
+					</div>
 			</div><!-- upcoming-events -->
 		</div> <!-- row -->
 	</div><!-- Fin Eventos proximos -->
