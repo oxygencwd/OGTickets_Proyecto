@@ -1,4 +1,26 @@
-angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services', 'OGTicketsApp.directives', 'OGTicketsApp.filters'])
+ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services', 'OGTicketsApp.directives', 'OGTicketsApp.filters'])
+
+    .run(function($rootScope, $location, $cookieStore) {
+        $rootScope.$on('$routeChangeStart', function(event, next, current) {
+          
+        if ($cookieStore.get('isConnected') == false || $cookieStore.get('isConnected') == null) {
+
+            if(next.controller == 'allUsersController' || next.controller == 'allEventsAdminController' ) {
+              $location.path('/home');
+            }
+        }
+        else {
+            var loggedUser = $cookieStore.get('loggedUser');
+
+            // if(next.templateUrl == 'html/inicio.html' || usuario.puesto != 1) {
+            //   $location.path('/tareas');
+            // }
+        };//aqui termina el else
+
+
+        })
+      })
+
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/home', {
@@ -79,7 +101,7 @@ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies
             .when('/cashier-edit/:cashierId', {
                 templateUrl: 'html/cashierSignupForm.html',
                 controller: 'cashierEditController'
-                //registro de Cajeros y Promotores. Permisos: Admin
+                ////Editar cajeros. Permisos: Admin
             })
             .when('/redeem-tickets', {
                 templateUrl: 'html/redeemTickets.html',
@@ -129,7 +151,7 @@ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies
             .when('/admin', {
                 templateUrl: 'html/admin.html',
                 controller: 'adminController'
-                //Registro de un tipo de evento. Permisos: admin
+                //Perfil del admin. Permisos: admin
             })
             .otherwise({redirectTo: '/home'});
 }]);
