@@ -108,14 +108,16 @@
       </div>
       <div class="modal-body">
             <div class="row text-center">
-                <form class="col-md-10 col-md-offset-1" style="padding:0">
+                <form ng-submit="creditCardForm.$valid && registerCreditCard()" name="creditCardForm" class="col-md-10 col-md-offset-1" style="padding:0">
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" id="signupE" placeholder="Nombre Tarjetahabiente" contenteditable="false">
+                    	<label for="singupE">Nombre del tarjeta habiente</label>
+                        <input type="text" class="form-control" id="signupE" contenteditable="false">
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" id="signupEmail1" placeholder="Número Tarjeta" contenteditable="false">
+                    	<label for="signupEmail1">Número de tarjeta</label>
+                        <input type="number" class="form-control" id="signupEmail1" contenteditable="false">
                     </div>
-                  <p>Expiración</p>
+                	<p>Expiración</p>
                     <div class="form-group col-md-6">                            
                         <input type="text" class="form-control" id="signupPassword" placeholder="Mes" contenteditable="false">
                     </div>
