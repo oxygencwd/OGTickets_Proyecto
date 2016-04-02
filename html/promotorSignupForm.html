@@ -7,7 +7,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-			<form name="clientSignup" ng-submit="" novalidate>
+			<form name="clientSignup" ng-submit="clientSignup.$valid && promotorRegister()" novalidate>
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="form-group">
 						<div class="col-sm-4">
@@ -24,10 +24,12 @@
 		                </div>
 		                <div class="col-sm-4">
 			                <label>Tipo de promotor:</label>
-		                    <select>
-		                    	<option>Persona jurídica</option>
-		                    	<option>Persona física</option>
+		                    <select name="tipePerson" id="tipePerson" ng-model="userPromotor.tipePerson" required ng-model-options="{ updateOn:'blur'}">
+		                    	<option value="">-Tipo persona-</option>
+		                    	<option value="personaJuridica">Persona jurídica</option>
+		                    	<option value="personaFisica">Persona física</option>
 		                    </select>
+		                    <sub ng-show="clientSignup.tipePerson.$error.required && clientSignup.tipePerson.$touched">Elegir el tipo de persona</sub>
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -38,7 +40,8 @@
 	            	<div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="promotorName">Nombre*</label>
-		            		<input type="text" class="form-control" id="promotorName" placeholder="Nombre de empresa">
+		            		<input type="text" class="form-control" name="promotorName" id="promotorName" placeholder="Nombre de empresa" ng-model="userPromotor.name" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.promotorName.$invalid && clientSignup.promotorName.$touched">Nombre empresa requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 	            </div>
@@ -47,7 +50,8 @@
 	            	<div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="legalId">Cédula Jurídica*</label>
-		            		<input type="text" class="form-control" id="legalId" placeholder="Cédula jurídica">
+		            		<input type="text" class="form-control" name="legalId" id="legalId" placeholder="Cédula jurídica" ng-model="userPromotor.legalId" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.legalId.$invalid && clientSignup.legalId.$touched">Cédula jurídica requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 	            </div>
@@ -62,11 +66,12 @@
 	            	<div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="firstname">Primer nombre*</label>
-		            		<input type="text" class="form-control" id="firstname" placeholder="Primer nombre">
+		            		<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Primer nombre" ng-model="userPromotor.firstname" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.firstname.$invalid && clientSignup.firstname.$touched">Primer nombre requerido</sub>
 		            	</div>
 		               <div class="col-sm-6 signUpSecondColumn">
 		               		<label for="secondname">Segundo nombre</label>
-		            		<input type="text" class="form-control" id="secondname" placeholder="Segundo nombre">
+		            		<input type="text" class="form-control" id="secondname" placeholder="Segundo nombre" ng-model="userPromotor.secondname">
 		               </div>
 		            </div> <!-- form group end -->
 	            </div>
@@ -74,11 +79,12 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="firstlastname">Primer apellido*</label>
-		            		<input type="text" class="form-control" id="firstlastname" placeholder="Primer apellido">
+		            		<input type="text" class="form-control" name="firstlastname" id="firstlastname" placeholder="Primer apellido" ng-model="userPromotor.firstlastname" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.firstlastname.$invalid && clientSignup.firstlastname.$touched">Primer apellido requerido</sub>
 		            	</div>
 		               <div class="col-sm-6 signUpSecondColumn">
 		               		<label for="secondlastname">Segundo apellido</label>
-		            		<input type="text" class="form-control" id="secondlastname" placeholder="Segundo apellido">
+		            		<input type="text" class="form-control" id="secondlastname" placeholder="Segundo apellido" ng-model="userPromotor.secondlastname">
 		               </div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -86,7 +92,10 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="personalId">Cédula de identidad*</label>
-		            		<input type="text" class="form-control" id="personalId" placeholder="1 0111 0111">
+		            		<input type="text" class="form-control"  minlength="8" maxlength="9" name="personalId" id="personalId" placeholder="1 0111 0111" ng-model="userPromotor.personalId" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.personalId.$error.required && clientSignup.personalId.$touched">Numero de cedula requerido</sub>
+		            		<sub ng-show="clientSignup.personalId.$error.minlength && clientSignup.personalId.$touched">Cantidad de digitos no validos</sub>
+		            		<sub ng-show="clientSignup.personalId.$error.maxlength && clientSignup.personalId.$touched">Cantidad de digitos no validos</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -97,11 +106,14 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="email">Correo electrónico*</label>
-		            		<input type="email" class="form-control" id="email" placeholder="juan@ejemplo.com">
+		            		<input type="email" class="form-control" name="email" id="email" placeholder="juan@ejemplo.com" ng-model="userPromotor.email" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.email.$error.required && clientSignup.email.$touched">Correo electrónico requerido</sub>
+		            		<sub ng-show="clientSignup.email.$error.email && clientSignup.email.$touched">Formato de correo electrónico no valido</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="specializationArea">Área de especialización*</label>
-		            		<input type="text" class="form-control" id="specializationArea" placeholder="Música, Cultura, Variado, etc">
+		            		<input type="text" class="form-control" name="specializationArea" id="specializationArea" placeholder="Música, Cultura, Variado, etc" ng-model="userPromotor.specializationArea" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.specializationArea.$invalid && clientSignup.specializationArea.$touched">Área de especialización requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -109,11 +121,14 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="password">Contraseña*</label>
-		            		<input type="password" class="form-control" id="password">
+		            		<input type="password" class="form-control" name="password" id="password" ng-model="userPromotor.password" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.password.$error.required && clientSignup.password.$touched">La contraseña es requerida</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="repeatPass">Repita contraseña*</label>
-		            		<input type="password" class="form-control" id="repeatPass">
+		            		<input type="password" class="form-control" name="repeatPass" id="repeatPass" ng-model="userPromotor.repeatPass" required ng-model-options="{ updateOn:'blur'}" data-password-verify="userPromotor.password">
+		            		<sub ng-show="clientSignup.repeatPass.$error.required && clientSignup.repeatPass.$touched">Repetir contraseña es requerido</sub>
+		            		<sub ng-show="clientSignup.repeatPass.$error.passwordVerify && clientSignup.repeatPass.$touched">Las contraseñas no coinciden</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -121,12 +136,17 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Teléfono*</label>
-		            		<input type="number" ng-minlength="8" ng-maxlength="8" class="form-control" id="phone">
+		            		<input type="number" min="0" ng-minlength="8" ng-maxlength="8" class="form-control" name="phone" id="phone" ng-model="userPromotor.phone" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.phone.$error.required && clientSignup.phone.$touched">El telefono es requerido</sub>
+		            		<sub ng-show="clientSignup.phone.$error.minlength && clientSignup.phone.$touched">Formato de telefono no valido. </sub>
+		            		<sub ng-show="clientSignup.phone.$error.maxlength && clientSignup.phone.$touched">Formato de telefono no valido. </sub>
+		            		<sub ng-show="clientSignup.phone.$error.min">No se permiten numeros negativos</sub>
 		            	</div>
 
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="address">Dirección*</label>
-		            		<input type="text" class="form-control" id="address">
+		            		<input type="text" class="form-control" name="address" id="address" ng-model="userPromotor.address" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.address.$invalid && clientSignup.address.$touched">Dirección requerida</sub> 		
 		            	</div>
 
 		            </div> <!-- form group end -->
@@ -134,15 +154,18 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
-		            		<label>Fecha de nacimiento*</label>
-		            		<input type="date" class="form-control">
+		            		<label for="phone">Fecha de nacimiento*</label>
+		            		<input type="date" class="form-control" name="date" id="date" ng-model="userPromotor.date" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="clientSignup.date.$error.required && clientSignup.date.$touched">Fecha de nacimiento es requerida</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label>Género</label>
-		            		<select>
-		            			<option>Masculino</option>
-		            			<option>Femenino</option>
+		            		<select name="genre" id="genre" ng-model="userPromotor.genre" required ng-model-options="{ updateOn:'blur'}">
+		            			<option value="">-Tipo Género-</option>
+		            			<option value="masculino">Masculino</option>
+		            			<option value="femenino">Femenino</option>
 		            		</select>
+		            		<sub ng-show="clientSignup.genre.$error.required && clientSignup.genre.$touched">Elegir un tipo de genero</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
