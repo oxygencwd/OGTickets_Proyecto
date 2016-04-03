@@ -3,12 +3,18 @@ angular.module('OGTicketsApp.services')
 
     /*register, modify, profile, list... events && register, modify, profile, list... eventsTypes*/
 
-    
+    var set = function (key, value){
+    	localStorageService.set(key, value)
+    }
+
+    var setCreditCard = function (value) {
+    	localStorageService.set("creditCardList", value)
+    }
 
 
 //puntos de acceso de los metodos del servicio:
 	return{
-		// metodo1:metodo1,
-  //       metodo2:metodo2
+		set: set,
+		setCreditCard: setCreditCard
 	};
 }]);//end -service-
