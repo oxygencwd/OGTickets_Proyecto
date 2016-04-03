@@ -1,278 +1,283 @@
  angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services', 'OGTicketsApp.directives', 'OGTicketsApp.filters'])
 
-    .run(function($rootScope, $location, $cookieStore) {
-        $rootScope.$on('$routeChangeStart', function(event, next, current) {
-          
-        //evaluamos en el primer if si hay usuario conectado o no, y segun la ruta a la que se diriga le damos permiso o no.
-        if ($cookieStore.get('isConnected') == false || $cookieStore.get('isConnected') == null) {
-
-            //sitio de editar los eventos solo admin y promotor dueño del evento
-            if(next.controller== 'eventProfileController' && next.templateUrl== 'html/eventRegistrationForm.html'){
-                $location.path('/home');
-            };
-            //Registro de un evento, solo admin y promotores
-            if(next.controller== 'eventRegistrationController' && next.templateUrl== 'html/eventRegistrationForm.html'){
-                $location.path('/home');
-            };
-            //Listado de todos los evento, tanto activos como inactivos, solo admin.
-            if(next.controller== 'allEventsAdminController'){
-                $location.path('/home');
-            };
-            //Lista con todos los usuarios y la posibilidad de inactivarlos. Solo admin
-            if(next.controller=='allUsersController'){
-                $location.path('/home');
-            };
-            //perfil del cliente loggeado. Permisos: Cliente propietario de la cuenta.
-            if(next.controller== 'clientProfileController' && next.templateUrl== 'html/clientProfile.html'){
-                $location.path('/home');
-            };
-            //editar la cuenta de un cliente. /Permisos: cliente propietario de la cuenta.
-            if(next.controller== 'clientProfileController' && next.templateUrl== 'html/clientSignupForm.html'){
-                $location.path('/home');
-            };
-            //perfil del promotor. Permisos: promotor propietario de la cuenta.
-            if(next.controller== 'promoterProfileController' && next.templateUrl== 'html/promoterProfile.html'){
-                $location.path('/home');
-            };
-            //editar perfil de un promotor. Permisos: promotor propietario de la cuenta.
-            if(next.controller== 'promoterProfileController' && next.templateUrl== 'html/promotorSignupForm.html'){
-                $location.path('/home');
-            };
-            //registro de Cajeros. Permisos: Admin
-            if(next.controller== 'cashierSignupController' && next.templateUrl== 'html/cashierSignupForm.html'){
-                $location.path('/home');
-            };
-            //Editar Cajeros. Permisos: Admin
-            if(next.controller== 'cashierEditController' && next.templateUrl== 'html/cashierSignupForm.html'){
-                $location.path('/home');
-            };
-            //Formulario para redimir tiquetes. permisos: Cajeros y admin
-            if(next.controller== 'redeemTicketsController'){
-                $location.path('/home');
-            };
-            //Ver una lista de todos los sitios disponibles. Permisos: promotores, admin
-            if(next.controller== 'allSitesController'){
-                $location.path('/home');
-            };
-            //Ver el perfil de un sitio. Permisos: Promotres, admin
-            if(next.controller== 'siteProfileController' && next.templateUrl== 'html/siteProfile.html'){
-                $location.path('/home');
-            };
-            //Edtar el perfil e un sitio. Permisos: Admin
-            if(next.controller== 'siteProfileController' && next.templateUrl== 'html/siteRegistrationForm.html'){
-                $location.path('/home');
-            };
-            //Registrar un sitio. Permisos: Admin
-            if(next.controller== 'siteRegistrationController' && next.templateUrl== 'html/siteRegistrationForm.html'){
-                $location.path('/home');
-            };
-            //Lista con todos los tipos de evento. Permisos: Promotores, Admin.
-            if(next.controller== 'allEventTypesController' ){
-                $location.path('/home');
-            };
-            //Perfil de un tipo de evento.Promotores, Admin
-            if(next.controller== 'eventTypeController' && next.templateUrl== 'html/eventTypeProfile.html'){
-                $location.path('/home');
-            };
-            //Editar el perfil de un tipo de evento. Permisos: admin.
-            if(next.controller== 'eventTypeController' && next.templateUrl== 'html/eventTypeRegistrationForm.html'){
-                $location.path('/home');
-            };
-            //Registro de un tipo de evento. Permisos: admin
-            if(next.controller== 'eventTypeRegistrationController' && next.templateUrl== 'html/eventTypeRegistrationForm.html'){
-                $location.path('/home');
-            };
-            //pefil del admin solo admin
-            if(next.controller== 'adminController' ){
-                $location.path('/home');
-            };
-            //lista con todas las solicitudes activas de promotro, solo admin.
-            if(next.controller== 'promoterRequest' && next.templateUrl== 'html/genList.html'){
-                $location.path('/home');
-            };
-
-
-
-            // //
-            // if(next.controller==  ){
-            //     $location.path('/home');
-            // };
-
-            // //
-            // if(next.controller==  && next.templateUrl==){
-            //     $location.path('/home');
-            // };
-
-
-            // ejemplo
-            // if(next.controller == 'allUsersController' || next.controller == 'allEventsAdminController' ) {
-            //   $location.path('/home');
-            // }
+    //definir las constante de los tipos de usuarios.
+    .constant('ROLES', {
+        ADMIN: {
+            ROL:1,
+        },
+        CLIENT: {
+            ROL:2
+        },
+        PROMOTER: {
+            ROL:3
+        },
+        CASHIER: {
+            ROL:4
+        },
+        GUEST:{
+            ROL:5
         }
-        else {
-            var loggedUser = $cookieStore.get('loggedUser');
-
-            // if(next.templateUrl == 'html/inicio.html' || usuario.puesto != 1) {
-            //   $location.path('/tareas');
-            // }
-        };//aqui termina el else
-
-
-        })
-      })
-
-    .config(['$routeProvider', function($routeProvider) {
+    })
+    //definir las rutas
+    .config(['$routeProvider', 'ROLES', function($routeProvider, ROLES) {
         $routeProvider
             .when('/home', {
                 templateUrl: 'html/home.html',
-                controller: 'homeController'
+                controller: 'homeController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL, ROLES.CASHIER.ROL, ROLES.GUEST.ROL]
+                }
                 //home page, permisos: cualquier usuario
             }) 
             .when('/category/:categoryId', {
                 templateUrl: 'html/allEvents.html',
-                controller: 'allEventsController'
+                controller: 'allEventsController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL, ROLES.CASHIER.ROL, ROLES.GUEST.ROL]
+                }
                 //eventos por categoria seleccionada, cualquier usuario.
             })
             .when('/all-events', {
                 templateUrl: 'html/allEvents.html',
-                controller: 'allEventsController'
+                controller: 'allEventsController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL, ROLES.CASHIER.ROL, ROLES.GUEST.ROL]
+                }
                 //lista cliente de todos los eventos activos, cualquier usuario
             })
             .when('/event-profile/:eventId', {
                 templateUrl: 'html/eventProfile.html',
-                controller: 'eventProfileController'
+                controller: 'eventProfileController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL, ROLES.CASHIER.ROL, ROLES.GUEST.ROL]
+                }
                 //Perfil de un evento. Cualquier usuario puede ver los perfiles pero solo usuarios registrado pueden acceder al paso de compra y solo los promotores propietarios del evento y el admin podrán editarlo.
             })
             .when('/event-profile-edit/:eventId', {
                 templateUrl: 'html/eventRegistrationForm.html',
-                controller: 'eventProfileController'
+                controller: 'eventProfileController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                }
                 //Edición de un evento. Permisos: admin, promotor propietario del evento
             })
             .when('/event-registration', {
                 templateUrl: 'html/eventRegistrationForm.html',
-                controller: 'eventRegistrationController'
+                controller: 'eventRegistrationController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                }
                 //Registro de un evento. Permisos: promotor, admin
             })
             .when('/all-events-admin', {
                 templateUrl: 'html/genList.html',
-                controller: 'allEventsAdminController'
+                controller: 'allEventsAdminController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //Listado de todos los evento, tanto activos como inactivos. Permisos: Admin.
             })
             .when('/all-users', {
                 templateUrl: 'html/usersList.html',
-                controller: 'allUsersController'
+                controller: 'allUsersController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //Lista con todos los usuario por tipos y la posibilidad de inactivarlos. Permisos: admin
             })
             .when('/client-profile/:clientId', {
                 templateUrl: 'html/clientProfile.html',
-                controller: 'clientProfileController'
+                controller: 'clientProfileController',
+                data: {
+                    authorized: [ROLES.CLIENT.ROL]
+                }
                 //perfil del cliente loggeado. Permisos: Cliente propietario de la cuenta.
             })
             .when('/client-profile-edit/:clientId', {
                 templateUrl: 'html/clientSignupForm.html',
-                controller: 'clientProfileController'
+                controller: 'clientProfileController',
+                data: {
+                    authorized: [ROLES.CLIENT.ROL]
+                }
                 //editar la cuenta de un cliente. /Permisos: cliente propietario de la cuenta.
             })
             .when('/user-signup', {
                 templateUrl: 'html/clientSignupForm.html',
-                controller: 'clientSignupController'
+                controller: 'clientSignupController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL, ROLES.CASHIER.ROL, ROLES.GUEST.ROL]
+                }
                 //registro de un usuario nuevo se cae siempre al formulario de registro de cliente y de ahi se escigen las opciones, segun la opcion que se seleccione se redirira a los formularios de promotor o de cajero
             })
             .when('/promoter-profile/:promoterId', {
                 templateUrl: 'html/promoterProfile.html',
-                controller: 'promoterProfileController'
+                controller: 'promoterProfileController',
+                data: {
+                    authorized: [ROLES.PROMOTER.ROL]
+                }
                 //perfil del promotor. Permisos: promotor propietario de la cuenta.
             })
             .when('/promoter-profile-edit/:promoterId', {
                 templateUrl: 'html/promotorSignupForm.html',
-                controller: 'promoterProfileController'
+                controller: 'promoterProfileController',
+                data: {
+                    authorized: [ROLES.PROMOTER.ROL]
+                }
                 //editar perfil de un promotor. Permisos: promotor propietario de la cuenta.
             })
             .when('/promotor-signup', {
                 templateUrl: 'html/promotorSignupForm.html',
-                controller: 'promotorSignupController'
+                controller: 'promotorSignupController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //registro de Cajeros y Promotores. Permisos: Admin
             })
             .when('/cashier-signup', {
                 templateUrl: 'html/cashierSignupForm.html',
-                controller: 'cashierSignupController'
+                controller: 'cashierSignupController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //registro de Cajeros y Promotores. Permisos: Admin
             })
             .when('/cashier-edit/:cashierId', {
                 templateUrl: 'html/cashierSignupForm.html',
-                controller: 'cashierEditController'
+                controller: 'cashierEditController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 ////Editar cajeros. Permisos: Admin
             })
             .when('/redeem-tickets', {
                 templateUrl: 'html/redeemTickets.html',
-                controller: 'redeemTicketsController'
+                controller: 'redeemTicketsController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.CASHIER.ROL]
+                }
                 //Forulario para redimir tiquetes. permisos: Cajeros.
             })
             .when('/all-sites', {
                 templateUrl: 'html/genList.html',
-                controller: 'allSitesController'
+                controller: 'allSitesController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                }
                 //Ver una lista de todos los sitios disponibles. Permisos: promotores, admin
             })
             .when('/site-profile/:siteId', {
                 templateUrl: 'html/siteProfile.html',
-                controller: 'siteProfileController'
+                controller: 'siteProfileController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                }
                 //Ver el perfil de un sitio. Permisos: Promotres, admin: Solo el admin tendrá disponible la opción de editar un sitio.
             })
             .when('/site-profile-edit/:siteId', {
                 templateUrl: 'html/siteRegistrationForm.html',
-                controller: 'siteProfileController'
+                controller: 'siteProfileController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //Edtar el perfil e un sitio. Permisos: Admin
             })
             .when('/site-registration', {
                 templateUrl: 'html/siteRegistrationForm.html',
-                controller: 'siteRegistrationController'
+                controller: 'siteRegistrationController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //Registrar un sitio. Permisos: Admin
             })
             .when('/all-event-types', {
                 templateUrl: 'html/genList.html',
-                controller: 'allEventTypesController'
+                controller: 'allEventTypesController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                }
                 //Lista con todos los tipos de evento. Permisos: Promotores, Admin.
             })
             .when('/event-type-profile/:eventTypeId', {
                 templateUrl: 'html/eventTypeProfile.html',
-                controller: 'eventTypeController'
+                controller: 'eventTypeController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                }
                 //Perfil de un tipo de evento.Promotores, Admin: Solo el admin tendrá habilitada la opcion de editar un tipo de evento. 
             })
             .when('/event-type-profile-edit/:eventTypeId', {
                 templateUrl: 'html/eventTypeRegistrationForm.html',
-                controller: 'eventTypeController'
+                controller: 'eventTypeController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //Editar el perfil de un tipo de evento. Permisos: admin.
             })
             .when('/event-type-registration', {
                 templateUrl: 'html/eventTypeRegistrationForm.html',
-                controller: 'eventTypeRegistrationController'
+                controller: 'eventTypeRegistrationController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //Registro de un tipo de evento. Permisos: admin
             })
             .when('/admin', {
                 templateUrl: 'html/admin.html',
-                controller: 'adminController'
+                controller: 'adminController',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //Perfil del admin. Permisos: admin
             })
             .when('/promoter-request', {
                 templateUrl: 'html/genList.html',
-                controller: 'promoterRequest'
+                controller: 'promoterRequest',
+                data: {
+                    authorized: [ROLES.ADMIN.ROL]
+                }
                 //lista con todas las solicitudes activas de promotro, solo admin.
             })
             .otherwise({redirectTo: '/home'});
-}]);
+    }])
+
+    .run(['$rootScope', '$location', 'userService', 'ROLES', function($rootScope, $location, userService, ROLES) {
+            $rootScope.$on('$routeChangeStart', function(event, next, current) {
+            //buscar si hay usuario loggeado, devuelve falso si no hay usuario loggedo o el objeto usuario si lo hay.
+           
+            var user= userService.getLoggedUser();
+            //definir el tipo de usuario
+            var userType;
+            if(user==false){
+                userType=5;
+            }else{
+                if(user.userType == "ut01"){
+                    userType= 1;
+                }else if(user.userType == "ut02"){
+                     userType= 2;
+                }else if(user.userType == "ut03"){
+                    userType= 3;
+                }else if(user.userType == "ut04"){
+                     userType= 4;
+                }else{
+                    userType= 5;
+                }
+            };
+
+            //definir los permisos
+            var index= next.data.authorized.indexOf(userType);
+            if(index==-1){
+                $location.path('/home');
+            }else{
+                $location.path(next.originalPath);
+            };
+
+        })
+    }]);
+
+
 
 angular.module('OGTicketsApp.controllers', []);
 angular.module('OGTicketsApp.services', []);
 angular.module('OGTicketsApp.filters', []);
 angular.module('OGTicketsApp.directives', []);
-
-
-
-
-        
-
-
-
-
-
 

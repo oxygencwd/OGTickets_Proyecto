@@ -2,7 +2,7 @@ angular.module('OGTicketsApp.controllers')
 .controller('eventProfileController', ['$scope', 'eventService', '$routeParams', 'localStorageService', function ($scope, eventService, $routeParams, localStorageService) {
 
         eventId= $routeParams.eventId;
-        console.log(eventId);
+       //console.log(eventId);
         // event= eventService.event(eventId);
         // console.log(event);
 
@@ -16,7 +16,7 @@ angular.module('OGTicketsApp.controllers')
         console.log(event);*/
 
         var eventsList= localStorageService.getAll("eventsList");
-        console.log(eventsList);
+    //    console.log(eventsList);
         console.log()
 
         var event= function (eventId) {
