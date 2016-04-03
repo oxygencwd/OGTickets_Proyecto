@@ -42,8 +42,6 @@ angular.module('OGTicketsApp.controllers')
         $scope.paymentFormRegister = function (){
             // Saves credit card to database
             eventService.setCreditCard($scope.ccinfo);
-
-            console.log($scope.ccinfo);
         };
         
 
