@@ -88,7 +88,7 @@
 				</div>
 				 <div>
 				        <!--<button ng-click="showSelected()" class="btn btn-block btn-lg eventsBtnRed">Comprar</button>-->
-				        <button  class="btn btn-block btn-lg eventsBtnRed" data-toggle="modal" data-target="#myModal">Comprar</button>
+				        <button  class="btn btn-block btn-lg eventsBtnRed" data-toggle="modal" data-target="#paymentModal">Comprar</button>
 				        <p></p>
 				        <button class="btn btn-block btn-lg eventsBtnBlue">Reservar</button>
 				        
@@ -99,49 +99,69 @@
 	
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Tarjeta de Crédito o Débito</h4>
-      </div>
-      <div class="modal-body">
-            <div class="row text-center">
-                <form class="col-md-10 col-md-offset-1" style="padding:0">
-                    <div class="form-group col-md-12">
-                        <input type="text" class="form-control" id="signupE" placeholder="Nombre Tarjetahabiente" contenteditable="false">
-                    </div>
-                    <div class="form-group col-md-12">
-                        <input type="text" class="form-control" id="signupEmail1" placeholder="Número Tarjeta" contenteditable="false">
-                    </div>
-                  <p>Expiración</p>
-                    <div class="form-group col-md-6">                            
-                        <input type="text" class="form-control" id="signupPassword" placeholder="Mes" contenteditable="false">
-                    </div>
-                    <div class="form-group col-md-6">                            
-                        <input type="text" class="form-control" id="signupPassword" placeholder="Año" contenteditable="false">
-                    </div>
-                    <p>Código Seguridad</p>
-                    <div class="form-group col-md-4 col-md-offset-4">
-                    	
-                        <input type="text" class="form-control" id="access-code" placeholder="3 dígitos">
-                    </div>
-                  <div class="clearfix"></div>
-                </form>
-            </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Comprar</button>
-      </div>
-    </div>
-  </div>
-</div>
-	<div style="height: 50px">
-		
+<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="paymentModalLabel">Tarjeta de Crédito o Débito</h4>
+			</div>
+			<div class="row paymentForm">
+				<form novalidate name="paymentForm" ng-submit="paymentForm.$valid && paymentFormRegister()" class="col-md-10 col-md-offset-1">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-12">
+								<label for="creditCard">Número de tarjeta</label>
+								<input class="col-sm-6" type="text" name="creditCard" id="creditCard" ng-model="ccinfo.number" required data-credit-card-type data-ng-pattern="/^[0-9]+$/" data-ng-minlength="15" maxlength="19" placeholder="Número de tarjeta" ng-model-options="{ updateOn:'blur'}"><small> {{ccinfo.type}}</small>
+
+								<div class="col-sm-12" ng-show="paymentForm.creditCard.$invalid && paymentForm.creditCard.$touched">
+									<sub ng-show="paymentForm.creditCard.$error.minlength">Tarjeta de crédito debe contener entre 15 y 19 números</sub>
+									<sub ng-show="paymentForm.creditCard.$error.pattern">Tarjeta de crédito debe contener solo números</sub>
+									<sub ng-show="paymentForm.creditCard.$error.invalid">La tarjeta debe ser una Amex, Visa, Discover, o Master Card válida</sub>
+									<sub ng-show="paymentForm.creditCard.$error.required">Tarjeta de crédito requerida</sub>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<label for="securityCode">Código de seguridad</label>
+								<input class="col-sm-2" type="text" name="securityCode" id="securityCode" ng-model="ccinfo.securityCode" placeholder="CCV" required data-ng-pattern="/^[0-9]+$/" data-ng-minlength="3" maxlength="4" ng-model-options="{ updateOn:'blur'}">
+								<div class="col-sm-12" ng-show="paymentForm.securityCode.$invalid && paymentForm.securityCode.$touched">
+									<sub ng-show="paymentForm.securityCode.$error.pattern">Código de seguridad debe ser solo números</sub>
+									<sub ng-show="paymentForm.securityCode.$error.minlength">Código de seguridad debe ser de 3-4 dígitos</sub>
+									<sub ng-show="paymentForm.securityCode.$error.required">Código de seguridad requerido</sub>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<label>Fecha de expiración</label>
+								<select class="col-sm-3" ng-model="ccinfo.month" name="month" data-card-expiration required ng-model-options="{ updateOn:'blur'}">
+									<option disabled selected value="">Mes</option>
+									<option ng-repeat="month in months" value="{{$index+1}}" > {{$index+1}}</li>
+								</select>
+
+								<select class="col-sm-3" ng-model="ccinfo.year" name="year" required ng-model-options="{ updateOn:'blur'}">
+									<option disabled selected value="">Año</option>
+									<option ng-repeat="year in [] | range:currentYear:currentYear+13">{{year}}</li>
+								</select>
+
+								<div class="col-sm-12" ng-show="paymentForm.month.$invalid && paymentForm.month.$touched">
+									<sub ng-show="paymentForm.month.$error.required">Mes de expiración requerido</sub>
+								</div>
+								<div class="col-sm-12" ng-show="paymentForm.year.$invalid && paymentForm.year.$touched">
+									<sub ng-show="paymentForm.year.$error.required">Año de expiración requerido</sub>
+									<sub ng-show="paymentForm.month.$error.invalid">Fecha de expiración es inválida</sub>
+								</div>
+							</div>
+						</div>								
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						<button type="submit" class="btn btn-primary">Comprar</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
-	
-
-
-
+</div>

@@ -822,6 +822,32 @@ form sub, .error{
 
 /*Ends site profile*/
 
+/*Admin*/
+.adminView{
+	margin-top: 5em;
+}
+
+.adminView a{
+	text-decoration: none;
+	padding: 0.5em 2%;
+	font-size: 1em;
+	background-color: #d9d9d9;
+}
+/*End Admin*/
+
+/*Payment Form*/
+
+.paymentForm sub{
+	display: block;
+	margin: 1.2em 0;
+}
+
+.paymentForm .row{
+	margin: 1.5em 0;
+}
+
+/*Ends Payment Form*/
+
 /*********************************************************************
 **************************MEDIA QUERYS********************************
 **********************************************************************/
