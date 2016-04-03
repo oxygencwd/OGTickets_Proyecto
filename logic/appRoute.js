@@ -3,8 +3,108 @@
     .run(function($rootScope, $location, $cookieStore) {
         $rootScope.$on('$routeChangeStart', function(event, next, current) {
           
+        //evaluamos en el primer if si hay usuario conectado o no, y segun la ruta a la que se diriga le damos permiso o no.
         if ($cookieStore.get('isConnected') == false || $cookieStore.get('isConnected') == null) {
-            
+
+            //sitio de editar los eventos solo admin y promotor dueño del evento
+            if(next.controller== 'eventProfileController' && next.templateUrl== 'html/eventRegistrationForm.html'){
+                $location.path('/home');
+            };
+            //Registro de un evento, solo admin y promotores
+            if(next.controller== 'eventRegistrationController' && next.templateUrl== 'html/eventRegistrationForm.html'){
+                $location.path('/home');
+            };
+            //Listado de todos los evento, tanto activos como inactivos, solo admin.
+            if(next.controller== 'allEventsAdminController'){
+                $location.path('/home');
+            };
+            //Lista con todos los usuarios y la posibilidad de inactivarlos. Solo admin
+            if(next.controller=='allUsersController'){
+                $location.path('/home');
+            };
+            //perfil del cliente loggeado. Permisos: Cliente propietario de la cuenta.
+            if(next.controller== 'clientProfileController' && next.templateUrl== 'html/clientProfile.html'){
+                $location.path('/home');
+            };
+            //editar la cuenta de un cliente. /Permisos: cliente propietario de la cuenta.
+            if(next.controller== 'clientProfileController' && next.templateUrl== 'html/clientSignupForm.html'){
+                $location.path('/home');
+            };
+            //perfil del promotor. Permisos: promotor propietario de la cuenta.
+            if(next.controller== 'promoterProfileController' && next.templateUrl== 'html/promoterProfile.html'){
+                $location.path('/home');
+            };
+            //editar perfil de un promotor. Permisos: promotor propietario de la cuenta.
+            if(next.controller== 'promoterProfileController' && next.templateUrl== 'html/promotorSignupForm.html'){
+                $location.path('/home');
+            };
+            //registro de Cajeros. Permisos: Admin
+            if(next.controller== 'cashierSignupController' && next.templateUrl== 'html/cashierSignupForm.html'){
+                $location.path('/home');
+            };
+            //Editar Cajeros. Permisos: Admin
+            if(next.controller== 'cashierEditController' && next.templateUrl== 'html/cashierSignupForm.html'){
+                $location.path('/home');
+            };
+            //Formulario para redimir tiquetes. permisos: Cajeros y admin
+            if(next.controller== 'redeemTicketsController'){
+                $location.path('/home');
+            };
+            //Ver una lista de todos los sitios disponibles. Permisos: promotores, admin
+            if(next.controller== 'allSitesController'){
+                $location.path('/home');
+            };
+            //Ver el perfil de un sitio. Permisos: Promotres, admin
+            if(next.controller== 'siteProfileController' && next.templateUrl== 'html/siteProfile.html'){
+                $location.path('/home');
+            };
+            //Edtar el perfil e un sitio. Permisos: Admin
+            if(next.controller== 'siteProfileController' && next.templateUrl== 'html/siteRegistrationForm.html'){
+                $location.path('/home');
+            };
+            //Registrar un sitio. Permisos: Admin
+            if(next.controller== 'siteRegistrationController' && next.templateUrl== 'html/siteRegistrationForm.html'){
+                $location.path('/home');
+            };
+            //Lista con todos los tipos de evento. Permisos: Promotores, Admin.
+            if(next.controller== 'allEventTypesController' ){
+                $location.path('/home');
+            };
+            //Perfil de un tipo de evento.Promotores, Admin
+            if(next.controller== 'eventTypeController' && next.templateUrl== 'html/eventTypeProfile.html'){
+                $location.path('/home');
+            };
+            //Editar el perfil de un tipo de evento. Permisos: admin.
+            if(next.controller== 'eventTypeController' && next.templateUrl== 'html/eventTypeRegistrationForm.html'){
+                $location.path('/home');
+            };
+            //Registro de un tipo de evento. Permisos: admin
+            if(next.controller== 'eventTypeRegistrationController' && next.templateUrl== 'html/eventTypeRegistrationForm.html'){
+                $location.path('/home');
+            };
+            //pefil del admin solo admin
+            if(next.controller== 'adminController' ){
+                $location.path('/home');
+            };
+            //lista con todas las solicitudes activas de promotro, solo admin.
+            if(next.controller== 'promoterRequest' && next.templateUrl== 'html/genList.html'){
+                $location.path('/home');
+            };
+
+
+
+            // //
+            // if(next.controller==  ){
+            //     $location.path('/home');
+            // };
+
+            // //
+            // if(next.controller==  && next.templateUrl==){
+            //     $location.path('/home');
+            // };
+
+
+            // ejemplo
             // if(next.controller == 'allUsersController' || next.controller == 'allEventsAdminController' ) {
             //   $location.path('/home');
             // }
@@ -152,6 +252,11 @@
                 templateUrl: 'html/admin.html',
                 controller: 'adminController'
                 //Perfil del admin. Permisos: admin
+            })
+            .when('/promoter-request', {
+                templateUrl: 'html/genList.html',
+                controller: 'promoterRequest'
+                //lista con todas las solicitudes activas de promotro, solo admin.
             })
             .otherwise({redirectTo: '/home'});
 }]);
