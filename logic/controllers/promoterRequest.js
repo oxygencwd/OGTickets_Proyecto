@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('signInController', ['$scope', function ($scope) {
+.controller('promoterRequest', ['$scope', function ($scope) {
 	
 
 
