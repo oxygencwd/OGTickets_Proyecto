@@ -10,6 +10,7 @@
 	<link href="css/util/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="import" href="logic/util/bower_components/google-map/google-map.html">
+    <link rel="shortcut icon" href="images/logos/title.ico" type="image/x-icon">
 
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,15 +37,26 @@
 		            </div>
 		            <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
 		              <ul class="nav navbar-nav">
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut01'" ng-href="#/admin"><span class="user-icon glyphicon glyphicon-user"></span>Administrar</a></li>	
+
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut02'" ng-href="#/client-profile/{{appLoggedUser.id}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.name}}</a></li>
+
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut03'" ng-href="#/promoter-profile/{{appLoggedUser.id}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.name}}</a></li>
+
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut04'" ng-href="#/redeem-tickets"><span class="user-icon glyphicon glyphicon-tasks"></span>Redimir tiquetes</a></li>
+
+
 		                <li><a ng-href="#/all-events">Eventos</a></li>
-		                <li><a data-toggle="modal" href="#loginModal">Ingresar</a></li>
-		                <li><a ng-href="#/user-signup">Registrarse</a></li>
+		                <li><a data-toggle="modal" href="#loginModal" ng-hide="appLoggedUser.isConnected">Ingresar</a></li>
+		                <li><a ng-href="#/user-signup" ng-hide="appLoggedUser.isConnected">Registrarse</a></li>
+		                <li><a ng-click="logout()" ng-show="appLoggedUser.isConnected">Salir</a></li>
 		              </ul>
 		            </div>	
 				</div><!--row-->
 			</div><!--container-->
 		</div><!--main-bar-->
 	</header>
+
 
 <!-- Modal de ingreso -->
 <!-- Modal -->
@@ -55,14 +67,15 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	      <p class="text-center"><img src="images/logos/logo.png" class="modal-title center-block img-responsive" id="modalLogo" width="119.88" heigth="52.92" alt="og tickets logo"></p>
 	      <h4>Ingresar</h4>
+	      <h4 class="text-center error">{{error}}</h5>
 	    </div>
 	    <div class="modal-body">
-	      <form name="loginForm" ng-submit="loginForm.$valid && login()" novalidate>
+	      <form name="loginForm" ng-submit="loginForm.$valid && canLogin()" novalidate>
 	        <div class="row">
 	          <div class="col-lg-12">
 	            <div class="form-group">
 	              <label for="e-mail">Correo electrónico</label>	
-	              <input type="email" class="form-control" placeholder="nombre@ejemplo.com" name="email" ng-model="user.email" required ng-model-options="{ updateOn:'blur'}">
+	              <input type="email" class="form-control" placeholder="nombre@ejemplo.com" name="email" ng-model="cUser.email" required ng-model-options="{ updateOn:'blur'}">
 	              <sub ng-show="loginForm.email.$invalid && loginForm.email.$touched">Correo electrónico inválido</sub>
 	              </div>
 	            </div>
@@ -72,7 +85,7 @@
 	          <div class="col-lg-12">
 	            <div class="form-group">
 	              <label for="password">Contraseña</label>
-	              <input type="password" class="form-control" placeholder="Contraseña" name="password" ng-model="user.password" required ng-model-options="{ updateOn:'blur'}">
+	              <input type="password" class="form-control" placeholder="Contraseña" name="password" ng-model="cUser.password" required ng-model-options="{ updateOn:'blur'}">
 	              <sub ng-show="loginForm.password.$invalid && loginForm.password.$touched">Contraseña requerida</sub>
 	            </div>
 	            </div>
@@ -139,16 +152,21 @@
     <script src="logic/controllers/allEventTypesController.js"></script>
     <script src="logic/controllers/eventTypeController.js"></script>
     <script src="logic/controllers/eventTypeRegistrationController.js"></script>
+    <script src="logic/controllers/adminController.js"></script>
+    <script src="logic/controllers/promoterRequest.js"></script>
 
     <!-- Directives -->
     <script src="logic/directives/compareTo.js"></script>
     <script src="logic/directives/directivePassword.js"></script>
+    <script src="logic/directives/creditCardType.js"></script>
+    <script src="logic/directives/cardExpiration.js"></script>
+
     <!-- Filters -->
+    <script src="logic/filters/range.js"></script>
     <!-- Services -->
     <script src="logic/services/localStorageService.js"></script>
     <script src="logic/services/BDService.js"></script>
     <script src="logic/services/eventService.js"></script>
-    <script src="logic/services/idService.js"></script>
     <script src="logic/services/siteService.js"></script>
     <script src="logic/services/transactionService.js"></script>
     <script src="logic/services/userService.js"></script>
@@ -157,7 +175,7 @@
     <script src="logic/services/clientService.js"></script>  
     <script src="logic/services/promotorService.js"></script>  
     <script src="logic/services/cashierService.js"></script>  
-    
+   
     <!-- php -->
 </body>
 </html>

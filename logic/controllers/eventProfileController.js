@@ -1,8 +1,9 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventProfileController', ['$scope', 'eventService', '$routeParams', 'localStorageService', function ($scope, eventService, $routeParams, localStorageService) {
+.controller('eventProfileController', ['$scope', 'eventService', '$routeParams', 'localStorageService', '$locale',
+    function ($scope, eventService, $routeParams, localStorageService, $locale) {
 
         eventId= $routeParams.eventId;
-        console.log(eventId);
+
         // event= eventService.event(eventId);
         // console.log(event);
 
@@ -16,8 +17,8 @@ angular.module('OGTicketsApp.controllers')
         console.log(event);*/
 
         var eventsList= localStorageService.getAll("eventsList");
-        console.log(eventsList);
-        console.log()
+
+
 
         var event= function (eventId) {
             result= eventsList.filter(function (item) {
@@ -28,7 +29,21 @@ angular.module('OGTicketsApp.controllers')
 
         event= event();
 
-        console.log(event);
+
+
+        // Credit Card Part
+
+        // Obtains current date in order to validate credit card expiration date
+        $scope.currentYear = new Date().getFullYear()
+        $scope.currentMonth = new Date().getMonth() + 1
+        $scope.months = $locale.DATETIME_FORMATS.MONTH
+        $scope.ccinfo = {type:undefined}
+        
+
+        $scope.paymentFormRegister = function (){
+            // Saves credit card to database
+            eventService.setCreditCard($scope.ccinfo);
+        };
         
 
 
