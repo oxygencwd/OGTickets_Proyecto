@@ -31,6 +31,14 @@ angular.module('OGTicketsApp.services')
     // };
 
 
+    var setIdCounter= function (key, number) {
+        return Number(localStorage.getItem(key)) || number;   
+    };
+
+    var setId= function (key, number) {
+         localStorage.setItem(key, number);
+    };
+
     //actualiza la coleccion "key" en el local storage
     var watchCollection = function(key, $scope) {
         $scope.$watchCollection(key, function() {
@@ -46,6 +54,8 @@ angular.module('OGTicketsApp.services')
 		remove: remove,
 		getOrEmpty:getOrEmpty,
         getOrArray: getOrArray,
-        watchCollection: watchCollection
+        watchCollection: watchCollection,
+        setIdCounter:setIdCounter,
+        setId:setId
 	}
 });
