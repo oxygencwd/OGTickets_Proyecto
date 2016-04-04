@@ -1,6 +1,8 @@
 angular.module('OGTicketsApp.controllers')
 .controller('appController', ['$scope', 'BDService', function ($scope, BDService) {
 
+	$scope.expNumberPhone = /^[\ |0-9]{8}$/;
+
 //estos son los datos que se queman al local storage cuando uno abre la app//
 	var clientList= BDService.clientList();
 	var promoterList= BDService.promoterList();

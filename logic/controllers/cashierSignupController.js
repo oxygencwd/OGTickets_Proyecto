@@ -1,17 +1,20 @@
 angular.module('OGTicketsApp.controllers')
-.controller('cashierSignupController', ['$scope', function ($scope) {
-	
-	// $scope.users = [
-	//         {userRoute: 'html/cashierSignupForm.html', userType: 'Cajero'},
-	//         {userRoute: 'html/promotorSignupForm.html', userType: 'Promotor'},
-	//         {userRoute: 'html/clientSignupForm.html', userType: 'Cliente'}
-	//     ];
+.controller('cashierSignupController', ['$scope','localStorageService','formService','cashierService', '$location', function ($scope,localStorageService, formService, cashierService, $location) {
 
-	// $scope.onChange = function() {
-	//     $location.path($scope.users.userRoute);
-	// }
+	$scope.newCashier={};
+	$scope.error="";
 
-
-
-
-}]); //end -controller-
+	$scope.cashierRegister=function () {
+		result= cashierService.cashierRegister($scope.newCashier);
+		var cashierId;
+		if(result.value){
+			cashierId= result.cashierId;
+			$scope.newCashier={};
+			formService.clear($scope.formNewCashier);
+			$location.path('/home');
+			$scope.error="";
+		}else{
+			$scope.error="Ya existe una cuenta registrada con ese correo electronico";
+		}
+	}; 
+}]);
