@@ -21,6 +21,7 @@ angular.module('OGTicketsApp.services')
     		result.msj="Promotor already exists";
     	}else{
     		promotor.id= "pr" + promotorId;
+            promotor.active= true;
     		promotors.push(promotor);
     		localStorageService.set("userList", promotors);
     		promotorId++;
@@ -30,6 +31,13 @@ angular.module('OGTicketsApp.services')
     	};
     	return result;
     };
+
+    var promotorRequest= function () {
+       //approved": false, "pendingCheck": true
+    }
+
+
+
 
 	return{
 		promotorRegister:promotorRegister

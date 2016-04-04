@@ -26,6 +26,7 @@ var listaIds={
 				tt01, //tt01= compra
 				tt02  //tt02= reservacion
 			]
+		idPromoterRegisterRequest: rq01, //rq + consecutivo, id de las solicitudes de registro como promotor
 
 };
 

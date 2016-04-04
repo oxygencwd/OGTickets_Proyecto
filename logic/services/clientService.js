@@ -21,9 +21,11 @@ angular.module('OGTicketsApp.services')
     		result.msj="Client already exists";
     	}else{
     		client.id= "cl" + clientId;
+            client.userType= "ut02";
     		clients.push(client);
     		localStorageService.set("userList", clients);
     		clientId++;
+            console.log(client.id);
     		localStorageService.setId("clientIdCounter", clientId);
     		result.value= true;
     		result.clientId= client.id;
