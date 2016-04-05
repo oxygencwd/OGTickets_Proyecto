@@ -2,33 +2,11 @@ angular.module('OGTicketsApp.controllers')
 .controller('eventProfileController', ['$scope', 'eventService', '$routeParams', 'localStorageService', '$locale',
     function ($scope, eventService, $routeParams, localStorageService, $locale) {
 
+        // Sets on "eventId" the event Id that comes from url
         eventId= $routeParams.eventId;
 
-        // event= eventService.event(eventId);
-        // console.log(event);
-
-       /* var eventsList= localStorageService.getAll("eventsList");
-        console.log(eventsList);
-
-        var event= function (eventId) {
-        result= eventsList.filter(function (item) {
-            return item.id== eventId;
-        });
-        console.log(event);*/
-
-        var eventsList= localStorageService.getAll("eventsList");
-
-
-        var event= function (eventId) {
-            result= eventsList.filter(function (item) {
-                return item.id == eventId;
-            });
-            return result;
-        };
-
-        event= event();
-
-
+        // Sets on "theEvent" the whole event by the id
+        var theEvent = eventService.retrieveEvent(eventId);
 
         // Credit Card Part
 
@@ -44,8 +22,6 @@ angular.module('OGTicketsApp.controllers')
             eventService.setCreditCard($scope.ccinfo);
         };
         
-
-
 
 //////CARMOL ESTO NO PUEDE ESTAR AQUI, SE DEBE CREAR UN SERVICIO PARA ESTO, EL CONTROLLER SOLO DEBE DECIRLA A LAVISTA QUE MOSTRAR//////
 	$scope.showSeatsSection = function(){
