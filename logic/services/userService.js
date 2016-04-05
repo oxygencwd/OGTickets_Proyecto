@@ -77,12 +77,10 @@ angular.module('OGTicketsApp.services')
 		if(cUser){
 			return cUser;
 		}else{
-			return {
-				conected: false,
-				msg: "User not conected"
-			};
+			return false;
 		};
 	};
+
 
 		
 //puntos de acceso de los metodos del servicio:
