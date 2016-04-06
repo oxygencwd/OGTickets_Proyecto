@@ -2,12 +2,13 @@ angular.module('OGTicketsApp.controllers')
 .controller('eventProfileController', ['$scope', 'eventService', '$routeParams', 'localStorageService', '$locale',
     function ($scope, eventService, $routeParams, localStorageService, $locale) {
 
-        
+        var eventId= $routeParams.eventId;
+
         // Sets on "theEvent" the whole event by the id
         var theEvent = eventService.retrieveEvent(eventId);
+ 
 
-
-        var eventsList= localStorageService.getAll("eventsList");
+        //var eventsList= localStorageService.getAll("eventsList");
 
         // Credit Card Part
 
@@ -30,8 +31,8 @@ angular.module('OGTicketsApp.controllers')
     };
 
 	$scope.showSeatsSection = function(){
-			$scope.addSeatsSectionShow = true;
-		}
+		$scope.addSeatsSectionShow = true;
+	}
 
 	// seats logic
 	        // Init layout
