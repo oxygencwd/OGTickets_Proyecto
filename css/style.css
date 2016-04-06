@@ -862,6 +862,12 @@ form sub, .error{
 	position: absolute;
 }
 
+.middle{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 /*PALACIO DE LOS DEPORTES*/
 .palacio .seat-container{
 	margin-bottom: 7em;
