@@ -1064,7 +1064,6 @@ form sub, .error{
 	margin-bottom: 7em;
 	height: 32em;
 	position: relative;
-	border:1px solid black;
 }
 
 .estadio .cancha{
@@ -1075,87 +1074,108 @@ form sub, .error{
 	top: 12.9em;
 }
 
-.estadio .platea1, .estadio .platea2, .estadio .platea3{
-	background-color: #2d65cb;
+.estadio .platea1, .estadio .platea2, .estadio .platea3, .estadio .platea4{
+	background-color: #ed1b24;
 }
 
 .estadio .platea1, .estadio .platea2{
-	width: 9%;
-	height:12em;
-	
+	width: 40%;
+	height: 3em;
+}
+
+.estadio .platea3, .estadio .platea4{
+	width: 7%;
+	height:6em;
 }
 
 .estadio .platea1{
-	left: 27%;
-	top:4.5em;
+	left: 30%;
+	top: 9.5em;
 }
 
 .estadio .platea2{
-	left: 64%;
-	top:4.5em;
+	left: 30%;
+	top:19.4em;
 }
 
 .estadio .platea3{
-	width: 25%;
-	height:4.5em;
-	left: 37.5%;
-	top:12em;
+	left: 30%;
+	top:12.9em;
 }
 
+.estadio .platea4{
+	left: 63%;
+	top:12.9em;
+}
 /*platea fin **/
-.estadio .butacas1, .estadio .butacas2, .estadio .butacas3{
-	background-color: #983298;
+/*estadio palco*/
+.estadio .palco1, .estadio .palco2, .estadio .palco3, .estadio .palco4{
+	background-color: #2d65cb; 
 }
 
-.estadio .butacas1, .estadio .butacas2{
-	width: 11%;
-	height:20em;
+.estadio .palco1, .estadio .palco2{
+	width: 60%;
+	height: 4em;
+	left: 20%;
 }
 
-.estadio .butacas1{
-	left: 14.5%;
-	top:2.5em;
+.estadio .palco3, .estadio .palco4{
+	width: 9%;
+	height:13em;
+	top:9.5em;
 }
 
-.estadio .butacas2{
-	left: 74.5%;
-	top:2.5em;
+.estadio .palco1{
+	top: 5.2em;
 }
 
-.estadio .butacas3{
-	width: 46%;
-	height:5.5em;
-	left: 27%;
-	top:17em;
-}
-/*butacas fin*/
-/*galeria*/
-
-.estadio .galeria1, .estadio .galeria2, .estadio .galeria3{
-	background-color: #009864;
+.estadio .palco2{
+	top:22.8em;
 }
 
-.estadio .galeria1, .estadio .galeria2{
-	width: 13%;
-	height:30em;
+.estadio .palco3{
+	left: 20%;
 }
 
-.estadio .galeria1{
+.estadio .palco4{
+	left: 71%;
+}
+/*fin estadio palco*/
+
+/*estadio graderia*/
+.estadio .graderia1, .estadio .graderia2, .estadio .graderia3, .estadio .graderia4{
+	background-color: #f75216;
+}
+
+.estadio .graderia1, .estadio .graderia2{
+	width: 100%;
+	height: 5em;
+	left: 0;
+}
+
+.estadio .graderia3, .estadio .graderia4{
+	width: 19.3%;
+	height:21.5em;
+	top:5.2em;
+}
+
+.estadio .graderia1{
+	top: 0em;
+}
+
+.estadio .graderia2{
+	top:27em;
+}
+
+.estadio .graderia3{
 	left: 0%;
-	top:0.5em;
 }
 
-.estadio .galeria2{
-	left: 87.5%;
-	top:0.5em;
+.estadio .graderia4{
+	left: 80.7%;
 }
+/*fin estadio graderia*/
 
-.estadio .galeria3{
-	width: 71%;
-	height:7.5em;
-	left: 14.5%;
-	top:23em;
-}
 
 .p1{
 	height: 300px;
