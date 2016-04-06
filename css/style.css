@@ -660,7 +660,7 @@ label{
 }
 .eventBtnComprar{
 	width: 80%;
-	height: 370px;
+	margin-bottom: 4em;
 }
 .eventBtnComprar div {
 	margin-top: 150px;
@@ -847,6 +847,321 @@ form sub, .error{
 }
 
 /*Ends Payment Form*/
+
+
+/*site-maps*/
+.seat-container p{
+	color: #fff;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.absolute{
+	position: absolute;
+}
+
+/*PALACIO DE LOS DEPORTES*/
+.palacio .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.palacio .este{
+	width: 20%;
+	height:24em;
+	background-color: #2d65cb;
+	left: 0;
+	top:0;
+}
+
+.palacio .tarima{
+	width: 40%;
+	height:7em;
+	background-color: #404040;
+	left: 30%;
+	top: 1em;
+}
+
+.palacio .preferencial{
+	width: 50%;
+	height:14em;
+	background-color: #ed1b24;
+	left: 25%;
+	top: 10em;
+	
+}
+.palacio .oeste{
+	width: 20%;
+	height:24em;
+	background-color: #009864;
+	left: 80%;
+	top: 0;
+}
+.palacio .norte{
+	width: 100%;
+	height:6em;
+	background-color: #f75216;
+	top: 25em;
+}
+
+/*AUDITORIO NACIONAL*/
+
+.auditorio .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.auditorio .tarima{
+	width: 100%;
+	height:5em;
+	background-color: #404040;
+	top: 0em;
+	border-radius: 0 0 40% 40%;
+}
+
+.auditorio .vip{
+	width: 70%;
+	height:4em;
+	background-color: #ed1b24;
+	left: 16%;
+	top: 5.5em;
+	
+}
+
+.auditorio .butacas{
+	width: 80%;
+	height:14em;
+	background-color: #983298;
+	left: 10%;
+	top:10em;
+}
+
+.auditorio .galeria{
+	width: 100%;
+	height:6.5em;
+	background-color: #2d65cb;
+	top: 24.5em;
+}
+
+
+/*fin auditorio nacional*/
+
+/*TEATRO NACIONAL*/
+
+.teatro .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.teatro .tarima{
+	width: 25%;
+	height:3.5em;
+	background-color: #404040;
+	top: 0em;
+	border-radius: 0 0 40% 40%;
+	left: 37.5%;
+}
+
+.teatro .luneta{
+	width: 25%;
+	height:6em;
+	background-color: #ed1b24;
+	left: 37.5%;
+	top: 5em;
+	
+}
+
+.teatro .palco1, .teatro .palco2, .teatro .palco3{
+	background-color: #2d65cb;
+}
+
+.teatro .palco1, .teatro .palco2{
+	width: 9%;
+	height:12em;
+}
+
+.teatro .palco1{
+	left: 27%;
+	top:4.5em;
+}
+
+.teatro .palco2{
+	left: 64%;
+	top:4.5em;
+}
+
+.teatro .palco3{
+	width: 25%;
+	height:4.5em;
+	left: 37.5%;
+	top:12em;
+}
+
+/*palco fin **/
+.teatro .butacas1, .teatro .butacas2, .teatro .butacas3{
+	background-color: #983298;
+}
+
+.teatro .butacas1, .teatro .butacas2{
+	width: 11%;
+	height:20em;
+}
+
+.teatro .butacas1{
+	left: 14.5%;
+	top:2.5em;
+}
+
+.teatro .butacas2{
+	left: 74.5%;
+	top:2.5em;
+}
+
+.teatro .butacas3{
+	width: 46%;
+	height:5.5em;
+	left: 27%;
+	top:17em;
+}
+/*butacas fin*/
+/*galeria*/
+
+.teatro .galeria1, .teatro .galeria2, .teatro .galeria3{
+	background-color: #009864;
+}
+
+.teatro .galeria1, .teatro .galeria2{
+	width: 13%;
+	height:30em;
+}
+
+.teatro .galeria1{
+	left: 0%;
+	top:0.5em;
+}
+
+.teatro .galeria2{
+	left: 87.5%;
+	top:0.5em;
+}
+
+.teatro .galeria3{
+	width: 71%;
+	height:7.5em;
+	left: 14.5%;
+	top:23em;
+}
+/*fin teatro nacional*/
+
+/*ESTADIO NACIONAL*/
+
+.estadio .seat-container{
+	margin-bottom: 7em;
+	height: 32em;
+	position: relative;
+	border:1px solid black;
+}
+
+.estadio .cancha{
+	width: 25%;
+	height:6em;
+	background-color: #19a416;
+	left: 37.5%;
+	top: 12.9em;
+}
+
+.estadio .platea1, .estadio .platea2, .estadio .platea3{
+	background-color: #2d65cb;
+}
+
+.estadio .platea1, .estadio .platea2{
+	width: 9%;
+	height:12em;
+	
+}
+
+.estadio .platea1{
+	left: 27%;
+	top:4.5em;
+}
+
+.estadio .platea2{
+	left: 64%;
+	top:4.5em;
+}
+
+.estadio .platea3{
+	width: 25%;
+	height:4.5em;
+	left: 37.5%;
+	top:12em;
+}
+
+/*platea fin **/
+.estadio .butacas1, .estadio .butacas2, .estadio .butacas3{
+	background-color: #983298;
+}
+
+.estadio .butacas1, .estadio .butacas2{
+	width: 11%;
+	height:20em;
+}
+
+.estadio .butacas1{
+	left: 14.5%;
+	top:2.5em;
+}
+
+.estadio .butacas2{
+	left: 74.5%;
+	top:2.5em;
+}
+
+.estadio .butacas3{
+	width: 46%;
+	height:5.5em;
+	left: 27%;
+	top:17em;
+}
+/*butacas fin*/
+/*galeria*/
+
+.estadio .galeria1, .estadio .galeria2, .estadio .galeria3{
+	background-color: #009864;
+}
+
+.estadio .galeria1, .estadio .galeria2{
+	width: 13%;
+	height:30em;
+}
+
+.estadio .galeria1{
+	left: 0%;
+	top:0.5em;
+}
+
+.estadio .galeria2{
+	left: 87.5%;
+	top:0.5em;
+}
+
+.estadio .galeria3{
+	width: 71%;
+	height:7.5em;
+	left: 14.5%;
+	top:23em;
+}
+
+.p1{
+	height: 300px;
+	background-color: red;
+}
+
 
 /*********************************************************************
 **************************MEDIA QUERYS********************************
