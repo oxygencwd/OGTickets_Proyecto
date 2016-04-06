@@ -23,5 +23,7 @@ angular.module('OGTicketsApp.controllers')
 		$('#loginModal').modal('hide');
 	};
 
+
+
 }]); //end -controller-
 

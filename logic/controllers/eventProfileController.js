@@ -49,6 +49,10 @@ angular.module('OGTicketsApp.controllers')
 
 
 //////CARMOL ESTO NO PUEDE ESTAR AQUI, SE DEBE CREAR UN SERVICIO PARA ESTO, EL CONTROLLER SOLO DEBE DECIRLA A LAVISTA QUE MOSTRAR//////
+    $scope.prueba= function (zoneName, zoneId, rows, cols, site, location) {
+        console.log(zoneName, zoneId, rows, cols, site, location);
+    };
+
 	$scope.showSeatsSection = function(){
 			$scope.addSeatsSectionShow = true;
 		}
