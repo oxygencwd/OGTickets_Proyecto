@@ -1110,7 +1110,7 @@ form sub, .error{
 /*platea fin **/
 /*estadio palco*/
 .estadio .palco1, .estadio .palco2, .estadio .palco3, .estadio .palco4{
-	background-color: #2d65cb; 
+	background-color: #f75216;   
 }
 
 .estadio .palco1, .estadio .palco2{
@@ -1144,7 +1144,7 @@ form sub, .error{
 
 /*estadio graderia*/
 .estadio .graderia1, .estadio .graderia2, .estadio .graderia3, .estadio .graderia4{
-	background-color: #f75216;
+	background-color: #2d65cb;
 }
 
 .estadio .graderia1, .estadio .graderia2{
