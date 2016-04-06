@@ -39,8 +39,8 @@ angular.module('OGTicketsApp.controllers')
 
 	// seats logic
 	        // Init layout
-        $scope.rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'];
-        $scope.cols = [1, 2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+        $scope.rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+        $scope.cols = [1, 2, 3, 4, 5, 6, 7, 8];
 
         // Set reserved and selected
         var reserved = ['A2', 'A3', 'C5', 'C6', 'C7', 'C8', 'J1', 'J2', 'J3', 'J4'];
