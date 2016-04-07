@@ -243,7 +243,6 @@
     .run(['$rootScope', '$location', 'userService', 'ROLES', function($rootScope, $location, userService, ROLES) {
             $rootScope.$on('$routeChangeStart', function(event, next, current) {
             //buscar si hay usuario loggeado, devuelve falso si no hay usuario loggedo o el objeto usuario si lo hay.
-          
             var user= userService.getLoggedUser();
             //definir el tipo de usuario
             var userType;
@@ -268,7 +267,6 @@
             if(index==-1){
                 $location.path('/home');
             }
-
         })
     }]);
 
