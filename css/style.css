@@ -263,17 +263,21 @@ header span.user-icon{
 	left: 30px;
 }
 
-.allEventsDisplay button a{
+.allEventsDisplay button a, .upcoming-events button a{
 	text-decoration: none;
 	color: #fff;
 }
 
-.allEventsDisplay button a:hover{
+.allEventsDisplay button a:hover, .upcoming-events button a:hover{
 	color:#000;
 }
 
 .allEventsDisplay button{
 	margin-bottom: 1em;
+}
+
+.upcoming-events h4{
+	margin-left: 2%;
 }
 
 .display-none{
@@ -292,6 +296,7 @@ header span.user-icon{
 
 .today-events-container{
 	margin-bottom: 90px;
+	margin-top: 40px;
 }
 
 .display-inline{

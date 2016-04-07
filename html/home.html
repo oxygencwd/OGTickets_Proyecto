@@ -65,25 +65,22 @@
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 			      <div class="col-sm-3 no-padding">
 				      <ul class="nav navbar-nav width100">
-
-					<li class="dropdown width100">      
-						<div class="dropdown width100">
-						  <button class="width100 dropdown-toggle text-center" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Categorías
-						  <span class="caret"></span></button>
-						  <ul class="dropdown-menu">
-						    <li><a href="#">Música</a></li>
-				            <li><a href="#">Cultura</a></li>
-				            <li><a href="#">Deporte</a></li>
-				            <li><a href="#">Teatro</a></li>
-						  </ul>
-						</div>
-					</li>
+							<li class="dropdown width100">      
+								<div class="dropdown width100">
+								  <button class="width100 dropdown-toggle text-center" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Categorías
+								  <span class="caret"></span></button>
+								  <ul class="dropdown-menu">
+								    <li ng-repeat="category in categories"><a ng-click="viewCategory(category.id)">{{category.name}}</a></li>
+								  </ul>
+								</div>
+							</li>
 					      </ul>
 			      </div><!-- col-sm-m -->
 			      <div class="col-sm-9 no-padding">
-				      <form class="navbar-form navbar-left width100 no-padding" role="search">
+				      <form class="navbar-form navbar-left width100 no-padding" role="search" novalidation>
 				        <div class="form-group width100 no-padding p-relative main-search">
-				          <input type="search" class="form-control" placeholder="Busca eventos ó categorías">
+				          <input type="search" ng-model="search" class="form-control" placeholder="Busca eventos"
+				          >
 				          <button type="button" class="btn-absolute"><span class="glyphicon  glyphicon-search"></span></button>
 				        </div>   
 				      </form>
@@ -96,45 +93,45 @@
 	<!-- Eventos proximos -->
 	<div class="container">
 		<div class="row">
-			<div class="upcoming-events">
+			<div class="upcoming-events" ng-hide="search.length>0">   
 				<div class="row">
 					<div class="col-sm-12">
 						<h2>Eventos Próximos</h2>
 					</div>
 				</div> <!-- row -->
-				<div class="col-md-4">
+				<!-- <li ng-repeat="contact in contacts | orderBy: 'name' | filter:search track by $index"> -->
+				<div class="col-md-4" ng-repeat="event in eventsList | orderBy: 'datetime' | limitTo: '6' track by $index">
 					<div class="upcoming-events-item">
 						<div class="upcoming-event-info">
-							<h5>Orquesta Sinfónica</h5>
-							<p>4 de Mayo</p>
+							<h5>{{event.name}}</h5>
+							<p>{{event.date | date}}</p>
+							<p>{{event.startHour}}</p>
 						</div>
 						<div class="event-item-img">
-							<img src="images/event-default-images/imagen5.jpg" class="img-responsive center-block" alt="">
-							<button class="buy-button first center-block">Comprar</button>
+							<img ng-src="images/event-default-images/{{event.image}}" class="img-responsive center-block" alt="">
+							<button class="buy-button first center-block" ><a ng-href="#/event-profile/{{event.id}}">Comprar</a></button>
 						</div>
 					</div><!-- upcoming-events-item -->
 				</div>
-				<div class="col-md-4">
+			</div><!-- upcoming-events -->
+
+			<div class="upcoming-events" ng-show="search.length>0">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2>Busqueda</h6>
+					</div>
+				</div> <!-- row -->
+				<h4 ng-show="(eventsList | filter:search).length == 0">Ningún resultado encontrado</h4>
+				<div class="col-md-4" ng-repeat="event in eventsList | orderBy: 'datetime' | limitTo: '9' | filter:search track by $index">
 					<div class="upcoming-events-item">
 						<div class="upcoming-event-info">
-							<h5>Rihanna World Tour</h5>
-							<p>30 de Abril</p>
+							<h5>{{event.name}}</h5>
+							<p>{{event.date | date}}</p>
+							<p>{{event.startHour}}</p>
 						</div>
 						<div class="event-item-img">
-							<img src="images/event-default-images/imagen6.jpg" class="img-responsive center-block" alt="">
-							<button class="buy-button second center-block">Comprar</button>
-						</div>
-					</div><!-- upcoming-events-item -->
-				</div>
-				<div class="col-md-4">
-					<div class="upcoming-events-item">
-						<div class="upcoming-event-info">
-							<h5>Iron Maiden</h5>
-							<p>2 de Abril</p>
-						</div>
-						<div class="event-item-img">
-							<img src="images/event-default-images/maiden.jpg" class="img-responsive center-block" alt="">
-							<button class="buy-button last center-block">Comprar</button>
+							<img ng-src="images/event-default-images/{{event.image}}" class="img-responsive center-block" alt="">
+							<button class="buy-button first center-block" ><a ng-href="#/event-profile/{{event.id}}">Comprar</a></button>
 						</div>
 					</div><!-- upcoming-events-item -->
 				</div>
@@ -145,17 +142,27 @@
 	<!-- Eventos del dia -->
 	<div class="container today-events-container">
 		<div class="row">
-			<div class="today-events">
+		<div class="upcoming-events">   
 				<div class="row">
 					<div class="col-sm-12">
 						<h2>Eventos del día</h2>
+						<h4 ng-show="(todayEvents).length == 0">Ningún evento para hoy</h4>
 					</div>
+				</div> <!-- row -->
+				<div class="col-md-4" ng-repeat="event in todayEvents | orderBy: 'datetime' | limitTo: '6' track by $index">
+					<div class="upcoming-events-item">
+						<div class="upcoming-event-info">
+							<h5>{{event.name}}</h5>
+							<p>{{event.date | date}}</p>
+							<p>{{event.startHour}}</p>
+						</div>
+						<div class="event-item-img">
+							<img ng-src="images/event-default-images/{{event.image}}" class="img-responsive center-block" alt="">
+							<button class="buy-button first center-block" ><a ng-href="#/event-profile/{{event.id}}">Comprar</a></button>
+						</div>
+					</div><!-- upcoming-events-item -->
 				</div>
-				<div class="col-lg-12">
-					<p>No hay ningún evento para hoy</p>
-					<a href="#">Ver eventos de mañana ></a>
-				</div>
-			</div> <!-- today-events -->
+			</div><!-- upcoming-events -->
 		</div> <!-- row -->
 	</div> <!-- container -->
 
