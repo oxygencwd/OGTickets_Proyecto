@@ -1,17 +1,18 @@
 angular.module('OGTicketsApp.services')
-.service('siteService', ['localStorageService', function(localStorageService) {
+.service('siteService', ['localStorageService', 'eventService', function(localStorageService, eventService) {
 
 	var sites= localStorageService.getAll("siteList");
 
 	var siteId= localStorageService.setIdCounter("siteIdCounter", 4);
 
+    //vefificar si el sitio existe
 	var siteExists= function (site) {
 		var siteExists= sites.filter(function (item) {
 			return item.name== site.name;
 		});
 		return siteExists;
 	}; 
-
+    //registrar el sitio
     var registerSite= function (site) {
     	var saved= siteExists(site);
     	var result={};
@@ -30,8 +31,31 @@ angular.module('OGTicketsApp.services')
     	};
     	return result;
     };
+    //devulve una lista con los sitios activos
+    var activeSites= function () {
+        var result= sites.filter(function (item) {
+            return item.active== true;
+        });
+        return result;
+    }; 
+    // devulelve el sitio en el que se va a realziar un evento.
+    //params: eventId
+    var getEventSite= function (eventId) {
+        var event= eventService.retrieveEvent(eventId);
+        var sites= activeSites();
+        var eventSite= sites.filter(function (item) {
+            return item.id== event.siteId;
+        });
+        return eventSite[0];
+    };
+   
 
+
+
+
+// puntos de acceso
 	return{
-		registerSite:registerSite
+		registerSite:registerSite,
+        getEventSite:getEventSite
 	};
 }]);

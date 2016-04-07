@@ -280,6 +280,14 @@ header span.user-icon{
 	margin-left: 2%;
 }
 
+.container-categories h4{
+	margin-bottom: 14em;
+}
+
+.container-categories .type-title{
+	/*margin-bottom: 25px;*/
+}
+
 .display-none{
 	display: none;
 }

@@ -12,6 +12,15 @@ angular.module('OGTicketsApp.services')
         return result;
     };
 
+    //retrieves the whole event object by its id
+    //Param is the event id
+    var retrieveEvent = function (eId){
+        result = eventsList.filter(function (item) {
+            return item.id == eId;
+        });
+        return result[0];
+    };
+
     //toma los eventos y los filtra paa obtener solo los de fecha actual
     var todayEvents= function (){
         var date= new Date();
@@ -24,6 +33,8 @@ angular.module('OGTicketsApp.services')
         return result;
     };
 
+    //lista de eventos pertenecientes a un tipo de evento
+    //params el id del tipo de evento solicitado
     var eventsByType= function (typeId){
         active= activeEvents();
         result = active.filter(function (item) {
@@ -42,25 +53,32 @@ angular.module('OGTicketsApp.services')
         return parseDate;
     };
 
-    //lista de tipos de evento
+    //lista de  todos tipos de evento activos
     var getEventTypeList= function () {
-      return localStorageService.getAll("eventTypeList");
+        var allTypes= localStorageService.getAll("eventTypeList");
+        result = allTypes.filter(function (item) {
+            return item.active == true;
+        });
+        return result;
     };
 
-    //retrieves the whole event object by its id
-    //Param is the event id
-    var retrieveEvent = function (eId){
-    	result = eventsList.filter(function (item) {
-    		return item.id == eId;
-    	});
-    	return result;
-    };
+    //evento devuelve uj tipo de evento identificado por el id parametro
+    getEventType= function (typeId) {
+        var typeList= getEventTypeList();
+        result = typeList.filter(function (item) {
+            return item.id == typeId;
+        });
+        return result[0];
+
+    }
 
     // Saves credit card into database
     // Param value is the credit card object
     var setCreditCard = function (value) {
     	localStorageService.set("creditCardList", value)
     };
+
+    //$scope.categoryName= siteService.getTypeName($scope.categoryId);
 
 
 
@@ -70,6 +88,7 @@ angular.module('OGTicketsApp.services')
         activeEvents:activeEvents,
         getEventTypeList:getEventTypeList,
         todayEvents:todayEvents,
-        eventsByType:eventsByType
+        eventsByType:eventsByType,
+        getEventType:getEventType
 	};
 }]);//end -service-
