@@ -7,57 +7,65 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-			<form name="siteRegistration" ng-submit="" novalidate>
-				
+
+			<form name="formNewSite" ng-submit="formNewSite.$valid && registerSite()" novalidate>
 	            <div class="col-sm-10 col-sm-offset-1">
 	            	<div class="form-group">
 		            	<div class="col-sm-6">
-		            		<label for="name">Nombre</label>
-		            		<input type="text" class="form-control" id="name">
+		            		<label for="name">Nombre*</label>
+		            		<input type="text" class="form-control" name="nameSite" id="name" placeholder="Nombre sitio" ng-model="newSite.name" required ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="formNewSite.nameSite.$invalid && formNewSite.nameSite.$touched">El nombre es requerido.</sub>
 		            	</div>
-		              
 		            </div> <!-- form group end -->
 	            </div>
 	            <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
-		            		<label for="phone">Teléfono 1*</label>
-		            		<input type="number" ng-minlength="8" ng-maxlength="8" class="form-control" id="phone">
+		            		<label for="phoneOne">Teléfono 1*</label>
+		            		<input type="number" min="0" required class="form-control" name="phoneOne" id="phone" placeholder="88888888" ng-model="newSite.phoneOne" ng-model-options="{ updateOn:'blur'}" ng-pattern="expNumberPhone">
+		            		<sub ng-show="formNewSite.phoneOne.$error.required && formNewSite.phoneOne.$touched">El primer numero de telefono es requerido.</sub>
+                			<sub ng-show="formNewSite.phoneOne.$error.pattern && formNewSite.phoneOne.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="phonetwo">Teléfono 2</label>
-		            		<input type="number" ng-minlength="8" ng-maxlength="8" class="form-control" id="phonetwo">
+		            		<input type="number" min="0" class="form-control" name="phonetwo" id="phonetwo" placeholder="88888888" ng-model="newSite.phoneTwo" ng-model-options="{ updateOn:'blur'}" ng-pattern="expNumberPhone">
+		            		<sub ng-if="formNewSite.phonetwo.$error.pattern && formNewSite.phonetwo.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
-		            		<label for="capacity">Capacidad</label>
-		            		<input type="number" class="form-control" id="capacity">
+		            		<label for="capacity">Capacidad*</label>
+		            		<input type="number" class="form-control" name="capacity" id="capacity" placeholder="35000" min="0" max="35000" required ng-model="newSite.capacity" ng-pattern="expCapacity" ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="formNewSite.capacity.$error.required && formNewSite.capacity.$touched">La capacidad es requerida.</sub>
+                			<sub ng-if="formNewSite.capacity.$error.pattern && formNewSite.capacity.$touched">La capacidad no es valida, no se permiten numeros negativos ni decimales, y debe ser menor a 35000.</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
-		        	<label>Coordenadas</label>
-		        </div>
-		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
+		            <h4 class="container">Coordenadas</h4>
 		            	<div class="col-sm-6">
-		            		<label for="lat">Latitud</label>
-		            		<input type="number" class="form-control" id="lat">
+		            		<label for="latitude">Latitud*</label>
+		            		<input type="number" class="form-control" name="latitude" id="latitude" placeholder="00.00" required ng-model="newSite.latitude" ng-model-options="{ updateOn:'blur'}" ng-pattern="expDecimalLatitude">
+		            		<sub ng-show="formNewSite.latitude.$error.required && formNewSite.latitude.$touched">La latitudeitud es requerida.</sub>
+                			<sub ng-show="formNewSite.latitude.$error.pattern && formNewSite.latitude.$touched">El formato de la latitud no es aceptado, solo grados decimales.</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
-		            		<label for="lon">Longitud</label>
-		            		<input type="number" class="form-control" id="lon">
+		            		<label for="lon">Longitud*</label>
+		            		<input type="number" class="form-control" name="longitude" id="longitude" placeholder="00.00" required ng-model="newSite.longitude" ng-model-options="{ updateOn:'blur'}" ng-pattern="expDecimalLongitude">
+		            		<sub ng-show="formNewSite.longitude.$error.required && formNewSite.longitude.$touched">La longitudeitud es requerida.</sub>
+                			<sub ng-show="formNewSite.longitude.$error.pattern && formNewSite.longitude.$touched">El formato de la longitud no es aceptado, solo grados decimales.</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
-		            	<div class="col-sm-6">
+		            	<div class="col-sm-6" ng-class="{'has-error':formNewSite.address.$invalid && formNewSite.address.$touched}">
 		            		<label for="address">Dirección*</label>
-		            		<input type="text" lass="form-control" id="address">
+		            		<input type="text" class="form-control" name="address" id="address" placeholder="Dirección..." required ng-model="newSite.address" ng-model-options="{ updateOn:'blur'}">
+		            		<sub ng-show="formNewSite.address.$error.required && formNewSite.address.$touched">La direccion es requerida.</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -69,13 +77,15 @@
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
+		            <h3 class="error text-center">{{error}}</h3>
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Crear sitio">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Crear sitio" ng-disabled="formNewSite.$invalid">
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
-		        
 			</form>
 		</div>
 	</div>
