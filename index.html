@@ -47,7 +47,8 @@
 
 
 		                <li><a ng-href="#/all-events">Eventos</a></li>
-		                <li><a data-toggle="modal" href="#loginModal" ng-hide="appLoggedUser.isConnected">Ingresar</a></li>
+		                <li><a data-toggle="modal" ng-click="openModal()" ng-hide="appLoggedUser.isConnected">Ingresar</a></li>
+
 		                <li><a ng-href="#/user-signup" ng-hide="appLoggedUser.isConnected">Registrarse</a></li>
 		                <li><a ng-click="logout()" ng-show="appLoggedUser.isConnected">Salir</a></li>
 		              </ul>
@@ -161,6 +162,13 @@
     <script src="logic/directives/creditCardType.js"></script>
     <script src="logic/directives/cardExpiration.js"></script>
 
+<<<<<<< HEAD
+=======
+    <script src="logic/directives/ogAuditorio.js"></script>
+    <script src="logic/directives/ogEstadio.js"></script>
+    <script src="logic/directives/ogPalacio.js"></script>
+    <script src="logic/directives/ogTeatro.js"></script>
+>>>>>>> DEVELOPMENT
     <!-- Filters -->
     <script src="logic/filters/range.js"></script>
     <!-- Services -->

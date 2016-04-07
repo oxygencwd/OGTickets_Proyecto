@@ -129,7 +129,7 @@
                 templateUrl: 'html/promotorSignupForm.html',
                 controller: 'promotorSignupController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.GUEST.ROL]
+                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
                 }
                 //registro de Cajeros y Promotores. Permisos: Admin
             })
@@ -266,11 +266,9 @@
             var index= next.data.authorized.indexOf(userType);
             if(index==-1){
                 $location.path('/home');
-            };
-
+            }
         })
     }]);
-
 
 
 angular.module('OGTicketsApp.controllers', []);
