@@ -1,7 +1,6 @@
 angular.module('OGTicketsApp.controllers')
-.controller('allEventsController', ['$scope', 'localStorageService', function ($scope, localStorageService) {
-	
-	$scope.eventsList= localStorageService.getAll("eventsList");
-	
+.controller('allEventsController', ['$scope', 'eventService', function ($scope, eventService) {
+	/*displat events, serch bar*/
+	$scope.eventsList= eventService.activeEvents();
 
 }]); //end -controller-
