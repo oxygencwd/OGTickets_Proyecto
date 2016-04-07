@@ -1,14 +1,20 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventProfileController', ['$scope', 'eventService', '$routeParams', 'localStorageService', '$locale',
-    function ($scope, eventService, $routeParams, localStorageService, $locale) {
+.controller('eventProfileController', ['$scope', 'eventService', '$routeParams', 'siteService', '$locale',
+    function ($scope, eventService, $routeParams, siteService,  $locale) {
 
         var eventId= $routeParams.eventId;
 
-        // Sets on "theEvent" the whole event by the id
-        var theEvent = eventService.retrieveEvent(eventId);
- 
+        // Sets on "currentEvent" the whole event by the id
+        $scope.currentEvent = eventService.retrieveEvent(eventId);
+        var eventSite= siteService.getEventSite(eventId);
+        $scope.eventSiteName= eventSite.name;
+      
 
-        //var eventsList= localStorageService.getAll("eventsList");
+
+        
+
+
+
 
         // Credit Card Part
 

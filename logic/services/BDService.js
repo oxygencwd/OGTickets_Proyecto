@@ -27,11 +27,11 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedEventsList=[
-		{ "startHour": "7:00pm", "endHour": "10:00pm",  "siteId": "si03", "active": true, "description": "Viene Rihanna con su World Tour, un verdadero show que no te podés perder", "date": "2016-04-27T06:00:00.000Z", "id": "ev01", "name": "Rihanna World Tour", "ticketsPrice": 35500, "eventType": "et01", "capacity": 6000, "image": "imagen6.jpg", "promoterId": "pr02" },
+		{ "startHour": "7:00pm", "endHour": "10:00pm",  "siteId": "si03", "active": true, "description": "Viene Rihanna con su World Tour, un verdadero show que no te podés perder", "date": "2016-06-16T06:00:00.000Z", "id": "ev01", "name": "Rihanna World Tour", "ticketsPrice": 35500, "eventType": "et01", "capacity": 6000, "image": "images/event-default-images/imagen6.jpg", "promoterId": "pr02" },
 
-		{ "startHour": "7:00pm", "endHour": "9:30pm", "active": true, "siteId": "si03", "description": "Costa Rica recibe a Jamaica", "name": "Costa Rica vs Jamaica", "id": "ev02", "date": "2016-04-17T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 8000, "capacity": 7000, "image": "imagen4.jpg", "promoterId": "pr02"  },
+		{ "startHour": "7:00pm", "endHour": "9:30pm", "active": true, "siteId": "si03", "description": "Costa Rica recibe a Jamaica", "name": "Costa Rica vs Jamaica", "id": "ev02", "date": "2016-04-17T06:00:00.000Z", "eventType": "et03", "ticketsPrice": 8000, "capacity": 7000, "image": "images/event-default-images/imagen4.jpg", "promoterId": "pr02"  },
 
-		{ "startHour": "8:00pm", "endHour": "9:00pm", "active": true, "siteId": "si02", "description": "Revive y canta junto con Jaime Gamboa y Malpaís las canciones inolvidables que nos dejó Fidel Gamboa", "name": "Malpaís en concierto" , "id": "ev03", "date": "2016-05-16T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 5000, "capacity": 3000, "image": "imagen2.jpg", "promoterId": "pr01" }
+		{ "startHour": "8:00pm", "endHour": "9:00pm", "active": true, "siteId": "si02", "description": "Revive y canta junto con Jaime Gamboa y Malpaís las canciones inolvidables que nos dejó Fidel Gamboa", "name": "Malpaís en concierto" , "id": "ev03", "date": "2016-05-16T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 5000, "capacity": 3000, "image": "images/event-default-images/imagen2.jpg", "promoterId": "pr01" }
 	];
 
 	var savedSiteList=[
@@ -47,11 +47,11 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedEventTypeList = [
-		{"name": "Música","description":"Es el arte de combinar los sonidos de la voz humana o de los instrumentos, o de unos y otros a la vez, para crear un determinado efecto.", "id": "et01"}, 
-		{"name": "Cultura","description":"Es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada.", "id": "et02"}, 
-		{"name": "Deportes","description":"Es la actividad física pautada conforme a reglas y que se practica con finalidad recreativa, profesional o como medio de mejoramiento de la salud.", "id": "et03"}, 
-		{"name": "Teatro","description":"Es el arte que busca representar historias frente a una audiencia, combinando actuación, discurso, gestos, escenografía, música y sonido.", "id": "et04"}, 
-		{"name": "Arte","description":"Es el concepto que engloba todas las creaciones realizadas por el ser humano para expresar una visión sensible acerca del mundo, ya sea real o imaginario.", "id": "et05"}
+		{"name": "Música","description":"Es el arte de combinar los sonidos de la voz humana o de los instrumentos, o de unos y otros a la vez, para crear un determinado efecto.", "id": "et01", 'active': true}, 
+		{"name": "Cultura","description":"Es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada.", "id": "et02", 'active': true}, 
+		{"name": "Deportes","description":"Es la actividad física pautada conforme a reglas y que se practica con finalidad recreativa, profesional o como medio de mejoramiento de la salud.", "id": "et03", 'active': true}, 
+		{"name": "Teatro","description":"Es el arte que busca representar historias frente a una audiencia, combinando actuación, discurso, gestos, escenografía, música y sonido.", "id": "et04", 'active': true}, 
+		{"name": "Arte","description":"Es el concepto que engloba todas las creaciones realizadas por el ser humano para expresar una visión sensible acerca del mundo, ya sea real o imaginario.", "id": "et05", 'active': true}
 	];
 
 	var savedPromoterRegisterRequest = [

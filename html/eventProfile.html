@@ -1,26 +1,26 @@
 <div class="container-fluid">
 	<div class="heroBanner row">
 		<div class="heroImage col-xs-12 col-sm-6 col-sm-offset-2">
-			<img src="images/event-default-images/imagen5.jpg" alt="Imagen del evento" class="img-responsive">
+			<img ng-src="{{currentEvent.image}}" alt="Imagen del evento" class="img-responsive">
 		</div>
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
-				<h3>Malpaís</h3>
-				<h4>Teatro Nacional</h4>
-				<p>Fecha: 22 de Abril</p>
-				<p>Precio: c 8000</p>
+				<h3>{{currentEvent.name}}</h3>
+				<p>{{eventSiteName}}</p>
+				<h4>{{site.name}}</h4>
+				<p>{{currentEvent.date | date}}</p>
+				<p>{{currentEvent.ticketsPrice | currency: '¢'}}</p>
+
 			</div>
 		</div>
 	</div>
 </div>
+
 <div class="container">
 	<div class="row sectionRow">
 		<div class="eventDetails col-xs-12 col-sm-5 col-sm-offset-2 ">
-			<p>Details go here!</p>
+			<p>{{currentEvent.description}}</p>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a ipsum condimentum felis gravida pretium. Quisque eu eros condimentum, laoreet mauris ut, viverra lorem.</p>
-
-			<p>Ut sagittis erat quis metus maximus posuere. Mauris rhoncus orci dapibus eros feugiat, sed iaculis tortor suscipit.</p>
 		</div>
 		<div class="purchaseBtnCol col-xs-12 col-sm-3">
 			<div>

@@ -197,6 +197,13 @@ header span.user-icon{
 	width: 100%;
 }
 
+/*Listas genericas*/
+.genListTitle{
+	width: 40%;
+	margin: 0 auto;
+}
+/*Fin de listas genericas*/
+
 
 .main-search .btn-absolute, .user-list .btn-absolute, .gen-list .btn-absolute, .promoter-events-search button{
 	position: absolute;
@@ -263,17 +270,29 @@ header span.user-icon{
 	left: 30px;
 }
 
-.allEventsDisplay button a{
+.allEventsDisplay button a, .upcoming-events button a{
 	text-decoration: none;
 	color: #fff;
 }
 
-.allEventsDisplay button a:hover{
+.allEventsDisplay button a:hover, .upcoming-events button a:hover{
 	color:#000;
 }
 
 .allEventsDisplay button{
 	margin-bottom: 1em;
+}
+
+.upcoming-events h4{
+	margin-left: 2%;
+}
+
+.container-categories h4{
+	margin-bottom: 14em;
+}
+
+.container-categories .type-title{
+	/*margin-bottom: 25px;*/
 }
 
 .display-none{
@@ -292,6 +311,7 @@ header span.user-icon{
 
 .today-events-container{
 	margin-bottom: 90px;
+	margin-top: 40px;
 }
 
 .display-inline{
@@ -351,6 +371,13 @@ header span.user-icon{
 	color: #e77e23;
 }
 
+.signUpView h1{
+	margin: 1em 0;
+}
+
+.signUpView .input-group{
+	margin-top:2.6em;
+}
 
 /*forms*/
 .signUpView, .registrationView{
@@ -545,6 +572,10 @@ label{
 
 .client-profile .upcoming-events-item{
 	margin-bottom: 30px;
+}
+
+.upcoming-events-item.searchRow{
+	margin-bottom: 2em;
 }
 
 .client-profile h2{
