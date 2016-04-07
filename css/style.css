@@ -804,15 +804,15 @@ google-map{
 
 
 /*validaciones*/
-input.ng-invalid.ng-dirty, select.ng-invalid.ng-dirty{
+input.ng-invalid.ng-dirty, textarea.ng-invalid.ng-dirty,, select.ng-invalid.ng-dirty{
 	border: 1px solid #fa787e;
 }
 
-input.ng-valid.ng-dirty, select.ng-valid.ng-dirty{
+input.ng-valid.ng-dirty, select.ng-valid.ng-dirty, textarea.ng-valid.ng-dirty{
 	border: 1px solid #78fa89;
 }
 
-input.ng-invalid.ng-touched.ng-invalid-required, select.ng-invalid.ng-touched.ng-invalid-required{
+input.ng-invalid.ng-touched.ng-invalid-required, select.ng-invalid.ng-touched.ng-invalid-required, textarea.ng-invalid.ng-touched.ng-invalid-required{
 	border: 1px solid #fa787e;
 }
 
@@ -1188,6 +1188,40 @@ form sub, .error{
 	background-color: red;
 }
 
+/* EVENTS ARI*/
+
+.eventDetails{
+	background-color: #3598dc;
+	padding:1.5em 2%;
+	color: white;
+}
+
+.sectionRow{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	margin-top: 1.5em;
+	margin-bottom: 3em;
+}
+
+.purchaseBtnCol{
+	position: relative;
+}
+
+.purchaseBtnCol div{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	padding: 0.25em 2%;
+	background-color: #e77e23;
+}
+
+.purchaseBtnCol a{
+	color: white;
+}
+
+.paymentDetailsRow{
+	margin-bottom: 3em;
+}
+
 
 /*********************************************************************
 **************************MEDIA QUERYS********************************
@@ -1347,8 +1381,15 @@ form sub, .error{
 	}
 
 /*Site Profile*/
+	.purchaseBtnCol{
+		margin-top: 3em;
+	}
 
-	.heroBanner{
+	.purchaseBtnCol div{
+		margin: 0 auto;
+	}
+
+	.heroBanner, .sectionRow{
 		display: block;
 	}
 
