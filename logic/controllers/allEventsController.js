@@ -11,8 +11,8 @@ angular.module('OGTicketsApp.controllers')
 	}else{
 		$scope.eventsList= eventService.eventsByType($scope.categoryId);
 		$scope.hideCatTitle=false;
+		var category= eventService.getEventType($scope.categoryId);
+		$scope.categoryName= category.name;
 	};
-
-	
 
 }]); //end -controller-

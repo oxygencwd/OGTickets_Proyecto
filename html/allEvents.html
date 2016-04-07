@@ -1,6 +1,6 @@
-<div class="containers signUpView" >
+<div class="containers signUpView container-fluid" >
 	<div class="row">
-		<div class="col-md-4 col-md-offset-2">
+		<div class="col-md-4 col-md-offset-1">
 			<h1 ng-show="hideCatTitle">Eventos</h1>
 			<h1 ng-hide="hideCatTitle">Eventos por Categoría</h1>
 		</div>
@@ -15,7 +15,7 @@
 	</div>
 	<!-- end of search -->
 </div>
-<div class="container container-events">
+<div class="container container-events container-categories">
 	<div class="row">
 		<div class="upcoming-events">
 			<div class="row">
@@ -23,7 +23,9 @@
 					<h2></h2>
 				</div>
 			</div> <!-- row -->
-				<div class="col-md-4 allEventsDisplay" ng-repeat="event in eventsList track by $index" ng-hide="search.length>0">
+				<h4 ng-show="(eventsList).length == 0">No hay eventos en est categoría</h4>
+				<h2 >{{categoryName}}</h2>
+				<div class="col-md-4 allEventsDisplay" ng-repeat="event in eventsList | orderBy: 'date' track by $index" ng-hide="search.length>0">
 					<div class="upcoming-events-item">
 						<div class="upcoming-event-info">
 							<h5>{{event.name}}</h5>
@@ -31,7 +33,7 @@
 							<p>{{event.startHour}}</p>
 						</div>
 						<div class="event-item-img">
-							<img ng-src="images/event-default-images/{{event.image}}" class="img-responsive center-block" alt="">
+							<img ng-src= "{{event.image}}" class="img-responsive center-block" alt="">
 							<button class="buy-button first center-block" ><a ng-href="#/event-profile/{{event.id}}">Comprar</a></button>
 						</div>
 					</div><!-- upcoming-events-item -->
@@ -54,7 +56,7 @@
 						<p>{{event.startHour}}</p>
 					</div>
 					<div class="event-item-img">
-						<img ng-src="images/event-default-images/{{event.image}}" class="img-responsive center-block" alt="">
+						<img ng-src="{{event.image}}" class="img-responsive center-block" alt="">
 						<button class="buy-button first center-block" ><a ng-href="#/event-profile/{{event.id}}">Comprar</a></button>
 					</div>
 				</div><!-- upcoming-events-item -->
