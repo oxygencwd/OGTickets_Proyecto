@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('allUsersController', ['$scope', function ($scope) {
+.controller('allUsersController', ['$scope','$location', function ($scope, $location) {
 	
 
 
