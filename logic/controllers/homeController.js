@@ -10,8 +10,5 @@ angular.module('OGTicketsApp.controllers')
 	$scope.eventsList= eventService.activeEvents();
 
 	$scope.todayEvents= eventService.todayEvents();
-	console.log($scope.todayEvents);
  
-	
-
 }]); //end -controller-
