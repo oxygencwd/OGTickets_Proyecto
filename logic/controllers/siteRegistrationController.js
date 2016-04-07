@@ -1,17 +1,17 @@
 angular.module('OGTicketsApp.controllers')
-.controller('siteRegistrationController', ['$scope','localStorageService','formService','siteService', '$location', function ($scope,localStorageService, formService, siteService, $location) {
+.controller('siteRegistrationController', ['$scope','localStorageService','formService','siteService', '$window', function ($scope,localStorageService, formService, siteService, $window) {
 
-	$scope.newSite={};
+	$scope.newEvent={};
 	$scope.error="";
 
-	$scope.registerSite=function () {
-		result= siteService.registerSite($scope.newSite);
-		var siteId;
+	$scope.eventRegister=function () {
+		result= siteService.eventRegister($scope.newEvent);
+		var eventId;
 		if(result.value){
-			siteId= result.siteId;
-			$scope.newSite={};
-			formService.clear($scope.formNewSite);
-			$location.path('/site-profile/'+siteId);
+			eventId= result.eventId;
+			$scope.newEvent={};
+			formService.clear($scope.eventRegistrationForm);
+			$window.location.href = ('#/site-profile/'+eventId);
 			$scope.error="";
 		}else{
 			$scope.error="El sitio ya existe";

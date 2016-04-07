@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('cashierService', ['localStorageService', function(localStorageService) {
+.service('cashierFormService', ['localStorageService', function(localStorageService) {
 
 	var cashiers= localStorageService.getAll("userList");
 
@@ -21,6 +21,8 @@ angular.module('OGTicketsApp.services')
     		result.msj="Cashier already exists";
     	}else{
     		cashier.id= "cs" + cashierId;
+            cashier.active= true;
+            client.userType= "ut04";
     		cashiers.push(cashier);
     		localStorageService.set("userList", cashiers);
     		cashierId++;
