@@ -82,7 +82,4 @@ angular.module('OGTicketsApp.controllers')
             }
         }
         //end of seats
-//////CARMOL ESTO NO PUEDE ESTAR AQUI, SE DEBE CREAR UN SERVICIO PARA ESTO//////
-
-
 }]); //end -controller-
