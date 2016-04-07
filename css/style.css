@@ -356,6 +356,13 @@ header span.user-icon{
 	color: #e77e23;
 }
 
+.signUpView h1{
+	margin: 1em 0;
+}
+
+.signUpView .input-group{
+	margin-top:2.6em;
+}
 
 /*forms*/
 .signUpView, .registrationView{
@@ -550,6 +557,10 @@ label{
 
 .client-profile .upcoming-events-item{
 	margin-bottom: 30px;
+}
+
+.upcoming-events-item.searchRow{
+	margin-bottom: 2em;
 }
 
 .client-profile h2{

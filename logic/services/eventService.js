@@ -12,6 +12,7 @@ angular.module('OGTicketsApp.services')
         return result;
     };
 
+    //toma los eventos y los filtra paa obtener solo los de fecha actual
     var todayEvents= function (){
         var date= new Date();
             date= getParseDate(date);
@@ -23,6 +24,15 @@ angular.module('OGTicketsApp.services')
         return result;
     };
 
+    var eventsByType= function (typeId){
+        active= activeEvents();
+        result = active.filter(function (item) {
+            return item.eventType == typeId;
+        });
+        return result;
+    };
+
+    //llevar de string a date las fechas
     var getParseDate= function (date) {
         var day= date.getDate(),
             month= date.getMonth(),
@@ -32,8 +42,7 @@ angular.module('OGTicketsApp.services')
         return parseDate;
     };
 
-        
-
+    //lista de tipos de evento
     var getEventTypeList= function () {
       return localStorageService.getAll("eventTypeList");
     };
@@ -46,7 +55,6 @@ angular.module('OGTicketsApp.services')
     	});
     	return result;
     };
-
 
     // Saves credit card into database
     // Param value is the credit card object
@@ -61,6 +69,7 @@ angular.module('OGTicketsApp.services')
 		retrieveEvent: retrieveEvent,
         activeEvents:activeEvents,
         getEventTypeList:getEventTypeList,
-        todayEvents:todayEvents
+        todayEvents:todayEvents,
+        eventsByType:eventsByType
 	};
 }]);//end -service-

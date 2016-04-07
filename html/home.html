@@ -99,7 +99,6 @@
 						<h2>Eventos Próximos</h2>
 					</div>
 				</div> <!-- row -->
-				<!-- <li ng-repeat="contact in contacts | orderBy: 'name' | filter:search track by $index"> -->
 				<div class="col-md-4" ng-repeat="event in eventsList | orderBy: 'datetime' | limitTo: '6' track by $index">
 					<div class="upcoming-events-item">
 						<div class="upcoming-event-info">
@@ -139,10 +138,11 @@
 		</div> <!-- row -->
 	</div><!-- Fin Eventos proximos -->
 
+
 	<!-- Eventos del dia -->
 	<div class="container today-events-container">
 		<div class="row">
-		<div class="upcoming-events">   
+			<div class="upcoming-events">   
 				<div class="row">
 					<div class="col-sm-12">
 						<h2>Eventos del día</h2>
