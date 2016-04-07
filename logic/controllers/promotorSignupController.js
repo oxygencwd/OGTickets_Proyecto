@@ -1,11 +1,11 @@
 angular.module('OGTicketsApp.controllers')
-.controller('promotorSignupController', ['$scope','localStorageService','formService','promotorService', '$location', function ($scope,localStorageService, formService, promotorService, $location) {
+.controller('promotorSignupController', ['$scope','localStorageService','formService','promotorFormService', '$location', function ($scope,localStorageService, formService, promotorFormService, $location) {
 
 	$scope.newPromotor={};
 	$scope.error="";
 
 	$scope.promotorRegister=function () {
-		result= promotorService.promotorRegister($scope.newPromotor);
+		result= promotorFormService.promotorRegister($scope.newPromotor);
 		var promotorId;
 		if(result.value){
 			promotorId= result.promotorId;
@@ -17,4 +17,20 @@ angular.module('OGTicketsApp.controllers')
 			$scope.error="Ya existe una cuenta registrada con ese correo electronico";
 		}
 	}; 
+
+	$scope.sendRequest= function () {
+		result= promotorFormService.promotorRequest($scope.newPromotor);
+		if(result.value){
+			$scope.newPromotor={};
+			formService.clear($scope.formNewPromotor);
+			$scope.error="Solicitud enviada";
+		}else{
+			$scope.error="Ya existe una cuenta registrada con ese correo electronico";
+		}
+	};
+
+	$scope.dismissRequest= function () {
+		// body...
+	}
+	
 }]);

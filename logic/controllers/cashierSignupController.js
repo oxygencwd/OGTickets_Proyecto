@@ -1,11 +1,11 @@
 angular.module('OGTicketsApp.controllers')
-.controller('cashierSignupController', ['$scope','localStorageService','formService','cashierService', '$location', function ($scope,localStorageService, formService, cashierService, $location) {
+.controller('cashierSignupController', ['$scope','localStorageService','formService','cashierFormService', '$location', function ($scope,localStorageService, formService, cashierFormService, $location) {
 
 	$scope.newCashier={};
 	$scope.error="";
 
 	$scope.cashierRegister=function () {
-		result= cashierService.cashierRegister($scope.newCashier);
+		result= cashierFormService.cashierRegister($scope.newCashier);
 		var cashierId;
 		if(result.value){
 			cashierId= result.cashierId;

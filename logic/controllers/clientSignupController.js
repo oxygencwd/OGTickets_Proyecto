@@ -1,11 +1,11 @@
 angular.module('OGTicketsApp.controllers')
-.controller('clientSignupController', ['$scope','userService','formService','clientService', '$location', function ($scope,userService, formService, clientService, $location) {
+.controller('clientSignupController', ['$scope','userService','formService','clientFormService', '$window', '$routeParams', '$location', function ($scope,userService, formService, clientFormService, $window, $routeParams, $location) {
 
 	$scope.newClient={};
 	$scope.error="";
 
 	$scope.clientRegister=function () {
-		result= clientService.clientRegister($scope.newClient);
+		result= clientFormService.clientRegister($scope.newClient);
 		var clientId;
 		var user={};
 		if(result.value){
@@ -16,7 +16,7 @@ angular.module('OGTicketsApp.controllers')
 			userService.login($scope.appLoggedUser, user);
 			$scope.newClient={};
 			formService.clear($scope.formNewClient);
-			$location.path('/client-profile/'+ user.id);
+			$location.path('/client-profile/'+clientId);
 			$scope.error="";
 		}else{
 			$scope.error="Ya existe una cuenta registrada con ese correo electronico";
@@ -24,3 +24,5 @@ angular.module('OGTicketsApp.controllers')
 	}; 
 }]);
 
+
+/*/myURL/?param=value*/
