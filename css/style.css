@@ -197,6 +197,13 @@ header span.user-icon{
 	width: 100%;
 }
 
+/*Listas genericas*/
+.genListTitle{
+	width: 40%;
+	margin: 0 auto;
+}
+/*Fin de listas genericas*/
+
 
 .main-search .btn-absolute, .user-list .btn-absolute, .gen-list .btn-absolute, .promoter-events-search button{
 	position: absolute;
