@@ -72,18 +72,9 @@ angular.module('OGTicketsApp.services')
 
     }
 
-    // Saves credit card into database
-    // Param value is the credit card object
-    var setCreditCard = function (value) {
-    	localStorageService.set("creditCardList", value)
-    };
-
-    //$scope.categoryName= siteService.getTypeName($scope.categoryId);
-
-
 
 	return{
-		setCreditCard: setCreditCard,
+		//setCreditCard: setCreditCard,
 		retrieveEvent: retrieveEvent,
         activeEvents:activeEvents,
         getEventTypeList:getEventTypeList,

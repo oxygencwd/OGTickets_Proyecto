@@ -236,10 +236,16 @@ header span.user-icon{
 	padding-top: 7px;
 	padding-bottom: 7px;
 	border: none;
+	margin-bottom: 1em;
 }
 
 .upcoming-events .buy-button:hover{
 	color: #000;
+}
+
+.siteAmountForm input{
+	padding: .6em;
+	margin-bottom: 1.3em;
 }
 
 
