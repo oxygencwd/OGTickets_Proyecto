@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="heroBanner row">
 		<div class="heroImage col-xs-12 col-sm-6 col-sm-offset-2">
-			<img ng-src="{{currentEvent.image}}" alt="Imagen del evento" class="img-responsive">
+			<img ng-src="{{currentEvent.image}}" alt="Imagen del evento" class="img-responsive center-block">
 		</div>
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
@@ -53,11 +53,8 @@
 		<div class="col-md-12" ng-show="seatsDisplay">
 				<div class="content">
 
-			    	<h2 class="title">Butacas</h2>
-			    
-
-					<p>------ Tarima ------</p>
-
+			    	<h2 class="title">Selecciona los asientos</h2>
+			    	<button class="btn btn-warning back-button" ng-click="back()">Volver al mapa</button>
 			    <table class="seatLayout">
 			        <tr>
 			            <td class="padding-bottom"></td>
@@ -79,8 +76,8 @@
 			        <img src="images/seats/seat_selected.png" class="padding-left">  Seleccionada
 			    </div>
 			    <div class="buttons">
-			        <button ng-click="clearSelected()">Limpiar</button>
-			        <button ng-click="showSelected()">Mostrar asientos</button>
+			        <button class="btn btn-danger btn-clear" ng-click="clearSelected()">Limpiar</button>
+			        <button class="btn btn-primary btn-show" ng-click="showSelected()">Resumen</button>
 			    </div>
 			</div>
 		</div>
@@ -100,8 +97,9 @@
 	<div class="row paymentDetailsRow">
 		<div class="col-xs-12 col-sm-5 col-sm-offset-2">
 			<div ng-show="resume">
-				<p>Usted tiene  boletos seleccionados para Malpaís en el Teatro Nacional</p>
-				<!-- <p>Precio Total: c9999</p> -->
+				<p>{{msg}}</p>
+				<p ng-show="showPrice">Precio total: {{total | currency: '¢'}}</p>
+				<p>{{clientSelectedSeats}}</p>
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-3">
