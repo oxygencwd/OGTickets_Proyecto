@@ -1,14 +1,17 @@
 angular.module('OGTicketsApp.services')
 .service('transactionService', ['localStorageService', function(localStorageService) {
 
-	/*registrar transaccion, cancelar reservas, redeem, butacas, etc*/
+	// Saves credit card into database
+    // Param value is the credit card object
+    var setCreditCard = function (value) {
+    	localStorageService.set("creditCardList", value)
+    };
 
     
 
 
 //puntos de acceso de los metodos del servicio:
 	return{
-		// metodo1:metodo1,
-  //       metodo2:metodo2
+	setCreditCard:setCreditCard
 	};
 }]);//end -service-

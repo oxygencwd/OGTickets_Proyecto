@@ -99,7 +99,7 @@
 						<h2>Eventos Próximos</h2>
 					</div>
 				</div> <!-- row -->
-				<div class="col-md-4" ng-repeat="event in eventsList | orderBy: 'date' | limitTo: '6' track by $index">
+				<div class="col-md-4" ng-repeat="event in eventsList | orderBy: 'date' | limitTo: '3' track by $index">
 					<div class="upcoming-events-item">
 						<div class="upcoming-event-info">
 							<h5>{{event.name}}</h5>
