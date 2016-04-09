@@ -1,8 +1,12 @@
 angular.module('OGTicketsApp.services')
-.service('eventService', ['localStorageService', function(localStorageService) {
+.service('eventService', ['localStorageService','userService', function(localStorageService,userService) {
 
 	// Saves on "eventsList" all the events saved on the database, (active and inactive events.)
     var eventsList = localStorageService.getAll("eventsList");
+
+    //Genera un contador de id
+    var eventId= localStorageService.setIdCounter("eventIdCounter", 4);
+
 
     //active events= only active events can be display to clientes
     var activeEvents= function (){
@@ -72,6 +76,36 @@ angular.module('OGTicketsApp.services')
 
     }
 
+    //Revisa el nombre del evento que se va a registrar, para saber si ya existe o no.
+    var eventExists= function (event) {
+        var eventExists= eventsList.filter(function (item) {
+            return item.name== event.name;
+        });
+        return eventExists;
+    }; 
+
+    //Toma todos los datos del formulario, agrega el prefijo de evento y el campo de activo, y luego son guardados en userList.
+    var registerEvent= function (event) {
+        var saved= eventExists(event);
+        var result={};
+        var currentUser = userService.getLoggedUser();
+
+        if(saved.length>0){
+            result.value=false;
+            result.msj="Event already exists";
+        }else{
+            event.id= "ev" + eventId;
+            event.active= true;
+            event.userCreatorId = currentUser.id;
+            eventsList.push(event);
+            localStorageService.set("eventsList", eventsList);
+            eventId++;
+            localStorageService.setId("eventIdCounter", eventId);
+            result.value= true;
+            result.eventId= event.id;
+        };
+        return result;
+    };
 
 	return{
 		//setCreditCard: setCreditCard,
@@ -80,6 +114,7 @@ angular.module('OGTicketsApp.services')
         getEventTypeList:getEventTypeList,
         todayEvents:todayEvents,
         eventsByType:eventsByType,
-        getEventType:getEventType
+        getEventType:getEventType,
+        registerEvent:registerEvent
 	};
 }]);//end -service-

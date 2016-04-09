@@ -1,11 +1,12 @@
 angular.module('OGTicketsApp.controllers')
-.controller('clientSignupController', ['$scope','userService','formService','clientFormService', '$window', '$routeParams', '$location', function ($scope,userService, formService, clientFormService, $window, $routeParams, $location) {
+.controller('clientSignupController', ['$scope','userService','formService','clientService', '$window', '$routeParams', '$location', function ($scope,userService, formService, clientService, $window, $routeParams, $location) {
 
 	$scope.newClient={};
 	$scope.error="";
 
+	//Funcion del boton de registro de cliente, agarra todos los datos del formulario.
 	$scope.clientRegister=function () {
-		result= clientFormService.clientRegister($scope.newClient);
+		result= clientService.clientRegister($scope.newClient);
 		var clientId;
 		var user={};
 		if(result.value){

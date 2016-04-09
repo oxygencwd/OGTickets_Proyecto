@@ -1,12 +1,16 @@
 angular.module('OGTicketsApp.services')
 .service('promotorFormService', ['localStorageService', function(localStorageService) {
 
+    //Llama a todos los promotoes guardados en userList.
     var promotors= localStorageService.getAll("userList");
 
+    //Llama a todos las solicitudes de promotor guardadas en promoterRegisterRequest.
 	var promotorsResquest= localStorageService.getAll("promoterRegisterRequest");
 
+    //Genera un contador de id.
 	var promotorId= localStorageService.setIdCounter("promotorIdCounter", 4);
 
+    //Revisa el email del promotor, para saber si ya existe o no una cuenta con ese email.
 	var promotorExists= function (promotor) {
 		var promotorExists= promotors.filter(function (item) {
 			return item.email== promotor.email;
@@ -14,6 +18,7 @@ angular.module('OGTicketsApp.services')
 		return promotorExists;
 	}; 
 
+    //Toma todos los datos del formulario, agrega el prefijo de promotor, el campo de activo y el tipo de usuario, y luego son guardados en userList.
     var promotorRegister= function (promotor) {
     	var saved= promotorExists(promotor);
     	var result={};
@@ -35,6 +40,7 @@ angular.module('OGTicketsApp.services')
     	return result;
     };
 
+    //Revisa el email del promotor que solicitara un registro, para saber si ya existe o no una cuenta con ese email.
     var promotorExistsRequest= function (promotor) {
         var promotorExistsRequest= promotors.filter(function (item) {
             return item.email== promotor.email;
@@ -42,6 +48,7 @@ angular.module('OGTicketsApp.services')
         return promotorExistsRequest;
     }; 
 
+    //Toma todos los datos del formulario, agrega el campo de approved y el de pendingCheck, y luego son guardados en promotorsResquest.
     var promotorRequest= function (promotor) {
       var saved= promotorExistsRequest(promotor);
         var result={};

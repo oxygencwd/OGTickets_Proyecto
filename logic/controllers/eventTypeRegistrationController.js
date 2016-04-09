@@ -1,11 +1,12 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventTypeRegistrationController', ['$scope','localStorageService','formService','eventTypeFormService', '$location', function ($scope,localStorageService, formService, eventTypeFormService, $location) {
+.controller('eventTypeRegistrationController', ['$scope','localStorageService','formService','eventTypeService', '$location', function ($scope,localStorageService, formService, eventTypeService, $location) {
 
 	$scope.newEventType={};
 	$scope.error="";
 
+	//Funcion del boton de registro de tipo de evento, agarra todos los datos del formulario.
 	$scope.eventTypeRegister=function () {
-		result= eventTypeFormService.eventTypeRegister($scope.newEventType);
+		result= eventTypeService.eventTypeRegister($scope.newEventType);
 		var eventTypeId;
 		if(result.value){
 			eventTypeId= result.eventTypeId;
