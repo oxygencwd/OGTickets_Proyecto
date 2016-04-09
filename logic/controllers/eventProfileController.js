@@ -42,7 +42,7 @@ angular.module('OGTicketsApp.controllers')
         //funcion que lleva haciel el servicio la localidad elegida por el usuario.
         /*params: zoneName, zoneId, rows, cols, site(teatro, auditorio, estadio, palacio), location(diteccion en la qie estan orientadas las butcas)*/
         $scope.ShowSiteSeats= function (zoneName, zoneId, rows, cols, site, location) {
-            console.log("zoneName:" + zoneName + " zoneId " + zoneId +  " rows: " + rows + " cols: " + cols + " location: " + location);
+            
             $scope.seatsDisplay= true;
             $scope.rows= seatsService.getRows(rows);
             $scope.cols= seatsService.getCols(cols);
@@ -122,6 +122,14 @@ angular.module('OGTicketsApp.controllers')
             transactionService.setCreditCard($scope.ccinfo);
         };
 
+
+        $scope.prueba= function () {
+            eventService.prueba("admin@prueba.com", "cedros33").success(function(response){
+                console.debug(response.user);
+            }).error(function(data){
+                console.debug("error");
+            });
+        };
 
 
 }]); //end -controller-
