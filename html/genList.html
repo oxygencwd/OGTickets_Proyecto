@@ -18,10 +18,20 @@
 				<div class="container-fluid">
 					<div class="row"><!-- body-row -->
 						<div class="col-md-12">
-							<ul class="width80">
+
+							<ul class="width80" ng-show="url==promReq">
+								<li ng-repeat= "promotor in promPendingCheck track by $index"><a ng-href="#/">{{promotor.name}}<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+							</ul>
+
+							<ul class="width80" ng-show="url==allSites">
+								<li ng-repeat="site in sitesList track by $index"><a ng-href="#/">{{site.name}}<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+							</ul>
+
+							<ul class="width80" ng-show="url==allEveTypes">
 								<li><a ng-href="#/">item list example <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
-								<li><a ng-href="#/">item list example <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
-								<li><a ng-href="#/">item list example <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+							</ul>
+
+							<ul class="width80" ng-show="url==allEventsAdmin">
 								<li><a ng-href="#/">item list example <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
 							</ul>
 						</div>
