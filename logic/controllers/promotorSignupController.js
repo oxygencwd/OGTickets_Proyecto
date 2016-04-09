@@ -1,11 +1,12 @@
 angular.module('OGTicketsApp.controllers')
-.controller('promotorSignupController', ['$scope','localStorageService','formService','promotorFormService', '$location', function ($scope,localStorageService, formService, promotorFormService, $location) {
+.controller('promotorSignupController', ['$scope','localStorageService','formService','promotorService', '$location', function ($scope,localStorageService, formService, promotorService, $location) {
 
 	$scope.newPromotor={};
 	$scope.error="";
 
+	//Funcion del boton de registro promotor, agarra todos los datos del formulario.
 	$scope.promotorRegister=function () {
-		result= promotorFormService.promotorRegister($scope.newPromotor);
+		result= promotorService.promotorRegister($scope.newPromotor);
 		var promotorId;
 		if(result.value){
 			promotorId= result.promotorId;
@@ -18,6 +19,7 @@ angular.module('OGTicketsApp.controllers')
 		}
 	}; 
 
+	//Funcion del boton de solicitud de registro de promotor, agarra todos los datos del formulario.
 	$scope.sendRequest= function () {
 		result= promotorFormService.promotorRequest($scope.newPromotor);
 		if(result.value){

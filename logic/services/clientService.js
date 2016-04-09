@@ -1,10 +1,13 @@
 angular.module('OGTicketsApp.services')
-.service('clientFormService', ['localStorageService', function(localStorageService) {
+.service('clientService', ['localStorageService', function(localStorageService) {
 
+    //Llama a todos los clientes guardados en userList.
 	var clients= localStorageService.getAll("userList");
 
+    //Genera un contador de id
 	var clientId= localStorageService.setIdCounter("clientIdCounter", 4);
 
+    //Revisa el email del cliente que se va a registrar, para saber si ya existe o no.
 	var clientExists= function (client) {
 		var clientExists= clients.filter(function (item) {
 			return item.email== client.email;
@@ -12,6 +15,7 @@ angular.module('OGTicketsApp.services')
 		return clientExists;
 	}; 
 
+    //Toma todos los datos del formulario, agrega el prefijo de cliente, el campo de activo y el tipo de usuario, y luego son guardados en userList.
     var clientRegister= function (client) {
     	var saved= clientExists(client);
     	var result={};
