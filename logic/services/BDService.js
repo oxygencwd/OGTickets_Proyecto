@@ -27,19 +27,29 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedEventsList=[
-		{ "startHour": "7:00pm", "endHour": "10:00pm",  "siteId": "si03", "active": true, "description": "Viene Rihanna con su World Tour, un verdadero show que no te podés perder", "date": "2016-06-16T06:00:00.000Z", "id": "ev01", "name": "Rihanna World Tour", "ticketsPrice": 35500, "eventType": "et01", "capacity": 6000, "image": "images/event-default-images/imagen6.jpg", "promoterId": "pr02" },
+		{ "startHour": "7:00pm", "endHour": "10:00pm",  "siteId": "si03", "active": true, "description": "Viene Rihanna con su World Tour, un verdadero show que no te podés perder", "date": "2016-06-16T06:00:00.000Z", "id": "ev01", "name": "Rihanna World Tour", "ticketsPrice": 35500, "eventType": "et01", "capacity": 2102, "image": "images/event-default-images/imagen6.jpg", "promoterId": "pr02" },
 
-		{ "startHour": "7:00pm", "endHour": "9:30pm", "active": true, "siteId": "si03", "description": "Costa Rica recibe a Jamaica", "name": "Costa Rica vs Jamaica", "id": "ev02", "date": "2016-04-17T06:00:00.000Z", "eventType": "et03", "ticketsPrice": 8000, "capacity": 7000, "image": "images/event-default-images/imagen4.jpg", "promoterId": "pr02"  },
+		{ "startHour": "7:00pm", "endHour": "9:30pm", "active": true, "siteId": "si03", "description": "Costa Rica recibe a Jamaica", "name": "Costa Rica vs Jamaica", "id": "ev02", "date": "2016-04-17T06:00:00.000Z", "eventType": "et03", "ticketsPrice": 8000, "capacity": 2102, "image": "images/event-default-images/imagen4.jpg", "promoterId": "pr02"  },
 
-		{ "startHour": "8:00pm", "endHour": "9:00pm", "active": true, "siteId": "si02", "description": "Revive y canta junto con Jaime Gamboa y Malpaís las canciones inolvidables que nos dejó Fidel Gamboa", "name": "Malpaís en concierto" , "id": "ev03", "date": "2016-05-16T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 5000, "capacity": 3000, "image": "images/event-default-images/imagen2.jpg", "promoterId": "pr01" }
+		{ "startHour": "8:00pm", "endHour": "9:00pm", "active": true, "siteId": "si02", "description": "Revive y canta junto con Jaime Gamboa y Malpaís las canciones inolvidables que nos dejó Fidel Gamboa", "name": "Malpaís en concierto" , "id": "ev03", "date": "2016-05-16T06:00:00.000Z", "eventType": "et01", "ticketsPrice": 5000, "capacity": 642, "image": "images/event-default-images/imagen2.jpg", "promoterId": "pr01" },
+
+		{ "startHour": "6:00pm", "endHour": "7:00pm", "active": true, "siteId": "si05", "description": "Espactáculo anual de la Compañía Nacional de Danza Contemporanea", "name": "Renacer" , "id": "ev04", "date": "2016-04-16T06:00:00.000Z", "eventType": "et05", "ticketsPrice": 3000, "capacity": 300, "image": "images/event-default-images/imagen7.jpg", "promoterId": "pr03" },
+
+		{ "startHour": "6:00pm", "endHour": "10:00pm", "active": true, "siteId": "si01", "description": "Las mejores obras de la temporada en una sola noche", "name": "Festival Nacional de Teatro" , "id": "ev05", "date": "2016-04-16T06:00:00.000Z", "eventType": "et04", "ticketsPrice": 5000, "capacity": 692, "image": "images/event-default-images/imagen8.jpg", "promoterId": "pr01" },
+
+		{ "startHour": "6:30pm", "endHour": "9:00pm", "active": true, "siteId": "si04", "description": "No se pierda la gran final Nacional de Baloncesto entre Barba y el Liceo de Costa Rica", "name": "Final Nacional de Baloncesto" , "id": "ev06", "date": "2016-07-16T06:00:00.000Z", "eventType": "et03", "ticketsPrice": 3500, "capacity": 540, "image": "images/event-default-images/imagen9.jpg", "promoterId": "pr02" }
 	];
 
 	var savedSiteList=[
-		{ "id": "si01", "name":"Teatro Nacional", "phoneOne": 20101110, "phoneTwo": 20101111, "capacity": 4000, "latitude": 9.933126, "longitude": -84.077087, "address": "Avenida Segunda entre Calles 3 y 5, Centro, San José, Costa Rica", "active": true},
+		{ "id": "si01", "name":"Teatro Nacional", "phoneOne": 20101110, "phoneTwo": 20101111, "capacity": 692, "latitude": 9.933126, "longitude": -84.077087, "address": "Avenida Segunda entre Calles 3 y 5, Centro, San José, Costa Rica", "active": true},
 
-		{ "id": "si02", "name":"Bar el Observatorio", "phoneOne": 22230725, "phoneTwo": "", "capacity": 300, "latitude": 9.933238, "longitude": -84.068303, "address": "La California, San José, Costa Rica", "active": true},
+		{ "id": "si02", "name":"Auditorio Nacional", "phoneOne": 22230725, "phoneTwo": "", "capacity": 642, "latitude": 9.933238, "longitude": -84.068303, "address": "San José, Costa Rica", "active": true},
 
-		{ "id": "si03", "name":"Estadio Nacional", "phoneOne": 25490700, "phoneTwo": "", "capacity": 36500, "latitude": 9.936619, "longitude": -84.107733, "address": "Parque Metropolitano la Sabana, San José, Costa Rica", "active": true}
+		{ "id": "si03", "name":"Estadio Nacional", "phoneOne": 25490700, "phoneTwo": "", "capacity": 2102, "latitude": 9.936619, "longitude": -84.107733, "address": "Parque Metropolitano la Sabana, San José, Costa Rica", "active": true},
+
+		{ "id": "si04", "name":"Palacio de los Deportes", "phoneOne": 25986536, "phoneTwo": "", "capacity": 540, "latitude": 10.936619, "longitude": -82.107733, "address": "Heredia, Costa Rica", "active": true},
+
+		{ "id": "si05", "name":"Teatro de la Danza", "phoneOne": 25486985, "phoneTwo": "", "capacity": 300, "latitude": 11.555619, "longitude": -85.107733, "address": "San José, Costa Rica", "active": true}
 	];
 
 	var savedTransactionList=[
@@ -64,6 +74,47 @@ angular.module('OGTicketsApp.services')
 		{ "approved": false, "pendingCheck": true, "name": "Yoda Productions", "password": "yoda1", "email": "yadainfo@gmail.com", "personalId": "305690589", "areaOfSpecialization": "Teatro", "phoneOne": "75698632", "id": "rq05", "address": "Moravia, Costa Rica", "userType": 3 },
 		{ "approved": false, "pendingCheck": true, "name": "Backstage Productions", "password": "bs1234", "id": "rq06", "email": "bsinfo@backstage.com", "personalId": "13698756", "areaOfSpecialization": "Música", "phoneOne": "29865647", "address": "Paraíso, Cartago", "userType": 3 },
 
+	];
+
+	var savedReservedSeatxEventxSite = [
+		//evento de Rihanna, Estadio Nacional
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "PE", "seatId": "A2", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "PN", "seatId": "A2", 'active': true}, 
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "PE", "seatId": "A3", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "PO", "seatId": "B2", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "PS", "seatId": "B2", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "BE", "seatId": "A6", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "BS", "seatId": "C2", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "BN", "seatId": "A6", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "BO", "seatId": "C7", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "GO", "seatId": "B5", 'active': true},
+		{"eventId": "ev01","siteId":"si03", "Zoneid": "GS", "seatId": "A6", 'active': true},
+		//Evento de Mal País, Auditorio Nacional
+		{"eventId": "ev03","siteId":"si02", "Zoneid": "VP", "seatId": "A2", 'active': true},
+		{"eventId": "ev03","siteId":"si02", "Zoneid": "VP", "seatId": "B5", 'active': true},
+		{"eventId": "ev03","siteId":"si02", "Zoneid": "BU", "seatId": "A6", 'active': true},
+		{"eventId": "ev03","siteId":"si02", "Zoneid": "BU", "seatId": "B7", 'active': true},
+		{"eventId": "ev03","siteId":"si02", "Zoneid": "BU", "seatId": "B8", 'active': true},
+		{"eventId": "ev03","siteId":"si02", "Zoneid": "GO", "seatId": "C4", 'active': true},
+		{"eventId": "ev03","siteId":"si02", "Zoneid": "GO", "seatId": "C5", 'active': true},
+		{"eventId": "ev03","siteId":"si02", "Zoneid": "GO", "seatId": "C6", 'active': true},
+		//Festival de Teatro en el Teatro Nacional
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "LU", "seatId": "A2", 'active': true},
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "LU", "seatId": "A3", 'active': true},
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "PE", "seatId": "C4", 'active': true},
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "PO", "seatId": "D6", 'active': true},
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "PS", "seatId": "C3", 'active': true},
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "BE", "seatId": "B5", 'active': true},
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "BO", "seatId": "C4", 'active': true},
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "GO", "seatId": "A6", 'active': true},
+		{"eventId": "ev05","siteId":"si01", "Zoneid": "GS", "seatId": "G2", 'active': true},
+		//Final nacioal de baloncesto en el Palacio de los Deportes
+		{"eventId": "ev06","siteId":"si04", "Zoneid": "GE", "seatId": "A6", 'active': true},
+		{"eventId": "ev06","siteId":"si04", "Zoneid": "GE", "seatId": "A3", 'active': true},
+		{"eventId": "ev06","siteId":"si04", "Zoneid": "GN", "seatId": "C4", 'active': true},
+		{"eventId": "ev06","siteId":"si04", "Zoneid": "GN", "seatId": "D6", 'active': true},
+		{"eventId": "ev06","siteId":"si04", "Zoneid": "GO", "seatId": "C3", 'active': true},
+		{"eventId": "ev06","siteId":"si04", "Zoneid": "GO", "seatId": "B5", 'active': true}
 	];
 
 
@@ -99,6 +150,12 @@ angular.module('OGTicketsApp.services')
 		return localStorageService.getOrArray("promoterRegisterRequest", savedPromoterRegisterRequest);
 	};
 
+	//quemar los datos del tipo de evento
+	var reservedSeatxEventxSite= function () {
+		return localStorageService.getOrArray("reservedSeatxEventxSite", savedReservedSeatxEventxSite);
+	};
+	
+
 
 //puntos de acceso de los metodos del servicio:
 	return{
@@ -107,7 +164,8 @@ angular.module('OGTicketsApp.services')
 		siteList:siteList,
 		transactionList:transactionList,
 		eventTypeList:eventTypeList,
-		promoterRegisterRequest:promoterRegisterRequest
+		promoterRegisterRequest:promoterRegisterRequest,
+		reservedSeatxEventxSite:reservedSeatxEventxSite
 	};
 }]);//end -service-
 
