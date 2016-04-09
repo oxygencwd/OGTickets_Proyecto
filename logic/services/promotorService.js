@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('promotorFormService', ['localStorageService', function(localStorageService) {
+.service('promotorService', ['localStorageService', function(localStorageService) {
 
     //Llama a todos los promotoes guardados en userList.
     var promotors= localStorageService.getAll("userList");

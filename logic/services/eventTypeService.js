@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('eventTypeFormService', ['localStorageService', function(localStorageService) {
+.service('eventTypeService', ['localStorageService', function(localStorageService) {
 
     //Llama a todos los tipos de eventos guardados en eventTypeList.
 	var eventTypes= localStorageService.getAll("eventTypeList");
