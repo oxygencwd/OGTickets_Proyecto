@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('cashierFormService', ['localStorageService', function(localStorageService) {
+.service('cashierService', ['localStorageService', function(localStorageService) {
 
     //Llama a todos los cajeros guardados en userList.
 	var cashiers= localStorageService.getAll("userList");
