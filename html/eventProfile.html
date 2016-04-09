@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="heroBanner row">
 		<div class="heroImage col-xs-12 col-sm-6 col-sm-offset-2">
-			<img ng-src="{{currentEvent.image}}" alt="Imagen del evento" class="img-responsive">
+			<img ng-src="{{currentEvent.image}}" alt="Imagen del evento" class="img-responsive center-block">
 		</div>
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
@@ -24,51 +24,37 @@
 		</div>
 		<div class="purchaseBtnCol col-xs-12 col-sm-3">
 			<div>
-				<a class="btn btn-block  btn-lg"  data-toggle="modal" ng-click="showSeatsSection()"> <span class="glyphicon glyphicon-tags"></span> Comprar / Reservar</a>
+				<a class="btn btn-block  btn-lg"  data-toggle="modal" ng-click="displayPanel()"> <span class="glyphicon glyphicon-tags"></span> Comprar / Reservar</a>
 			</div>
 		</div>
 	</div>
 	
-
-
-	<div class="row" ng-show="addSeatsSectionShow">
-
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<!-- <og-palacio></og-palacio> -->
-				<!--  <og-auditorio></og-auditorio>  --> 
-				<!-- <og-teatro></og-teatro> -->
-				<og-estadio></og-estadio> 
+	<!-- <div class="row" ng-show="addSeatsSectionShow">
+ -->
+	<div class="row" ng-show="showMap">
+		<div class="col-lg-8 col-lg-offset-2">
+			<h3>Selecciona la localidad.</h3>
+			<og-teatro ng-if="eventSiteId=='si01'"></og-teatro>
+			<og-auditorio ng-if="eventSiteId=='si02'"></og-auditorio>  
+			<og-estadio ng-if="eventSiteId=='si03'"></og-estadio> 
+			<og-palacio ng-if="eventSiteId=='si04'"></og-palacio>
+			<div>
+				<form name="siteAmountForm" class="siteAmountForm" novalidate ng-if="noMap">
+					<label>Cantidad de asientos / espacios:</label>
+					<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model= "seatAmount">
+				</form>
 			</div>
 		</div>
-		<div class="row paymentDetailsRow">
-			<div class="col-xs-12 col-sm-5 col-sm-offset-2">
-				<div>
-					<p>Usted tiene X boletos seleccionados para Malpaís en el Teatro Nacional</p>
-					<p>Precio Total: c9999</p>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-3">
-				<div>
-			        <!--<button ng-click="showSelected()" class="btn btn-block btn-lg eventsBtnRed">Comprar</button>-->
-			        <button  class="btn btn-block btn-lg eventsBtnRed" data-toggle="modal" data-target="#paymentModal">Comprar</button>
-			        <button class="btn btn-block btn-lg eventsBtnBlue">Reservar</button>
-				</div>
-			</div>
-		</div>
+	</div>
 
-		
 
 	<!-- BUTACAS DE CARMIOL -->
+	<div class="row">
+		<div class="col-md-12" ng-show="seatsDisplay">
+				<div class="content">
 
-		<!-- <div class="col-md-6">
-			<div class="content">
-
-			    <h2 class="title">Butacas</h2>
-			    
-
-			    <p>------ Tarima ------</p>
-
+			    	<h2 class="title">Selecciona los asientos</h2>
+			    	<button class="btn btn-warning back-button" ng-click="back()">Volver al mapa</button>
 			    <table class="seatLayout">
 			        <tr>
 			            <td class="padding-bottom"></td>
@@ -90,12 +76,44 @@
 			        <img src="images/seats/seat_selected.png" class="padding-left">  Seleccionada
 			    </div>
 			    <div class="buttons">
-			        <button ng-click="clearSelected()">Limpiar</button>
-			        <button ng-click="showSelected()">Mostrar asientos</button>
+			        <button class="btn btn-danger btn-clear" ng-click="clearSelected()">Limpiar</button>
+			        <button class="btn btn-primary btn-show" ng-click="showSelected()">Resumen</button>
 			    </div>
 			</div>
-		</div> -->
-		<!-- end of left side butacas -->
+		</div>
+	</div>
+	<!-- end of seats -->
+
+
+	<div class="row" ng-show="inputPanel">
+		<div class="col-lg-8 col-lg-offset-2">
+			<form name="siteAmountForm" class="siteAmountForm" novalidate ng-if="noMap" >
+				<label>Cantidad de asientos / espacios:</label>
+				<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model= "seatAmount" ng-init=0>
+			</form>
+		</div>
+	</div>
+
+	<div class="row paymentDetailsRow">
+		<div class="col-xs-12 col-sm-5 col-sm-offset-2">
+			<div ng-show="resume">
+				<p>{{msg}}</p>
+				<p ng-show="showPrice">Precio total: {{total | currency: '¢'}}</p>
+				<p>{{clientSelectedSeats}}</p>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-3">
+			<div ng-show="buttons">
+		        <!--<button ng-click="showSelected()" class="btn btn-block btn-lg eventsBtnRed">Comprar</button>-->
+		        <button  class="btn btn-block btn-lg eventsBtnRed" data-toggle="modal" data-target="#paymentModal">Comprar</button>
+		        <button class="btn btn-block btn-lg eventsBtnBlue">Reservar</button>
+			</div>
+		</div>
+	</div>
+<div> <!-- container -->
+
+
+
 
 	<!-- Modal -->
 	<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel">
