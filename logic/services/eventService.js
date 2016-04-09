@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('eventService', ['localStorageService', function(localStorageService) {
+.service('eventService', ['localStorageService', '$http', function(localStorageService, $http) {
 
 	// Saves on "eventsList" all the events saved on the database, (active and inactive events.)
     var eventsList = localStorageService.getAll("eventsList");
@@ -70,7 +70,18 @@ angular.module('OGTicketsApp.services')
         });
         return result[0];
 
-    }
+    };
+
+    var prueba= function (email, password) {
+        url= 'back-end/index.php/user/login';
+        var requestBody={
+            email: email,
+            password:password
+        };
+        var result= {}; // tienen que estar definidas las variables.
+        result= $http.post(url, requestBody);
+        return result;
+    };
 
 
 	return{
@@ -80,6 +91,7 @@ angular.module('OGTicketsApp.services')
         getEventTypeList:getEventTypeList,
         todayEvents:todayEvents,
         eventsByType:eventsByType,
-        getEventType:getEventType
+        getEventType:getEventType,
+        prueba:prueba
 	};
 }]);//end -service-

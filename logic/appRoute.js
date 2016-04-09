@@ -129,7 +129,15 @@
                 templateUrl: 'html/promotorSignupForm.html',
                 controller: 'promotorSignupController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                    authorized: [ROLES.ADMIN.ROL]
+                }
+                //registro de Cajeros y Promotores. Permisos: Admin
+            })
+            .when('/promotor-signup-request', {
+                templateUrl: 'html/promotorSignupForm.html',
+                controller: 'promotorSignupController',
+                data: {
+                    authorized: [ROLES.GUEST.ROL]
                 }
                 //registro de Cajeros y Promotores. Permisos: Admin
             })
