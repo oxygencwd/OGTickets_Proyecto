@@ -1,11 +1,12 @@
 angular.module('OGTicketsApp.controllers')
-.controller('cashierSignupController', ['$scope','localStorageService','formService','cashierFormService', '$location', function ($scope,localStorageService, formService, cashierFormService, $location) {
+.controller('cashierSignupController', ['$scope','localStorageService','formService','cashierService', '$location', function ($scope,localStorageService, formService, cashierService, $location) {
 
 	$scope.newCashier={};
 	$scope.error="";
 
+	//Funcion del boton de registro de cajero, agarra todos los datos del formulario.
 	$scope.cashierRegister=function () {
-		result= cashierFormService.cashierRegister($scope.newCashier);
+		result= cashierService.cashierRegister($scope.newCashier);
 		var cashierId;
 		if(result.value){
 			cashierId= result.cashierId;

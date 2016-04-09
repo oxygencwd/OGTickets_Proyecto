@@ -4,6 +4,7 @@ angular.module('OGTicketsApp.controllers')
 	$scope.newEvent={};
 	$scope.error="";
 
+	//Funcion del boton de registro de evento, agarra todos los datos del formulario.
 	$scope.eventRegister=function () {
 		result= siteService.eventRegister($scope.newEvent);
 		var eventId;
@@ -18,6 +19,7 @@ angular.module('OGTicketsApp.controllers')
 		}
 	}; 
 
+	//Expresiones regulares, para validad campos de formulario
 	$scope.expCapacity = /^[\ |0-9]{1,5}$/;
 	$scope.expDecimalLatitude = /^-?\d{0,2}(?:,\s?\d{3})*(?:\.\d*)?$/;
 	$scope.expDecimalLongitude = /^-?\d{0,3}(?:,\s?\d{3})*(?:\.\d*)?$/;
