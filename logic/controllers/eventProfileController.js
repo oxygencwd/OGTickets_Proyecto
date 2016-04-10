@@ -1,6 +1,6 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventProfileController', ['$scope', 'eventService', 'transactionService', '$routeParams', 'siteService', '$locale', 'seatsService',
-    function ($scope, eventService, transactionService, $routeParams, siteService,  $locale, seatsService) {
+.controller('eventProfileController', ['$scope', 'eventService', 'transactionService', '$routeParams', 'siteService', '$locale', 'seatsService', '$location','userService',
+    function ($scope, eventService, transactionService, $routeParams, siteService,  $locale, seatsService,$location,userService) {
 
         var eventId= $routeParams.eventId;
 
@@ -131,5 +131,16 @@ angular.module('OGTicketsApp.controllers')
             });
         };
 
+        //Redirect to the event form to edit the event
+        $scope.editEvent= function(){
+            var eventId = $routeParams.eventId;
+            $location.path('/event-profile-edit/'+eventId);
+        };
+
+        var currentUser= userService.getLoggedUser();
+        $scope.isOwner=false;
+        if($scope.currentEvent.promoterId==currentUser.id){
+            $scope.isOwner=true;
+        }
 
 }]); //end -controller-
