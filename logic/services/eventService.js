@@ -118,6 +118,20 @@ angular.module('OGTicketsApp.services')
         return result;
     };
 
+    var replaceEvent= function(eventId, newEvent){
+        var newEventList= removeOldEvent(eventId);
+        console.log(newEvent);
+        newEventList.push(newEvent);
+        localStorageService.set("eventsList", newEventList);
+    };   
+
+    var removeOldEvent= function (eventId){
+        eventsList = eventsList.filter(function (item) {
+            return item.id !== eventId;
+        });
+        return eventsList;
+    };
+
 	return{
 		//setCreditCard: setCreditCard,
 		retrieveEvent: retrieveEvent,
@@ -127,6 +141,8 @@ angular.module('OGTicketsApp.services')
         eventsByType:eventsByType,
         getEventType:getEventType,
         prueba:prueba,
-        registerEvent:registerEvent
+        registerEvent:registerEvent,
+        eventsList:eventsList,
+        replaceEvent:replaceEvent
 	};
 }]);//end -service-
