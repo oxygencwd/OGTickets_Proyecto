@@ -55,10 +55,10 @@
             })
             .when('/event-profile-edit/:eventId', {
                 templateUrl: 'html/eventRegistrationForm.html',
-                controller: 'eventProfileController',
+                controller: 'eventRegistrationController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
-                }
+                } 
                 //Edición de un evento. Permisos: admin, promotor propietario del evento
             })
             .when('/event-registration', {
@@ -95,7 +95,7 @@
             })
             .when('/client-profile-edit/:clientId', {
                 templateUrl: 'html/clientSignupForm.html',
-                controller: 'clientProfileController',
+                controller: 'clientSignupController',
                 data: {
                     authorized: [ROLES.CLIENT.ROL]
                 }
@@ -119,7 +119,7 @@
             })
             .when('/promoter-profile-edit/:promoterId', {
                 templateUrl: 'html/promotorSignupForm.html',
-                controller: 'promoterProfileController',
+                controller: 'promotorSignupController',
                 data: {
                     authorized: [ROLES.PROMOTER.ROL]
                 }
@@ -183,7 +183,7 @@
             })
             .when('/site-profile-edit/:siteId', {
                 templateUrl: 'html/siteRegistrationForm.html',
-                controller: 'siteProfileController',
+                controller: 'siteRegistrationController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
                 }
@@ -215,7 +215,7 @@
             })
             .when('/event-type-profile-edit/:eventTypeId', {
                 templateUrl: 'html/eventTypeRegistrationForm.html',
-                controller: 'eventTypeController',
+                controller: 'eventTypeRegistrationController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
                 }
@@ -283,4 +283,3 @@ angular.module('OGTicketsApp.controllers', []);
 angular.module('OGTicketsApp.services', []);
 angular.module('OGTicketsApp.filters', []);
 angular.module('OGTicketsApp.directives', []);
-

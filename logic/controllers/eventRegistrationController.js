@@ -1,6 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventRegistrationController', ['$scope','localStorageService','formService','eventService', '$window', function ($scope,localStorageService, formService, eventService, $window) {
-
+.controller('eventRegistrationController', ['$scope','localStorageService','formService','eventService', '$window','$routeParams','userService', function ($scope,localStorageService, formService, eventService, $window,$routeParams,userService) {
 	$scope.eventTypes = localStorageService.getAll("eventTypeList");
 	$scope.sites = localStorageService.getAll("siteList");
 	$scope.newEvent={};
@@ -20,4 +19,28 @@ angular.module('OGTicketsApp.controllers')
 			$scope.error="El evento ya existe";
 		}
 	}; 
+
+	////$scope.eventTypes= eventService.getEventTypes();
+
+	//edit the event.
+	var eventId= $routeParams.eventId;
+	var currentEvent= eventService.retrieveEvent(eventId);
+	currentEvent.date= new Date(currentEvent.date);
+	$scope.newEvent= currentEvent;
+	
+
+	if(eventId==undefined){
+		$scope.editing= false;
+	}else{
+		$scope.editing= true;
+		
+	};
+
+	$scope.editEvent=function(){
+		eventService.replaceEvent(eventId, $scope.newEvent);
+		$scope.newEvent={};
+		formService.clear($scope.eventRegistrationForm);
+		$window.location.href = ('#/event-profile/'+eventId);
+	};
+
 }]);
