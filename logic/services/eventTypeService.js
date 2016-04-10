@@ -35,8 +35,18 @@ angular.module('OGTicketsApp.services')
     	return result;
     };
 
+    //retrieves event type with the id given in the param
+    var retrieveEventType = function (eId){
+        result = eventTypes.filter(function (item) {
+            return item.id == eId;
+        });
+        return result[0];
+    };
+
 	return{
-		eventTypeRegister:eventTypeRegister
+        eventTypes:eventTypes,
+		eventTypeRegister:eventTypeRegister,
+        retrieveEventType:retrieveEventType
 	};
 
 }]);

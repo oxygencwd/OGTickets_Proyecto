@@ -10,6 +10,14 @@ angular.module('OGTicketsApp.services')
     //Genera un contador de id.
 	var promotorId= localStorageService.setIdCounter("promotorIdCounter", 4);
 
+    // Filtra la lista de promotores y obtiene los que tienen el pendingCheck en true
+    var promotorsPendingCheck= function (){
+        result = promotorsResquest.filter(function (item) {
+            return item.pendingCheck == true;
+        });
+        return result;
+    };
+
     //Revisa el email del promotor, para saber si ya existe o no una cuenta con ese email.
 	var promotorExists= function (promotor) {
 		var promotorExists= promotors.filter(function (item) {
@@ -67,6 +75,7 @@ angular.module('OGTicketsApp.services')
     }
 
 	return{
+        promotorsPendingCheck:promotorsPendingCheck,
 		promotorRegister:promotorRegister,
         promotorRequest:promotorRequest
 	};
