@@ -36,6 +36,7 @@ angular.module('OGTicketsApp.services')
     };
 
 	return{
+        eventTypes:eventTypes,
 		eventTypeRegister:eventTypeRegister
 	};
 

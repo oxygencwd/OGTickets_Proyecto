@@ -142,6 +142,7 @@ angular.module('OGTicketsApp.services')
         getEventType:getEventType,
         prueba:prueba,
         registerEvent:registerEvent,
+        eventsList:eventsList,
         replaceEvent:replaceEvent
 	};
 }]);//end -service-
