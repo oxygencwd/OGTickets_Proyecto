@@ -4,12 +4,12 @@
 		<div class="row"> <!-- container de seccion -->
 			<div class="event-type">
 				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-8 event-type-img">
+					<div class="heroSection row">
+						<div class=" col-xs-12 col-sm-6 col-sm-offset-2 heroImage">
 							<img src="images/event-default-images/imagen5.jpg" class="img-responsive center-block" alt="">
 						</div>
-						<div class="col-sm-4 event-type-name">
-							<h2 class="text-middle">Música</h2>
+						<div class="col-xs-12 col-sm-2 event-type-name">
+							<h2 class="text-middle">{{currentEventType.name}}</h2>
 						</div>
 					</div>
 
@@ -22,13 +22,13 @@
 
 <div class="container-fluid"> <!-- container-fluid event-type-section -->
 	<div class="container">
-		<div class="row"> <!-- container de seccion -->
+		<div class="row eventTypeDescriptionRow"> <!-- container de seccion -->
 			<div class="text-center event-type-description">
-				<div class="col-sm-8 c-left">
-					<p>Conciertos, eventos musicales, festivales musicales, entre otros</p>
+				<div class=" col-xs-12 col-sm-5 col-sm-offset-2 c-left">
+					<p>{{currentEventType.description}}</p>
 				</div>
-				<div class="col-sm-4 c-rigth">
-					<a href="#/" class="btn btn-warning center-block">Eventos de esta categoría</a>
+				<div class="col-xs-12 col-sm-3 c-rigth">
+					<a ng-href="#/category/{{currentEventType.id}}" class="btn btn-warning center-block">Eventos de esta categoría</a>
 				</div>
 			</div><!-- event-type -->
 		</div> <!-- row que envuelve toda la sección-->

@@ -2,7 +2,8 @@
 <div class="container-fluid registrationView">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-1">
-			<h2>Registro de evento</h2>
+			<h2 ng-hide="editing">Registro de evento</h2>
+			<h2 ng-show="editing">Editar de evento</h2>
 		</div>
 	</div>
 	<div class="row">
@@ -12,9 +13,19 @@
 					<div class="form-group">
 		                <div class="col-sm-4">
 			                <label for="selectedType">Tipo de evento:</label>
-								 <select name="selectedType" ng-model="data.selectedType" ng-model-options="{ updateOn:'blur'}">
-								  <option ng-repeat="option in eventTypes" value="{{option.value}}">{{option.name}}</option>
-								</select>
+							<select name="selectedType" id="selectedType" ng-model="newEvent.eventType" ng-model-options="{ updateOn:'blur'}" required>
+								<option value="">-Tipo Evento-</option>
+								  <option ng-repeat="option in eventTypes" value="{{option.id}}">{{option.name}}</option>
+							</select>
+							<sub ng-show="eventRegistrationForm.selectedType.$invalid && eventRegistrationForm.selectedType.$touched">Tipo de evento requerido</sub>
+		                </div>
+		                <div class="col-sm-4">
+			                <label for="selectedSite">Elegir sitio:</label>
+							<select name="selectedSite" id="selectedSite" ng-model="newEvent.siteId" ng-model-options="{ updateOn:'blur'}" required>
+								<option value="">-Elegir Sitio-</option>
+								  <option ng-repeat="site in sites" value="{{site.id}}">{{site.name}}</option>
+							</select>
+							<sub ng-show="eventRegistrationForm.selectedSite.$invalid && eventRegistrationForm.selectedSite.$touched">Elegir sitio requerido</sub>
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -22,8 +33,8 @@
 	            	<div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="eventName">Nombre del evento*</label>
-		            		<input type="text" class="form-control" id="eventName" ng-model="singleEvent.name"  ng-model-options="{ updateOn:'blur'}" required>
-		            		<sub ng-show="eventRegistrationForm.eventName.$invalid && eventRegistrationForm.eventName.$touched" >Nombre inválido</sub>
+		            		<input type="text" class="form-control" name="eventName" id="eventName" ng-model="newEvent.name"  ng-model-options="{ updateOn:'blur'}" required>
+		            		<sub ng-show="eventRegistrationForm.eventName.$invalid && eventRegistrationForm.eventName.$touched">Nombre requerido</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 	            </div>
@@ -31,9 +42,9 @@
 	            <div class="col-sm-10 col-sm-offset-1">
 	            	<div class="form-group">
 		            	<div class="col-sm-6">
-		            		<label for="eventDescription">Descripción*</label>
-		            		<input type="text" class="form-control" id="description" ng-model="singleEvent.description"  ng-model-options="{ updateOn:'blur'}" required>
-		            		<sub ng-show="eventRegistrationForm.eventDescription.$invalid && eventRegistrationForm.eventDescription.$touched" >Descripción inválido</sub>
+		            		<label for="description">Descripción*</label>
+		            		<textarea class="form-control" name="description" id="description" ng-model="newEvent.description"  ng-model-options="{ updateOn:'blur'}" required></textarea>
+		            		<sub ng-show="eventRegistrationForm.description.$invalid && eventRegistrationForm.description.$touched">Descripción requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 	            </div>
@@ -41,49 +52,52 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="eventDate">Fecha del evento*</label>
-		            		<input type="date" class="form-control" id="eventDate" ng-model="singleEvent.date" ng-model-options="{ updateOn:'blur'}" required>
-		            		<sub ng-show="eventRegistrationForm.eventDate.$invalid && eventRegistrationForm.eventDate.$touched" >Fecha inválida</sub>
+		            		<input type="date" class="form-control" name="eventDate" id="eventDate" ng-model="newEvent.date" ng-model-options="{ updateOn:'blur'}" required>
+		            		<sub ng-show="eventRegistrationForm.eventDate.$invalid && eventRegistrationForm.eventDate.$touched">Fecha del evento requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
-		            		<label for="eventStartHour">Hora de inicio*</label>
-		            		<input type="text" class="form-control" id="startHour" ng-model="singleEvent.eventStartHour" ng-model-options="{ updateOn:'blur'}" required>
-		            		<sub ng-show="eventRegistrationForm.eventStartHour.$invalid && eventRegistrationForm.eventStartHour.$touched" >Hora de inicio inválido</sub>
+		            		<label for="startHour">Hora de inicio*</label>
+		            		<input type="text" class="form-control" name="startHour" id="startHour" ng-model="newEvent.startHour" ng-model-options="{ updateOn:'blur'}" required>
+		            		<sub ng-show="eventRegistrationForm.startHour.$invalid && eventRegistrationForm.startHour.$touched">Hora de inicio requerida</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
-		            		<label for="eventEndHour">Hora de finalización*</label>
-		            		<input type="text" class="form-control" id="endHour" ng-model="singleEvent.eventEndHour" ng-model-options="{ updateOn:'blur'}" required>
-		            		<sub ng-show="eventRegistrationForm.eventEndHour.$invalid && eventRegistrationForm.eventEndHour.$touched" >Hora de finalizacion inválida</sub>
+		            		<label for="endHour">Hora de finalización*</label>
+		            		<input type="text" class="form-control" name="endHour" id="endHour" ng-model="newEvent.endHour" ng-model-options="{ updateOn:'blur'}" required>
+		            		<sub ng-show="eventRegistrationForm.endHour.$invalid && eventRegistrationForm.endHour.$touched">Hora de finalización requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
-		            		<label for="ticketsCost">Costo de entradas*</label>
-		            		<input type="number" class="form-control" id="ticketsCost" ng-model="singleEvent.ticketsPrice" ng-model-options="{ updateOn:'blur'}" required>
-		            		<sub ng-show="eventRegistrationForm.ticketsCost.$invalid && eventRegistrationForm.ticketsCost.$touched" >Costo inválido</sub>
+		            		<label for="ticketsPrice">Costo de entradas*</label>
+		            		<input type="number" class="form-control" name="ticketsPrice" id="ticketsPrice" ng-model="newEvent.ticketsPrice" ng-model-options="{ updateOn:'blur'}" required>
+		            		<sub ng-show="eventRegistrationForm.ticketsPrice.$invalid && eventRegistrationForm.ticketsPrice.$touched">Costo de entrada requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group col-sm-6">
 		            	<label>Subir fotografía</label>
-		            	<input type="file">
+		            	<input type="file" ng-model="newEvent.image">
 		            	<sub>Max 2mb</sub>
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
+		            <h3 class="error text-center">{{error}}</h3>
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Crear evento">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Crear evento" ng-disabled="eventRegistrationForm.$invalid" ng-hide="editing">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Editar evento" ng-disabled="eventRegistrationForm.$invalid" ng-show="editing" ng-click="editEvent()">
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
-		        
 			</form>
 		</div>
 	</div>

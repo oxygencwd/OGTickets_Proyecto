@@ -55,10 +55,10 @@
             })
             .when('/event-profile-edit/:eventId', {
                 templateUrl: 'html/eventRegistrationForm.html',
-                controller: 'eventProfileController',
+                controller: 'eventRegistrationController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
-                }
+                } 
                 //Edición de un evento. Permisos: admin, promotor propietario del evento
             })
             .when('/event-registration', {
@@ -95,7 +95,7 @@
             })
             .when('/client-profile-edit/:clientId', {
                 templateUrl: 'html/clientSignupForm.html',
-                controller: 'clientProfileController',
+                controller: 'clientSignupController',
                 data: {
                     authorized: [ROLES.CLIENT.ROL]
                 }
@@ -105,7 +105,7 @@
                 templateUrl: 'html/clientSignupForm.html',
                 controller: 'clientSignupController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL, ROLES.CASHIER.ROL, ROLES.GUEST.ROL]
+                    authorized: [ROLES.ADMIN.ROL, ROLES.GUEST.ROL]
                 }
                 //registro de un usuario nuevo se cae siempre al formulario de registro de cliente y de ahi se escigen las opciones, segun la opcion que se seleccione se redirira a los formularios de promotor o de cajero
             })
@@ -119,19 +119,27 @@
             })
             .when('/promoter-profile-edit/:promoterId', {
                 templateUrl: 'html/promotorSignupForm.html',
-                controller: 'promoterProfileController',
+                controller: 'promotorSignupController',
                 data: {
                     authorized: [ROLES.PROMOTER.ROL]
                 }
                 //editar perfil de un promotor. Permisos: promotor propietario de la cuenta.
             })
-            .when('/promotor-signup', {
+            .when('/promotor-signup/:requestId', {
                 templateUrl: 'html/promotorSignupForm.html',
                 controller: 'promotorSignupController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                    authorized: [ROLES.ADMIN.ROL]
                 }
-                //registro de Cajeros y Promotores. Permisos: Admin
+                //Revisar/(aceptar-denegar) solicitud de registro de promotr. Admin
+            })
+            .when('/promotor-signup-request', {
+                templateUrl: 'html/promotorSignupForm.html',
+                controller: 'promotorSignupController',
+                data: {
+                    authorized: [ROLES.GUEST.ROL]
+                }
+                //solicitar registro como promotor.
             })
             .when('/cashier-signup', {
                 templateUrl: 'html/cashierSignupForm.html',
@@ -175,7 +183,7 @@
             })
             .when('/site-profile-edit/:siteId', {
                 templateUrl: 'html/siteRegistrationForm.html',
-                controller: 'siteProfileController',
+                controller: 'siteRegistrationController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
                 }
@@ -207,7 +215,7 @@
             })
             .when('/event-type-profile-edit/:eventTypeId', {
                 templateUrl: 'html/eventTypeRegistrationForm.html',
-                controller: 'eventTypeController',
+                controller: 'eventTypeRegistrationController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
                 }
@@ -243,7 +251,6 @@
     .run(['$rootScope', '$location', 'userService', 'ROLES', function($rootScope, $location, userService, ROLES) {
             $rootScope.$on('$routeChangeStart', function(event, next, current) {
             //buscar si hay usuario loggeado, devuelve falso si no hay usuario loggedo o el objeto usuario si lo hay.
-           
             var user= userService.getLoggedUser();
             //definir el tipo de usuario
             var userType;
@@ -268,7 +275,6 @@
             if(index==-1){
                 $location.path('/home');
             }
-
         })
     }]);
 
@@ -277,4 +283,3 @@ angular.module('OGTicketsApp.controllers', []);
 angular.module('OGTicketsApp.services', []);
 angular.module('OGTicketsApp.filters', []);
 angular.module('OGTicketsApp.directives', []);
-

@@ -197,6 +197,21 @@ header span.user-icon{
 	width: 100%;
 }
 
+/*Listas genericas*/
+.genListTitle{
+	width: 40%;
+	margin: 0 auto;
+}
+
+.glyphicon-ok-circle{
+	color: #2eb82e;
+}
+
+.glyphicon-remove-circle{
+	color: #cc0000;
+}
+/*Fin de listas genericas*/
+
 
 .main-search .btn-absolute, .user-list .btn-absolute, .gen-list .btn-absolute, .promoter-events-search button{
 	position: absolute;
@@ -236,10 +251,16 @@ header span.user-icon{
 	padding-top: 7px;
 	padding-bottom: 7px;
 	border: none;
+	margin-bottom: 1em;
 }
 
 .upcoming-events .buy-button:hover{
 	color: #000;
+}
+
+.siteAmountForm input{
+	padding: .6em;
+	margin-bottom: 1.3em;
 }
 
 
@@ -263,17 +284,29 @@ header span.user-icon{
 	left: 30px;
 }
 
-.allEventsDisplay button a{
+.allEventsDisplay button a, .upcoming-events button a{
 	text-decoration: none;
 	color: #fff;
 }
 
-.allEventsDisplay button a:hover{
+.allEventsDisplay button a:hover, .upcoming-events button a:hover{
 	color:#000;
 }
 
 .allEventsDisplay button{
 	margin-bottom: 1em;
+}
+
+.upcoming-events h4{
+	margin-left: 2%;
+}
+
+.container-categories h4{
+	margin-bottom: 14em;
+}
+
+.container-categories .type-title{
+	/*margin-bottom: 25px;*/
 }
 
 .display-none{
@@ -292,6 +325,7 @@ header span.user-icon{
 
 .today-events-container{
 	margin-bottom: 90px;
+	margin-top: 40px;
 }
 
 .display-inline{
@@ -351,6 +385,13 @@ header span.user-icon{
 	color: #e77e23;
 }
 
+.signUpView h1{
+	margin: 1em 0;
+}
+
+.signUpView .input-group{
+	margin-top:2.6em;
+}
 
 /*forms*/
 .signUpView, .registrationView{
@@ -372,6 +413,18 @@ display: block;
 	margin-bottom: 50px;
 }
 
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button, input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] , input[type=date] {
+    -moz-appearance:textfield;
+}
+
+textarea{
+	resize: none;
+}
 
 /*********user list******/
 .user-list-container, .gen-list-container, .redeem-tickets-container, .event-type-container{
@@ -535,6 +588,10 @@ label{
 	margin-bottom: 30px;
 }
 
+.upcoming-events-item.searchRow{
+	margin-bottom: 2em;
+}
+
 .client-profile h2{
 	margin-top: 2.8em;
 	margin-bottom: 30px;
@@ -656,11 +713,11 @@ label{
 	width: 90%;
 }
 .eventMembersPriceText h4,p{
-	padding: 14px;
+	padding: 10px;
 }
 .eventBtnComprar{
 	width: 80%;
-	height: 370px;
+	margin-bottom: 4em;
 }
 .eventBtnComprar div {
 	margin-top: 150px;
@@ -715,25 +772,26 @@ label{
 
 }
 
-.event-type-img img{
-	height: 28em;  
-	max-width:100%;
+.heroSection{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	margin-bottom: 3em;
 }
 
 .event-type-name{
+	position: relative;
 	background-color: #fb1b3f;
-	height: 28em;
-	margin-bottom: 4em;
 }
 
-.event-type h2{
-	color:#fff;
+.event-type-name h2{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+
 }
 
-.text-middle{
-  position: absolute;
-  top: 40%;
-  left: 20%;
+.eventTypeDescriptionRow{
+	margin-bottom: 3em;
 }
 
 .event-type-description{
@@ -764,6 +822,7 @@ label{
 	border-radius: 0;*/
 }
 
+
 /*Site Profile*/
 
 .siteProfile{
@@ -779,6 +838,8 @@ label{
 
 .heroImage{
 	padding-right: 0;
+	background-color: #000;
+	padding: 0;
 }
 
 .atAGlanceBox{
@@ -804,15 +865,15 @@ google-map{
 
 
 /*validaciones*/
-input.ng-invalid.ng-dirty, select.ng-invalid.ng-dirty{
+input.ng-invalid.ng-dirty, textarea.ng-invalid.ng-dirty,, select.ng-invalid.ng-dirty{
 	border: 1px solid #fa787e;
 }
 
-input.ng-valid.ng-dirty, select.ng-valid.ng-dirty{
+input.ng-valid.ng-dirty, select.ng-valid.ng-dirty, textarea.ng-valid.ng-dirty{
 	border: 1px solid #78fa89;
 }
 
-input.ng-invalid.ng-touched.ng-invalid-required, select.ng-invalid.ng-touched.ng-invalid-required{
+input.ng-invalid.ng-touched.ng-invalid-required, select.ng-invalid.ng-touched.ng-invalid-required, textarea.ng-invalid.ng-touched.ng-invalid-required{
 	border: 1px solid #fa787e;
 }
 
@@ -824,14 +885,55 @@ form sub, .error{
 
 /*Admin*/
 .adminView{
-	margin-top: 5em;
+	padding-top: 8em;
+	padding-bottom: 4em;
+	background-color: #e6e6e6;
 }
 
+.adminView hr{
+ 	height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    margin-top: 2em;
+}
+
+.adminView hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+ }
+
 .adminView a{
+	width: 38%;
+	margin: 0 auto;
 	text-decoration: none;
 	padding: 0.5em 2%;
 	font-size: 1em;
-	background-color: #d9d9d9;
+	background-color: #a6a6a6;
+	color: white;
+	display: block;
+	margin-bottom: 1.5em;
+	font-weight: bold;
+	border:2px solid;
+	border-color: #f2f2f2 #666 #666 #f2f2f2;
+}
+
+.adminView a:hover{
+	background-color: #808080;
+	color: white;
+	border-color: #666 #f2f2f2 #f2f2f2 #666;
+}
+
+.adminView .text-center{
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 /*End Admin*/
 
@@ -847,6 +949,407 @@ form sub, .error{
 }
 
 /*Ends Payment Form*/
+
+
+/*site-maps*/
+.seat-container p{
+	color: #fff;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.absolute{
+	position: absolute;
+}
+
+.middle{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*PALACIO DE LOS DEPORTES*/
+.palacio .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.palacio .este{
+	width: 20%;
+	height:24em;
+	background-color: #2d65cb;
+	left: 0;
+	top:0;
+}
+
+.palacio .tarima{
+	width: 40%;
+	height:7em;
+	background-color: #404040;
+	left: 30%;
+	top: 1em;
+}
+
+.palacio .preferencial{
+	width: 50%;
+	height:14em;
+	background-color: #ed1b24;
+	left: 25%;
+	top: 10em;
+	
+}
+.palacio .oeste{
+	width: 20%;
+	height:24em;
+	background-color: #009864;
+	left: 80%;
+	top: 0;
+}
+.palacio .norte{
+	width: 100%;
+	height:6em;
+	background-color: #f75216;
+	top: 25em;
+}
+
+/*AUDITORIO NACIONAL*/
+
+.auditorio .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.auditorio .tarima{
+	width: 100%;
+	height:5em;
+	background-color: #404040;
+	top: 0em;
+	border-radius: 0 0 40% 40%;
+}
+
+.auditorio .vip{
+	width: 70%;
+	height:4em;
+	background-color: #ed1b24;
+	left: 16%;
+	top: 5.5em;
+	
+}
+
+.auditorio .butacas{
+	width: 80%;
+	height:14em;
+	background-color: #983298;
+	left: 10%;
+	top:10em;
+}
+
+.auditorio .galeria{
+	width: 100%;
+	height:6.5em;
+	background-color: #2d65cb;
+	top: 24.5em;
+}
+
+
+/*fin auditorio nacional*/
+
+/*TEATRO NACIONAL*/
+
+.teatro .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.teatro .tarima{
+	width: 25%;
+	height:3.5em;
+	background-color: #404040;
+	top: 0em;
+	border-radius: 0 0 40% 40%;
+	left: 37.5%;
+}
+
+.teatro .luneta{
+	width: 25%;
+	height:6em;
+	background-color: #ed1b24;
+	left: 37.5%;
+	top: 5em;
+	
+}
+
+.teatro .palco1, .teatro .palco2, .teatro .palco3{
+	background-color: #2d65cb;
+}
+
+.teatro .palco1, .teatro .palco2{
+	width: 9%;
+	height:12em;
+}
+
+.teatro .palco1{
+	left: 27%;
+	top:4.5em;
+}
+
+.teatro .palco2{
+	left: 64%;
+	top:4.5em;
+}
+
+.teatro .palco3{
+	width: 25%;
+	height:4.5em;
+	left: 37.5%;
+	top:12em;
+}
+
+/*palco fin **/
+.teatro .butacas1, .teatro .butacas2, .teatro .butacas3{
+	background-color: #983298;
+}
+
+.teatro .butacas1, .teatro .butacas2{
+	width: 11%;
+	height:20em;
+}
+
+.teatro .butacas1{
+	left: 14.5%;
+	top:2.5em;
+}
+
+.teatro .butacas2{
+	left: 74.5%;
+	top:2.5em;
+}
+
+.teatro .butacas3{
+	width: 46%;
+	height:5.5em;
+	left: 27%;
+	top:17em;
+}
+/*butacas fin*/
+/*galeria*/
+
+.teatro .galeria1, .teatro .galeria2, .teatro .galeria3{
+	background-color: #009864;
+}
+
+.teatro .galeria1, .teatro .galeria2{
+	width: 13%;
+	height:30em;
+}
+
+.teatro .galeria1{
+	left: 0%;
+	top:0.5em;
+}
+
+.teatro .galeria2{
+	left: 87.5%;
+	top:0.5em;
+}
+
+.teatro .galeria3{
+	width: 71%;
+	height:7.5em;
+	left: 14.5%;
+	top:23em;
+}
+/*fin teatro nacional*/
+
+/*ESTADIO NACIONAL*/
+
+.estadio .seat-container{
+	margin-bottom: 7em;
+	height: 32em;
+	position: relative;
+}
+
+.estadio .cancha{
+	width: 25%;
+	height:6em;
+	background-color: #19a416;
+	left: 37.5%;
+	top: 12.9em;
+}
+
+.estadio .platea1, .estadio .platea2, .estadio .platea3, .estadio .platea4{
+	background-color: #ed1b24;
+}
+
+.estadio .platea1, .estadio .platea2{
+	width: 40%;
+	height: 3em;
+}
+
+.estadio .platea3, .estadio .platea4{
+	width: 7%;
+	height:6em;
+}
+
+.estadio .platea1{
+	left: 30%;
+	top: 9.5em;
+}
+
+.estadio .platea2{
+	left: 30%;
+	top:19.4em;
+}
+
+.estadio .platea3{
+	left: 30%;
+	top:12.9em;
+}
+
+.estadio .platea4{
+	left: 63%;
+	top:12.9em;
+}
+/*platea fin **/
+/*estadio palco*/
+.estadio .palco1, .estadio .palco2, .estadio .palco3, .estadio .palco4{
+	background-color: #f75216;   
+}
+
+.estadio .palco1, .estadio .palco2{
+	width: 60%;
+	height: 4em;
+	left: 20%;
+}
+
+.estadio .palco3, .estadio .palco4{
+	width: 9%;
+	height:13em;
+	top:9.5em;
+}
+
+.estadio .palco1{
+	top: 5.2em;
+}
+
+.estadio .palco2{
+	top:22.8em;
+}
+
+.estadio .palco3{
+	left: 20%;
+}
+
+.estadio .palco4{
+	left: 71%;
+}
+/*fin estadio palco*/
+
+/*estadio graderia*/
+.estadio .graderia1, .estadio .graderia2, .estadio .graderia3, .estadio .graderia4{
+	background-color: #2d65cb;
+}
+
+.estadio .graderia1, .estadio .graderia2{
+	width: 100%;
+	height: 5em;
+	left: 0;
+}
+
+.estadio .graderia3, .estadio .graderia4{
+	width: 19.3%;
+	height:21.5em;
+	top:5.2em;
+}
+
+.estadio .graderia1{
+	top: 0em;
+}
+
+.estadio .graderia2{
+	top:27em;
+}
+
+.estadio .graderia3{
+	left: 0%;
+}
+
+.estadio .graderia4{
+	left: 80.7%;
+}
+/*fin estadio graderia*/
+
+
+.p1{
+	height: 300px;
+	background-color: red;
+}
+
+/* EVENTS ARI*/
+
+.eventDetails{
+	background-color: #3598dc;
+	padding:1.5em 2%;
+	color: white;
+}
+
+.sectionRow{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	margin-top: 1.5em;
+	margin-bottom: 3em;
+}
+
+.purchaseBtnCol{
+	position: relative;
+}
+
+.purchaseBtnCol div{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	padding: 0.25em 2%;
+	background-color: #e77e23;
+}
+
+.purchaseBtnCol a{
+	color: white;
+}
+
+.paymentDetailsRow{
+	margin-bottom: 3em;
+}
+
+.btn-warning.back-button{
+	background-color: #e77e23;
+	border: none;
+	border-radius: 0;
+}
+
+.btn-warning.back-button:hover{
+	color: #000;
+}
+
+.btn-danger.btn-clear{
+	background-color: #fb1b3f;
+	border:none;
+	border-radius: 0;	
+}
+
+.btn-primary.btn-show{
+	background-color: #3598dc;
+	border: none;
+	border-radius: 0;
+}
+
+.btn-primary.btn-show:hover, .btn-danger.btn-clear:hover{
+	color: #000;
+}
+
 
 /*********************************************************************
 **************************MEDIA QUERYS********************************
@@ -896,14 +1399,6 @@ form sub, .error{
 
 	.client-profile .event-details-btn{
 		width: 65%;
-	}
-
-	.event-type-img img{
-		height: 25em;
-	}
-
-	.event-type-name{
-		height: 25em;
 	}
 
 
@@ -986,14 +1481,6 @@ form sub, .error{
 	}
 
 
-	.event-type-name{
-		height: 11em;
-	}
-
-	.event-type-img img{
-		height: 22.5em;
-	}
-
 
 	.event-type-description .btn-warning{
 		width: 100%;
@@ -1006,13 +1493,20 @@ form sub, .error{
 	}
 
 /*Site Profile*/
+	.purchaseBtnCol{
+		margin-top: 3em;
+	}
 
-	.heroBanner{
+	.purchaseBtnCol div{
+		margin: 0 auto;
+	}
+
+	.heroBanner, .sectionRow{
 		display: block;
 	}
 
 	.atAGlanceBox{
-		height: 10em;
+		height: 12em;
 	}
 
 	.atAGlanceBox p:first-of-type {
@@ -1024,6 +1518,7 @@ form sub, .error{
 		max-height: 25em;
 		overflow: hidden;
 		padding-left: 0;
+		background-color: #000;
 	}
 
 /*Ends Site Profile*/
@@ -1137,9 +1632,6 @@ form sub, .error{
 		left: 14%;
 	}
 
-	.event-type-img img{
-		height: 13em;
-	}
 }
 
 

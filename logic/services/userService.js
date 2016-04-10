@@ -71,7 +71,7 @@ angular.module('OGTicketsApp.services')
 		};
 	};
 
-	//devuelve el usuario loggeado desde la cookie almacenada.
+	//devuelve el usuario loggeado desde la cookie almacenada. Devuelve solo el id, el userType y el nombre.
 	var getLoggedUser= function () {
 		var cUser= $cookieStore.get('loggedUser');
 		if(cUser){
@@ -80,7 +80,7 @@ angular.module('OGTicketsApp.services')
 			return false;
 		};
 	};
-
+	
 
 		
 //puntos de acceso de los metodos del servicio:

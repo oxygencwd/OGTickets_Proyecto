@@ -45,9 +45,12 @@
 
 		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut04'" ng-href="#/redeem-tickets"><span class="user-icon glyphicon glyphicon-tasks"></span>Redimir tiquetes</a></li>
 
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut03'" ng-href="#/event-registration"><span class="user-icon glyphicon glyphicon-tasks"></span>Registar Eventos</a></li>	
+
 
 		                <li><a ng-href="#/all-events">Eventos</a></li>
-		                <li><a data-toggle="modal" href="#loginModal" ng-hide="appLoggedUser.isConnected">Ingresar</a></li>
+		                <li><a data-toggle="modal" ng-click="openModal()" ng-hide="appLoggedUser.isConnected">Ingresar</a></li>
+
 		                <li><a ng-href="#/user-signup" ng-hide="appLoggedUser.isConnected">Registrarse</a></li>
 		                <li><a ng-click="logout()" ng-show="appLoggedUser.isConnected">Salir</a></li>
 		              </ul>
@@ -157,24 +160,33 @@
 
     <!-- Directives -->
     <script src="logic/directives/compareTo.js"></script>
+    <script src="logic/directives/directivePassword.js"></script>
     <script src="logic/directives/creditCardType.js"></script>
     <script src="logic/directives/cardExpiration.js"></script>
+    <script src="logic/directives/ogAuditorio.js"></script>
+    <script src="logic/directives/ogEstadio.js"></script>
+    <script src="logic/directives/ogPalacio.js"></script>
+    <script src="logic/directives/ogTeatro.js"></script>
+
     <!-- Filters -->
     <script src="logic/filters/range.js"></script>
+    <script src="logic/filters/telephone.js"></script>
+
     <!-- Services -->
     <script src="logic/services/localStorageService.js"></script>
     <script src="logic/services/BDService.js"></script>
     <script src="logic/services/eventService.js"></script>
-    <script src="logic/services/idService.js"></script>
     <script src="logic/services/siteService.js"></script>
     <script src="logic/services/transactionService.js"></script>
     <script src="logic/services/userService.js"></script>
     <script src="logic/services/validateService.js"></script>
-    <script src="logic/services/formService.js"></script>
-
-    
-
-    
+    <script src="logic/services/formService.js"></script>  
+    <script src="logic/services/clientService.js"></script>  
+    <script src="logic/services/promotorService.js"></script>  
+    <script src="logic/services/cashierService.js"></script>  
+    <script src="logic/services/eventTypeService.js"></script>
+    <script src="logic/services/seatsService.js"></script> 
+     
     <!-- php -->
 </body>
 </html>
