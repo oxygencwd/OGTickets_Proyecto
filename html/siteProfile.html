@@ -8,17 +8,17 @@
 		</div>
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
-				<h3>Teatro Nacional</h3>
-				<p>Avenida Segunda entre Calles 3 y 5, Centro, San José, Costa Rica</p>
-				<p>Teléfono: 2010-1110</p>
+				<h3>{{currentSite.name}}</h3>
+				<p>{{currentSite.address}}</p>
+				<p>Teléfono(s): {{currentSite.phoneOne}} {{currentSite.phoneTwo}}</p>
 			</div>
 		</div>
 	</div>
 	<section class="mapSection row">
 		<div class="col-sm-6 col-sm-offset-2 col-xs-12">
 			<h3>¿Cómo llegar?</h3>
-			<google-map latitude="9.999036" longitude="-84.122182" zoom=17>
-                <google-map-marker latitude= "9.999036" longitude= "-84.122182" title="Palacio de los deportes"></google-map-marker>
+			<google-map latitude="{{currentSite.latitude}}" longitude="{{currentSite.longitude}}" zoom=17>
+                <google-map-marker latitude= "{{currentSite.latitude}}" longitude= "{{currentSite.longitude}}" title="{{currentSite.name}}"></google-map-marker>
             </google-map>   
 		</div>
 	</section>
