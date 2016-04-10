@@ -50,13 +50,20 @@ angular.module('OGTicketsApp.services')
     };
    
 
-
+    //retrieves site with the id given in the param
+    var retrieveSite = function (sId){
+        result = sites.filter(function (item) {
+            return item.id == sId;
+        });
+        return result[0];
+    };
 
 
 // puntos de acceso
 	return{
         sites:sites,
 		registerSite:registerSite,
-        getEventSite:getEventSite
+        getEventSite:getEventSite,
+        retrieveSite:retrieveSite
 	};
 }]);
