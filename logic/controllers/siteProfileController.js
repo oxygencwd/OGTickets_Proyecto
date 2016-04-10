@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('siteProfileController', ['$scope', function ($scope) {
+.controller('siteProfileController', ['$scope', '$routeParams', 'siteService', function ($scope, $routeParams, siteService) {
 	
 
 
