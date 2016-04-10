@@ -6,7 +6,7 @@
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
 				<h3>{{currentEvent.name}}</h3>
-				<p>{{eventSiteName}}</p>
+				<a ng-href="#/site-profile/{{eventSiteId}}">{{eventSiteName}}</a>
 				<h4>{{site.name}}</h4>
 				<p>{{currentEvent.date | date}}</p>
 				<p>{{currentEvent.ticketsPrice | currency: '¢'}}</p>
