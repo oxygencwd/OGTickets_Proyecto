@@ -1,11 +1,33 @@
 angular.module('OGTicketsApp.services')
 .service('userService', ['localStorageService', '$cookieStore', function(localStorageService, $cookieStore) {
 
+	var users= localStorageService.getAll("userList");
+
+	//All users but admin
+	var allUsersButAdmin= function (){
+		result = users.filter(function (item) {
+            return item.userType !== 'ut01';
+        });
+        return result;
+	};
+
+	//RetrieveUser by id
+	var retrieveUser = function(userId){
+		var result= users.filter(function (item) {
+			return item.id== userId;
+			});
+			
+		return result[0];
+	};
+
+	var setUser = function(users){
+		localStorageService.set("userList", users);
+	}
+
 	/* login, logout, register, isLoggedIn, getCurrentUser*/
 	
 	//trae la lista de todos los usuarios del localStorage y verifica si el email registrado existe, si es asi devuelve el objeto con la informacion del usuario.
 	var accountExists= function (user) {
-		var users= localStorageService.getAll("userList");
 		var userExists= users.filter(function (item) {
 			return item.email== user.email;
 		});
@@ -89,7 +111,10 @@ angular.module('OGTicketsApp.services')
 		login:login,
 		logout:logout,
 		isLoggedIn:isLoggedIn,
-		getLoggedUser:getLoggedUser
+		getLoggedUser:getLoggedUser,
+		users:users,
+		allUsersButAdmin: allUsersButAdmin,
+		retrieveUser: retrieveUser
 	};
 }]);//end -service-
 
