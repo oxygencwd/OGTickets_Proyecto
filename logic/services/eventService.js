@@ -84,6 +84,7 @@ angular.module('OGTicketsApp.services')
         };
         var result= {}; // tienen que estar definidas las variables.
         result= $http.post(url, requestBody);
+        console.log(result);
         return result;
     };
 
