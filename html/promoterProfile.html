@@ -12,7 +12,7 @@
 						<div class="col-sm-10">
 							<div class="row">
 								<div class="col-lg-12">
-									<h2>Nombre del Promotor</h2>
+									<h2>{{promotor.name}}</h2>
 								</div>
 							</div>
 	
@@ -24,60 +24,69 @@
 									<div class="col-md-6">
 										<form name="" class="promoter-events-search">
 											<div class="form-group p-relative">
-											  <input type="search" class="form-control width80" placeholder="Buscar usuarios">
+											  <input type="search" ng-model="search" class="form-control width80" placeholder="Buscar eventos...">
 											  <button type="submit" class="btn-absolute"><span class="glyphicon  glyphicon-search"></span></button>
 											</div> 
 										</form>
 									</div>
 								</div>
 									<div class="row"><!-- body-row -->
-										<div class="col-md-6 promoter-event-item">
+
+										<div class="col-md-6 promoter-event-item" ng-show="search.length>0">
+											<div class="width90">
+												<h3>Búsqueda</h3>
+											</div>
+											<h4 class="width90" ng-show="(allUsers | filter:search).length == 0">Ningún resultado encontrado</h4>
 											<ul class="width90">
-												<li>
-													<a ng-href="#/"><img src="images/event-default-images/imagen6.jpg" class="img-responsive" alt=""></a>
+												<li ng-repeat="event in events() | filter:search | orderBy: 'date' track by $index">
+													<a ng-click="$parent.eventToDisplay = event;"><img ng-src="{{event.image}}" class="img-responsive" alt=""></a>
 													<div class="pei-info">
-														<h5>Nomre del evento</h5>
-														<h6>Fecha</h6>
+														<h5>{{event.name}}</h5>
+														<p>{{event.date | date}}</p>
 													</div>
-													<button class="btn btn-warning">Ver detalles</button>
+													<button ng-click="$parent.eventToDisplay = event;" class="btn btn-warning">Ver detalles</button>
 												</li>
-												<li>
-													<a ng-href="#/"><img src="images/event-default-images/imagen5.jpg" class="img-responsive" alt=""></a>
+											</ul>
+										</div>
+
+
+										<div class="col-md-6 promoter-event-item" ng-hide="search.length>0">
+											<ul class="width90">
+												<li ng-repeat="event in events() | orderBy: 'date' track by $index">
+													<a ng-click="$parent.eventToDisplay = event;"><img ng-src="{{event.image}}" class="img-responsive" alt=""></a>
 													<div class="pei-info">
-														<h5>Ejemplos de evento</h5>
-														<h6>Fecha</h6>
+														<h5>{{event.name}}</h5>
+														<p>{{event.date | date}}</p>
 													</div>
-													<button class="btn btn-warning">Ver detalles</button>
-												</li>
-												<li>
-													<a ng-href="#/"><img src="images/event-default-images/imagen4.jpg" class="img-responsive" alt=""></a>
-													<div class="pei-info">
-														<h5>Ejemplos de evento</h5>
-														<h6>Fecha</h6>
-													</div>
-													<button class="btn btn-warning">Ver detalles</button>
+													<button ng-click="$parent.eventToDisplay = event;" class="btn btn-warning">Ver detalles</button>
 												</li>
 
 											</ul>
 										</div>
 
 
+
+
+
+
+
+
 										<div class="col-md-6">
-											<div class="promoter-event-container width90">
+											<div ng-show="eventToDisplay" class="promoter-event-container width90">
 												<div class="user-item-info">
-													<h3>Nombre del evento</h3>
-													<p><a href="">Ver evento completo</a></p>
+													<h3>{{eventToDisplay.name}}</h3>
+													<p><a ng-href="#/event-profile/{{eventToDisplay.id}}">Ver evento completo <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 												</div>
 												<div class="user-item-info">
-													<p>Estadio Nacional: </p>
-													<p>Fecha: </p>
+													<p>{{eventToDisplay.siteId}}</p>
+													<p>{{eventToDisplay.date | date}}</p>
 												</div>
 												<div class="user-item-info">
-													<p>Capacidad total: 16 000 personas</p>
-													<p>Vendidos: 568 boletos</p>
-													<p>58,6% de la totalidad</p>
+													<p>Capacidad total: {{eventToDisplay.capacity}} personas</p>
+													<p>Vendidos: XXX</p>
+													<p>XXX% de la totalidad</p>
 												</div>
-												<button class="btn btn-danger center-block"><a href="#">Editar evento</a></button>
+												<button class="btn btn-danger center-block"><a ng-href="#/event-profile-edit/{{eventToDisplay.id}}">Editar evento</a></button>
 											</div>
 										</div> <!-- col-md-6 -->
 									</div><!-- body-row -->
