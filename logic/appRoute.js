@@ -105,7 +105,7 @@
                 templateUrl: 'html/clientSignupForm.html',
                 controller: 'clientSignupController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL, ROLES.CASHIER.ROL, ROLES.GUEST.ROL]
+                    authorized: [ROLES.ADMIN.ROL, ROLES.GUEST.ROL]
                 }
                 //registro de un usuario nuevo se cae siempre al formulario de registro de cliente y de ahi se escigen las opciones, segun la opcion que se seleccione se redirira a los formularios de promotor o de cajero
             })
@@ -131,7 +131,7 @@
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
                 }
-                //registro de Cajeros y Promotores. Permisos: Admin
+                //Revisar/(aceptar-denegar) solicitud de registro de promotr. Admin
             })
             .when('/promotor-signup-request', {
                 templateUrl: 'html/promotorSignupForm.html',
@@ -139,7 +139,7 @@
                 data: {
                     authorized: [ROLES.GUEST.ROL]
                 }
-                //registro de Cajeros y Promotores. Permisos: Admin
+                //solicitar registro como promotor.
             })
             .when('/cashier-signup', {
                 templateUrl: 'html/cashierSignupForm.html',
