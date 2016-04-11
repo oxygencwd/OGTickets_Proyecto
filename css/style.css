@@ -1414,6 +1414,10 @@ form sub, .error{
 
 /*Ends site profile*/
 
+.adminView a{
+	width: 50%;
+}
+
 }
 
 
@@ -1523,6 +1527,10 @@ form sub, .error{
 
 /*Ends Site Profile*/
 
+.adminView a{
+	width: 70%;
+}
+
 }
 
 @media (max-width: 600px){
@@ -1630,6 +1638,29 @@ form sub, .error{
 
 	.client-profile .upcoming-event-info{
 		left: 14%;
+	}
+
+	.adminView a{
+		width: 100%;
+		font-size: 0.9em;
+		font-weight: normal;
+	}
+
+	.adminView h1{
+		font-size: 2em;
+		text-align: center;
+	}
+
+	.adminView h2{
+		font-size: 1.5em;
+	}
+
+	.adminView h3{
+		font-size: 1em;
+	}
+
+	.adminView {
+		padding-top: 7em;
 	}
 
 }
