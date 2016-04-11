@@ -174,7 +174,8 @@
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Aceptar solicitud" ng-show="appLoggedUser.userType=='ut01'" ng-click="formNewPromotor.$valid && promotorRegister()"  ng-disabled="formNewPromotor.$invalid">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Enviar formulario" ng-click="formNewPromotor.$valid && sendRequest()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPromotor.$invalid">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Enviar formulario" ng-click="formNewPromotor.$valid && sendRequest()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPromotor.$invalid" ng-hide="editing">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Editar datos" ng-click="formNewPromotor.$valid && editPromotor()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPromotor.$invalid" ng-show="editing">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Rechazar solicitud" ng-click="formNewPromotor.$valid && dismissRequest()" ng-show="appLoggedUser.userType=='ut01'"  ng-disabled="formNewPromotor.$invalid">
 		                </div>
 		            </div> <!-- form group end -->

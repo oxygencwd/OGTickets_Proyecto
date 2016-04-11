@@ -836,6 +836,11 @@ label{
 	padding-top: 7em;
 }
 
+#editButton{
+	margin-top: 10px;
+	background-color: #006f6f;
+}
+
 .heroImage{
 	padding-right: 0;
 	background-color: #000;
@@ -852,6 +857,11 @@ label{
 	top: 50%;
 	transform: translate(0, -50%);
 	color: white;
+}
+
+.atAGlanceInfo a{
+	color: white;
+	text-decoration: none;
 }
 
 .mapSection{

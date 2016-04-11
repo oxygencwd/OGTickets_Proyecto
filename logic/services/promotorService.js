@@ -74,10 +74,35 @@ angular.module('OGTicketsApp.services')
         return result;
     }
 
+
+    var retrievePromotor = function (pId){
+        result = promotors.filter(function (item) {
+            return item.id == pId;
+        });
+        return result[0];
+    };
+
+    var replacePromotor= function(promotorId, newPromotor){
+        var newPromotorList= removeOldPromotor(promotorId);
+        newPromotorList.push(newPromotor);
+        localStorageService.set("userList", newPromotorList);
+    };   
+
+    var removeOldPromotor= function (promotorId){
+        userList = promotors.filter(function (item) {
+            return item.id !== promotorId;
+        });
+        return userList;
+    };
+
+
 	return{
         promotorsPendingCheck:promotorsPendingCheck,
 		promotorRegister:promotorRegister,
-        promotorRequest:promotorRequest
+        promotorRequest:promotorRequest,
+        retrievePromotor:retrievePromotor,
+        replacePromotor:replacePromotor,
+        removeOldPromotor:removeOldPromotor
 	};
 
 }]);

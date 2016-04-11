@@ -120,7 +120,6 @@ angular.module('OGTicketsApp.services')
 
     var replaceEvent= function(eventId, newEvent){
         var newEventList= removeOldEvent(eventId);
-        console.log(newEvent);
         newEventList.push(newEvent);
         localStorageService.set("eventsList", newEventList);
     };   
