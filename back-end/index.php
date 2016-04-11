@@ -42,12 +42,6 @@ $app->post(
     }
 );
 
-$app->get('/hello', function (Request $request, Response $response) {
-    $response->getBody()->write("Hello, bitcheeees");
-
-    return $response;
-});
-
 $app->get(
     '/user/logout',
     function ($request, $response) {

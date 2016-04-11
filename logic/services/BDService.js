@@ -19,7 +19,7 @@ angular.module('OGTicketsApp.services')
 /*cajeros*/
 		{ "name": "Juanita Hidalgo Rodríguez", "active": true, "password": "Hidalgo92", "id": "cs01", "gender": "Femenino", "email": "j.hidalgo.rodriguez@hotmail.com", "personalId": "183323434", "phone": "88120922", "birthday": "1991-10-21T06:00:00.000Z", "userType": "ut04" },
 
-		{ "name": "Josefina Duarte", "password": "Duarte7621", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "personalId": "103923221", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": "ut04" },
+		{ "name": "Josefina Duarte", "password": "Duarte", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "personalId": "103923221", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": "ut04" },
 
 		{ "name": "Carlos Ugalde", "password": "Ugalde2223", "active": true, "id": "cs03", "gender": "Masculino", "email": "carlosugalde_8732@hotmail.com", "personalId": "129321262", "phone": "73902476", "birthday": "1993-01-29T06:00:00.000Z", "userType": "ut04"},
 /*admin*/		
