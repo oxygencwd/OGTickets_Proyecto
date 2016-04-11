@@ -19,7 +19,7 @@
 					</div>
 					<div class="row"><!-- body-row -->
 
-						<div class="allUsers col-md-6" ng-show="!search.length>0">
+						<div class="allUsers col-md-6" ng-hide="search.length>0">
 							<ul class="width90">
 								<li ng-repeat="user in allUsers track by $index"><a ng-click=" $parent.userToDisplay = user;">{{user.name}}
 								<span ng-show="user.active" class="glyphicon glyphicon-ok-circle"></span><span ng-show="!user.active" class="glyphicon glyphicon-remove-circle"></span>
