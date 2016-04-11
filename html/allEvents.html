@@ -23,7 +23,7 @@
 					<h2></h2>
 				</div>
 			</div> <!-- row -->
-				<h4 ng-show="(eventsList).length == 0">No hay eventos en est categoría</h4>
+				<h4 ng-show="(eventsList).length == 0">No hay eventos en esta categoría</h4>
 				<h2 >{{categoryName}}</h2>
 				<div class="col-md-4 allEventsDisplay" ng-repeat="event in eventsList | orderBy: 'date' track by $index" ng-hide="search.length>0">
 					<div class="upcoming-events-item">
@@ -44,7 +44,7 @@
 		<div class="upcoming-events" ng-show="search.length>0">
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>Busqueda</h6>
+					<h2>Búsqueda</h2>
 				</div>
 			</div> <!-- row -->
 			<h4 ng-show="(eventsList | filter:search).length == 0">Ningún resultado encontrado</h4>
