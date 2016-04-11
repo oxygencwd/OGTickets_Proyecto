@@ -45,7 +45,6 @@ angular.module('OGTicketsApp.controllers')
 		$scope.editing= false;
 	}else{
 		$scope.editing= true;
-		
 	};
 
 	$scope.editPromotor=function(){
