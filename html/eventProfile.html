@@ -6,17 +6,16 @@
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
 				<h3>{{currentEvent.name}}</h3>
-				<a ng-href="#/site-profile/{{eventSiteId}}">{{eventSiteName}}</a>
+				<a ng-href="#/site-profile/{{eventSiteId}}">{{eventSiteName}} <span class="glyphicon glyphicon-eye-open"></span></a>
 				<h4>{{site.name}}</h4>
 				<p>{{currentEvent.date | date}}</p>
 				<p>{{currentEvent.ticketsPrice | currency: '¢'}}</p>
-
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<button type="button" class="btn btn-primary btn-show center-block width100" ng-show="appLoggedUser.userType=='ut01' || appLoggedUser.userType=='ut03' && isOwner" ng-click="editEvent()">Editar evento</button>
+			<button type="button" class="btn btn-primary btn-show center-block width100" ng-show="appLoggedUser.userType=='ut01' || appLoggedUser.userType=='ut03' && isOwner" id="editButton" ng-click="editEvent()">Editar evento</button>
 		</div>
 	</div><!-- row -button- -->
 </div>

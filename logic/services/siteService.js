@@ -5,6 +5,15 @@ angular.module('OGTicketsApp.services')
 
 	var siteId= localStorageService.setIdCounter("siteIdCounter", 4);
 
+    //lista de  todos sitios activos
+    var getSiteList= function () {
+        var allSites= sites;
+        result = allSites.filter(function (item) {
+            return item.active == true;
+        });
+        return result;
+    };
+
     //vefificar si el sitio existe
 	var siteExists= function (site) {
 		var siteExists= sites.filter(function (item) {
@@ -61,6 +70,7 @@ angular.module('OGTicketsApp.services')
 
 // puntos de acceso
 	return{
+        getSiteList:getSiteList,
         sites:sites,
 		registerSite:registerSite,
         getEventSite:getEventSite,

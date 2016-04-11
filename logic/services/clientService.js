@@ -37,7 +37,30 @@ angular.module('OGTicketsApp.services')
     	return result;
     };
 
+    var retrieveClient = function (cId){
+        result = clients.filter(function (item) {
+            return item.id == cId;
+        });
+        return result[0];
+    };
+
+    var replaceClient= function(clientId, newClient){
+        var newClientList= removeOldClient(clientId);
+        newClientList.push(newClient);
+        localStorageService.set("userList", newClientList);
+    };   
+
+    var removeOldClient= function (clientId){
+        userList = clients.filter(function (item) {
+            return item.id !== clientId;
+        });
+        return userList;
+    };
+
 	return{
-		clientRegister:clientRegister
+		clientRegister:clientRegister,
+        retrieveClient:retrieveClient,
+        replaceClient:replaceClient,
+        removeOldClient:removeOldClient
 	};
 }]);
