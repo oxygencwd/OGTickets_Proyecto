@@ -1,6 +1,6 @@
 angular.module('OGTicketsApp.controllers')
 .controller('promoterProfileController', ['$scope', '$routeParams', '$location', 'promotorService', 'siteService', function ($scope, $routeParams, $location, promotorService, siteService){
-	
+
 	var promoterId = $routeParams.promoterId;
 
 	//Envia al cliente al formulario de editar datos
@@ -11,7 +11,6 @@ angular.module('OGTicketsApp.controllers')
     $scope.promotor = promotorService.retrievePromotor(promoterId);
 
     var sites = siteService.sites;
-
 
     $scope.events = function(){
     	var events=promotorService.getPromotorEvents(promoterId);
@@ -27,7 +26,5 @@ angular.module('OGTicketsApp.controllers')
     };
 
     $scope.eventToDisplay = null; 
-
-    console.log($scope.events())
 
 }]); //end -controller-

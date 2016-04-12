@@ -11,7 +11,7 @@
 			<form name="formNewPromotor" novalidate>
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="form-group">
-						<div class="col-sm-4">
+						<div class="col-sm-4" ng-hide="editing">
 			                <label>Tipo de usuario:</label>
 			                <div class="dropdown">
 							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Promotor
@@ -27,8 +27,8 @@
 			                <label>Tipo de promotor:</label>
 		                    <select name="typePerson" id="typePerson" ng-model="newPromotor.typePerson" required>
 		                    	<option value="">-Tipo persona-</option>
-		                    	<option value="personaJuridica">Persona jurídica</option>
-		                    	<option value="personaFisica">Persona física</option>
+		                    	<option value="personaJuridica" ng-show="typePersonHide">Persona jurídica</option>
+		                    	<option value="personaFisica" ng-hide="typePersonHide">Persona física</option>
 		                    </select>
 		                    <sub ng-show="formNewPromotor.typePerson.$error.required && formNewPromotor.typePerson.$touched">Elegir el tipo de persona</sub>
 		                </div>
@@ -174,8 +174,8 @@
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Aceptar solicitud" ng-show="appLoggedUser.userType=='ut01'" ng-click="formNewPromotor.$valid && promotorRegister()"  ng-disabled="formNewPromotor.$invalid">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Enviar formulario" ng-click="formNewPromotor.$valid && sendRequest()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPromotor.$invalid" ng-hide="editing">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Editar datos" ng-click="formNewPromotor.$valid && editPromotor()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPromotor.$invalid" ng-show="editing">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Enviar formulario" ng-click="formNewPromotor.$valid && sendRequest()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPromotor.$invalid">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Editar datos" ng-click="formNewPromotor.$valid && editPromotor()" ng-disabled="formNewPromotor.$invalid" ng-show="editing">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Rechazar solicitud" ng-click="formNewPromotor.$valid && dismissRequest()" ng-show="appLoggedUser.userType=='ut01'"  ng-disabled="formNewPromotor.$invalid">
 		                </div>
 		            </div> <!-- form group end -->

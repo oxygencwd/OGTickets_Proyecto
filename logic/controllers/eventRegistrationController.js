@@ -27,15 +27,13 @@ angular.module('OGTicketsApp.controllers')
 	//edit the event.
 	var eventId= $routeParams.eventId;
 	var currentEvent= eventService.retrieveEvent(eventId);
-	currentEvent.date= new Date(currentEvent.date);
 	$scope.newEvent= currentEvent;
 	
-
 	if(eventId==undefined){
 		$scope.editing= false;
 	}else{
 		$scope.editing= true;
-		
+		currentEvent.date= new Date(currentEvent.date);		
 	};
 
 	$scope.editEvent=function(){

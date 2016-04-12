@@ -117,7 +117,7 @@
                 }
                 //perfil del promotor. Permisos: promotor propietario de la cuenta.
             })
-            .when('/promoter-profile-edit/:promoterId', {
+            .when('/promoter-profile-edit/:promotorId', {
                 templateUrl: 'html/promotorSignupForm.html',
                 controller: 'promotorSignupController',
                 data: {
@@ -177,7 +177,7 @@
                 templateUrl: 'html/siteProfile.html',
                 controller: 'siteProfileController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                    authorized:  [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL]
                 }
                 //Ver el perfil de un sitio. Permisos: Promotres, admin: Solo el admin tendrá disponible la opción de editar un sitio.
             })
