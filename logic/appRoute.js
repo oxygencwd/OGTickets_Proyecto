@@ -177,7 +177,7 @@
                 templateUrl: 'html/siteProfile.html',
                 controller: 'siteProfileController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                    authorized:  [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL]
                 }
                 //Ver el perfil de un sitio. Permisos: Promotres, admin: Solo el admin tendrá disponible la opción de editar un sitio.
             })
