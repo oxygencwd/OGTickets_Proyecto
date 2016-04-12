@@ -633,6 +633,7 @@ label{
 	padding: 0;
 	overflow: hidden;
 	position: relative;
+	margin-bottom: 0.5em;
 }
 
 .promoter-event-item li img{
@@ -649,9 +650,14 @@ label{
 
 .promoter-event-item .pei-info{
 	position: absolute;
-	bottom: 4em;
+	bottom: 3em;
 	left: 5%;
 	color:#fff;
+}
+
+.pei-info *, .upcoming-event-info *{
+	background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .5);
 }
 
 .promoter-event-container{
@@ -711,9 +717,7 @@ label{
 	color: #fff;
 	width: 90%;
 }
-.eventMembersPriceText h4,p{
-	padding: 10px;
-}
+
 .eventBtnComprar{
 	width: 80%;
 	margin-bottom: 4em;
