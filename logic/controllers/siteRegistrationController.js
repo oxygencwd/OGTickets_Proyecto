@@ -1,23 +1,42 @@
 angular.module('OGTicketsApp.controllers')
-.controller('siteRegistrationController', ['$scope','localStorageService','formService','siteService', '$window', function ($scope,localStorageService, formService, siteService, $window) {
+.controller('siteRegistrationController', ['$scope','localStorageService','formService','siteService', '$window','$routeParams', function ($scope,localStorageService, formService, siteService, $window,$routeParams) {
 
-	$scope.newEvent={};
+	$scope.newSite={};
 	$scope.error="";
 
 	//Funcion del boton de registro de evento, agarra todos los datos del formulario.
-	$scope.eventRegister=function () {
-		result= siteService.eventRegister($scope.newEvent);
-		var eventId;
+	$scope.registerSite=function () {
+		result= siteService.registerSite($scope.newSite);
+		var siteId;
 		if(result.value){
-			eventId= result.eventId;
-			$scope.newEvent={};
-			formService.clear($scope.eventRegistrationForm);
-			$window.location.href = ('#/site-profile/'+eventId);
+			siteId= result.siteId;
+			$scope.newSite={};
+			formService.clear($scope.formNewSite);
+			$window.location.href = ('#/site-profile/'+siteId);
 			$scope.error="";
 		}else{
 			$scope.error="El sitio ya existe";
 		}
 	}; 
+
+	//Editar sitio.
+	var siteId= $routeParams.siteId;
+	var currentSite= siteService.retrieveSite(siteId);
+	$scope.newSite= currentSite;
+	
+
+	if(siteId==undefined){
+		$scope.editing= false;
+	}else{
+		$scope.editing= true;
+	};
+
+	$scope.editSite=function(){
+		siteService.replaceSite(siteId, $scope.newSite);
+		$scope.newSite={};
+		formService.clear($scope.formNewSite);
+		$window.location.href = ('#/site-profile/'+siteId);
+	};
 
 	//Expresiones regulares, para validad campos de formulario
 	$scope.expCapacity = /^[\ |0-9]{1,5}$/;
