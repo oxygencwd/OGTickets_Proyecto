@@ -15,6 +15,11 @@
 		</div>
 	</div>
 	<section class="mapSection row">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<button type="button" class="btn btn-primary btn-show center-block width100" ng-show="appLoggedUser.userType=='ut01'" id="editButton" ng-click="editSite()">Editar sitio</button>
+			</div>
+		</div>
 		<div class="col-sm-6 col-sm-offset-2 col-xs-12">
 			<h3>¿Cómo llegar?</h3>
 			<google-map zoom=17>

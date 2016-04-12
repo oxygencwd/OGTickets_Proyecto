@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventTypeRegistrationController', ['$scope','localStorageService','formService','eventTypeService', '$location', function ($scope,localStorageService, formService, eventTypeService, $location) {
+.controller('eventTypeRegistrationController', ['$scope','localStorageService','formService','eventTypeService', '$location','$routeParams', function ($scope,localStorageService, formService, eventTypeService, $location,$routeParams) {
 
 	$scope.newEventType={};
 	$scope.error="";
@@ -18,4 +18,24 @@ angular.module('OGTicketsApp.controllers')
 			$scope.error="Ya existe un tipo de evento registrada con ese nombre";
 		}
 	}; 
+
+	//Editar cliente.
+	var eventTypeId= $routeParams.eventTypeId;
+	var currentEventType= eventTypeService.retrieveEventType(eventTypeId);
+	$scope.newEventType= currentEventType;
+	
+
+	if(eventTypeId==undefined){
+		$scope.editing= false;
+	}else{
+		$scope.editing= true;
+	};
+
+	$scope.editEventType=function(){
+		eventTypeService.replaceEventType(eventTypeId, $scope.newEventType);
+		$scope.newEventType={};
+		formService.clear($scope.formNewEventType);
+		$location.path('/event-type-profile/'+eventTypeId);
+	};
+
 }]); //end -controller-
