@@ -36,17 +36,32 @@ angular.module('OGTicketsApp.services')
     };
 
     //retrieves event type with the id given in the param
-    var retrieveEventType = function (eId){
+    var retrieveEventType = function (etId){
         result = eventTypes.filter(function (item) {
-            return item.id == eId;
+            return item.id == etId;
         });
         return result[0];
+    };
+
+    var replaceEventType= function(eventTypeId, newEventType){
+        var newEventTypeList= removeOldEventType(eventTypeId);
+        newEventTypeList.push(newEventType);
+        localStorageService.set("eventTypeList", newEventTypeList);
+    };   
+
+    var removeOldEventType= function (eventTypeId){
+        userList = eventTypes.filter(function (item) {
+            return item.id !== eventTypeId;
+        });
+        return userList;
     };
 
 	return{
         eventTypes:eventTypes,
 		eventTypeRegister:eventTypeRegister,
-        retrieveEventType:retrieveEventType
+        retrieveEventType:retrieveEventType,
+        replaceEventType:replaceEventType,
+        removeOldEventType:removeOldEventType
 	};
 
 }]);
