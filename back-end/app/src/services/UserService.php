@@ -39,7 +39,7 @@ class UserService {
                     // Si todo lo anterior tuvo éxito, iniciamos el query
                     // El query que vamos a ejecutar en la BD
                     // $query = "SELECT id, email, firstName FROM users WHERE email = :email AND password = :password LIMIT 1";
-                    $query = "SELECT idUsuario, PrimerNombre, PrimerApellido, TbTipoUsuario_idTipoUsuario FROM tbusuario WHERE email = :email AND Contrasenna = :password AND activo=1 LIMIT 1";
+                    $query = "SELECT idUsuario, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido,TbTipoUsuario_idTipoUsuario FROM tbusuario WHERE email = :email AND Contrasenna = :password AND activo=1 LIMIT 1";
                     // Los parámetros de ese query
                     $params = [":email" => $email, ":password" => $password];
 
@@ -58,10 +58,12 @@ class UserService {
 
                             // Enviamos de vuelta a quien consumió el servicio datos sobre el usuario solicitado
                             $result["user"] = [
-                                "idUsuario" => $user["idUsuario"],
-                                "PrimerNombre" => $user["PrimerNombre"],
-                                "PrimerApellido" => $user["PrimerApellido"],
-                                "TbTipoUsuario_idTipoUsuario"=>$user["TbTipoUsuario_idTipoUsuario"]
+                                "userId" => $user["idUsuario"],
+                                "firstName" => $user["PrimerNombre"],
+                                "secondName" => $user["SegundoNombre"],
+                                "lastName" => $user["PrimerApellido"],
+                                "secondLastName" => $user["SegundoApellido"],
+                                "userType"=>"ut0".$user["TbTipoUsuario_idTipoUsuario"]
                             ];
                         } else {
                             // No encontramos un usuario con ese email y password

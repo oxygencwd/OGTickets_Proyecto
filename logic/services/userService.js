@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('userService', ['localStorageService', '$q', '$http', '$cookieStore', function(localStorageService, $q, $http, $cookieStore) {
+.service('userService', ['localStorageService', '$log', '$q', '$http', '$cookieStore', function(localStorageService,$log, $q, $http, $cookieStore) {
 
 	var users= localStorageService.getAll("userList");
 
@@ -24,14 +24,7 @@ angular.module('OGTicketsApp.services')
 		localStorageService.set("userList", users);
 	};
 	
-	//trae la lista de todos los usuarios del localStorage y verifica si el email registrado existe, si es asi devuelve el objeto con la informacion del usuario.
-	var accountExists= function (user) {
-		var userExists= users.filter(function (item) {
-			return item.email== user.email;
-		});
-		return userExists;
-	}; //fin function	
-
+	
 	//evalua si la contraseña y el password son los correctos, si el usuario esta activo y si pasa las validaciones lo loggea, devuelve un objeto con el nombre, id  y tipo de usuario, y la variable canLogin en true, si no devuelve un mensaje de error y canLogin en false.
 	var canLogin= function (user) {
 		var defer= $q.defer();
@@ -42,13 +35,16 @@ angular.module('OGTicketsApp.services')
 		defer.resolve(data);
 		console.info(data, "success");
 		})
-		.error(function() {
+		.error(function(error) {
 		defer.reject(error, status);
 		$log.error(error, status);
 		});
 
 		return defer.promise;
 	}; //end -canLogin
+
+
+
 
 
 
@@ -83,7 +79,12 @@ angular.module('OGTicketsApp.services')
 	// }; //end -canLogin
 
 	//mete en la variable del $scope el usuario loggeado para que este disponible a lo largo de las vistas.
-	var login= function (appLoggedUser, usr) {
+	var login= function (appLoggedUser, objUsr) {
+		var usr= {};
+		usr.name= parseName(objUsr);
+		usr.id= objUsr.userId;
+		usr.userType= objUsr.userType;
+
 		appLoggedUser.name= usr.name;
 		appLoggedUser.id= usr.id;
 		appLoggedUser.userType= usr.userType;
@@ -91,6 +92,21 @@ angular.module('OGTicketsApp.services')
 
 		$cookieStore.put('isConnected', true);
       	$cookieStore.put('loggedUser', usr);
+	};
+
+	//toma el objeto y pasa por cada uno de los componentes el nombre y regresa el nombre completo con que el usuario esta regitrado.
+	var parseName= function(objUsr) {
+		var array=[];
+		array[0]= objUsr.firstName;
+		array[1]= objUsr.secondName;
+		array[2]= objUsr.lastName;
+		array[3]= objUsr.secondLastName;
+		for(i= 0; i<array.length; i++) {
+			if(array[i]==null){
+				array.splice(i,1);
+			}
+		}
+		return array.join(" ");
 	};
 
 	//deslogea al usuario.
