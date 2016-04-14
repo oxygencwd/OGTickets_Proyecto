@@ -31,12 +31,11 @@ angular.module('OGTicketsApp.services')
 		var url= 'back-end/index.php/user/login'
 
 		$http.post(url, user)
-		.success(function(data) {
+		.success(function(data, status) {
 		defer.resolve(data);
-		console.info(data, "success");
 		})
-		.error(function(error) {
-		defer.reject(error, status);
+		.error(function(error, status) {
+		defer.reject(error);
 		$log.error(error, status);
 		});
 
@@ -44,39 +43,14 @@ angular.module('OGTicketsApp.services')
 	}; //end -canLogin
 
 
-
-
-
-
-
-
-	// var canLogin= function (user) {
-	// 	var saved= accountExists(user);
-	// 	var loggedUser={};
-	// 	var msg="user found";
-	// 	var canLogin= false;
-	// 	var result={};
-	// 	if(saved.length>0 && saved[0].active==true && saved[0].email==user.email && saved[0].password==user.password){
-	// 		loggedUser= {
-	// 			name: saved[0].name,
-	// 			id: saved[0].id,
-	// 			userType: saved[0].userType
-	// 		};
-	// 		canLogin= true;
-	// 		result={
-	// 			user: loggedUser,
-	// 			msg: msg,
-	// 			canLogin: canLogin
-	// 		};
-	// 	}else{
-	// 		msg= "user not found";
-	// 		result={
-	// 			msg:msg,
-	// 			canLogin: canLogin
-	// 		};	
-	// 	};
+	// var canLogin= function(objLogin) {
+	// 	var url= 'back-end/index.php/user/login'
+	// 	result= $http.post(url, objLogin);
 	// 	return result;
-	// }; //end -canLogin
+	// };
+
+
+
 
 	//mete en la variable del $scope el usuario loggeado para que este disponible a lo largo de las vistas.
 	var login= function (appLoggedUser, objUsr) {
