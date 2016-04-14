@@ -59,6 +59,7 @@ class UserController {
 
         if (array_key_exists("error", $loginResult)) {
             $result["error"] = true;
+            $result["message"] = $loginResult["message"];
         } else {
             /**
              * Si el usuario inició sesión, creamos un cookie llamado `loggedIn` y le asignamos el valor de true.
@@ -67,10 +68,8 @@ class UserController {
              */
             setcookie($this->nombreCookie, true, time()+3600);
             $result["user"] = $loginResult["user"];
+            $result["message"] = $loginResult["message"];
         }
-
-        $result["message"] = $loginResult["message"];
-        $result["user"] = $loginResult["user"];
 
         // El array creado en ese método se envía como de vuelta al enrutador.
         return $result;
