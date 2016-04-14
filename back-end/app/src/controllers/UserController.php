@@ -70,6 +70,7 @@ class UserController {
         }
 
         $result["message"] = $loginResult["message"];
+        $result["user"] = $loginResult["user"];
 
         // El array creado en ese método se envía como de vuelta al enrutador.
         return $result;

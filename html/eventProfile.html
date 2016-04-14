@@ -46,7 +46,7 @@
 			<div>
 				<form name="siteAmountForm" class="siteAmountForm" novalidate ng-if="noMap">
 					<label>Cantidad de asientos / espacios:</label>
-					<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model= "seatAmount">
+					<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model="seatAmount" ng-change="showResume()">
 				</form>
 			</div>
 		</div>
@@ -94,7 +94,10 @@
 		<div class="col-lg-8 col-lg-offset-2">
 			<form name="siteAmountForm" class="siteAmountForm" novalidate ng-if="noMap" >
 				<label>Cantidad de asientos / espacios:</label>
-				<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model= "seatAmount" ng-init=0>
+				<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="2" ng-model= "seatAmount" ng-init=0 ng-change="showResume()">
+				<!-- <p ng-bind="seatAmount"></p> -->
+				<!-- <p ng-if="seatAmount!==''">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae recusandae, veniam quaerat accusamus tempore cum enim voluptate beatae amet nam non, quo mollitia a consectetur modi fugit officiis laboriosam nostrum?</p> -->
+  
 			</form>
 		</div>
 	</div>

@@ -152,9 +152,6 @@ angular.module('OGTicketsApp.controllers')
 
          //end of seats
 
-        $scope.seatAmount="";
-
-    
         $scope.showResume= function() {
             alert("si funiona");
             $scope.resume= true;

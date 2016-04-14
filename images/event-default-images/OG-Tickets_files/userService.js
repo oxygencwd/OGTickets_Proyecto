@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('userService', ['localStorageService', '$q', '$http', '$cookieStore', function(localStorageService, $q, $http, $cookieStore) {
+.service('userService', ['localStorageService', '$cookieStore', function(localStorageService, $cookieStore) {
 
 	var users= localStorageService.getAll("userList");
 
@@ -22,7 +22,9 @@ angular.module('OGTicketsApp.services')
 
 	var setUser = function(users){
 		localStorageService.set("userList", users);
-	};
+	}
+
+	/* login, logout, register, isLoggedIn, getCurrentUser*/
 	
 	//trae la lista de todos los usuarios del localStorage y verifica si el email registrado existe, si es asi devuelve el objeto con la informacion del usuario.
 	var accountExists= function (user) {
@@ -34,53 +36,32 @@ angular.module('OGTicketsApp.services')
 
 	//evalua si la contraseña y el password son los correctos, si el usuario esta activo y si pasa las validaciones lo loggea, devuelve un objeto con el nombre, id  y tipo de usuario, y la variable canLogin en true, si no devuelve un mensaje de error y canLogin en false.
 	var canLogin= function (user) {
-		var defer= $q.defer();
-		var url= 'back-end/index.php/user/login'
-
-		$http.post(url, user)
-		.success(function(data) {
-		defer.resolve(data);
-		console.info(data, "success");
-		})
-		.error(function() {
-		defer.reject(error, status);
-		$log.error(error, status);
-		});
-
-		return defer.promise;
+		var saved= accountExists(user);
+		var loggedUser={};
+		var msg="user found";
+		var canLogin= false;
+		var result={};
+		if(saved.length>0 && saved[0].active==true && saved[0].email==user.email && saved[0].password==user.password){
+			loggedUser= {
+				name: saved[0].name,
+				id: saved[0].id,
+				userType: saved[0].userType
+			};
+			canLogin= true;
+			result={
+				user: loggedUser,
+				msg: msg,
+				canLogin: canLogin
+			};
+		}else{
+			msg= "user not found";
+			result={
+				msg:msg,
+				canLogin: canLogin
+			};	
+		};
+		return result;
 	}; //end -canLogin
-
-
-
-
-
-	// var canLogin= function (user) {
-	// 	var saved= accountExists(user);
-	// 	var loggedUser={};
-	// 	var msg="user found";
-	// 	var canLogin= false;
-	// 	var result={};
-	// 	if(saved.length>0 && saved[0].active==true && saved[0].email==user.email && saved[0].password==user.password){
-	// 		loggedUser= {
-	// 			name: saved[0].name,
-	// 			id: saved[0].id,
-	// 			userType: saved[0].userType
-	// 		};
-	// 		canLogin= true;
-	// 		result={
-	// 			user: loggedUser,
-	// 			msg: msg,
-	// 			canLogin: canLogin
-	// 		};
-	// 	}else{
-	// 		msg= "user not found";
-	// 		result={
-	// 			msg:msg,
-	// 			canLogin: canLogin
-	// 		};	
-	// 	};
-	// 	return result;
-	// }; //end -canLogin
 
 	//mete en la variable del $scope el usuario loggeado para que este disponible a lo largo de las vistas.
 	var login= function (appLoggedUser, usr) {

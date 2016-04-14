@@ -1,0 +1,1692 @@
+@font-face {
+	font-family: PoppinsRegular;
+	src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+	font-family: PTSerifRegular;
+	src: url(fonts/PT_Serif-Web-Regular.ttf);
+}
+
+html, body,{
+	height: 100%;
+}
+
+
+.box{
+	height: 100%;
+}
+
+body{
+	font-family: PoppinsRegular;
+}
+
+header .navbar-nav>li>a{
+	font-size: 18px;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color:#fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+	color:#e67d20;
+}
+
+header .navbar-nav>li>a{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.navbar-header button{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.navbar-inverse{
+	background-color: #4f5457;
+}
+
+header span.user-icon{
+	margin-right: 8px;
+}
+
+
+/*carousel*/
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+	max-width: 100%;
+}
+
+/*.carousel{
+	margin-top: 75px;
+}*/
+
+.box{
+	/*margin-top: 70px;*/
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+}
+
+.carousel,.item, .carousel .active{
+	width:100%;
+}
+
+.carousel,.item, .carousel .active{
+	height: 100%;
+}
+
+
+.carousel-inner{
+	height:100%;
+}
+
+.fill{
+	width:100%;
+	height:100%;
+	background-position:center;
+	background-size:cover;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #fff;
+}
+
+.carousel-info-container, .p-relative{
+	position: relative;
+}
+
+.carousel-info{
+	color: #fff;
+	position: absolute;
+	top:100px;
+	left: 5%;
+}
+
+.carousel-info h2{
+	font-size: 2.80em;  /* 39/14*/
+}
+
+.carousel-info h3{
+	font-size: 2.35em; /* 33/14*/
+}
+
+.carousel-info a{
+	font-size: 1.45em; /*21/14*/
+	color: #fff;
+	text-decoration: none;
+}
+
+.carousel-info a:hover{
+	color:#e67d20;
+}
+
+.carousel-inner>.item>img {
+	height: 100%;
+	width: 100%;
+}
+
+/*secondary-nav-bar*/
+.secondary-navbar .navbar-nav>li>a{
+	margin-top: 9px;
+	margin-bottom: 9px;
+}
+
+.secondary-navbar input{
+	margin-top: 3px;
+	padding: 30px;
+	font-size: 1.2em;
+	margin-left: 5%;
+}
+
+.secondary-navbar .navbar-form .form-control{
+	width: 90%;
+}
+
+.secondary-navbar .navbar-nav>li button{
+	margin:0;
+	padding:30px 0;
+	background-color: #3598dc;
+	font-size: 1.43em; 
+	color: #fff;
+	border:none;
+}
+
+.secondary-navbar .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color: #3598dc;
+}
+
+.secondary-navbar .navbar-nav>li>a:hover{
+	background-color: #3598dc;
+}
+
+.secondary-navbar .navbar-collapse, .secondary-navbar .container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.secondary-navbar .dropdown-menu>li>a{
+	padding: 12px 110px 12px 110px;
+	font-size: 1.43em;
+	color:#fff;
+	background-color: #3598dc;
+}
+
+.secondary-navbar .dropdown-menu>li>a:hover{
+	color: #333;
+}
+
+.secondary-navbar .nav>li>a>img{
+	margin-right: 20px;
+}
+
+.no-padding{
+	padding: 0;
+}
+
+.secondary-navbar ul.dropdown-menu{
+	padding: 0;
+	border: none;
+}
+
+.width100{
+	width: 100%;
+}
+
+/*Listas genericas*/
+.genListTitle{
+	width: 40%;
+	margin: 0 auto;
+}
+
+.glyphicon-ok-circle{
+	color: #2eb82e;
+}
+
+.glyphicon-remove-circle{
+	color: #cc0000;
+}
+/*Fin de listas genericas*/
+
+
+.main-search .btn-absolute, .user-list .btn-absolute, .gen-list .btn-absolute, .promoter-events-search button{
+	position: absolute;
+	right: 5%;
+	top: 3px;
+	padding: 11px 10px 6px 11px;
+	background-color: #fd1c3e;
+	color:#fff;
+	border: none;
+	border-radius: 0 4px 4px 0;
+}
+
+.main-search .glyphicon{
+	font-size: 2.8em;
+}
+
+.upcoming-events h2, .today-events h2{
+	color: #444;
+	font-size: 2.4em;
+	margin-left: 2%;
+	margin-bottom: 25px;
+}
+
+.upcoming-events img{
+	max-width: 100%;
+	height: 15em;
+}
+
+.upcoming-events-item{
+	background-color: #000;
+}
+
+.upcoming-events .buy-button, .client-profile .event-details-btn{
+	width: 100%;
+	font-size: 2.2em;
+	color: #fff;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border: none;
+	margin-bottom: 1em;
+}
+
+.upcoming-events .buy-button:hover{
+	color: #000;
+}
+
+.siteAmountForm input{
+	padding: .6em;
+	margin-bottom: 1.3em;
+}
+
+
+.buy-button.first{
+	background-color: #e77e23;
+}
+
+.buy-button.second{
+	background-color: #3598dc;
+}
+
+.buy-button.last{
+	background-color: #fb1b3f;
+	margin-bottom: 40px;
+}
+
+.upcoming-event-info{
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 30px;
+}
+
+.allEventsDisplay button a, .upcoming-events button a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.allEventsDisplay button a:hover, .upcoming-events button a:hover{
+	color:#000;
+}
+
+.allEventsDisplay button{
+	margin-bottom: 1em;
+}
+
+.upcoming-events h4{
+	margin-left: 2%;
+}
+
+.container-categories h4{
+	margin-bottom: 14em;
+}
+
+.container-categories .type-title{
+	/*margin-bottom: 25px;*/
+}
+
+.display-none{
+	display: none;
+}
+
+.today-events p, .today-events a{
+	font-size: 20px;
+	color: #444;
+	text-decoration: none;
+}
+
+.today-events a:hover{
+	color: #e77e23;
+}
+
+.today-events-container{
+	margin-bottom: 90px;
+	margin-top: 40px;
+}
+
+.display-inline{
+	display: inline-block;
+}
+
+.social-media-items{
+	max-width: 165px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 40px;
+}
+
+.footer{
+	background-color: #4f5457;
+	color: #fff;
+}
+
+.footer img{
+	margin: 30px auto;
+}
+
+.footer p{
+	font-family: PTSerifRegular;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.login-modal .modal-content{
+	background-color: #eee;
+}
+
+.login-modal input{
+	border: none;
+	padding-right: 25px;
+}
+
+.login-modal h4{
+	font-size: 20px;
+}
+
+.login-modal .modal-footer{
+	padding: 0;
+}
+
+.login-modal .modal-footer p{
+	font-size: 16px;
+}
+
+.login-modal .modal-footer a{
+	text-decoration: none;
+	color: #444;
+}
+
+.login-modal .modal-footer a:hover{
+	color: #e77e23;
+}
+
+.signUpView h1{
+	margin: 1em 0;
+}
+
+.signUpView .input-group{
+	margin-top:2.6em;
+}
+
+/*forms*/
+.signUpView, .registrationView{
+	background-color: #cdcdcd;
+	padding-top: 80px;
+}
+
+.signUpView .form-group, .registrationView .form-group{
+ 	margin-top: 30px;
+}
+
+.signUpView select, .registrationView select{
+display: block;
+}
+
+.signUpView input[type="submit"], .registrationView input[type="submit"]{
+	background-color: #3598dc;
+	color: white;
+	margin-bottom: 50px;
+}
+
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button, input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] , input[type=date] {
+    -moz-appearance:textfield;
+}
+
+textarea{
+	resize: none;
+}
+
+/*********user list******/
+.user-list-container, .gen-list-container, .redeem-tickets-container, .event-type-container{
+	background-color: #ebebeb;
+	margin-top: 70px;
+}
+
+.user-list h1, .gen-list h1, .redeem-tickets h1{
+	margin-top: 1.5em;
+	margin-bottom: 25px;
+}
+
+.width80{
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.width90{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.user-list .btn-absolute, .gen-list .btn-absolute, .promoter-events-search button{
+	right: 10%;
+	top: 0;
+	padding: 8px 10px 5px 11px;
+}
+
+.user-list ul, .gen-list ul, .client-reserv ul, .promoter-event-item ul{
+	margin-top: 12px;
+	margin-bottom: 25px;
+	list-style: none;
+	border: 1px solid #6d6d6d;
+	padding: 0;
+	height: 20em;
+	overflow-y: scroll;
+}
+
+.user-list li, .gen-list li, .client-reserv li, .promoter-event-item li{
+	border-bottom: 2px solid #a7a7a7;
+	border-right: 3px;
+	font-size: 1.1em;
+	padding: 7px 15px;
+	max-height: 20em;
+}
+
+.user-list a, .gen-list a, .client-reserv a, .promoter-event-item a{
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
+
+.user-list a:hover, .gen-list a:hover, .client-profile a:hover{
+	color: #e67d20;
+}
+
+.user-info-container, .promoter-event-container{
+	border: 2px solid #3598dc;
+	background-color: #fff;
+	height: 20em;
+	overflow-y: scroll;
+	margin-top: 12px;
+	margin-bottom: 25px;
+	padding: 7px 15px;
+}
+
+.user-info-container h3{
+	margin-top: 10px;
+}
+
+.user-info-container button, .promoter-event-item li button{
+	background-color: #e67d20;
+	border: none;
+	border-radius: 0;
+}
+
+.user-info-container button:hover, .promoter-event-item li button:hover{
+	background-color: #f0ad4e;
+}
+
+.user-item-info{
+	margin-bottom: 20px;
+}
+
+/*redeem tickets*/
+
+.redeem-tickets label, .redeem-tickets p{
+	font-size: 1.2em;
+}
+
+.redeem-tickets input, .redeem-tickets button, .promoter-event-container .btn-danger{
+	border: none;
+	border-radius: 0;
+}
+
+.redeem-tickets input[type="text"]{
+	padding:10px;
+	font-size: 1.1em;
+}
+
+.redeem-tickets .btn-primary, .redeem-tickets .btn-danger, .promoter-event-container .btn-danger{
+	padding: 10px;
+	margin-top: 28px;
+	font-size: 1.1em;
+}
+
+.redeem-tickets .btn-primary{
+	background-color: #3598dc;
+}
+
+.redeem-tickets .btn-primary:hover{
+	background-color: #286090;
+}
+
+.redeem-tickets .btn-danger, .client-profile .user-info-container button,  .promoter-event-container .btn-danger{
+	background-color: #fb1b3f;
+}
+
+.redeem-tickets .btn-danger:hover, .client-profile .user-info-container button:hover, .promoter-event-container .btn-danger:hover{
+	background-color: #c9302c;
+}
+
+.redeem-tickets .info-container{
+	padding-left: 5%;
+	margin: 25px 0 70px;
+}
+
+label{
+	font-weight: normal;
+	display: block;
+}
+
+/*client-profile*/
+
+.client-profile-container, .promoter-profile-container{
+	margin-top: 80px;
+	background-color: #ebebeb;
+}
+
+.client-profile .profile-img{
+	margin: 30px auto 60px;
+	display: block;
+}
+
+.client-profile .left-panel a, .promoter-profile .left-panel a{
+	display: block;
+	text-decoration: none;
+	color:#000;
+	font-size: 1.3em;
+}
+
+.client-profile .left-panel a:hover, .promoter-profile .left-panel a:hover{
+	color:#e77e23;
+}
+
+
+.client-profile .upcoming-events-item{
+	margin-bottom: 30px;
+}
+
+.upcoming-events-item.searchRow{
+	margin-bottom: 2em;
+}
+
+.client-profile h2{
+	margin-top: 2.8em;
+	margin-bottom: 30px;
+}
+
+.client-profile .event-details-btn{
+	background-color: #e77e23;
+	margin-bottom: 25px;
+}
+
+.client-profile .event-details-btn:hover{
+	color: #000;
+}
+
+.client-profile .upcoming-events-item img{
+	max-width: 100%;
+	height: 15em;
+}
+
+/*promoter-profile*/
+.promoter-profile .left-panel{
+	margin-top: 100px;
+}
+
+.promoter-profile h2{
+	margin-top: 1.2em;
+	margin-bottom: 25px;
+}
+
+.promoter-events h4{
+	margin-left: 18px;
+}
+
+.promoter-event-item ul{
+	height: 28em;
+}
+
+.promoter-event-item li{
+	height: 9em;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.promoter-event-item li img{
+	height: 100%;
+	width: 100%;
+}
+
+.promoter-event-item li button{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-radius: 0;
+}
+
+.promoter-event-item .pei-info{
+	position: absolute;
+	bottom: 4em;
+	left: 5%;
+	color:#fff;
+}
+
+.promoter-event-container{
+	height: 28em;
+	background-color: #3598dc;
+	color:#fff;
+	overflow: auto;
+}
+
+.promoter-event-container .user-item-info{
+	font-size: 1.2em;
+}
+
+.promoter-event-container .user-item-info a, .promoter-event-container .btn-danger a{
+	color:#fff;
+	text-decoration: none;
+}
+
+.promoter-event-container .user-item-info a:hover{
+	color:#fb1b3f;
+}
+
+
+
+/*CSS Eventos Carmiol*/
+.eventsSearch{
+	margin-top: 13px;
+}
+.btn-events{
+	background-color: #fd1c3e;
+	color: #fff;
+}
+
+.eventBanner{
+	padding:30px;
+}
+.eventPicture img{
+	width: 100%
+}
+.eventDetalle{
+	background-color: #fd1c3e;
+	color: #fff;
+	height: 370px;
+}
+.eventDetalleTexto{
+	padding: 15px;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.eventSeccionCompra{
+	padding: 50px;
+}
+.eventMembersPrice{
+	background-color: #3598dc;
+	color: #fff;
+	width: 90%;
+}
+.eventMembersPriceText h4,p{
+	padding: 10px;
+}
+.eventBtnComprar{
+	width: 80%;
+	margin-bottom: 4em;
+}
+.eventBtnComprar div {
+	margin-top: 150px;
+	
+}
+.eventBtnComprar div a{
+	background-color: #e77e23;
+	color: white;
+}
+.eventsBtnBlue{
+	background-color: #3598dc;
+	color: white;
+}
+.eventsBtnRed{
+	background-color: #fb1b3f;
+	color: white;
+}
+
+/* seat reservation */
+.content {
+  text-align: center;
+}
+
+.seatLayout {
+  margin: 30px auto;
+}
+
+.seat {
+  cursor: pointer;
+}
+
+.buttons {
+  margin: 30px auto;
+}
+
+.legend img{
+  vertical-align: bottom;
+}
+
+/*Final Eventos Carmiol*/
+
+
+/*event-type-profile*/
+
+.event-type{
+	margin-top: 3em;
+}
+
+.event-type .event-type-img{
+	background-color: #000;
+	padding: 0;
+
+}
+
+.heroSection{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	margin-bottom: 3em;
+}
+
+.event-type-name{
+	position: relative;
+	background-color: #fb1b3f;
+}
+
+.event-type-name h2{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+
+}
+
+.eventTypeDescriptionRow{
+	margin-bottom: 3em;
+}
+
+.event-type-description{
+	margin-top: 2.5em;
+	color: #fff;
+}
+
+.event-type-description p, .event-type-description a{
+	margin: 0;
+	padding: 0;
+	padding: 25px 8%;
+	font-size: 18px;
+}
+
+.event-type-description a{
+	font-size: 1em;
+}
+
+
+.event-type-description .c-left{
+	background-color: #3598dc;
+}
+
+.event-type-description .btn-warning{
+	background-color: #e77e23;
+	margin-bottom: 4em;
+	/*width: 100%;
+	border-radius: 0;*/
+}
+
+
+/*Site Profile*/
+
+.siteProfile{
+	margin-top: 2em;
+}
+
+.heroBanner{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	background-color: #d9d9d9;
+	padding-bottom: 3em;
+	padding-top: 7em;
+}
+
+#editButton{
+	margin-top: 10px;
+	background-color: #006f6f;
+}
+
+.heroImage{
+	padding-right: 0;
+	background-color: #000;
+	padding: 0;
+}
+
+.atAGlanceBox{
+	background-color: #fd1c3e;
+	position: relative;
+}
+
+.atAGlanceInfo{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: white;
+}
+
+.atAGlanceInfo a{
+	color: white;
+	text-decoration: none;
+}
+
+.mapSection{
+	background-color: white;
+}
+
+google-map{
+    width: 600px;
+    height: 400px;
+}
+
+
+/*validaciones*/
+input.ng-invalid.ng-dirty, textarea.ng-invalid.ng-dirty,, select.ng-invalid.ng-dirty{
+	border: 1px solid #fa787e;
+}
+
+input.ng-valid.ng-dirty, select.ng-valid.ng-dirty, textarea.ng-valid.ng-dirty{
+	border: 1px solid #78fa89;
+}
+
+input.ng-invalid.ng-touched.ng-invalid-required, select.ng-invalid.ng-touched.ng-invalid-required, textarea.ng-invalid.ng-touched.ng-invalid-required{
+	border: 1px solid #fa787e;
+}
+
+form sub, .error{
+	color: #fa787e;
+}
+
+/*Ends site profile*/
+
+/*Admin*/
+.adminView{
+	padding-top: 8em;
+	padding-bottom: 4em;
+	background-color: #e6e6e6;
+}
+
+.adminView hr{
+ 	height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    margin-top: 2em;
+}
+
+.adminView hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+ }
+
+.adminView a{
+	width: 38%;
+	margin: 0 auto;
+	text-decoration: none;
+	padding: 0.5em 2%;
+	font-size: 1em;
+	background-color: #a6a6a6;
+	color: white;
+	display: block;
+	margin-bottom: 1.5em;
+	font-weight: bold;
+	border:2px solid;
+	border-color: #f2f2f2 #666 #666 #f2f2f2;
+}
+
+.adminView a:hover{
+	background-color: #808080;
+	color: white;
+	border-color: #666 #f2f2f2 #f2f2f2 #666;
+}
+
+.adminView .text-center{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+/*End Admin*/
+
+/*Payment Form*/
+
+.paymentForm sub{
+	display: block;
+	margin: 1.2em 0;
+}
+
+.paymentForm .row{
+	margin: 1.5em 0;
+}
+
+/*Ends Payment Form*/
+
+
+/*site-maps*/
+.seat-container p{
+	color: #fff;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.absolute{
+	position: absolute;
+}
+
+.middle{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*PALACIO DE LOS DEPORTES*/
+.palacio .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.palacio .este{
+	width: 20%;
+	height:24em;
+	background-color: #2d65cb;
+	left: 0;
+	top:0;
+}
+
+.palacio .tarima{
+	width: 40%;
+	height:7em;
+	background-color: #404040;
+	left: 30%;
+	top: 1em;
+}
+
+.palacio .preferencial{
+	width: 50%;
+	height:14em;
+	background-color: #ed1b24;
+	left: 25%;
+	top: 10em;
+	
+}
+.palacio .oeste{
+	width: 20%;
+	height:24em;
+	background-color: #009864;
+	left: 80%;
+	top: 0;
+}
+.palacio .norte{
+	width: 100%;
+	height:6em;
+	background-color: #f75216;
+	top: 25em;
+}
+
+/*AUDITORIO NACIONAL*/
+
+.auditorio .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.auditorio .tarima{
+	width: 100%;
+	height:5em;
+	background-color: #404040;
+	top: 0em;
+	border-radius: 0 0 40% 40%;
+}
+
+.auditorio .vip{
+	width: 70%;
+	height:4em;
+	background-color: #ed1b24;
+	left: 16%;
+	top: 5.5em;
+	
+}
+
+.auditorio .butacas{
+	width: 80%;
+	height:14em;
+	background-color: #983298;
+	left: 10%;
+	top:10em;
+}
+
+.auditorio .galeria{
+	width: 100%;
+	height:6.5em;
+	background-color: #2d65cb;
+	top: 24.5em;
+}
+
+
+/*fin auditorio nacional*/
+
+/*TEATRO NACIONAL*/
+
+.teatro .seat-container{
+	margin-bottom: 7em;
+	height: 31em;
+	position: relative;
+}
+
+.teatro .tarima{
+	width: 25%;
+	height:3.5em;
+	background-color: #404040;
+	top: 0em;
+	border-radius: 0 0 40% 40%;
+	left: 37.5%;
+}
+
+.teatro .luneta{
+	width: 25%;
+	height:6em;
+	background-color: #ed1b24;
+	left: 37.5%;
+	top: 5em;
+	
+}
+
+.teatro .palco1, .teatro .palco2, .teatro .palco3{
+	background-color: #2d65cb;
+}
+
+.teatro .palco1, .teatro .palco2{
+	width: 9%;
+	height:12em;
+}
+
+.teatro .palco1{
+	left: 27%;
+	top:4.5em;
+}
+
+.teatro .palco2{
+	left: 64%;
+	top:4.5em;
+}
+
+.teatro .palco3{
+	width: 25%;
+	height:4.5em;
+	left: 37.5%;
+	top:12em;
+}
+
+/*palco fin **/
+.teatro .butacas1, .teatro .butacas2, .teatro .butacas3{
+	background-color: #983298;
+}
+
+.teatro .butacas1, .teatro .butacas2{
+	width: 11%;
+	height:20em;
+}
+
+.teatro .butacas1{
+	left: 14.5%;
+	top:2.5em;
+}
+
+.teatro .butacas2{
+	left: 74.5%;
+	top:2.5em;
+}
+
+.teatro .butacas3{
+	width: 46%;
+	height:5.5em;
+	left: 27%;
+	top:17em;
+}
+/*butacas fin*/
+/*galeria*/
+
+.teatro .galeria1, .teatro .galeria2, .teatro .galeria3{
+	background-color: #009864;
+}
+
+.teatro .galeria1, .teatro .galeria2{
+	width: 13%;
+	height:30em;
+}
+
+.teatro .galeria1{
+	left: 0%;
+	top:0.5em;
+}
+
+.teatro .galeria2{
+	left: 87.5%;
+	top:0.5em;
+}
+
+.teatro .galeria3{
+	width: 71%;
+	height:7.5em;
+	left: 14.5%;
+	top:23em;
+}
+/*fin teatro nacional*/
+
+/*ESTADIO NACIONAL*/
+
+.estadio .seat-container{
+	margin-bottom: 7em;
+	height: 32em;
+	position: relative;
+}
+
+.estadio .cancha{
+	width: 25%;
+	height:6em;
+	background-color: #19a416;
+	left: 37.5%;
+	top: 12.9em;
+}
+
+.estadio .platea1, .estadio .platea2, .estadio .platea3, .estadio .platea4{
+	background-color: #ed1b24;
+}
+
+.estadio .platea1, .estadio .platea2{
+	width: 40%;
+	height: 3em;
+}
+
+.estadio .platea3, .estadio .platea4{
+	width: 7%;
+	height:6em;
+}
+
+.estadio .platea1{
+	left: 30%;
+	top: 9.5em;
+}
+
+.estadio .platea2{
+	left: 30%;
+	top:19.4em;
+}
+
+.estadio .platea3{
+	left: 30%;
+	top:12.9em;
+}
+
+.estadio .platea4{
+	left: 63%;
+	top:12.9em;
+}
+/*platea fin **/
+/*estadio palco*/
+.estadio .palco1, .estadio .palco2, .estadio .palco3, .estadio .palco4{
+	background-color: #f75216;   
+}
+
+.estadio .palco1, .estadio .palco2{
+	width: 60%;
+	height: 4em;
+	left: 20%;
+}
+
+.estadio .palco3, .estadio .palco4{
+	width: 9%;
+	height:13em;
+	top:9.5em;
+}
+
+.estadio .palco1{
+	top: 5.2em;
+}
+
+.estadio .palco2{
+	top:22.8em;
+}
+
+.estadio .palco3{
+	left: 20%;
+}
+
+.estadio .palco4{
+	left: 71%;
+}
+/*fin estadio palco*/
+
+/*estadio graderia*/
+.estadio .graderia1, .estadio .graderia2, .estadio .graderia3, .estadio .graderia4{
+	background-color: #2d65cb;
+}
+
+.estadio .graderia1, .estadio .graderia2{
+	width: 100%;
+	height: 5em;
+	left: 0;
+}
+
+.estadio .graderia3, .estadio .graderia4{
+	width: 19.3%;
+	height:21.5em;
+	top:5.2em;
+}
+
+.estadio .graderia1{
+	top: 0em;
+}
+
+.estadio .graderia2{
+	top:27em;
+}
+
+.estadio .graderia3{
+	left: 0%;
+}
+
+.estadio .graderia4{
+	left: 80.7%;
+}
+/*fin estadio graderia*/
+
+
+.p1{
+	height: 300px;
+	background-color: red;
+}
+
+/* EVENTS ARI*/
+
+.eventDetails{
+	background-color: #3598dc;
+	padding:1.5em 2%;
+	color: white;
+}
+
+.sectionRow{
+	display: -ms-flex; display: -webkit-flex; display: flex; 
+	margin-top: 1.5em;
+	margin-bottom: 3em;
+}
+
+.purchaseBtnCol{
+	position: relative;
+}
+
+.purchaseBtnCol div{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	padding: 0.25em 2%;
+	background-color: #e77e23;
+}
+
+.purchaseBtnCol a{
+	color: white;
+}
+
+.paymentDetailsRow{
+	margin-bottom: 3em;
+}
+
+.btn-warning.back-button{
+	background-color: #e77e23;
+	border: none;
+	border-radius: 0;
+}
+
+.btn-warning.back-button:hover{
+	color: #000;
+}
+
+.btn-danger.btn-clear{
+	background-color: #fd1c3e;
+	border:none;
+	border-radius: 0;	
+}
+
+.btn-primary.btn-show{
+	background-color: #3598dc;
+	border: none;
+	border-radius: 0;
+}
+
+.btn-primary.btn-show:hover, .btn-danger.btn-clear:hover{
+	color: #000;
+}
+
+.alert-modal p{
+	font-size: 1.2em;
+	margin:0;
+	padding: 0;
+}
+
+
+/*********************************************************************
+**************************MEDIA QUERYS********************************
+**********************************************************************/
+@media (max-width: 1200px){
+	.box{
+		margin-top: 40px;
+	}
+}
+
+
+@media (max-width: 992px){
+	.box{
+		height: 75%;
+		margin-top:75px;
+	}
+
+	.carousel-info{
+		left: 15%;
+	}
+
+	.upcoming-events-item{
+		background-color: #fff;
+	}
+
+	.upcoming-events img, .upcoming-events .buy-button, .client-profile .upcoming-events-item img{
+		width: 65%;
+	}
+
+	.upcoming-events-item{
+		margin-bottom: 25px;
+	}
+
+	.upcoming-event-info{
+		left: 208px;
+		top:15px;
+	}
+
+	.client-profile .upcoming-event-info{
+		left: 138px;
+	}
+
+	.upcoming-events h2{
+		margin-bottom: 25px;
+	}
+
+	.redeem-tickets .info-container{
+		padding-left: 12%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 65%;
+	}
+
+
+/*Site Profile*/
+
+	.atAGlanceInfo h3{
+		font-size: 20px;
+	}
+
+	.atAGlanceInfo p{
+		font-size: 10px;
+	}
+
+/*Ends site profile*/
+
+.adminView a{
+	width: 50%;
+}
+
+}
+
+
+@media (max-width: 768px){
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.carousel-info{
+		top:60px;
+		left: 15%;
+	}
+
+	.box{
+		height: 60%;
+	}
+
+	.secondary-navbar .navbar-header button{
+		margin-right: 30px;
+	}
+
+	.secondary-navbar .navbar-nav .open .dropdown-menu>li>a{
+		padding: 10px;
+		text-align: center;
+	}
+
+	.secondary-navbar input{
+		margin-left: 7%;
+	}
+
+	.main-search .btn-absolute{
+		right: 3%;
+		top: 1px;
+	}
+
+	.upcoming-events img{
+		height: 12em;
+	}
+
+	.upcoming-event-info{
+		left: 29%;
+		top:15px;
+	}
+
+	.signUpSecondColumn{
+ 		margin-top: 30px;
+ 	}
+
+ 	.client-profile h2{
+ 		margin-top: 0.8em;
+ 	}
+
+ 	.client-profile .upcoming-events-item img{
+ 		height: 13.5em;
+ 		width: 50%;
+ 	}
+
+ 	.client-profile .event-details-btn{
+ 		width: 50%;
+ 	}
+
+ 	.client-profile .upcoming-event-info{
+		left: 29%;
+	}
+
+
+
+	.event-type-description .btn-warning{
+		width: 100%;
+		margin-top: 2em;
+	}
+
+	.event-type-description .c-rigth{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+/*Site Profile*/
+	.purchaseBtnCol{
+		margin-top: 3em;
+	}
+
+	.purchaseBtnCol div{
+		margin: 0 auto;
+	}
+
+	.heroBanner, .sectionRow{
+		display: block;
+	}
+
+	.atAGlanceBox{
+		height: 12em;
+	}
+
+	.atAGlanceBox p:first-of-type {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.heroImage{
+		max-height: 25em;
+		overflow: hidden;
+		padding-left: 0;
+		background-color: #000;
+	}
+
+/*Ends Site Profile*/
+
+.adminView a{
+	width: 70%;
+}
+
+}
+
+@media (max-width: 600px){
+	.box{
+		height: 50%;
+	}
+
+	.carousel-info h2{
+	font-size: 1.9em; 
+	}
+
+	.carousel-info h3{
+		font-size: 1.45em; 
+	}
+
+	.carousel-info a{
+		font-size: 1em; 
+	}
+
+	.upcoming-events img{
+		width: 67%;
+		height: 13em;
+	}
+
+	.client-profile .upcoming-events-item img{
+		height: 13em;
+		width: 70%;
+	}
+
+	.upcoming-event-info{
+		left: 22%;
+	}
+
+	.upcoming-events .buy-button{
+		width: 67%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 70%;
+	}
+
+	.event-type-img img{
+		height: 18em;
+	}
+}
+
+
+@media (max-width: 480px){
+	.box{
+		height: 35%;
+	}
+
+	.carousel-info{
+		top:25px;
+		left: 15%;
+	}
+
+	.carousel-info h2{
+	font-size: 1.45em; 
+	}
+
+	.carousel-info h3{
+		font-size: 1em; 
+	}
+
+	.carousel-info a{
+		font-size: 1em; 
+	}
+
+	.secondary-navbar input{
+		margin-left: 8%;
+	}
+
+	.main-search .btn-absolute{
+		right: 2%;
+	}
+
+	.secondary-navbar input{
+		font-size: 1em;
+		padding-left: 13px;
+	}
+
+	.upcoming-events img{
+		width: 90%;
+		height: 13em;
+	}
+
+	.client-profile .upcoming-events-item img{
+		width: 95%;
+		height: 13em;
+	}
+
+	.upcoming-event-info{
+		left: 14%;
+	}
+
+	.upcoming-events .buy-button{
+		width: 90%;
+	}
+
+	.client-profile .event-details-btn{
+		width: 95%;
+		font-size: 1.5em;
+	}
+
+	.client-profile .upcoming-event-info{
+		left: 14%;
+	}
+
+	.adminView a{
+		width: 100%;
+		font-size: 0.9em;
+		font-weight: normal;
+	}
+
+	.adminView h1{
+		font-size: 2em;
+		text-align: center;
+	}
+
+	.adminView h2{
+		font-size: 1.5em;
+	}
+
+	.adminView h3{
+		font-size: 1em;
+	}
+
+	.adminView {
+		padding-top: 7em;
+	}
+
+}
+
+
+
+
+
+
+
+
