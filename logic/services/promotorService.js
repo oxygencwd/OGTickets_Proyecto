@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('promotorService', ['localStorageService', function(localStorageService) {
+.service('promotorService', ['localStorageService', 'eventService', function(localStorageService, eventService) {
 
     //Llama a todos los promotoes guardados en userList.
     var promotors= localStorageService.getAll("userList");
@@ -74,7 +74,7 @@ angular.module('OGTicketsApp.services')
         return result;
     }
 
-
+    //retrieves the promotor who has the id in the Param
     var retrievePromotor = function (pId){
         result = promotors.filter(function (item) {
             return item.id == pId;
@@ -95,6 +95,15 @@ angular.module('OGTicketsApp.services')
         return userList;
     };
 
+    //get the events by promotor id
+    var getPromotorEvents = function(pId){
+        result = eventService.eventsList.filter(function (item){
+            return item.promoterId == pId;
+        })
+
+        return result;
+    }
+
 
 	return{
         promotorsPendingCheck:promotorsPendingCheck,
@@ -102,7 +111,8 @@ angular.module('OGTicketsApp.services')
         promotorRequest:promotorRequest,
         retrievePromotor:retrievePromotor,
         replacePromotor:replacePromotor,
-        removeOldPromotor:removeOldPromotor
+        removeOldPromotor:removeOldPromotor,
+        getPromotorEvents:getPromotorEvents
 	};
 
 }]);
