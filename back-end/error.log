@@ -1,0 +1,21 @@
+---- 
+14/04/16 03:18:08 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 48
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [2] => Naty
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [3] => 2
+                )
+
+        )
+
+)

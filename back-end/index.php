@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 /**
  * index.php
  * Inicia la aplicación y sirve como enrutador para el back-end.
