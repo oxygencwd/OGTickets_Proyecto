@@ -6,17 +6,16 @@
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
 				<h3>{{currentEvent.name}}</h3>
-				<a ng-href="#/site-profile/{{eventSiteId}}">{{eventSiteName}}</a>
+				<a ng-href="#/site-profile/{{eventSiteId}}">{{eventSiteName}} <span class="glyphicon glyphicon-eye-open"></span></a>
 				<h4>{{site.name}}</h4>
 				<p>{{currentEvent.date | date}}</p>
 				<p>{{currentEvent.ticketsPrice | currency: '¢'}}</p>
-
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<button type="button" class="btn btn-primary btn-show center-block width100" ng-show="appLoggedUser.userType=='ut01' || appLoggedUser.userType=='ut03' && isOwner" ng-click="editEvent()">Editar evento</button>
+			<button type="button" class="btn btn-primary btn-show center-block width100" ng-show="appLoggedUser.userType=='ut01' || appLoggedUser.userType=='ut03' && isOwner" id="editButton" ng-click="editEvent()">Editar evento</button>
 		</div>
 	</div><!-- row -button- -->
 </div>
@@ -28,8 +27,8 @@
 
 		</div>
 		<div class="purchaseBtnCol col-xs-12 col-sm-3">
-			<div>
-				<a class="btn btn-block  btn-lg"  data-toggle="modal" ng-click="displayPanel()"> <span class="glyphicon glyphicon-tags"></span> Comprar / Reservar</a>
+			<div ng-hide="hidePurchaseButton">
+				<a class="btn btn-block btn-lg"  data-toggle="modal"  ng-click="displayPanel()"> <span class="glyphicon glyphicon-tags"></span> Comprar / Reservar</a>
 			</div>
 			<input type="button" class="btn btn-primary" value="prueba" ng-click="prueba()">
 		</div>
@@ -39,7 +38,7 @@
  -->
 	<div class="row" ng-show="showMap">
 		<div class="col-lg-8 col-lg-offset-2">
-			<h3>Selecciona la localidad.</h3>
+			<h3 class="text-center">Selecciona la localidad.</h3>
 			<og-teatro ng-if="eventSiteId=='si01'"></og-teatro>
 			<og-auditorio ng-if="eventSiteId=='si02'"></og-auditorio>  
 			<og-estadio ng-if="eventSiteId=='si03'"></og-estadio> 
@@ -47,7 +46,7 @@
 			<div>
 				<form name="siteAmountForm" class="siteAmountForm" novalidate ng-if="noMap">
 					<label>Cantidad de asientos / espacios:</label>
-					<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model= "seatAmount">
+					<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model="seatAmount" ng-change="showResume()">
 				</form>
 			</div>
 		</div>
@@ -81,9 +80,9 @@
 			        <img src="images/seats/seat_reserved.png" class="padding-left">  Reservada
 			        <img src="images/seats/seat_selected.png" class="padding-left">  Seleccionada
 			    </div>
-			    <div class="buttons">
+			    <div class="buttons" ng-show="seatsButtons">
 			        <button class="btn btn-danger btn-clear" ng-click="clearSelected()">Limpiar</button>
-			        <button class="btn btn-primary btn-show" ng-click="showSelected()">Resumen</button>
+			        <button class="btn btn-primary btn-show" ng-click="showSelected()">Continuar</button>
 			    </div>
 			</div>
 		</div>
@@ -95,14 +94,25 @@
 		<div class="col-lg-8 col-lg-offset-2">
 			<form name="siteAmountForm" class="siteAmountForm" novalidate ng-if="noMap" >
 				<label>Cantidad de asientos / espacios:</label>
-				<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model= "seatAmount" ng-init=0>
+				<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="2" ng-model= "seatAmount" ng-init=0 ng-change="showResume()">
+				<!-- <p ng-bind="seatAmount"></p> -->
+				<!-- <p ng-if="seatAmount!==''">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae recusandae, veniam quaerat accusamus tempore cum enim voluptate beatae amet nam non, quo mollitia a consectetur modi fugit officiis laboriosam nostrum?</p> -->
+  
 			</form>
 		</div>
 	</div>
 
 	<div class="row paymentDetailsRow">
+		<div class="col-xs-12">
+			<h2 class="title text-center" ng-show="resume">Resumen</h2>
+			<div class="buttons">
+			    <button class="btn center-block btn-warning back-button" ng-show="backSeats" ng-click="backToSeats()">Modificar</button>
+			</div>
+		</div>
 		<div class="col-xs-12 col-sm-5 col-sm-offset-2">
+			
 			<div ng-show="resume">
+
 				<p>{{msg}}</p>
 				<p ng-show="showPrice">Precio total: {{total | currency: '¢'}}</p>
 				<p>{{clientSelectedSeats}}</p>
@@ -119,72 +129,128 @@
 <div> <!-- container -->
 
 
+<!-- alert Modal -->
+<div id="alertModal" class="modal fade alert-modal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+        <p class="text-center">{{alertMsg}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-clear" data-dismiss="modal">Close</button>
+      </div>
+    </div>
 
+  </div>
+</div>
 
-	<!-- Modal -->
-	<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="paymentModalLabel">Tarjeta de Crédito o Débito</h4>
-				</div>
-				<div class="row paymentForm">
-					<form novalidate name="paymentForm" ng-submit="paymentForm.$valid && paymentFormRegister()" class="col-md-10 col-md-offset-1">
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-sm-12">
-									<label for="creditCard">Número de tarjeta</label>
-									<input class="col-sm-6" type="text" name="creditCard" id="creditCard" ng-model="ccinfo.number" required data-credit-card-type data-ng-pattern="/^[0-9]+$/" data-ng-minlength="15" maxlength="19" placeholder="Número de tarjeta" ng-model-options="{ updateOn:'blur'}"><small> {{ccinfo.type}}</small>
+<!-- payment Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
 
-									<div class="col-sm-12" ng-show="paymentForm.creditCard.$invalid && paymentForm.creditCard.$touched">
-										<sub ng-show="paymentForm.creditCard.$error.minlength">Tarjeta de crédito debe contener entre 15 y 19 números</sub>
-										<sub ng-show="paymentForm.creditCard.$error.pattern">Tarjeta de crédito debe contener solo números</sub>
-										<sub ng-show="paymentForm.creditCard.$error.invalid">La tarjeta debe ser una Amex, Visa, Discover, o Master Card válida</sub>
-										<sub ng-show="paymentForm.creditCard.$error.required">Tarjeta de crédito requerida</sub>
-									</div>
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="paymentModalLabel" ng-hide="successfulPurchase">Tarjeta de Crédito o Débito</h4>
+				<h4 class="modal-title" ng-show="successfulPurchase">Compra realizada exitosamente</h4>
+			</div>
+
+			<div class="modal-body">
+				<div class="row paymentForm" ng-hide="successfulPurchase">
+					<form novalidate name="paymentForm" ng-submit="paymentForm.$valid && getTickets()" class="col-md-10 col-md-offset-1">
+						<div class="row">
+							<div class="col-sm-12">
+								<label for="creditCard">Número de tarjeta</label>
+								<input class="col-sm-6" type="text" name="creditCard" id="creditCard" ng-model="ccinfo.number" required data-credit-card-type data-ng-pattern="/^[0-9]+$/" data-ng-minlength="15" maxlength="19" placeholder="Número de tarjeta" ng-model-options="{ updateOn:'blur'}"><small> {{ccinfo.type}}</small>
+
+								<div class="col-sm-12" ng-show="paymentForm.creditCard.$invalid && paymentForm.creditCard.$touched">
+									<sub ng-show="paymentForm.creditCard.$error.minlength">Tarjeta de crédito debe contener entre 15 y 19 números</sub>
+									<sub ng-show="paymentForm.creditCard.$error.pattern">Tarjeta de crédito debe contener solo números</sub>
+									<sub ng-show="paymentForm.creditCard.$error.invalid">La tarjeta debe ser una Amex, Visa, Discover, o Master Card válida</sub>
+									<sub ng-show="paymentForm.creditCard.$error.required">Tarjeta de crédito requerida</sub>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<label for="securityCode">Código de seguridad</label>
-									<input class="col-sm-2" type="text" name="securityCode" id="securityCode" ng-model="ccinfo.securityCode" placeholder="CCV" required data-ng-pattern="/^[0-9]+$/" data-ng-minlength="3" maxlength="4" ng-model-options="{ updateOn:'blur'}">
-									<div class="col-sm-12" ng-show="paymentForm.securityCode.$invalid && paymentForm.securityCode.$touched">
-										<sub ng-show="paymentForm.securityCode.$error.pattern">Código de seguridad debe ser solo números</sub>
-										<sub ng-show="paymentForm.securityCode.$error.minlength">Código de seguridad debe ser de 3-4 dígitos</sub>
-										<sub ng-show="paymentForm.securityCode.$error.required">Código de seguridad requerido</sub>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<label>Fecha de expiración</label>
-									<select class="col-sm-3" ng-model="ccinfo.month" name="month" data-card-expiration required ng-model-options="{ updateOn:'blur'}">
-										<option disabled selected value="">Mes</option>
-										<option ng-repeat="month in months" value="{{$index+1}}" > {{$index+1}}</li>
-									</select>
-
-									<select class="col-sm-3" ng-model="ccinfo.year" name="year" required ng-model-options="{ updateOn:'blur'}">
-										<option disabled selected value="">Año</option>
-										<option ng-repeat="year in [] | range:currentYear:currentYear+13">{{year}}</li>
-									</select>
-
-									<div class="col-sm-12" ng-show="paymentForm.month.$invalid && paymentForm.month.$touched">
-										<sub ng-show="paymentForm.month.$error.required">Mes de expiración requerido</sub>
-									</div>
-									<div class="col-sm-12" ng-show="paymentForm.year.$invalid && paymentForm.year.$touched">
-										<sub ng-show="paymentForm.year.$error.required">Año de expiración requerido</sub>
-										<sub ng-show="paymentForm.month.$error.invalid">Fecha de expiración es inválida</sub>
-									</div>
-								</div>
-							</div>								
 						</div>
-						<div class="modal-footer">
+						<div class="row">
+							<div class="col-sm-12">
+								<label for="securityCode">Código de seguridad</label>
+								<input class="col-sm-2" type="text" name="securityCode" id="securityCode" ng-model="ccinfo.securityCode" placeholder="CCV" required data-ng-pattern="/^[0-9]+$/" data-ng-minlength="3" maxlength="4" ng-model-options="{ updateOn:'blur'}">
+								<div class="col-sm-12" ng-show="paymentForm.securityCode.$invalid && paymentForm.securityCode.$touched">
+									<sub ng-show="paymentForm.securityCode.$error.pattern">Código de seguridad debe ser solo números</sub>
+									<sub ng-show="paymentForm.securityCode.$error.minlength">Código de seguridad debe ser de 3-4 dígitos</sub>
+									<sub ng-show="paymentForm.securityCode.$error.required">Código de seguridad requerido</sub>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<label>Fecha de expiración</label>
+								<select class="col-sm-3" ng-model="ccinfo.month" name="month" data-card-expiration required>
+									<option disabled selected value="">Mes</option>
+									<option ng-repeat="month in months" value="{{$index+1}}" > {{$index+1}}</li>
+								</select>
+
+								<select class="col-sm-3" ng-model="ccinfo.year" name="year" required ng-model-options="{ updateOn:'blur'}">
+									<option disabled selected value="">Año</option>
+									<option ng-repeat="year in [] | range:currentYear:currentYear+13">{{year}}</li>
+								</select>
+
+								<div class="col-sm-12" ng-show="paymentForm.month.$invalid && paymentForm.month.$touched">
+									<sub ng-show="paymentForm.month.$error.required">Mes de expiración requerido</sub>
+								</div>
+								<div class="col-sm-12" ng-show="paymentForm.year.$invalid && paymentForm.year.$touched">
+									<sub ng-show="paymentForm.year.$error.required">Año de expiración requerido</sub>
+									<sub ng-show="paymentForm.month.$error.invalid">Fecha de expiración es inválida</sub>
+
+								</div>
+							</div>
+						</div>	
+
+						<div class="row modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-							<button type="submit" class="btn btn-primary">Comprar</button>
-						</div>
+							<button type="submit" class="btn btn-primary" ng-disabled="paymentForm.$invalid">Comprar</button>
+						</div>							
 					</form>
 				</div>
+
+				<div class="row transactInfo">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="purchaseInfo" ng-show="successfulPurchase && isPurchase">
+							<h4>Resumen de la compra</h4>
+							<p>Código de Compra: {{purchaseInfo.code}}</p>
+							<p>Cantidad de boletos: {{purchaseInfo.ticketAmount}}</p>
+							<p>Evento: {{purchaseInfo.eventName}}</p>
+							<p>Lugar: {{purchaseInfo.place}}</p>
+							<p>Total cancelado: {{total | currency: '¢'}}</p>
+							<p>Hora del evento: {{purchaseInfo.datetime}}</p>
+							<p>Asientos: {{purchaseInfo.seats}}</p>
+						</div><!-- row purchaseInfo -->
+					</div>
+					<div class="row modal-footer" ng-show="successfulPurchase">
+						<div class="col-sm-10 col-sm-offset-1">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>	
+
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="reservationInfo" ng-show="successfulPurchase && isReservation">
+							<h4>Resumen de la reservación</h4>
+							<p>Código de Reservación: </p>
+							<p>Cantidad de boletos: {{ticketsNumber}}</p>
+							<p>Evento: {{currentEvent.name}}</p>
+							<p>Lugar: </p>
+							<p>Total a cancelar: {{total | currency: '¢'}}</p>
+							<p>Hora del evento: </p>
+							<p>Asientos: {{purchaseInfo.seats}}</p>
+						</div><!-- row purchaseInfo -->
+					</div>
+				</div><!-- row -->
+
 			</div>
 		</div>
 	</div>

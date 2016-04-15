@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('promotorSignupController', ['$scope','localStorageService','formService','promotorService', '$location', function ($scope,localStorageService, formService, promotorService, $location) {
+.controller('promotorSignupController', ['$scope','localStorageService','formService','promotorService', '$location','$routeParams', function ($scope,localStorageService, formService, promotorService, $location,$routeParams) {
 
 	$scope.newPromotor={};
 	$scope.error="";
@@ -34,5 +34,30 @@ angular.module('OGTicketsApp.controllers')
 	$scope.dismissRequest= function () {
 		// body...
 	}
+
+	//Editar promotor.
+	var promotorId= $routeParams.promotorId;
+	var currentPromotor= promotorService.retrievePromotor(promotorId);
+	$scope.newPromotor= currentPromotor;
+	
+	if(promotorId==undefined){
+		$scope.editing= false;
+	}else{
+		$scope.editing= true;
+		currentPromotor.date= new Date(currentPromotor.date);	
+	};
+
+	if(currentPromotor.typePerson==='personaJuridica'){
+		$scope.typePersonHide= true;
+	}else{
+		$scope.typePersonHide= false;
+	};
+
+	$scope.editPromotor=function(){
+		promotorService.replacePromotor(promotorId, $scope.newPromotor);
+		$scope.newPromotor={};
+		formService.clear($scope.formNewPromotor);
+		$location.path('/promoter-profile/'+promotorId);
+	};
 	
 }]);

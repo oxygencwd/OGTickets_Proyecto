@@ -16,16 +16,12 @@ class StorageService {
     private $pdo;
 
     public function __construct() {
-        /**
-         * TODO: Arreglar  --done-
-         * Una vez creada su base de datos:
-         * - Ingrese los datos correctos en ese diccionario.
-         * - Cambie el valor de la variable `$isDBReady` en el `UserService`.
-         */
+        // Incluimos el archivo que contiene las credenciales
+       // require("bd-credenciales.php");
         $config = [   //aqui se cambian los datos de la base datos
             'db_host' => '127.0.0.1:3308',
             // 'db_host' => 'localhost',
-            'db_name' => 'oxygen',
+            'db_name' => 'og_tickets',
             'db_user' => 'admin',
             'db_pass' => 'admin'
         ];
@@ -54,8 +50,11 @@ class StorageService {
          * Los datos en sí, se regresarán bajo la llave `data` del diccionario, iniciada en null
          */
         $result = [
-            'data' => null
+            "data" => null
         ];
+
+        // Verificamos si la sentencia a ejecutar es un insert
+        $isInsert = substr_count(strtoupper($query), "INSERT", 0, 7) > 0;
 
         try {
             // Preparamos la sentencia a ejecutar
@@ -64,16 +63,27 @@ class StorageService {
             // Asignamos los parámetros a la sentencia
             $stmt->execute($params);
 
-            // Ejecutamos la sentencia
-            while ($content = $stmt->fetch()) {
-                // Vaciando el contenido de cada fila dentro de `data` en el diccionario `result`.
-                $result['data'][] = $content;
+            /**
+             * Si intentamos recorrer el resultado de una sentencia `INSERT` dispararemos un error,
+             * debemos verificar que tipo de operación queremos realizar antes de ejecutarlo.
+             */
+            if ($isInsert) {
+                // Retornamos la cantidad de elementos afectados
+                $result["data"]["count"] = $stmt->rowCount();
+                // Junto con el ID del elemento agregado
+                $result["data"]["id"] = $this->pdo->lastInsertId();
+            } else {
+                // Ejecutamos la sentencia
+                while ($content = $stmt->fetch()) {
+                    // Vaciando el contenido de cada fila dentro de `data` en el diccionario `result`.
+                    $result["data"][] = $content;
+                }
             }
         } catch (PDOException $e) {
             // En caso de que algo saliera mal con nuestro intento de conexión, el mensaje se envia de vuelta al
             // servicio que consumió este método.
-            $result['error'] = true;
-            $result['message'] = $e->getMessage();
+            $result["error"] = true;
+            $result["message"] = $e->getMessage();
         }
 
         // Retorne el arreglo de resultado a quien sea que lo haya llamado.

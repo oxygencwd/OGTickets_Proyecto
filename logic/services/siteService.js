@@ -5,6 +5,15 @@ angular.module('OGTicketsApp.services')
 
 	var siteId= localStorageService.setIdCounter("siteIdCounter", 4);
 
+    //lista de  todos sitios activos
+    var getSiteList= function () {
+        var allSites= sites;
+        result = allSites.filter(function (item) {
+            return item.active == true;
+        });
+        return result;
+    };
+
     //vefificar si el sitio existe
 	var siteExists= function (site) {
 		var siteExists= sites.filter(function (item) {
@@ -59,11 +68,28 @@ angular.module('OGTicketsApp.services')
     };
 
 
+    var replaceSite= function(siteId, newSite){
+        var newSiteList= removeOldSite(siteId);
+        newSiteList.push(newSite);
+        localStorageService.set("siteList", newSiteList);
+    };   
+
+    var removeOldSite= function (siteId){
+        siteList = sites.filter(function (item) {
+            return item.id !== siteId;
+        });
+        return siteList;
+    };
+
+
 // puntos de acceso
 	return{
+        getSiteList:getSiteList,
         sites:sites,
 		registerSite:registerSite,
         getEventSite:getEventSite,
-        retrieveSite:retrieveSite
+        retrieveSite:retrieveSite,
+        replaceSite:replaceSite,
+        removeOldSite:removeOldSite
 	};
 }]);

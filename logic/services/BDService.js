@@ -3,13 +3,13 @@ angular.module('OGTicketsApp.services')
 
 	//listas quemadas
 	var savedUserList=[
-		{ "name": "Manuel Mendoza", "id": "cl01", "active": true, "phone":"84394523", "email": "manuelmendoza@gmail.com", "password": "Abcdefg1", "gender": "Masculino", "personalId": "115290295", "birthday": "1994-04-29T06:00:00.000Z", "userType": "ut02" },
+		{ "name": "Manuel Mendoza", "id": "cl01", "active": true, "phone":"84394523", "email": "manuelmendoza@gmail.com", "password": "Abcdefg1", "gender": "Masculino", "personalId": "115290295", "birthday": "1994-04-29T06:00:00.000Z", "userType": "ut02", "image": "images/client-images/manuel.PNG" },
 
-		{ "name": "Juan Pérez", "id": "cl02", "active": true, "phone":"50943234", "email": "juanperez@gmail.com", "password": "Juanperez2", "gender": "Masculino", "personalId": "109820432", "birthday": "1984-06-22T06:00:00.000Z", "userType": "ut02" },
+		{ "name": "Juan Pérez", "id": "cl02", "active": true, "phone":"50943234", "email": "juanperez@gmail.com", "password": "Juanperez2", "gender": "Masculino", "personalId": "109820432", "birthday": "1984-06-22T06:00:00.000Z", "userType": "ut02", "image": "images/client-images/juan.jpg" },
 
-		{ "name": "Karla Jiménez", "id": "cl03", "active": false, "phone":"76432432", "email": "karlajimenez@yahoo.es", "password": "Karlita26", "gender": "Femenino", "personalId": "112980324", "birthday": "1990-06-26T06:00:00.000Z", "userType": "ut02" },
+		{ "name": "Karla Jiménez", "id": "cl03", "active": false, "phone":"76432432", "email": "karlajimenez@yahoo.es", "password": "Karlita26", "gender": "Femenino", "personalId": "112980324", "birthday": "1990-06-26T06:00:00.000Z", "userType": "ut02", "image": "images/client-images/karla.jpg" },
 
-		{ "name": "Naty Mata", "id": "cl04", "active": true, "phone":"85423689", "email": "natymata@gmail.com", "password": "123", "gender": "Femenino", "personalId": "304080245", "birthday": "1986-01-26T06:00:00.000Z", "userType": "ut02" },
+		{ "name": "Naty Mata", "id": "cl04", "active": true, "phone":"85423689", "email": "natymata@gmail.com", "password": "123", "gender": "Femenino", "personalId": "304080245", "birthday": "1986-01-26T06:00:00.000Z", "userType": "ut02", "image": "images/client-images/naty.jpg" },
 /*promotores*/
 		{ "name": "Cheese Productions", "password": "Holahola77", "id": "pr01", "active": true, "email": "cheeseproductions@gmail.com", "personalId": "3816497372", "areaOfSpecialization": "Conciertos", "phoneOne": "60324127", "address": "Desamparados, San José", "phoneTwo": "22236543", "userType": "ut03" },
 
@@ -19,7 +19,7 @@ angular.module('OGTicketsApp.services')
 /*cajeros*/
 		{ "name": "Juanita Hidalgo Rodríguez", "active": true, "password": "Hidalgo92", "id": "cs01", "gender": "Femenino", "email": "j.hidalgo.rodriguez@hotmail.com", "personalId": "183323434", "phone": "88120922", "birthday": "1991-10-21T06:00:00.000Z", "userType": "ut04" },
 
-		{ "name": "Josefina Duarte", "password": "Duarte7621", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "personalId": "103923221", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": "ut04" },
+		{ "name": "Josefina Duarte", "password": "Duarte", "active": true, "id": "cs02", "gender": "Femenino", "email": "josefita@yahoo.com", "personalId": "103923221", "phone": "22216709", "birthday": "1983-09-12T06:00:00.000Z", "userType": "ut04" },
 
 		{ "name": "Carlos Ugalde", "password": "Ugalde2223", "active": true, "id": "cs03", "gender": "Masculino", "email": "carlosugalde_8732@hotmail.com", "personalId": "129321262", "phone": "73902476", "birthday": "1993-01-29T06:00:00.000Z", "userType": "ut04"},
 /*admin*/		
@@ -41,15 +41,15 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedSiteList=[
-		{ "id": "si01", "name":"Teatro Nacional", "phoneOne": 20101110, "phoneTwo": 20101111, "capacity": 692, "latitude": 9.933126, "longitude": -84.077087, "address": "Avenida Segunda entre Calles 3 y 5, Centro, San José, Costa Rica", "active": true},
+		{ "id": "si01", "name":"Teatro Nacional", "phoneOne": 20101110, "phoneTwo": 20101111, "capacity": 692, "latitude": 9.933126, "longitude": -84.077087, "address": "Avenida Segunda entre Calles 3 y 5, Centro, San José, Costa Rica", "active": true, "image": "images/sites/teatroNacional.png"},
 
-		{ "id": "si02", "name":"Auditorio Nacional", "phoneOne": 22230725, "phoneTwo": "", "capacity": 642, "latitude": 9.933238, "longitude": -84.068303, "address": "San José, Costa Rica", "active": true},
+		{ "id": "si02", "name":"Auditorio Nacional", "phoneOne": 22230725, "phoneTwo": "", "capacity": 642, "latitude": 9.933238, "longitude": -84.068303, "address": "San José, Costa Rica", "active": true, "image": "images/sites/auditorioNacional.png"},
 
-		{ "id": "si03", "name":"Estadio Nacional", "phoneOne": 25490700, "phoneTwo": "", "capacity": 2102, "latitude": 9.936619, "longitude": -84.107733, "address": "Parque Metropolitano la Sabana, San José, Costa Rica", "active": true},
+		{ "id": "si03", "name":"Estadio Nacional", "phoneOne": 25490700, "phoneTwo": "", "capacity": 2102, "latitude": 9.936619, "longitude": -84.107733, "address": "Parque Metropolitano la Sabana, San José, Costa Rica", "active": true, "image": "images/sites/estadioNacional.png"},
 
-		{ "id": "si04", "name":"Palacio de los Deportes", "phoneOne": 25986536, "phoneTwo": "", "capacity": 540, "latitude": 10.936619, "longitude": -82.107733, "address": "Heredia, Costa Rica", "active": true},
+		{ "id": "si04", "name":"Palacio de los Deportes", "phoneOne": 25986536, "phoneTwo": "", "capacity": 540, "latitude": 10.936619, "longitude": -82.107733, "address": "Heredia, Costa Rica", "active": true, "image": "images/sites/palacio.png"},
 
-		{ "id": "si05", "name":"Teatro de la Danza", "phoneOne": 25486985, "phoneTwo": "", "capacity": 300, "latitude": 11.555619, "longitude": -85.107733, "address": "San José, Costa Rica", "active": true}
+		{ "id": "si05", "name":"Teatro de la Danza", "phoneOne": 25486985, "phoneTwo": "", "capacity": 300, "latitude": 11.555619, "longitude": -85.107733, "address": "San José, Costa Rica", "active": true, "image": "images/sites/teatroDanza.png"}
 	];
 
 	var savedTransactionList=[

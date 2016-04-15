@@ -7,38 +7,57 @@
 					<h1 class="text-center">Usuarios</h1>
 					<form name="userListForm">
 						<div class="form-group p-relative">
-						  <input type="search" class="form-control width80" placeholder="Buscar usuarios">
+						  <input type="search" ng-model="search" class="form-control width80" placeholder="Buscar usuarios">
 						  <button type="button" class="btn-absolute"><span class="glyphicon  glyphicon-search"></span></button>
 						</div> 
 					</form>
 				</div> <!-- headerRow -->
 				<div class="container-fluid">
+					<div class="row">
+						<div  class="width90"><span class="glyphicon glyphicon-ok-circle"></span> Activo</div>
+						<div  class="width90"><span class="glyphicon glyphicon-remove-circle"></span> Inactivo</div>
+					</div>
 					<div class="row"><!-- body-row -->
-						<div class="col-md-6">
+
+						<div class="allUsers col-md-6" ng-hide="search.length>0">
 							<ul class="width90">
-								<li><a ng-href="#/">item list example <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
-								<li><a ng-href="#/">item list example <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
-								<li><a ng-href="#/">item list example <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
-								<li><a ng-href="#/">item list example <span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+								<li ng-repeat="user in allUsers track by $index"><a ng-click=" $parent.userToDisplay = user;">{{user.name}}
+								<span ng-show="user.active" class="glyphicon glyphicon-ok-circle"></span><span ng-show="!user.active" class="glyphicon glyphicon-remove-circle"></span>
+								<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
 							</ul>
 						</div>
+
+						<div class="allUsers col-md-6" ng-show="search.length>0">
+							<div class="width90">
+								<h3>Búsqueda</h3>
+							</div>
+							<h4 class="width90" ng-show="(allUsers | filter:search).length == 0">Ningún resultado encontrado</h4>
+							<ul class="width90">
+								<li ng-repeat="user in allUsers | filter:search track by $index"><a ng-click="$parent.userToDisplay = user;">{{user.name}} <span ng-show="user.active" class="glyphicon glyphicon-ok-circle"></span><span ng-show="!user.active" class="glyphicon glyphicon-remove-circle"></span>
+								<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
+							</ul>
+						</div>
+
 						<div class="col-md-6">
-							<div class="user-info-container width90">
+							<div ng-show="userToDisplay" class="user-info-container width90">
 								<div class="user-item-info">
-									<h3>Nombre del Usuario</h3>
-									<p><strong>id:</strong> xxxxx</p>
+									<h3>{{userToDisplay.name}}</h3>
+									<p><strong>id:</strong> {{ userToDisplay.id }}</p>
 								</div>
 								<div class="user-item-info">
-									<p><strong>E-mail:</strong></p>
-									<p>info@prueba.com</p>
+									<p><strong>E-mail:</strong> {{ userToDisplay.email }}</p>
 								</div>
 								<div class="user-item-info">
-									<p><strong>Tipo de Usuario</strong></p>
-									<p>Promotor</p>
+									<p><strong>Tipo de Usuario: </strong>
+									<span ng-show="userToDisplay.userType == 'ut02'">Cliente</span>
+									<span ng-show="userToDisplay.userType == 'ut03'">Promotor</span>
+									<span ng-show="userToDisplay.userType == 'ut04'">Cajero</span>
+									</p>
 								</div>
-								<button class="btn btn-warning center-block">Editar Usuario</button>
+								<button class="btn btn-warning center-block" ng-click="editActive(userToDisplay.id)"><span ng-show="!userToDisplay.active">Activar</span><span ng-show="userToDisplay.active">Inactivar</span> usuario</button>
 							</div>
 						</div>
+
 					</div><!-- body-row -->
 				</div> <!-- container -->
 			</div><!-- upcoming-events -->

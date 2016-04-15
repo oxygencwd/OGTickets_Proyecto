@@ -11,6 +11,7 @@
 
 namespace App\Controllers;
 
+use App\Services\LoggingService;
 use App\Services\UserService;
 use Slim\Http\Request;
 
@@ -54,30 +55,20 @@ class UserController {
             $password = $formData["password"];
         }
 
-        /**
-         * Si tanto email y password están definidos, mandamos a llamar al método de login del servicio.
-         * Tenga en cuenta que el controlador solo pasa datos de un lado a otro, al servicio en PHP le toca revisar
-         * la validez de esos datos.
-         */
-        if (isset($email, $password)) {
-            $loginResult = $this->userService->login($email, $password);
+        $loginResult = $this->userService->login($email, $password);
 
-            if (array_key_exists("error", $loginResult)) {
-                $result["error"] = true;
-            } else {
-                /**
-                 * Si el usuario inició sesión, creamos un cookie llamado `loggedIn` y le asignamos el valor de true.
-                 * Este cookie se debe expirar en caso de cerrar sesión.
-                 * http://php.net/manual/en/function.setcookie.php
-                 */
-                setcookie($this->nombreCookie, true, time()+3600);
-            }
-
-            $result["message"] = $loginResult["message"];
-            $result["user"] = $loginResult["user"];
-        } else {
+        if (array_key_exists("error", $loginResult)) {
             $result["error"] = true;
-            $result["message"] = "Email and password can not be empty.";
+            $result["message"] = $loginResult["message"];
+        } else {
+            /**
+             * Si el usuario inició sesión, creamos un cookie llamado `loggedIn` y le asignamos el valor de true.
+             * Este cookie se debe expirar en caso de cerrar sesión.
+             * http://php.net/manual/en/function.setcookie.php
+             */
+            setcookie($this->nombreCookie, true, time()+3600);
+            $result["user"] = $loginResult["user"];
+            $result["message"] = $loginResult["message"];
         }
 
         // El array creado en ese método se envía como de vuelta al enrutador.
@@ -94,14 +85,16 @@ class UserController {
     public function logout($request) {
         $result = [];
 
-        /**
-         * TODO: Implementar
-         * Pasos
-         * - Elimine cualquier cookie que se pudo haber creado en el back-end al iniciar sesión. Recuerde que para
-         * eliminar cookies, se debe poner una fecha de expiración en el pasado.
-         * Importante, este método no tiene llamada al servicio en PHP porque de momento no existe ninguna operación
-         * en el servicio que lo requiera. Esto podría cambiar en su aplicación.
-         */
+        // Verificamos si el usuario tenía un cookie en primer lugar
+        if (array_key_exists($this->nombreCookie, $_COOKIE)) {
+            $result["message"] = "User was logged out";
+            // Si lo tenía, lo expiramos
+            setcookie($this->nombreCookie, true, time()-10);
+        } else {
+            // Si no, retornamos un error, el usuario accedió al logout sin iniciar sesión
+            $result["error"] = true;
+            $result["message"] = "User never logged in";
+        }
 
         return $result;
     }
@@ -115,16 +108,37 @@ class UserController {
      */
     public function register($request) {
         $result = [];
+        $formData = $request->getParsedBody();
+        $fullName = null;
+        $email = null;
+        $password = null;
+        $repeatPassword = null;
 
-        /**
-         * TODO: Implementar
-         * Pasos
-         * - Tome los datos del formulario, similar al método de login.
-         * - Verifique que todos los datos existan.
-         * - Si efectivamente existen, llame al método `register` del lado del servicio.
-         * - Comunique de vuelta al Front-End el resultado de la operación con un array que tenga la misma estructura
-         * al que se usó en el método `login`.
-         */
+        LoggingService::logVariable($formData, __FILE__, __LINE__);
+
+        if (array_key_exists("email", $formData)) {
+            $email = $formData["email"];
+        }
+
+        if (array_key_exists("fullName", $formData)) {
+            $fullName = $formData["fullName"];
+        }
+
+        if (array_key_exists("password", $formData)) {
+            $password = $formData["password"];
+        }
+
+        if (array_key_exists("repeatPassword", $formData)) {
+            $repeatPassword = $formData["repeatPassword"];
+        }
+
+        $registerResult = $this->userService->register($email, $password, $repeatPassword, $fullName);
+
+        if (array_key_exists("error", $registerResult)) {
+            $result["error"] = true;
+        }
+
+        $result["message"] = $registerResult["message"];
 
         return $result;
     }

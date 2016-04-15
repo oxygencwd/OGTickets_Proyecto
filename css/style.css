@@ -14,7 +14,7 @@ html, body,{
 
 
 .box{
-	height: 90%;
+	height: 100%;
 }
 
 body{
@@ -57,15 +57,9 @@ header span.user-icon{
 	max-width: 100%;
 }
 
-.carousel{
-	margin-top: 75px;
-}
-
-
 .box{
-	margin-top: 70px;
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	background-color: #000;
 }
 
@@ -76,7 +70,6 @@ header span.user-icon{
 .carousel,.item, .carousel .active{
 	height: 100%;
 }
-
 
 .carousel-inner{
 	height:100%;
@@ -129,6 +122,34 @@ header span.user-icon{
 	height: 100%;
 	width: 100%;
 }
+
+.carousel-gray-color{
+	width: 100%;
+	height: 100%;
+	background:rgba(0, 0, 0, .15);
+	top: 0;
+	left: 0;
+}
+
+.relative{
+	position: relative;
+}
+
+.eventLink{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.eventLink a{
+	color: #fff;
+	font-size:2em;
+	padding: 10px 20px;
+	border:2px solid #fff;
+	text-decoration: none;
+}
+
+
 
 /*secondary-nav-bar*/
 .secondary-navbar .navbar-nav>li>a{
@@ -634,6 +655,7 @@ label{
 	padding: 0;
 	overflow: hidden;
 	position: relative;
+	margin-bottom: 0.5em;
 }
 
 .promoter-event-item li img{
@@ -650,9 +672,14 @@ label{
 
 .promoter-event-item .pei-info{
 	position: absolute;
-	bottom: 4em;
+	bottom: 3em;
 	left: 5%;
 	color:#fff;
+}
+
+.pei-info *, .upcoming-event-info *{
+	background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .5);
 }
 
 .promoter-event-container{
@@ -712,9 +739,7 @@ label{
 	color: #fff;
 	width: 90%;
 }
-.eventMembersPriceText h4,p{
-	padding: 10px;
-}
+
 .eventBtnComprar{
 	width: 80%;
 	margin-bottom: 4em;
@@ -836,6 +861,11 @@ label{
 	padding-top: 7em;
 }
 
+#editButton{
+	margin-top: 10px;
+	background-color: #006f6f;
+}
+
 .heroImage{
 	padding-right: 0;
 	background-color: #000;
@@ -852,6 +882,11 @@ label{
 	top: 50%;
 	transform: translate(0, -50%);
 	color: white;
+}
+
+.atAGlanceInfo a{
+	color: white;
+	text-decoration: none;
 }
 
 .mapSection{
@@ -1335,7 +1370,7 @@ form sub, .error{
 }
 
 .btn-danger.btn-clear{
-	background-color: #fb1b3f;
+	background-color: #fd1c3e;
 	border:none;
 	border-radius: 0;	
 }
@@ -1350,18 +1385,27 @@ form sub, .error{
 	color: #000;
 }
 
+.alert-modal p{
+	font-size: 1.2em;
+	margin:0;
+	padding: 0;
+}
+
 
 /*********************************************************************
 **************************MEDIA QUERYS********************************
 **********************************************************************/
 @media (max-width: 1200px){
-	
+	.box{
+		margin-top: 40px;
+	}
 }
 
 
 @media (max-width: 992px){
 	.box{
 		height: 75%;
+		margin-top:75px;
 	}
 
 	.carousel-info{
@@ -1414,6 +1458,10 @@ form sub, .error{
 
 /*Ends site profile*/
 
+.adminView a{
+	width: 50%;
+}
+
 }
 
 
@@ -1426,6 +1474,11 @@ form sub, .error{
 	.carousel-info{
 		top:60px;
 		left: 15%;
+	}
+
+	.eventLink a{
+		font-size:1.7em;
+		padding: 8px 16px;
 	}
 
 	.box{
@@ -1523,6 +1576,10 @@ form sub, .error{
 
 /*Ends Site Profile*/
 
+.adminView a{
+	width: 70%;
+}
+
 }
 
 @media (max-width: 600px){
@@ -1540,6 +1597,11 @@ form sub, .error{
 
 	.carousel-info a{
 		font-size: 1em; 
+	}
+
+	.eventLink a{
+		font-size:1.4em;
+		padding: 6px 12px;
 	}
 
 	.upcoming-events img{
@@ -1592,6 +1654,11 @@ form sub, .error{
 		font-size: 1em; 
 	}
 
+	.eventLink a{
+		font-size:1em;
+		padding: 4px 8px;
+	}
+
 	.secondary-navbar input{
 		margin-left: 8%;
 	}
@@ -1630,6 +1697,29 @@ form sub, .error{
 
 	.client-profile .upcoming-event-info{
 		left: 14%;
+	}
+
+	.adminView a{
+		width: 100%;
+		font-size: 0.9em;
+		font-weight: normal;
+	}
+
+	.adminView h1{
+		font-size: 2em;
+		text-align: center;
+	}
+
+	.adminView h2{
+		font-size: 1.5em;
+	}
+
+	.adminView h3{
+		font-size: 1em;
+	}
+
+	.adminView {
+		padding-top: 7em;
 	}
 
 }
