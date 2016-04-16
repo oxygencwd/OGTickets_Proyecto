@@ -57,12 +57,7 @@ header span.user-icon{
 	max-width: 100%;
 }
 
-/*.carousel{
-	margin-top: 75px;
-}*/
-
 .box{
-	/*margin-top: 70px;*/
 	width: 100%;
 	height: 100%;
 	background-color: #000;
@@ -75,7 +70,6 @@ header span.user-icon{
 .carousel,.item, .carousel .active{
 	height: 100%;
 }
-
 
 .carousel-inner{
 	height:100%;
@@ -128,6 +122,34 @@ header span.user-icon{
 	height: 100%;
 	width: 100%;
 }
+
+.carousel-gray-color{
+	width: 100%;
+	height: 100%;
+	background:rgba(0, 0, 0, .15);
+	top: 0;
+	left: 0;
+}
+
+.relative{
+	position: relative;
+}
+
+.eventLink{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.eventLink a{
+	color: #fff;
+	font-size:2em;
+	padding: 10px 20px;
+	border:2px solid #fff;
+	text-decoration: none;
+}
+
+
 
 /*secondary-nav-bar*/
 .secondary-navbar .navbar-nav>li>a{
@@ -1454,6 +1476,11 @@ form sub, .error{
 		left: 15%;
 	}
 
+	.eventLink a{
+		font-size:1.7em;
+		padding: 8px 16px;
+	}
+
 	.box{
 		height: 60%;
 	}
@@ -1572,6 +1599,11 @@ form sub, .error{
 		font-size: 1em; 
 	}
 
+	.eventLink a{
+		font-size:1.4em;
+		padding: 6px 12px;
+	}
+
 	.upcoming-events img{
 		width: 67%;
 		height: 13em;
@@ -1620,6 +1652,11 @@ form sub, .error{
 
 	.carousel-info a{
 		font-size: 1em; 
+	}
+
+	.eventLink a{
+		font-size:1em;
+		padding: 4px 8px;
 	}
 
 	.secondary-navbar input{

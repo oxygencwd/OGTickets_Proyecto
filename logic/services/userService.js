@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('userService', ['localStorageService', '$cookieStore', function(localStorageService, $cookieStore) {
+.service('userService', ['localStorageService', '$log', '$q', '$http', '$cookieStore', function(localStorageService,$log, $q, $http, $cookieStore) {
 
 	var users= localStorageService.getAll("userList");
 
@@ -22,49 +22,43 @@ angular.module('OGTicketsApp.services')
 
 	var setUser = function(users){
 		localStorageService.set("userList", users);
-	}
-
-	/* login, logout, register, isLoggedIn, getCurrentUser*/
+	};
 	
-	//trae la lista de todos los usuarios del localStorage y verifica si el email registrado existe, si es asi devuelve el objeto con la informacion del usuario.
-	var accountExists= function (user) {
-		var userExists= users.filter(function (item) {
-			return item.email== user.email;
-		});
-		return userExists;
-	}; //fin function	
-
+	
 	//evalua si la contraseña y el password son los correctos, si el usuario esta activo y si pasa las validaciones lo loggea, devuelve un objeto con el nombre, id  y tipo de usuario, y la variable canLogin en true, si no devuelve un mensaje de error y canLogin en false.
 	var canLogin= function (user) {
-		var saved= accountExists(user);
-		var loggedUser={};
-		var msg="user found";
-		var canLogin= false;
-		var result={};
-		if(saved.length>0 && saved[0].active==true && saved[0].email==user.email && saved[0].password==user.password){
-			loggedUser= {
-				name: saved[0].name,
-				id: saved[0].id,
-				userType: saved[0].userType
-			};
-			canLogin= true;
-			result={
-				user: loggedUser,
-				msg: msg,
-				canLogin: canLogin
-			};
-		}else{
-			msg= "user not found";
-			result={
-				msg:msg,
-				canLogin: canLogin
-			};	
-		};
-		return result;
+		var defer= $q.defer();
+		var url= 'back-end/index.php/user/login'
+
+		$http.post(url, user)
+		.success(function(data, status) {
+		defer.resolve(data);
+		})
+		.error(function(error, status) {
+		defer.reject(error);
+		$log.error(error, status);
+		});
+
+		return defer.promise;
 	}; //end -canLogin
 
+
+	// var canLogin= function(objLogin) {
+	// 	var url= 'back-end/index.php/user/login'
+	// 	result= $http.post(url, objLogin);
+	// 	return result;
+	// };
+
+
+
+
 	//mete en la variable del $scope el usuario loggeado para que este disponible a lo largo de las vistas.
-	var login= function (appLoggedUser, usr) {
+	var login= function (appLoggedUser, objUsr) {
+		var usr= {};
+		usr.name= parseName(objUsr);
+		usr.id= objUsr.userId;
+		usr.userType= objUsr.userType;
+
 		appLoggedUser.name= usr.name;
 		appLoggedUser.id= usr.id;
 		appLoggedUser.userType= usr.userType;
@@ -72,6 +66,21 @@ angular.module('OGTicketsApp.services')
 
 		$cookieStore.put('isConnected', true);
       	$cookieStore.put('loggedUser', usr);
+	};
+
+	//toma el objeto y pasa por cada uno de los componentes el nombre y regresa el nombre completo con que el usuario esta regitrado.
+	var parseName= function(objUsr) {
+		var array=[];
+		array[0]= objUsr.firstName;
+		array[1]= objUsr.secondName;
+		array[2]= objUsr.lastName;
+		array[3]= objUsr.secondLastName;
+		for(i= 0; i<array.length; i++) {
+			if(array[i]==null){
+				array.splice(i,1);
+			}
+		}
+		return array.join(" ");
 	};
 
 	//deslogea al usuario.

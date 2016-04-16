@@ -13,7 +13,7 @@ create database OG_Tickets;
 use  OG_Tickets;
 #crear el usuario
 #CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
-#dar privilefios al usuario
+#dar privilefios al usuariotbusuario
 GRANT ALL PRIVILEGES ON OG_Tickets.* TO 'admin'@'localhost';
 #actualizar los privilegios
 FLUSH PRIVILEGES;
@@ -41,10 +41,9 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbUsuario` (
   `SegundoNombre` VARCHAR(45) NULL,
   `PrimerApellido` VARCHAR(45) NOT NULL,
   `SegundoApellido` VARCHAR(45) NULL,
-  `NombreCompleto` VARCHAR(255) GENERATED ALWAYS AS (concat(PrimerNombre,' ',SegundoNombre, ' ',PrimerApellido,' ',SegundoApellido)) VIRTUAL,
   `Cedula` VARCHAR(15) NOT NULL,
   `Email` VARCHAR(80) NOT NULL,
-  `Contraseña` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `Activo` TINYINT(1) NOT NULL DEFAULT 1,
   `TbTipoUsuario_idTipoUsuario` INT NOT NULL,
   PRIMARY KEY (`idUsuario`),
@@ -56,6 +55,26 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbUsuario` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
+
+
+/*-- -----------------------------------------------------
+-- Table `OG_Tickets`.`TbAdministrador`
+-- -----------------------------------------------------*/
+CREATE TABLE IF NOT EXISTS `og_tickets`.`tbAdministrador` (
+  `idAdmin` INT NOT NULL AUTO_INCREMENT,
+  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'ad',
+  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idAdmin)) VIRTUAL,
+  `nombreRol` VARCHAR(100) NOT NULL DEFAULT 'Administrador',
+  `TbUsuario_idUsuario` INT NOT NULL,
+  PRIMARY KEY (`idAdmin`),
+  UNIQUE INDEX `idAdmin_UNIQUE` (`idAdmin` ASC),
+  INDEX `TbUsuario_idUsuario_idx` (`TbUsuario_idUsuario` ASC),
+  CONSTRAINT `TbUsuario_idUsuario`
+    FOREIGN KEY (`TbUsuario_idUsuario`)
+    REFERENCES `OG_Tickets`.`TbUsuario` (`idUsuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
 /*-- -----------------------------------------------------
 -- Table `OG_Tickets`.`TbCliente`
 -- -----------------------------------------------------*/
@@ -64,11 +83,10 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbCliente` (
   `prefijo` VARCHAR(45) NOT NULL DEFAULT 'cl',
   `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idCliente)) VIRTUAL,
   `nombreRol` VARCHAR(100) NOT NULL DEFAULT 'Cliente',
-  `FechaNacimiento` DATE NOT NULL,
-  #`Edad` TINYINT(2) GENERATED ALWAYS AS (TIMESTAMPDIFF(YEAR, FechaNacimiento, CURDATE())) VIRTUAL,
-  `Telefono` DECIMAL(8) NOT NULL,
+  `FechaNacimiento` DATETIME NOT NULL,
+  `Telefono` INT(8) NOT NULL,
   `Genero` CHAR(1) NOT NULL,
-  `Foto` BLOB NULL,
+  `Foto` VARCHAR(255) NULL,
   `Discapacidad` TINYINT(1) NOT NULL DEFAULT 0,
   `TarjetaAsociada` DECIMAL(20) NULL,
   `TbUsuario_idUsuario` INT NOT NULL,
@@ -81,28 +99,6 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbCliente` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-
-/*-- -----------------------------------------------------
--- Table `OG_Tickets`.`TbAdministrador`
--- -----------------------------------------------------*/
-CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbAdministrador` (
-  `idAdmin` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'ad',
-  `appId` VARCHAR(10) GENERATED ALWAYS AS (concat(prefijo,idAdmin)) VIRTUAL,
-  `nombreRol` VARCHAR(100) NOT NULL DEFAULT 'Administrador',
-  `Contraseña` VARCHAR(45) NOT NULL,
-  `Email` VARCHAR(45) NOT NULL,
-  `TbTipoUsuario_idTipoUsuario` INT NOT NULL,
-  PRIMARY KEY (`idAdmin`),
-  INDEX `fk_TbAdministrador_TbTipoUsuario1_idx` (`TbTipoUsuario_idTipoUsuario` ASC),
-  UNIQUE INDEX `idAdmin_UNIQUE` (`idAdmin` ASC),
-  CONSTRAINT `fk_TbAdministrador_TbTipoUsuario1`
-    FOREIGN KEY (`TbTipoUsuario_idTipoUsuario`)
-    REFERENCES `OG_Tickets`.`TbTipoUsuario` (`idTipoUsuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-
-
 /*-- -----------------------------------------------------
 -- Table `OG_Tickets`.`TbPromotor`
 -- -----------------------------------------------------*/
@@ -112,8 +108,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbPromotor` (
   `appId` VARCHAR(20) GENERATED ALWAYS AS (concat(prefijo,idPromotor)) VIRTUAL,
   `nombreRol` VARCHAR(30) NOT NULL DEFAULT 'Promotor',
   `AreaEspecializacion` VARCHAR(60) NOT NULL,
-  `PrimerTelefono` DECIMAL(8) NOT NULL,
-  `SegundoTelefono` DECIMAL(8) NULL,
+  `PrimerTelefono` INT(8) NOT NULL,
+  `SegundoTelefono` INT(8) NULL,
   `Ubicacion` VARCHAR(255) NOT NULL,
   `TbUsuario_idUsuario` INT NOT NULL,
   PRIMARY KEY (`idPromotor`),
@@ -133,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbCajero` (
   `prefijo` VARCHAR(10) NOT NULL DEFAULT 'cs',
   `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idCajero)) VIRTUAL,
   `nombreRol` VARCHAR(30) NOT NULL DEFAULT 'Cajero',
-  `FechaNacimiento` DATE NOT NULL,
+  `FechaNacimiento` DATETIME NOT NULL,
   `Telefono` DECIMAL(8) NOT NULL,
   `Genero` CHAR(1) NOT NULL,
   `TbUsuario_idUsuario` INT NOT NULL,
@@ -156,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTipoEvento` (
   `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idTipoEvento)) VIRTUAL,
   `Nombre` VARCHAR(255) NOT NULL,
   `Descripcion` VARCHAR(255) NOT NULL,
-  `Foto` BLOB NULL,
+  `Foto` VARCHAR(255) NULL,
   `Activo` TINYINT(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`idTipoEvento`),
   UNIQUE INDEX `idTipoEvento_UNIQUE` (`idTipoEvento` ASC));
@@ -171,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbEvento` (
   `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idEvento)) VIRTUAL,
   `Nombre` VARCHAR(100) NOT NULL,
   `Descripcion` VARCHAR(255) NOT NULL,
-  `FechaEvento` DATE NOT NULL,
+  `FechaEvento` DATETIME NOT NULL,
   `CapacidadPersonas` INT NOT NULL,
   `HoraInicio` DATETIME NOT NULL,
   `HoraFinalizacion` DATETIME NOT NULL,
@@ -201,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbSitio` (
   `UbicacionLongitud` FLOAT NOT NULL,
   `UbicacionLatitud` FLOAT NOT NULL,
   `Direccion` VARCHAR(255) NOT NULL,
-  `Foto` BLOB NULL,
+  `Foto` VARCHAR(255) NULL,
   `Activo` TINYINT(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`idSitio`));
 
@@ -212,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTipoTransaccion` (
   `idTipoTransaccion` INT NOT NULL AUTO_INCREMENT,
   `prefijo` VARCHAR(10) NOT NULL DEFAULT 'tt',
   `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idTipoTransaccion)) VIRTUAL,
-  `TipoTransaccion` TINYINT(1) NOT NULL DEFAULT 1, /*DEFAULT es compra 0 seria reservacion*/
+  `TipoTransaccion` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`idTipoTransaccion`));
 
 
@@ -226,6 +222,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTransaccion` (
   `Activo` TINYINT(1) NOT NULL DEFAULT 1, /*default 1 de activo, las reservaciones pueden pasar a estar inactivas*/
   `Codigo` VARCHAR(100) NOT NULL,
   `CantidadEspacios` INT NOT NULL,
+  `Redimido` TINYINT(1) NULL DEFAULT 0, /*este campo se llena solo en caso de que la transaccion sea una reserva*/
   `TbTipoTransaccion_idTipoTransaccion` INT NOT NULL,
   PRIMARY KEY (`idTransaccion`),
   INDEX `fk_TbTransaccion_TbTipoTransaccion1_idx` (`TbTipoTransaccion_idTipoTransaccion` ASC),

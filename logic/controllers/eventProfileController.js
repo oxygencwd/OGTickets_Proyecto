@@ -143,9 +143,6 @@ angular.module('OGTicketsApp.controllers')
             $scope.resume= false;
         }
 
-
-       
-
         $scope.back= function () {
             $scope.clearSelected();
             $scope.showMap= true;
@@ -153,9 +150,18 @@ angular.module('OGTicketsApp.controllers')
             $scope.buttons= false;
         };
 
-
-
          //end of seats
+
+        $scope.seatAmount="";
+
+    
+        $scope.showResume= function() {
+            alert("si funiona");
+            $scope.resume= true;
+
+
+
+        };
         
         $scope.prueba= function () {
             eventService.prueba("natymata@gmail.com", "123").success(function(response){
