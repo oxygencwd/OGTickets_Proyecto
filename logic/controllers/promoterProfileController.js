@@ -17,7 +17,7 @@ angular.module('OGTicketsApp.controllers')
 		angular.forEach(sites, function(item1) {
 			angular.forEach(events, function(item2) {
 				if(item1.id == item2.siteId) {
-				item2.siteId = item1.name; // change it as you wish
+				item2.siteId = item1.name;
 				}
 			});
 		});
