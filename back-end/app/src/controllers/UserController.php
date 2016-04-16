@@ -144,3 +144,6 @@ class UserController {
     }
 
 }
+
+
+/*PrimerNombre, PrimerApellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario*/
