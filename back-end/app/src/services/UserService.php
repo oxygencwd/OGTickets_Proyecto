@@ -27,6 +27,8 @@ class UserService {
      *
      * @return array
      */
+
+    
         public function login($email, $password) {
         $result = [];
 
@@ -38,8 +40,7 @@ class UserService {
                 if (strlen(trim($password)) > 0) {
                     // Si todo lo anterior tuvo éxito, iniciamos el query
                     // El query que vamos a ejecutar en la BD
-                    // $query = "SELECT id, email, firstName FROM users WHERE email = :email AND password = :password LIMIT 1";
-                    $query = "SELECT idUsuario, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido,TbTipoUsuario_idTipoUsuario FROM tbusuario WHERE email = :email AND Contrasenna = :password AND activo=1 LIMIT 1";
+                    $query = "SELECT idUsuario, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido,TbTipoUsuario_idTipoUsuario FROM tbusuario WHERE email = :email AND password = :password AND activo=1 LIMIT 1";
                     // Los parámetros de ese query
                     $params = [":email" => $email, ":password" => $password];
 
@@ -96,7 +97,7 @@ class UserService {
 
 
 
-
+/******************************************************************************************/
 
     //aqui empieza la funcion que estoy apagando temporalmente
    /* public function login($email, $password) {
@@ -109,35 +110,44 @@ class UserService {
                 // Si lo anterior tuvo éxito, iniciamos el query
 
                 // El query que vamos a ejecutar en la BD
-                $query = "SELECT idUsuario, PrimerNombre, PrimerNombre, TbTipoUsuario_idTipoUsuario FROM tbusuario WHERE email = :email LIMIT 1";
+                //$query = "SELECT idUsuario, PrimerNombre, PrimerNombre, TbTipoUsuario_idTipoUsuario FROM tbusuario WHERE email = :email LIMIT 1";
+
+                $query = "SELECT idUsuario, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido,TbTipoUsuario_idTipoUsuario, password FROM tbusuario WHERE email = :email AND activo=1 LIMIT 1";
+                    // Los parámetros de ese query
+                    $params = [":email" => $email];
+
 
                 // Los parámetros de ese query
-                $params = [":email" => $email];
+                //$params = [":email" => $email];
 
-                // El resultado de de ejecutar la sentencia se almacena en la variable `result`
+                // El resultado de de ejecutar la sentencia se almacena en la variable `$loginResult`
                 $loginResult = $this->storage->query($query, $params);
 
                 LoggingService::logVariable($loginResult, __FILE__, __LINE__);
 //                LoggingService::logVariable($loginResult, __FILE__);
 //                LoggingService::logVariable($loginResult);
 
-                // Si la setencia tiene por lo menos una fila, quiere decir que encontramos a nuestro usuario
+                // Si la sentencia tiene por lo menos una fila, quiere decir que encontramos a nuestro usuario
                 if (count($loginResult["data"]) > 0) {
                     // Almacenamos el usuario en la variable `user`
                     $user = $loginResult["data"][0];
 
                     // Al usar el mecanismo de hasheo nunca dos hashes serán iguales, por lo que la verificación del
                     // usuario tiene que darse usando esta función.
+                    LoggingService::logVariable($password, __FILE__, __LINE__);
                     if (password_verify($password, $user["password"])) {
+
                         // Definimos nuestro mensaje de éxito
                         $result["message"] = "User found.";
 
                         // Enviamos de vuelta a quien consumió el servicio datos sobre el usuario solicitado
                         $result["user"] = [
-                            "id" => $user["idUsuario"],
+                            "userId" => $user["idUsuario"],
                             "firstName" => $user["PrimerNombre"],
-                            "lastName" => $user["PrimerNombre"],
-                            "userType"=>$user["TbTipoUsuario_idTipoUsuario"]
+                            "secondName" => $user["SegundoNombre"],
+                            "lastName" => $user["PrimerApellido"],
+                            "secondLastName" => $user["SegundoApellido"],
+                            "userType"=>"ut0".$user["TbTipoUsuario_idTipoUsuario"]
                         ];
                     } else {
                         $result["message"] = "Invalid password.";
@@ -160,7 +170,7 @@ class UserService {
         }
 
         return $result;
-    } aquitermina la funcion que estoy apagando tempoalmente*/
+    }*/ //aquitermina la funcion que estoy apagando tempoalmente
 
     /**
      * Registra un nuevo usuario en el sistema.

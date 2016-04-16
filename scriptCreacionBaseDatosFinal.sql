@@ -13,7 +13,7 @@ create database OG_Tickets;
 use  OG_Tickets;
 #crear el usuario
 #CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
-#dar privilefios al usuario
+#dar privilefios al usuariotbusuario
 GRANT ALL PRIVILEGES ON OG_Tickets.* TO 'admin'@'localhost';
 #actualizar los privilegios
 FLUSH PRIVILEGES;
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbUsuario` (
   `SegundoApellido` VARCHAR(45) NULL,
   `Cedula` VARCHAR(15) NOT NULL,
   `Email` VARCHAR(80) NOT NULL,
-  `Contraseña` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `Activo` TINYINT(1) NOT NULL DEFAULT 1,
   `TbTipoUsuario_idTipoUsuario` INT NOT NULL,
   PRIMARY KEY (`idUsuario`),
@@ -222,6 +222,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTransaccion` (
   `Activo` TINYINT(1) NOT NULL DEFAULT 1, /*default 1 de activo, las reservaciones pueden pasar a estar inactivas*/
   `Codigo` VARCHAR(100) NOT NULL,
   `CantidadEspacios` INT NOT NULL,
+  `Redimido` TINYINT(1) NULL DEFAULT 0, /*este campo se llena solo en caso de que la transaccion sea una reserva*/
   `TbTipoTransaccion_idTipoTransaccion` INT NOT NULL,
   PRIMARY KEY (`idTransaccion`),
   INDEX `fk_TbTransaccion_TbTipoTransaccion1_idx` (`TbTipoTransaccion_idTipoTransaccion` ASC),

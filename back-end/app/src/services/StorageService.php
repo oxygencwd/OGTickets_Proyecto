@@ -20,7 +20,6 @@ class StorageService {
        // require("bd-credenciales.php");
         $config = [   //aqui se cambian los datos de la base datos
             'db_host' => '127.0.0.1:3308',
-            // 'db_host' => 'localhost',
             'db_name' => 'og_tickets',
             'db_user' => 'admin',
             'db_pass' => 'admin'
