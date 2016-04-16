@@ -1,27 +1,29 @@
 angular.module('OGTicketsApp.controllers')
-.controller('clientSignupController', ['$scope','userService','formService','clientService', '$window', '$routeParams', '$location', function ($scope,userService, formService, clientService, $window, $routeParams, $location) {
+.controller('clientSignupController', ['$scope','formService','clientService', '$window', '$routeParams', '$location', function ($scope, formService, clientService, $window, $routeParams, $location) {
 
 	$scope.newClient={};
 	$scope.error="";
 
-	//Funcion del boton de registro de cliente, agarra todos los datos del formulario.
+
+	//Funcion del boton de registro de cliente, toma todos los datos del formulario y los envia hacia el clientService.
 	$scope.clientRegister=function () {
-		result= clientService.clientRegister($scope.newClient);
-		var clientId;
-		var user={};
-	 if(result.value){
-		clientId= result.clientId;
-		user.name= ($scope.newClient.firstname) + " " + ($scope.newClient.firstlastname);
-		user.id= clientId;
-		user.userType= "ut02";
-		$scope.newClient={};
-		formService.clear($scope.formNewClient);
-		$location.path('#/home');
-		$scope.openModal();
-		$scope.error="";
-	 }else{
-	  	$scope.error="Ya existe una cuenta registrada con ese correo electronico";
-	 }
+	console.log($scope.newClient);
+		// result= clientService.clientRegister($scope.newClient);
+		// var clientId;
+		// var user={};
+		//  if(result.value){
+		// 	clientId= result.clientId;
+		// 	user.name= ($scope.newClient.firstname) + " " + ($scope.newClient.firstlastname);
+		// 	user.id= clientId;
+		// 	user.userType= "ut02";
+		// 	$scope.newClient={};
+		// 	formService.clear($scope.formNewClient);
+		// 	$location.path('#/home');
+		// 	$scope.openModal();
+		// 	$scope.error="";
+		//  }else{
+		//   	$scope.error="Ya existe una cuenta registrada con ese correo electronico";
+		//  }
 	 }; 
 
 	$scope.openModal= function () { 
