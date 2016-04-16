@@ -29,4 +29,20 @@ Array
 ---- 
 15/04/16 19:34:47 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 138
-123
+123---- 
+15/04/16 20:48:33 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 117
+Array
+(
+    [firstname] => Pedro
+    [secondname] => Juan
+    [firstlastname] => Perez
+    [secondlastname] => Coto
+    [personalId] => 752145874
+    [email] => pedro@yahoo.com
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 85697452
+    [date] => 2000-10-10T06:00:00.000Z
+    [genre] => masculino
+)
