@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('clientService', ['localStorageService', function(localStorageService) {
+.service('clientService', ['$log', '$http', '$q', 'localStorageService', function($log, $http, $q, localStorageService) {
 
     //Llama a todos los clientes guardados en userList.
 	var clients= localStorageService.getAll("userList");
@@ -13,29 +13,48 @@ angular.module('OGTicketsApp.services')
 			return item.email== client.email;
 		});
 		return clientExists;
-	}; 
+	};  
 
-    //Toma todos los datos del formulario, agrega el prefijo de cliente, el campo de activo y el tipo de usuario, y luego son guardados en userList.
+    //Toma todos los datos del formulario, y los envía la back-end, despues recibe la respuesta con la promesa desde el back-end y la envía de vuelta a el controlador.
     var clientRegister= function (client) {
-    	var saved= clientExists(client);
-    	var result={};
+        var defer= $q.defer;
+        var url= 'back-end/index.php/user/register';
 
-    	if(saved.length>0){
-    		result.value=false;
-    		result.msj="Client already exists";
-    	}else{
-    		client.id= "cl" + clientId;
-            client.active= true;
-            client.userType= "ut02";
-    		clients.push(client);
-    		localStorageService.set("userList", clients);
-    		clientId++;
-    		localStorageService.setId("clientIdCounter", clientId);
-    		result.value= true;
-    		result.clientId= client.id;
-    	};
-    	return result;
+        $http.post(url, client)
+        .success(function(data) {
+            defer.resolve(data);
+            console.info(data, "success");
+        })
+        .error(function() {
+         defer.reject(error, status);
+            $log.error(error, status);
+        });
+        return defer.promise;
     };
+
+
+
+
+    // var clientRegister= function (client) {
+    // 	var saved= clientExists(client);
+    // 	var result={};
+
+    // 	if(saved.length>0){
+    // 		result.value=false;
+    // 		result.msj="Client already exists";
+    // 	}else{
+    // 		client.id= "cl" + clientId;
+    //         client.active= true;
+    //         client.userType= "ut02";
+    // 		clients.push(client);
+    // 		localStorageService.set("userList", clients);
+    // 		clientId++;
+    // 		localStorageService.setId("clientIdCounter", clientId);
+    // 		result.value= true;
+    // 		result.clientId= client.id;
+    // 	};
+    // 	return result;
+    // };
 
     var retrieveClient = function (cId){
         result = clients.filter(function (item) {
