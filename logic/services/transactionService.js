@@ -31,7 +31,7 @@ angular.module('OGTicketsApp.services')
 
     //Retrieves the events from the transaction eventID. Params TransactionID
 
-    $scope.getEventsFromTransactions = function (transEventId){
+    var getEventsFromTransactions = function (transEventId){
         result = events.filter(function (item) {
             return item.id == transEventId;
         });
