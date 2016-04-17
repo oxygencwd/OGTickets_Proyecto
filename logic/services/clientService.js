@@ -15,7 +15,7 @@ angular.module('OGTicketsApp.services')
 		return clientExists;
 	};  
 
-    //Toma todos los datos del formulario, y los envía la back-end, despues recibe la respuesta con la promesa desde el back-end y la envía de vuelta a el controlador.
+    //Toma los datos del formulario, que deben almacenarse en la tabla usuario y los envía la back-end, despues recibe la respuesta con la promesa desde el back-end y la envía de vuelta a el controlador.
     var clientRegister= function (newClient) {
         var newUser={
             "firstname": newClient.firstname,
@@ -25,17 +25,18 @@ angular.module('OGTicketsApp.services')
             "personalId": newClient.personalId,
             "email": newClient.email,
             "password": newClient.password,
-            "repeatPass": newClient.repeatPass
+            "repeatPass": newClient.repeatPass,
+            "userType": 2
         };
 
 
         var defer= $q.defer();
-        var url= 'back-end/index.php/user/registerClient';
+        var url= 'back-end/index.php/user/registerUser';
 
         $http.post(url, newUser)
         .success(function(data) {
             defer.resolve(data);
-            console.info(data, "success");
+            console.info("success");
         })
         .error(function() {
          defer.reject(error, status);

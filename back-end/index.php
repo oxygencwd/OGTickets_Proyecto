@@ -22,15 +22,13 @@ $configuration = [
 
 $contenedor = new \Slim\Container($configuration);
 
-// Crea una nueva instancia de SLIM mostrando todos los errores
-// http://www.slimframework.com/docs/handlers/error.html
+// Crea una nueva instancia de SLIM 
 $app = new \Slim\App($contenedor);
 
 // Definimos nuestras rutas
 $app->post(
     '/user/login',
     function ($request, $response) {
-        // http://stackoverflow.com/questions/12158987/whats-the-meaning-of-var-in-php-comments
         /** @var Request $request */
         /** @var Response $response */
 
@@ -57,12 +55,12 @@ $app->get(
 );
 
 $app->post(
-    '/user/registerClient',
+    '/user/registerUser',
     function ($request, $response) {
         /** @var Request $request */
         /** @var Response $response */
         $userController = new App\Controllers\UserController();
-        $result = $userController->registerClient($request);
+        $result = $userController->registerUser($request);
         return $response->withJson($result);
     }
 );
