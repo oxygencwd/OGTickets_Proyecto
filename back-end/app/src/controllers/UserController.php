@@ -106,33 +106,56 @@ class UserController {
      *
      * @return string []
      */
-    public function register($request) {
+
+    public function registerClient($request) {
         $result = [];
         $formData = $request->getParsedBody();
-        $fullName = null;
-        $email = null;
-        $password = null;
-        $repeatPassword = null;
+
+        $firstname= null;
+        $secondname= null;
+        $firstlastname= null;
+        $secondlastname= null;
+        $personalId= null;
+        $email= null;
+        $password= null;
+        $repeatPass= null;
+        $userType= 2;
 
         LoggingService::logVariable($formData, __FILE__, __LINE__);
 
-        if (array_key_exists("email", $formData)) {
-            $email = $formData["email"];
+        if (array_key_exists("firstname", $formData)) {
+            $firstname = $formData["firstname"];
         }
 
-        if (array_key_exists("fullName", $formData)) {
-            $fullName = $formData["fullName"];
+        if (array_key_exists("secondname", $formData)) {
+            $secondname = $formData["secondname"];
+        }
+
+        if (array_key_exists("firstlastname", $formData)) {
+            $firstlastname = $formData["firstlastname"];
+        }
+
+        if (array_key_exists("secondlastname", $formData)) {
+            $secondlastname = $formData["secondlastname"];
+        }
+
+        if (array_key_exists("personalId", $formData)) {
+            $personalId = $formData["personalId"];
+        }
+
+        if (array_key_exists("email", $formData)) {
+            $email = $formData["email"];
         }
 
         if (array_key_exists("password", $formData)) {
             $password = $formData["password"];
         }
 
-        if (array_key_exists("repeatPassword", $formData)) {
-            $repeatPassword = $formData["repeatPassword"];
+        if (array_key_exists("repeatPass", $formData)) {
+            $repeatPass = $formData["repeatPass"];
         }
 
-        $registerResult = $this->userService->register($email, $password, $repeatPassword, $fullName);
+        $registerResult = $this->userService->registerClient($firstname, $secondname, $firstlastname, $secondlastname, $personalId, $email, $password, $repeatPass, $userType);
 
         if (array_key_exists("error", $registerResult)) {
             $result["error"] = true;
@@ -140,10 +163,16 @@ class UserController {
 
         $result["message"] = $registerResult["message"];
 
+        /*agregar aqui cuando no hay error*/
+
         return $result;
     }
 
+
+
+
+
+
+
+
 }
-
-
-/*PrimerNombre, PrimerApellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario*/
