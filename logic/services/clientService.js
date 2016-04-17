@@ -16,11 +16,23 @@ angular.module('OGTicketsApp.services')
 	};  
 
     //Toma todos los datos del formulario, y los envía la back-end, despues recibe la respuesta con la promesa desde el back-end y la envía de vuelta a el controlador.
-    var clientRegister= function (client) {
-        var defer= $q.defer;
-        var url= 'back-end/index.php/user/register';
+    var clientRegister= function (newClient) {
+        var newUser={
+            "firstname": newClient.firstname,
+            "secondname": newClient.secondname,        
+            "firstlastname": newClient.firstlastname,
+            "secondlastname": newClient.secondlastname,
+            "personalId": newClient.personalId,
+            "email": newClient.email,
+            "password": newClient.password,
+            "repeatPass": newClient.repeatPass
+        };
 
-        $http.post(url, client)
+
+        var defer= $q.defer();
+        var url= 'back-end/index.php/user/registerClient';
+
+        $http.post(url, newUser)
         .success(function(data) {
             defer.resolve(data);
             console.info(data, "success");

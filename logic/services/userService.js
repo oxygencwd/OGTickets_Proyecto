@@ -28,7 +28,7 @@ angular.module('OGTicketsApp.services')
 	//evalua si la contraseña y el password son los correctos, si el usuario esta activo y si pasa las validaciones lo loggea, devuelve un objeto con el nombre, id  y tipo de usuario, y la variable canLogin en true, si no devuelve un mensaje de error y canLogin en false.
 	var canLogin= function (user) {
 		var defer= $q.defer();
-		var url= 'back-end/index.php/user/login'
+		var url= 'back-end/index.php/user/login';
 
 		$http.post(url, user)
 		.success(function(data, status) {
@@ -42,6 +42,7 @@ angular.module('OGTicketsApp.services')
 		return defer.promise;
 	}; //end -canLogin
 
+	
 
 	// var canLogin= function(objLogin) {
 	// 	var url= 'back-end/index.php/user/login'

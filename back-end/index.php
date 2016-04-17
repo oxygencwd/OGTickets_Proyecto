@@ -57,12 +57,12 @@ $app->get(
 );
 
 $app->post(
-    '/user/register',
+    '/user/registerClient',
     function ($request, $response) {
         /** @var Request $request */
         /** @var Response $response */
         $userController = new App\Controllers\UserController();
-        $result = $userController->register($request);
+        $result = $userController->registerClient($request);
         return $response->withJson($result);
     }
 );

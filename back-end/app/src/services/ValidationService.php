@@ -36,5 +36,20 @@ class ValidationService
     function isValidEmail($email) {
         return $this->isValidString($email) ? filter_var($email, FILTER_VALIDATE_EMAIL) : false;
     }
+
+
+    /**
+    * Verifica si un valor es considerado un entero válido.
+    *
+    * @param $intToCheck
+    * @return bool
+    */
+    function isValidInt($intToCheck) {
+        if (isset($intToCheck)) {
+            return intval($intToCheck) != 0;
+        }
+
+        return false;
+    }
     
 }
