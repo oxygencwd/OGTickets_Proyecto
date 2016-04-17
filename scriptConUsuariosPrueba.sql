@@ -27,14 +27,19 @@ VALUES
 ('Josefita', 'Duarte', 652148965, 'josefita@yahoo.com', '123', 4);
 
 
+update tbusuario set password= '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS' where idUsuario=4;
 
+update tbusuario set password= '$2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS' where idUsuario=1;
 
-select * from  tbusuario;
+select password, email from tbusuario where idUsuario=3;
 
 INSERT INTO tbusuario
 (PrimerNombre, segundoNombre, PrimerApellido, segundoapellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario) 
 VALUES 
-('prueba', null , 'Duarte', null, 652148965, 'josefita@yahoo.com', '123', 2);
+();
+
+
+
 
 
 

@@ -29,22 +29,22 @@ select * from tbtipousuario;
 INSERT INTO tbusuario
 (PrimerNombre, PrimerApellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario) 
 VALUES 
-('oxyGen', 'CWD', 0000000, 'oxygen@gmail.com', '$2y$10$O1OVU7p/bSjKzGnQjPBrYORWoXzKDslgK1io75Kf6rS', 1);
+('oxyGen', 'CWD', 0000000, 'oxygen@gmail.com', '$2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS', 1);
 
 INSERT INTO tbusuario
 (PrimerNombre, PrimerApellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario) 
 VALUES 
-('Naty', 'Mata', 304080245, 'naty@gmail.com', '$2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM', 2);
+('Naty', 'Mata', 304080245, 'naty@gmail.com', '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS', 2);
 
 INSERT INTO tbusuario
 (PrimerNombre, PrimerApellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario) 
 VALUES 
-('Ariana', 'Aguilar', 125638963, 'ari@cenfo.com', '$2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM', 3);
+('Ariana', 'Aguilar', 125638963, 'ari@cenfo.com', '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS', 3);
 
 INSERT INTO tbusuario
 (PrimerNombre, PrimerApellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario) 
 VALUES 
-('Josefita', 'Duarte', 652148745, 'josefita@ogt.com', '$2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM', 4);
+('Josefita', 'Duarte', 652148745, 'josefita@ogt.com', '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS', 4);
 
 select * from tbusuario;
 
