@@ -11,7 +11,7 @@
 			<form name="formNewPromotor" novalidate>
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="form-group">
-						<div class="col-sm-4" ng-hide="editing">
+						<div class="col-sm-2" ng-hide="editing">
 			                <label>Tipo de usuario:</label>
 			                <div class="dropdown">
 							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Promotor
@@ -23,83 +23,81 @@
 							  </ul>
 							</div>
 		                </div>
-		                <div class="col-sm-4">
+		                <div class="col-sm-2">
 			                <label>Tipo de promotor:</label>
-		                    <select name="typePerson" id="typePerson" ng-model="newPromotor.typePerson" required>
-		                    	<option value="">-Tipo persona-</option>
-		                    	<option value="personaJuridica" ng-show="typePersonHide">Persona jurídica</option>
-		                    	<option value="personaFisica" ng-hide="typePersonHide">Persona física</option>
+		                    <select name="typePerson" id="typePerson" ng-model="newPromotor.typePerson" ng-init="newPromotor.typePerson = newPromotor.typePerson || typePersonOptions[0].value" ng-options="option.value as option.name for option in typePersonOptions" required>
 		                    </select>
-		                    <sub ng-show="formNewPromotor.typePerson.$error.required && formNewPromotor.typePerson.$touched">Elegir el tipo de persona</sub>
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
 
 		        <!-- Persona jurídica -->  
+		        <div ng-show="newPromotor.typePerson=='personaJuridica'">
+		        	<div class="col-sm-10 col-sm-offset-1">
+		            	<div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="promotorName">Nombre*</label>
+			            		<input type="text" class="form-control" name="promotorName" id="promotorName" placeholder="Nombre de empresa" ng-model="newPromotor.name" required ng-model-options="{ updateOn:'blur'}">
+			            		<sub ng-show="formNewPromotor.promotorName.$invalid && formNewPromotor.promotorName.$touched">Nombre empresa requerida</sub>
+			            	</div>
+			            </div> <!-- form group end -->
+		            </div>
 
-		        <div class="col-sm-10 col-sm-offset-1" ng-if="newPromotor.typePerson=='personaJuridica'">
-	            	<div class="form-group">
-		            	<div class="col-sm-6">
-		            		<label for="promotorName">Nombre*</label>
-		            		<input type="text" class="form-control" name="promotorName" id="promotorName" placeholder="Nombre de empresa" ng-model="newPromotor.name" required ng-model-options="{ updateOn:'blur'}">
-		            		<sub ng-show="formNewPromotor.promotorName.$invalid && formNewPromotor.promotorName.$touched">Nombre empresa requerida</sub>
-		            	</div>
-		            </div> <!-- form group end -->
-	            </div>
-
-	            <div class="col-sm-10 col-sm-offset-1" ng-if="newPromotor.typePerson=='personaJuridica'">
-	            	<div class="form-group">
-		            	<div class="col-sm-6">
-		            		<label for="legalId">Cédula Jurídica*</label>
-		            		<input type="text" class="form-control" name="legalId" id="legalId" placeholder="Cédula jurídica" ng-model="newPromotor.legalId" required ng-model-options="{ updateOn:'blur'}">
-		            		<sub ng-show="formNewPromotor.legalId.$invalid && formNewPromotor.legalId.$touched">Cédula jurídica requerida</sub>
-		            	</div>
-		            </div> <!-- form group end -->
-	            </div>
+		            <div class="col-sm-10 col-sm-offset-1">
+		            	<div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="legalId">Cédula Jurídica*</label>
+			            		<input type="text" class="form-control" name="legalId" id="legalId" placeholder="Cédula jurídica" ng-model="newPromotor.legalId" required ng-model-options="{ updateOn:'blur'}">
+			            		<sub ng-show="formNewPromotor.legalId.$invalid && formNewPromotor.legalId.$touched">Cédula jurídica requerida</sub>
+			            	</div>
+			            </div> <!-- form group end -->
+		            </div>
+		        </div>
 
 	            <!-- Termina persona jurídica -->
 
 
 
 	            <!-- Persona física -->
-
-	            <div class="col-sm-10 col-sm-offset-1" ng-if="newPromotor.typePerson=='personaFisica'">
-	            	<div class="form-group">
-		            	<div class="col-sm-6">
-		            		<label for="firstname">Primer nombre*</label>
-		            		<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Primer nombre" ng-model="newPromotor.firstname" required ng-model-options="{ updateOn:'blur'}">
-		            		<sub ng-show="formNewPromotor.firstname.$invalid && formNewPromotor.firstname.$touched">Primer nombre requerido</sub>
-		            	</div>
-		               <div class="col-sm-6 signUpSecondColumn">
-		               		<label for="secondname">Segundo nombre</label>
-		            		<input type="text" class="form-control" id="secondname" placeholder="Segundo nombre" ng-model="newPromotor.secondname">
-		               </div>
-		            </div> <!-- form group end -->
+	            <div ng-show="newPromotor.typePerson=='personaFisica'">
+	            	<div class="col-sm-10 col-sm-offset-1">
+		            	<div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="firstname">Primer nombre*</label>
+			            		<input type="text" class="form-control" name="firstname" id="firstname" placeholder="Primer nombre" ng-model="newPromotor.firstname" required ng-model-options="{ updateOn:'blur'}">
+			            		<sub ng-show="formNewPromotor.firstname.$invalid && formNewPromotor.firstname.$touched">Primer nombre requerido</sub>
+			            	</div>
+			               <div class="col-sm-6 signUpSecondColumn">
+			               		<label for="secondname">Segundo nombre</label>
+			            		<input type="text" class="form-control" id="secondname" placeholder="Segundo nombre" ng-model="newPromotor.secondname">
+			               </div>
+			            </div> <!-- form group end -->
+		            </div>
+		            <div class="col-sm-10 col-sm-offset-1">
+			            <div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="firstlastname">Primer apellido*</label>
+			            		<input type="text" class="form-control" name="firstlastname" id="firstlastname" placeholder="Primer apellido" ng-model="newPromotor.firstlastname" required ng-model-options="{ updateOn:'blur'}">
+			            		<sub ng-show="formNewPromotor.firstlastname.$invalid && formNewPromotor.firstlastname.$touched">Primer apellido requerido</sub>
+			            	</div>
+			               <div class="col-sm-6 signUpSecondColumn">
+			               		<label for="secondlastname">Segundo apellido</label>
+			            		<input type="text" class="form-control" id="secondlastname" placeholder="Segundo apellido" ng-model="newPromotor.secondlastname">
+			               </div>
+			            </div> <!-- form group end -->
+			        </div>
+			        <div class="col-sm-10 col-sm-offset-1">
+			            <div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="personalId">Cédula de identidad*</label>
+			            		<input type="text" class="form-control"  minlength="8" maxlength="9" name="personalId" id="personalId" placeholder="1 0111 0111" ng-model="newPromotor.personalId" required ng-model-options="{ updateOn:'blur'}">
+			            		<sub ng-show="formNewPromotor.personalId.$error.required && formNewPromotor.personalId.$touched">Numero de cedula requerido</sub>
+			            		<sub ng-show="formNewPromotor.personalId.$error.minlength && formNewPromotor.personalId.$touched">Cantidad de digitos no validos</sub>
+			            		<sub ng-show="formNewPromotor.personalId.$error.maxlength && formNewPromotor.personalId.$touched">Cantidad de digitos no validos</sub>
+			            	</div>
+			            </div> <!-- form group end -->
+			        </div>
 	            </div>
-	            <div class="col-sm-10 col-sm-offset-1" ng-if="newPromotor.typePerson=='personaFisica'">
-		            <div class="form-group">
-		            	<div class="col-sm-6">
-		            		<label for="firstlastname">Primer apellido*</label>
-		            		<input type="text" class="form-control" name="firstlastname" id="firstlastname" placeholder="Primer apellido" ng-model="newPromotor.firstlastname" required ng-model-options="{ updateOn:'blur'}">
-		            		<sub ng-show="formNewPromotor.firstlastname.$invalid && formNewPromotor.firstlastname.$touched">Primer apellido requerido</sub>
-		            	</div>
-		               <div class="col-sm-6 signUpSecondColumn">
-		               		<label for="secondlastname">Segundo apellido</label>
-		            		<input type="text" class="form-control" id="secondlastname" placeholder="Segundo apellido" ng-model="newPromotor.secondlastname">
-		               </div>
-		            </div> <!-- form group end -->
-		        </div>
-		        <div class="col-sm-10 col-sm-offset-1" ng-if="newPromotor.typePerson=='personaFisica'">
-		            <div class="form-group">
-		            	<div class="col-sm-6">
-		            		<label for="personalId">Cédula de identidad*</label>
-		            		<input type="text" class="form-control"  minlength="8" maxlength="9" name="personalId" id="personalId" placeholder="1 0111 0111" ng-model="newPromotor.personalId" required ng-model-options="{ updateOn:'blur'}">
-		            		<sub ng-show="formNewPromotor.personalId.$error.required && formNewPromotor.personalId.$touched">Numero de cedula requerido</sub>
-		            		<sub ng-show="formNewPromotor.personalId.$error.minlength && formNewPromotor.personalId.$touched">Cantidad de digitos no validos</sub>
-		            		<sub ng-show="formNewPromotor.personalId.$error.maxlength && formNewPromotor.personalId.$touched">Cantidad de digitos no validos</sub>
-		            	</div>
-		            </div> <!-- form group end -->
-		        </div>
 
 		        <!-- Termina Persona física -->
 

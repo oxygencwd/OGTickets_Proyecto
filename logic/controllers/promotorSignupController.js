@@ -3,6 +3,17 @@ angular.module('OGTicketsApp.controllers')
 
 	$scope.newPromotor={};
 	$scope.error="";
+	$scope.typePersonOptions = [
+		{
+			name: 'Persona jurídica',
+			value: 'personaJuridica'
+		},
+		{
+			name: 'Persona física',
+			value: 'personaFisica'
+		}
+	];
+
 
 	//Funcion del boton de registro promotor, agarra todos los datos del formulario.
 	$scope.promotorRegister=function () {
@@ -47,11 +58,14 @@ angular.module('OGTicketsApp.controllers')
 		currentPromotor.date= new Date(currentPromotor.date);	
 	};
 
+<<<<<<< HEAD
 	if(currentPromotor.typePerson=='personaJuridica'){
 		$scope.typePersonHide= true;
 	}else{
 		$scope.typePersonHide= false;
 	};
+=======
+>>>>>>> DEVELOPMENT
 
 	$scope.editPromotor=function(){
 		promotorService.replacePromotor(promotorId, $scope.newPromotor);
