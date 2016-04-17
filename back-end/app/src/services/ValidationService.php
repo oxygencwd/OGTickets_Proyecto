@@ -46,7 +46,9 @@ class ValidationService
     */
     function isValidInt($intToCheck) {
         if (isset($intToCheck)) {
-            return intval($intToCheck) != 0;
+            if(is_numeric($intToCheck)){
+                return true;
+            }
         }
 
         return false;

@@ -9,7 +9,6 @@ angular.module('OGTicketsApp.controllers')
 		var objUser={};
 		userService.canLogin($scope.cUser)
 		.then(function(data) {
-			console.log(data);
 			if(data.user){
 				userService.login($scope.appLoggedUser, data.user);
 				$scope.error="";
@@ -25,24 +24,6 @@ angular.module('OGTicketsApp.controllers')
 			
 		});
 	};
-
-
-
-	// $scope.canLogin= function () {
-	// 	var objUser={};
-	// 	userService.canLogin($scope.cUser)
-	// 	.success(function(response) {
-	// 		userService.login($scope.appLoggedUser, response.user);
-	// 		console.info(response.message);
-	// 		$scope.error="";
-	// 		$scope.cUser={};
-	// 		formService.clear($scope.loginForm);
-	// 		$scope.closeModal();
-	// 	})
-	// 	.error(function(error) {
-	// 		console.error("Error en la solicitud al servidor");
-	// 	});
-	// };
 
 	$scope.closeModal= function () {	
 		$('#loginModal').modal('hide');

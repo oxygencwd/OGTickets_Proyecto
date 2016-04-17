@@ -36,7 +36,7 @@ angular.module('OGTicketsApp.controllers')
 	}
 
 	//Editar promotor.
-	var promotorId= $routeParams.promotorId;
+	/*var promotorId= $routeParams.promotorId;
 	var currentPromotor= promotorService.retrievePromotor(promotorId);
 	$scope.newPromotor= currentPromotor;
 	
@@ -47,7 +47,7 @@ angular.module('OGTicketsApp.controllers')
 		currentPromotor.date= new Date(currentPromotor.date);	
 	};
 
-	if(currentPromotor.typePerson==='personaJuridica'){
+	if(currentPromotor.typePerson=='personaJuridica'){
 		$scope.typePersonHide= true;
 	}else{
 		$scope.typePersonHide= false;
@@ -58,6 +58,6 @@ angular.module('OGTicketsApp.controllers')
 		$scope.newPromotor={};
 		formService.clear($scope.formNewPromotor);
 		$location.path('/promoter-profile/'+promotorId);
-	};
+	};*/
 	
 }]);
