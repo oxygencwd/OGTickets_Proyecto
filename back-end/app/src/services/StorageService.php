@@ -33,6 +33,13 @@ class StorageService {
 
         // Le solicitamos a la conexión que nos notifique de todos los errores.
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+         /**
+         * Sin la siguiente query, tendremos errores en la paginación, ya que PDO al usar `execute` asume que
+         * nuestros parámetros son string.
+         */
+         //OJO poner si usamos paginación
+        //$this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
     }
 
     /**
@@ -43,7 +50,9 @@ class StorageService {
      *
      * @return array
      */
-    public function query($query, $params=[]) {
+   public function query($query, $params=[]) {
+        $affectedRowCount = null;
+
         /**
          * Creamos un diccionario en donde se almacenará el resultado de la operación.
          * Los datos en sí, se regresarán bajo la llave `data` del diccionario, iniciada en null
@@ -52,31 +61,53 @@ class StorageService {
             "data" => null
         ];
 
-        // Verificamos si la sentencia a ejecutar es un insert
-        $isInsert = substr_count(strtoupper($query), "INSERT", 0, 7) > 0;
+        $isInsert = $this->isInsert($query);
+        $isDelete = $this->isDelete($query);
+        $isUpdate = $this->isUpdate($query);
+        $isSelect = $this->isSelect($query);
 
         try {
-            // Preparamos la sentencia a ejecutar
+            // Preparamos la query a ejecutar
             $stmt = $this->pdo->prepare($query);
 
-            // Asignamos los parámetros a la sentencia
-            $stmt->execute($params);
+            if ($isDelete) {
+                $finalQuery = $query;
 
-            /**
-             * Si intentamos recorrer el resultado de una sentencia `INSERT` dispararemos un error,
-             * debemos verificar que tipo de operación queremos realizar antes de ejecutarlo.
-             */
-            if ($isInsert) {
-                // Retornamos la cantidad de elementos afectados
-                $result["data"]["count"] = $stmt->rowCount();
-                // Junto con el ID del elemento agregado
-                $result["data"]["id"] = $this->pdo->lastInsertId();
+                /**
+                 * El método `exec`, usado para obtener un conteo al borrar entradas, únicamente acepta strings a
+                 * ejectuar, por lo que debemos remplazar las variables manualmente
+                 */
+                foreach ($params as $key => $value) {
+                    if (is_int($value)) {
+                        $finalQuery = str_replace($key, $value, $finalQuery);
+                    } else {
+                        $finalQuery = str_replace($key, "'$value'", $finalQuery);
+                    }
+                }
+
+                $affectedRowCount = $this->pdo->exec($finalQuery);
             } else {
-                // Ejecutamos la sentencia
+                $stmt->execute($params);
+            }
+
+            if ($isSelect) {
+                // Vaciamos el resultado dentro de `data`
                 while ($content = $stmt->fetch()) {
-                    // Vaciando el contenido de cada fila dentro de `data` en el diccionario `result`.
                     $result["data"][] = $content;
                 }
+
+                // El total de registros lo brinda el resultado
+                $affectedRowCount = count($result["data"]);
+            }
+
+            if ($isInsert) {
+                // Junto con el ID del elemento agregado
+                $result["meta"]["id"] = $this->pdo->lastInsertId();
+            }
+
+            if ($isUpdate || $isInsert) {
+                // Retornamos la cantidad de elementos afectados
+                $affectedRowCount = $stmt->rowCount();
             }
         } catch (PDOException $e) {
             // En caso de que algo saliera mal con nuestro intento de conexión, el mensaje se envia de vuelta al
@@ -85,8 +116,62 @@ class StorageService {
             $result["message"] = $e->getMessage();
         }
 
-        // Retorne el arreglo de resultado a quien sea que lo haya llamado.
+        if (isset($affectedRowCount)) {
+            $result["meta"]["count"] = $affectedRowCount;
+        }
+
         return $result;
+    }
+
+    /**
+     * Revisamos si la query busca leer datos de la BD.
+     *
+     * @param string $query
+     * @return bool
+     */
+    private function isSelect($query) {
+        return $this->checkQueryType($query, "SELECT");
+    }
+
+    /**
+     * Revisamos si la query busca agregar datos a la BD.
+     *
+     * @param string $query
+     * @return bool
+     */
+    private function isInsert($query) {
+        return $this->checkQueryType($query, "INSERT");
+    }
+
+    /**
+     * Revisamos si la query busca actualizar datos en la BD.
+     *
+     * @param string $query
+     * @return bool
+     */
+    private function isUpdate($query) {
+        return $this->checkQueryType($query, "UPDATE");
+    }
+
+    /**
+     * Revisamos si la query busca eliminar datos de la BD.
+     *
+     * @param string $query
+     * @return bool
+     */
+    private function isDelete($query) {
+        return $this->checkQueryType($query, "DELETE");
+    }
+
+    /**
+     * Revisión genérica de tipo de query
+     *
+     * @param string $query
+     * @param string $tipo
+     * @return bool
+     */
+    private function checkQueryType($query, $tipo) {
+        return substr_count(strtoupper($query), $tipo) > 0;
     }
 
 }
