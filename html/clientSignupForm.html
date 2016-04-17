@@ -53,7 +53,7 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="personalId">Cédula de identidad*</label>
-		            		<input type="number" minlength="8" maxlength="9" class="form-control" name="personalId" id="personalId" placeholder="1 0111 0111" ng-model="newClient.personalId" required ng-model-options="{ updateOn:'blur'}">
+		            		<input type="number" minlength="8" maxlength="9" class="form-control" name="personalId" id="personalId" placeholder="101110111" ng-model="newClient.personalId" required ng-model-options="{ updateOn:'blur'}">
 		            		<sub ng-show="formNewClient.personalId.$error.required && formNewClient.personalId.$touched">Numero de cedula requerido</sub>
 		            		<sub ng-show="formNewClient.personalId.$error.minlength && formNewClient.personalId.$touched">Cantidad de digitos no validos</sub>
 		            		<sub ng-show="formNewClient.personalId.$error.maxlength && formNewClient.personalId.$touched">Cantidad de digitos no validos</sub>
@@ -103,9 +103,9 @@
 		            		<sub ng-show="formNewClient.date.$error.required && formNewClient.date.$touched">Fecha de nacimiento es requerida</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
-		            		<label>Género</label>
+		            		<label>Género *</label>
 		            		<select name="genre" id="genre" ng-model="newClient.genre" required ng-model-options="{ updateOn:'blur'}">
-		            			<option value="">-Tipo Género-</option>
+		            			<option value="">-- Género --</option>
 		            			<option value="masculino">Masculino</option>
 		            			<option value="femenino">Femenino</option>
 		            		</select>
@@ -116,10 +116,10 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6 checkbox">
-		            		<label><input type="checkbox" value="userHasImpairment">Presenta alguna discapacidad</label>
+		            		<label><input type="checkbox" value="userHasDisability" ng-model="newClient.disability">Presenta alguna discapacidad</label>
 		            	</div>
 		            </div> <!-- form group end -->
-		        </div>
+		       </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group col-sm-6">
 		            	<label>Subir fotografía</label>

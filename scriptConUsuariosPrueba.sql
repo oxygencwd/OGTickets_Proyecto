@@ -29,7 +29,12 @@ VALUES
 
 
 
+select * from  tbusuario;
 
+INSERT INTO tbusuario
+(PrimerNombre, segundoNombre, PrimerApellido, segundoapellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario) 
+VALUES 
+('prueba', null , 'Duarte', null, 652148965, 'josefita@yahoo.com', '123', 2);
 
 
 

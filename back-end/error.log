@@ -46,3 +46,184 @@ Array
     [date] => 2000-10-10T06:00:00.000Z
     [genre] => masculino
 )
+---- 
+16/04/16 02:17:26 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 124
+Array
+(
+    [firstname] => kllkj
+    [firstlastname] => kljj
+    [personalId] => 533335555
+    [email] => sa@ssxs
+    [password] => 111
+    [repeatPass] => 111
+)
+---- 
+16/04/16 10:14:03 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 48
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mata
+                    [3] => Mata
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM
+                    [6] => $2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM
+                )
+
+        )
+
+)
+---- 
+16/04/16 10:14:03 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 59
+123---- 
+16/04/16 10:15:07 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 48
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mata
+                    [3] => Mata
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM
+                    [6] => $2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM
+                )
+
+        )
+
+)
+---- 
+16/04/16 10:15:07 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 59
+123---- 
+16/04/16 10:17:11 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 48
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mata
+                    [3] => Mata
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM
+                    [6] => $2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM
+                )
+
+        )
+
+)
+---- 
+16/04/16 10:17:11 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 60
+123---- 
+16/04/16 10:25:40 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 48
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mata
+                    [3] => Mata
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM
+                    [6] => $2y$10$nFo/W18QpggTP7G7WMuAIeB0il0jGc3tBEWqLnZ19YM
+                )
+
+        )
+
+)
+---- 
+16/04/16 10:25:40 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 60
+123---- 
+16/04/16 10:30:30 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 48
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mata
+                    [3] => Mata
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                )
+
+        )
+
+)
+---- 
+16/04/16 10:30:30 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 59
+123---- 
+16/04/16 11:38:07 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 47
+Array
+(
+    [data] => 
+)
+---- 
+16/04/16 17:33:09 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 47
+Array
+(
+    [data] => 
+)
