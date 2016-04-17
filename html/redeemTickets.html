@@ -11,24 +11,27 @@
 						<div class="col-md-4">
 							<form name="redeemForm">
 								<div class="form-group">
-									<label for="txtCode" class="text-center">Ingrese el código de compra</label>
-									<input type="text" class="width80 text-center" id="txtCode" name="code" ng-model= "code" required ng-model-options="{ updateOn:'blur'}" class="form-control">
+									<label for="txtCode" class="text-center" >Ingrese el código de reserva</label>
+									<input type="text" class="width80 text-center" id="txtCode" name="code" ng-model="reservationCode.code" required ng-model-options="{ updateOn:'blur'}" class="form-control">
 								</div>
 							</form>
 						</div>
 						<div class="col-md-4">
-							<button class="btn btn-primary width80">Ver detalles</button>
+							<button class="btn btn-primary width80" ng-click="reservations(reservationCode.code)">Ver detalles</button>
 						</div>
 						<div class="col-md-4">
-							<button class="btn btn-danger width80">Redimir</button>
+							<button class="btn btn-danger width80" ng-click="redeem(reservationCode.code)">Redimir</button>
 						</div>
+
 					</div><!-- options-row -->
 					<div class="row"><!-- details-row -->
-						<div class="col-sm-12 info-container">
-							<p><strong>Evento</strong>{{Costa Rica vrs Jamaica}}</p>
-							<p><strong>Usuario</strong>{{Juan Perez}}</p>
-							<p><strong>Cantidad</strong>{{2}}</p>
-							<p><strong>Total</strong>{{₡12 000.00}}</p>
+						<div ng-show="details" ng-repeat="reservation in reservations(reservationCode.code)" class="col-sm-12 info-container">
+							<p><strong>Código:</strong> {{reservation.trCode}}</p>
+							<p>redimido {{reservation.redeemed}}</p>
+							<p><strong>Evento:</strong> {{reservation.eventName}}</p>
+							<p><strong>Usuario:</strong> {{reservation.userName}}</p>
+							<p><strong>Cantidad:</strong> {{reservation.ticketsAmount}} entrada(s)</p>
+							<p><strong>Total:</strong> {{reservation.total  | currency: '¢' }}</p>
 						</div>
 					</div><!-- details-row -->
 				</div> <!-- container -->
