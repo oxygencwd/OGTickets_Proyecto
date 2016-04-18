@@ -77,13 +77,34 @@ class ValidationService{
     * @param    int $minAge  Minimum age allowed 
     * @return    bool
     */
-    function validateAge( $dob, $minAge){
+    function isValidMinAge( $dob, $minAge){
         $dob     = new DateTime( $dob );
         $minAge = new DateTime( 'now - ' . $minAge . 'years' );
 
         return $dob <= $minAge;
-
     }
+
+
+    /**
+     * Check max age. Max age= 100 years
+     * @param  string $dbo date of birth
+     * @return boolean
+     */
+    function isValidMaxAge($dob){
+        $dateNow= new DateTime("now");
+        $dob= new DateTime($dob);
+        $interval = $dateNow->diff($dob);
+        
+        $result= $interval->format('%R%a');
+
+        if($result<(-36525)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+
 
     function isValidGenre($genre){
         if($genre=="f" || $genre=="m"){
