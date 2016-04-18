@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('clientService', ['$log', '$http', '$q', 'localStorageService', function($log, $http, $q, localStorageService) {
+.service('clientService', ['$log', '$http', '$q', 'localStorageService', 'dateService' ,function($log, $http, $q, localStorageService, dateService) {
 
     //Llama a todos los clientes guardados en userList.
 	var clients= localStorageService.getAll("userList");
@@ -15,35 +15,119 @@ angular.module('OGTicketsApp.services')
 		return clientExists;
 	};  
 
-    //Toma los datos del formulario, que deben almacenarse en la tabla usuario y los envía la back-end, despues recibe la respuesta con la promesa desde el back-end y la envía de vuelta a el controlador.
-    var clientRegister= function (newClient) {
-        var newUser={
-            "firstname": newClient.firstname,
-            "secondname": newClient.secondname,        
-            "firstlastname": newClient.firstlastname,
-            "secondlastname": newClient.secondlastname,
-            "personalId": newClient.personalId,
-            "email": newClient.email,
-            "password": newClient.password,
-            "repeatPass": newClient.repeatPass,
-            "userType": 2
+    /**
+     * @param  obj objClient
+     * @return promise.
+     */
+    var clientRegister= function (objClient) {
+        var objClientInfo= {
+            "dateBirth": dateService.setDateTimeFormat(objClient.dateBirth),
+            "phone": objClient.phone,
+            "genre": objClient.genre,
+            "picture": objClient.picture
+        };
+        var id;
+        var defer= $q.defer();
+        
+        validateClientInfo(objClient)
+        .then(function(data) {
+            console.log(data);
+            if(data.valid){
+                validateUserInfo(objClient)
+                .then(function(data) {
+                    if(data.created){
+                        id= data.meta;
+                        var url= 'back-end/index.php/client/registerClient/' + id;
+                        console.info("url=" + url);
+                        $http.post(url, objClientInfo)
+                        .success(function(data, status) {
+                            defer.resolve(data);
+                        })
+                            .error(function(error, status) {
+                            defer.reject(error);
+                            console.error(error, status);
+                        });
+                    }else{
+                        console.error("Datos usuario invalidos");
+                        return "Datos del usuario inválidos"
+                    }
+                })
+                .catch(function(error) {
+                    console.error(error);
+                    console.error("Error Registrando el usuario.");
+                })
+            }else{
+                console.error("Datos cliente inválidos");
+                return "Datos de Cliente inválidos";
+            }
+        })
+        .catch(function(error) {
+            console.error(error);
+            console.error("Error Registrando el cliente.");
+        })
+        
+        return defer.promise;    
+    };
+
+
+    var validateClientInfo= function(objClient) {
+        var objClientInfo= {
+            "dateBirth": dateService.setDateTimeFormat(objClient.dateBirth),
+            "phone": objClient.phone,
+            "genre": objClient.genre
         };
 
+        var defer= $q.defer();
+        var url= 'back-end/index.php/client/validateClientInfo';
+
+        $http.post(url, objClientInfo)
+        .success(function(data, status) {
+            defer.resolve(data);
+        })
+            .error(function(error, status) {
+            defer.reject(error);
+            console.error(error, status);
+        });
+
+        return defer.promise;
+    };
+
+
+    /**
+     * Envia la información correspondiente a la tabla de usuario a validar, si la informacion es valida guarda el usuario
+     * @param  obj objUser
+     * @return {[type]}
+     */
+    var validateUserInfo= function(objUser) {
+        var objUserInfo={
+            "firstname": objUser.firstname,
+            "secondname": objUser.secondname,        
+            "firstlastname": objUser.firstlastname,
+            "secondlastname": objUser.secondlastname,
+            "personalId": objUser.personalId,
+            "email": objUser.email,
+            "password": objUser.password,
+            "repeatPass": objUser.repeatPass,
+            "userType": 2
+        };
 
         var defer= $q.defer();
         var url= 'back-end/index.php/user/registerUser';
 
-        $http.post(url, newUser)
-        .success(function(data) {
+        $http.post(url, objUserInfo)
+        .success(function (data, status) {
             defer.resolve(data);
-            console.info("success");
         })
-        .error(function() {
-         defer.reject(error, status);
-            $log.error(error, status);
-        });
+        .error(function(error) {
+            defer.reject(error);
+            console.error(error);
+        })
+
         return defer.promise;
+
     };
+
+
 
 
 
