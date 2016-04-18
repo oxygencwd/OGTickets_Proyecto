@@ -28,18 +28,21 @@ angular.module('OGTicketsApp.controllers')
 	//Funcion del boton de registro de cliente, toma todos los datos del formulario y los envia hacia el clientService.
 	$scope.clientRegister=function () {
 		clientService.clientRegister($scope.newClient)
-		.then(function(data) {
-			if(data.created){
-				console.log(data.meta);
+		// .then(function(data) {
+		// 	if(data.created){
+		// 		console.log(data.meta);
 
-				//data.meta--> aqui esta el id del nuevo registro
-				//mandamos a registrar el restro de los dato en la talbe cliente
-			}
-		})
-		.catch(function(error) {
-			console.log(error);
-			console.error("Error Registrando el usuario.");
-		});
+		// 		//data.meta--> aqui esta el id del nuevo registro
+		// 		//mandamos a registrar el restro de los dato en la talbe cliente
+		// 	}
+		// })
+		// .catch(function(error) {
+		// 	console.log(error);
+		// 	console.error("Error Registrando el usuario.");
+		// });
+		
+
+
 		
 		// 	$scope.newClient={};
 		// 	formService.clear($scope.formNewClient);

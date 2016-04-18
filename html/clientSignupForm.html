@@ -101,13 +101,14 @@
 		            		<label for="phone">Fecha de nacimiento*</label>
 		            		<input type="date" class="form-control" name="date" id="date" ng-model="newClient.dateBirth" required ng-model-options="{ updateOn:'blur'}">
 		            		<sub ng-show="formNewClient.date.$error.required && formNewClient.date.$touched">Fecha de nacimiento es requerida</sub>
+		            		{{newClient.dateBirth}}
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label>Género *</label>
 		            		<select name="genre" id="genre" ng-model="newClient.genre" required ng-model-options="{ updateOn:'blur'}">
 		            			<option value="">-- Género --</option>
-		            			<option value="masculino">Masculino</option>
-		            			<option value="femenino">Femenino</option>
+		            			<option value="m">Masculino</option>
+		            			<option value="f">Femenino</option>
 		            		</select>
 		            		<sub ng-show="formNewClient.genre.$error.required && formNewClient.genre.$touched">Elegir un genero</sub>
 		            	</div>
