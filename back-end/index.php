@@ -69,16 +69,8 @@ $app->post(
     }
 );
 
-
-$app->get(
-    '/prueba/prueba',
-    function ($request, $response)
-    {
-        return "Prueba desde el index";
-    }
-);
-
-
+/*RUTAS DE CLIENTE*/
+///client/validateClientInfo-> validar los datos del cliente
 $app->post(
     '/client/validateClientInfo',
     function ($request, $response){
@@ -86,6 +78,18 @@ $app->post(
         /** @var Response $response */
         $clientController = new App\Controllers\ClientController();
         $result = $clientController->validateClientInfo($request);
+        return $response->withJson($result);
+    }
+);
+
+///client/registerClient->registrar los datos del cliente en la tabla cliente.
+$app->post(
+    '/client/registerClient/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $clientController= new App\Controllers\ClientController();
+        $result= $clientController->registerClient($request);
         return $response->withJson($result);
     }
 );

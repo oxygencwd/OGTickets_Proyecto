@@ -10,6 +10,7 @@ class ClientService{
 
 	private $storage;
 	private $validation;
+	private $dateFormat;
 
 	/**
 	 * ClientService constructor
@@ -17,6 +18,7 @@ class ClientService{
 	public function __construct(){
 		$this->storage= new StorageService();
         $this->validation = new ValidationService();
+        $this->dateFormat= new DateTimeService();
 	}
 
 	/*validateClientInfo($dateBirth, $phone, $genre);*/
@@ -32,8 +34,8 @@ class ClientService{
 		if(isset($dateBirth, $phone, $genre)){ //1
 			//verificar que la fecha este en formato correcto de dateTime
 			if($this->validation->isValidDateTime($dateBirth) || $this->validation->isValidDate($dateBirth)){//2
-				//Verificar que el cliente sea mayor de 15 años.
-				if($this->validation->validateAge($dateBirth, 15)){//3
+				//Verificar que el cliente sea mayor de 15 años y menor de 100
+				if($this->validation->isValidMinAge($dateBirth, 15) && $this->validation->isValidMaxAge($dateBirth)){//3
 					//Verificar que el numero de teléfono tenga el formato correcto
 					if($this->validation->isValidInt($phone) && strlen(trim($phone))==8){//4
 						//Verificar que el género sea un string válido y que sea sólo f o m
@@ -50,7 +52,7 @@ class ClientService{
 					}
 				}else{//3
 					$result["error"] = true;
-                	$result["message"] = "Minimum age allowed is 15";
+                	$result["message"] = "Age is invalid";
 				}
 			}else{//2
 				$result["error"] = true;
@@ -64,6 +66,60 @@ class ClientService{
 		return $result;
 
 	}// end -validateClientInfo-
+
+	public function registerClient($dateBirth, $phone, $genre, $picture, $id){
+		$result=[];
+
+		$dateBirth= trim($dateBirth);
+		$dateBirth= $this->dateFormat->getDateTime($dateBirth);
+		$phone= trim($phone);
+		$genre= trim($genre);
+		$genre= strtolower($genre);
+		$picture= trim($picture);
+		$id= trim($id);
+
+		if($this->validation->isValidInt($id)){
+			$id= intval($id);
+
+			$query = "INSERT INTO tbcliente
+			(FechaNacimiento, Telefono, Genero, Foto, TbUsuario_idUsuario)
+			VALUES
+			(:dateBirth, :phone, :genre, :picture, :id)";
+
+			$params = [
+                ":dateBirth" => $dateBirth,
+                ":phone" => $phone,
+                ":genre" => $genre,
+                ":picture" => $picture,
+                ":id" => $id
+            ];
+
+            $insertClientResult = $this->storage->query($query, $params);
+
+            LoggingService::logVariable($insertClientResult, __FILE__, __LINE__);
+
+            $isClientCreated= array_key_exists("meta", $insertClientResult) && $insertClientResult["meta"]["count"]==1;
+
+            if($isClientCreated){
+                $result["message"]= "Client created";
+                $result["meta"]["id"]= $insertClientResult["meta"]["id"];
+            }else{
+                $result["error"] = true;
+                $result["message"]= "Error, can't create client";
+            }
+		}else{
+			$result["error"] = true;
+            $result["message"] = "Id is invalid";
+		}
+
+		LoggingService::logVariable($result, __FILE__, __LINE__);
+		return $result;
+
+		
+	
+
+
+	}
 
 
 

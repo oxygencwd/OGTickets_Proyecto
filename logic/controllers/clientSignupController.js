@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('clientSignupController', ['$scope','formService','clientService', '$window', '$routeParams', '$location', function ($scope, formService, clientService, $window, $routeParams, $location) {
+.controller('clientSignupController', ['$scope','formService','clientService', '$window', '$routeParams', '$location', '$timeout', function ($scope, formService, clientService, $window, $routeParams, $location, $timeout) {
 
 	$scope.newClient={};
 		/*
@@ -21,6 +21,7 @@ angular.module('OGTicketsApp.controllers')
 			}
 		*/
 	$scope.error="";
+	$scope.success="";
 
 
 
@@ -28,34 +29,39 @@ angular.module('OGTicketsApp.controllers')
 	//Funcion del boton de registro de cliente, toma todos los datos del formulario y los envia hacia el clientService.
 	$scope.clientRegister=function () {
 		clientService.clientRegister($scope.newClient)
-		// .then(function(data) {
-		// 	if(data.created){
-		// 		console.log(data.meta);
+		.then(function(data) {
+			console.info(data);
+			if(data.valid){
+				$scope.newClient={};
+				formService.clear($scope.formNewClient);
+				$scope.success= "Usuario creado con éxito";
+				$scope.openModal("#clientRegSuccessModal");
+				$timeout(function() {
+					$scope.closeModal("#clientRegSuccessModal");
+					$location.path('#/home');
+					$scope.openModal('#loginModal');
+					$scope.error="";
+					$scope.success="";
+				}, 1500);
 
-		// 		//data.meta--> aqui esta el id del nuevo registro
-		// 		//mandamos a registrar el restro de los dato en la talbe cliente
-		// 	}
-		// })
-		// .catch(function(error) {
-		// 	console.log(error);
-		// 	console.error("Error Registrando el usuario.");
-		// });
+				
+			}else{
+				$scope.error="Ya existe una cuenta registrada con ese correo electronico";
+			}
+		})
+		.catch(function() {
+			console.log("Error registrando el nuevo cliente");
+		});
 		
 
-
-		
-		// 	$scope.newClient={};
-		// 	formService.clear($scope.formNewClient);
-		// 	$location.path('#/home');
-		// 	$scope.openModal();
-		// 	$scope.error="";
-		//  }else{
-		//   	$scope.error="Ya existe una cuenta registrada con ese correo electronico";
-		//  }
 	 }; 
 
-	$scope.openModal= function () { 
-	  $('#loginModal').modal('show');
+	$scope.openModal= function (modalId) { 
+	  $(modalId).modal('show');
+	};
+
+	$scope.closeModal= function (modalId) { 
+	  $(modalId).modal('hide');
 	};
 
 	//Editar cliente.

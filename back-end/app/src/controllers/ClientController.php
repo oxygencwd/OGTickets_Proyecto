@@ -56,17 +56,55 @@ class ClientController{
 
     }// end -validateClientInfo-
 
+    public function registerClient($request){
+        $result = [];
+        $formData= $request->getParsedBody();
 
+        $dateBirth= null;
+        $phone= null;
+        $genre= null;
+        $picture= null;
+        $id= null;
 
+        LoggingService::logVariable($formData, __FILE__, __LINE__);
 
-public function prueba($request)
-    {
-        $result= [];
-        $result["mensaje"]= "esta es una prieba desde el controller de clientes";
+        if(array_key_exists("dateBirth", $formData)){
+            $dateBirth= $formData["dateBirth"];
+        }
+
+        if(array_key_exists("phone", $formData)){
+            $phone = $formData["phone"];
+        }
+
+        if(array_key_exists("genre", $formData)){
+            $genre = $formData["genre"];
+        }
+
+        if(array_key_exists("picture", $formData)){
+            $picture = $formData["picture"];
+        }
+
+        $id= $request->getAttribute("id", null);
+        LoggingService::logVariable($id, __FILE__, __LINE__);
+
+        $registerResult= $this->clientService->registerClient($dateBirth, $phone, $genre, $picture, $id);
+
+        if(array_key_exists("error", $registerResult)) {
+            $result["error"] = true;
+            $result["message"] = $registerResult["message"];
+            $result["valid"] = false;
+        }else{
+            $result["message"] = $registerResult["message"];
+            $result["valid"] = true;
+        }
+
         return $result;
 
-        
     }
+
+
+
+
 
 
 
