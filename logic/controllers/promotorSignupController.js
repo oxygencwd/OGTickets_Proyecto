@@ -14,6 +14,12 @@ angular.module('OGTicketsApp.controllers')
 		}
 	];
 
+	var today = new Date();
+	var minAge = 18;
+	var maxAge = 100;
+	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
+	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
+
 
 	//Funcion del boton de registro promotor, agarra todos los datos del formulario.
 	$scope.promotorRegister=function () {
