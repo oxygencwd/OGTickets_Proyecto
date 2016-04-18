@@ -6,7 +6,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-			<form name="formNewEventType" ng-submit="formNewEventType.$valid && eventTypeRegister()" novalidate>
+			<form name="formNewEventType" autocomplete="off" ng-submit="formNewEventType.$valid && eventTypeRegister()" novalidate>
 	            <div class="col-sm-10 col-sm-offset-1">
 	            	<div class="form-group">
 		            	<div class="col-sm-6">
@@ -20,7 +20,7 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="description">Descripción*</label>
-		            		<textarea class="form-control" name="description" id="description" placeholder="Descripción..." required ng-model="newEventType.description" ng-model-options="{ updateOn:'blur'}"></textarea>
+		            		<textarea class="form-control" name="description" id="description" placeholder="Descripción..." required ng-model="newEventType.description"></textarea>
 		            		<sub ng-show="formNewEventType.description.$error.required && formNewEventType.description.$touched">La descripción es requerida.</sub>
 		            	</div>
 		            </div> <!-- form group end -->

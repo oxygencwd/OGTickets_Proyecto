@@ -105,7 +105,7 @@
                 templateUrl: 'html/clientSignupForm.html',
                 controller: 'clientSignupController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.GUEST.ROL]
+                    authorized: [ROLES.GUEST.ROL]
                 }
                 //registro de un usuario nuevo se cae siempre al formulario de registro de cliente y de ahi se escigen las opciones, segun la opcion que se seleccione se redirira a los formularios de promotor o de cajero
             })
@@ -149,14 +149,14 @@
                 }
                 //registro de Cajeros y Promotores. Permisos: Admin
             })
-            .when('/cashier-edit/:cashierId', {
-                templateUrl: 'html/cashierSignupForm.html',
-                controller: 'cashierEditController',
-                data: {
-                    authorized: [ROLES.ADMIN.ROL]
-                }
-                ////Editar cajeros. Permisos: Admin
-            })
+            // .when('/cashier-edit/:cashierId', {
+            //     templateUrl: 'html/cashierSignupForm.html',
+            //     controller: 'cashierEditController',
+            //     data: {
+            //         authorized: [ROLES.ADMIN.ROL]
+            //     }
+            //     ////Editar cajeros. Permisos: Admin
+            // })
             .when('/redeem-tickets', {
                 templateUrl: 'html/redeemTickets.html',
                 controller: 'redeemTicketsController',
@@ -177,7 +177,7 @@
                 templateUrl: 'html/siteProfile.html',
                 controller: 'siteProfileController',
                 data: {
-                    authorized:  [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL]
+                    authorized: [ROLES.ADMIN.ROL, ROLES.CLIENT.ROL, ROLES.PROMOTER.ROL, ROLES.CASHIER.ROL, ROLES.GUEST.ROL]
                 }
                 //Ver el perfil de un sitio. Permisos: Promotres, admin: Solo el admin tendrá disponible la opción de editar un sitio.
             })

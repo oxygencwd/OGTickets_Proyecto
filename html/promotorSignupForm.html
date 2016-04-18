@@ -3,15 +3,15 @@
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-1">
 			<h2 ng-hide="appLoggedUser.isConnected">Solicitud de Registro como Promotor</h2>
-			<h2 ng-show="appLoggedUser.userType=='ut01'">Registrar de Promotores</h2>
+			<h2 ng-show="appLoggedUser.userType=='ut01'">Registrar de Promotores**</h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-			<form name="formNewPromotor" novalidate>
+			<form name="formNewPromotor" autocomplete="off" novalidate>
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="form-group">
-						<div class="col-sm-2" ng-hide="editing">
+						<div class="col-sm-2" ng-hide="editing || appLoggedUser.userType=='ut01'">
 			                <label>Tipo de usuario:</label>
 			                <div class="dropdown">
 							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Promotor
@@ -135,31 +135,33 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Teléfono*</label>
-		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone" ng-model-options="{ updateOn:'blur'}" ng-pattern="expNumberPhone">
+		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone">
 		            		<sub ng-show="formNewPromotor.phone.$error.required && formNewPromotor.phone.$touched">El numero de telefono es requerido.</sub>
                 			<sub ng-show="formNewPromotor.phone.$error.pattern && formNewPromotor.phone.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="address">Dirección*</label>
-		            		<input type="text" class="form-control" name="address" id="address" ng-model="newPromotor.address" required ng-model-options="{ updateOn:'blur'}">
+		            		<input type="text" class="form-control" name="address" id="address" ng-model="newPromotor.address" required>
 		            		<sub ng-show="formNewPromotor.address.$invalid && formNewPromotor.address.$touched">Dirección requerida</sub> 		
 		            	</div>
 
 		            </div> <!-- form group end -->
 		        </div>
-		        <div class="col-sm-10 col-sm-offset-1">
+		        <div class="col-sm-10 col-sm-offset-1" ng-show="newPromotor.typePerson=='personaFisica'">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Fecha de nacimiento*</label>
-		            		<input type="date" class="form-control" name="date" id="date" ng-model="newPromotor.date" required ng-model-options="{ updateOn:'blur'}">
+		            		<input type="date" class="form-control" name="date" id="date" max="{{minAge | date:'yyyy-MM-dd'}}" min="{{maxAge | date:'yyyy-MM-dd'}}" ng-model="newPromotor.date" required>
 		            		<sub ng-show="formNewPromotor.date.$error.required && formNewPromotor.date.$touched">Fecha de nacimiento es requerida</sub>
+		            		<sub ng-show="formNewPromotor.date.$error.max && formNewPromotor.date.$touched">Debe ser mayor de 18 años</sub>
+		            		<sub ng-show="formNewPromotor.date.$error.min && formNewPromotor.date.$touched">Debe ser menor de 100 años</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label>Género</label>
-		            		<select name="genre" id="genre" ng-model="newPromotor.genre" required ng-model-options="{ updateOn:'blur'}">
+		            		<select name="genre" id="genre" ng-model="newPromotor.genre" required>
 		            			<option value="">-Tipo Género-</option>
-		            			<option value="masculino">Masculino</option>
-		            			<option value="femenino">Femenino</option>
+		            			<option value="m">Masculino</option>
+		            			<option value="f">Femenino</option>
 		            		</select>
 		            		<sub ng-show="formNewPromotor.genre.$error.required && formNewPromotor.genre.$touched">Elegir un tipo de genero</sub>
 		            	</div>
