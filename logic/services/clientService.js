@@ -16,32 +16,88 @@ angular.module('OGTicketsApp.services')
 	};  
 
     //Toma los datos del formulario, que deben almacenarse en la tabla usuario y los envía la back-end, despues recibe la respuesta con la promesa desde el back-end y la envía de vuelta a el controlador.
-    var clientRegister= function (newClient) {
+    /*
+            newClient={
+                firstname**,
+                secondname
+                firstlastname*,
+                secondlastname,
+                personalId*,
+                email*,
+                password*,
+                    repeatPass*,
+
+                dateBirth*,
+                phone*,
+                genre*,
+                disability,
+                picture
+            }
+    */
+    var clientRegister= function (objClient) {
+        var newClient= {
+            "dateBirth": objClient.dateBirth,
+            "phone": objClient.phone,
+            "genre": objClient.genre
+        };
+
         var newUser={
-            "firstname": newClient.firstname,
-            "secondname": newClient.secondname,        
-            "firstlastname": newClient.firstlastname,
-            "secondlastname": newClient.secondlastname,
-            "personalId": newClient.personalId,
-            "email": newClient.email,
-            "password": newClient.password,
-            "repeatPass": newClient.repeatPass,
+            "firstname": objClient.firstname,
+            "secondname": objClient.secondname,        
+            "firstlastname": objClient.firstlastname,
+            "secondlastname": objClient.secondlastname,
+            "personalId": objClient.personalId,
+            "email": objClient.email,
+            "password": objClient.password,
+            "repeatPass": objClient.repeatPass,
             "userType": 2
         };
 
 
-        var defer= $q.defer();
-        var url= 'back-end/index.php/user/registerUser';
+      
 
-        $http.post(url, newUser)
-        .success(function(data) {
-            defer.resolve(data);
-            console.info("success");
+
+        validateClientInfo(newClient)
+        .then(function(data) {
+            console.log(data);
         })
-        .error(function() {
-         defer.reject(error, status);
-            $log.error(error, status);
+        .catch(function(error) {
+            console.log(error);
+            console.error("error en las vefifiaciones de cliente");
         });
+
+
+
+        // var defer= $q.defer();
+        // var url= 'back-end/index.php/user/registerUser';
+
+        // $http.post(url, newUser)
+        // .success(function(response) {
+        //     defer.resolve(response);
+        //     console.info("success");
+        // })
+        // .error(function(error) {
+        //  defer.reject(error);
+        //     $log.error(error, status);
+        // });
+        // return defer.promise;
+    };
+
+ 
+
+    var validateClientInfo= function(objClientInfo) {
+        var defer= $q.defer();
+        var url= 'back-end/index.php/client/validateClientInfo';
+
+        $http.post(url, objClientInfo)
+        .success(function(response) {
+            defer.resolve(response);
+        })
+        .error(function(error) {
+            defer.reject(error);
+            console.error(error);
+        });
+
         return defer.promise;
     };
 
