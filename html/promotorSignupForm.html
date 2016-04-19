@@ -47,8 +47,10 @@
 		            	<div class="form-group">
 			            	<div class="col-sm-6">
 			            		<label for="legalId">Cédula Jurídica*</label>
-			            		<input type="text" class="form-control" name="legalId" id="legalId" placeholder="Cédula jurídica" ng-model="newPromotor.legalId" required ng-model-options="{ updateOn:'blur'}">
+			            		<input type="text" class="form-control" minlength="10" maxlength="10" name="legalId" id="legalId" placeholder="Cédula jurídica" ng-model="newPromotor.legalId" required ng-model-options="{ updateOn:'blur'}">
 			            		<sub ng-show="formNewPromotor.legalId.$invalid && formNewPromotor.legalId.$touched">Cédula jurídica requerida</sub>
+			            		<sub ng-show="formNewPromotor.legalId.$error.minlength && formNewPromotor.legalId.$touched">Formato no válido</sub>
+		            			<sub ng-show="formNewPromotor.legalId.$error.maxlength && formNewPromotor.legalId.$touched">Formato no válido</sub>
 			            	</div>
 			            </div> <!-- form group end -->
 		            </div>
@@ -90,10 +92,10 @@
 			            <div class="form-group">
 			            	<div class="col-sm-6">
 			            		<label for="personalId">Cédula de identidad*</label>
-			            		<input type="text" class="form-control"  minlength="8" maxlength="9" name="personalId" id="personalId" placeholder="1 0111 0111" ng-model="newPromotor.personalId" required ng-model-options="{ updateOn:'blur'}">
+			            		<input type="text" class="form-control" minlength="9" maxlength="40" name="personalId" id="personalId" placeholder="1 0111 0111" ng-model="newPromotor.personalId" required ng-model-options="{ updateOn:'blur'}">
 			            		<sub ng-show="formNewPromotor.personalId.$error.required && formNewPromotor.personalId.$touched">Numero de cedula requerido</sub>
-			            		<sub ng-show="formNewPromotor.personalId.$error.minlength && formNewPromotor.personalId.$touched">Cantidad de digitos no validos</sub>
-			            		<sub ng-show="formNewPromotor.personalId.$error.maxlength && formNewPromotor.personalId.$touched">Cantidad de digitos no validos</sub>
+			            		<sub ng-show="formNewPromotor.personalId.$error.minlength && formNewPromotor.personalId.$touched">Formato no válido</sub>
+			            		<sub ng-show="formNewPromotor.personalId.$error.maxlength && formNewPromotor.personalId.$touched">Formato no válido</sub>validos</sub>
 			            	</div>
 			            </div> <!-- form group end -->
 			        </div>

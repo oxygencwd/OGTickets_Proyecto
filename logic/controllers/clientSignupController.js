@@ -45,9 +45,7 @@ angular.module('OGTicketsApp.controllers')
 					$scope.openModal('#loginModal');
 					$scope.error="";
 					$scope.success="";
-				}, 1500);
-
-				
+				}, 1500);	
 			}else{
 				$scope.error="Ya existe una cuenta registrada con ese correo electronico";
 			}
