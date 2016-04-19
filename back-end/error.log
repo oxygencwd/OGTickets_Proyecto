@@ -3426,4 +3426,370 @@ Array
 ---- 
 18/04/16 19:57:45 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:36 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:36 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:36 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:36 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:36 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:36 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:36 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:36 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+19/04/16 16:59:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 16:59:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin
