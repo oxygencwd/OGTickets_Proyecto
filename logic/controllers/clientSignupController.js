@@ -30,7 +30,6 @@ angular.module('OGTicketsApp.controllers')
 	$scope.clientRegister=function () {
 		clientService.clientRegister($scope.newClient)
 		.then(function(data) {
-			console.info(data);
 			if(data.valid){
 				$scope.newClient={};
 				formService.clear($scope.formNewClient);

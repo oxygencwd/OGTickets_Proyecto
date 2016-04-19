@@ -94,7 +94,29 @@ $app->post(
     }
 );
 
+/*RUTAS DE CAJERO*/
+//cashier/validateCahierInfo
+$app->post(
+    '/cashier/validateCahierInfo',
+    function ($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $cashierController = new App\Controllers\CashierController();
+        $result = $cashierController->validateCahierInfo($request);
+        return $response->withJson($result);
+    }
+);
 
+$app->post(
+    '/cashier/registerCashier/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $cashierController= new App\Controllers\CashierController();
+        $result= $cashierController->registerCashier($request);
+        return $response->withJson($result);
+    }
+);
 
 
 
