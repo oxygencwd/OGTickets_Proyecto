@@ -8,10 +8,14 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
+<<<<<<< HEAD
 			<form name="formNewCashier" ng-submit="cashierRegister()" novalidate>
+=======
+			<form name="formNewCashier" autocomplete="off" ng-submit="formNewCashier.$valid && cashierRegister()" novalidate>
+>>>>>>> 3d21103fdb309295b1c7d2e3cc8b355318d1b1a5
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="form-group">
-						<div class="col-sm-4">
+						<div class="col-sm-4" ng-hide="editing || appLoggedUser.userType=='ut01'">
 			                <label>Tipo de usuario:</label>
 			                <div class="dropdown">
 							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Cajero
@@ -101,13 +105,25 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Fecha de nacimiento*</label>
+<<<<<<< HEAD
 		            		<input type="date" class="form-control" name="date" id="date" ng-model="newCashier.dateBirth" required ng-model-options="{ updateOn:'blur'}">
+=======
+		            		<input type="date" class="form-control" name="date" id="date" max="{{minAge | date:'yyyy-MM-dd'}}" min="{{maxAge | date:'yyyy-MM-dd'}}" ng-model="newCashier.date" required>
+>>>>>>> 3d21103fdb309295b1c7d2e3cc8b355318d1b1a5
 		            		<sub ng-show="formNewCashier.date.$error.required && formNewCashier.date.$touched">Fecha de nacimiento es requerida</sub>
+		            		<sub ng-show="formNewCashier.date.$error.max && formNewCashier.date.$touched">Debe ser mayor de 18 años</sub>
+		            		<sub ng-show="formNewCashier.date.$error.min && formNewCashier.date.$touched">Debe ser menor de 100 años</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
+<<<<<<< HEAD
 		            		<label>Género*</label>
 		            		<select name="genre" id="genre" ng-model="newCashier.genre" required ng-model-options="{ updateOn:'blur'}">
 		            			<option value="">-Género-</option>
+=======
+		            		<label>Género</label>
+		            		<select name="genre" id="genre" ng-model="newCashier.genre" required>
+		            			<option value="">-Género *-</option>
+>>>>>>> 3d21103fdb309295b1c7d2e3cc8b355318d1b1a5
 		            			<option value="m">Masculino</option>
 		            			<option value="f">Femenino</option>
 		            		</select>
@@ -121,7 +137,9 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
-		                    <input type="submit" class="btn btn-s btn-lg" value="Enviar formulario" ng-disabled="formNewCashier.$invalid" ng-click= "cashierRegister()">
+
+		                    <input type="submit" class="btn btn-s btn-lg" value="Registrar cajero" ng-disabled="formNewCashier.$invalid" ng-click= "cashierRegister()">
+
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
