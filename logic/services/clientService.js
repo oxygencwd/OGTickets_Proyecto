@@ -69,7 +69,11 @@ angular.module('OGTicketsApp.services')
         return defer.promise;    
     };
 
-
+    /**
+     * Envia la información correspondiente a la tabla de cliente a validar.
+     * @param  obj objClient
+     * @return promise
+     */
     var validateClientInfo= function(objClient) {
         var objClientInfo= {
             "dateBirth": dateService.setDateTimeFormat(objClient.dateBirth),
@@ -96,7 +100,7 @@ angular.module('OGTicketsApp.services')
     /**
      * Envia la información correspondiente a la tabla de usuario a validar, si la informacion es valida guarda el usuario
      * @param  obj objUser
-     * @return {[type]}
+     * @return promise
      */
     var validateUserInfo= function(objUser) {
         var objUserInfo={
@@ -126,32 +130,6 @@ angular.module('OGTicketsApp.services')
         return defer.promise;
 
     };
-
-
-
-
-
-
-    // var clientRegister= function (client) {
-    // 	var saved= clientExists(client);
-    // 	var result={};
-
-    // 	if(saved.length>0){
-    // 		result.value=false;
-    // 		result.msj="Client already exists";
-    // 	}else{
-    // 		client.id= "cl" + clientId;
-    //         client.active= true;
-    //         client.userType= "ut02";
-    // 		clients.push(client);
-    // 		localStorageService.set("userList", clients);
-    // 		clientId++;
-    // 		localStorageService.setId("clientIdCounter", clientId);
-    // 		result.value= true;
-    // 		result.clientId= client.id;
-    // 	};
-    // 	return result;
-    // };
 
     var retrieveClient = function (cId){
         result = clients.filter(function (item) {
