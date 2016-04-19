@@ -4,8 +4,8 @@
 	VALUES 
 	('Estadio Nacional', 25490700, null, 2184, -84.107733, 9.933126, 'La Sabana, San José', 'http://i1097.photobucket.com/albums/g342/David_Ness/estadioNacional_zpsenlmq51a.jpg'),
 	('Teatro Nacional', 20101111, null, 666, -84.077087, 9.933126, 'Avenida Segunda entre Calles 3 y 5, Centro, San José, Costa Rica', 'http://i1097.photobucket.com/albums/g342/David_Ness/teatroNacional_zpspsz4jbc3.jpg'),
-	('Auditorio Nacional', 22227647, null, 500, -84.068303, 9.933238, 'Union, San José, Costa Rica', 'http://i1097.photobucket.com/albums/g342/David_Ness/auditorioNacional_zpsgtbe67wl.jpg'),
-	('Palacio de los Deportes', 22381144, null, 674, -82.107733, 10.936619, 'Heredia, Costa Rica', 'http://i1097.photobucket.com/albums/g342/David_Ness/palacioDeportes_zpsk04cgg9q.jpg'),
+	('Auditorio Nacional', 22227647, null, 500, -84.079934, 9.940770, 'Union, San José, Costa Rica', 'http://i1097.photobucket.com/albums/g342/David_Ness/auditorioNacional_zpsgtbe67wl.jpg'),
+	('Palacio de los Deportes', 22381144, null, 674, -84.122229, 9.998976, 'Heredia, Costa Rica', 'http://i1097.photobucket.com/albums/g342/David_Ness/palacioDeportes_zpsk04cgg9q.jpg'),
 	('Teatro Popular Melico Salazar', 22956000, 22335172, 2752, -84.079298, 9.933320, 'Calle Central Alfredo Volio, San José, Costa Rica', 'http://i1097.photobucket.com/albums/g342/David_Ness/teatroMelicoSalazar_zpsbumo2jvs.jpg'),
 	("Pepper's Club", 22241472, null, 400, -84.049039, 9.918390, 'Maria Auxiliadora, Zapote, Costa Rica', 'http://i1097.photobucket.com/albums/g342/David_Ness/3da91d76-4fc2-4177-91f9-4f4e5fa25ab1_zpshmkyc1e9.jpg');
 
@@ -27,19 +27,13 @@
 
 /*--Tabla Butacas x Sitio x Seccion--*/
 	INSERT INTO tbbutacasporsitioporseccion
-	(idEvento, idSitio, idSeccion, idAsiento) 
-	VALUES 
-	(1, 2, idSeccion, idAsiento),
-	(2, 2, idSeccion, idAsiento),
-	(3, 4, idSeccion, idAsiento),
-	(4, 5, idSeccion, idAsiento),
-	(5, 5, idSeccion, idAsiento),
-	(6, 1, idSeccion, idAsiento),
-	(7, 6, idSeccion, idAsiento),
-	(8, 5, idSeccion, idAsiento),
-	(9, 4, idSeccion, idAsiento),
-	(10, 4, idSeccion, idAsiento),
-	(11, 3, idSeccion, idAsiento);
+	(idSeccion, rowAccount, colAcount ,idSitio) 
+	VALUES  
+	(VP, rowAccount, colAcount ,1),
+	(, rowAccount, colAcount ,1),
+	(idSeccion, rowAccount, colAcount ,2),
+	(idSeccion, rowAccount, colAcount ,3),
+	(idSeccion, rowAccount, colAcount ,4);
 
 /*--Tabla Evento x Promotor--*/
 	INSERT INTO tbeventoporpromotor
