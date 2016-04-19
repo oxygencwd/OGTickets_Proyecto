@@ -120,6 +120,20 @@ $app->post(
 
 
 
+/*RUTAS DE PROMOTOR*/
+//promoter/registerRequest
+$app->post(
+    '/promoter/registerRequest',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->registerRequest($request);
+        return $response->withJson($result);
+    }
+);
+
+
 
 // Corremos la aplicación.
 $app->run();

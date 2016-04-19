@@ -36,16 +36,17 @@ angular.module('OGTicketsApp.controllers')
 		}
 	}; 
 
-	//Funcion del boton de solicitud de registro de promotor, agarra todos los datos del formulario.
+	//Funcion del boton de solicitud de registro de promotor, recolecta los datos que ingreso el usuario y los envia hacia el servicio.
 	$scope.sendRequest= function () {
-		result= promotorFormService.promotorRequest($scope.newPromotor);
-		if(result.value){
-			$scope.newPromotor={};
-			formService.clear($scope.formNewPromotor);
-			$scope.error="Solicitud enviada";
-		}else{
-			$scope.error="Ya existe una cuenta registrada con ese correo electronico";
-		}
+		promotorService.registerRequest($scope.newPromotor);
+		// result= promotorService.promotorRequest($scope.newPromotor);
+		// if(result.value){
+		// 	$scope.newPromotor={};
+		// 	formService.clear($scope.formNewPromotor);
+		// 	$scope.error="Solicitud enviada";
+		// }else{
+		// 	$scope.error="Ya existe una cuenta registrada con ese correo electronico";
+		// }
 	};
 
 	$scope.dismissRequest= function () {
