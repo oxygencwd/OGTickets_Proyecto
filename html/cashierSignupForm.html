@@ -58,7 +58,7 @@
 		            		<input type="text" class="form-control"  minlength="9" maxlength="40" name="personalId" id="personalId" placeholder="1 0111 0111" ng-model="newCashier.personalId" required ng-model-options="{ updateOn:'blur'}">
 		            		<sub ng-show="formNewCashier.personalId.$error.required && formNewCashier.personalId.$touched">Numero de cedula requerido</sub>
 		            		<sub ng-show="formNewCashier.personalId.$error.minlength && formNewCashier.personalId.$touched">Formato no válido</sub>
-			            	<sub ng-show="formNewCashier.personalId.$error.maxlength && formNewCashier.personalId.$touched">Formato no válido</sub>validos</sub>
+			            	<sub ng-show="formNewCashier.personalId.$error.maxlength && formNewCashier.personalId.$touched">Formato no válido</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -71,7 +71,6 @@
 		            		<sub ng-show="formNewCashier.email.$error.email && formNewCashier.email.$touched">Formato de correo electrónico no valido</sub>
 		            	</div>
 		            </div> <!-- form group end -->
-		        </div>
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
@@ -86,7 +85,7 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
-		            		<label for="phone">Fecha de nacimiento*</label>
+		            		<label for="date">Fecha de nacimiento*</label>
 		            		<input type="date" class="form-control" name="date" id="date" max="{{minAge | date:'yyyy-MM-dd'}}" min="{{maxAge | date:'yyyy-MM-dd'}}" ng-model="newCashier.dateBirth" required>
 
 		            		<sub ng-show="formNewCashier.date.$error.required && formNewCashier.date.$touched">Fecha de nacimiento es requerida</sub>
@@ -94,7 +93,7 @@
 		            		<sub ng-show="formNewCashier.date.$error.min && formNewCashier.date.$touched">Debe ser menor de 100 años</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
-		            		<label>Género</label>
+		            		<label for="genre">Género</label>
 		            		<select name="genre" id="genre" ng-model="newCashier.genre" required ng-model-options="{ updateOn:'blur'}">
 		            			<option value="">-Género-</option>
 		            			<option value="m">Masculino</option>
