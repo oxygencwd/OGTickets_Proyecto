@@ -8,11 +8,8 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-<<<<<<< HEAD
-			<form name="formNewCashier" ng-submit="cashierRegister()" novalidate>
-=======
-			<form name="formNewCashier" autocomplete="off" ng-submit="formNewCashier.$valid && cashierRegister()" novalidate>
->>>>>>> 3d21103fdb309295b1c7d2e3cc8b355318d1b1a5
+			<form name="formNewCashier" ng-submit="formNewCashier.$valid && cashierRegister()" novalidate autocomplete="off">
+
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="form-group">
 						<div class="col-sm-4" ng-hide="editing || appLoggedUser.userType=='ut01'">
@@ -25,7 +22,6 @@
 							    <li><a ng-href="#/promotor-signup">Promotor</a></li>
 							  </ul>
 							</div>
-			                <!-- <select ng-model="selected" ng-options="user as user.userType for user in users" ng-change="onChange()"></select> -->
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -76,20 +72,6 @@
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
-		       <!--  <div class="col-sm-10 col-sm-offset-1"> -->
-		            <!-- <div class="form-group">
-		            	<div class="col-sm-6">
-		            		<label for="password">Contraseña*</label>
-		            		<input type="password" class="form-control" name="password" id="password" ng-model="newCashier.password" required ng-model-options="{ updateOn:'blur'}">
-		            		<sub ng-show="formNewCashier.password.$error.required && formNewCashier.password.$touched">La contraseña es requerida</sub>
-		            	</div> -->
-		            	<!-- <div class="col-sm-6 signUpSecondColumn">
-		            		<label for="repeatPass">Repita contraseña*</label>
-		            		<input type="password" class="form-control" name="repeatPass" id="repeatPass" ng-model="newCashier.repeatPass" required ng-model-options="{ updateOn:'blur'}" data-password-verify="newCashier.password">
-		            		<sub ng-show="formNewCashier.repeatPass.$error.required && formNewCashier.repeatPass.$touched">Repetir contraseña es requerido</sub>
-		            		<sub ng-show="formNewCashier.repeatPass.$error.passwordVerify && formNewCashier.repeatPass.$touched">Las contraseñas no coinciden</sub>
-		            	</div> -->
-		            <!-- </div>  --><!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
@@ -105,25 +87,16 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Fecha de nacimiento*</label>
-<<<<<<< HEAD
-		            		<input type="date" class="form-control" name="date" id="date" ng-model="newCashier.dateBirth" required ng-model-options="{ updateOn:'blur'}">
-=======
-		            		<input type="date" class="form-control" name="date" id="date" max="{{minAge | date:'yyyy-MM-dd'}}" min="{{maxAge | date:'yyyy-MM-dd'}}" ng-model="newCashier.date" required>
->>>>>>> 3d21103fdb309295b1c7d2e3cc8b355318d1b1a5
+		            		<input type="date" class="form-control" name="date" id="date" max="{{minAge | date:'yyyy-MM-dd'}}" min="{{maxAge | date:'yyyy-MM-dd'}}" ng-model="newCashier.dateBirth" required>
+
 		            		<sub ng-show="formNewCashier.date.$error.required && formNewCashier.date.$touched">Fecha de nacimiento es requerida</sub>
 		            		<sub ng-show="formNewCashier.date.$error.max && formNewCashier.date.$touched">Debe ser mayor de 18 años</sub>
 		            		<sub ng-show="formNewCashier.date.$error.min && formNewCashier.date.$touched">Debe ser menor de 100 años</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
-<<<<<<< HEAD
-		            		<label>Género*</label>
+		            		<label>Género</label>
 		            		<select name="genre" id="genre" ng-model="newCashier.genre" required ng-model-options="{ updateOn:'blur'}">
 		            			<option value="">-Género-</option>
-=======
-		            		<label>Género</label>
-		            		<select name="genre" id="genre" ng-model="newCashier.genre" required>
-		            			<option value="">-Género *-</option>
->>>>>>> 3d21103fdb309295b1c7d2e3cc8b355318d1b1a5
 		            			<option value="m">Masculino</option>
 		            			<option value="f">Femenino</option>
 		            		</select>
