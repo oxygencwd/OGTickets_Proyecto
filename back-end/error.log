@@ -127,3 +127,205 @@ Array
         )
 
 )
+---- 
+19/04/16 13:39:51 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaFisica
+    [name] => persona juridica
+    [legalId] => 333333333d
+    [email] => fdsf@xn--kdfslkf-6za.xom
+    [specializationArea] => klkjlkj
+    [password] => 11
+    [repeatPass] => 11
+    [phone] => 44444444
+    [address] => skaljsakld
+    [firstname] => hgfhdghgfhfghhghfghfdhgsfhgf
+    [firstlastname] => dsada
+    [personalId] => 544441111
+    [dateBirth] => 1993-10-10T06:00:00.000Z
+    [secondname] => gfdg
+    [secondlastname] => fgd
+)
+---- 
+19/04/16 13:39:51 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 13:39:51 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 10
+                    [0] => 10
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 13:40:00 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => persona juridica
+    [legalId] => 333333333d
+    [email] => fdsf@xn--kdfslkf-6za.xom
+    [specializationArea] => klkjlkj
+    [password] => 11
+    [repeatPass] => 11
+    [phone] => 44444444
+    [address] => skaljsakld
+    [firstname] => hgfhdghgfhfghhghfghfdhgsfhgf
+    [firstlastname] => dsada
+    [personalId] => 544441111
+    [dateBirth] => 1993-10-10T06:00:00.000Z
+    [secondname] => gfdg
+    [secondlastname] => fgd
+)
+---- 
+19/04/16 13:40:00 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 13:40:00 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 10
+                    [0] => 10
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 13:40:11 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => persona juridica
+    [legalId] => 333333333d
+    [email] => fdsf@xn--kdfslsfdsfkf-chb.xom
+    [specializationArea] => klkjlkj
+    [password] => 11
+    [repeatPass] => 11
+    [phone] => 44444444
+    [address] => skaljsakld
+    [firstname] => hgfhdghgfhfghhghfghfdhgsfhgf
+    [firstlastname] => dsada
+    [personalId] => 544441111
+    [dateBirth] => 1993-10-10T06:00:00.000Z
+    [secondname] => gfdg
+    [secondlastname] => fgd
+)
+---- 
+19/04/16 13:40:11 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 13:40:11 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+19/04/16 13:40:11 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 14
+            [count] => 1
+        )
+
+)
