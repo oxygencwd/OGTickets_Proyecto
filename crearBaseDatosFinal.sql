@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbUsuario` (
   `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idUsuario)) VIRTUAL,
   `PrimerNombre` VARCHAR(45) NOT NULL,
   `SegundoNombre` VARCHAR(45) NULL,
-  `PrimerApellido` VARCHAR(45) NOT NULL,
+  `PrimerApellido` VARCHAR(45) NULL,
   `SegundoApellido` VARCHAR(45) NULL,
   `Cedula` VARCHAR(15) NOT NULL,
   `Email` VARCHAR(80) NOT NULL,
