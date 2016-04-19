@@ -55,10 +55,10 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="personalId">Cédula de identidad*</label>
-		            		<input type="text" class="form-control"  minlength="8" maxlength="9" name="personalId" id="personalId" placeholder="1 0111 0111" ng-model="newCashier.personalId" required ng-model-options="{ updateOn:'blur'}">
+		            		<input type="text" minlength="9" maxlength="40" class="form-control" name="personalId" id="personalId" placeholder="101110111" ng-model="newCashier.personalId" required ng-model-options="{ updateOn:'blur'}">
 		            		<sub ng-show="formNewCashier.personalId.$error.required && formNewCashier.personalId.$touched">Numero de cedula requerido</sub>
-		            		<sub ng-show="formNewCashier.personalId.$error.minlength && formNewCashier.personalId.$touched">Cantidad de digitos no validos</sub>
-		            		<sub ng-show="formNewCashier.personalId.$error.maxlength && formNewCashier.personalId.$touched">Cantidad de digitos no validos</sub>
+		            		<sub ng-show="formNewCashier.personalId.$error.minlength && formNewCashier.personalId.$touched">Formato no válido</sub>
+		            		<sub ng-show="formNewCashier.personalId.$error.maxlength && formNewCashier.personalId.$touched">Formato no válido</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -77,9 +77,9 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Teléfono*</label>
-		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newCashier.phone" ng-model-options="{ updateOn:'blur'}" ng-pattern="expNumberPhone">
-		            		<sub ng-show="formNewCashier.phone.$error.required && formNewCashier.phone.$touched">El numero de telefono es requerido.</sub>
-                			<sub ng-show="formNewCashier.phone.$error.pattern && formNewCashier.phone.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</sub>
+		            		<input type="number" minlength="8" maxlength="8" class="form-control" name="phone" placeholder="88888888" id="phone" ng-model="newCashier.phone" required ng-model-options="{ updateOn:'blur'}" ng-pattern="expNumberPhone">
+		            		<sub ng-show="formNewCashier.phone.$error.required && formNewCashier.phone.$touched">El telefono es requerido.</sub>
+                			<sub ng-show="formNewCashier.phone.$error.pattern && formNewCashier.phone.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros, sin espacios.</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
