@@ -29,11 +29,34 @@
 	INSERT INTO tbbutacasporsitioporseccion
 	(idSeccion, rowAccount, colAcount ,idSitio) 
 	VALUES  
-	(VP, rowAccount, colAcount ,1),
-	(, rowAccount, colAcount ,1),
-	(idSeccion, rowAccount, colAcount ,2),
-	(idSeccion, rowAccount, colAcount ,3),
-	(idSeccion, rowAccount, colAcount ,4);
+	(PE, 5, 16, 1),
+	(PO, 5, 16, 1),
+	(PN, 8, 5, 1),
+	(PS, 8, 5, 1),
+	(BE, 10, 22, 1),
+	(BO, 10, 22, 1),
+	(BS, 12, 10, 1),
+	(BN, 12, 10, 1),
+	(GE, 13, 32, 1),
+	(GO, 13, 32, 1),
+	(GS, 18, 12, 1),
+	(GN, 18, 12, 1),
+	(PE, 10, 4, 2),
+	(PO, 10, 4, 2),
+	(PS, 4, 10, 2),
+	(BE, 12, 5, 2),
+	(BO, 12, 5, 2),
+	(BS, 5, 12, 2),
+	(GE, 15, 5, 2),
+	(GO, 15, 5, 2),
+	(GS, 5, 18, 2),
+	(VP, 3, 18, 3),
+	(BU, 10, 25, 3),
+	(GO, 8, 32, 3),
+	(GE, 20, 9, 4),
+	(GO, 20, 9, 4),
+	(GN, 9, 26, 4),
+	(PR, 8, 10, 4);
 
 /*--Tabla Evento x Promotor--*/
 	INSERT INTO tbeventoporpromotor
