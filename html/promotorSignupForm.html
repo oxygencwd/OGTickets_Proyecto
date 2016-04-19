@@ -30,7 +30,7 @@
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
-
+				
 		        <!-- Persona jurídica -->  
 		        <div ng-show="newPromotor.typePerson=='personaJuridica'">
 		        	<div class="col-sm-10 col-sm-offset-1">
@@ -153,12 +153,12 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Fecha de nacimiento*</label>
-		            		<input type="date" class="form-control" name="date" id="date" max="{{minAge | date:'yyyy-MM-dd'}}" min="{{maxAge | date:'yyyy-MM-dd'}}" ng-model="newPromotor.date" required>
+		            		<input type="date" class="form-control" name="date" id="date" max="{{minAge | date:'yyyy-MM-dd'}}" min="{{maxAge | date:'yyyy-MM-dd'}}" ng-model="newPromotor.dateBirth" required>
 		            		<sub ng-show="formNewPromotor.date.$error.required && formNewPromotor.date.$touched">Fecha de nacimiento es requerida</sub>
 		            		<sub ng-show="formNewPromotor.date.$error.max && formNewPromotor.date.$touched">Debe ser mayor de 18 años</sub>
 		            		<sub ng-show="formNewPromotor.date.$error.min && formNewPromotor.date.$touched">Debe ser menor de 100 años</sub>
 		            	</div>
-		            	<div class="col-sm-6 signUpSecondColumn">
+		            	<!-- <div class="col-sm-6 signUpSecondColumn">
 		            		<label>Género</label>
 		            		<select name="genre" id="genre" ng-model="newPromotor.genre" required>
 		            			<option value="">-Tipo Género-</option>
@@ -166,7 +166,7 @@
 		            			<option value="f">Femenino</option>
 		            		</select>
 		            		<sub ng-show="formNewPromotor.genre.$error.required && formNewPromotor.genre.$touched">Elegir un tipo de genero</sub>
-		            	</div>
+		            	</div> -->
 		            </div> <!-- form group end -->
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
@@ -175,8 +175,10 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
+		            
 		                    <input type="submit" class="btn btn-block btn-lg" value="Aceptar solicitud" ng-show="appLoggedUser.userType=='ut01'" ng-click="formNewPromotor.$valid && promotorRegister()"  ng-disabled="formNewPromotor.$invalid">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Enviar formulario" ng-click="formNewPromotor.$valid && sendRequest()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPromotor.$invalid">
+
+		                <input type="submit" class="btn btn-block btn-lg" value="Enviar formulario" ng-click="sendRequest()" ng-hide="appLoggedUser.isConnected">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Editar datos" ng-click="formNewPromotor.$valid && editPromotor()" ng-disabled="formNewPromotor.$invalid" ng-show="editing">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Rechazar solicitud" ng-click="formNewPromotor.$valid && dismissRequest()" ng-show="appLoggedUser.userType=='ut01'"  ng-disabled="formNewPromotor.$invalid">
 		                </div>

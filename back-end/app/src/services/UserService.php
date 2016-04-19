@@ -215,6 +215,18 @@ class UserService {
     } //end -registerUser
 
     /**
+     * Enmascara la contraseña brindada para evitar almacenar las contraseñas en texto plano en la base de datos.
+     *
+     * @param $password
+     * @return string
+     */
+    private function getProtectedPassword($password) {
+        $finalPassword = password_hash($password, PASSWORD_BCRYPT);
+        return $finalPassword;
+    } //end -getProtectedPassword-
+
+
+    /**
      * Verifica si un email está disponible para ser utilizado en el sistema.
      *
      * @param string $email
@@ -237,17 +249,6 @@ class UserService {
     }//end -isEmailAvailable-
 
 
-
-    /**
-     * Enmascara la contraseña brindada para evitar almacenar las contraseñas en texto plano en la base de datos.
-     *
-     * @param $password
-     * @return string
-     */
-    private function getProtectedPassword($password) {
-        $finalPassword = password_hash($password, PASSWORD_BCRYPT);
-        return $finalPassword;
-    } //end -getProtectedPassword-
 
 }//end -class-
 
