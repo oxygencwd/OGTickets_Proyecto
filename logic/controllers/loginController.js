@@ -9,6 +9,7 @@ angular.module('OGTicketsApp.controllers')
 		var objUser={};
 		userService.canLogin($scope.cUser)
 		.then(function(data) {
+			console.log(data);
 			if(data.user){
 				userService.login($scope.appLoggedUser, data.user);
 				$scope.error="";
@@ -20,6 +21,7 @@ angular.module('OGTicketsApp.controllers')
 			}
 		})
 		.catch(function(error) {
+			console.log(error);
 			console.error("Error en el login");
 			
 		});
@@ -28,6 +30,8 @@ angular.module('OGTicketsApp.controllers')
 	$scope.closeModal= function () {	
 		$('#loginModal').modal('hide');
 	};
+
+
 
 
 

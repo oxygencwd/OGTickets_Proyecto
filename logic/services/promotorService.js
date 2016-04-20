@@ -5,17 +5,26 @@ angular.module('OGTicketsApp.services')
     var promotors= localStorageService.getAll("userList");
 
     //Llama a todos las solicitudes de promotor guardadas en promoterRegisterRequest.
-	var promotorsResquest= localStorageService.getAll("promoterRegisterRequest");
+	//var promotorsResquest= localStorageService.getAll("promoterRegisterRequest");
 
     //Genera un contador de id.
-	var promotorId= localStorageService.setIdCounter("promotorIdCounter", 4);
+	//var promotorId= localStorageService.setIdCounter("promotorIdCounter", 4);
 
     // Filtra la lista de promotores y obtiene los que tienen el pendingCheck en true
     var promotorsPendingCheck= function (){
-        result = promotorsResquest.filter(function (item) {
-            return item.pendingCheck == true;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/promoter/getAllRequest';
+
+        $http.get(url)
+        .success(function(data, status) {
+            console.log(data);
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result;
+        return defer.promise;
     };
 
     //Revisa el email del promotor, para saber si ya existe o no una cuenta con ese email.
