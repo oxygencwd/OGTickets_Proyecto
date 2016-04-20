@@ -105,7 +105,11 @@ class ValidationService{
     }
 
 
-
+    /**
+     * Verifica que el formato de genero sea el correcto
+     * @param  string genre
+     * @return boolean
+     */
     function isValidGenre($genre){
         if($genre=="f" || $genre=="m"){
             return true;
@@ -113,6 +117,29 @@ class ValidationService{
             return false;
         }
     }
+
+
+    /**
+     * Verifica si un email está disponible para ser utilizado en el sistema.
+     *
+     * @param string $email
+     * @return bool
+     */
+    private function isEmailAvailable($email) {
+        // El query a ejecutar en la BD
+        $query = "SELECT COUNT(*) AS count FROM tbusuario WHERE email = :email";
+
+        // Los parámetros de ese query
+        $params = [":email" => $email];
+
+        $result = $this->storage->query($query, $params);
+
+        LoggingService::logVariable($result);
+
+        // El resultado esperado de la cuenta es cero
+        return $result["data"][0]["count"] == 0;
+
+    }//end -isEmailAvailable-
 
 
     

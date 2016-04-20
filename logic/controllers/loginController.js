@@ -20,6 +20,7 @@ angular.module('OGTicketsApp.controllers')
 			}
 		})
 		.catch(function(error) {
+			console.log(error);
 			console.error("Error en el login");
 			
 		});
@@ -28,6 +29,8 @@ angular.module('OGTicketsApp.controllers')
 	$scope.closeModal= function () {	
 		$('#loginModal').modal('hide');
 	};
+
+
 
 
 
