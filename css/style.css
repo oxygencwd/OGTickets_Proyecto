@@ -872,6 +872,11 @@ label{
 	padding: 0;
 }
 
+#imageProfile{
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .atAGlanceBox{
 	background-color: #fd1c3e;
 	position: relative;
@@ -891,6 +896,7 @@ label{
 
 .mapSection{
 	background-color: white;
+	padding-bottom: 30px;
 }
 
 google-map{
