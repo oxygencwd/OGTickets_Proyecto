@@ -1,21 +1,30 @@
 angular.module('OGTicketsApp.services')
-.service('promotorService', ['localStorageService', 'eventService', function(localStorageService, eventService) {
+.service('promotorService', ['localStorageService', 'eventService', '$q', '$http', function(localStorageService, eventService, $q, $http) {
 
     //Llama a todos los promotoes guardados en userList.
     var promotors= localStorageService.getAll("userList");
 
     //Llama a todos las solicitudes de promotor guardadas en promoterRegisterRequest.
-	var promotorsResquest= localStorageService.getAll("promoterRegisterRequest");
+	//var promotorsResquest= localStorageService.getAll("promoterRegisterRequest");
 
     //Genera un contador de id.
-	var promotorId= localStorageService.setIdCounter("promotorIdCounter", 4);
+	//var promotorId= localStorageService.setIdCounter("promotorIdCounter", 4);
 
     // Filtra la lista de promotores y obtiene los que tienen el pendingCheck en true
     var promotorsPendingCheck= function (){
-        result = promotorsResquest.filter(function (item) {
-            return item.pendingCheck == true;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/promoter/getAllRequest';
+
+        $http.get(url)
+        .success(function(data, status) {
+            console.log(data);
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result;
+        return defer.promise;
     };
 
     //Revisa el email del promotor, para saber si ya existe o no una cuenta con ese email.
@@ -57,21 +66,21 @@ angular.module('OGTicketsApp.services')
     }; 
 
     //Toma todos los datos del formulario, agrega el campo de approved y el de pendingCheck, y luego son guardados en promotorsResquest.
-    var promotorRequest= function (promotor) {
-      var saved= promotorExistsRequest(promotor);
-        var result={};
+    var registerRequest= function (promotor) {
+        var defer= $q.defer();
+        var url= 'back-end/index.php/promoter/registerRequest';
 
-        if(saved.length>0){
-            result.value=false;
-            result.msj="Promotor already exists";
-        }else{
-            promotor.approved= false;
-            promotor.pendingCheck= true;
-            promotorsResquest.push(promotor);
-            localStorageService.set("promoterRegisterRequest", promotorsResquest);
-            result.value= true;
-        };
-        return result;
+        $http.post(url, promotor)
+        .success(function(data, status) {
+            console.info(data),
+            defer.resolve(data);
+        })
+            .error(function(error, status) {
+            defer.reject(error);
+            console.error(error, status);
+        });
+
+        return defer.promise;
     }
 
     //retrieves the promotor who has the id in the Param
@@ -108,7 +117,7 @@ angular.module('OGTicketsApp.services')
 	return{
         promotorsPendingCheck:promotorsPendingCheck,
 		promotorRegister:promotorRegister,
-        promotorRequest:promotorRequest,
+        registerRequest:registerRequest,
         retrievePromotor:retrievePromotor,
         replacePromotor:replacePromotor,
         removeOldPromotor:removeOldPromotor,
