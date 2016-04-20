@@ -27,72 +27,65 @@
 
 /*--Tabla Butacas x Sitio x Seccion--*/
 	INSERT INTO tbbutacasporsitioporseccion
-	(idSeccion, rowAccount, colAcount ,idSitio) 
+	(idSeccion, rowAccount, colAcount ,TbSitio_idSitio) 
 	VALUES  
-	(PE, 5, 16, 1),
-	(PO, 5, 16, 1),
-	(PN, 8, 5, 1),
-	(PS, 8, 5, 1),
-	(BE, 10, 22, 1),
-	(BO, 10, 22, 1),
-	(BS, 12, 10, 1),
-	(BN, 12, 10, 1),
-	(GE, 13, 32, 1),
-	(GO, 13, 32, 1),
-	(GS, 18, 12, 1),
-	(GN, 18, 12, 1),
-	(PE, 10, 4, 2),
-	(PO, 10, 4, 2),
-	(PS, 4, 10, 2),
-	(BE, 12, 5, 2),
-	(BO, 12, 5, 2),
-	(BS, 5, 12, 2),
-	(GE, 15, 5, 2),
-	(GO, 15, 5, 2),
-	(GS, 5, 18, 2),
-	(VP, 3, 18, 3),
-	(BU, 10, 25, 3),
-	(GO, 8, 32, 3),
-	(GE, 20, 9, 4),
-	(GO, 20, 9, 4),
-	(GN, 9, 26, 4),
-	(PR, 8, 10, 4);
+	('PE', 5, 16, 1),
+	('PO', 5, 16, 1),
+	('PN', 8, 5, 1),
+	('PS', 8, 5, 1),
+	('BE', 10, 22, 1),
+	('BO', 10, 22, 1),
+	('BS', 12, 10, 1),
+	('BN', 12, 10, 1),
+	('GE', 13, 32, 1),
+	('GO', 13, 32, 1),
+	('GS', 18, 12, 1),
+	('GN', 18, 12, 1),
+	('PE', 10, 4, 2),
+	('PO', 10, 4, 2),
+	('PS', 4, 10, 2),
+	('BE', 12, 5, 2),
+	('BO', 12, 5, 2),
+	('BS', 5, 12, 2),
+	('GE', 15, 5, 2),
+	('GO', 15, 5, 2),
+	('GS', 5, 18, 2),
+	('VP', 3, 18, 3),
+	('BU', 10, 25, 3),
+	('GO', 8, 32, 3),
+	('GE', 20, 9, 4),
+	('GO', 20, 9, 4),
+	('GN', 9, 26, 4),
+	('PR', 8, 10, 4);
 
 /*--Tabla Evento x Promotor--*/
 	INSERT INTO tbeventoporpromotor
-	(idEvento, idPromotor) 
+	(TbPromotor_idPromotor, TbEvento_idEvento) 
 	VALUES 
-	(1, 3),
-	(2, 3),
-	(3, 3),
-	(4, 3),
-	(5, 3),
-	(6, 3),
-	(7, 3),
-	(8, 3),
-	(9, 3),
-	(10, 3),
-	(11, 3);
+	(1,1),
+	(1,2),
+	(1,3),
+	(1,4),
+	(1,5),
+	(1,6),
+	(1,7),
+	(1,8),
+	(1,9),
+	(1,10),
+	(1,11);
 
 /*--Tabla Evento x Sitio--*/
 	INSERT INTO tbeventoporsitio
-	(idEvento, idSitio)  
+	(TbSitio_idSitio, TbEvento_idEvento)  
 	VALUES 
-	(1, 2),
-	(2, 2),
-	(3, 1),
-	(4, 5),
-	(5, 5),
-	(6, 1),
-	(7, 6),
-	(8, 5),
-	(9, 4),
-	(10, 4),
-	(11, 3);
-
-/*--Tabla SolicitudRegistroPromotor--*/
-	INSERT INTO tbsolicitudregistropromotor 
-	(Approved, PeddingCheck, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, nombreJuridico, Cedula, Email, Contraseña, AreaEspecializacion, PrimerTelefono, SegundoTelefono, Ubicacion) 
-	VALUES 
-	(true, false, 'Luis', 'Gerardo', 'Camacho', 'Segura', null, 123232212, 'gerardo992@hotmail.com', Contraseña, 'Musica', 77654344, null, 'San Jose, Costa Rica'),
-	(false, true, null, null, null, null, 'Luis Samora Events', 345532214, 'eventoSamora@gmail.com', Contraseña, 'Arte', 22234234, 22234233, 'Heredia, Costa Rica');
+	(2,1),
+	(2,2),
+	(1,3),
+	(5,4),
+	(5,5),
+	(1,6),
+	(6,7),
+	(5,8),
+	(4,9),
+	(4,10),
+	(3,11);
