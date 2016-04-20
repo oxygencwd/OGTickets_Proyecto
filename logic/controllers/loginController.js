@@ -9,7 +9,6 @@ angular.module('OGTicketsApp.controllers')
 		var objUser={};
 		userService.canLogin($scope.cUser)
 		.then(function(data) {
-			console.log(data);
 			if(data.user){
 				userService.login($scope.appLoggedUser, data.user);
 				$scope.error="";
