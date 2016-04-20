@@ -72,21 +72,6 @@ angular.module('OGTicketsApp.services')
         });
 
         return defer.promise;
-
-      // var saved= promotorExistsRequest(promotor);
-      //   var result={};
-
-      //   if(saved.length>0){
-      //       result.value=false;
-      //       result.msj="Promotor already exists";
-      //   }else{
-      //       promotor.approved= false;
-      //       promotor.pendingCheck= true;
-      //       promotorsResquest.push(promotor);
-      //       localStorageService.set("promoterRegisterRequest", promotorsResquest);
-      //       result.value= true;
-      //   };
-      //   return result;
     }
 
     //retrieves the promotor who has the id in the Param

@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('promotorSignupController', ['$scope','localStorageService','formService','promotorService', '$location','$routeParams', function ($scope,localStorageService, formService, promotorService, $location,$routeParams) {
+.controller('promotorSignupController', ['$scope','localStorageService', '$timeout','$window', 'formService','promotorService', '$location','$routeParams', function ($scope,localStorageService, $timeout, $window, formService, promotorService, $location,$routeParams) {
 
 	$scope.newPromotor={};
 	$scope.error="";
@@ -38,15 +38,36 @@ angular.module('OGTicketsApp.controllers')
 
 	//Funcion del boton de solicitud de registro de promotor, recolecta los datos que ingreso el usuario y los envia hacia el servicio.
 	$scope.sendRequest= function () {
-		promotorService.registerRequest($scope.newPromotor);
-		// result= promotorService.promotorRequest($scope.newPromotor);
-		// if(result.value){
-		// 	$scope.newPromotor={};
-		// 	formService.clear($scope.formNewPromotor);
-		// 	$scope.error="Solicitud enviada";
-		// }else{
-		// 	$scope.error="Ya existe una cuenta registrada con ese correo electronico";
-		// }
+		promotorService.registerRequest($scope.newPromotor)
+		.then(function(data) {
+			if(data.valid){
+				$scope.newPromotor={};
+				formService.clear($scope.formNewPromotor);
+				$scope.success= "Solicitud enviada con éxito";
+				$scope.openModal("#promoterSuccessModal");
+				$timeout(function() {
+					$scope.closeModal("#promoterSuccessModal");
+					$window.location.href = ('#/home');
+					$scope.openModal('#loginModal');
+					$scope.error="";
+					$scope.success="";
+				}, 1500);	
+			}else{
+				$scope.error="Correo eléctrónico ya utilizado en el sisitema ó datos inválidos";
+			}
+		})
+		.catch(function() {
+			console.log("Error registrando el nuevo cliente");
+		});
+	};
+
+
+	$scope.openModal= function (modalId) { 
+	  $(modalId).modal('show');
+	};
+
+	$scope.closeModal= function (modalId) { 
+	  $(modalId).modal('hide');
 	};
 
 	$scope.dismissRequest= function () {

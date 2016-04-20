@@ -114,16 +114,17 @@ class PromoterController{
         }
 
         return $result;
+	}//end -registerRequest-
 
 
-
-
-
-
-
-
-
-	}
+    /**
+     * trae todas las peticiones de registro como promotor
+     * @param  request
+     * @return array
+     */
+    public function getAllRequest($request){
+        return $this->promoterService->getAllRequest();
+    }
 
 
 

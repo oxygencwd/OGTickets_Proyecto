@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('clientSignupController', ['$scope','formService','clientService', '$window', '$routeParams', '$location', '$timeout', function ($scope, formService, clientService, $window, $routeParams, $location, $timeout) {
+.controller('clientSignupController', ['$scope','formService','$window','clientService', '$window', '$routeParams', '$location', '$timeout', function ($scope, formService, $window, clientService, $window, $routeParams, $location, $timeout) {
 
 	$scope.newClient={};
 		/*
@@ -40,7 +40,7 @@ angular.module('OGTicketsApp.controllers')
 				$scope.openModal("#clientRegSuccessModal");
 				$timeout(function() {
 					$scope.closeModal("#clientRegSuccessModal");
-					$location.path('#/home');
+					$window.location.href = ('#/home');
 					$scope.openModal('#loginModal');
 					$scope.error="";
 					$scope.success="";

@@ -133,6 +133,17 @@ $app->post(
     }
 );
 
+$app->get(
+    '/promoter/getAllRequest',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->getAllRequest($request);
+        return $response->withJson($result);
+    }
+);
+
 
 
 // Corremos la aplicación.

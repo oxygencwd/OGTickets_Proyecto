@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('cashierSignupController', ['$scope','formService','cashierService', '$location', function ($scope, formService, cashierService, $location) {
+.controller('cashierSignupController', ['$scope','formService','cashierService', '$window', '$location', function ($scope, formService, cashierService, $window, $location) {
 
 	$scope.newCashier={};
 		/*
