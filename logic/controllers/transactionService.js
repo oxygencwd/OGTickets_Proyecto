@@ -38,6 +38,16 @@ angular.module('OGTicketsApp.services')
         return result;
     };
     
+    var getTransactionByCode = function(code){
+        result = transactions.filter(function (item) {
+            return item.trCode == code;
+        });
+        return result;
+    }
+
+    var setTransaction = function(transactions){
+        localStorageService.set("transactionList", transactions);
+    };
 
 
 //puntos de acceso de los metodos del servicio:
@@ -47,6 +57,8 @@ angular.module('OGTicketsApp.services')
 	generateReservationCode:generateReservationCode,
     transactions:transactions,
     retrieveTransactionsByClient:retrieveTransactionsByClient,
-    getEventsFromTransactions:getEventsFromTransactions
+    getEventsFromTransactions:getEventsFromTransactions,
+    getTransactionByCode:getTransactionByCode,
+    setTransaction:setTransaction
 	};
 }]);//end -service-

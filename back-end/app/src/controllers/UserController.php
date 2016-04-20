@@ -1,13 +1,5 @@
 <?php
 
-/**
- * UserController.php
- * Responsabilidades de cada función pública:
- * - Tomar las peticiones desde AngularJS.
- * - Preparar y enviarlas al servicio en PHP.
- * - Recibir las respuesta del servicio en PHP.
- * - Prepararlas y enviarlas de vuelta a AngularJS.
- */
 
 namespace App\Controllers;
 
@@ -28,7 +20,6 @@ class UserController {
     }
 
     /**
-     * Intermediario entre el Front-End y el servicio.
      *
      * @param Request $request
      *
@@ -37,20 +28,16 @@ class UserController {
     public function login($request) {
         $result = [];
 
-        /**
-         * El contenido de las peticiones tipo `POST` se obtiene llamando a `getParsedBody`.
-         * El valor de retorno de esa función es un diccionario con el contenido del formulario.
-         */
         $formData = $request->getParsedBody();
         $email = null;
         $password = null;
 
-        // Verificamos que efectivamente exista una entrada de email
+        // Verificar que exista una entrada de email
         if (array_key_exists("email", $formData)) {
             $email = $formData["email"];
         }
 
-        // Verificamos que efectivamente exista una entrada de password
+        // Verificamos que exista una entrada de password
         if (array_key_exists("password", $formData)) {
             $password = $formData["password"];
         }
@@ -62,18 +49,15 @@ class UserController {
             $result["message"] = $loginResult["message"];
         } else {
             /**
-             * Si el usuario inició sesión, creamos un cookie llamado `loggedIn` y le asignamos el valor de true.
-             * Este cookie se debe expirar en caso de cerrar sesión.
-             * http://php.net/manual/en/function.setcookie.php
+             *Crear un cookie en caso de que el usuario haya inicado sesión-
              */
             setcookie($this->nombreCookie, true, time()+3600);
             $result["user"] = $loginResult["user"];
             $result["message"] = $loginResult["message"];
         }
 
-        // El array creado en ese método se envía como de vuelta al enrutador.
         return $result;
-    }
+    } //end -login-
 
     /**
      * Cierra la sesión del usuario del lado del back-end.
@@ -88,16 +72,16 @@ class UserController {
         // Verificamos si el usuario tenía un cookie en primer lugar
         if (array_key_exists($this->nombreCookie, $_COOKIE)) {
             $result["message"] = "User was logged out";
-            // Si lo tenía, lo expiramos
+            // Expirar el cookie en caso de que existiera
             setcookie($this->nombreCookie, true, time()-10);
         } else {
-            // Si no, retornamos un error, el usuario accedió al logout sin iniciar sesión
+            // Retornar un mensaje de error en caso de que se haya accedido al logout sin tener sesión activa
             $result["error"] = true;
             $result["message"] = "User never logged in";
         }
 
         return $result;
-    }
+    } //end -logout-
 
     /**
      * Registra un nuevo usuario en el sistema.
@@ -106,41 +90,76 @@ class UserController {
      *
      * @return string []
      */
-    public function register($request) {
+
+    public function registerUser($request) {
         $result = [];
         $formData = $request->getParsedBody();
-        $fullName = null;
-        $email = null;
-        $password = null;
-        $repeatPassword = null;
+
+        $firstname= null;
+        $secondname= null;
+        $firstlastname= null;
+        $secondlastname= null;
+        $personalId= null;
+        $email= null;
+        $password= null;
+        $repeatPass= null;
+        $userType= null;
 
         LoggingService::logVariable($formData, __FILE__, __LINE__);
 
-        if (array_key_exists("email", $formData)) {
-            $email = $formData["email"];
+        if (array_key_exists("firstname", $formData)) {
+            $firstname = $formData["firstname"];
         }
 
-        if (array_key_exists("fullName", $formData)) {
-            $fullName = $formData["fullName"];
+        if (array_key_exists("secondname", $formData)) {
+            $secondname = $formData["secondname"];
+        }
+
+        if (array_key_exists("firstlastname", $formData)) {
+            $firstlastname = $formData["firstlastname"];
+        }
+
+        if (array_key_exists("secondlastname", $formData)) {
+            $secondlastname = $formData["secondlastname"];
+        }
+
+        if (array_key_exists("personalId", $formData)) {
+            $personalId = $formData["personalId"];
+        }
+
+        if (array_key_exists("email", $formData)) {
+            $email = $formData["email"];
         }
 
         if (array_key_exists("password", $formData)) {
             $password = $formData["password"];
         }
 
-        if (array_key_exists("repeatPassword", $formData)) {
-            $repeatPassword = $formData["repeatPassword"];
+        if (array_key_exists("repeatPass", $formData)) {
+            $repeatPass = $formData["repeatPass"];
         }
 
-        $registerResult = $this->userService->register($email, $password, $repeatPassword, $fullName);
+        if (array_key_exists("userType", $formData)) {
+            $userType = $formData["userType"];
+        }
 
-        if (array_key_exists("error", $registerResult)) {
+        $registerResult = $this->userService->registerUser($firstname, $secondname, $firstlastname, $secondlastname, $personalId, $email, $password, $repeatPass, $userType);
+
+        if(array_key_exists("error", $registerResult)) {
             $result["error"] = true;
+            $result["message"] = $registerResult["message"];
+            $result["created"] = false;
+        }else{
+            $result["meta"]= $registerResult["meta"]["id"];
+            $result["message"] = $registerResult["message"];
+            $result["created"] = true;
         }
 
-        $result["message"] = $registerResult["message"];
 
         return $result;
-    }
+    } //end -registerUser-
 
-}
+    
+
+
+} // end -class-

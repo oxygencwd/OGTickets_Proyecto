@@ -25,10 +25,10 @@ angular.module('OGTicketsApp.services')
 	};
 	
 	
-	//evalua si la contraseña y el password son los correctos, si el usuario esta activo y si pasa las validaciones lo loggea, devuelve un objeto con el nombre, id  y tipo de usuario, y la variable canLogin en true, si no devuelve un mensaje de error y canLogin en false.
+	//Envía los datos del usuario que intenta ingresar al sistema al back-end posteriormente recibe la respuesta del back-end y la reenvia hacia el controlador.
 	var canLogin= function (user) {
 		var defer= $q.defer();
-		var url= 'back-end/index.php/user/login'
+		var url= 'back-end/index.php/user/login';
 
 		$http.post(url, user)
 		.success(function(data, status) {
@@ -43,16 +43,7 @@ angular.module('OGTicketsApp.services')
 	}; //end -canLogin
 
 
-	// var canLogin= function(objLogin) {
-	// 	var url= 'back-end/index.php/user/login'
-	// 	result= $http.post(url, objLogin);
-	// 	return result;
-	// };
-
-
-
-
-	//mete en la variable del $scope el usuario loggeado para que este disponible a lo largo de las vistas.
+	//Coloca el nombre, id y tipo de usuario en un cookie, asi como en la variable del $scope global de la app appLoggedUser para que estos datos esten disponibles en toda la app.
 	var login= function (appLoggedUser, objUsr) {
 		var usr= {};
 		usr.name= parseName(objUsr);

@@ -6,71 +6,32 @@
 				<div class="container-fluid">
 					<div class="row"><!-- options row -->
 						<div class="col-sm-3 left-panel">
-							<img src="images/client-images/profile.jpg" alt="user image" class="img-circle profile-img img-responsive" width="200" height="200">
+							<img ng-src="{{client.image}}" alt="user image" class="img-circle profile-img img-responsive" width="200" height="200">
 							<p class="text-center"><a ng-click="editClient()">Modificar datos</a></p>
-							<p class="text-center"><a href="#/">Mis reservas</a></p>
+							<p class="text-center"><a href="mis-reservas">Mis reservas</a></p>
 						</div>
 						<div class="col-sm-9">
 							<div class="row">
-								<h2>Nombre del Cliente</h2>
+								<h2>{{client.name}}</h2>
 								<h4>Eventos a los que asistiré</h4>
 							</div>
 							<div class="row"> <!-- row de eventos a los que asistire -->
 
 								<div class="col-md-6">
-									<div class="upcoming-events-item">
+									<div ng-repeat="event in events()" class="upcoming-events-item">
 										<div class="upcoming-event-info">
-											<h5>Orquesta Sinfónica</h5>
-											<p>4 de Mayo</p>
+											<h5>{{event.name}}</h5>
+											<p>{{event.date | date}}</p>
 										</div>
 										<div class="event-item-img">
-											<img src="images/event-default-images/imagen5.jpg" class="img-responsive center-block" alt="">
+											<img ng-src="{{event.image}}" class="img-responsive center-block" alt="">
 											<button class="event-details-btn first center-block">Ver detalles</button>
 										</div>
 									</div><!-- upcoming-events-item -->
 								</div>
-
-								<div class="col-md-6">
-									<div class="upcoming-events-item">
-										<div class="upcoming-event-info">
-											<h5>Madonna</h5>
-											<p>20 de Mayo</p>
-										</div>
-										<div class="event-item-img">
-											<img src="images/event-default-images/imagen1.jpg" class="img-responsive center-block" alt="">
-											<button class="event-details-btn first center-block">Ver detalles</button>
-										</div>
-									</div><!-- upcoming-events-item -->
-								</div>
-
-								<div class="col-md-6">
-									<div class="upcoming-events-item">
-										<div class="upcoming-event-info">
-											<h5>Madonna</h5>
-											<p>20 de Mayo</p>
-										</div>
-										<div class="event-item-img">
-											<img src="images/event-default-images/yasunori.jpg" class="img-responsive center-block" alt="">
-											<button class="event-details-btn first center-block">Ver detalles</button>
-										</div>
-									</div><!-- upcoming-events-item -->
-								</div>
-
-								<div class="col-md-6">
-									<div class="upcoming-events-item">
-										<div class="upcoming-event-info">
-											<h5>Madonna</h5>
-											<p>20 de Mayo</p>
-										</div>
-										<div class="event-item-img">
-											<img src="images/event-default-images/imagen3.jpg" class="img-responsive center-block" alt="">
-											<button class="event-details-btn first center-block">Ver detalles</button>
-										</div>
-									</div><!-- upcoming-events-item -->
-								</div>
-							</div><!-- row de eventos a los que asistire -->
-	
-							<div class="row"><!-- row de mis reservas -->
+							</div>
+								
+							<div class="row" id="mis-reservas"><!-- row de mis reservas -->
 								<div class="row">
 									<h4>Mis reservas</h4>
 								</div>

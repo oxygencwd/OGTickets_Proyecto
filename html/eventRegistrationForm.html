@@ -8,7 +8,7 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-			<form name="eventRegistrationForm" ng-submit="eventRegistrationForm.$valid && registerEvent()" novalidate>
+			<form name="eventRegistrationForm" autocomplete="off" ng-submit="eventRegistrationForm.$valid && registerEvent()" novalidate>
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="form-group">
 		                <div class="col-sm-4">
@@ -61,12 +61,12 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="startHour">Hora de inicio*</label>
-		            		<input type="text" class="form-control" name="startHour" id="startHour" ng-model="newEvent.startHour" ng-model-options="{ updateOn:'blur'}" required>
+		            		<input type="time" class="form-control" name="startHour" id="startHour" ng-model="newEvent.startHour" ng-model-options="{ updateOn:'blur'}" required>
 		            		<sub ng-show="eventRegistrationForm.startHour.$invalid && eventRegistrationForm.startHour.$touched">Hora de inicio requerida</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="endHour">Hora de finalización*</label>
-		            		<input type="text" class="form-control" name="endHour" id="endHour" ng-model="newEvent.endHour" ng-model-options="{ updateOn:'blur'}" required>
+		            		<input type="time" class="form-control" name="endHour" id="endHour" ng-model="newEvent.endHour" ng-model-options="{ updateOn:'blur'}" required>
 		            		<sub ng-show="eventRegistrationForm.endHour.$invalid && eventRegistrationForm.endHour.$touched">Hora de finalización requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
@@ -75,7 +75,7 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="ticketsPrice">Costo de entradas*</label>
-		            		<input type="number" class="form-control" name="ticketsPrice" id="ticketsPrice" ng-model="newEvent.ticketsPrice" ng-model-options="{ updateOn:'blur'}" required>
+		            		<input type="number" class="form-control" name="ticketsPrice" id="ticketsPrice" ng-model="newEvent.ticketsPrice" required>
 		            		<sub ng-show="eventRegistrationForm.ticketsPrice.$invalid && eventRegistrationForm.ticketsPrice.$touched">Costo de entrada requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
@@ -87,7 +87,7 @@
 		            	<sub>Max 2mb</sub>
 		            </div> <!-- form group end -->
 		        </div>
-		        <div class="col-sm-10 col-sm-offset-1">
+		        <div class="col-sm-10 col-sm-offset-1" ng-hide="editing">
 		            <h3 class="error text-center">{{error}}</h3>
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">

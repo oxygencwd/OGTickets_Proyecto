@@ -872,6 +872,11 @@ label{
 	padding: 0;
 }
 
+#imageProfile{
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .atAGlanceBox{
 	background-color: #fd1c3e;
 	position: relative;
@@ -891,6 +896,7 @@ label{
 
 .mapSection{
 	background-color: white;
+	padding-bottom: 30px;
 }
 
 google-map{
@@ -1574,12 +1580,44 @@ form sub, .error{
 		background-color: #000;
 	}
 
-/*Ends Site Profile*/
+	/*Ends Site Profile*/
 
-.adminView a{
-	width: 70%;
-}
+	.adminView a{
+		width: 70%;
+	}
 
+	/*Butacas*/
+
+	.palco1, .palco2{
+		height: 10em;
+	}
+
+	.luneta{
+		height: 5em;
+	}
+
+	.palco3{
+		height: 4em;
+		top: 10.5em;
+	}
+
+	.butacas1, .butacas2{
+		height: 18em;
+	}
+
+	.butacas3{
+		height: 5em;
+		top: 15.5em;
+	}
+
+	.galeria1, .galeria2{
+		height: 27em;
+	}
+
+	.galeria3{
+		top: 21em;
+		height: 6.5em;
+	}
 }
 
 @media (max-width: 600px){
@@ -1628,6 +1666,12 @@ form sub, .error{
 
 	.event-type-img img{
 		height: 18em;
+	}
+
+	/*Butacas*/
+
+	.seat-container{
+		font-size: 12px;
 	}
 }
 
@@ -1722,6 +1766,44 @@ form sub, .error{
 		padding-top: 7em;
 	}
 
+
+	/*Butacas*/
+
+	.seat-container{
+		font-size: 10px;
+	}
+
+	.teatro .palco1, .teatro .palco2 {
+		height: 9em;
+	}
+
+	.teatro .luneta{
+		height: 4em;
+	}
+
+	.teatro .palco3{
+		height: 4em;
+		top: 9.5em;
+	}
+
+	.teatro .butacas1, .teatro .butacas2 {
+		width: 11%;
+		height: 16em;
+	}
+
+	.teatro .butacas3{
+		height: 4.5em;
+		top: 14em;
+	}
+
+	.teatro .galeria1, .teatro .galeria2{
+		height: 25em;
+	}
+
+	.teatro .galeria3 {
+	    height: 6.5em;
+	    top: 19em;
+	}
 }
 
 

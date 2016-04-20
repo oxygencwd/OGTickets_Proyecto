@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('clientService', ['localStorageService', function(localStorageService) {
+.service('clientService', ['$log', '$http', '$q', 'localStorageService', 'dateService' ,function($log, $http, $q, localStorageService, dateService) {
 
     //Llama a todos los clientes guardados en userList.
 	var clients= localStorageService.getAll("userList");
@@ -13,28 +13,122 @@ angular.module('OGTicketsApp.services')
 			return item.email== client.email;
 		});
 		return clientExists;
-	}; 
+	};  
 
-    //Toma todos los datos del formulario, agrega el prefijo de cliente, el campo de activo y el tipo de usuario, y luego son guardados en userList.
-    var clientRegister= function (client) {
-    	var saved= clientExists(client);
-    	var result={};
+    /**
+     * @param  obj objClient
+     * @return promise.
+     */
+    var clientRegister= function (objClient) {
+        var objClientInfo= {
+            "dateBirth": dateService.setDateTimeFormat(objClient.dateBirth),
+            "phone": objClient.phone,
+            "genre": objClient.genre,
+            "picture": objClient.picture
+        };
+        var id;
+        var defer= $q.defer();
+        
+        validateClientInfo(objClient)
+        .then(function(data) {
+            console.log(data);
+            if(data.valid){
+                validateUserInfo(objClient)
+                .then(function(data) {
+                    if(data.created){
+                        id= data.meta;
+                        var url= 'back-end/index.php/client/registerClient/' + id;
+                        console.info("url=" + url);
+                        $http.post(url, objClientInfo)
+                        .success(function(data, status) {
+                            defer.resolve(data);
+                        })
+                            .error(function(error, status) {
+                            defer.reject(error);
+                            console.error(error, status);
+                        });
+                    }else{
+                        console.error("Datos usuario invalidos");
+                        return "Datos del usuario inválidos"
+                    }
+                })
+                .catch(function(error) {
+                    console.error(error);
+                    console.error("Error Registrando el usuario.");
+                })
+            }else{
+                console.error("Datos cliente inválidos");
+                return "Datos de Cliente inválidos";
+            }
+        })
+        .catch(function(error) {
+            console.error(error);
+            console.error("Error Registrando el cliente.");
+        })
+        
+        return defer.promise;    
+    };
 
-    	if(saved.length>0){
-    		result.value=false;
-    		result.msj="Client already exists";
-    	}else{
-    		client.id= "cl" + clientId;
-            client.active= true;
-            client.userType= "ut02";
-    		clients.push(client);
-    		localStorageService.set("userList", clients);
-    		clientId++;
-    		localStorageService.setId("clientIdCounter", clientId);
-    		result.value= true;
-    		result.clientId= client.id;
-    	};
-    	return result;
+    /**
+     * Envia la información correspondiente a la tabla de cliente a validar.
+     * @param  obj objClient
+     * @return promise
+     */
+    var validateClientInfo= function(objClient) {
+        var objClientInfo= {
+            "dateBirth": dateService.setDateTimeFormat(objClient.dateBirth),
+            "phone": objClient.phone,
+            "genre": objClient.genre
+        };
+
+        var defer= $q.defer();
+        var url= 'back-end/index.php/client/validateClientInfo';
+
+        $http.post(url, objClientInfo)
+        .success(function(data, status) {
+            defer.resolve(data);
+        })
+            .error(function(error, status) {
+            defer.reject(error);
+            console.error(error, status);
+        });
+
+        return defer.promise;
+    };
+
+
+    /**
+     * Envia la información correspondiente a la tabla de usuario a validar, si la informacion es valida guarda el usuario
+     * @param  obj objUser
+     * @return promise
+     */
+    var validateUserInfo= function(objUser) {
+        var objUserInfo={
+            "firstname": objUser.firstname,
+            "secondname": objUser.secondname,        
+            "firstlastname": objUser.firstlastname,
+            "secondlastname": objUser.secondlastname,
+            "personalId": objUser.personalId,
+            "email": objUser.email,
+            "password": objUser.password,
+            "repeatPass": objUser.repeatPass,
+            "userType": 2
+        };
+
+        var defer= $q.defer();
+        var url= 'back-end/index.php/user/registerUser';
+
+        $http.post(url, objUserInfo)
+        .success(function (data, status) {
+            defer.resolve(data);
+        })
+        .error(function(error) {
+            defer.reject(error);
+            console.error(error);
+        })
+
+        return defer.promise;
+
     };
 
     var retrieveClient = function (cId){

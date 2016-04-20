@@ -41,15 +41,19 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedSiteList=[
-		{ "id": "si01", "name":"Teatro Nacional", "phoneOne": 20101110, "phoneTwo": 20101111, "capacity": 692, "latitude": 9.933126, "longitude": -84.077087, "address": "Avenida Segunda entre Calles 3 y 5, Centro, San José, Costa Rica", "active": true, "image": "images/sites/teatroNacional.png"},
+		{ "id": "si01", "name":"Teatro Nacional", "phoneOne": 20101110, "phoneTwo": 20101111, "capacity": 692, "latitude": 9.933126, "longitude": -84.077087, "address": "Avenida Segunda entre Calles 3 y 5, Centro, San José, Costa Rica", "active": true, "image": "http://i1097.photobucket.com/albums/g342/David_Ness/teatroNacional_zpspsz4jbc3.jpg"},
 
-		{ "id": "si02", "name":"Auditorio Nacional", "phoneOne": 22230725, "phoneTwo": "", "capacity": 642, "latitude": 9.933238, "longitude": -84.068303, "address": "San José, Costa Rica", "active": true, "image": "images/sites/auditorioNacional.png"},
+		{ "id": "si02", "name":"Auditorio Nacional", "phoneOne": 22230725, "phoneTwo": "", "capacity": 642, "latitude": 9.940770, "longitude": -84.079934, "address": "San José, Costa Rica", "active": true, "image": "http://i1097.photobucket.com/albums/g342/David_Ness/auditorioNacional_zpsgtbe67wl.jpg"},
 
-		{ "id": "si03", "name":"Estadio Nacional", "phoneOne": 25490700, "phoneTwo": "", "capacity": 2102, "latitude": 9.936619, "longitude": -84.107733, "address": "Parque Metropolitano la Sabana, San José, Costa Rica", "active": true, "image": "images/sites/estadioNacional.png"},
+		{ "id": "si03", "name":"Estadio Nacional", "phoneOne": 25490700, "phoneTwo": "", "capacity": 2102, "latitude": 9.936619, "longitude": -84.107733, "address": "Parque Metropolitano la Sabana, San José, Costa Rica", "active": true, "image": "http://i1097.photobucket.com/albums/g342/David_Ness/estadioNacional_zpsenlmq51a.jpg"},
 
-		{ "id": "si04", "name":"Palacio de los Deportes", "phoneOne": 25986536, "phoneTwo": "", "capacity": 540, "latitude": 10.936619, "longitude": -82.107733, "address": "Heredia, Costa Rica", "active": true, "image": "images/sites/palacio.png"},
+		{ "id": "si04", "name":"Palacio de los Deportes", "phoneOne": 25986536, "phoneTwo": "", "capacity": 540, "latitude": 9.998976, "longitude": -84.122229, "address": "Heredia, Costa Rica", "active": true, "image": "http://i1097.photobucket.com/albums/g342/David_Ness/palacioDeportes_zpsk04cgg9q.jpg"},
 
-		{ "id": "si05", "name":"Teatro de la Danza", "phoneOne": 25486985, "phoneTwo": "", "capacity": 300, "latitude": 11.555619, "longitude": -85.107733, "address": "San José, Costa Rica", "active": true, "image": "images/sites/teatroDanza.png"}
+		{ "id": "si05", "name":"Teatro de la Danza", "phoneOne": 25486985, "phoneTwo": "", "capacity": 300, "latitude": 11.555619, "longitude": -85.107733, "address": "San José, Costa Rica", "active": true, "image": "images/sites/teatroDanza.png"},
+
+		{ "id": "si06", "name":"Teatro Popular Melico Salazar", "phoneOne": 22956000, "phoneTwo": 22335172, "capacity": 2752, "latitude":  9.933320, "longitude": -84.079298, "address": "Calle Central Alfredo Volio, San José, Costa Rica", "active": true, "image": "http://i1097.photobucket.com/albums/g342/David_Ness/teatroMelicoSalazar_zpsbumo2jvs.jpg"},
+
+		{ "id": "si07", "name":"Pepper's Club", "phoneOne": 22241472, "phoneTwo": "", "capacity": 400, "latitude": 9.918390, "longitude": -84.049039, "address": "Maria Auxiliadora, Zapote, Costa Rica", "active": true, "image": "http://i1097.photobucket.com/albums/g342/David_Ness/3da91d76-4fc2-4177-91f9-4f4e5fa25ab1_zpshmkyc1e9.jpg"}
 	];
 
 	var savedTransactionList=[
@@ -57,11 +61,11 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedEventTypeList = [
-		{"name": "Música","description":"Es el arte de combinar los sonidos de la voz humana o de los instrumentos, o de unos y otros a la vez, para crear un determinado efecto.", "id": "et01", 'active': true}, 
-		{"name": "Cultura","description":"Es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada.", "id": "et02", 'active': true}, 
-		{"name": "Deportes","description":"Es la actividad física pautada conforme a reglas y que se practica con finalidad recreativa, profesional o como medio de mejoramiento de la salud.", "id": "et03", 'active': true}, 
-		{"name": "Teatro","description":"Es el arte que busca representar historias frente a una audiencia, combinando actuación, discurso, gestos, escenografía, música y sonido.", "id": "et04", 'active': true}, 
-		{"name": "Arte","description":"Es el concepto que engloba todas las creaciones realizadas por el ser humano para expresar una visión sensible acerca del mundo, ya sea real o imaginario.", "id": "et05", 'active': true}
+		{"name": "Música","description":"Es el arte de combinar los sonidos de la voz humana o de los instrumentos, o de unos y otros a la vez, para crear un determinado efecto.", "id": "et1", 'active': true}, 
+		{"name": "Cultura","description":"Es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada.", "id": "et2", 'active': true}, 
+		{"name": "Deportes","description":"Es la actividad física pautada conforme a reglas y que se practica con finalidad recreativa, profesional o como medio de mejoramiento de la salud.", "id": "et3", 'active': true}, 
+		{"name": "Teatro","description":"Es el arte que busca representar historias frente a una audiencia, combinando actuación, discurso, gestos, escenografía, música y sonido.", "id": "et4", 'active': true}, 
+		{"name": "Arte","description":"Es el concepto que engloba todas las creaciones realizadas por el ser humano para expresar una visión sensible acerca del mundo, ya sea real o imaginario.", "id": "et5", 'active': true}
 	];
 
 	var savedPromoterRegisterRequest = [

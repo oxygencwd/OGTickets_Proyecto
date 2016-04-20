@@ -22,15 +22,16 @@ $configuration = [
 
 $contenedor = new \Slim\Container($configuration);
 
-// Crea una nueva instancia de SLIM mostrando todos los errores
-// http://www.slimframework.com/docs/handlers/error.html
+// Crea una nueva instancia de SLIM 
 $app = new \Slim\App($contenedor);
 
 // Definimos nuestras rutas
+
+/*RUTAS DE USUARIO*/
+/*user/login->logear el usuario*/
 $app->post(
     '/user/login',
     function ($request, $response) {
-        // http://stackoverflow.com/questions/12158987/whats-the-meaning-of-var-in-php-comments
         /** @var Request $request */
         /** @var Response $response */
 
@@ -44,7 +45,7 @@ $app->post(
         return $response->withJson($result);
     }
 );
-
+/*user/logout->deslogear el usuario*/
 $app->get(
     '/user/logout',
     function ($request, $response) {
@@ -56,16 +57,111 @@ $app->get(
     }
 );
 
+/*user/registerUser->registar una cuent usuario*/
 $app->post(
-    '/user/register',
+    '/user/registerUser',
     function ($request, $response) {
         /** @var Request $request */
         /** @var Response $response */
         $userController = new App\Controllers\UserController();
-        $result = $userController->register($request);
+        $result = $userController->registerUser($request);
         return $response->withJson($result);
     }
 );
 
+/*RUTAS DE CLIENTE*/
+///client/validateClientInfo-> validar los datos del cliente
+$app->post(
+    '/client/validateClientInfo',
+    function ($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $clientController = new App\Controllers\ClientController();
+        $result = $clientController->validateClientInfo($request);
+        return $response->withJson($result);
+    }
+);
+
+///client/registerClient->registrar los datos del cliente en la tabla cliente.
+$app->post(
+    '/client/registerClient/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $clientController= new App\Controllers\ClientController();
+        $result= $clientController->registerClient($request);
+        return $response->withJson($result);
+    }
+);
+
+/*RUTAS DE CAJERO*/
+//cashier/validateCahierInfo
+$app->post(
+    '/cashier/validateCahierInfo',
+    function ($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $cashierController = new App\Controllers\CashierController();
+        $result = $cashierController->validateCahierInfo($request);
+        return $response->withJson($result);
+    }
+);
+
+$app->post(
+    '/cashier/registerCashier/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $cashierController= new App\Controllers\CashierController();
+        $result= $cashierController->registerCashier($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
+/*RUTAS DE PROMOTOR*/
+//promoter/registerRequest
+$app->post(
+    '/promoter/registerRequest',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->registerRequest($request);
+        return $response->withJson($result);
+    }
+);
+
+//promoter/getAllRequest
+$app->get(
+    '/promoter/getAllRequest',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->getAllRequest($request);
+        return $response->withJson($result);
+    }
+);
+
+
+/*RUTAS DE EVENTOS*/
+$app->get(
+    '/events/getAllEventTypes',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getAllEventTypes($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
+
+
 // Corremos la aplicación.
 $app->run();
+
