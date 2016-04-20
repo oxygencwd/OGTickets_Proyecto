@@ -76,18 +76,6 @@ angular.module('OGTicketsApp.services')
 
     };
 
-    var prueba= function (email, password) {
-        url= 'back-end/index.php/user/login';
-        var requestBody={
-            email: email,
-            password:password
-        };
-        var result= {}; // tienen que estar definidas las variables.
-        result= $http.post(url, requestBody);
-        console.log(result);
-        return result;
-    };
-
     //Revisa el nombre del evento que se va a registrar, para saber si ya existe o no.
     var eventExists= function (event) {
         var eventExists= eventsList.filter(function (item) {
@@ -96,27 +84,36 @@ angular.module('OGTicketsApp.services')
         return eventExists;
     }; 
 
-    //Toma todos los datos del formulario, agrega el prefijo de evento y el campo de activo, y luego son guardados en userList.
+    //Toma todos los datos del formulario, y los envia al back-end, despues recibe la respues del back end la poesa y envia una promesa de respuesta al controller.
+    /**
+     * @param  event
+     * @return promise
+     */
     var registerEvent= function (event) {
-        var saved= eventExists(event);
-        var result={};
-        var currentUser = userService.getLoggedUser();
+        var objEvent= {
+            "eventType": event. ,
+            "siteId": event. ,
+            "name": event. ,
+            "description": event. ,
+            "date": event. ,
+            "startHour": event. ,
+            "endHour": event. ,
+            "ticketsPrice": event. ,
+            "image": event. ,
+        }
+        var defer= $q.defer();
+        var url= 'back-end/index.php/event/registerEvent';
 
-        if(saved.length>0){
-            result.value=false;
-            result.msj="Event already exists";
-        }else{
-            event.id= "ev" + eventId;
-            event.active= true;
-            event.userCreatorId = currentUser.id;
-            eventsList.push(event);
-            localStorageService.set("eventsList", eventsList);
-            eventId++;
-            localStorageService.setId("eventIdCounter", eventId);
-            result.value= true;
-            result.eventId= event.id;
-        };
-        return result;
+        $http.post(url, objEvent)
+        .success(function(data, status) {
+        defer.resolve(data);
+        })
+        .error(function(error, status) {
+        defer.reject(error);
+        $log.error(error, status);
+        });
+
+        return defer.promise;
     };
 
     var replaceEvent= function(eventId, newEvent){
