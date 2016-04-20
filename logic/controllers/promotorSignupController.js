@@ -41,6 +41,7 @@ angular.module('OGTicketsApp.controllers')
 		promotorService.registerRequest($scope.newPromotor)
 		.then(function(data) {
 			if(data.valid){
+				console.log(data);
 				$scope.newPromotor={};
 				formService.clear($scope.formNewPromotor);
 				$scope.success= "Solicitud enviada con éxito";

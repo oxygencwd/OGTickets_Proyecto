@@ -32,9 +32,7 @@
 	        </div>
 
 			<form name="formNewPromotor" autocomplete="off" novalidate ng-show="newPromotor.typePerson=='personaJuridica'">
-		        <!-- Persona jurídica -->  
-		        <div >
-		        	<div class="col-sm-10 col-sm-offset-1">
+		        <div class="col-sm-10 col-sm-offset-1">
 		            	<div class="form-group">
 			            	<div class="col-sm-6">
 			            		<label for="promotorName">Nombre*</label>
@@ -42,9 +40,8 @@
 			            		<sub ng-show="formNewPromotor.promotorName.$invalid && formNewPromotor.promotorName.$touched">Nombre empresa requerida</sub>
 			            	</div>
 			            </div> <!-- form group end -->
-		            </div>
-
-		            <div class="col-sm-10 col-sm-offset-1">
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
 		            	<div class="form-group">
 			            	<div class="col-sm-6">
 			            		<label for="legalId">Cédula Jurídica*</label>
@@ -54,11 +51,7 @@
 		            			<sub ng-show="formNewPromotor.legalId.$error.maxlength && formNewPromotor.legalId.$touched">Formato no válido</sub>
 			            	</div>
 			            </div> <!-- form group end -->
-		            </div>
 		        </div>
-
-	            <!-- Termina persona jurídica -->
-
 	            <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
@@ -105,7 +98,7 @@
 
 		            </div> <!-- form group end -->
 		        </div>
-		        <div class="col-sm-10 col-sm-offset-1" ng-show="newPromotor.typePerson=='personaFisica'">
+		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label>Género</label>
@@ -131,7 +124,6 @@
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
-		        
 			</form>
 
 
@@ -139,10 +131,7 @@
 
 
 			<form name="formNewPhysicPromotor" autocomplete="off" novalidate ng-show="newPromotor.typePerson=='personaFisica'">
-
-	            <!-- Persona física -->
-	            <div>
-	            	<div class="col-sm-10 col-sm-offset-1">
+	            <div class="col-sm-10 col-sm-offset-1">
 		            	<div class="form-group">
 			            	<div class="col-sm-6">
 			            		<label for="firstname">Primer nombre*</label>
@@ -153,9 +142,9 @@
 			               		<label for="secondname">Segundo nombre</label>
 			            		<input type="text" class="form-control" id="secondname" placeholder="Segundo nombre" ng-model="newPromotor.secondname">
 			               </div>
-			            </div> <!-- form group end -->
-		            </div>
-		            <div class="col-sm-10 col-sm-offset-1">
+			            </div> 
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
 			            <div class="form-group">
 			            	<div class="col-sm-6">
 			            		<label for="firstlastname">Primer apellido*</label>
@@ -166,9 +155,9 @@
 			               		<label for="secondlastname">Segundo apellido</label>
 			            		<input type="text" class="form-control" id="secondlastname" placeholder="Segundo apellido" ng-model="newPromotor.secondlastname">
 			               </div>
-			            </div> <!-- form group end -->
-			        </div>
-			        <div class="col-sm-10 col-sm-offset-1">
+			            </div>
+			    </div>
+			    <div class="col-sm-10 col-sm-offset-1">
 			            <div class="form-group">
 			            	<div class="col-sm-6">
 			            		<label for="personalId">Cédula de identidad*</label>
@@ -177,12 +166,9 @@
 			            		<sub ng-show="formNewPhysicPromotor.personalId.$error.minlength && formNewPhysicPromotor.personalId.$touched">Formato no válido</sub>
 			            		<sub ng-show="formNewPhysicPromotor.personalId.$error.maxlength && formNewPhysicPromotor.personalId.$touched">Formato no válido</sub>
 			            	</div>
-			            </div> <!-- form group end -->
-			        </div>
-	            </div>
-
-
-		         <div class="col-sm-10 col-sm-offset-1">
+			            </div>
+			    </div>
+		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="email">Correo electrónico*</label>
@@ -195,7 +181,7 @@
 		            		<input type="text" class="form-control" name="specializationArea" id="specializationArea" placeholder="Música, Cultura, Variado, etc" ng-model="newPromotor.specializationArea" required ng-model-options="{ updateOn:'blur'}">
 		            		<sub ng-show="formNewPhysicPromotor.specializationArea.$invalid && formNewPhysicPromotor.specializationArea.$touched">Área de especialización requerida</sub>
 		            	</div>
-		            </div> <!-- form group end -->
+		            </div>
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
@@ -210,7 +196,7 @@
 		            		<sub ng-show="formNewPhysicPromotor.repeatPass.$error.required && formNewPhysicPromotor.repeatPass.$touched">Repetir contraseña es requerido</sub>
 		            		<sub ng-show="formNewPhysicPromotor.repeatPass.$error.passwordVerify && formNewPhysicPromotor.repeatPass.$touched">Las contraseñas no coinciden</sub>
 		            	</div>
-		            </div> <!-- form group end -->
+		            </div> 
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
@@ -226,9 +212,9 @@
 		            		<sub ng-show="formNewPhysicPromotor.address.$invalid && formNewPhysicPromotor.address.$touched">Dirección requerida</sub> 		
 		            	</div>
 
-		            </div> <!-- form group end -->
+		            </div>
 		        </div>
-		        <div class="col-sm-10 col-sm-offset-1" ng-show="newPromotor.typePerson=='personaFisica'">
+		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label>Género</label>
@@ -239,7 +225,7 @@
 		            		</select>
 		            		<sub ng-show="formNewPhysicPromotor.genre.$error.required && formNewPhysicPromotor.genre.$touched">Elegir un tipo de genero</sub>
 		            	</div>
-		            </div> <!-- form group end -->
+		            </div> 
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <h3 class="error text-center">{{error}}</h3>
@@ -252,16 +238,12 @@
 		                    <input type="submit" class="btn btn-block btn-lg" value="Editar datos" ng-click="formNewPhysicPromotor.$valid && editPromotor()" ng-disabled="formNewPhysicPromotor.$invalid" ng-show="editing">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Rechazar solicitud" ng-click="formNewPhysicPromotor.$valid && dismissRequest()" ng-show="appLoggedUser.userType=='ut01'"  ng-disabled="formNewPhysicPromotor.$invalid">
 		                </div>
-		            </div> <!-- form group end -->
+		            </div> 
 		        </div>
-		        
 			</form>
 		</div>
 	</div>
 </div>
-
-
-
 
 
 
