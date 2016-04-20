@@ -4,7 +4,7 @@
 <div class="container-fluid siteProfile">
 	<div class="heroBanner row">
 		<div class="heroImage col-xs-12 col-sm-6 col-sm-offset-2">
-			<img class="img-responsive" src="images/sites/teatroNacional.png" alt="Fachada del Teatro Nacional">
+			<img class="img-responsive" id="imageProfile" ng-src="{{currentSite.image}}" alt="Fachada del Teatro Nacional">
 		</div>
 		<div class="atAGlanceBox col-xs-12 col-sm-2">
 			<div class="atAGlanceInfo">
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 	<section class="mapSection row">
-		<div class="row">
+		<div>
 			<div class="col-sm-8 col-sm-offset-2">
 				<button type="button" class="btn btn-primary btn-show center-block width100" ng-show="appLoggedUser.userType=='ut01'" id="editButton" ng-click="editSite()">Editar sitio</button>
 			</div>
