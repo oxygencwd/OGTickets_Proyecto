@@ -61,12 +61,12 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="startHour">Hora de inicio*</label>
-		            		<input type="text" class="form-control" name="startHour" id="startHour" ng-model="newEvent.startHour" ng-model-options="{ updateOn:'blur'}" required>
+		            		<input type="time" class="form-control" name="startHour" id="startHour" ng-model="newEvent.startHour" ng-model-options="{ updateOn:'blur'}" required>
 		            		<sub ng-show="eventRegistrationForm.startHour.$invalid && eventRegistrationForm.startHour.$touched">Hora de inicio requerida</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="endHour">Hora de finalización*</label>
-		            		<input type="text" class="form-control" name="endHour" id="endHour" ng-model="newEvent.endHour" ng-model-options="{ updateOn:'blur'}" required>
+		            		<input type="time" class="form-control" name="endHour" id="endHour" ng-model="newEvent.endHour" ng-model-options="{ updateOn:'blur'}" required>
 		            		<sub ng-show="eventRegistrationForm.endHour.$invalid && eventRegistrationForm.endHour.$touched">Hora de finalización requerida</sub>
 		            	</div>
 		            </div> <!-- form group end -->
