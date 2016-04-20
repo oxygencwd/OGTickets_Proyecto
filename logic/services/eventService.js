@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('eventService', ['localStorageService','userService','$http', function(localStorageService, userService,$http) {
+.service('eventService', ['localStorageService','userService','$q','$http', function(localStorageService, userService, $q, $http) {
 
 	// Saves on "eventsList" all the events saved on the database, (active and inactive events.)
     var eventsList = localStorageService.getAll("eventsList");
@@ -91,7 +91,7 @@ angular.module('OGTicketsApp.services')
      */
     var registerEvent= function (event) {
         var objEvent= {
-            "eventType": event. ,
+            "eventType": event.eventType ,
             "siteId": event. ,
             "name": event. ,
             "description": event. ,
@@ -137,7 +137,6 @@ angular.module('OGTicketsApp.services')
         todayEvents:todayEvents,
         eventsByType:eventsByType,
         getEventType:getEventType,
-        prueba:prueba,
         registerEvent:registerEvent,
         eventsList:eventsList,
         replaceEvent:replaceEvent

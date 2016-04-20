@@ -49,7 +49,6 @@ angular.module('OGTicketsApp.controllers')
 				$timeout(function() {
 					$scope.closeModal("#promoterSuccessModal");
 					$window.location.href = ('#/home');
-					$scope.openModal('#loginModal');
 					$scope.error="";
 					$scope.success="";
 				}, 1500);	
