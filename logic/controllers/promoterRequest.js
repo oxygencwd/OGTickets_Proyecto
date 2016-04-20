@@ -10,9 +10,18 @@ angular.module('OGTicketsApp.controllers')
 	function getRequest() {
 		var promise= promotorService.promotorsPendingCheck();
 		promise.then(function(data) {
-			console.log(data);
-			var jsonList= angular.toJson(data.data);
-			console.log(jsonList);
+			var jsonList= data.data;
+			angular.forEach(jsonList, function(item) {
+				if (item.firstname && item.secondname && item.secondlastname) {
+					item.name = item.firstname + ' ' + item.secondname + ' ' + item.firstlastname + ' ' + item.secondlastname;
+				}else if (item.firstname && item.secondname){
+					item.name = item.firstname + ' ' + item.secondname + ' ' + item.firstlastname;
+				}else if(item.firstname && item.secondlastname){
+					item.name = item.firstname + ' ' + item.firstlastname + ' ' + item.secondlastname;
+				}else if(item.firstname){
+					item.name = item.firstname + ' ' + item.firstlastname;
+				}
+			});
 			$scope.promPendingCheck= jsonList;
 		})
 		.catch(function(error) {
@@ -24,3 +33,5 @@ angular.module('OGTicketsApp.controllers')
 	$scope.init();
 
 }]); //end -controller-
+
+
