@@ -22,22 +22,23 @@ angular.module('OGTicketsApp.controllers')
 		*/
 	$scope.error="";
 	$scope.success="";
-
+	
 	var today = new Date();
 	var minAge = 15;
 	var maxAge = 100;
 	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
 	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
 
+
+	var picture = '';
 	//Saves on src the url generated for the picture
 	$scope.savePicture=function(src){
-		newClient.picture = src;
-		console.log(newClient.picture);
+		picture = src;
 	};
-	
 
 	//Funcion del boton de registro de cliente, toma todos los datos del formulario y los envia hacia el clientService.
 	$scope.clientRegister=function () {
+		$scope.newClient.picture = picture;
 		clientService.clientRegister($scope.newClient)
 		.then(function(data) {
 			if(data.valid){
