@@ -29,6 +29,13 @@ angular.module('OGTicketsApp.controllers')
 	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
 	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
 
+	//Saves on src the url generated for the picture
+	$scope.savePicture=function(src){
+		newClient.picture = src;
+		console.log(newClient.picture);
+	};
+	
+
 	//Funcion del boton de registro de cliente, toma todos los datos del formulario y los envia hacia el clientService.
 	$scope.clientRegister=function () {
 		clientService.clientRegister($scope.newClient)
