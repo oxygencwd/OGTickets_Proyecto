@@ -133,7 +133,7 @@ $app->post(
     }
 );
 
-//registerReuqestById
+//registerRequestById
 $app->get(
     '/promoter/getRegisterRequestById/{id}',
     function($request, $response){
@@ -172,6 +172,7 @@ $app->get(
     }
 );
 
+//registerEvent
 $app->post(
     '/event/registerEvent',
     function($request, $response){
@@ -179,6 +180,31 @@ $app->post(
         /** @var Response $response */
         $eventsController= new App\Controllers\EventsController();
         $result= $eventsController->registerEvent($request);
+        return $response->withJson($result);
+    }
+);
+
+//events/getAllActiveEvents
+$app->get(
+    '/events/getAllActiveEvents',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getAllActiveEvents($request);
+        return $response->withJson($result);
+    }
+);
+
+
+//getEventById
+$app->get(
+    '/events/getEventById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getEventById($request);
         return $response->withJson($result);
     }
 );
