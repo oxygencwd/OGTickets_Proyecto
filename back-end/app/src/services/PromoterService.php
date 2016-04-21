@@ -79,17 +79,10 @@ class PromoterService{
 	            $result["message"] = "Promoter register request not found";
 	            $result["error"] = true;
 	        }
-
-
 		}else{
 			$result["error"] = true;
             $result["message"] = "Id is invalid";
 		}
-
-
-
-
-
 		return $result;
 	}
 
