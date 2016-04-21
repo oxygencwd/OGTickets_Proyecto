@@ -1,8 +1,40 @@
 angular.module('OGTicketsApp.controllers')
 .controller('eventRegistrationController', ['$scope','localStorageService','formService','eventService', '$window','$routeParams','userService','siteService', function ($scope,localStorageService, formService, eventService, $window,$routeParams,userService,siteService) {
 	
-	$scope.eventTypes= eventService.getEventTypeList();
-	$scope.sites= siteService.getSiteList();
+	$scope.init= function () {
+		getEventTypeList();
+		getSitesList();
+	}
+
+	$scope.eventTypes=[];
+	$scope.sites=[];
+
+	function getEventTypeList() {
+		var promise= eventService.getEventTypeList();
+		promise.then(function(data) {
+			$scope.eventTypes= data.data;
+		})
+		.catch(function(error) {
+			console.error(error);
+			console.log("Error en la solicitud de datos");
+		})
+
+	}
+
+	var getSitesList= function() {
+		var promise= siteService.getSiteList();
+		promise.then(function(data) {
+			$scope.sites= data.data;
+		})
+		.catch(function(error) {
+			console.log(error);
+			console.log("Error en la solicitud de datos");
+		});
+	}
+
+
+
+
 	
 	$scope.newEvent={};
 	/*  newEvent= {
@@ -54,5 +86,10 @@ angular.module('OGTicketsApp.controllers')
 		formService.clear($scope.eventRegistrationForm);
 		$window.location.href = ('#/event-profile/'+eventId);
 	};
+
+
+
+
+	$scope.init();
 
 }]);
