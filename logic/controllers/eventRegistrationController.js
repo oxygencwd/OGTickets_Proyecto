@@ -22,8 +22,15 @@ angular.module('OGTicketsApp.controllers')
 	 */
 	$scope.error="";
 
+	var picture = '';
+	//Saves on src the url generated for the picture
+	$scope.savePicture=function(src){
+		picture = src;
+	};
+
 		//Funcion del boton de registro de evento, toma los datos del formulario y los envia hacia el servicio, despues recibe la respues y muestra el resultado.
 	$scope.registerEvent=function () {
+		$scope.newEvent.image = picture;
 		eventService.registerEvent($scope.newEvent);
 		// var eventId;
 		// if(result.value){
