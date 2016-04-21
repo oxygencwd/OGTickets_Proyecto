@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventRegistrationController', ['$scope','localStorageService','formService','eventService', '$window','$routeParams','userService','siteService', function ($scope,localStorageService, formService, eventService, $window,$routeParams,userService,siteService) {
+.controller('eventRegistrationController', ['$scope', 'localStorageService','formService','eventService', '$window','$routeParams','userService','siteService', function ($scope, localStorageService, formService, eventService, $window,$routeParams,userService,siteService) {
 	
 	$scope.init= function () {
 		getEventTypeList();
@@ -8,6 +8,35 @@ angular.module('OGTicketsApp.controllers')
 
 	$scope.eventTypes=[];
 	$scope.sites=[];
+	$scope.newEvent={};
+	/*  newEvent= {
+		eventType
+        siteId
+        name
+        description
+        date
+        startHour
+        endHour
+        ticketsPrice
+        image
+	 */
+	$scope.error="";
+
+		//Funcion del boton de registro de evento, toma los datos del formulario y los envia hacia el servicio, despues recibe la respues y muestra el resultado.
+	$scope.registerEvent=function () {
+		eventService.registerEvent($scope.newEvent);
+		// var eventId;
+		// if(result.value){
+		// 	eventId= result.eventId;
+		// 	$scope.newEvent={};
+		// 	formService.clear($scope.eventRegistrationForm);
+		// 	$window.location.href = ('#/event-profile/'+eventId);
+		// 	$scope.error="";
+		// }else{
+		// 	$scope.error="El evento ya existe";
+		// }
+	}; 
+
 
 	function getEventTypeList() {
 		var promise= eventService.getEventTypeList();
@@ -35,38 +64,6 @@ angular.module('OGTicketsApp.controllers')
 
 
 
-	
-	$scope.newEvent={};
-	/*  newEvent= {
-		eventType
-        siteId
-        name
-        description
-        date
-        startHour
-        endHour
-        ticketsPrice
-        image
-	 */
-	$scope.error="";
-
-
-	//Funcion del boton de registro de evento, envia todos los datos del formulario hacia el servicio.
-	$scope.registerEvent=function () {
-		console.log($scope.newEvent);
-		eventService.registerEvent($scope.newEvent);
-		// var eventId;
-		// if(result.value){
-		// 	eventId= result.eventId;
-		// 	$scope.newEvent={};
-		// 	formService.clear($scope.eventRegistrationForm);
-		// 	$window.location.href = ('#/event-profile/'+eventId);
-		// 	$scope.error="";
-		// }else{
-		// 	$scope.error="El evento ya existe";
-		// }
-	}; 
-
 
 	//edit the event.
 	var eventId= $routeParams.eventId;
@@ -80,12 +77,12 @@ angular.module('OGTicketsApp.controllers')
 		currentEvent.date= new Date(currentEvent.date);		
 	};
 
-	$scope.editEvent=function(){
-		eventService.replaceEvent(eventId, $scope.newEvent);
-		$scope.newEvent={};
-		formService.clear($scope.eventRegistrationForm);
-		$window.location.href = ('#/event-profile/'+eventId);
-	};
+	// $scope.editEvent=function(){
+	// 	eventService.replaceEvent(eventId, $scope.newEvent);
+	// 	$scope.newEvent={};
+	// 	formService.clear($scope.eventRegistrationForm);
+	// 	$window.location.href = ('#/event-profile/'+eventId);
+	// };
 
 
 

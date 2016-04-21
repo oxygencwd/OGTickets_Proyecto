@@ -1,6 +1,9 @@
 angular.module('OGTicketsApp.controllers')
 .controller('promotorSignupController', ['$scope','localStorageService', '$timeout','$window', 'formService','promotorService', '$location','$routeParams', function ($scope,localStorageService, $timeout, $window, formService, promotorService, $location,$routeParams) {
 
+	$scope.promoter= promotorService.getRegisterRequestById(1);
+	console.info($scope.promoter);
+
 	$scope.newPromotor={};
 	$scope.error="";
 	$scope.typePersonOptions = [
