@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---- 
 20/04/16 23:47:32 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
@@ -1926,3 +1927,73 @@ Array
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin
 >>>>>>> cf34a6b435ea6f9500f3a2ca789c5d1b714e7896
+=======
+---- 
+21/04/16 02:51:05 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 80
+Array
+(
+    [0] => Array
+        (
+            [idSolicitudRegistroPromotor] => 2
+            [0] => 2
+            [PrimerNombre] => Maria
+            [1] => Maria
+            [SegundoNombre] => 
+            [2] => 
+            [PrimerApellido] => De los Palotes
+            [3] => De los Palotes
+            [SegundoApellido] => 
+            [4] => 
+            [nombreJuridico] => 
+            [5] => 
+            [Cedula] => 514236541
+            [6] => 514236541
+            [Email] => maria@produce.com
+            [7] => maria@produce.com
+            [password] => 111
+            [8] => 111
+            [AreaEspecializacion] => Cultura
+            [9] => Cultura
+            [PrimerTelefono] => 88888888
+            [10] => 88888888
+            [Ubicacion] => San Ramon
+            [11] => San Ramon
+        )
+
+)
+---- 
+21/04/16 02:52:42 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 80
+Array
+(
+    [0] => Array
+        (
+            [idSolicitudRegistroPromotor] => 1
+            [0] => 1
+            [PrimerNombre] => 
+            [1] => 
+            [SegundoNombre] => 
+            [2] => 
+            [PrimerApellido] => 
+            [3] => 
+            [SegundoApellido] => 
+            [4] => 
+            [nombreJuridico] => okay producciones
+            [5] => okay producciones
+            [Cedula] => 5412547856
+            [6] => 5412547856
+            [Email] => okay@info.com
+            [7] => okay@info.com
+            [password] => 111
+            [8] => 111
+            [AreaEspecializacion] => Musica
+            [9] => Musica
+            [PrimerTelefono] => 88888888
+            [10] => 88888888
+            [Ubicacion] => Moravia
+            [11] => Moravia
+        )
+
+)
+>>>>>>> 1f4a439d6847fbe81db184934de1f0b455a4b0e4

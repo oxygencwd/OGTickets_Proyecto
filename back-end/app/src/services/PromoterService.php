@@ -47,8 +47,17 @@ class PromoterService{
 	            $result["message"] = "Promoter register request found";
 	            $registerRequest = $getRequestResult["data"];
 
+	            $nombreJuridico= $registerRequest[0]["nombreJuridico"];
+
+	            if(isset($nombreJuridico)){
+	            	$typePerson= "personaJuridica";
+	            }else{
+	            	$typePerson= "personaFisica";
+	            }
+
 	            foreach ($registerRequest as $request) {
 	            	$result["data"][] = [
+	            		"typePerson" => $typePerson,
 	                	"requestId" => $request["idSolicitudRegistroPromotor"],
 	                	"name" => $request["nombreJuridico"],
 	                	"legalId" => $request["Cedula"],
@@ -65,6 +74,7 @@ class PromoterService{
 	                	"address" => $request["Ubicacion"]
                 	];
 	            } 
+
 	        } else {
 	            $result["message"] = "Promoter register request not found";
 	            $result["error"] = true;
