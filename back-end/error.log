@@ -1,0 +1,704 @@
+---- 
+20/04/16 23:47:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => DavidNess
+    [legalId] => 1234531432
+    [email] => asd@asd.com
+    [specializationArea] => Cultura
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 22222222
+    [address] => Casa No.2
+)
+---- 
+20/04/16 23:47:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 23:47:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 23:47:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 1
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 23:49:09 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 23:49:09 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+ad,in---- 
+20/04/16 23:49:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 23:49:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+21/04/16 00:21:43 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 00:21:43 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admn---- 
+21/04/16 00:21:45 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 00:21:45 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+21/04/16 00:51:30 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => David
+    [legalId] => 3213123121
+    [email] => asd@gord.com
+    [specializationArea] => 231
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 12232312
+    [address] => ASD
+)
+---- 
+21/04/16 00:51:30 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 00:51:30 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 00:51:30 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 2
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:20:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => adas
+    [legalId] => asdasadads
+    [email] => asd@sdas.com
+    [specializationArea] => 123
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 23123123
+    [address] => asda
+)
+---- 
+21/04/16 01:20:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:20:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:20:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 3
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:38:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => sad
+    [legalId] => 2131231232
+    [email] => dsad@asd.com
+    [specializationArea] => musica
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 22322223
+    [address] => asda
+)
+---- 
+21/04/16 01:38:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:38:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:38:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 4
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:42:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => weq
+    [legalId] => 2132132132
+    [email] => 3213@sda.co
+    [specializationArea] => asd
+    [password] => aaaa
+    [phone] => 12312332
+    [address] => 1232
+    [repeatPass] => aaaa
+)
+---- 
+21/04/16 01:42:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:42:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:42:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 5
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:48:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => weqw
+    [legalId] => 2342342233
+    [email] => ADS@asd.com
+    [specializationArea] => 213
+    [password] => 111
+    [repeatPass] => 111
+    [phone] => 12323322
+    [address] => sda
+)
+---- 
+21/04/16 01:48:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:48:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:48:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 6
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:53:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => qweQWE
+    [legalId] => wqeqweqwew
+    [email] => sdas@sac.com
+    [specializationArea] => asd
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 12321312
+    [address] => 123
+)
+---- 
+21/04/16 01:53:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:53:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:53:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:58:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => asd
+    [legalId] => sadasdasda
+    [email] => asd@xas.com
+    [specializationArea] => adas
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 12321332
+    [address] => sad
+)
+---- 
+21/04/16 01:58:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:58:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:58:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
