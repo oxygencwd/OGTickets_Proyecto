@@ -159,6 +159,14 @@ $app->get(
 );
 
 
+$app->get(
+    '/hello',
+    function($request, $response){
+       $msg="hello";
+        return $msg;
+    }
+);
+
 
 
 

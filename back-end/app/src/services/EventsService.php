@@ -22,7 +22,7 @@ class EventsService {
 
     public function getAllEventTypes(){
     	$result=[];
-    	$query= "SELECT idTipoEvento, Nombre, Foto
+    	$query= "SELECT idTipoEvento, Nombre, Foto, Descripcion
 				FROM tbtipoevento
 				WHERE Activo= 1";
 		// Query params
