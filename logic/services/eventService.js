@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('eventService', ['localStorageService','userService','$q','$http', function(localStorageService, userService, $q, $http) {
+.service('eventService', ['localStorageService','userService','$q','$http', 'dateService', function(localStorageService, userService, $q, $http, dateService) {
 
 	// Saves on "eventsList" all the events saved on the database, (active and inactive events.)
     var eventsList = localStorageService.getAll("eventsList");
@@ -64,12 +64,11 @@ angular.module('OGTicketsApp.services')
 
         $http.get(url)
         .success(function(data, status) {
-            console.info(data);
            defer.resolve(data);
         })
         .error(function(error, status) {
             defer.reject(error);
-            $log.error(error, status);
+            console.error(error, status);
         });
         return defer.promise;
     };
@@ -98,17 +97,18 @@ angular.module('OGTicketsApp.services')
      * @return promise
      */
     var registerEvent= function (event) {
-        // var objEvent= {
-        //     "eventType": event.eventType ,
-        //     "siteId": event.siteId ,
-        //     "name": event. ,
-        //     "description": event. ,
-        //     "date": event. ,
-        //     "startHour": event. ,
-        //     "endHour": event. ,
-        //     "ticketsPrice": event. ,
-        //     "image": event. ,
-        // }
+        var objEvent= {
+            "eventType": event.eventType,
+            "siteId": event.siteId,
+            "name": event.name,
+            "description": event.description,
+            "date": dateService.setDateTimeFormat(event.date),
+            "startHour": dateService.setTimeFormat(event.startHour),
+            "endHour": dateService.setTimeFormat(event.endHour),
+            "ticketsPrice": event.ticketsPrice,
+            "image": event.image,
+        };
+        
         var defer= $q.defer();
         var url= 'back-end/index.php/event/registerEvent';
 
@@ -118,7 +118,7 @@ angular.module('OGTicketsApp.services')
         })
         .error(function(error, status) {
         defer.reject(error);
-        $log.error(error, status);
+        console.error(error, status);
         });
 
         return defer.promise;

@@ -1,4 +1,4 @@
- angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services', 'OGTicketsApp.directives', 'OGTicketsApp.filters'])
+ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'angular-filepicker','ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services', 'OGTicketsApp.directives', 'OGTicketsApp.filters'])
 
     //definir las constante de los tipos de usuarios.
     .constant('ROLES', {
