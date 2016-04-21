@@ -24,7 +24,23 @@ class EventsController{
 		return $this->eventsService->getAllEventTypes();
 	}
 
+    /**
+     * retorna todos los eventos registrados
+     * @return array
+     */
+    public function getAllActiveEvents(){
+        return $this->eventsService->getAllActiveEvents();
+    }
 
+    public function getEventById($request) {
+        /** @var Request $request */
+        $id = $request->getAttribute("id", null);
+        return $this->eventsService->getEventById($id);
+    }
+
+
+
+    
 	public function registerEvent($request){
 		$result = [];
 		$formData= $request->getParsedBody();
