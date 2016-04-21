@@ -61,11 +61,11 @@ angular.module('OGTicketsApp.services')
 	];
 
 	var savedEventTypeList = [
-		{"name": "Música","description":"Es el arte de combinar los sonidos de la voz humana o de los instrumentos, o de unos y otros a la vez, para crear un determinado efecto.", "id": "et01", 'active': true}, 
-		{"name": "Cultura","description":"Es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada.", "id": "et02", 'active': true}, 
-		{"name": "Deportes","description":"Es la actividad física pautada conforme a reglas y que se practica con finalidad recreativa, profesional o como medio de mejoramiento de la salud.", "id": "et03", 'active': true}, 
-		{"name": "Teatro","description":"Es el arte que busca representar historias frente a una audiencia, combinando actuación, discurso, gestos, escenografía, música y sonido.", "id": "et04", 'active': true}, 
-		{"name": "Arte","description":"Es el concepto que engloba todas las creaciones realizadas por el ser humano para expresar una visión sensible acerca del mundo, ya sea real o imaginario.", "id": "et05", 'active': true}
+		{"name": "Música","description":"Es el arte de combinar los sonidos de la voz humana o de los instrumentos, o de unos y otros a la vez, para crear un determinado efecto.", "id": "et1", 'active': true}, 
+		{"name": "Cultura","description":"Es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada.", "id": "et2", 'active': true}, 
+		{"name": "Deportes","description":"Es la actividad física pautada conforme a reglas y que se practica con finalidad recreativa, profesional o como medio de mejoramiento de la salud.", "id": "et3", 'active': true}, 
+		{"name": "Teatro","description":"Es el arte que busca representar historias frente a una audiencia, combinando actuación, discurso, gestos, escenografía, música y sonido.", "id": "et4", 'active': true}, 
+		{"name": "Arte","description":"Es el concepto que engloba todas las creaciones realizadas por el ser humano para expresar una visión sensible acerca del mundo, ya sea real o imaginario.", "id": "et5", 'active': true}
 	];
 
 	var savedPromoterRegisterRequest = [
