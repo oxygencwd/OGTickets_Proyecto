@@ -54,7 +54,7 @@ angular.module('OGTicketsApp.controllers')
 					$scope.success="";
 				}, 1500);	
 			}else{
-				$scope.error="Correo eléctrónico ya utilizado en el sisitema ó datos inválidos";
+				$scope.error="Correo eléctrónico ya utilizado en el sistema ó datos inválidos";
 			}
 		})
 		.catch(function() {
