@@ -21,6 +21,70 @@ class PromoterService{
         $this->dateFormat= new DateTimeService();
 	}
 
+	/**
+	 * Buscar una solicitud de registro como promotor por id
+	 */
+	public function getRegisterRequestById($id){
+		$result=[];
+		$id= trim($id);
+
+		if($this->validation->isValidInt($id)){
+			$id= intval($id);
+
+			$query= "SELECT idSolicitudRegistroPromotor, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, nombreJuridico, Cedula, Email, password, AreaEspecializacion, PrimerTelefono, Ubicacion
+			FROM tbsolicitudregistropromotor 
+			WHERE Approved= 0 AND PeddingCheck=1 AND idSolicitudRegistroPromotor= :id";
+		
+			// Query params
+		    $params = [":id" => $id];
+
+		    $getRequestResult = $this->storage->query($query, $params);
+
+		    $foundRecord = array_key_exists("meta", $getRequestResult) &&
+	            $getRequestResult["meta"]["count"] > 0;
+
+	        if ($foundRecord) {
+	            $result["message"] = "Promoter register request found";
+	            $registerRequest = $getRequestResult["data"];
+
+	            foreach ($registerRequest as $request) {
+	            	$result["data"][] = [
+	                	"requestId" => $request["idSolicitudRegistroPromotor"],
+	                	"name" => $request["nombreJuridico"],
+	                	"legalId" => $request["Cedula"],
+	                	"firstname" => $request["PrimerNombre"],
+	                	"secondname" => $request["SegundoNombre"],
+	                	"firstlastname" => $request["PrimerApellido"],
+	                	"secondlastname" => $request["SegundoApellido"],
+	                	"personalId" => $request["Cedula"],
+	                	"email" => $request["Email"],
+	                	"specializationArea" => $request["AreaEspecializacion"],
+	                	"password" => $request["password"],
+	                	"repeatPass" => $request["password"],
+	                	"phone" => $request["PrimerTelefono"],
+	                	"address" => $request["Ubicacion"]
+                	];
+	            } 
+	        } else {
+	            $result["message"] = "Promoter register request not found";
+	            $result["error"] = true;
+	        }
+
+
+		}else{
+			$result["error"] = true;
+            $result["message"] = "Id is invalid";
+		}
+
+
+
+
+
+		return $result;
+	}
+
+
+
 	public function registerRequest($typePerson, $name, $legalId, $firstname, $secondname, $firstlastname, $secondlastname, $personalId, $email, $specializationArea, $password, $repeatPass, $phone, $address, $dateBirth){
 
 		$typePerson= trim($typePerson);
