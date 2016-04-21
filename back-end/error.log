@@ -970,3 +970,295 @@ Array
 ---- 
 20/04/16 01:53:46 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+---- 
+20/04/16 22:09:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => Sunflower Productions
+    [legalId] => 1123456789
+    [email] => sunflower@gmail.com
+    [specializationArea] => Musica
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 88888888
+    [address] => Santa Ana
+)
+---- 
+20/04/16 22:09:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:09:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:09:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 1
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:10:58 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaFisica
+    [firstname] => Ariana
+    [secondname] => Maria
+    [firstlastname] => Aguilar
+    [secondlastname] => Umaña
+    [personalId] => 115290295
+    [email] => ariaguiuma@hotmail.com
+    [specializationArea] => Cultura
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 88888888
+    [address] => San Jose
+    [genre] => f
+)
+---- 
+20/04/16 22:10:58 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:10:58 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:10:58 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 106
+INSERT INTO tbsolicitudregistropromotor (PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Cedula, Email, password, AreaEspecializacion, PrimerTelefono, Ubicacion) VALUES (:firstname, :secondname, :firstlastname, :secondlastname, :personalId, :email, :password, :specializationArea, :phone, :address)---- 
+20/04/16 22:10:58 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 121
+Array
+(
+    [:firstname] => Ariana
+    [:secondname] => Maria
+    [:firstlastname] => Aguilar
+    [:secondlastname] => Umaña
+    [:personalId] => 115290295
+    [:email] => ariaguiuma@hotmail.com
+    [:password] => 123
+    [:specializationArea] => Cultura
+    [:phone] => 88888888
+    [:address] => San Jose
+)
+---- 
+20/04/16 22:10:58 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 124
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 2
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:13:26 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaFisica
+    [firstname] => Jonathan
+    [firstlastname] => Ryzowy
+    [secondlastname] => Martinez
+    [personalId] => 115820182
+    [email] => ryzowy@gmail.com
+    [specializationArea] => Cultura
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 88888888
+    [address] => Santa Ana
+    [genre] => m
+)
+---- 
+20/04/16 22:13:26 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 202
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:13:26 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 219
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:13:26 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 106
+INSERT INTO tbsolicitudregistropromotor (PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Cedula, Email, password, AreaEspecializacion, PrimerTelefono, Ubicacion) VALUES (:firstname, :secondname, :firstlastname, :secondlastname, :personalId, :email, :password, :specializationArea, :phone, :address)---- 
+20/04/16 22:13:26 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 121
+Array
+(
+    [:firstname] => Jonathan
+    [:secondname] => 
+    [:firstlastname] => Ryzowy
+    [:secondlastname] => Martinez
+    [:personalId] => 115820182
+    [:email] => ryzowy@gmail.com
+    [:password] => 123
+    [:specializationArea] => Cultura
+    [:phone] => 88888888
+    [:address] => Santa Ana
+)
+---- 
+20/04/16 22:13:26 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 124
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 3
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:15:10 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 22:15:10 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin
