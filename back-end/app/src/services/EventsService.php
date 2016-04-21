@@ -20,6 +20,10 @@ class EventsService {
     }
 
 
+    /**
+     * Devuelve la lista de tipos de evento con id, nombre, descripcion y foto de cada uno si la hay
+     * @return array
+     */
     public function getAllEventTypes(){
     	$result=[];
     	$query= "SELECT idTipoEvento, Nombre, Foto, Descripcion

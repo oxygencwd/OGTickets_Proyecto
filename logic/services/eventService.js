@@ -57,13 +57,21 @@ angular.module('OGTicketsApp.services')
         return parseDate;
     };
 
-    //lista de  todos tipos de evento activos
+    //solicita a la base de datos la lista de todos los tipos de eventos que estan activos
     var getEventTypeList= function () {
-        var allTypes= localStorageService.getAll("eventTypeList");
-        result = allTypes.filter(function (item) {
-            return item.active == true;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getAllEventTypes';
+
+        $http.get(url)
+        .success(function(data, status) {
+            console.info(data);
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result;
+        return defer.promise;
     };
 
     //evento devuelve uj tipo de evento identificado por el id parametro
@@ -92,7 +100,7 @@ angular.module('OGTicketsApp.services')
     var registerEvent= function (event) {
         // var objEvent= {
         //     "eventType": event.eventType ,
-        //     "siteId": event. ,
+        //     "siteId": event.siteId ,
         //     "name": event. ,
         //     "description": event. ,
         //     "date": event. ,

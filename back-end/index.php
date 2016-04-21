@@ -160,12 +160,18 @@ $app->get(
 
 
 $app->get(
-    '/hello',
+    '/sites/getSiteList',
     function($request, $response){
-       $msg="hello";
-        return $msg;
+        /** @var Request $request */
+        /** @var Response $response */
+        $sitesController= new App\Controllers\SitesController();
+        $result= $sitesController->getSiteList($request);
+        return $response->withJson($result);
     }
 );
+
+
+
 
 
 
