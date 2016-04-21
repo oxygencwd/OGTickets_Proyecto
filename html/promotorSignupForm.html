@@ -86,8 +86,8 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Teléfono*</label>
-		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone">
-		            		<sub ng-show="formNewPromotor.phone.$error.required && formNewPromotor.phone.$touched">El numero de telefono es requerido.</sub>
+		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone" ng-pattern="expNumberPhone">
+		            		<sub ng-show="formNewPromotor.phone.$error.required && formNewPromotor.phone.$touched">El numero de telefono es requerido.</sub> 
                 			<sub ng-show="formNewPromotor.phone.$error.pattern && formNewPromotor.phone.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
@@ -189,7 +189,7 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Teléfono*</label>
-		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone">
+		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone" ng-pattern="expNumberPhone">
 		            		<sub ng-show="formNewPhysicPromotor.phone.$error.required && formNewPhysicPromotor.phone.$touched">El numero de telefono es requerido.</sub>
                 			<sub ng-show="formNewPhysicPromotor.phone.$error.pattern && formNewPhysicPromotor.phone.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</sub>
 		            	</div>
