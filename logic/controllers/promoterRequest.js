@@ -29,13 +29,15 @@ angular.module('OGTicketsApp.controllers')
 		})
 	}
 
-	$scope.resquestPromotor= function(){
-		var promise= promotorService.promotorsPendingCheck();
-		promise.then(function(data) {
-			var jsonList= data.data;
-       		$location.path('/promotor-signup-request/'+jsonList.idSolicitudRegistroPromotor);
-       	})
-    };
+			console.log($scope.promPendingCheck);
+			$scope.resquestPromotor= function(){
+				var promise= promotorService.promotorsPendingCheck();
+				promise.then(function(data) {
+					var jsonList= data.data;
+		       		$location.path('/promotor-signup/'+$scope.promPendingCheck.requestId);
+		       	})
+		    };
+	
 	
 	$scope.init();
 

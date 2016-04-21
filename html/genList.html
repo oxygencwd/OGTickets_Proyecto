@@ -24,7 +24,7 @@
 							</div>
 
 							<ul class="width80" ng-show="url==promReq">
-								<li ng-repeat= "promotor in promPendingCheck track by $index"><a ng-href="#/promotor-signup/{{promotor.requestId}}">{{promotor.name}}
+								<li ng-repeat= "promotor in promPendingCheck track by $index"><a ng-click="resquestPromotor()">{{promotor.name}}
 								<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
 								<li ng-hide="promPendingCheck.length>0"><h3>No hay solicitudes de promotor.</h3></li>
 							</ul>
