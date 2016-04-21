@@ -4,8 +4,15 @@ angular.module('OGTicketsApp.controllers')
 	$scope.newEventType={};
 	$scope.error="";
 
+	var picture = '';
+	//Saves on src the url generated for the picture
+	$scope.savePicture=function(src){
+		picture = src;
+	};
+
 	//Funcion del boton de registro de tipo de evento, agarra todos los datos del formulario.
 	$scope.eventTypeRegister=function () {
+		$scope.newEventType.image = picture;
 		result= eventTypeService.eventTypeRegister($scope.newEventType);
 		var eventTypeId;
 		if(result.value){
