@@ -52,8 +52,9 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="eventDate">Fecha del evento*</label>
-		            		<input type="date" class="form-control" name="eventDate" id="eventDate" ng-model="newEvent.date" ng-model-options="{ updateOn:'blur'}" required>
-		            		<sub ng-show="eventRegistrationForm.eventDate.$invalid && eventRegistrationForm.eventDate.$touched">Fecha del evento requerida</sub>
+		            		<input type="date" class="form-control" name="eventDate" id="eventDate" ng-model="newEvent.date" ng-model-options="{ updateOn:'blur'}" min="{{minDate | date:'yyyy-MM-dd'}}" required>
+		            		<sub ng-show="eventRegistrationForm.eventDate.$error.required && eventRegistrationForm.eventDate.$touched">Fecha del evento requerida</sub>
+		            		<sub ng-show="eventRegistrationForm.eventDate.$error.min && eventRegistrationForm.eventDate.$touched">No se permite registrar eventos con menos de 15 días de anticipación o con fechas pasadas.</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>

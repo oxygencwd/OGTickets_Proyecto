@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('eventRegistrationController', ['$scope', 'localStorageService','formService','eventService', '$window','$routeParams','userService','siteService', function ($scope, localStorageService, formService, eventService, $window,$routeParams,userService,siteService) {
+.controller('eventRegistrationController', ['$scope', 'localStorageService','formService','eventService', '$window','$routeParams','userService','siteService','dateService', function ($scope, localStorageService, formService, eventService, $window,$routeParams,userService,siteService,dateService) {
 	
 	$scope.init= function () {
 		getEventTypeList();
@@ -21,6 +21,8 @@ angular.module('OGTicketsApp.controllers')
         image
 	 */
 	$scope.error="";
+
+	$scope.minDate = dateService.minimunDate;
 
 	var picture = '';
 	//Saves on src the url generated for the picture

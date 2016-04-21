@@ -20,12 +20,8 @@ angular.module('OGTicketsApp.controllers')
 	$scope.success="";
 
 	
-
-	var today = new Date();
-	var minAge = 18;
-	var maxAge = 100;
-	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
-	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
+	$scope.minAge = dateService.minimunAge18;
+	$scope.maxAge = dateService.maximunAge;
 
 	//Funcion del boton de registro de cajero, agarra todos los datos del formulario.
 	$scope.cashierRegister= function () {

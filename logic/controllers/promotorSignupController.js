@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('promotorSignupController', ['$scope','localStorageService', '$timeout','$window', 'formService','promotorService', '$location','$routeParams', function ($scope,localStorageService, $timeout, $window, formService, promotorService, $location,$routeParams) {
+.controller('promotorSignupController', ['$scope','localStorageService', '$timeout','$window', 'formService','promotorService', '$location','$routeParams', 'dateService', function ($scope,localStorageService, $timeout, $window, formService, promotorService, $location,$routeParams,dateService) {
 
 	var resquestId = $routeParams.requestId;
 	var resquestPromotor = promotorService.getRegisterRequestById(resquestId);
@@ -21,11 +21,8 @@ angular.module('OGTicketsApp.controllers')
 		}
 	];
 
-	var today = new Date();
-	var minAge = 18;
-	var maxAge = 100;
-	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
-	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
+	$scope.minAge = dateService.minimunAge18;
+	$scope.maxAge = dateService.maximunAge;
 
 
 	//Funcion del boton de registro promotor, agarra todos los datos del formulario.

@@ -51,13 +51,25 @@ angular.module('OGTicketsApp.services')
 		return finalTime;
 	};
 
+	var today = new Date();
+	var minAge15 = 15;
+	var minAge18 = 18;
+	var maxAge = 100;
+	var minDate = 15;
 
-
+	var minimunAge15 = new Date(today.getFullYear() - minAge15, today.getMonth(), today.getDate());
+	var minimunAge18 = new Date(today.getFullYear() - minAge18, today.getMonth(), today.getDate());
+	var maximunAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
+	var minimunDate = new Date(today.getFullYear(), today.getMonth(), today.getDate()+ minDate);
 
 //puntos de acceso de los metodos del servicio:
 	return{
 		setDateTimeFormat:setDateTimeFormat,
-		setTimeFormat:setTimeFormat
+		setTimeFormat:setTimeFormat,
+		minimunAge15:minimunAge15,
+		minimunAge18:minimunAge18,
+		maximunAge:maximunAge,
+		minimunDate:minimunDate
 	};
 }]);//end -service-
 
