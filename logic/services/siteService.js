@@ -12,7 +12,6 @@ angular.module('OGTicketsApp.services')
 
         $http.get(url)
         .success(function(data, status) {
-            console.info(data);
            defer.resolve(data);
         })
         .error(function(error, status) {
