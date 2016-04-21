@@ -40,8 +40,10 @@ angular.module('OGTicketsApp.controllers')
 				$scope.openModal("#cashierRegSuccessModal");
 				$scope.success= "Cajero creado con éxito";
 				$scope.error="";
-				$scope.success="";
-			}			
+			}
+
+			$scope.goHome();
+
 		})
 		.catch(function(error) {
 			console.log("Error registrando el nuevo cajero");
@@ -54,7 +56,7 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 	$scope.goHome= function() {
-		$location.path('#/home');
+		$location.path('/admin');
 	}
 
 }]);
