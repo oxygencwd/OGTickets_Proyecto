@@ -90,17 +90,17 @@ angular.module('OGTicketsApp.services')
      * @return promise
      */
     var registerEvent= function (event) {
-        var objEvent= {
-            "eventType": event.eventType ,
-            "siteId": event. ,
-            "name": event. ,
-            "description": event. ,
-            "date": event. ,
-            "startHour": event. ,
-            "endHour": event. ,
-            "ticketsPrice": event. ,
-            "image": event. ,
-        }
+        // var objEvent= {
+        //     "eventType": event.eventType ,
+        //     "siteId": event. ,
+        //     "name": event. ,
+        //     "description": event. ,
+        //     "date": event. ,
+        //     "startHour": event. ,
+        //     "endHour": event. ,
+        //     "ticketsPrice": event. ,
+        //     "image": event. ,
+        // }
         var defer= $q.defer();
         var url= 'back-end/index.php/event/registerEvent';
 
