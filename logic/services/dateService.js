@@ -10,7 +10,9 @@ angular.module('OGTicketsApp.services')
 		}
 	};
 
-
+	/**
+	 * Devuelve formateado como datetime un string. Formato aa-mm-dd hh:mm:ss
+	 */
 	var setDateTimeFormat= function(_date) {
 		var date= new Date(_date);
 		var day= setDoubleDigit(date.getDate());
@@ -34,12 +36,28 @@ angular.module('OGTicketsApp.services')
 
 	};
 
+	/**
+	 * @devuelve formateado como hora un string. formato hh:mm:ss
+	 */
+	var setTimeFormat= function(_date) {
+		var date= new Date(_date);
+
+		var hours= setDoubleDigit(date.getHours());
+		var min= setDoubleDigit(date.getMinutes());
+		var sec= setDoubleDigit(date.getSeconds());
+
+		finalTime= hours + ':' + min + ':' + sec;
+
+		return finalTime;
+	};
+
 
 
 
 //puntos de acceso de los metodos del servicio:
 	return{
-		setDateTimeFormat:setDateTimeFormat
+		setDateTimeFormat:setDateTimeFormat,
+		setTimeFormat:setTimeFormat
 	};
 }]);//end -service-
 

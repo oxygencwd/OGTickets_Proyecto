@@ -133,6 +133,20 @@ $app->post(
     }
 );
 
+//registerReuqestById
+$app->get(
+    '/promoter/getRegisterRequestById/{id}',
+    function($request, $response){
+         /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->getRegisterRequestById($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
 //promoter/getAllRequest
 $app->get(
     '/promoter/getAllRequest',
@@ -158,7 +172,20 @@ $app->get(
     }
 );
 
+$app->post(
+    '/event/registerEvent',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->registerEvent($request);
+        return $response->withJson($result);
+    }
+);
 
+
+
+/*RUTAS DE SITIOS*/
 $app->get(
     '/sites/getSiteList',
     function($request, $response){
