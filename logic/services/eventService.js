@@ -2,27 +2,44 @@ angular.module('OGTicketsApp.services')
 .service('eventService', ['localStorageService','userService','$q','$http', 'dateService', function(localStorageService, userService, $q, $http, dateService) {
 
 	// Saves on "eventsList" all the events saved on the database, (active and inactive events.)
-    var eventsList = localStorageService.getAll("eventsList");
+    //var eventsList = localStorageService.getAll("eventsList");
 
     //Genera un contador de id
-    var eventId= localStorageService.setIdCounter("eventIdCounter", 4);
+    //var eventId= localStorageService.setIdCounter("eventIdCounter", 4);
 
 
     //active events= only active events can be display to clientes
     var activeEvents= function (){
-        result = eventsList.filter(function (item) {
-            return item.active == true;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getAllActiveEvents';
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result;
+        return defer.promise;
+
     };
 
     //retrieves the whole event object by its id
     //Param is the event id
-    var retrieveEvent = function (eId){
-        result = eventsList.filter(function (item) {
-            return item.id == eId;
+    var getEventById = function (pId){
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getEventById/' + pId;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result[0];
+        return defer.promise;
     };
 
     //toma los eventos y los filtra paa obtener solo los de fecha actual
@@ -139,14 +156,14 @@ angular.module('OGTicketsApp.services')
 
 	return{
 		//setCreditCard: setCreditCard,
-		retrieveEvent: retrieveEvent,
+		getEventById: getEventById,
         activeEvents:activeEvents,
         getEventTypeList:getEventTypeList,
         todayEvents:todayEvents,
         eventsByType:eventsByType,
         getEventType:getEventType,
         registerEvent:registerEvent,
-        eventsList:eventsList,
+        //eventsList:eventsList,
         replaceEvent:replaceEvent
 	};
 }]);//end -service-
