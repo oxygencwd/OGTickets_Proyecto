@@ -66,7 +66,7 @@ class EventsService {
      */
     public function getAllActiveEvents(){
         $result=[];
-        $query= "SELECT idEvento, Nombre, FechaEvento, HoraInicio, Foto
+        $query= "SELECT idEvento, Nombre, FechaEvento, HoraInicio, Foto, TbTipoEvento_idTipoEvento as idtipoEvento
                 FROM tbevento
                 WHERE Activo=1 AND FechaEvento > NOW()";
         // Query params
@@ -87,7 +87,8 @@ class EventsService {
                     "name" => $event["Nombre"],
                     "date" => $event["FechaEvento"],
                     "startHour" => $event["HoraInicio"],
-                    "image" => $event["Foto"]
+                    "image" => $event["Foto"],
+                    "eventType" => $event["idtipoEvento"]
                 ];
             } 
         } else {
