@@ -1262,4 +1262,201 @@ Array
 ---- 
 20/04/16 22:15:10 
 C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+21/04/16 01:11:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => okay producciones
+    [legalId] => 5412547856
+    [email] => okay@info.com
+    [specializationArea] => Musica
+    [password] => 111
+    [repeatPass] => 111
+    [phone] => 88888888
+    [address] => Moravia
+)
+---- 
+21/04/16 01:11:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 236
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:11:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 253
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:11:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 117
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 1
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:12:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaFisica
+    [firstname] => Maria
+    [firstlastname] => De los Palotes
+    [personalId] => 514236541
+    [email] => maria@produce.com
+    [specializationArea] => Cultura
+    [password] => 111
+    [repeatPass] => 111
+    [phone] => 88888888
+    [address] => San Ramon
+    [genre] => f
+)
+---- 
+21/04/16 01:12:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 236
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:12:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 253
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:12:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 140
+INSERT INTO tbsolicitudregistropromotor (PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Cedula, Email, password, AreaEspecializacion, PrimerTelefono, Ubicacion) VALUES (:firstname, :secondname, :firstlastname, :secondlastname, :personalId, :email, :password, :specializationArea, :phone, :address)---- 
+21/04/16 01:12:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 155
+Array
+(
+    [:firstname] => Maria
+    [:secondname] => 
+    [:firstlastname] => De los Palotes
+    [:secondlastname] => 
+    [:personalId] => 514236541
+    [:email] => maria@produce.com
+    [:password] => 111
+    [:specializationArea] => Cultura
+    [:phone] => 88888888
+    [:address] => San Ramon
+)
+---- 
+21/04/16 01:12:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 158
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 2
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:25:25 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 01:25:25 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin
