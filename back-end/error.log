@@ -1,5 +1,317 @@
 ---- 
-19/04/16 18:51:06 
+20/04/16 00:12:51 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+20/04/16 00:12:51 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => czxcz
+    [firstlastname] => lkñlkñlk
+    [personalId] => 455552222
+    [email] => usdjsld@lskdad.com
+    [password] => K5iMm
+    [repeatPass] => K5iMm
+    [userType] => 4
+)
+---- 
+20/04/16 00:12:52 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => czxcz
+    [firstlastname] => lkñlkñlk
+    [personalId] => 455552222
+    [email] => usdjsld@lskdad.com
+    [password] => fTTk4
+    [repeatPass] => fTTk4
+    [userType] => 4
+)
+---- 
+20/04/16 00:12:52 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 5
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 5
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 6
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 6
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+5---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+6---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 2
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 2
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 3
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 00:12:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 3
+        )
+
+)
+---- 
+20/04/16 00:19:39 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 30
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => f
+)
+---- 
+20/04/16 00:19:39 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => dsdfdsf
+    [firstlastname] => fdsfsf
+    [personalId] => 444444444
+    [email] => naty@gmail.com
+    [password] => 111
+    [repeatPass] => 111
+    [userType] => 2
+)
+---- 
+20/04/16 00:19:39 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 1
+                    [0] => 1
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 00:19:39 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [error] => 1
+    [message] => Email is unavailable
+)
+---- 
+20/04/16 00:20:17 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 30
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => f
+)
+---- 
+20/04/16 00:20:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => dsdfdsf
+    [firstlastname] => fdsfsf
+    [personalId] => 444444444
+    [email] => naty@gmail.com
+    [password] => 111
+    [repeatPass] => 111
+    [userType] => 2
+)
+---- 
+20/04/16 00:20:18 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 1
+                    [0] => 1
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+20/04/16 00:20:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [error] => 1
+    [message] => Email is unavailable
+)
+---- 
+20/04/16 00:21:50 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
 Array
 (
@@ -32,64 +344,63 @@ Array
 
 )
 ---- 
-19/04/16 18:51:06 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idUsuario] => 1
-                    [0] => 1
-                    [PrimerNombre] => oxyGen
-                    [1] => oxyGen
-                    [SegundoNombre] => 
-                    [2] => 
-                    [PrimerApellido] => CWD
-                    [3] => CWD
-                    [SegundoApellido] => 
-                    [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 1
-                    [5] => 1
-                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
-                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-19/04/16 18:51:06 
+20/04/16 00:21:50 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin---- 
-19/04/16 19:17:36 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+20/04/16 00:24:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1970-10-10 00:00:00
+    [phone] => 66666666
+    [genre] => f
+)
+---- 
+20/04/16 00:24:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1970-10-10 00:00:00
+    [phone] => 66666666
+    [genre] => f
+)
+---- 
+20/04/16 00:24:20 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sdadada
+    [firstlastname] => kljljkj
+    [personalId] => 999999999
+    [email] => josefita@ogt.com
+    [password] => ChRaX
+    [repeatPass] => ChRaX
+    [userType] => 4
+)
+---- 
+20/04/16 00:24:20 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sdadada
+    [firstlastname] => kljljkj
+    [personalId] => 999999999
+    [email] => josefita@ogt.com
+    [password] => PmZec
+    [repeatPass] => PmZec
+    [userType] => 4
+)
+---- 
+20/04/16 00:24:20 
+: 
 Array
 (
     [data] => Array
         (
             [0] => Array
                 (
-                    [idUsuario] => 1
+                    [count] => 1
                     [0] => 1
-                    [PrimerNombre] => oxyGen
-                    [1] => oxyGen
-                    [SegundoNombre] => 
-                    [2] => 
-                    [PrimerApellido] => CWD
-                    [3] => CWD
-                    [SegundoApellido] => 
-                    [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 1
-                    [5] => 1
-                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
-                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
                 )
 
         )
@@ -101,28 +412,24 @@ Array
 
 )
 ---- 
-19/04/16 19:17:36 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+20/04/16 00:24:20 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [error] => 1
+    [message] => Email is unavailable
+)
+---- 
+20/04/16 00:24:20 
+: 
 Array
 (
     [data] => Array
         (
             [0] => Array
                 (
-                    [idUsuario] => 1
+                    [count] => 1
                     [0] => 1
-                    [PrimerNombre] => oxyGen
-                    [1] => oxyGen
-                    [SegundoNombre] => 
-                    [2] => 
-                    [PrimerApellido] => CWD
-                    [3] => CWD
-                    [SegundoApellido] => 
-                    [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 1
-                    [5] => 1
-                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
-                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
                 )
 
         )
@@ -134,34 +441,55 @@ Array
 
 )
 ---- 
-19/04/16 19:17:36 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
-admin---- 
-19/04/16 19:17:36 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
-admin---- 
-19/04/16 19:18:57 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+20/04/16 00:24:20 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [error] => 1
+    [message] => Email is unavailable
+)
+---- 
+20/04/16 00:25:09 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1970-10-10 00:00:00
+    [phone] => 66666666
+    [genre] => f
+)
+---- 
+20/04/16 00:25:09 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1970-10-10 00:00:00
+    [phone] => 66666666
+    [genre] => f
+)
+---- 
+20/04/16 00:25:09 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sdadada
+    [firstlastname] => kljljkj
+    [personalId] => 999999999
+    [email] => ari@cenfo.com
+    [password] => 3INcq
+    [repeatPass] => 3INcq
+    [userType] => 4
+)
+---- 
+20/04/16 00:25:09 
+: 
 Array
 (
     [data] => Array
         (
             [0] => Array
                 (
-                    [idUsuario] => 1
+                    [count] => 1
                     [0] => 1
-                    [PrimerNombre] => oxyGen
-                    [1] => oxyGen
-                    [SegundoNombre] => 
-                    [2] => 
-                    [PrimerApellido] => CWD
-                    [3] => CWD
-                    [SegundoApellido] => 
-                    [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 1
-                    [5] => 1
-                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
-                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
                 )
 
         )
@@ -173,78 +501,7 @@ Array
 
 )
 ---- 
-19/04/16 19:18:57 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
-admin---- 
-19/04/16 19:24:29 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idUsuario] => 2
-                    [0] => 2
-                    [PrimerNombre] => Naty
-                    [1] => Naty
-                    [SegundoNombre] => 
-                    [2] => 
-                    [PrimerApellido] => Mata
-                    [3] => Mata
-                    [SegundoApellido] => 
-                    [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 2
-                    [5] => 2
-                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
-                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-19/04/16 19:24:29 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
-123---- 
-19/04/16 19:25:29 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idUsuario] => 1
-                    [0] => 1
-                    [PrimerNombre] => oxyGen
-                    [1] => oxyGen
-                    [SegundoNombre] => 
-                    [2] => 
-                    [PrimerApellido] => CWD
-                    [3] => CWD
-                    [SegundoApellido] => 
-                    [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 1
-                    [5] => 1
-                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
-                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
+<<<<<<< HEAD
 19/04/16 19:25:29 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin---- 
@@ -3798,6 +4055,30 @@ Array
 )
 ---- 
 20/04/16 02:04:59 
+=======
+20/04/16 00:25:09 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [error] => 1
+    [message] => Email is unavailable
+)
+---- 
+20/04/16 00:25:09 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sdadada
+    [firstlastname] => kljljkj
+    [personalId] => 999999999
+    [email] => ari@cenfo.com
+    [password] => MHbmp
+    [repeatPass] => MHbmp
+    [userType] => 4
+)
+---- 
+20/04/16 00:25:09 
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 : 
 Array
 (
@@ -3805,8 +4086,13 @@ Array
         (
             [0] => Array
                 (
+<<<<<<< HEAD
                     [count] => 0
                     [0] => 0
+=======
+                    [count] => 1
+                    [0] => 1
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
                 )
 
         )
@@ -3818,6 +4104,7 @@ Array
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:04:59 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
 Array
@@ -3876,10 +4163,69 @@ Array
     [meta] => Array
         (
             [id] => 23
+=======
+20/04/16 00:25:09 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [error] => 1
+    [message] => Email is unavailable
+)
+---- 
+20/04/16 00:25:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1970-10-10 00:00:00
+    [phone] => 66666666
+    [genre] => f
+)
+---- 
+20/04/16 00:25:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1970-10-10 00:00:00
+    [phone] => 66666666
+    [genre] => f
+)
+---- 
+20/04/16 00:25:53 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sdadada
+    [firstlastname] => kljljkj
+    [personalId] => 999999999
+    [email] => ari@cenfo.ac.cr
+    [password] => thI90
+    [repeatPass] => thI90
+    [userType] => 4
+)
+---- 
+20/04/16 00:25:53 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:26:41 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
 Array
@@ -3903,6 +4249,22 @@ Array
 )
 ---- 
 20/04/16 02:26:41 
+=======
+20/04/16 00:25:53 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sdadada
+    [firstlastname] => kljljkj
+    [personalId] => 999999999
+    [email] => ari@cenfo.ac.cr
+    [password] => 812YA
+    [repeatPass] => 812YA
+    [userType] => 4
+)
+---- 
+20/04/16 00:25:53 
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 : 
 Array
 (
@@ -3923,31 +4285,50 @@ Array
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:26:42 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+=======
+20/04/16 00:25:53 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [data] => 
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 27
+=======
+            [id] => 7
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
             [count] => 1
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:26:42 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+=======
+20/04/16 00:25:53 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [message] => User created
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 27
+=======
+            [id] => 7
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:26:42 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
 Array
@@ -3962,17 +4343,26 @@ C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierControlle
 27---- 
 20/04/16 02:26:42 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+=======
+20/04/16 00:25:53 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [data] => 
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 24
+=======
+            [id] => 8
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
             [count] => 1
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:26:42 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
 Array
@@ -3981,10 +4371,21 @@ Array
     [meta] => Array
         (
             [id] => 24
+=======
+20/04/16 00:25:53 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 8
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:34:39 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
 Array
@@ -4030,17 +4431,38 @@ Array
 ---- 
 20/04/16 02:34:40 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+=======
+20/04/16 00:25:53 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1970-10-10 00:00:00
+    [phone] => 66666666
+    [genre] => f
+)
+---- 
+20/04/16 00:25:53 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+7---- 
+20/04/16 00:25:54 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [data] => 
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 28
+=======
+            [id] => 4
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
             [count] => 1
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:34:40 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
 Array
@@ -4049,10 +4471,21 @@ Array
     [meta] => Array
         (
             [id] => 28
+=======
+20/04/16 00:25:54 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 4
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:34:40 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
 Array
@@ -4067,29 +4500,59 @@ C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierControlle
 28---- 
 20/04/16 02:34:40 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+=======
+20/04/16 00:25:54 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1970-10-10 00:00:00
+    [phone] => 66666666
+    [genre] => f
+)
+---- 
+20/04/16 00:25:54 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+8---- 
+20/04/16 00:25:54 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [data] => 
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 25
+=======
+            [id] => 5
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
             [count] => 1
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:34:40 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+=======
+20/04/16 00:25:54 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [message] => Cashier created
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 25
+=======
+            [id] => 5
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:47:45 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
 Array
@@ -4113,6 +4576,31 @@ Array
 )
 ---- 
 20/04/16 02:47:45 
+=======
+20/04/16 00:31:15 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+20/04/16 00:31:15 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => dassaj
+    [firstlastname] => kjlkj
+    [personalId] => 251421452
+    [email] => cajero@ejemplo.com
+    [password] => SXDVz
+    [repeatPass] => SXDVz
+    [userType] => 4
+)
+---- 
+20/04/16 00:31:15 
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 : 
 Array
 (
@@ -4133,6 +4621,7 @@ Array
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:47:45 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
 Array
@@ -4218,6 +4707,22 @@ Array
 )
 ---- 
 20/04/16 02:57:11 
+=======
+20/04/16 00:31:15 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => dassaj
+    [firstlastname] => kjlkj
+    [personalId] => 251421452
+    [email] => cajero@ejemplo.com
+    [password] => RU0FE
+    [repeatPass] => RU0FE
+    [userType] => 4
+)
+---- 
+20/04/16 00:31:15 
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 : 
 Array
 (
@@ -4238,31 +4743,50 @@ Array
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:57:13 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+=======
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [data] => 
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 30
+=======
+            [id] => 9
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
             [count] => 1
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:57:13 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+=======
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [message] => User created
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 30
+=======
+            [id] => 9
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:57:13 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
 Array
@@ -4277,17 +4801,26 @@ C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierControlle
 30---- 
 20/04/16 02:57:14 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+=======
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
 Array
 (
     [data] => 
     [meta] => Array
         (
+<<<<<<< HEAD
             [id] => 27
+=======
+            [id] => 10
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
             [count] => 1
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 02:57:14 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
 Array
@@ -4296,10 +4829,21 @@ Array
     [meta] => Array
         (
             [id] => 27
+=======
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 10
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 03:09:46 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 30
 Array
@@ -4340,11 +4884,46 @@ Array
 
     [meta] => Array
         (
+=======
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+9---- 
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1986-10-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+10---- 
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 6
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
             [count] => 1
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 03:09:46 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
 Array
@@ -4393,11 +4972,34 @@ Array
 
     [meta] => Array
         (
+=======
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 6
+        )
+
+)
+---- 
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
             [count] => 1
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 03:09:48 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
 Array
@@ -4435,10 +5037,31 @@ Array
     [meta] => Array
         (
             [count] => 1
+=======
+20/04/16 00:31:16 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 7
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa
         )
 
 )
 ---- 
+<<<<<<< HEAD
 20/04/16 21:46:12 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin
+=======
+20/04/16 01:53:31 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+)
+---- 
+20/04/16 01:53:46 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+>>>>>>> 01f81f038903503b639c1b999dbc325d6fd3d3aa

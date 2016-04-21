@@ -133,6 +133,7 @@ $app->post(
     }
 );
 
+//promoter/getAllRequest
 $app->get(
     '/promoter/getAllRequest',
     function($request, $response){
@@ -145,29 +146,30 @@ $app->get(
 );
 
 
+/*RUTAS DE EVENTOS*/
+$app->get(
+    '/events/getAllEventTypes',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getAllEventTypes($request);
+        return $response->withJson($result);
+    }
+);
+
+
+$app->get(
+    '/hello',
+    function($request, $response){
+       $msg="hello";
+        return $msg;
+    }
+);
+
+
+
 
 // Corremos la aplicación.
 $app->run();
 
-
-
-
-
-
-
-
-
-
-
-/* Machote para crear las rutas INDEX.
-$app->METODO(
-    '/MODULO/FUNCION',
-    function ($request, $response) {
-        //@var Request $request
-        //@var Response $response
-        $CONTROLLERNAME = new App\Controllers\CONTROLLERNAME();
-        $result = $CONTROLLERNAME->FUNCION($request);
-        return $response->withJson($result);
-    }
-);
-*/
