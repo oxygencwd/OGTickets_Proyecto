@@ -41,9 +41,9 @@
 		              <ul class="nav navbar-nav">
 		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut01'" ng-href="#/admin"><span class="user-icon glyphicon glyphicon-user"></span>Administrar</a></li>	
 
-		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut02'" ng-href="#/client-profile/{{appLoggedUser.id}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.name}}</a></li>
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut02'" ng-href="#/client-profile/{{appLoggedUser.id}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.navBarName}}</a></li>
 
-		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut03'" ng-href="#/promoter-profile/{{appLoggedUser.id}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.name}}</a></li>
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut03'" ng-href="#/promoter-profile/{{appLoggedUser.id}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.navBarName}}</a></li>
 
 		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut04'" ng-href="#/redeem-tickets"><span class="user-icon glyphicon glyphicon-tasks"></span>Redimir tiquetes</a></li>
 

@@ -7,6 +7,7 @@ angular.module('OGTicketsApp.controllers')
 			secondName:"",
 			lastName:"",
 			secondLastName:"",
+			navBarName:"",
 			userId:"", 
 			userType:"", 
 			isConnected:false
