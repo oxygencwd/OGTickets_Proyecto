@@ -38,8 +38,11 @@ class EventsController{
         return $this->eventsService->getEventById($id);
     }
 
-
-
+    public function getEventsByCategory($request){
+        /** @var Request $request */
+        $id = $request->getAttribute("id", null);
+        return $this->eventsService->getEventsByCategory($id);
+    }
     
 	public function registerEvent($request){
 		$result = [];

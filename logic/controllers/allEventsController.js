@@ -30,13 +30,13 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 	var eventsByType = function (){
-		var promise = eventService.eventsByType($scope.categoryId);
-		promise.then(function(data){
-			var eventListByType = data.data;
-		})
-		.catch(function(error){
-			console.log(error);
-		})
+		eventService.eventsByType($scope.categoryId);
+		// promise.then(function(data){
+		// 	var eventListByType = data.data;
+		// })
+		// .catch(function(error){
+		// 	console.log(error);
+		// })
 	};
 
 	var getEventType = function (){
