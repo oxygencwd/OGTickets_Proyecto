@@ -32,6 +32,10 @@ class EventsController{
         return $this->eventsService->getAllActiveEvents();
     }
 
+    public function getTodayEvents(){
+        return $this->eventsService->getTodayEvents();
+    }
+
     public function getEventById($request) {
         /** @var Request $request */
         $id = $request->getAttribute("id", null);

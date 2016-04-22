@@ -7,12 +7,21 @@ angular.module('OGTicketsApp.controllers')
         var eventId= $routeParams.eventId;
         $scope.currentUser= userService.getLoggedUser();
 
+        eventService.getEventById(eventId)
+        .then(function(data) {
+            var event= data.data[0];
+            console.info(event);
+            $scope.currentEvent= event;
+            $scope.eventSiteId= event.siteId;
+            $scope.eventSiteName= event.siteName;
+        })
+        .catch(function(error) {
+            console.error(error);
+        })
+
         /*display event*/
         // Sets on "currentEvent" the whole event by the id
-        $scope.currentEvent = eventService.retrieveEvent(eventId);
-        var eventSite= siteService.getEventSite(eventId);
-        $scope.eventSiteName= eventSite.name;
-        $scope.eventSiteId= eventSite.id;
+
         //noMap indica si el evento tiene un sitio con mapa o no
         $scope.noMap=false;
         //ocultar los paneles de compra hasta que el cliente vaya avanzando hacia esa seccion.
@@ -28,7 +37,7 @@ angular.module('OGTicketsApp.controllers')
         $scope.hidePurchaseButton= false;
 
         //varifica el id del sitios para establacer si el sitio posee mapa de asientos o no.
-        if( $scope.eventSiteId!=='si01' &&  $scope.eventSiteId!=='si02' &&  $scope.eventSiteId!=='si03' &&  $scope.eventSiteId!=='si04'){
+        if( $scope.eventSiteId=='si01' ||  $scope.eventSiteId=='si02' ||  $scope.eventSiteId=='si03' ||  $scope.eventSiteId=='si04'){
             $scope.noMap= true;
         };
 
@@ -177,12 +186,12 @@ angular.module('OGTicketsApp.controllers')
             $location.path('/event-profile-edit/'+eventId);
         };
 
-        
+       /* 
         $scope.isOwner=false;
         if($scope.currentEvent.promoterId==$scope.currentUser.id){
             $scope.isOwner=true;
         };
-
+        */
 
         //purchase section
 

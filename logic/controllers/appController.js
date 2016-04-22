@@ -3,7 +3,13 @@ angular.module('OGTicketsApp.controllers')
 
 	$scope.init= function () {
 		$scope.appLoggedUser={
-			name:"", userId:"", userType:"", isConnected:false
+			firstName:"",
+			secondName:"",
+			lastName:"",
+			secondLastName:"",
+			userId:"", 
+			userType:"", 
+			isConnected:false
 		};
 
 		isLoggedIn();
@@ -19,7 +25,7 @@ angular.module('OGTicketsApp.controllers')
 
 
 
-	$scope.isLoggedIn= userService.isLoggedIn($scope.appLoggedUser);
+	//$scope.isLoggedIn= userService.isLoggedIn($scope.appLoggedUser);
 	$scope.expNumberPhone = /^[\ |0-9]{8}$/;
 
 //estos son los datos que se queman al local storage cuando uno abre la app//

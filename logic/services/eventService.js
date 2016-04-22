@@ -2,7 +2,8 @@ angular.module('OGTicketsApp.services')
 .service('eventService', ['localStorageService','userService','$q','$http', 'dateService', function(localStorageService, userService, $q, $http, dateService) {
 
 	//Saves on "eventsList" all the events saved on the database, (active and inactive events.)
-    var eventsList = localStorageService.getAll("eventsList");
+    var eventsList = [];
+
 
     //Genera un contador de id
     var eventId= localStorageService.setIdCounter("eventIdCounter", 4);
@@ -22,8 +23,9 @@ angular.module('OGTicketsApp.services')
             $log.error(error, status);
         });
         return defer.promise;
-
     };
+
+
 
     //retrieves the whole event object by its id
     //Param is the event id
@@ -44,14 +46,17 @@ angular.module('OGTicketsApp.services')
 
     //toma los eventos y los filtra paa obtener solo los de fecha actual
     var todayEvents= function (){
-        var date= new Date();
-            date= getParseDate(date);
-        result = eventsList.filter(function (item) {
-            var itemDate= new Date(item.date);
-                itemDate= getParseDate(itemDate);
-            return itemDate == date;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getTodayEvents';
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            console.error(error, status);
         });
-        return result;
+        return defer.promise;
     };
 
     //lista de eventos pertenecientes a un tipo de evento

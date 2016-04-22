@@ -20,6 +20,44 @@ class EventsService {
     }
 
 
+    //getTodayEvents
+    public function getTodayEvents(){
+        $result=[];
+        $query= "SELECT idEvento, Nombre, FechaEvento, HoraInicio, Foto, TbTipoEvento_idTipoEvento as idtipoEvento
+                FROM tbevento
+                WHERE Activo=1 AND FechaEvento = Current_date()";
+
+        // Query params
+        $params = [];
+
+        $getTodayEventsResult = $this->storage->query($query, $params);
+
+        $foundRecords = array_key_exists("meta", $getTodayEventsResult) &&
+            $getTodayEventsResult["meta"]["count"] > 0;
+
+        if ($foundRecords) {
+            $result["message"] = "Today events found";
+            $todayEvents = $getTodayEventsResult["data"];
+
+            foreach ($todayEvents as $event) {
+                $result["data"][] = [
+                    "id" => $event["idEvento"],
+                    "name" => $event["Nombre"],
+                    "date" => $event["FechaEvento"],
+                    "startHour" => $event["HoraInicio"],
+                    "image" => $event["Foto"],
+                    "eventType" => $event["idtipoEvento"]
+                ];
+            } 
+        } else {
+            $result["message"] = "Today Events not found";
+            $result["error"] = true;
+        }
+
+        return $result;
+    }//end -getTodayEvents-
+
+
     /**
      * Devuelve la lista de tipos de evento con id, nombre, descripcion y foto de cada uno si la hay
      * @return array
@@ -215,7 +253,7 @@ class EventsService {
                         "image" => $event["Foto"],
                         "eventTypeId" => $event["idTipoEvento"],
                         "eventTypeName" => $event["nombreTipoEvento"],
-                        "siteId" => $event["idsitio"],
+                        "siteId" => "si0" . $event["idsitio"],
                         "siteName" => $event["nombreSitio"]
                     ];
                 } 
