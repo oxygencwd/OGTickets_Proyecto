@@ -389,17 +389,21 @@ class EventsService {
 
     }//end -registerEvent- 
 
+
+
+
     /**createIndexPromoterEvent($idEvent,$userId)**/
     private function createIndexPromoterEvent($idEvent, $userId){
         $result=[];
+        $promoterId= $this->getPromoterId($userId);
 
-        $query= "INSERT INTO tbeventoporsitio
-        (TbSitio_idSitio, TbEvento_idEvento)
-        VALUES
-        (:siteId, :idEvent)";
+        $query= "INSERT INTO tbeventoporpromotor
+                (TbPromotor_idPromotor, TbEvento_idEvento)
+                VALUES
+                (:promoterId, :idEvent)";
 
         $params = [
-            ":siteId" => $siteId, 
+            ":promoterId" => $promoterId, 
             ":idEvent" => $idEvent
         ];
 
@@ -409,15 +413,46 @@ class EventsService {
         $isIndexCreated= array_key_exists("meta", $createIndex) && $createIndex["meta"]["count"]==1;
 
         if($isIndexCreated){//13
-            $result["message"]= "Index created";
+            $result["message"]= "Index Promoter Event created";
             $result["meta"]["id"]= $createIndex["meta"]["id"];
         }else{
             $result["error"] = true;
-            $result["message"]= "Error, can't create index";
+            $result["message"]= "Error, can't create index Promoter Event";
         }
 
         return $result;
     }
+
+
+     private function getPromoterId($userId){
+        $result=[];
+
+        $query= "SELECT tbpromotor.idPromotor
+                FROM tbusuario
+                INNER JOIN tbpromotor
+                ON tbusuario.idUsuario = tbpromotor.TbUsuario_idUsuario
+                WHERE tbusuario.idUsuario= :userId";
+
+        $params = [
+            ":userId" => $userId
+        ];
+
+        $getIdResult= $this->storage->query($query, $params);
+        LoggingService::logVariable($getIdResult, __FILE__, __LINE__);
+
+        $promoterId = $getIdResult["data"][0];
+        $promoterId= $promoterId["idPromotor"];
+
+        return $promoterId;
+
+    }
+
+
+
+
+        
+
+    
 
 
     private function createEventSiteIndex($idEvent, $siteId){
@@ -446,6 +481,7 @@ class EventsService {
             $result["message"]= "Error, can't create index";
         }
 
+        LoggingService::result($createIndex, __FILE__, __LINE__);
         return $result;
     }
 
