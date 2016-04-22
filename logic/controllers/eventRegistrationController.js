@@ -30,10 +30,14 @@ angular.module('OGTicketsApp.controllers')
 		picture = src;
 	};
 
+	
+	
 		//Funcion del boton de registro de evento, toma los datos del formulario y los envia hacia el servicio, despues recibe la respues y muestra el resultado.
 	$scope.registerEvent=function () {
+		var cUser= $scope.appLoggedUser;
+		var userId= cUser.userId;
 		$scope.newEvent.image = picture;
-		eventService.registerEvent($scope.newEvent);
+		eventService.registerEvent($scope.newEvent, userId);
 		// var eventId;
 		// if(result.value){
 		// 	eventId= result.eventId;
@@ -76,8 +80,8 @@ angular.module('OGTicketsApp.controllers')
 
 	//edit the event.
 	var eventId= $routeParams.eventId;
-	var currentEvent= eventService.retrieveEvent(eventId);
-	$scope.newEvent= currentEvent;
+	//var currentEvent= eventService.retrieveEvent(eventId);
+	//$scope.newEvent= currentEvent;
 	
 	if(eventId==undefined){
 		$scope.editing= false;

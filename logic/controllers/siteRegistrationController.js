@@ -12,17 +12,17 @@ angular.module('OGTicketsApp.controllers')
 	//Funcion del boton de registro de evento, agarra todos los datos del formulario.
 	$scope.registerSite=function () {
 		$scope.newSite.image = picture;
-		result= siteService.registerSite($scope.newSite);
-		var siteId;
-		if(result.value){
-			siteId= result.siteId;
-			$scope.newSite={};
-			formService.clear($scope.formNewSite);
-			$window.location.href = ('#/site-profile/'+siteId);
-			$scope.error="";
-		}else{
-			$scope.error="El sitio ya existe";
-		}
+		siteService.registerSite($scope.newSite);
+		// var siteId;
+		// if(result.value){
+		// 	siteId= result.siteId;
+		// 	$scope.newSite={};
+		// 	formService.clear($scope.formNewSite);
+		// 	$window.location.href = ('#/site-profile/'+siteId);
+		// 	$scope.error="";
+		// }else{
+		// 	$scope.error="El sitio ya existe";
+		// }
 	}; 
 
 	//Editar sitio.
