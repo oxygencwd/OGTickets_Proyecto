@@ -1,38 +1,54 @@
 ---- 
-22/04/16 11:27:40 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
+ut03---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 548
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 26
+        )
+
+)
+---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 348
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 26
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 448
+3---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 462
 Array
 (
     [data] => Array
         (
             [0] => Array
                 (
-                    [idEvento] => 4
-                    [0] => 4
-                    [Nombre] => Flamenco de hoy
-                    [1] => Flamenco de hoy
-                    [Descripcion] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [2] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 22000
-                    [7] => 22000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
+                    [idPromotor] => 1
+                    [0] => 1
                 )
 
         )
@@ -44,97 +60,35 @@ Array
 
 )
 ---- 
-22/04/16 11:27:59 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 467
+1---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 431
 Array
 (
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
+    [data] => 
     [meta] => Array
         (
+            [id] => 0
             [count] => 1
         )
 
 )
 ---- 
-22/04/16 11:28:07 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 352
 Array
 (
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 2
-                    [0] => 2
-                    [Nombre] => Día Internacional del Jazz con Túpac Amarulloa
-                    [1] => Día Internacional del Jazz con Túpac Amarulloa
-                    [Descripcion] => El concierto consta de dos partes. La primera es una exposición de jazz costarricense, las composiciones están basadas en la experiencia humana y su inter-relación con el universo. La segunda parte es una recreación del jam session, que es aún hoy en día la forma en que los jazzistas se reúnen a experimentar sin ensayar mas que sus propias habilidades, todo puede pasar en un jam, ya que la exploración se basa en la experiencia individual de cada músico y su relación con el tema que se interpreta.
-                    [2] => El concierto consta de dos partes. La primera es una exposición de jazz costarricense, las composiciones están basadas en la experiencia humana y su inter-relación con el universo. La segunda parte es una recreación del jam session, que es aún hoy en día la forma en que los jazzistas se reúnen a experimentar sin ensayar mas que sus propias habilidades, todo puede pasar en un jam, ya que la exploración se basa en la experiencia individual de cada músico y su relación con el tema que se interpreta.
-                    [FechaEvento] => 2016-04-30 00:00:00
-                    [3] => 2016-04-30 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 6500
-                    [7] => 6500
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/jazz_zpssmxanwpj.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/jazz_zpssmxanwpj.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
+    [message] => Index Promoter Event created
     [meta] => Array
         (
-            [count] => 1
+            [id] => 0
         )
 
 )
 ---- 
-22/04/16 11:28:43 
+22/04/16 13:50:52 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
 Array
 (
@@ -142,18 +96,18 @@ Array
         (
             [0] => Array
                 (
-                    [idUsuario] => 2
-                    [0] => 2
-                    [PrimerNombre] => Naty
-                    [1] => Naty
+                    [idUsuario] => 3
+                    [0] => 3
+                    [PrimerNombre] => Ariana
+                    [1] => Ariana
                     [SegundoNombre] => 
                     [2] => 
-                    [PrimerApellido] => Mata
-                    [3] => Mata
+                    [PrimerApellido] => Aguilar
+                    [3] => Aguilar
                     [SegundoApellido] => 
                     [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 2
-                    [5] => 2
+                    [TbTipoUsuario_idTipoUsuario] => 3
+                    [5] => 3
                     [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
                     [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
                 )
@@ -167,43 +121,59 @@ Array
 
 )
 ---- 
-22/04/16 11:28:43 
+22/04/16 13:50:52 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 123---- 
-22/04/16 11:28:49 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
+22/04/16 13:51:17 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
+ut03---- 
+22/04/16 13:51:17 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 548
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 27
+        )
+
+)
+---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 348
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 27
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 448
+3---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 462
 Array
 (
     [data] => Array
         (
             [0] => Array
                 (
-                    [idEvento] => 1
+                    [idPromotor] => 1
                     [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
                 )
 
         )
@@ -215,412 +185,35 @@ Array
 
 )
 ---- 
-22/04/16 11:29:00 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 467
+1---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 431
 Array
 (
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 5
-                    [0] => 5
-                    [Nombre] => Tributo a Queen
-                    [1] => Tributo a Queen
-                    [Descripcion] => La Orquesta Filarmónica presenta un gran tributo a la gran banda britanica Queen.
-                    [2] => La Orquesta Filarmónica presenta un gran tributo a la gran banda britanica Queen.
-                    [FechaEvento] => 2016-05-14 00:00:00
-                    [3] => 2016-05-14 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 25000
-                    [7] => 25000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/queen_zpscyvusx6v.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/queen_zpscyvusx6v.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
+    [data] => 
     [meta] => Array
         (
+            [id] => 0
             [count] => 1
         )
 
 )
 ---- 
-22/04/16 11:29:25 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 352
 Array
 (
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 5
-                    [0] => 5
-                    [Nombre] => Tributo a Queen
-                    [1] => Tributo a Queen
-                    [Descripcion] => La Orquesta Filarmónica presenta un gran tributo a la gran banda britanica Queen.
-                    [2] => La Orquesta Filarmónica presenta un gran tributo a la gran banda britanica Queen.
-                    [FechaEvento] => 2016-05-14 00:00:00
-                    [3] => 2016-05-14 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 25000
-                    [7] => 25000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/queen_zpscyvusx6v.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/queen_zpscyvusx6v.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
+    [message] => Index Promoter Event created
     [meta] => Array
         (
-            [count] => 1
+            [id] => 0
         )
 
 )
 ---- 
-22/04/16 11:29:37 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 4
-                    [0] => 4
-                    [Nombre] => Flamenco de hoy
-                    [1] => Flamenco de hoy
-                    [Descripcion] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [2] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 22000
-                    [7] => 22000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:29:50 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 2
-                    [0] => 2
-                    [Nombre] => Día Internacional del Jazz con Túpac Amarulloa
-                    [1] => Día Internacional del Jazz con Túpac Amarulloa
-                    [Descripcion] => El concierto consta de dos partes. La primera es una exposición de jazz costarricense, las composiciones están basadas en la experiencia humana y su inter-relación con el universo. La segunda parte es una recreación del jam session, que es aún hoy en día la forma en que los jazzistas se reúnen a experimentar sin ensayar mas que sus propias habilidades, todo puede pasar en un jam, ya que la exploración se basa en la experiencia individual de cada músico y su relación con el tema que se interpreta.
-                    [2] => El concierto consta de dos partes. La primera es una exposición de jazz costarricense, las composiciones están basadas en la experiencia humana y su inter-relación con el universo. La segunda parte es una recreación del jam session, que es aún hoy en día la forma en que los jazzistas se reúnen a experimentar sin ensayar mas que sus propias habilidades, todo puede pasar en un jam, ya que la exploración se basa en la experiencia individual de cada músico y su relación con el tema que se interpreta.
-                    [FechaEvento] => 2016-04-30 00:00:00
-                    [3] => 2016-04-30 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 6500
-                    [7] => 6500
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/jazz_zpssmxanwpj.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/jazz_zpssmxanwpj.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:30:08 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 7
-                    [0] => 7
-                    [Nombre] => La Fiesta de el Cabo
-                    [1] => La Fiesta de el Cabo
-                    [Descripcion] => Disfruta de las comedias de el Cabo.
-                    [2] => Disfruta de las comedias de el Cabo.
-                    [FechaEvento] => 2016-05-14 00:00:00
-                    [3] => 2016-05-14 00:00:00
-                    [CapacidadPersonas] => 400
-                    [4] => 400
-                    [HoraInicio] => 19:00:00
-                    [5] => 19:00:00
-                    [HoraFinalizacion] => 20:00:00
-                    [6] => 20:00:00
-                    [CostoEntrada] => 12000
-                    [7] => 12000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/elcabo_zpscaol4yak.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/elcabo_zpscaol4yak.jpg
-                    [idTipoEvento] => 2
-                    [9] => 2
-                    [nombreTipoEvento] => Cultura
-                    [10] => Cultura
-                    [idsitio] => 6
-                    [11] => 6
-                    [nombreSitio] => Pepper's Club
-                    [12] => Pepper's Club
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:30:24 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 10
-                    [0] => 10
-                    [Nombre] => Harlem Globetrotters en Costa Rica
-                    [1] => Harlem Globetrotters en Costa Rica
-                    [Descripcion] => Ven a disfrutar de la magia del baloncesto, combinado con el mejor show deportivo del mundo.
-                    [2] => Ven a disfrutar de la magia del baloncesto, combinado con el mejor show deportivo del mundo.
-                    [FechaEvento] => 2016-05-26 00:00:00
-                    [3] => 2016-05-26 00:00:00
-                    [CapacidadPersonas] => 674
-                    [4] => 674
-                    [HoraInicio] => 19:00:00
-                    [5] => 19:00:00
-                    [HoraFinalizacion] => 21:00:00
-                    [6] => 21:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/harlem_zpstsink9ax.png
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/harlem_zpstsink9ax.png
-                    [idTipoEvento] => 3
-                    [9] => 3
-                    [nombreTipoEvento] => Deportes
-                    [10] => Deportes
-                    [idsitio] => 4
-                    [11] => 4
-                    [nombreSitio] => Palacio de los Deportes
-                    [12] => Palacio de los Deportes
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:34:08 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 4
-                    [0] => 4
-                    [Nombre] => Flamenco de hoy
-                    [1] => Flamenco de hoy
-                    [Descripcion] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [2] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 22000
-                    [7] => 22000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:34:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:36:16 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:36:27 
+22/04/16 13:51:35 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
 Array
 (
@@ -628,20 +221,20 @@ Array
         (
             [0] => Array
                 (
-                    [idUsuario] => 2
-                    [0] => 2
-                    [PrimerNombre] => Naty
-                    [1] => Naty
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
                     [SegundoNombre] => 
                     [2] => 
-                    [PrimerApellido] => Mata
-                    [3] => Mata
+                    [PrimerApellido] => CWD
+                    [3] => CWD
                     [SegundoApellido] => 
                     [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 2
-                    [5] => 2
-                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
-                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
                 )
 
         )
@@ -653,1310 +246,9 @@ Array
 
 )
 ---- 
-22/04/16 11:36:27 
+22/04/16 13:51:35 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
-123---- 
-22/04/16 11:39:40 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:42:24 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:42:31 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:44:06 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:44:51 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:45:35 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 11:46:46 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:04:16 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:07:46 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:08:28 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:09:20 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:09:52 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:10:13 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:14:41 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:16:17 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:16:29 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 4
-                    [0] => 4
-                    [Nombre] => Flamenco de hoy
-                    [1] => Flamenco de hoy
-                    [Descripcion] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [2] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 22000
-                    [7] => 22000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:16:37 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:18:47 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:19:11 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:23:14 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 8
-                    [0] => 8
-                    [Nombre] => Cigala Intimo
-                    [1] => Cigala Intimo
-                    [Descripcion] => Concierto de Diego Cigala en Costa Rica.
-                    [2] => Concierto de Diego Cigala en Costa Rica.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:23:22 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 2
-                    [0] => 2
-                    [Nombre] => Día Internacional del Jazz con Túpac Amarulloa
-                    [1] => Día Internacional del Jazz con Túpac Amarulloa
-                    [Descripcion] => El concierto consta de dos partes. La primera es una exposición de jazz costarricense, las composiciones están basadas en la experiencia humana y su inter-relación con el universo. La segunda parte es una recreación del jam session, que es aún hoy en día la forma en que los jazzistas se reúnen a experimentar sin ensayar mas que sus propias habilidades, todo puede pasar en un jam, ya que la exploración se basa en la experiencia individual de cada músico y su relación con el tema que se interpreta.
-                    [2] => El concierto consta de dos partes. La primera es una exposición de jazz costarricense, las composiciones están basadas en la experiencia humana y su inter-relación con el universo. La segunda parte es una recreación del jam session, que es aún hoy en día la forma en que los jazzistas se reúnen a experimentar sin ensayar mas que sus propias habilidades, todo puede pasar en un jam, ya que la exploración se basa en la experiencia individual de cada músico y su relación con el tema que se interpreta.
-                    [FechaEvento] => 2016-04-30 00:00:00
-                    [3] => 2016-04-30 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 6500
-                    [7] => 6500
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/jazz_zpssmxanwpj.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/jazz_zpssmxanwpj.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:23:30 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:23:34 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 10
-                    [0] => 10
-                    [Nombre] => Harlem Globetrotters en Costa Rica
-                    [1] => Harlem Globetrotters en Costa Rica
-                    [Descripcion] => Ven a disfrutar de la magia del baloncesto, combinado con el mejor show deportivo del mundo.
-                    [2] => Ven a disfrutar de la magia del baloncesto, combinado con el mejor show deportivo del mundo.
-                    [FechaEvento] => 2016-05-26 00:00:00
-                    [3] => 2016-05-26 00:00:00
-                    [CapacidadPersonas] => 674
-                    [4] => 674
-                    [HoraInicio] => 19:00:00
-                    [5] => 19:00:00
-                    [HoraFinalizacion] => 21:00:00
-                    [6] => 21:00:00
-                    [CostoEntrada] => 18000
-                    [7] => 18000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/harlem_zpstsink9ax.png
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/harlem_zpstsink9ax.png
-                    [idTipoEvento] => 3
-                    [9] => 3
-                    [nombreTipoEvento] => Deportes
-                    [10] => Deportes
-                    [idsitio] => 4
-                    [11] => 4
-                    [nombreSitio] => Palacio de los Deportes
-                    [12] => Palacio de los Deportes
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:23:45 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 7
-                    [0] => 7
-                    [Nombre] => La Fiesta de el Cabo
-                    [1] => La Fiesta de el Cabo
-                    [Descripcion] => Disfruta de las comedias de el Cabo.
-                    [2] => Disfruta de las comedias de el Cabo.
-                    [FechaEvento] => 2016-05-14 00:00:00
-                    [3] => 2016-05-14 00:00:00
-                    [CapacidadPersonas] => 400
-                    [4] => 400
-                    [HoraInicio] => 19:00:00
-                    [5] => 19:00:00
-                    [HoraFinalizacion] => 20:00:00
-                    [6] => 20:00:00
-                    [CostoEntrada] => 12000
-                    [7] => 12000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/elcabo_zpscaol4yak.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/elcabo_zpscaol4yak.jpg
-                    [idTipoEvento] => 2
-                    [9] => 2
-                    [nombreTipoEvento] => Cultura
-                    [10] => Cultura
-                    [idsitio] => 6
-                    [11] => 6
-                    [nombreSitio] => Pepper's Club
-                    [12] => Pepper's Club
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:23:53 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 6
-                    [0] => 6
-                    [Nombre] => Jesús Adrián Romero y Marcos Witt
-                    [1] => Jesús Adrián Romero y Marcos Witt
-                    [Descripcion] => Se unen por primera vez en Costa Rica para presentar todos sus éxitos. Será una gran oportunidad para Dar Gracias!
-                    [2] => Se unen por primera vez en Costa Rica para presentar todos sus éxitos. Será una gran oportunidad para Dar Gracias!
-                    [FechaEvento] => 2016-06-24 00:00:00
-                    [3] => 2016-06-24 00:00:00
-                    [CapacidadPersonas] => 2184
-                    [4] => 2184
-                    [HoraInicio] => 18:00:00
-                    [5] => 18:00:00
-                    [HoraFinalizacion] => 20:00:00
-                    [6] => 20:00:00
-                    [CostoEntrada] => 25500
-                    [7] => 25500
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/jesusmarco_zpsdla5y27o.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/jesusmarco_zpsdla5y27o.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 1
-                    [11] => 1
-                    [nombreSitio] => Estadio Nacional
-                    [12] => Estadio Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:24:04 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 4
-                    [0] => 4
-                    [Nombre] => Flamenco de hoy
-                    [1] => Flamenco de hoy
-                    [Descripcion] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [2] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 22000
-                    [7] => 22000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:24:10 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 5
-                    [0] => 5
-                    [Nombre] => Tributo a Queen
-                    [1] => Tributo a Queen
-                    [Descripcion] => La Orquesta Filarmónica presenta un gran tributo a la gran banda britanica Queen.
-                    [2] => La Orquesta Filarmónica presenta un gran tributo a la gran banda britanica Queen.
-                    [FechaEvento] => 2016-05-14 00:00:00
-                    [3] => 2016-05-14 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 25000
-                    [7] => 25000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/queen_zpscyvusx6v.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/queen_zpscyvusx6v.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:24:15 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 11
-                    [0] => 11
-                    [Nombre] => Ichiro Mizuki en Costa Rica
-                    [1] => Ichiro Mizuki en Costa Rica
-                    [Descripcion] => Gran concierto de este integrante japones.
-                    [2] => Gran concierto de este integrante japones.
-                    [FechaEvento] => 2016-04-29 00:00:00
-                    [3] => 2016-04-29 00:00:00
-                    [CapacidadPersonas] => 500
-                    [4] => 500
-                    [HoraInicio] => 16:00:00
-                    [5] => 16:00:00
-                    [HoraFinalizacion] => 18:00:00
-                    [6] => 18:00:00
-                    [CostoEntrada] => 6000
-                    [7] => 6000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/ichiro_zpspg4lfgg8.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/ichiro_zpspg4lfgg8.jpg
-                    [idTipoEvento] => 1
-                    [9] => 1
-                    [nombreTipoEvento] => Música
-                    [10] => Música
-                    [idsitio] => 3
-                    [11] => 3
-                    [nombreSitio] => Auditorio Nacional
-                    [12] => Auditorio Nacional
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 12:26:13 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 237
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 4
-                    [0] => 4
-                    [Nombre] => Flamenco de hoy
-                    [1] => Flamenco de hoy
-                    [Descripcion] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [2] => Es una musical que muestra la enorme vitalidad que el ﬂamenco tiene en el siglo XXI.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 2752
-                    [4] => 2752
-                    [HoraInicio] => 20:00:00
-                    [5] => 20:00:00
-                    [HoraFinalizacion] => 22:00:00
-                    [6] => 22:00:00
-                    [CostoEntrada] => 22000
-                    [7] => 22000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/flamenco_zpshcd6rplb.jpg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 5
-                    [11] => 5
-                    [nombreSitio] => Teatro Popular Melico Salazar
-                    [12] => Teatro Popular Melico Salazar
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
+admin---- 
+22/04/16 13:52:10 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
+ut01
