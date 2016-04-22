@@ -235,6 +235,9 @@ class EventsService {
                 $getEventResult["meta"]["count"] > 0;
 
             if ($foundRecord) {
+
+                $userId= $this->getUserId($id);
+
                 $result["message"] = "Event found";
                 $eventList = $getEventResult["data"];
 
@@ -252,11 +255,14 @@ class EventsService {
                         "eventTypeId" => $event["idTipoEvento"],
                         "eventTypeName" => $event["nombreTipoEvento"],
                         "siteId" => "si0" . $event["idsitio"],
-                        "siteName" => $event["nombreSitio"]
+                        "siteName" => $event["nombreSitio"],
+                        "userId"  => $userId
                     ];
                 } 
 
-                //$id
+                
+
+               
                 
                 /*
                 SELECT tbusuario.idUsuario
@@ -420,24 +426,11 @@ class EventsService {
 
     }//end -registerEvent- 
 
-
-
-
     private function getUserId($eventId){
         LoggingService::logVariable($eventId, __FILE__, __LINE__);
         $result=[];
 
-
- 
-                
-                
- 
-
-
-
-
-
-        $query= "SELECT tbusuario.idUsuario
+        $query= "SELECT tbusuario.idUsuario as idUsuario
                 FROM tbeventoporpromotor 
                 INNER JOIN tbpromotor
                 INNER JOIN tbusuario
@@ -446,15 +439,15 @@ class EventsService {
                 WHERE tbeventoporpromotor.TbEvento_idEvento = :eventId";
 
         $params = [
-            ":userId" => $userId
+            ":eventId" => $eventId
         ];
 
         $getIdResult= $this->storage->query($query, $params);
 
-        $promoterId = $getIdResult["data"][0];
-        $promoterId= $promoterId["idPromotor"];
+        $userId = $getIdResult["data"][0];
+        $userId= $userId["idUsuario"];
 
-        return $promoterId;
+        return $userId;
     }
 
 
