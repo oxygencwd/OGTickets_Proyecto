@@ -56,13 +56,20 @@ angular.module('OGTicketsApp.services')
 
     //lista de eventos pertenecientes a un tipo de evento
     //params el id del tipo de evento solicitado
-    var eventsByType= function (typeId){
-        active= activeEvents();
-        result = active.filter(function (item) {
-            return item.eventType == typeId;
+    var eventsByType= function (eventType){
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getEventsByCategory/' + eventType;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result;
-    };
+        return defer.promise;
+    }
 
     //llevar de string a date las fechas
     var getParseDate= function (date) {
@@ -91,10 +98,10 @@ angular.module('OGTicketsApp.services')
     };
 
     //evento devuelve uj tipo de evento identificado por el id parametro
-    var getEventType= function (typeId) {
+    var getEventType= function (eventType) {
         var typeList= getEventTypeList();
         result = typeList.filter(function (item) {
-            return item.id == typeId;
+            return item.id == eventType;
         });
         return result[0];
 

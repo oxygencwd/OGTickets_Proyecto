@@ -197,6 +197,18 @@ $app->get(
     }
 );
 
+//getEventsByCategory/' + eventType;
+$app->get(
+    '/events/getEventsByCategory/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getEventsByCategory($request);
+        return $response->withJson($result);
+    }
+);
+
 
 //getEventById
 $app->get(
