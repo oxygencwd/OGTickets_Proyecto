@@ -56,21 +56,7 @@ angular.module('OGTicketsApp.services')
 		appLoggedUser.isConnected= true;
 
 		var usr= {};
-<<<<<<< HEAD
-		// usr.name= parseName(objUsr);
-		// usr.userId= objUsr.userId;
-		// usr.userType= objUsr.userType;
 
-		// appLoggedUser.name= usr.name;
-		// appLoggedUser.userId= usr.userId;
-		// appLoggedUser.userType= usr.userType;
-		// appLoggedUser.isConnected= true;
-
-		// $cookieStore.put('isConnected', true);
-  //     	$cookieStore.put('loggedUser', usr);
-
-  //     	localStorageService.set('loggedUser', usr);
-=======
 		usr.userId= objUsr.userId;
 		usr.userType= objUsr.userType;
 		usr.navBarName= parseName(objUsr);
@@ -79,7 +65,6 @@ angular.module('OGTicketsApp.services')
       	$cookieStore.put('loggedUser', usr);
 
 		localStorageService.set('loggedUser', objUsr);
->>>>>>> e94caf05564c90bdff8fe81e5bf0f94df0bd559d
 	};
 
 	
