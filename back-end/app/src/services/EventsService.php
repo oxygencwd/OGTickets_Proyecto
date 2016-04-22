@@ -287,6 +287,16 @@ class EventsService {
                                                         $siteCapacity= $this->getSiteCapacity($siteId);
                                                         $result= $this->createEvent($name, $description, $date, $siteCapacity, $startHour, $endHour, $ticketsPrice, $image, $eventType);
 
+                                                        $idEvent = $result["meta"];
+                                                        $idEvent= $idEvent["id"];
+
+                                                        $resultIndexEventSite= $this->createEventSiteIndex($idEvent, $siteId);
+
+                                                        $result["createEventSiteIndex"]= $resultIndexEventSite;
+
+                                                        $resultIndexPromoterEvent= $this->createIndexPromoterEvent($idEvent,$userId);
+                                                    
+
                                                     }else{//12
                                                         $result["error"] = true;
                                                         $result["message"] = "user Id is invalid";
@@ -341,6 +351,66 @@ class EventsService {
 
     }//end -registerEvent- 
 
+    /**createIndexPromoterEvent($idEvent,$userId)**/
+    private function createIndexPromoterEvent($idEvent, $userId){
+        $result=[];
+
+        $query= "INSERT INTO tbeventoporsitio
+        (TbSitio_idSitio, TbEvento_idEvento)
+        VALUES
+        (:siteId, :idEvent)";
+
+        $params = [
+            ":siteId" => $siteId, 
+            ":idEvent" => $idEvent
+        ];
+
+        $createIndex= $this->storage->query($query, $params);
+        LoggingService::logVariable($createIndex, __FILE__, __LINE__);
+
+        $isIndexCreated= array_key_exists("meta", $createIndex) && $createIndex["meta"]["count"]==1;
+
+        if($isIndexCreated){//13
+            $result["message"]= "Index created";
+            $result["meta"]["id"]= $createIndex["meta"]["id"];
+        }else{
+            $result["error"] = true;
+            $result["message"]= "Error, can't create index";
+        }
+
+        return $result;
+    }
+
+
+    private function createEventSiteIndex($idEvent, $siteId){
+        $result=[];
+
+        $query= "INSERT INTO tbeventoporsitio
+        (TbSitio_idSitio, TbEvento_idEvento)
+        VALUES
+        (:siteId, :idEvent)";
+
+        $params = [
+            ":siteId" => $siteId, 
+            ":idEvent" => $idEvent
+        ];
+
+        $createIndex= $this->storage->query($query, $params);
+        LoggingService::logVariable($createIndex, __FILE__, __LINE__);
+
+        $isIndexCreated= array_key_exists("meta", $createIndex) && $createIndex["meta"]["count"]==1;
+
+        if($isIndexCreated){//13
+            $result["message"]= "Index created";
+            $result["meta"]["id"]= $createIndex["meta"]["id"];
+        }else{
+            $result["error"] = true;
+            $result["message"]= "Error, can't create index";
+        }
+
+        return $result;
+    }
+
 
     private function createEvent($name, $description, $date, $siteCapacity, $startHour, $endHour, $ticketsPrice, $image, $eventType){
         $result=[];
@@ -371,6 +441,8 @@ class EventsService {
         if($isEventCreated){//17
             $result["message"]= "Event created";
             $result["meta"]["id"]= $createEventResult["meta"]["id"];
+
+
         }else{
             $result["error"] = true;
             $result["message"]= "Error, can't event";

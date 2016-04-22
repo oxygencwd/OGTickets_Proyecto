@@ -1,27 +1,27 @@
 ---- 
-22/04/16 00:37:35 
+22/04/16 01:43:54 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\EventsController.php: 57
 Array
 (
-    [eventType] => 2
-    [siteId] => 7
-    [name] => Danza de la compa
-    [description] => Gira anual de la compañia nacional de danza
+    [eventType] => 5
+    [siteId] => 4
+    [name] => Hippy Flower
+    [description] => De vuleta a las raices
     [date] => 2016-06-10 00:00:00
-    [startHour] => 20:00:00
-    [endHour] => 22:00:00
-    [ticketsPrice] => 4000
+    [startHour] => 10:00:00
+    [endHour] => 20:00:00
+    [ticketsPrice] => 3000
     [image] => 
     [userId] => 1
 )
 ---- 
-22/04/16 00:37:35 
+22/04/16 01:43:54 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 258
-20:00:00---- 
-22/04/16 00:37:35 
+10:00:00---- 
+22/04/16 01:43:54 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 259
-22:00:00---- 
-22/04/16 00:37:35 
+20:00:00---- 
+22/04/16 01:43:54 
 : 
 Array
 (
@@ -29,8 +29,8 @@ Array
         (
             [0] => Array
                 (
-                    [Capacidad] => 350
-                    [0] => 350
+                    [Capacidad] => 674
+                    [0] => 674
                 )
 
         )
@@ -42,14 +42,14 @@ Array
 
 )
 ---- 
-22/04/16 00:37:35 
+22/04/16 01:43:54 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 367
 Array
 (
     [data] => 
     [meta] => Array
         (
-            [id] => 13
+            [id] => 18
             [count] => 1
         )
 
@@ -57,6 +57,7 @@ Array
 <<<<<<< HEAD
 <<<<<<< HEAD
 ---- 
+<<<<<<< HEAD
 <<<<<<< HEAD
 21/04/16 01:58:47 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 83
@@ -3362,3 +3363,8 @@ Array
         )
 
 )
+=======
+22/04/16 01:43:54 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 377
+18
+>>>>>>> b83d94ed77bfa4f8861c1a36ba0b31343ecd09c5
