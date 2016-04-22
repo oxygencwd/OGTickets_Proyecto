@@ -50,7 +50,7 @@ angular.module('OGTicketsApp.controllers')
             var usr= userService.getLoggedUser(); 
             $scope.alertMsg="";
             
-            if(usr!==false && usr.userType!== "ut04" ){
+            if(usr!==false && usr.userType== "ut02" ){
                 
                 if($scope.haveMap){
                     $scope.inputPanel= true;
@@ -62,7 +62,7 @@ angular.module('OGTicketsApp.controllers')
                     $scope.hidePurchaseButton= true;
                 }
             }else{
-                if(usr.userType== "ut04"){
+                if(usr.userType== "ut04" || usr.userType== "ut01" || usr.userType== "ut03"){
                     $scope.alertMsg= "Debe estar registrado como cliente para poder comprar boletos";
                     $scope.openModal('#alertModal');
                 }else{
