@@ -47,31 +47,39 @@ angular.module('OGTicketsApp.services')
 	var login= function (appLoggedUser, objUsr) {
 		var usr= {};
 		usr.name= parseName(objUsr);
-		usr.id= objUsr.userId;
+		usr.userId= objUsr.userId;
 		usr.userType= objUsr.userType;
 
 		appLoggedUser.name= usr.name;
-		appLoggedUser.id= usr.id;
+		appLoggedUser.userId= usr.userId;
 		appLoggedUser.userType= usr.userType;
 		appLoggedUser.isConnected= true;
 
 		$cookieStore.put('isConnected', true);
       	$cookieStore.put('loggedUser', usr);
+
+      	localStorageService.set('loggedUser', usr);
 	};
+
+	
 
 	//toma el objeto y pasa por cada uno de los componentes el nombre y regresa el nombre completo con que el usuario esta regitrado.
 	var parseName= function(objUsr) {
 		var array=[];
-		array[0]= objUsr.firstName;
-		array[1]= objUsr.secondName;
-		array[2]= objUsr.lastName;
-		array[3]= objUsr.secondLastName;
-		for(i= 0; i<array.length; i++) {
-			if(array[i]==null){
-				array.splice(i,1);
+		if(objUsr.name){
+			return objUsr.name
+		}else{
+			array[0]= objUsr.firstName;
+			array[1]= objUsr.secondName;
+			array[2]= objUsr.lastName;
+			array[3]= objUsr.secondLastName;
+			for(i= 0; i<array.length; i++) {
+				if(array[i]==null){
+					array.splice(i,1);
+				}
 			}
+			return array.join(" ");
 		}
-		return array.join(" ");
 	};
 
 	//deslogea al usuario.
@@ -83,19 +91,26 @@ angular.module('OGTicketsApp.services')
 
 		$cookieStore.remove('isConnected');
 		$cookieStore.remove('loggedUser');
+
+
+
 	};//end -logout
 
 	//verifica al refrascar la pagina si hay un cookie guardado con un usuario, si es asi lo loggea, mantiene la persisitencia del usuario loggeado.
-	var isLoggedIn= function (appLoggedUser) {
-		cUser= $cookieStore.get('loggedUser');
-		if(cUser){
-			login(appLoggedUser, cUser);
-		};
+	var isLoggedIn= function () {
+		//cUser= $cookieStore.get('loggedUser');
+		cUser= localStorageService.getAll("loggedUser");
+		if(cUser !== undefined){
+			return true
+			//login(appLoggedUser, cUser);
+		}else{
+			return false;
+		}
 	};
 
 	//devuelve el usuario loggeado desde la cookie almacenada. Devuelve solo el id, el userType y el nombre.
 	var getLoggedUser= function () {
-		var cUser= $cookieStore.get('loggedUser');
+		var cUser= localStorageService.getAll('loggedUser');
 		if(cUser){
 			return cUser;
 		}else{

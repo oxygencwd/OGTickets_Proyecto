@@ -172,6 +172,7 @@ $app->get(
     }
 );
 
+
 //registerEvent
 $app->post(
     '/event/registerEvent',
@@ -192,6 +193,18 @@ $app->get(
         /** @var Response $response */
         $eventsController= new App\Controllers\EventsController();
         $result= $eventsController->getAllActiveEvents($request);
+        return $response->withJson($result);
+    }
+);
+
+//getEventsByCategory/' + eventType;
+$app->get(
+    '/events/getEventsByCategory/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getEventsByCategory($request);
         return $response->withJson($result);
     }
 );
@@ -223,6 +236,17 @@ $app->get(
     }
 );
 
+//site/registerSite
+$app->post(
+    '/sites/registerSite',
+    function ($request, $response) {
+        /** @var Request $request */
+        /** @var Response $response */
+        $sitesController= new App\Controllers\SitesController();
+        $result= $sitesController->registerSite($request);
+        return $response->withJson($result);
+    }
+);
 
 
 
