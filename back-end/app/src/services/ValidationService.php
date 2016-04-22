@@ -70,6 +70,11 @@ class ValidationService{
         return $d && $d->format($format) == $date;
     }
 
+    function isValidTime($date, $format = 'H:i:s'){
+        $d = DateTime::createFromFormat($format, $date);
+        return $d && $d->format($format) == $date;
+    }
+
 
     /**
     * Check minimum age.
@@ -169,7 +174,7 @@ class ValidationService{
      */
     function getTime($timeString){
             $date = new DateTime($timeString);
-            return $date->format('H:i:s');
+            return  $date->format('H:i:s');
     }
 
     /**
@@ -179,8 +184,13 @@ class ValidationService{
      * @return boolean
      */
     function validateEventTimes($startHour, $endHour){
-        $startHour= getTime($this->$startHour);
-        $endHour= getTime($this->$endHour);
+       // $startHour= $this->getTime($this->$startHour);
+       // $endHour= $this->getTime($this->$endHour);
+       $startHour= new DateTime($startHour);
+       $startHour= $startHour->format('H:i:s');
+
+       $endHour= new DateTime($endHour);
+       $endHour= $endHour->format('H:i:s');
 
         if($startHour < $endHour){
             return true;

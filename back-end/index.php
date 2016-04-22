@@ -185,6 +185,22 @@ $app->post(
     }
 );
 
+
+
+$app->get(
+    '/event/pruebas/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->pruebas($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
+
 //events/getAllActiveEvents
 $app->get(
     '/events/getAllActiveEvents',

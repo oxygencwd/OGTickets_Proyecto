@@ -56,8 +56,6 @@ angular.module('OGTicketsApp.controllers')
 		.catch(function() {
 			console.log("Error registrando el nuevo cliente");
 		});
-		
-
 	 }; 
 
 	$scope.openModal= function (modalId) { 

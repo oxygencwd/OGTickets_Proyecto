@@ -13,6 +13,26 @@ angular.module('OGTicketsApp.controllers')
 	$scope.registerSite=function () {
 		$scope.newSite.image = picture;
 		siteService.registerSite($scope.newSite);
+		.then(function(data) {
+			if(data.valid){
+				$scope.newSite={};
+				formService.clear($scope.formNewSite);
+				$scope.success= "Sitio creado con éxito";
+				$scope.openModal("#siteRegSuccessModal");
+				$timeout(function() {
+					$scope.closeModal("#siteRegSuccessModal");
+					$window.location.href = ('#/site';
+					$scope.openModal('#loginModal');
+					$scope.error="";
+					$scope.success="";
+				}, 1500);	
+			}else{
+				$scope.error="Ya existe un sitio con ese nombre";
+			}
+		})
+		.catch(function() {
+			console.log("Error registrando el nuevo sitio");
+		});
 		// var siteId;
 		// if(result.value){
 		// 	siteId= result.siteId;
@@ -42,6 +62,11 @@ angular.module('OGTicketsApp.controllers')
 		$scope.newSite={};
 		formService.clear($scope.formNewSite);
 		$window.location.href = ('#/site-profile/'+siteId);
+	};
+
+
+	$scope.openModal= function (modalId) { 
+	  $(modalId).modal('show');
 	};
 
 	//Expresiones regulares, para validad campos de formulario

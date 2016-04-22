@@ -230,17 +230,8 @@ class EventsService {
             $result["error"] = true;
             $result["message"] = "Id is invalid";
         }
-
         return $result;
-    }//
-
-
-
-
-
-
-
-
+    }//getEventById -end-
 
 
 
@@ -249,16 +240,23 @@ class EventsService {
      */
     public function registerEvent($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $image, $userId){
 
+        $result=[];
+
         $eventType= trim($eventType);
         $siteId= trim($siteId);
         $name= trim($name);
         $description= trim($description);
         $date= trim($date);
         $startHour= trim($startHour);
+        $startHour= $this->validation->getTime($startHour);
         $endHour= trim($endHour);
+        $endHour= $this->validation->getTime($endHour);
         $ticketsPrice= trim($ticketsPrice);
         $image= trim($image);
         $userId= trim($userId);
+
+        LoggingService::logVariable($startHour, __FILE__, __LINE__);
+        LoggingService::logVariable($endHour, __FILE__, __LINE__);
 
         //verificar que todos los campos requeridos esten presentes.
         if(isset($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $userId)){ //1
@@ -273,9 +271,9 @@ class EventsService {
                             //verificar que l fecha del evento sea una fecha valida
                             if($this->validation->isValidDateTime($date) || $this->validation->isValidDate($date)){//6
                                 //vefiricar que la hora de inicio sea valida
-                                if($this->validation->isValidDateTime($startHour) || $this->validation->isValidDate($startHour)){//7
+                                if($this->validation->isValidTime($startHour) || $this->validation->isValidDate($startHour)){//7
                                     //vefiricar que la hora de finalizacion sea valida
-                                    if($this->validation->isValidDateTime($endHour) || $this->validation->isValidDate($endHour)){//8
+                                    if($this->validation->isValidTime($endHour) || $this->validation->isValidDate($endHour)){//8
                                         //verificar que el  precio de los tiquetes se un numero valido
                                         if($this->validation->isValidInt($ticketsPrice)){//9
                                             //verificar que la fecha de evento se marque con al menos 15 dias de anticipacion
@@ -285,16 +283,9 @@ class EventsService {
                                                     //verifcar que el id de usuario sea un nuemro
                                                     if($this->validation->isValidInt($userId)){//12
                                                         //si todas las validaciones estan se procede a almacenar el evento
-                                                        $querySitio= "SELECT Capacidad
-                                                                    FROM tbsitio
-                                                                    WHERE idsitio= :idSitio";
-                                                        // Query params
-                                                        $paramsSite = [":idSitio" => $siteId];
-
-                                                        $capacityResult= $this->storage->query($query, $$paramsSite);
-
-                                                        LoggingService::logVariable($capacityResult, __FILE__, __LINE__);
-
+                                                        
+                                                        $siteCapacity= $this->getSiteCapacity($siteId);
+                                                        $result= $this->createEvent($name, $description, $date, $siteCapacity, $startHour, $endHour, $ticketsPrice, $image, $eventType);
 
                                                     }else{//12
                                                         $result["error"] = true;
@@ -345,8 +336,78 @@ class EventsService {
             $result["message"] = "Empty required fields";
         }
 
+        return $result; 
 
-    }//end -registerEvent-
+
+    }//end -registerEvent- 
+
+
+    private function createEvent($name, $description, $date, $siteCapacity, $startHour, $endHour, $ticketsPrice, $image, $eventType){
+        $result=[];
+        // El query a ejecutar en la BD
+        $query = "INSERT INTO tbevento
+        (Nombre, Descripcion, FechaEvento, CapacidadPersonas, HoraInicio, HoraFinalizacion, CostoEntrada, Foto, TbTipoEvento_idTipoEvento)
+        VALUES
+        (:name, :description, :date, :siteCapacity, :startHour, :endHour, :ticketsPrice, :image, :eventType)";
+
+        // Los parámetros de ese query
+        $params = [
+            ":name" => $name,
+            ":description" => $description,
+            ":date" => $date,
+            ":siteCapacity" => $siteCapacity,
+            ":startHour" => $startHour, 
+            ":endHour" => $endHour,
+            ":ticketsPrice" => $ticketsPrice,
+            ":image" => $image,
+            ":eventType" =>$eventType
+        ];
+
+        $createEventResult= $this->storage->query($query, $params);
+        LoggingService::logVariable($createEventResult, __FILE__, __LINE__);
+
+        $isEventCreated= array_key_exists("meta", $createEventResult) && $createEventResult["meta"]["count"]==1;
+
+        if($isEventCreated){//17
+            $result["message"]= "Event created";
+            $result["meta"]["id"]= $createEventResult["meta"]["id"];
+        }else{
+            $result["error"] = true;
+            $result["message"]= "Error, can't event";
+        }
+
+         LoggingService::logVariable($result, __FILE__, __LINE__);
+
+        return $result;
+            
+    }//end -createEvent-
+
+
+    
+
+
+
+    private function getSiteCapacity($siteId){
+        $result=[];
+        // El query a ejecutar en la BD
+        $query = "SELECT Capacidad
+                FROM tbsitio
+                WHERE idsitio= :idSitio";
+
+        // Los parámetros de ese query
+        $params = [":idSitio" => $siteId];
+
+        $queryResult = $this->storage->query($query, $params);
+
+        LoggingService::logVariable($queryResult);
+
+        $siteCapacity = $queryResult["data"][0];
+        $siteCapacity= $siteCapacity["Capacidad"];
+
+        return $siteCapacity;
+
+    }
+
 
 
 
