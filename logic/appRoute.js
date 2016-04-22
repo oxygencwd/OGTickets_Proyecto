@@ -57,7 +57,7 @@
                 templateUrl: 'html/eventRegistrationForm.html',
                 controller: 'eventRegistrationController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                    authorized: [ROLES.PROMOTER.ROL]
                 } 
                 //Edición de un evento. Permisos: admin, promotor propietario del evento
             })
@@ -65,7 +65,7 @@
                 templateUrl: 'html/eventRegistrationForm.html',
                 controller: 'eventRegistrationController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                    authorized: [ROLES.PROMOTER.ROL]
                 }
                 //Registro de un evento. Permisos: promotor, admin
             })
