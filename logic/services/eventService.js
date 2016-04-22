@@ -99,11 +99,11 @@ angular.module('OGTicketsApp.services')
 
     //evento devuelve uj tipo de evento identificado por el id parametro
     var getEventType= function (eventType) {
-        var typeList= getEventTypeList();
-        result = typeList.filter(function (item) {
-            return item.id == eventType;
-        });
-        return result[0];
+        // var typeList= getEventTypeList();
+        // result = typeList.filter(function (item) {
+        //     return item.id == eventType;
+        // });
+        // return result[0];
 
     };
 
