@@ -234,8 +234,6 @@ class EventsService {
             $foundRecord = array_key_exists("meta", $getEventResult) &&
                 $getEventResult["meta"]["count"] > 0;
 
-                LoggingService::logVariable($getEventResult, __FILE__, __LINE__);
-
             if ($foundRecord) {
                 $result["message"] = "Event found";
                 $eventList = $getEventResult["data"];
@@ -257,6 +255,19 @@ class EventsService {
                         "siteName" => $event["nombreSitio"]
                     ];
                 } 
+
+                //$id
+                
+                /*
+                SELECT tbusuario.idUsuario
+                FROM tbeventoporpromotor 
+                INNER JOIN tbpromotor
+                INNER JOIN tbusuario
+                ON  tbeventoporpromotor.TbPromotor_idPromotor = tbpromotor.idPromotor
+                AND tbpromotor.TbUsuario_idUsuario = tbusuario.idUsuario
+                WHERE tbeventoporpromotor.TbEvento_idEvento = :eventId
+                 */
+
 
             } else {
                 $result["message"] = "Event not found";
@@ -412,6 +423,43 @@ class EventsService {
 
 
 
+    private function getUserId($eventId){
+        LoggingService::logVariable($eventId, __FILE__, __LINE__);
+        $result=[];
+
+
+ 
+                
+                
+ 
+
+
+
+
+
+        $query= "SELECT tbusuario.idUsuario
+                FROM tbeventoporpromotor 
+                INNER JOIN tbpromotor
+                INNER JOIN tbusuario
+                ON  tbeventoporpromotor.TbPromotor_idPromotor = tbpromotor.idPromotor
+                AND tbpromotor.TbUsuario_idUsuario = tbusuario.idUsuario
+                WHERE tbeventoporpromotor.TbEvento_idEvento = :eventId";
+
+        $params = [
+            ":userId" => $userId
+        ];
+
+        $getIdResult= $this->storage->query($query, $params);
+
+        $promoterId = $getIdResult["data"][0];
+        $promoterId= $promoterId["idPromotor"];
+
+        return $promoterId;
+    }
+
+
+
+
     /**createIndexPromoterEvent($idEvent,$userId)**/
     private function createIndexPromoterEvent($idEvent, $userId){
         $result=[];
@@ -444,7 +492,7 @@ class EventsService {
     }
 
 
-     private function getPromoterId($userId){
+    private function getPromoterId($userId){
         LoggingService::logVariable($userId, __FILE__, __LINE__);
         $result=[];
 
@@ -459,23 +507,12 @@ class EventsService {
         ];
 
         $getIdResult= $this->storage->query($query, $params);
-        LoggingService::logVariable($getIdResult, __FILE__, __LINE__);
 
         $promoterId = $getIdResult["data"][0];
         $promoterId= $promoterId["idPromotor"];
 
-        LoggingService::logVariable($promoterId, __FILE__, __LINE__);
-
         return $promoterId;
-
     }
-
-
-
-
-        
-
-    
 
 
     private function createEventSiteIndex($idEvent, $siteId){

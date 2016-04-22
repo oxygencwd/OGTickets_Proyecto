@@ -1,219 +1,5 @@
 ---- 
-22/04/16 13:50:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
-ut03---- 
-22/04/16 13:50:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 548
-Array
-(
-    [message] => Event created
-    [meta] => Array
-        (
-            [id] => 26
-        )
-
-)
----- 
-22/04/16 13:50:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 348
-Array
-(
-    [message] => Event created
-    [meta] => Array
-        (
-            [id] => 26
-        )
-
-    [createEventSiteIndex] => Array
-        (
-            [message] => Index created
-            [meta] => Array
-                (
-                    [id] => 0
-                )
-
-        )
-
-)
----- 
-22/04/16 13:50:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 448
-3---- 
-22/04/16 13:50:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 462
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idPromotor] => 1
-                    [0] => 1
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 13:50:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 467
-1---- 
-22/04/16 13:50:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 431
-Array
-(
-    [data] => 
-    [meta] => Array
-        (
-            [id] => 0
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 13:50:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 352
-Array
-(
-    [message] => Index Promoter Event created
-    [meta] => Array
-        (
-            [id] => 0
-        )
-
-)
----- 
-22/04/16 13:50:52 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idUsuario] => 3
-                    [0] => 3
-                    [PrimerNombre] => Ariana
-                    [1] => Ariana
-                    [SegundoNombre] => 
-                    [2] => 
-                    [PrimerApellido] => Aguilar
-                    [3] => Aguilar
-                    [SegundoApellido] => 
-                    [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 3
-                    [5] => 3
-                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
-                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 13:50:52 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
-123---- 
-22/04/16 13:51:17 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
-ut03---- 
-22/04/16 13:51:17 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 548
-Array
-(
-    [message] => Event created
-    [meta] => Array
-        (
-            [id] => 27
-        )
-
-)
----- 
-22/04/16 13:51:18 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 348
-Array
-(
-    [message] => Event created
-    [meta] => Array
-        (
-            [id] => 27
-        )
-
-    [createEventSiteIndex] => Array
-        (
-            [message] => Index created
-            [meta] => Array
-                (
-                    [id] => 0
-                )
-
-        )
-
-)
----- 
-22/04/16 13:51:18 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 448
-3---- 
-22/04/16 13:51:18 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 462
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idPromotor] => 1
-                    [0] => 1
-                )
-
-        )
-
-    [meta] => Array
-        (
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 13:51:18 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 467
-1---- 
-22/04/16 13:51:18 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 431
-Array
-(
-    [data] => 
-    [meta] => Array
-        (
-            [id] => 0
-            [count] => 1
-        )
-
-)
----- 
-22/04/16 13:51:18 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 352
-Array
-(
-    [message] => Index Promoter Event created
-    [meta] => Array
-        (
-            [id] => 0
-        )
-
-)
----- 
-22/04/16 13:51:35 
+22/04/16 15:24:23 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
 Array
 (
@@ -246,9 +32,125 @@ Array
 
 )
 ---- 
-22/04/16 13:51:35 
+22/04/16 15:24:23 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin---- 
-22/04/16 13:52:10 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
-ut01
+22/04/16 15:24:39 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [count] => 0
+        )
+
+)
+---- 
+22/04/16 15:24:45 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mata
+                    [3] => Mata
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 15:24:45 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+123---- 
+22/04/16 15:25:12 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 3
+                    [0] => 3
+                    [PrimerNombre] => Ariana
+                    [1] => Ariana
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Aguilar
+                    [3] => Aguilar
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 3
+                    [5] => 3
+                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 15:25:12 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+123---- 
+22/04/16 15:25:32 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [count] => 0
+        )
+
+)
+---- 
+22/04/16 15:25:41 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [count] => 0
+        )
+
+)
+---- 
+22/04/16 15:25:48 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [count] => 0
+        )
+
+)
