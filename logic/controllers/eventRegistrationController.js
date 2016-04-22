@@ -37,7 +37,26 @@ angular.module('OGTicketsApp.controllers')
 		var cUser= $scope.appLoggedUser;
 		var userId= cUser.userId;
 		$scope.newEvent.image = picture;
-		eventService.registerEvent($scope.newEvent, userId);
+		eventService.registerEvent($scope.newEvent, userId)
+		.then(function(data) {
+			if(data.valid){
+				$scope.newEvent={};
+				formService.clear($scope.eventRegistrationForm);
+				$scope.success= "Evento creado con éxito";
+				$scope.openModal("#eventRegSuccessModal");
+				$timeout(function() {
+					$scope.closeModal("#siteRegSuccessModal");
+					$window.location.href = ('#/event-profile/'+eventId);
+					$scope.error="";
+					$scope.success="";
+				}, 1500);	
+			}else{
+				$scope.error="Ya existe un evento con ese nombre";
+			}
+		})
+		.catch(function() {
+			console.log("Error registrando el nuevo evento");
+		});
 		// var eventId;
 		// if(result.value){
 		// 	eventId= result.eventId;
@@ -50,6 +69,9 @@ angular.module('OGTicketsApp.controllers')
 		// }
 	}; 
 
+	$scope.openModal= function (modalId) { 
+	  $(modalId).modal('show');
+	};
 
 	function getEventTypeList() {
 		var promise= eventService.getEventTypeList();
