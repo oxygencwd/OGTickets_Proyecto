@@ -72,8 +72,8 @@
 								<div class="dropdown width100">
 								  <button class="width100 dropdown-toggle text-center" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Categorías
 								  <span class="caret"></span></button>
-								  <ul class="dropdown-menu" ng-repeat="eventType in eventTypes">
-								    <li ng-repeat="category in categories"><a ng-click="viewCategory(category.id)">{{eventType.name}}</a></li>
+								  <ul class="dropdown-menu">
+								    <li ng-repeat="eventType in getEventTypeList()"><a ng-click="viewCategory(eventType.id)">{{eventType.name}}</a></li>
 								  </ul>
 								</div>
 							</li>
