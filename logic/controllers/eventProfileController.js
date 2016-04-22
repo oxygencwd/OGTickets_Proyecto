@@ -7,23 +7,12 @@ angular.module('OGTicketsApp.controllers')
         var eventId= $routeParams.eventId;
         $scope.currentUser= userService.getLoggedUser();
 
-        eventService.getEventById(eventId)
-        .then(function(data) {
-            var event= data.data[0];
-            console.info(event);
-            $scope.currentEvent= event;
-            $scope.eventSiteId= event.siteId;
-            $scope.eventSiteName= event.siteName;
-        })
-        .catch(function(error) {
-            console.error(error);
-        })
-
         /*display event*/
-        // Sets on "currentEvent" the whole event by the id
-
-        //noMap indica si el evento tiene un sitio con mapa o no
-        $scope.noMap=false;
+        $scope.currentEvent = {}; 
+        $scope.eventSiteId =null;
+        $scope.eventSiteName= null;
+        //haveMap indica si el evento tiene un sitio con mapa o no
+        $scope.haveMap=null;
         //ocultar los paneles de compra hasta que el cliente vaya avanzando hacia esa seccion.
         $scope.inputPanel= false;
         $scope.showMap= false;
@@ -36,20 +25,34 @@ angular.module('OGTicketsApp.controllers')
         $scope.isReservation= false;
         $scope.hidePurchaseButton= false;
 
-        //varifica el id del sitios para establacer si el sitio posee mapa de asientos o no.
-        if( $scope.eventSiteId=='si01' ||  $scope.eventSiteId=='si02' ||  $scope.eventSiteId=='si03' ||  $scope.eventSiteId=='si04'){
-            $scope.noMap= true;
-        };
+        eventService.getEventById(eventId)
+        .then(function(data) {
+            var event= data.data[0];
+            console.log(event);
+            $scope.currentEvent= event;
+            $scope.eventSiteId = event.siteId;
+            $scope.eventSiteName= event.siteName;
+
+            //varifica el id del sitios para establacer si el sitio posee mapa de asientos o no.
+            if( $scope.eventSiteId!=='si01' &&  $scope.eventSiteId!=='si02' &&  $scope.eventSiteId!=='si03' &&  $scope.eventSiteId!=='si04'){
+                $scope.haveMap= true;
+            };
+        })
+        .catch(function(error) {
+            console.error(error);
+        })
+
 
         //segun lo que corresponda abre las opciones para que el usuario haga la escogencia de los asientos.
-        //params: noMap: indica si el sitio posee un mapa o no
+        //params: haveMap: indica si el sitio posee un mapa o no
         //usr: verifica que sea un usuario loggeado y que no se un cajero.
         $scope.displayPanel= function () {
             var usr= userService.getLoggedUser(); 
             $scope.alertMsg="";
             
             if(usr!==false && usr.userType!== "ut04" ){
-                if($scope.noMap){
+                
+                if($scope.haveMap){
                     $scope.inputPanel= true;
                     $scope.buttons= true;
                     $scope.resume= true;
@@ -172,13 +175,6 @@ angular.module('OGTicketsApp.controllers')
 
         };
         
-        $scope.prueba= function () {
-            eventService.prueba("natymata@gmail.com", "123").success(function(response){
-                console.debug(response.user);
-            }).error(function(data){
-                console.debug("error");
-            });
-        };
 
         //Redirect to the event form to edit the event
         $scope.editEvent= function(){
@@ -186,12 +182,12 @@ angular.module('OGTicketsApp.controllers')
             $location.path('/event-profile-edit/'+eventId);
         };
 
-       /* 
+        
         $scope.isOwner=false;
         if($scope.currentEvent.promoterId==$scope.currentUser.id){
             $scope.isOwner=true;
         };
-        */
+
 
         //purchase section
 
