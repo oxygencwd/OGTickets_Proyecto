@@ -46,21 +46,22 @@ angular.module('OGTicketsApp.services')
 
 	//Coloca el nombre, id y tipo de usuario en un cookie, asi como en la variable del $scope global de la app appLoggedUser para que estos datos esten disponibles en toda la app.
 	var login= function (appLoggedUser, objUsr) {
-		// var usr= {};
-		// usr.name= parseName(objUsr);
-		// usr.userId= objUsr.userId;
-		// usr.userType= objUsr.userType;
-
-		appLoggedUser.firstName= objUsr.name;
+		appLoggedUser.firstName= objUsr.firstName;
 		appLoggedUser.secondName= objUsr.secondName;
 		appLoggedUser.lastName= objUsr.lastName;
 		appLoggedUser.secondLastName= objUsr.secondLastName;
+		appLoggedUser.navBarName= parseName(objUsr);
 		appLoggedUser.userId= objUsr.userId;
 		appLoggedUser.userType= objUsr.userType;
 		appLoggedUser.isConnected= true;
+
+		var usr= {};
+		usr.userId= objUsr.userId;
+		usr.userType= objUsr.userType;
+		usr.navBarName= parseName(objUsr);
 		
 		$cookieStore.put('isConnected', true);
-      	$cookieStore.put('loggedUserId', objUsr.userId);
+      	$cookieStore.put('loggedUser', usr);
 
 		localStorageService.set('loggedUser', objUsr);
 	};
@@ -109,7 +110,6 @@ angular.module('OGTicketsApp.services')
 		var url= 'back-end/index.php/user/logout';
 		$http.get(url)
 		.success(function(data) {
-			console.info(data);
 			defer.resolve(data);
 		})
 		.error(function(error, status) {
@@ -132,7 +132,8 @@ angular.module('OGTicketsApp.services')
 
 	//devuelve el usuario loggeado 
 	var getLoggedUser= function () {
-		var cUser= localStorageService.getAll('loggedUser');
+		//var cUser= localStorageService.getAll('loggedUser');
+		var cUser= $cookieStore.get("loggedUser");
 		if(cUser){
 			return cUser;
 		}else{
