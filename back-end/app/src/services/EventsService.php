@@ -276,7 +276,7 @@ class EventsService {
     /**
      * realiza ls validaciones de los datos del registro de evento y realiza el registro en la base de datos en caso de que todos los datos sean validos
      */
-    public function registerEvent($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $image, $userId){
+    public function registerEvent($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $image, $userId, $userType){
 
         $result=[];
 
@@ -292,12 +292,12 @@ class EventsService {
         $ticketsPrice= trim($ticketsPrice);
         $image= trim($image);
         $userId= trim($userId);
+        $userType= trim($userType);
 
-        LoggingService::logVariable($startHour, __FILE__, __LINE__);
-        LoggingService::logVariable($endHour, __FILE__, __LINE__);
+        LoggingService::logVariable($userType, __FILE__, __LINE__);
 
         //verificar que todos los campos requeridos esten presentes.
-        if(isset($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $userId)){ //1
+        if(isset($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $userId, $userType)){ //1
             //verificar id de tipo de evento sea un numero
             if($this->validation->isValidInt($eventType)){//2
                 //verificar que el id de sitio sea un numero
@@ -320,21 +320,41 @@ class EventsService {
                                                 if($this->validation->validateEventTimes($startHour, $endHour)){//11
                                                     //verifcar que el id de usuario sea un nuemro
                                                     if($this->validation->isValidInt($userId)){//12
+                                                        //verifecamos que el user type sea tipo ut03
+                                                        if($this->validation->isValidString($userType) && $userType=="ut03"){//13  
                                                         //si todas las validaciones estan se procede a almacenar el evento
                                                         
-                                                        $siteCapacity= $this->getSiteCapacity($siteId);
-                                                        $result= $this->createEvent($name, $description, $date, $siteCapacity, $startHour, $endHour, $ticketsPrice, $image, $eventType);
+                                                            $siteCapacity= $this->getSiteCapacity($siteId);
+                                                            
+                                                            // LoggingService::logVariable($siteCapacity, __FILE__, __LINE__);
+                                                            // LoggingService::logVariable($siteId, __FILE__, __LINE__);
 
-                                                        $idEvent = $result["meta"];
-                                                        $idEvent= $idEvent["id"];
 
-                                                        $resultIndexEventSite= $this->createEventSiteIndex($idEvent, $siteId);
+                                                            $result= $this->createEvent($name, $description, $date, $siteCapacity, $startHour, $endHour, $ticketsPrice, $image, $eventType);
 
-                                                        $result["createEventSiteIndex"]= $resultIndexEventSite;
+                                                            //LoggingService::logVariable($result, __FILE__, __LINE__);
 
-                                                        $resultIndexPromoterEvent= $this->createIndexPromoterEvent($idEvent,$userId);
+                                                            $idEvent = $result["meta"];
+                                                            $idEvent= $idEvent["id"];
+
+                                                            //LoggingService::logVariable($idEvent, __FILE__, __LINE__);
+
+                                                            $resultIndexEventSite= $this->createEventSiteIndex($idEvent, $siteId);
+
+                                                            //LoggingService::logVariable($resultIndexEventSite, __FILE__, __LINE__);
+
+                                                            $result["createEventSiteIndex"]= $resultIndexEventSite;
+
+                                                            LoggingService::logVariable($result, __FILE__, __LINE__);
+
+                                                            $resultIndexPromoterEvent= $this->createIndexPromoterEvent($idEvent,$userId);
+
+                                                            LoggingService::logVariable($resultIndexPromoterEvent, __FILE__, __LINE__);
                                                     
-
+                                                        }else{
+                                                            $result["error"] = true;
+                                                            $result["message"] = "user type is invalid";
+                                                        }
                                                     }else{//12
                                                         $result["error"] = true;
                                                         $result["message"] = "user Id is invalid";
@@ -425,6 +445,7 @@ class EventsService {
 
 
      private function getPromoterId($userId){
+        LoggingService::logVariable($userId, __FILE__, __LINE__);
         $result=[];
 
         $query= "SELECT tbpromotor.idPromotor
@@ -442,6 +463,8 @@ class EventsService {
 
         $promoterId = $getIdResult["data"][0];
         $promoterId= $promoterId["idPromotor"];
+
+        LoggingService::logVariable($promoterId, __FILE__, __LINE__);
 
         return $promoterId;
 
@@ -469,7 +492,7 @@ class EventsService {
         ];
 
         $createIndex= $this->storage->query($query, $params);
-        LoggingService::logVariable($createIndex, __FILE__, __LINE__);
+        //LoggingService::logVariable($createIndex, __FILE__, __LINE__);
 
         $isIndexCreated= array_key_exists("meta", $createIndex) && $createIndex["meta"]["count"]==1;
 
@@ -481,7 +504,7 @@ class EventsService {
             $result["message"]= "Error, can't create index";
         }
 
-        LoggingService::result($createIndex, __FILE__, __LINE__);
+       // LoggingService::logVariable($result, __FILE__, __LINE__);
         return $result;
     }
 
@@ -508,7 +531,7 @@ class EventsService {
         ];
 
         $createEventResult= $this->storage->query($query, $params);
-        LoggingService::logVariable($createEventResult, __FILE__, __LINE__);
+        //LoggingService::logVariable($createEventResult, __FILE__, __LINE__);
 
         $isEventCreated= array_key_exists("meta", $createEventResult) && $createEventResult["meta"]["count"]==1;
 
@@ -544,8 +567,6 @@ class EventsService {
         $params = [":idSitio" => $siteId];
 
         $queryResult = $this->storage->query($query, $params);
-
-        LoggingService::logVariable($queryResult);
 
         $siteCapacity = $queryResult["data"][0];
         $siteCapacity= $siteCapacity["Capacidad"];

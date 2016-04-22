@@ -125,7 +125,7 @@ angular.module('OGTicketsApp.services')
      * @param  event
      * @return promise
      */
-    var registerEvent= function (event, userId) {
+    var registerEvent= function (event, userId, userType) {
         
         var objEvent= {
             "eventType": event.eventType,
@@ -137,10 +137,11 @@ angular.module('OGTicketsApp.services')
             "endHour": dateService.setTimeFormat(event.endHour),
             "ticketsPrice": event.ticketsPrice,
             "image": event.image,
-            "userId": userId
+            "userId": userId,
+            "userType": userType
         };  
 
-        console.info(objEvent);
+       
         
         var defer= $q.defer();
         var url= 'back-end/index.php/event/registerEvent';
