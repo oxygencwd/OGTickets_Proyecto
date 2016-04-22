@@ -1,11 +1,11 @@
 angular.module('OGTicketsApp.services')
 .service('eventService', ['localStorageService','userService','$q','$http', 'dateService', function(localStorageService, userService, $q, $http, dateService) {
 
-	// Saves on "eventsList" all the events saved on the database, (active and inactive events.)
-    //var eventsList = localStorageService.getAll("eventsList");
+	//Saves on "eventsList" all the events saved on the database, (active and inactive events.)
+    var eventsList = localStorageService.getAll("eventsList");
 
     //Genera un contador de id
-    //var eventId= localStorageService.setIdCounter("eventIdCounter", 4);
+    var eventId= localStorageService.setIdCounter("eventIdCounter", 4);
 
 
     //active events= only active events can be display to clientes
@@ -113,7 +113,8 @@ angular.module('OGTicketsApp.services')
      * @param  event
      * @return promise
      */
-    var registerEvent= function (event) {
+    var registerEvent= function (event, userId) {
+        
         var objEvent= {
             "eventType": event.eventType,
             "siteId": event.siteId,
@@ -124,7 +125,10 @@ angular.module('OGTicketsApp.services')
             "endHour": dateService.setTimeFormat(event.endHour),
             "ticketsPrice": event.ticketsPrice,
             "image": event.image,
-        };
+            "userId": userId
+        };  
+
+        console.info(objEvent);
         
         var defer= $q.defer();
         var url= 'back-end/index.php/event/registerEvent';
@@ -163,7 +167,7 @@ angular.module('OGTicketsApp.services')
         eventsByType:eventsByType,
         getEventType:getEventType,
         registerEvent:registerEvent,
-        //eventsList:eventsList,
+        eventsList:eventsList,
         replaceEvent:replaceEvent
 	};
 }]);//end -service-

@@ -54,6 +54,7 @@ class EventsController{
         $endHour= null;
         $ticketsPrice= null;
         $image= null;
+        $userId= null;
 
         LoggingService::logVariable($formData, __FILE__, __LINE__);
 
@@ -92,8 +93,14 @@ class EventsController{
         if(array_key_exists("image", $formData)){
             $image= $formData["image"];
         }
+/*****************************************************/
+        if(array_key_exists("userId", $formData)){
+            $userId= $formData["userId"];
+        }
 
-        $registerResult= $this->eventsService->registerEvent($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $image);
+      
+
+        $registerResult= $this->eventsService->registerEvent($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $image, $userId);
 
         if(array_key_exists("error", $registerResult)) {
             $result["error"] = true;

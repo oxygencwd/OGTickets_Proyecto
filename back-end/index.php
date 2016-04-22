@@ -172,6 +172,7 @@ $app->get(
     }
 );
 
+
 //registerEvent
 $app->post(
     '/event/registerEvent',
@@ -223,6 +224,17 @@ $app->get(
     }
 );
 
+//site/registerSite
+$app->post(
+    '/sites/registerSite',
+    function ($request, $response) {
+        /** @var Request $request */
+        /** @var Response $response */
+        $sitesController= new App\Controllers\SitesController();
+        $result= $sitesController->registerSite($request);
+        return $response->withJson($result);
+    }
+);
 
 
 

@@ -1,38 +1,58 @@
 ---- 
-21/04/16 14:48:08 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 133
+21/04/16 18:55:13 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\EventsController.php: 59
+Array
+(
+    [eventType] => 2
+    [siteId] => 2
+    [name] => dsaa
+    [description] => hkhkjh
+    [date] => 2016-10-10 00:00:00
+    [startHour] => 10:00:00
+    [endHour] => 15:05:00
+    [ticketsPrice] => 200
+    [image] => 
+    [userId] => 3
+)
+---- 
+21/04/16 19:01:43 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\EventsController.php: 59
+Array
+(
+    [eventType] => 2
+    [siteId] => 2
+    [name] => dsaa
+    [description] => hkhkjh
+    [date] => 2016-10-10 00:00:00
+    [startHour] => 10:00:00
+    [endHour] => 15:05:00
+    [ticketsPrice] => 200
+    [image] => 
+    [userId] => 3
+)
+---- 
+21/04/16 19:36:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
 Array
 (
     [data] => Array
         (
             [0] => Array
                 (
-                    [idEvento] => 1
+                    [idUsuario] => 1
                     [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
                 )
 
         )
@@ -44,46 +64,30 @@ Array
 
 )
 ---- 
-21/04/16 14:51:17 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 133
+21/04/16 19:36:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+21/04/16 20:38:31 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 40
 Array
 (
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 1
-                    [0] => 1
-                    [Nombre] => Frankenstein
-                    [1] => Frankenstein
-                    [Descripcion] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [2] => Un monstruo llamado Frankenstein es creado con los últimos avances de la ciencia por el doctor Víctor Frankenstein, quien espantado por su fealdad, lo abandona y huye. En consecuencia al rechazo de su inventor, inicia un largo y heroíco proceso deaprendizaje hasta llegar a un lugar inexplorado para encontrarse así mismo.
-                    [FechaEvento] => 2016-04-27 00:00:00
-                    [3] => 2016-04-27 00:00:00
-                    [CapacidadPersonas] => 666
-                    [4] => 666
-                    [HoraInicio] => 13:00:00
-                    [5] => 13:00:00
-                    [HoraFinalizacion] => 14:00:00
-                    [6] => 14:00:00
-                    [CostoEntrada] => 7000
-                    [7] => 7000
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [8] => http://i1097.photobucket.com/albums/g342/David_Ness/frank_zpserboeh6d.jpeg
-                    [idTipoEvento] => 4
-                    [9] => 4
-                    [nombreTipoEvento] => Teatro
-                    [10] => Teatro
-                    [idsitio] => 2
-                    [11] => 2
-                    [nombreSitio] => Teatro Nacional
-                    [12] => Teatro Nacional
-                )
-
-        )
-
+    [name] => Teatro de la Danza
+    [phoneOne] => 84521365
+    [capacity] => 350
+    [latitude] => 9.54125
+    [longitude] => 9.32541
+    [address] => San Jose, antiguo cenac
+    [image] => 
+)
+---- 
+21/04/16 20:38:31 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 104
+Array
+(
+    [data] => 
     [meta] => Array
         (
+            [id] => 7
             [count] => 1
         )
 
