@@ -43,10 +43,18 @@ class EventsController{
         $id = $request->getAttribute("id", null);
         return $this->eventsService->getEventsByCategory($id);
     }
+
+
+    public function pruebas($request){
+        $id = $request->getAttribute("id", null);
+        return $this->eventsService->pruebas($id);
+    }
     
 	public function registerEvent($request){
-		$result = [];
-		$formData= $request->getParsedBody();
+		$result=[];
+        $formData= $request->getParsedBody();
+
+        LoggingService::logVariable($formData, __FILE__, __LINE__);
 
 		$eventType= null;
         $siteId= null;
@@ -58,8 +66,6 @@ class EventsController{
         $ticketsPrice= null;
         $image= null;
         $userId= null;
-
-        LoggingService::logVariable($formData, __FILE__, __LINE__);
 
         if(array_key_exists("eventType", $formData)){
             $eventType= $formData["eventType"];
@@ -96,7 +102,7 @@ class EventsController{
         if(array_key_exists("image", $formData)){
             $image= $formData["image"];
         }
-/*****************************************************/
+
         if(array_key_exists("userId", $formData)){
             $userId= $formData["userId"];
         }

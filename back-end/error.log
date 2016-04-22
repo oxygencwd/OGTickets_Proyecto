@@ -1,58 +1,36 @@
 ---- 
-21/04/16 18:55:13 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\EventsController.php: 59
+22/04/16 00:37:35 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\EventsController.php: 57
 Array
 (
     [eventType] => 2
-    [siteId] => 2
-    [name] => dsaa
-    [description] => hkhkjh
-    [date] => 2016-10-10 00:00:00
-    [startHour] => 10:00:00
-    [endHour] => 15:05:00
-    [ticketsPrice] => 200
+    [siteId] => 7
+    [name] => Danza de la compa
+    [description] => Gira anual de la compañia nacional de danza
+    [date] => 2016-06-10 00:00:00
+    [startHour] => 20:00:00
+    [endHour] => 22:00:00
+    [ticketsPrice] => 4000
     [image] => 
-    [userId] => 3
+    [userId] => 1
 )
 ---- 
-21/04/16 19:01:43 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\EventsController.php: 59
-Array
-(
-    [eventType] => 2
-    [siteId] => 2
-    [name] => dsaa
-    [description] => hkhkjh
-    [date] => 2016-10-10 00:00:00
-    [startHour] => 10:00:00
-    [endHour] => 15:05:00
-    [ticketsPrice] => 200
-    [image] => 
-    [userId] => 3
-)
----- 
-21/04/16 19:36:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+22/04/16 00:37:35 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 258
+20:00:00---- 
+22/04/16 00:37:35 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 259
+22:00:00---- 
+22/04/16 00:37:35 
+: 
 Array
 (
     [data] => Array
         (
             [0] => Array
                 (
-                    [idUsuario] => 1
-                    [0] => 1
-                    [PrimerNombre] => oxyGen
-                    [1] => oxyGen
-                    [SegundoNombre] => 
-                    [2] => 
-                    [PrimerApellido] => CWD
-                    [3] => CWD
-                    [SegundoApellido] => 
-                    [4] => 
-                    [TbTipoUsuario_idTipoUsuario] => 1
-                    [5] => 1
-                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
-                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [Capacidad] => 350
+                    [0] => 350
                 )
 
         )
@@ -64,61 +42,14 @@ Array
 
 )
 ---- 
-21/04/16 19:36:19 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
-admin---- 
-21/04/16 20:38:31 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 40
-Array
-(
-    [name] => Teatro de la Danza
-    [phoneOne] => 84521365
-    [capacity] => 350
-    [latitude] => 9.54125
-    [longitude] => 9.32541
-    [address] => San Jose, antiguo cenac
-    [image] => 
-)
----- 
-21/04/16 20:38:31 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 104
+22/04/16 00:37:35 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 367
 Array
 (
     [data] => 
     [meta] => Array
         (
-            [id] => 7
-            [count] => 1
-        )
-
-)
----- 
-21/04/16 22:19:02 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 127
-Array
-(
-    [data] => Array
-        (
-            [0] => Array
-                (
-                    [idEvento] => 7
-                    [0] => 7
-                    [Nombre] => La Fiesta de el Cabo
-                    [1] => La Fiesta de el Cabo
-                    [FechaEvento] => 2016-05-14 00:00:00
-                    [2] => 2016-05-14 00:00:00
-                    [HoraInicio] => 19:00:00
-                    [3] => 19:00:00
-                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/elcabo_zpscaol4yak.jpg
-                    [4] => http://i1097.photobucket.com/albums/g342/David_Ness/elcabo_zpscaol4yak.jpg
-                    [idtipoEvento] => 2
-                    [5] => 2
-                )
-
-        )
-
-    [meta] => Array
-        (
+            [id] => 13
             [count] => 1
         )
 
@@ -255,6 +186,7 @@ admin----
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
 =======
 ---- 
+<<<<<<< HEAD
 21/04/16 22:19:17 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 127
 >>>>>>> 05557f6fbf5bed8e0b66474c422c97371241634f
@@ -3417,6 +3349,16 @@ Array
 =======
             [count] => 5
 >>>>>>> 05557f6fbf5bed8e0b66474c422c97371241634f
+=======
+22/04/16 00:37:35 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 379
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 13
+>>>>>>> ce75b4f2f94e0605b095988b540beb08595722cd
         )
 
 )

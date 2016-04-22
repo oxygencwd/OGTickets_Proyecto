@@ -3,11 +3,22 @@ angular.module('OGTicketsApp.controllers')
 	/*displat events, serch bar*/
 
 	$scope.init = function (){
-		eventsByType();
-		getEventType();
-		getActiveEvents();
+		//eventsByType();
+		//getEventType();
+		//getActiveEvents();
+		//
+		var categoryId = $routeParams.categoryId;
+		isCategory(categoryId);
 	}
 
+
+	var isCategory= function(categoryId) {
+		if(categoryId){
+			eventsByType(categoryId);
+		}else{
+			getActiveEvents();
+		}
+	}
 
 
 	var getActiveEvents = function (){
@@ -29,7 +40,7 @@ angular.module('OGTicketsApp.controllers')
 		})
 	};
 
-	var eventsByType = function (){
+	var eventsByType = function (categoryId){
 		eventService.eventsByType($scope.categoryId);
 		// promise.then(function(data){
 		// 	var eventListByType = data.data;
@@ -41,12 +52,12 @@ angular.module('OGTicketsApp.controllers')
 
 	var getEventType = function (){
 		var promise = eventService.getEventType($scope.categoryId);
-		promise.then(function (data){
-			var category = data.data;
-		})
-		.catch(function(error){
-			console.log(error);
-		})
+		// promise.then(function (data){
+		// 	var category = data.data;
+		// })
+		// .catch(function(error){
+		// 	console.log(error);
+		// })
 	};
 
 	$scope.init();
