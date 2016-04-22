@@ -32,11 +32,12 @@ angular.module('OGTicketsApp.services')
 
 		$http.post(url, user)
 		.success(function(data, status) {
-		defer.resolve(data);
+			console.info(data);
+			defer.resolve(data);
 		})
 		.error(function(error, status) {
-		defer.reject(error);
-		$log.error(error, status);
+			defer.reject(error);
+			$log.error(error, status);
 		});
 
 		return defer.promise;
@@ -45,7 +46,17 @@ angular.module('OGTicketsApp.services')
 
 	//Coloca el nombre, id y tipo de usuario en un cookie, asi como en la variable del $scope global de la app appLoggedUser para que estos datos esten disponibles en toda la app.
 	var login= function (appLoggedUser, objUsr) {
+		appLoggedUser.firstName= objUsr.firstName;
+		appLoggedUser.secondName= objUsr.secondName;
+		appLoggedUser.lastName= objUsr.lastName;
+		appLoggedUser.secondLastName= objUsr.secondLastName;
+		appLoggedUser.navBarName= parseName(objUsr);
+		appLoggedUser.userId= objUsr.userId;
+		appLoggedUser.userType= objUsr.userType;
+		appLoggedUser.isConnected= true;
+
 		var usr= {};
+<<<<<<< HEAD
 		// usr.name= parseName(objUsr);
 		// usr.userId= objUsr.userId;
 		// usr.userType= objUsr.userType;
@@ -59,6 +70,16 @@ angular.module('OGTicketsApp.services')
   //     	$cookieStore.put('loggedUser', usr);
 
   //     	localStorageService.set('loggedUser', usr);
+=======
+		usr.userId= objUsr.userId;
+		usr.userType= objUsr.userType;
+		usr.navBarName= parseName(objUsr);
+		
+		$cookieStore.put('isConnected', true);
+      	$cookieStore.put('loggedUser', usr);
+
+		localStorageService.set('loggedUser', objUsr);
+>>>>>>> e94caf05564c90bdff8fe81e5bf0f94df0bd559d
 	};
 
 	
@@ -84,33 +105,51 @@ angular.module('OGTicketsApp.services')
 
 	//deslogea al usuario.
 	var logout= function (appLoggedUser) {
-		appLoggedUser.name ="";
-		appLoggedUser.id ="";
-		appLoggedUser.userType ="";
-		appLoggedUser.isConnected =false;
+		appLoggedUser.firstName= "";
+		appLoggedUser.secondName= "";
+		appLoggedUser.lastName= "";
+		appLoggedUser.secondLastName= "";
+		appLoggedUser.userId= "";
+		appLoggedUser.userType= "";
+		appLoggedUser.isConnected= false;
 
 		$cookieStore.remove('isConnected');
 		$cookieStore.remove('loggedUser');
 
+		localStorageService.remove('loggedUser');
 
-
+		backLogout();
 	};//end -logout
+
+	var backLogout= function() {
+		var defer= $q.defer();
+		var url= 'back-end/index.php/user/logout';
+		$http.get(url)
+		.success(function(data) {
+			defer.resolve(data);
+		})
+		.error(function(error, status) {
+			defer.reject(error);
+			$log.error(error, status);
+		});
+		return defer.promise;
+	}
 
 	//verifica al refrascar la pagina si hay un cookie guardado con un usuario, si es asi lo loggea, mantiene la persisitencia del usuario loggeado.
 	var isLoggedIn= function () {
 		//cUser= $cookieStore.get('loggedUser');
 		cUser= localStorageService.getAll("loggedUser");
-		if(cUser !== undefined){
+		if(cUser){
 			return true
-			//login(appLoggedUser, cUser);
 		}else{
 			return false;
 		}
 	};
 
-	//devuelve el usuario loggeado desde la cookie almacenada. Devuelve solo el id, el userType y el nombre.
+	//devuelve el usuario loggeado 
 	var getLoggedUser= function () {
-		var cUser= localStorageService.getAll('loggedUser');
+		//var cUser= localStorageService.getAll('loggedUser');
+		var cUser= $cookieStore.get("loggedUser");
 		if(cUser){
 			return cUser;
 		}else{

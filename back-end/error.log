@@ -1,36 +1,54 @@
 ---- 
-22/04/16 01:43:54 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\controllers\EventsController.php: 57
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
+ut03---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 548
 Array
 (
-    [eventType] => 5
-    [siteId] => 4
-    [name] => Hippy Flower
-    [description] => De vuleta a las raices
-    [date] => 2016-06-10 00:00:00
-    [startHour] => 10:00:00
-    [endHour] => 20:00:00
-    [ticketsPrice] => 3000
-    [image] => 
-    [userId] => 1
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 26
+        )
+
 )
 ---- 
-22/04/16 01:43:54 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 258
-10:00:00---- 
-22/04/16 01:43:54 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 259
-20:00:00---- 
-22/04/16 01:43:54 
-: 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 348
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 26
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 448
+3---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 462
 Array
 (
     [data] => Array
         (
             [0] => Array
                 (
-                    [Capacidad] => 674
-                    [0] => 674
+                    [idPromotor] => 1
+                    [0] => 1
                 )
 
         )
@@ -42,14 +60,187 @@ Array
 
 )
 ---- 
-22/04/16 01:43:54 
-C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 367
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 467
+1---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 431
 Array
 (
     [data] => 
     [meta] => Array
         (
-            [id] => 18
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 13:50:19 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 352
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+22/04/16 13:50:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 3
+                    [0] => 3
+                    [PrimerNombre] => Ariana
+                    [1] => Ariana
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Aguilar
+                    [3] => Aguilar
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 3
+                    [5] => 3
+                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 13:50:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+123---- 
+22/04/16 13:51:17 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
+ut03---- 
+22/04/16 13:51:17 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 548
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 27
+        )
+
+)
+---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 348
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 27
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 448
+3---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 462
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idPromotor] => 1
+                    [0] => 1
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 467
+1---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 431
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 13:51:18 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 352
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+22/04/16 13:51:35 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
             [count] => 1
         )
 
@@ -57,6 +248,7 @@ Array
 <<<<<<< HEAD
 <<<<<<< HEAD
 ---- 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 21/04/16 01:58:47 
@@ -3632,3 +3824,11 @@ Array
         )
 
 )
+=======
+22/04/16 13:51:35 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+22/04/16 13:52:10 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 297
+ut01
+>>>>>>> e94caf05564c90bdff8fe81e5bf0f94df0bd559d
