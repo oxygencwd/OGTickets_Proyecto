@@ -186,19 +186,17 @@ $app->post(
 );
 
 
-
+//getTodayEvents
 $app->get(
-    '/event/pruebas/{id}',
+    '/events/getTodayEvents',
     function($request, $response){
         /** @var Request $request */
         /** @var Response $response */
         $eventsController= new App\Controllers\EventsController();
-        $result= $eventsController->pruebas($request);
+        $result= $eventsController->getTodayEvents($request);
         return $response->withJson($result);
     }
 );
-
-
 
 
 //events/getAllActiveEvents
@@ -212,6 +210,7 @@ $app->get(
         return $response->withJson($result);
     }
 );
+
 
 //getEventsByCategory/' + eventType;
 $app->get(

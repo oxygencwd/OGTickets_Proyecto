@@ -32,6 +32,10 @@ class EventsController{
         return $this->eventsService->getAllActiveEvents();
     }
 
+    public function getTodayEvents(){
+        return $this->eventsService->getTodayEvents();
+    }
+
     public function getEventById($request) {
         /** @var Request $request */
         $id = $request->getAttribute("id", null);
@@ -54,8 +58,6 @@ class EventsController{
 		$result=[];
         $formData= $request->getParsedBody();
 
-        LoggingService::logVariable($formData, __FILE__, __LINE__);
-
 		$eventType= null;
         $siteId= null;
         $name= null;
@@ -66,6 +68,7 @@ class EventsController{
         $ticketsPrice= null;
         $image= null;
         $userId= null;
+        $userType= null;
 
         if(array_key_exists("eventType", $formData)){
             $eventType= $formData["eventType"];
@@ -107,9 +110,13 @@ class EventsController{
             $userId= $formData["userId"];
         }
 
+        if(array_key_exists("userType", $formData)){
+            $userType= $formData["userType"];
+        }
+
       
 
-        $registerResult= $this->eventsService->registerEvent($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $image, $userId);
+        $registerResult= $this->eventsService->registerEvent($eventType, $siteId, $name, $description, $date, $startHour, $endHour, $ticketsPrice, $image, $userId, $userType);
 
         if(array_key_exists("error", $registerResult)) {
             $result["error"] = true;
