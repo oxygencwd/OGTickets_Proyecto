@@ -127,8 +127,7 @@
 		            	<label>Subir fotografía</label>
 
 		            
-
-		            	<input filepicker type="filepicker" data-fp-apikey="AP3Zl3E3sQxCSkz8zv0TAz" data-fp-container="modal" data-fp-mimetype="image/*" data-fp-maxsize="2097152" data-fp-services="COMPUTER,FACEBOOK,INSTAGRAM,URL" data-fp-button-class="fp__btn" data-fp-services="{{services}}" on-success="savePicture(event.fpfile.url)"/>
+		            		<input filepicker type="filepicker" ng-disabled="formNewClient.$invalid" data-fp-apikey="AP3Zl3E3sQxCSkz8zv0TAz" data-fp-container="modal" data-fp-mimetype="image/*" data-fp-maxsize="2097152" data-fp-services="COMPUTER,FACEBOOK,INSTAGRAM,URL" data-fp-button-class="fp__btn" data-fp-services="{{services}}" on-success="savePicture(event.fpfile.url)"/>
 
 
 
