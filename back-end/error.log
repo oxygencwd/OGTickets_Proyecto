@@ -3368,3 +3368,267 @@ Array
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 377
 18
 >>>>>>> b83d94ed77bfa4f8861c1a36ba0b31343ecd09c5
+---- 
+22/04/16 02:37:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 02:37:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+22/04/16 02:37:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 02:37:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+22/04/16 02:40:48 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 02:40:48 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+22/04/16 02:42:48 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 40
+Array
+(
+    [name] => asd
+    [phoneOne] => 12321322
+    [capacity] => 2332
+    [longitude] => 123
+    [latitude] => 21
+    [address] => 123213
+    [image] => 
+)
+---- 
+22/04/16 02:42:49 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 104
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 02:44:57 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 40
+Array
+(
+    [name] => sdaad
+    [phoneOne] => 21322323
+    [capacity] => 1231
+    [latitude] => 12
+    [longitude] => 21
+    [address] => 213
+    [image] => 
+)
+---- 
+22/04/16 02:44:57 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 104
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 02:45:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 40
+Array
+(
+    [name] => sad
+    [phoneOne] => 23123211
+    [capacity] => 321
+    [latitude] => 12
+    [longitude] => 12
+    [address] => 213
+    [image] => 
+)
+---- 
+22/04/16 02:45:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 104
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 9
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 02:50:24 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 40
+Array
+(
+    [name] => asd
+    [phoneOne] => 12313123
+    [capacity] => 213
+    [latitude] => 12
+    [longitude] => 23
+    [address] => 231
+    [image] => 
+)
+---- 
+22/04/16 02:50:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 104
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 10
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 02:51:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 40
+Array
+(
+    [name] => ads
+    [phoneOne] => 21321312
+    [capacity] => 213
+    [latitude] => 12
+    [longitude] => 12
+    [address] => 213
+    [image] => 
+)
+---- 
+22/04/16 02:51:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 104
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 11
+            [count] => 1
+        )
+
+)
+---- 
+22/04/16 02:53:07 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 40
+Array
+(
+    [name] => asd
+    [phoneOne] => 21312312
+    [capacity] => 12
+    [latitude] => 12
+    [longitude] => 12
+    [address] => 213
+    [image] => 
+)
+---- 
+22/04/16 02:53:07 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 104
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 12
+            [count] => 1
+        )
+
+)
