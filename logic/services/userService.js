@@ -46,19 +46,19 @@ angular.module('OGTicketsApp.services')
 	//Coloca el nombre, id y tipo de usuario en un cookie, asi como en la variable del $scope global de la app appLoggedUser para que estos datos esten disponibles en toda la app.
 	var login= function (appLoggedUser, objUsr) {
 		var usr= {};
-		usr.name= parseName(objUsr);
-		usr.userId= objUsr.userId;
-		usr.userType= objUsr.userType;
+		// usr.name= parseName(objUsr);
+		// usr.userId= objUsr.userId;
+		// usr.userType= objUsr.userType;
 
-		appLoggedUser.name= usr.name;
-		appLoggedUser.userId= usr.userId;
-		appLoggedUser.userType= usr.userType;
-		appLoggedUser.isConnected= true;
+		// appLoggedUser.name= usr.name;
+		// appLoggedUser.userId= usr.userId;
+		// appLoggedUser.userType= usr.userType;
+		// appLoggedUser.isConnected= true;
 
-		$cookieStore.put('isConnected', true);
-      	$cookieStore.put('loggedUser', usr);
+		// $cookieStore.put('isConnected', true);
+  //     	$cookieStore.put('loggedUser', usr);
 
-      	localStorageService.set('loggedUser', usr);
+  //     	localStorageService.set('loggedUser', usr);
 	};
 
 	

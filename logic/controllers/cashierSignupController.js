@@ -49,7 +49,7 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 	$scope.goHome= function() {
-		$window.location.href = ('#/home');
+		$window.location.href = ('#/admin');
 	}
 
 }]);

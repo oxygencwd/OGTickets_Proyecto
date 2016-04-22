@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('siteRegistrationController', ['$scope','localStorageService','formService','siteService', '$window','$routeParams', function ($scope,localStorageService, formService, siteService, $window,$routeParams) {
+.controller('siteRegistrationController', ['$scope','localStorageService','formService','siteService', '$window','$routeParams','$timeout', function ($scope,localStorageService, formService, siteService, $window,$routeParams,$timeout) {
 
 	$scope.newSite={};
 	$scope.error="";
@@ -18,13 +18,10 @@ angular.module('OGTicketsApp.controllers')
 			if(data.valid){
 				$scope.newSite={};
 				formService.clear($scope.formNewSite);
-				$scope.success= "Sitio creado con éxito";
-				$scope.openModal("#siteRegSuccessModal");
 				$timeout(function() {
-					$scope.closeModal("#siteRegSuccessModal");
-					$window.location.href = ('#/site-profile/'+siteId);
+					$scope.openModal("#siteRegSuccessModal");
 					$scope.error="";
-					$scope.success="";
+					$scope.success= "Sitio creado con éxito";
 				}, 1500);	
 			}else{
 				$scope.error="Ya existe un sitio con ese nombre";
@@ -68,6 +65,10 @@ angular.module('OGTicketsApp.controllers')
 	$scope.openModal= function (modalId) { 
 	  $(modalId).modal('show');
 	};
+
+	$scope.goProfile= function() {
+		$window.location.href = ('#/site-profile/');
+	}
 
 	//Expresiones regulares, para validad campos de formulario
 	$scope.expCapacity = /^[\ |0-9]{1,5}$/;
