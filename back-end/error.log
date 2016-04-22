@@ -92,3 +92,129 @@ Array
         )
 
 )
+---- 
+21/04/16 22:19:02 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 127
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idEvento] => 7
+                    [0] => 7
+                    [Nombre] => La Fiesta de el Cabo
+                    [1] => La Fiesta de el Cabo
+                    [FechaEvento] => 2016-05-14 00:00:00
+                    [2] => 2016-05-14 00:00:00
+                    [HoraInicio] => 19:00:00
+                    [3] => 19:00:00
+                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/elcabo_zpscaol4yak.jpg
+                    [4] => http://i1097.photobucket.com/albums/g342/David_Ness/elcabo_zpscaol4yak.jpg
+                    [idtipoEvento] => 2
+                    [5] => 2
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 22:19:17 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 127
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idEvento] => 2
+                    [0] => 2
+                    [Nombre] => Día Internacional del Jazz con Túpac Amarulloa
+                    [1] => Día Internacional del Jazz con Túpac Amarulloa
+                    [FechaEvento] => 2016-04-30 00:00:00
+                    [2] => 2016-04-30 00:00:00
+                    [HoraInicio] => 20:00:00
+                    [3] => 20:00:00
+                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/jazz_zpssmxanwpj.jpg
+                    [4] => http://i1097.photobucket.com/albums/g342/David_Ness/jazz_zpssmxanwpj.jpg
+                    [idtipoEvento] => 1
+                    [5] => 1
+                )
+
+            [1] => Array
+                (
+                    [idEvento] => 5
+                    [0] => 5
+                    [Nombre] => Tributo a Queen
+                    [1] => Tributo a Queen
+                    [FechaEvento] => 2016-05-14 00:00:00
+                    [2] => 2016-05-14 00:00:00
+                    [HoraInicio] => 20:00:00
+                    [3] => 20:00:00
+                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/queen_zpscyvusx6v.jpg
+                    [4] => http://i1097.photobucket.com/albums/g342/David_Ness/queen_zpscyvusx6v.jpg
+                    [idtipoEvento] => 1
+                    [5] => 1
+                )
+
+            [2] => Array
+                (
+                    [idEvento] => 6
+                    [0] => 6
+                    [Nombre] => Jesús Adrián Romero y Marcos Witt
+                    [1] => Jesús Adrián Romero y Marcos Witt
+                    [FechaEvento] => 2016-06-24 00:00:00
+                    [2] => 2016-06-24 00:00:00
+                    [HoraInicio] => 18:00:00
+                    [3] => 18:00:00
+                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/jesusmarco_zpsdla5y27o.jpg
+                    [4] => http://i1097.photobucket.com/albums/g342/David_Ness/jesusmarco_zpsdla5y27o.jpg
+                    [idtipoEvento] => 1
+                    [5] => 1
+                )
+
+            [3] => Array
+                (
+                    [idEvento] => 8
+                    [0] => 8
+                    [Nombre] => Cigala Intimo
+                    [1] => Cigala Intimo
+                    [FechaEvento] => 2016-04-29 00:00:00
+                    [2] => 2016-04-29 00:00:00
+                    [HoraInicio] => 20:00:00
+                    [3] => 20:00:00
+                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
+                    [4] => http://i1097.photobucket.com/albums/g342/David_Ness/cigala_zpsdzlgzxwi.jpg
+                    [idtipoEvento] => 1
+                    [5] => 1
+                )
+
+            [4] => Array
+                (
+                    [idEvento] => 11
+                    [0] => 11
+                    [Nombre] => Ichiro Mizuki en Costa Rica
+                    [1] => Ichiro Mizuki en Costa Rica
+                    [FechaEvento] => 2016-04-29 00:00:00
+                    [2] => 2016-04-29 00:00:00
+                    [HoraInicio] => 16:00:00
+                    [3] => 16:00:00
+                    [Foto] => http://i1097.photobucket.com/albums/g342/David_Ness/ichiro_zpspg4lfgg8.jpg
+                    [4] => http://i1097.photobucket.com/albums/g342/David_Ness/ichiro_zpspg4lfgg8.jpg
+                    [idtipoEvento] => 1
+                    [5] => 1
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 5
+        )
+
+)

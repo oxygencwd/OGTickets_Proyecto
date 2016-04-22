@@ -101,6 +101,71 @@ class EventsService {
 
 
 
+    //getEventsByCategory($id)
+    /**
+     * devulve una lista de evento por categoria
+     */
+    public function getEventsByCategory($id){
+        $result=[];
+        $id= trim($id);
+
+        if($this->validation->isValidInt($id)){//1
+            $query=" SELECT idEvento, Nombre, FechaEvento, HoraInicio, Foto, TbTipoEvento_idTipoEvento as idtipoEvento
+                FROM tbevento
+                WHERE Activo=1
+                AND TbTipoEvento_idTipoEvento= :id
+                AND FechaEvento > NOW()";
+
+            // Query params
+            $params = [":id" => $id];
+
+            $getEventResult = $this->storage->query($query, $params);
+
+            $foundRecord = array_key_exists("meta", $getEventResult) &&
+                $getEventResult["meta"]["count"] > 0;
+
+                LoggingService::logVariable($getEventResult, __FILE__, __LINE__);
+
+            if ($foundRecord) {
+                $result["message"] = "Event found";
+                $eventList = $getEventResult["data"];
+
+                foreach ($eventList as $event) {
+                    $result["data"][] = [
+                        "id" => $event["idEvento"],
+                        "name" => $event["Nombre"],
+                        "description" => $event["Descripcion"],
+                        "date" => $event["FechaEvento"],
+                        "capacity" => $event["CapacidadPersonas"],
+                        "startHour" => $event["HoraInicio"],
+                        "endHour" => $event["HoraFinalizacion"],
+                        "ticketsPrice" => $event["CostoEntrada"],
+                        "image" => $event["Foto"],
+                        "eventTypeId" => $event["idTipoEvento"],
+                        "eventTypeName" => $event["nombreTipoEvento"],
+                        "siteId" => $event["idsitio"],
+                        "siteName" => $event["nombreSitio"]
+                    ];
+                } 
+
+            } else {
+                $result["message"] = "Event not found";
+                $result["error"] = true;
+            }
+
+
+
+        }else{//1
+            $result["error"] = true;
+            $result["message"] = "Id is invalid";
+        }
+ 
+
+        return $result;
+    }//end -getEventsByCategory-
+
+
+
     /**
      * getEventById
      */
