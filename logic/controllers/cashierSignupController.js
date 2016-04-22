@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('cashierSignupController', ['$scope','formService','cashierService', '$window', '$location', function ($scope, formService, cashierService, $window, $location) {
+.controller('cashierSignupController', ['$scope','formService','cashierService', '$window', '$location','dateService', function ($scope, formService, cashierService, $window, $location, dateService) {
 
 	$scope.newCashier={};
 		/*
@@ -31,14 +31,11 @@ angular.module('OGTicketsApp.controllers')
 			if(data.valid){
 				$scope.newCashier={};
 				formService.clear($scope.formNewCashier);
-				
 				$scope.showPass= password;
 				$scope.openModal("#cashierRegSuccessModal");
 				$scope.success= "Cajero creado con éxito";
 				$scope.error="";
 			}
-
-			$scope.goHome();
 
 		})
 		.catch(function(error) {
@@ -52,7 +49,7 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 	$scope.goHome= function() {
-		$location.path('/admin');
+		$window.location.href = ('#/home');
 	}
 
 }]);

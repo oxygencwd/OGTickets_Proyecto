@@ -289,3 +289,3010 @@ C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin
 =======
 >>>>>>> c757a7947f61ccf559ec1408d8604af05d0460e3
+---- 
+21/04/16 19:06:54 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 30
+Array
+(
+    [dateBirth] => 2001-04-09 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+21/04/16 19:06:54 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sdas
+    [secondname] => a
+    [firstlastname] => asd
+    [secondlastname] => asd
+    [personalId] => 122312322
+    [email] => asd@xas.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+21/04/16 19:06:54 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:06:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 5
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:06:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 5
+        )
+
+)
+---- 
+21/04/16 19:06:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 69
+Array
+(
+    [dateBirth] => 2001-04-09 00:00:00
+    [phone] => 22222222
+    [genre] => m
+    [picture] => 
+)
+---- 
+21/04/16 19:06:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 88
+5---- 
+21/04/16 19:06:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 99
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 2
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:06:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 115
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 2
+        )
+
+)
+---- 
+21/04/16 19:07:44 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 5
+                    [0] => 5
+                    [PrimerNombre] => sdas
+                    [1] => sdas
+                    [SegundoNombre] => a
+                    [2] => a
+                    [PrimerApellido] => asd
+                    [3] => asd
+                    [SegundoApellido] => asd
+                    [4] => asd
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$gg2qRGz5zKNXzFapGwrZnOm8vt.GWWgsawiY6QxNUPTwdYelI41NW
+                    [6] => $2y$10$gg2qRGz5zKNXzFapGwrZnOm8vt.GWWgsawiY6QxNUPTwdYelI41NW
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:07:44 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+123---- 
+21/04/16 19:08:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => asd
+    [legalId] => 2132132131
+    [email] => as@sdx.com
+    [specializationArea] => sad
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 12322323
+    [address] => asdads
+)
+---- 
+21/04/16 19:08:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 269
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:08:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 286
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:08:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 150
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 9
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:09:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaFisica
+    [firstname] => 213
+    [secondname] => 213
+    [firstlastname] => 123
+    [secondlastname] => 123
+    [personalId] => 1232312312
+    [email] => as@sx.somc
+    [specializationArea] => 213
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 22323221
+    [address] => waads
+    [genre] => m
+)
+---- 
+21/04/16 19:09:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 269
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:09:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 286
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:09:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 173
+INSERT INTO tbsolicitudregistropromotor (PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Cedula, Email, password, AreaEspecializacion, PrimerTelefono, Ubicacion) VALUES (:firstname, :secondname, :firstlastname, :secondlastname, :personalId, :email, :password, :specializationArea, :phone, :address)---- 
+21/04/16 19:09:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 188
+Array
+(
+    [:firstname] => 213
+    [:secondname] => 213
+    [:firstlastname] => 123
+    [:secondlastname] => 123
+    [:personalId] => 1232312312
+    [:email] => as@sx.somc
+    [:password] => 123
+    [:specializationArea] => 213
+    [:phone] => 22323221
+    [:address] => waads
+)
+---- 
+21/04/16 19:09:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 191
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 10
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:09:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:09:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+21/04/16 19:11:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:11:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
+admin---- 
+21/04/16 19:13:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-18 00:00:00
+    [phone] => 23222322
+    [genre] => m
+)
+---- 
+21/04/16 19:13:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asdsad
+    [secondname] => saasdasdas
+    [firstlastname] => sadasdadasdsa
+    [secondlastname] => sadsadsadsa
+    [personalId] => 23131232142
+    [email] => 23232@Afd.com
+    [password] => Euq8R
+    [repeatPass] => Euq8R
+    [userType] => 4
+)
+---- 
+21/04/16 19:13:41 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:13:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 6
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:13:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 6
+        )
+
+)
+---- 
+21/04/16 19:13:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-18 00:00:00
+    [phone] => 23222322
+    [genre] => m
+)
+---- 
+21/04/16 19:13:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+6---- 
+21/04/16 19:13:42 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 2
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:13:42 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 2
+        )
+
+)
+---- 
+21/04/16 19:20:57 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1992-02-23 00:00:00
+    [phone] => 23122231
+    [genre] => m
+)
+---- 
+21/04/16 19:20:57 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => 213ASD
+    [firstlastname] => 23123
+    [personalId] => 213213213
+    [email] => ASD@asd.com
+    [password] => moZ9Y
+    [repeatPass] => moZ9Y
+    [userType] => 4
+)
+---- 
+21/04/16 19:20:57 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:20:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:20:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 7
+        )
+
+)
+---- 
+21/04/16 19:20:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1992-02-23 00:00:00
+    [phone] => 23122231
+    [genre] => m
+)
+---- 
+21/04/16 19:20:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+7---- 
+21/04/16 19:20:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 3
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:20:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 3
+        )
+
+)
+---- 
+21/04/16 19:22:01 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1992-02-22 00:00:00
+    [phone] => 23232323
+    [genre] => m
+)
+---- 
+21/04/16 19:22:01 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [secondname] => asd
+    [firstlastname] => sad
+    [secondlastname] => sad
+    [personalId] => 213123121
+    [email] => ASD@xsao.com
+    [password] => FFcup
+    [repeatPass] => FFcup
+    [userType] => 4
+)
+---- 
+21/04/16 19:22:01 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:22:01 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:22:01 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 8
+        )
+
+)
+---- 
+21/04/16 19:22:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1992-02-22 00:00:00
+    [phone] => 23232323
+    [genre] => m
+)
+---- 
+21/04/16 19:22:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+8---- 
+21/04/16 19:22:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 4
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:22:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 4
+        )
+
+)
+---- 
+21/04/16 19:23:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-03-30 00:00:00
+    [phone] => 21321321
+    [genre] => m
+)
+---- 
+21/04/16 19:23:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asd
+    [personalId] => 213123222
+    [email] => asdas@co.com
+    [password] => Aeva4
+    [repeatPass] => Aeva4
+    [userType] => 4
+)
+---- 
+21/04/16 19:23:55 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:23:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 9
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:23:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 9
+        )
+
+)
+---- 
+21/04/16 19:23:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-03-30 00:00:00
+    [phone] => 21321321
+    [genre] => m
+)
+---- 
+21/04/16 19:23:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+9---- 
+21/04/16 19:23:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 5
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 19:23:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 5
+        )
+
+)
+---- 
+21/04/16 22:15:50 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-02 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+21/04/16 22:15:50 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sdsa
+    [firstlastname] => asdas
+    [personalId] => 2323223323
+    [email] => sadsa@xas.xom
+    [password] => VKtgn
+    [repeatPass] => VKtgn
+    [userType] => 4
+)
+---- 
+21/04/16 22:15:50 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 22:15:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 10
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 22:15:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 10
+        )
+
+)
+---- 
+21/04/16 22:15:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-02 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+21/04/16 22:15:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+10---- 
+21/04/16 22:15:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 6
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 22:15:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 6
+        )
+
+)
+---- 
+21/04/16 23:04:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-08 00:00:00
+    [phone] => 23123232
+    [genre] => m
+)
+---- 
+21/04/16 23:04:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asd
+    [personalId] => 12131232132131
+    [email] => asd@xas.com
+    [password] => El0vv
+    [repeatPass] => El0vv
+    [userType] => 4
+)
+---- 
+21/04/16 23:04:55 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 1
+                    [0] => 1
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:04:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [error] => 1
+    [message] => Email is unavailable
+)
+---- 
+21/04/16 23:05:11 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-08 00:00:00
+    [phone] => 23123232
+    [genre] => m
+)
+---- 
+21/04/16 23:05:11 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asd
+    [personalId] => 12131232132131
+    [email] => asd@htas.com
+    [password] => yGhH4
+    [repeatPass] => yGhH4
+    [userType] => 4
+)
+---- 
+21/04/16 23:05:11 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:05:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 11
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:05:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 11
+        )
+
+)
+---- 
+21/04/16 23:05:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-08 00:00:00
+    [phone] => 23123232
+    [genre] => m
+)
+---- 
+21/04/16 23:05:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+11---- 
+21/04/16 23:05:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:05:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 7
+        )
+
+)
+---- 
+21/04/16 23:07:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-15 00:00:00
+    [phone] => 21312332
+    [genre] => m
+)
+---- 
+21/04/16 23:07:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => dasd
+    [personalId] => 213213123213
+    [email] => 2321@xa.com
+    [password] => 00Wph
+    [repeatPass] => 00Wph
+    [userType] => 4
+)
+---- 
+21/04/16 23:07:06 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:07:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 12
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:07:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 12
+        )
+
+)
+---- 
+21/04/16 23:07:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-15 00:00:00
+    [phone] => 21312332
+    [genre] => m
+)
+---- 
+21/04/16 23:07:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+12---- 
+21/04/16 23:07:07 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:07:07 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 8
+        )
+
+)
+---- 
+21/04/16 23:08:20 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-06 00:00:00
+    [phone] => 12222321
+    [genre] => m
+)
+---- 
+21/04/16 23:08:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asdsa
+    [firstlastname] => asdasd
+    [personalId] => 21312321312
+    [email] => ads@xo.com
+    [password] => O2XIp
+    [repeatPass] => O2XIp
+    [userType] => 4
+)
+---- 
+21/04/16 23:08:21 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:08:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 13
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:08:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 13
+        )
+
+)
+---- 
+21/04/16 23:08:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-06 00:00:00
+    [phone] => 12222321
+    [genre] => m
+)
+---- 
+21/04/16 23:08:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+13---- 
+21/04/16 23:08:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 9
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:08:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 9
+        )
+
+)
+---- 
+21/04/16 23:09:54 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-03-31 00:00:00
+    [phone] => 13232322
+    [genre] => m
+)
+---- 
+21/04/16 23:09:54 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asd
+    [personalId] => 2133213213
+    [email] => 232@sad.com
+    [password] => 9UifQ
+    [repeatPass] => 9UifQ
+    [userType] => 4
+)
+---- 
+21/04/16 23:09:54 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:09:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 14
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:09:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 14
+        )
+
+)
+---- 
+21/04/16 23:09:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-03-31 00:00:00
+    [phone] => 13232322
+    [genre] => m
+)
+---- 
+21/04/16 23:09:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+14---- 
+21/04/16 23:09:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 10
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:09:55 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 10
+        )
+
+)
+---- 
+21/04/16 23:10:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-06 00:00:00
+    [phone] => 23222212
+    [genre] => m
+)
+---- 
+21/04/16 23:10:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sd
+    [firstlastname] => asd
+    [personalId] => 21321321321
+    [email] => ass@com.com
+    [password] => v7akL
+    [repeatPass] => v7akL
+    [userType] => 4
+)
+---- 
+21/04/16 23:10:41 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:10:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 15
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:10:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 15
+        )
+
+)
+---- 
+21/04/16 23:10:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-06 00:00:00
+    [phone] => 23222212
+    [genre] => m
+)
+---- 
+21/04/16 23:10:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+15---- 
+21/04/16 23:10:42 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 11
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:10:42 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 11
+        )
+
+)
+---- 
+21/04/16 23:11:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-16 00:00:00
+    [phone] => 21321321
+    [genre] => m
+)
+---- 
+21/04/16 23:11:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asda
+    [personalId] => 3324242342
+    [email] => dsa@csa.com
+    [password] => Y0mS4
+    [repeatPass] => Y0mS4
+    [userType] => 4
+)
+---- 
+21/04/16 23:11:34 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:11:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 16
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:11:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 16
+        )
+
+)
+---- 
+21/04/16 23:11:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-16 00:00:00
+    [phone] => 21321321
+    [genre] => m
+)
+---- 
+21/04/16 23:11:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+16---- 
+21/04/16 23:11:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 12
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:11:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 12
+        )
+
+)
+---- 
+21/04/16 23:14:08 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-10 00:00:00
+    [phone] => 21322312
+    [genre] => m
+)
+---- 
+21/04/16 23:14:08 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sad
+    [firstlastname] => asd
+    [personalId] => 21312321321321
+    [email] => asd@sac.com
+    [password] => Y6466
+    [repeatPass] => Y6466
+    [userType] => 4
+)
+---- 
+21/04/16 23:14:08 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:14:08 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 17
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:14:08 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 17
+        )
+
+)
+---- 
+21/04/16 23:14:08 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-10 00:00:00
+    [phone] => 21322312
+    [genre] => m
+)
+---- 
+21/04/16 23:14:08 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+17---- 
+21/04/16 23:14:08 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 13
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:14:08 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 13
+        )
+
+)
+---- 
+21/04/16 23:16:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-21 00:00:00
+    [phone] => 32213222
+    [genre] => m
+)
+---- 
+21/04/16 23:16:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asdsa
+    [personalId] => 21312311111
+    [email] => asda@cas.com
+    [password] => RWZWi
+    [repeatPass] => RWZWi
+    [userType] => 4
+)
+---- 
+21/04/16 23:16:04 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:16:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 18
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:16:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 18
+        )
+
+)
+---- 
+21/04/16 23:16:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-21 00:00:00
+    [phone] => 32213222
+    [genre] => m
+)
+---- 
+21/04/16 23:16:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+18---- 
+21/04/16 23:16:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 14
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:16:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 14
+        )
+
+)
+---- 
+21/04/16 23:17:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-08 00:00:00
+    [phone] => 22221232
+    [genre] => m
+)
+---- 
+21/04/16 23:17:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sda
+    [firstlastname] => asdsa
+    [personalId] => 213123123
+    [email] => asd@sa.com
+    [password] => olpXU
+    [repeatPass] => olpXU
+    [userType] => 4
+)
+---- 
+21/04/16 23:17:39 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:17:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 19
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:17:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 19
+        )
+
+)
+---- 
+21/04/16 23:17:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-08 00:00:00
+    [phone] => 22221232
+    [genre] => m
+)
+---- 
+21/04/16 23:17:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+19---- 
+21/04/16 23:17:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 15
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:17:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 15
+        )
+
+)
+---- 
+21/04/16 23:18:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-15 00:00:00
+    [phone] => 21312321
+    [genre] => m
+)
+---- 
+21/04/16 23:18:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asda
+    [personalId] => 12321323123
+    [email] => ad@acs.com
+    [password] => GhS4E
+    [repeatPass] => GhS4E
+    [userType] => 4
+)
+---- 
+21/04/16 23:18:38 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:18:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 20
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:18:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 20
+        )
+
+)
+---- 
+21/04/16 23:18:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-15 00:00:00
+    [phone] => 21312321
+    [genre] => m
+)
+---- 
+21/04/16 23:18:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+20---- 
+21/04/16 23:18:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 16
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:18:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 16
+        )
+
+)
+---- 
+21/04/16 23:19:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-15 00:00:00
+    [phone] => 21313213
+    [genre] => m
+)
+---- 
+21/04/16 23:19:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asd
+    [personalId] => 232131232
+    [email] => as@csa.com
+    [password] => IgzIN
+    [repeatPass] => IgzIN
+    [userType] => 4
+)
+---- 
+21/04/16 23:19:38 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:19:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 21
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:19:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 21
+        )
+
+)
+---- 
+21/04/16 23:19:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-15 00:00:00
+    [phone] => 21313213
+    [genre] => m
+)
+---- 
+21/04/16 23:19:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+21---- 
+21/04/16 23:19:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 17
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:19:39 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 17
+        )
+
+)
+---- 
+21/04/16 23:20:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-08 00:00:00
+    [phone] => 23123123
+    [genre] => m
+)
+---- 
+21/04/16 23:20:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => q2321
+    [firstlastname] => asdas
+    [personalId] => 213123123
+    [email] => asd@sac.com
+    [password] => Mzk6Z
+    [repeatPass] => Mzk6Z
+    [userType] => 4
+)
+---- 
+21/04/16 23:20:27 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 1
+                    [0] => 1
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:20:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [error] => 1
+    [message] => Email is unavailable
+)
+---- 
+21/04/16 23:20:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-08 00:00:00
+    [phone] => 23123123
+    [genre] => m
+)
+---- 
+21/04/16 23:20:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => q2321
+    [firstlastname] => asdas
+    [personalId] => 213123123
+    [email] => asd@sdasac.com
+    [password] => lMffn
+    [repeatPass] => lMffn
+    [userType] => 4
+)
+---- 
+21/04/16 23:20:33 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:20:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 22
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:20:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 22
+        )
+
+)
+---- 
+21/04/16 23:20:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-08 00:00:00
+    [phone] => 23123123
+    [genre] => m
+)
+---- 
+21/04/16 23:20:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+22---- 
+21/04/16 23:20:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 18
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:20:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 18
+        )
+
+)
+---- 
+21/04/16 23:21:31 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-21 00:00:00
+    [phone] => 21312232
+    [genre] => m
+)
+---- 
+21/04/16 23:21:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asd
+    [personalId] => asd213123213
+    [email] => 23@asd.com
+    [password] => 2bdFa
+    [repeatPass] => 2bdFa
+    [userType] => 4
+)
+---- 
+21/04/16 23:21:32 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:21:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 23
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:21:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 23
+        )
+
+)
+---- 
+21/04/16 23:21:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-21 00:00:00
+    [phone] => 21312232
+    [genre] => m
+)
+---- 
+21/04/16 23:21:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+23---- 
+21/04/16 23:21:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 19
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:21:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 19
+        )
+
+)
+---- 
+21/04/16 23:23:22 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-13 00:00:00
+    [phone] => 32323212
+    [genre] => m
+)
+---- 
+21/04/16 23:23:23 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => sad
+    [personalId] => 213123213
+    [email] => asda@ascsax.com
+    [password] => VCPuT
+    [repeatPass] => VCPuT
+    [userType] => 4
+)
+---- 
+21/04/16 23:23:23 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:23:23 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 24
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:23:23 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 24
+        )
+
+)
+---- 
+21/04/16 23:23:23 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-13 00:00:00
+    [phone] => 32323212
+    [genre] => m
+)
+---- 
+21/04/16 23:23:23 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+24---- 
+21/04/16 23:23:23 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 20
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:23:23 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 20
+        )
+
+)
+---- 
+21/04/16 23:24:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-02 00:00:00
+    [phone] => 23232322
+    [genre] => m
+)
+---- 
+21/04/16 23:24:37 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [secondname] => a
+    [firstlastname] => asd
+    [secondlastname] => asd
+    [personalId] => 2131231231
+    [email] => 231@xAC.COM
+    [password] => H5xfX
+    [repeatPass] => H5xfX
+    [userType] => 4
+)
+---- 
+21/04/16 23:24:37 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:24:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 25
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:24:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 25
+        )
+
+)
+---- 
+21/04/16 23:24:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-02 00:00:00
+    [phone] => 23232322
+    [genre] => m
+)
+---- 
+21/04/16 23:24:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+25---- 
+21/04/16 23:24:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 21
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:24:38 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 21
+        )
+
+)
+---- 
+21/04/16 23:26:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-14 00:00:00
+    [phone] => 22223212
+    [genre] => m
+)
+---- 
+21/04/16 23:26:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asda
+    [firstlastname] => asdas
+    [personalId] => a21321313a
+    [email] => aas@csac.com
+    [password] => HKq22
+    [repeatPass] => HKq22
+    [userType] => 4
+)
+---- 
+21/04/16 23:26:04 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:26:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 26
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:26:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 26
+        )
+
+)
+---- 
+21/04/16 23:26:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-14 00:00:00
+    [phone] => 22223212
+    [genre] => m
+)
+---- 
+21/04/16 23:26:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+26---- 
+21/04/16 23:26:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 22
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:26:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 22
+        )
+
+)
+---- 
+21/04/16 23:27:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-06 00:00:00
+    [phone] => 13232122
+    [genre] => m
+)
+---- 
+21/04/16 23:27:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => asd
+    [firstlastname] => sadas
+    [personalId] => 213132132
+    [email] => asd@asc.com
+    [password] => iOIzG
+    [repeatPass] => iOIzG
+    [userType] => 4
+)
+---- 
+21/04/16 23:27:12 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:27:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 27
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:27:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 27
+        )
+
+)
+---- 
+21/04/16 23:27:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-06 00:00:00
+    [phone] => 13232122
+    [genre] => m
+)
+---- 
+21/04/16 23:27:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+27---- 
+21/04/16 23:27:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 23
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:27:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 23
+        )
+
+)
+---- 
+21/04/16 23:33:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1993-02-23 00:00:00
+    [phone] => 21312312
+    [genre] => m
+)
+---- 
+21/04/16 23:33:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => 231
+    [firstlastname] => 2313
+    [personalId] => 21312321312
+    [email] => 123@asd.com
+    [password] => peqHO
+    [repeatPass] => peqHO
+    [userType] => 4
+)
+---- 
+21/04/16 23:33:34 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:33:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 28
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:33:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 28
+        )
+
+)
+---- 
+21/04/16 23:33:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1993-02-23 00:00:00
+    [phone] => 21312312
+    [genre] => m
+)
+---- 
+21/04/16 23:33:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+28---- 
+21/04/16 23:33:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 24
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:33:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 24
+        )
+
+)
+---- 
+21/04/16 23:35:03 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1998-04-15 00:00:00
+    [phone] => 22323232
+    [genre] => m
+)
+---- 
+21/04/16 23:35:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 108
+Array
+(
+    [firstname] => sadas
+    [firstlastname] => asdas
+    [personalId] => 213123123123
+    [email] => ASD@ca.com
+    [password] => TM1Vz
+    [repeatPass] => TM1Vz
+    [userType] => 4
+)
+---- 
+21/04/16 23:35:04 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:35:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 159
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 29
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:35:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 212
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 29
+        )
+
+)
+---- 
+21/04/16 23:35:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1998-04-15 00:00:00
+    [phone] => 22323232
+    [genre] => m
+)
+---- 
+21/04/16 23:35:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+29---- 
+21/04/16 23:35:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 25
+            [count] => 1
+        )
+
+)
+---- 
+21/04/16 23:35:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 25
+        )
+
+)
