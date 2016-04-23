@@ -25,6 +25,11 @@ angular.module('OGTicketsApp.controllers')
         $scope.isReservation= false;
         $scope.hidePurchaseButton= false;
 
+        var sectionId = '',
+        purchaseCode = '',
+        reservationCode = '';
+        $scope.objTransaction = {};
+
         eventService.getEventById(eventId)
         .then(function(data) {
             var event= data.data[0];
@@ -40,6 +45,7 @@ angular.module('OGTicketsApp.controllers')
         .catch(function(error) {
             console.error(error);
         })
+
 
 
         //segun lo que corresponda abre las opciones para que el usuario haga la escogencia de los asientos.
@@ -87,6 +93,8 @@ angular.module('OGTicketsApp.controllers')
             $scope.cols= seatsService.getCols(cols);
             reserved= seatsService.getReserved(zoneId, site, eventId);
             $scope.showMap= false;
+
+            sectionId = zoneId;
 
         };
 
@@ -161,15 +169,6 @@ angular.module('OGTicketsApp.controllers')
             $scope.buttons= false;
         };
 
-         //end of seats
-
-        $scope.seatAmount="";
-
-    
-        $scope.showResume= function() {
-            alert("si funiona");
-            $scope.resume= true;
-        };
         
 
         //Redirect to the event form to edit the event
@@ -198,37 +197,97 @@ angular.module('OGTicketsApp.controllers')
 
 
         $scope.getTickets = function (){
-            var purchaseCode= transactionService.generatePurchaseCode($scope.currentUser.id, $scope.currentEvent.id);
+            var ticketAmount, total, seats;
+            purchaseCode= transactionService.generatePurchaseCode($scope.currentUser.userId, $scope.currentEvent.id);
+
+            if(selected.length){
+                ticketAmount = selected.length;
+                total = $scope.total
+                seats = selected.join(', ')+".";
+            }else{
+                ticketAmount = $scope.seatsAmount;
+                total = $scope.currentEvent.ticketsPrice * ticketAmount;
+                seats = 'No hay asientos numerados.';
+            }
 
             $scope.purchaseInfo={
                 code:purchaseCode,
-                ticketAmount: selected.length,
+                ticketAmount: ticketAmount,
                 eventName:  $scope.currentEvent.name,
                 place: $scope.eventSiteName,
-                total: $scope.total,
+                total: total,
                 datetime: $scope.currentEvent.startHour,
                 seats:selected.join(', ')+".",
                 transactionType: "tt01"
             };
 
-            /*{"id": "tr01", "cancelled": true, "transactionType": "tt01", "eventId": "ev02", "ticketsAmount" : 2, "idClient": "cl02", "active": true, "trCode":"pu-cl02-ev02-0329-tr01" }*/
-
             $scope.isPurchase= true;
             $scope.successfulPurchase= true;
 
-  
-           
-
-            //dejar todo esto de ultimo
-            // Saves credit card to database
-            //transactionService.setCreditCard($scope.ccinfo);
+            setFinalTransaction();
         };
 
-        $scope.ticketsNumber=null;
-        //        4278567198765432
+        $scope.getReservation = function(){
+            var ticketAmount, total, seats;
+            reservationCode = transactionService.generateReservationCode($scope.currentUser.userId, $scope.currentEvent.id);
+
+            if(selected.length){
+                ticketAmount = selected.length;
+                total = $scope.total;
+                seats = selected.join(', ')+".";
+            }else{
+                ticketAmount = $scope.seatsAmount;
+                total = $scope.currentEvent.ticketsPrice * ticketAmount;
+                seats = 'No hay asientos numerados.';
+            };
+
+            $scope.reservationInfo={
+                code:reservationCode,
+                ticketAmount: ticketAmount,
+                eventName:  $scope.currentEvent.name,
+                place: $scope.eventSiteName,
+                total: total,
+                datetime: $scope.currentEvent.startHour,
+                seats:seats,
+                transactionType: "tt02"
+
+            };
+
+            setFinalTransaction();
+        }
 
 
-        
+        var setFinalTransaction = function (){
+            if ($scope.isPurchase) {
+                var transactionType = 1, transactionCode = purchaseCode;
+            }else{
+                var transactionType = 2, transactionCode = reservationCode;
+            };
+
+            if(selected.length){
+                var siteType = 1,
+                seatsAmount = selected.length;
+            }else{
+                var siteType = 2,
+                seatsAmount = $scope.seatsAmount;
+            }
+
+            $scope.objTransaction = {
+                transactionType: transactionType,
+                siteType: siteType,
+                eventId: eventId,
+                siteId: $scope.eventSiteId,
+                userId: $scope.currentUser.userId,
+                sectionId: sectionId,
+                seatsList: selected,
+                seatsAmount: seatsAmount,
+                transactionCode: transactionCode
+
+            };
+
+            transactionService.setTransaction($scope.objTransaction);
+        };
+
 
 
 }]); //end -controller-
