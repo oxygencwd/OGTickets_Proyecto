@@ -110,6 +110,18 @@ $app->post(
 );
 
 
+//getClientEvents
+$app->get(
+    '/client/getClientEvents/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $clientController= new App\Controllers\ClientController();
+        $result= $clientController->getClientEvents($request);
+        return $response->withJson($result);
+    }
+);
+
 //user/getUserById
 $app->get(
     '/client/getClientById/{id}',
