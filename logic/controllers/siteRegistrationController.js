@@ -40,8 +40,8 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 	$scope.goProfile= function() {
-		$location.path('#/site-profile/'+idSitio);
-	}
+		$window.location.href = ('#/site-profile/'+newSite.idSitio);
+	};
 
 //Editar sitio.
 	var siteId= $routeParams.siteId;
