@@ -1,0 +1,617 @@
+---- 
+23/04/16 03:35:21 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 5
+                    [0] => 5
+                    [PrimerNombre] => Manuel
+                    [1] => Manuel
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mendoza
+                    [3] => Mendoza
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$nP9oOHvJIKmQyFg7PHWBsuUPPpITNr8AupClwlQUV5o.FL99RN/Ra
+                    [6] => $2y$10$nP9oOHvJIKmQyFg7PHWBsuUPPpITNr8AupClwlQUV5o.FL99RN/Ra
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:35:21 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 03:35:26 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+8---- 
+23/04/16 03:35:32 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+1---- 
+23/04/16 03:48:29 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 1994-11-20 00:00:00
+    [phone] => 83198156
+    [genre] => m
+)
+---- 
+23/04/16 03:48:29 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => Jonathan
+    [secondname] => Michael
+    [firstlastname] => Ryzowy
+    [secondlastname] => Martinez
+    [personalId] => 115290295
+    [email] => ryzowym@gmail.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 03:48:30 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:48:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:48:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 8
+        )
+
+)
+---- 
+23/04/16 03:48:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 1994-11-20 00:00:00
+    [phone] => 83198156
+    [genre] => m
+    [picture] => https://cdn.filepicker.io/api/file/KSq3AUUXQA6fi6cdMx6h
+)
+---- 
+23/04/16 03:48:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+8---- 
+23/04/16 03:48:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 5
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:48:30 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 5
+        )
+
+)
+---- 
+23/04/16 03:48:42 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 8
+                    [0] => 8
+                    [PrimerNombre] => Jonathan
+                    [1] => Jonathan
+                    [SegundoNombre] => Michael
+                    [2] => Michael
+                    [PrimerApellido] => Ryzowy
+                    [3] => Ryzowy
+                    [SegundoApellido] => Martinez
+                    [4] => Martinez
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$gjnumAdKSx0gYoaHzASUL.vsC5SApsHsUb2QNTxPScjxol/vYQMmS
+                    [6] => $2y$10$gjnumAdKSx0gYoaHzASUL.vsC5SApsHsUb2QNTxPScjxol/vYQMmS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:48:42 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 03:52:08 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 1993-02-21 00:00:00
+    [phone] => 83168976
+    [genre] => f
+)
+---- 
+23/04/16 03:52:08 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => Ariana
+    [secondname] => Maria
+    [firstlastname] => Aguilar
+    [secondlastname] => Umaña
+    [personalId] => 115290295
+    [email] => ariaguiuma2@gmail.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 03:52:08 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:52:08 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 9
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:52:08 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 9
+        )
+
+)
+---- 
+23/04/16 03:52:08 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 1993-02-21 00:00:00
+    [phone] => 83168976
+    [genre] => f
+    [picture] => https://cdn.filepicker.io/api/file/I8zTl4GSUKcmT6vvJ3tp
+)
+---- 
+23/04/16 03:52:08 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+9---- 
+23/04/16 03:52:08 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 6
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:52:08 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 6
+        )
+
+)
+---- 
+23/04/16 03:52:22 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 9
+                    [0] => 9
+                    [PrimerNombre] => Ariana
+                    [1] => Ariana
+                    [SegundoNombre] => Maria
+                    [2] => Maria
+                    [PrimerApellido] => Aguilar
+                    [3] => Aguilar
+                    [SegundoApellido] => Umaña
+                    [4] => Umaña
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$E6vuaRfvP6NhEdgk1kmZ7OYdjsJywDrTd8yorPP1XnV7Oq6Wq7Cl6
+                    [6] => $2y$10$E6vuaRfvP6NhEdgk1kmZ7OYdjsJywDrTd8yorPP1XnV7Oq6Wq7Cl6
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:52:22 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 03:56:56 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 1990-09-14 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+23/04/16 03:56:56 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => Andres
+    [firstlastname] => Aguilar
+    [personalId] => 1114467821
+    [email] => abo@gmail.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 03:56:56 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:56:57 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 10
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:56:57 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 10
+        )
+
+)
+---- 
+23/04/16 03:56:57 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 1990-09-14 00:00:00
+    [phone] => 88888888
+    [genre] => m
+    [picture] => https://cdn.filepicker.io/api/file/aDzo7hzfRxSWdCQJ10TQ
+)
+---- 
+23/04/16 03:56:57 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+10---- 
+23/04/16 03:56:57 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:56:57 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 7
+        )
+
+)
+---- 
+23/04/16 03:57:05 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 10
+                    [0] => 10
+                    [PrimerNombre] => Andres
+                    [1] => Andres
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Aguilar
+                    [3] => Aguilar
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$TkEl7jPNtLwCwKzWRkNAbe6GrxfdE8vr3xvPwQga82/UkHoXAhBFO
+                    [6] => $2y$10$TkEl7jPNtLwCwKzWRkNAbe6GrxfdE8vr3xvPwQga82/UkHoXAhBFO
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 03:57:05 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 04:01:38 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 1992-08-12 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+23/04/16 04:01:38 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => prueba
+    [firstlastname] => prueba
+    [personalId] => 123456789
+    [email] => prueba@gmail.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 04:01:38 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:01:38 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 11
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:01:38 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 11
+        )
+
+)
+---- 
+23/04/16 04:01:38 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 1992-08-12 00:00:00
+    [phone] => 88888888
+    [genre] => m
+    [image] => https://cdn.filepicker.io/api/file/UyxXyYFBTU6bkF3nDlLK
+)
+---- 
+23/04/16 04:01:38 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+11---- 
+23/04/16 04:01:38 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:01:38 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 8
+        )
+
+)
+---- 
+23/04/16 04:07:52 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 8
+                    [0] => 8
+                    [PrimerNombre] => Jonathan
+                    [1] => Jonathan
+                    [SegundoNombre] => Michael
+                    [2] => Michael
+                    [PrimerApellido] => Ryzowy
+                    [3] => Ryzowy
+                    [SegundoApellido] => Martinez
+                    [4] => Martinez
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$gjnumAdKSx0gYoaHzASUL.vsC5SApsHsUb2QNTxPScjxol/vYQMmS
+                    [6] => $2y$10$gjnumAdKSx0gYoaHzASUL.vsC5SApsHsUb2QNTxPScjxol/vYQMmS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:07:52 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 04:25:59 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
