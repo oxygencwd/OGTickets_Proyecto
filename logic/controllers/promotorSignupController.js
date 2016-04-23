@@ -3,8 +3,6 @@ angular.module('OGTicketsApp.controllers')
 
 	var resquestId = $routeParams.requestId;
 	var resquestPromotor = promotorService.getRegisterRequestById(resquestId);
-	console.log(resquestPromotor);
-
 	
 	$scope.newPromotor = resquestPromotor;
 
@@ -45,7 +43,6 @@ angular.module('OGTicketsApp.controllers')
 		promotorService.registerRequest($scope.newPromotor)
 		.then(function(data) {
 			if(data.valid){
-				console.log(data);
 				$scope.newPromotor={};
 				formService.clear($scope.formNewPromotor);
 				$scope.success= "Solicitud enviada con éxito";

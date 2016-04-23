@@ -125,8 +125,8 @@
                 }
                 //editar perfil de un promotor. Permisos: promotor propietario de la cuenta.
             })
-            .when('/promotor-signup/:requestId', {
-                templateUrl: 'html/promotorSignupForm.html',
+            .when('/promotor-request-info/:requestId', {
+                templateUrl: 'html/promotorRequest.html',
                 controller: 'promotorSignupController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
@@ -231,7 +231,6 @@
             })
             .when('/admin', {
                 templateUrl: 'html/admin.html',
-                controller: 'adminController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
                 }

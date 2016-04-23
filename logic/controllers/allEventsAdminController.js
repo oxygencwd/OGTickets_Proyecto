@@ -8,8 +8,6 @@ angular.module('OGTicketsApp.controllers')
 
 	$scope.eventsList = eventService.eventsList;
 
-	console.log($scope.eventsList);
-
 	$scope.init();
 
 }]); //end -controller-

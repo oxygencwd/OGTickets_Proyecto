@@ -42,10 +42,6 @@ $scope.details = false;
 
 		// transactions[index]=transaction; 
 
-		console.log(transaction);
-		console.log(transactions);
-		console.log(transactions.indexOf(transaction));
-
 		// transactionService.setTransaction(transactions);
 	}
 

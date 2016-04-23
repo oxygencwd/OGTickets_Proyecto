@@ -35,11 +35,11 @@ angular.module('OGTicketsApp.services')
 
         $http.post(url, site)
         .success(function(data, status) {
-            console.info(data);
+            // console.info(data);
             defer.resolve(data);
         })
         .error(function(error, status) {
-            console.info(error);
+            // console.info(error);
             defer.reject(error);
             $log.error(error, status);
         });
