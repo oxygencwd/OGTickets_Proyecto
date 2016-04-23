@@ -86,8 +86,8 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Teléfono*</label>
-		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone">
-		            		<sub ng-show="formNewPromotor.phone.$error.required && formNewPromotor.phone.$touched">El numero de telefono es requerido.</sub>
+		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone" ng-pattern="expNumberPhone">
+		            		<sub ng-show="formNewPromotor.phone.$error.required && formNewPromotor.phone.$touched">El numero de telefono es requerido.</sub> 
                 			<sub ng-show="formNewPromotor.phone.$error.pattern && formNewPromotor.phone.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
@@ -104,10 +104,8 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Aceptar solicitud" ng-show="appLoggedUser.userType=='ut01'" ng-click="formNewPromotor.$valid && promotorRegister()"  ng-disabled="formNewPromotor.$invalid">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Enviar formulario" ng-click="formNewPromotor.$valid && sendRequest()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPromotor.$invalid">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Editar datos" ng-click="formNewPromotor.$valid && editPromotor()" ng-disabled="formNewPromotor.$invalid" ng-show="editing">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Rechazar solicitud" ng-click="formNewPromotor.$valid && dismissRequest()" ng-show="appLoggedUser.userType=='ut01'"  ng-disabled="formNewPromotor.$invalid">
 		                </div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -189,7 +187,7 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="phone">Teléfono*</label>
-		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone">
+		            		<input type="number" min="0" required class="form-control" name="phone" id="phone" placeholder="88888888" ng-model="newPromotor.phone" ng-pattern="expNumberPhone">
 		            		<sub ng-show="formNewPhysicPromotor.phone.$error.required && formNewPhysicPromotor.phone.$touched">El numero de telefono es requerido.</sub>
                 			<sub ng-show="formNewPhysicPromotor.phone.$error.pattern && formNewPhysicPromotor.phone.$touched">El telefono no es valido, no se permiten numeros negativos ni decimales, y debe tener formato de 8 numeros.</sub>
 		            	</div>
@@ -202,28 +200,13 @@
 		            </div>
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
-		            <div class="form-group">
-		            	<div class="col-sm-6">
-		            		<label>Género</label>
-		            		<select name="genre" id="genre" ng-model="newPromotor.genre" required>
-		            			<option value="">-Tipo Género-</option>
-		            			<option value="m">Masculino</option>
-		            			<option value="f">Femenino</option>
-		            		</select>
-		            		<sub ng-show="formNewPhysicPromotor.genre.$error.required && formNewPhysicPromotor.genre.$touched">Elegir un tipo de genero</sub>
-		            	</div>
-		            </div> 
-		        </div>
-		        <div class="col-sm-10 col-sm-offset-1">
 		            <h3 class="error text-center">{{error}}</h3>
 		        </div>
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Aceptar solicitud" ng-show="appLoggedUser.userType=='ut01'" ng-click="formNewPhysicPromotor.$valid && promotorRegister()"  ng-disabled="formNewPhysicPromotor.$invalid">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Enviar formulario" ng-click="formNewPhysicPromotor.$valid && sendRequest()" ng-hide="appLoggedUser.isConnected"  ng-disabled="formNewPhysicPromotor.$invalid">
 		                    <input type="submit" class="btn btn-block btn-lg" value="Editar datos" ng-click="formNewPhysicPromotor.$valid && editPromotor()" ng-disabled="formNewPhysicPromotor.$invalid" ng-show="editing">
-		                    <input type="submit" class="btn btn-block btn-lg" value="Rechazar solicitud" ng-click="formNewPhysicPromotor.$valid && dismissRequest()" ng-show="appLoggedUser.userType=='ut01'"  ng-disabled="formNewPhysicPromotor.$invalid">
 		                </div>
 		            </div> 
 		        </div>

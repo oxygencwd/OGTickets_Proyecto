@@ -1,4 +1,4 @@
- angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services', 'OGTicketsApp.directives', 'OGTicketsApp.filters'])
+ angular.module("OGTicketsApp", ['ngRoute', 'ngAnimate', 'angular-filepicker','ngResource', 'ngCookies', 'OGTicketsApp.controllers', 'OGTicketsApp.services', 'OGTicketsApp.directives', 'OGTicketsApp.filters'])
 
     //definir las constante de los tipos de usuarios.
     .constant('ROLES', {
@@ -57,7 +57,7 @@
                 templateUrl: 'html/eventRegistrationForm.html',
                 controller: 'eventRegistrationController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                    authorized: [ROLES.PROMOTER.ROL]
                 } 
                 //Edición de un evento. Permisos: admin, promotor propietario del evento
             })
@@ -65,7 +65,7 @@
                 templateUrl: 'html/eventRegistrationForm.html',
                 controller: 'eventRegistrationController',
                 data: {
-                    authorized: [ROLES.ADMIN.ROL, ROLES.PROMOTER.ROL]
+                    authorized: [ROLES.PROMOTER.ROL]
                 }
                 //Registro de un evento. Permisos: promotor, admin
             })
@@ -125,8 +125,8 @@
                 }
                 //editar perfil de un promotor. Permisos: promotor propietario de la cuenta.
             })
-            .when('/promotor-signup/:requestId', {
-                templateUrl: 'html/promotorSignupForm.html',
+            .when('/promotor-request-info/:requestId', {
+                templateUrl: 'html/promotorRequest.html',
                 controller: 'promotorSignupController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
@@ -231,7 +231,6 @@
             })
             .when('/admin', {
                 templateUrl: 'html/admin.html',
-                controller: 'adminController',
                 data: {
                     authorized: [ROLES.ADMIN.ROL]
                 }

@@ -5,14 +5,10 @@
 			<div class="promoter-profile">
 				<div class="container-fluid">
 					<div class="row"><!-- options row -->
-						<div class="col-sm-2 left-panel">
-							<p class="text-center"><a ng-click="editPromotor()">Modificar datos</a></p>
-							<p class="text-center"><a href="#/">Mis reservas</a></p>
-						</div>
-						<div class="col-sm-10">
+						<div class="col-sm-10 col-offset-2">
 							<div class="row">
 								<div class="col-lg-12">
-									<h2>{{promotor.name}}</h2>
+									<h2>{{currentPromotor.name}}</h2>
 								</div>
 							</div>
 	
@@ -38,11 +34,11 @@
 											</div>
 											<h4 class="width90" ng-show="(allUsers | filter:search).length == 0">Ningún resultado encontrado</h4>
 											<ul class="width90">
-												<li ng-repeat="event in events() | filter:search | orderBy: 'date' track by $index">
-													<a ng-click="$parent.eventToDisplay = event;"><img ng-src="{{event.image}}" class="img-responsive" alt=""></a>
+												<li ng-repeat="event in events | filter:search | orderBy: 'date' track by $index">
+													<a ng-click="$parent.eventToDisplay = event;"><img ng-src="{{event.eventImage}}" class="img-responsive" alt=""></a>
 													<div class="pei-info">
-														<h5>{{event.name}}</h5>
-														<p>{{event.date | date}}</p>
+														<h5>{{event.eventName}}</h5>
+														<p>{{event.eventDate | date}}</p>
 													</div>
 													<button ng-click="$parent.eventToDisplay = event;" class="btn btn-warning">Ver detalles</button>
 												</li>
@@ -50,11 +46,11 @@
 										</div>
 										<div class="col-md-6 promoter-event-item" ng-hide="search.length>0">
 											<ul class="width90">
-												<li ng-repeat="event in events() | orderBy: 'date' track by $index">
-													<a ng-click="$parent.eventToDisplay = event;"><img ng-src="{{event.image}}" class="img-responsive" alt=""></a>
+												<li ng-repeat="event in events | orderBy: 'date' track by $index">
+													<a ng-click="$parent.eventToDisplay = event;"><img ng-src="{{event.eventImage}}" class="img-responsive" alt=""></a>
 													<div class="pei-info">
-														<h5>{{event.name}}</h5>
-														<p>{{event.date | date}}</p>
+														<h5>{{event.eventName}}</h5>
+														<p>{{event.eventDate | date}}</p>
 													</div>
 													<button ng-click="$parent.eventToDisplay = event;" class="btn btn-warning">Ver detalles</button>
 												</li>
@@ -64,19 +60,13 @@
 										<div class="col-md-6">
 											<div ng-show="eventToDisplay" class="promoter-event-container width90">
 												<div class="user-item-info">
-													<h3>{{eventToDisplay.name}}</h3>
-													<p><a ng-href="#/event-profile/{{eventToDisplay.id}}">Ver evento completo <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+													<h3>{{eventToDisplay.eventName}}</h3>
+													<p><a ng-href="#/event-profile/{{eventToDisplay.eventId}}">Ver evento completo <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 												</div>
 												<div class="user-item-info">
-													<p>{{eventToDisplay.siteId}}</p>
-													<p>{{eventToDisplay.date | date}}</p>
+													<p>{{eventToDisplay.eventDate | date}}</p>
 												</div>
-												<div class="user-item-info">
-													<p>Capacidad total: {{eventToDisplay.capacity}} personas</p>
-													<p>Vendidos: XXX</p>
-													<p>XXX% de la totalidad</p>
-												</div>
-												<button class="btn btn-danger center-block"><a ng-href="#/event-profile-edit/{{eventToDisplay.id}}">Editar evento</a></button>
+												<button class="btn btn-danger center-block"><a ng-href="#/event-profile-edit/{{eventToDisplay.eventId}}">Editar evento</a></button>
 											</div>
 										</div> <!-- col-md-6 -->
 									</div><!-- body-row -->

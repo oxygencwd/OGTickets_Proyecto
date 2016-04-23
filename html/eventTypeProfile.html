@@ -6,7 +6,7 @@
 				<div class="container-fluid">
 					<div class="heroSection row">
 						<div class=" col-xs-12 col-sm-6 col-sm-offset-2 heroImage">
-							<img src="images/event-default-images/imagen5.jpg" class="img-responsive center-block" alt="">
+							<img src="{{currentEventType.image}}" class="img-responsive center-block" alt="">
 						</div>
 						<div class="col-xs-12 col-sm-2 event-type-name">
 							<h2 class="text-middle">{{currentEventType.name}}</h2>
@@ -23,11 +23,6 @@
 <div class="container-fluid"> <!-- container-fluid event-type-section -->
 	<div class="container">
 		<div class="row eventTypeDescriptionRow"> <!-- container de seccion -->
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
-					<button type="button" class="btn btn-primary btn-show center-block width100" ng-show="appLoggedUser.userType=='ut01'" id="editButton" ng-click="editTypeEvent()">Editar tipo de evento</button>
-				</div>
-			</div>
 			<div class="text-center event-type-description">.
 				<div class=" col-xs-12 col-sm-5 col-sm-offset-2 c-left">
 					<p>{{currentEventType.description}}</p>

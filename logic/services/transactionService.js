@@ -37,12 +37,33 @@ angular.module('OGTicketsApp.services')
         });
         return result;
     };
+
+
+    var setTransaction= function (transaction) {
+        var defer= $q.defer();
+        var url= 'back-end/index.php/transaction/saveTransaction';
+
+        $http.post(url, transaction)
+        .success(function(data, status) {
+            // console.info(data);
+            defer.resolve(data);
+        })
+        .error(function(error, status) {
+            // console.info(error);
+            defer.reject(error);
+            $log.error(error, status);
+        });
+
+        return defer.promise;
+    };
+
     
 
 
 //puntos de acceso de los metodos del servicio:
 	return{
 	setCreditCard:setCreditCard,
+    setTransaction:setTransaction,
 	generatePurchaseCode:generatePurchaseCode,
 	generateReservationCode:generateReservationCode,
     transactions:transactions,

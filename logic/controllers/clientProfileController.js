@@ -4,29 +4,64 @@ angular.module('OGTicketsApp.controllers')
 	var clientId = $routeParams.clientId;
 	var loggedUser= userService.getLoggedUser();
 	var loggedUserId;
-	$scope.client = clientService.retrieveClient(clientId);
-	$scope.transactions = transactionService.retrieveTransactionsByClient(clientId);
+
+	$scope.client = {};
+	
+	// $scope.transactions = transactionService.retrieveTransactionsByClient(clientId);
 
 	if(loggedUser){
 		loggedUserId= loggedUser.id;
 	};
+	
+	var promise=clientService.retrieveClient(clientId);
+	promise.then(function(data) {
+		$scope.currentClient= data.data[0];
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
 
 	//Envia al cliente al formulario de editar datos
 	$scope.editClient= function(){
         $location.path('/client-profile-edit/'+clientId);
     };
 
+  //   $scope.events = function(){
+		// angular.forEach(transactions, function(item) {
+		// 	var events = transactionService.getEventsFromTransactions(item.eventId);
+
+		// });
+
+		// return events;
+  //   };
+
+    $scope.retrieveClient = function (){
+    	var promise = clientService.retrieveClient(clientId);
+		promise.then(function(data) {
+			$scope.client= data.data[0];
 
 
-    $scope.events = function(){
-		angular.forEach(transactions, function(item) {
-			var events = transactionService.getEventsFromTransactions(item.eventId);
+		})
+		.catch(function(error) {
+			console.log(error);
+		})
 
-		});
 
-		return events;
     };
 
-    console.log($scope.events());
+    $scope.getClientEvents = function (){
+    	var promise = clientService.getClientEvents(clientId);
+		promise.then(function(data) {
+			$scope.events= data.data;
+			
+			console.log($scope.events);
+		})
+		.catch(function(error) {
+			console.log(error);
+		})
+    };
+
+    $scope.retrieveClient();
+    $scope.getClientEvents();
 
 }]); //end -controller-

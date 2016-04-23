@@ -1,11 +1,32 @@
 angular.module('OGTicketsApp.controllers')
-.controller('appController', ['$scope', 'BDService', 'userService', function ($scope, BDService, userService) {
+.controller('appController', ['$scope', '$rootScope', 'localStorageService', 'BDService', 'userService', function ($scope, $rootScope, localStorageService, BDService, userService) {
 
-	$scope.appLoggedUser={
-		name:"", id:"", userType:"", isConnected:false
+	$scope.init= function () {
+		$scope.appLoggedUser={
+			firstName:"",
+			secondName:"",
+			lastName:"",
+			secondLastName:"",
+			navBarName:"",
+			userId:"", 
+			userType:"", 
+			isConnected:false
+		};
+
+		isLoggedIn();
 	};
 
-	$scope.isLoggedIn= userService.isLoggedIn($scope.appLoggedUser);
+	var currentUser= localStorageService.getAll("loggedUser");
+
+	function isLoggedIn() {
+		if(userService.isLoggedIn()){
+			userService.login($scope.appLoggedUser, currentUser);
+		}
+	}
+
+
+
+	//$scope.isLoggedIn= userService.isLoggedIn($scope.appLoggedUser);
 	$scope.expNumberPhone = /^[\ |0-9]{8}$/;
 
 //estos son los datos que se queman al local storage cuando uno abre la app//
@@ -17,6 +38,9 @@ angular.module('OGTicketsApp.controllers')
 	var promoterRegisterRequest= BDService.promoterRegisterRequest();
 	var reservedSeatxEventxSite= BDService.reservedSeatxEventxSite();
 // fin de los datos quemados
+
+
+	$scope.init();
 
 }]); //end -controller-
 

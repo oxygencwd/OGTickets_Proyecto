@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('clientSignupController', ['$scope','formService','$window','clientService', '$window', '$routeParams', '$location', '$timeout', function ($scope, formService, $window, clientService, $window, $routeParams, $location, $timeout) {
+.controller('clientSignupController', ['$scope','formService','$window','clientService', '$window', '$routeParams', '$location', '$timeout','dateService', function ($scope, formService, $window, clientService, $window, $routeParams, $location, $timeout,dateService) {
 
 	$scope.newClient={};
 		/*
@@ -22,15 +22,19 @@ angular.module('OGTicketsApp.controllers')
 		*/
 	$scope.error="";
 	$scope.success="";
+	
+	$scope.minAge = dateService.minimunAge15;
+	$scope.maxAge = dateService.maximunAge;
 
-	var today = new Date();
-	var minAge = 15;
-	var maxAge = 100;
-	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
-	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
+	var picture = '';
+	//Saves on src the url generated for the picture
+	$scope.savePicture=function(src){
+		picture = src;
+	};
 
 	//Funcion del boton de registro de cliente, toma todos los datos del formulario y los envia hacia el clientService.
 	$scope.clientRegister=function () {
+		$scope.newClient.image = picture;
 		clientService.clientRegister($scope.newClient)
 		.then(function(data) {
 			if(data.valid){
@@ -52,7 +56,6 @@ angular.module('OGTicketsApp.controllers')
 		.catch(function() {
 			console.log("Error registrando el nuevo cliente");
 		});
-		
 
 	 }; 
 

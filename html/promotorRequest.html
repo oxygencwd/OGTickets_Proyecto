@@ -1,0 +1,172 @@
+<!-- Registro de Promotor -->
+<div class="container-fluid signUpView">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-1">
+			<h2 ng-show="appLoggedUser.userType=='ut01'">Registro de Promotores**</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+
+			<form name="formRequestPromotorJuridica" ng-show="newPromotor.typePerson=='personaJuridica'" novalidate>
+	         	<div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+			            <div class="col-sm-6">
+			            	<label for="promotorName">Tipo de promotor:</label>
+			            	<input type="text" class="form-control" id="typePerson" ng-model="currentRequest.typePerson" required disabled>
+			            </div>
+			        </div>
+		        </div> 
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+			            <div class="col-sm-6">
+			            	<label for="promotorName">Nombre</label>
+			            	<input type="text" class="form-control" name="promotorName" value="" id="promotorName" ng-model="currentRequest.name" required disabled>
+			            </div>
+			        </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            	<div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="legalId">Cédula Jurídica</label>
+			            		<input type="text" class="form-control" name="legalId" id="legalId" ng-model="currentRequest.legalId" required disabled>
+			            	</div>
+			            </div> <!-- form group end -->
+		        </div>
+	            <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="email">Correo electrónico</label>
+		            		<input type="email" class="form-control" name="email" id="email" ng-model="currentRequest.email" required disabled>
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn">
+		            		<label for="specializationArea">Área de especialización</label>
+		            		<input type="text" class="form-control" name="specializationArea" id="specializationArea" ng-model="currentRequest.specializationArea" required disabled>
+		            	</div>
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="phone">Teléfono</label>
+		            		<input type="text" class="form-control" name="phone" id="phone" required disabled  ng-model="currentRequest.phone">
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn">
+		            		<label for="address">Dirección</label>
+		            		<input type="text" class="form-control" name="address" id="address" ng-model="currentRequest.address" required disabled>
+		            	</div>
+
+		            </div> <!-- form group end -->
+		        </div>
+		        <div class="col-sm-9 col-sm-offset-3 space">
+		                <div class="col-sm-4 col-xs-12">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Aceptar solicitud" ng-show="appLoggedUser.userType=='ut01'" ng-click="formRequestPromotorJuridica.$valid && aceptRequest()"  ng-disabled="formRequestPromotorJuridica.$invalid">
+		                </div>
+		                <div class="col-sm-4 col-xs-12">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Rechazar solicitud" ng-click="formRequestPromotorJuridica.$valid && dismissRequest()" ng-show="appLoggedUser.userType=='ut01'"  ng-disabled="formRequestPromotorJuridica.$invalid">
+		            </div>
+		        </div>
+			</form>
+
+			<form name="formRequestPromotorFisica" novalidate ng-show="newPromotor.typePerson=='personaFisica'">
+				<div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+			            <div class="col-sm-6">
+			            	<label for="promotorName">Tipo de promotor:</label>
+			            	<input type="text" class="form-control" id="typePerson" ng-model="currentRequest.typePerson" required disabled>
+			            </div>
+			        </div>
+		        </div> 
+	            <div class="col-sm-10 col-sm-offset-1">
+		            	<div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="firstname">Primer nombre</label>
+			            		<input type="text" class="form-control" name="firstname" id="firstname" ng-model="currentRequest.firstname" required disabled>
+			            	</div>
+			               <div class="col-sm-6 signUpSecondColumn">
+			               		<label for="secondname">Segundo nombre</label>
+			            		<input type="text" class="form-control" id="secondname" ng-model="currentRequest.secondname" disabled>
+			               </div>
+			            </div> 
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+			            <div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="firstlastname">Primer apellido</label>
+			            		<input type="text" class="form-control" name="firstlastname" id="firstlastname" ng-model="currentRequest.firstlastname" required disabled>
+			            	</div>
+			               <div class="col-sm-6 signUpSecondColumn">
+			               		<label for="secondlastname">Segundo apellido</label>
+			            		<input type="text" class="form-control" id="secondlastname" ng-model="currentRequest.secondlastname" disabled>
+			               </div>
+			            </div>
+			    </div>
+			    <div class="col-sm-10 col-sm-offset-1">
+			            <div class="form-group">
+			            	<div class="col-sm-6">
+			            		<label for="personalId">Cédula de identidad</label>
+			            		<input type="text" class="form-control" name="personalId" id="personalId" ng-model="currentRequest.personalId" required disabled>
+			            	</div>
+			            </div>
+			    </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="email">Correo electrónico</label>
+		            		<input type="email" class="form-control" name="email" id="email" ng-model="currentRequest.email" required disabled>
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn">
+		            		<label for="specializationArea">Área de especialización</label>
+		            		<input type="text" class="form-control" name="specializationArea" id="specializationArea" ng-model="currentRequest.specializationArea" required disabled>
+		            	</div>
+		            </div>
+		        </div>
+		        <div class="col-sm-10 col-sm-offset-1">
+		            <div class="form-group">
+		            	<div class="col-sm-6">
+		            		<label for="phone">Teléfono</label>
+		            		<input type="text" required disabled class="form-control" name="phone" id="phone" ng-model="currentRequest.phone">
+		            	</div>
+		            	<div class="col-sm-6 signUpSecondColumn">
+		            		<label for="address">Dirección</label>
+		            		<input type="text" class="form-control" name="address" id="address" ng-model="currentRequest.address" required disabled>
+		            	</div>
+
+		            </div>
+		        </div>
+		        <div class="col-sm-9 col-sm-offset-3 space">
+		            <div class="form-group">
+		               <div class="col-sm-4 col-xs-12">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Aceptar solicitud" ng-show="appLoggedUser.userType=='ut01'" ng-click="formRequestPromotorFisica.$valid && aceptRequest()"  ng-disabled="formRequestPromotorFisica.$invalid">
+		                </div>
+		                <div class="col-sm-4 col-xs-12">
+		                    <input type="submit" class="btn btn-block btn-lg" value="Rechazar solicitud" ng-click="formRequestPromotorFisica.$valid && dismissRequest()" ng-show="appLoggedUser.userType=='ut01'"  ng-disabled="formRequestPromotorFisica.$invalid">
+		                </div>
+		            </div> 
+		        </div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+
+<!-- alert Modal -->
+<div id="promoterSuccessModal" class="modal fade alert-modal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+        <p class="text-center">{{success}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-clear" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

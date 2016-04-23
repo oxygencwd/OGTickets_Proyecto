@@ -29,7 +29,6 @@ angular.module('OGTicketsApp.controllers')
 		})
 	}
 	
-
 	$scope.init();
 
 }]); //end -controller-

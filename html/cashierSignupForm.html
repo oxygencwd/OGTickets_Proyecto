@@ -87,14 +87,13 @@
 		            	<div class="col-sm-6">
 		            		<label for="date">Fecha de nacimiento*</label>
 		            		<input type="date" class="form-control" name="date" id="date" max="{{minAge | date:'yyyy-MM-dd'}}" min="{{maxAge | date:'yyyy-MM-dd'}}" ng-model="newCashier.dateBirth" required>
-
 		            		<sub ng-show="formNewCashier.date.$error.required && formNewCashier.date.$touched">Fecha de nacimiento es requerida</sub>
 		            		<sub ng-show="formNewCashier.date.$error.max && formNewCashier.date.$touched">Debe ser mayor de 18 años</sub>
 		            		<sub ng-show="formNewCashier.date.$error.min && formNewCashier.date.$touched">Debe ser menor de 100 años</sub>
 		            	</div>
 		            	<div class="col-sm-6 signUpSecondColumn">
 		            		<label for="genre">Género</label>
-		            		<select name="genre" id="genre" ng-model="newCashier.genre" required ng-model-options="{ updateOn:'blur'}">
+		            		<select name="genre" id="genre" ng-model="newCashier.genre" required>
 		            			<option value="">-Género-</option>
 		            			<option value="m">Masculino</option>
 		            			<option value="f">Femenino</option>
@@ -110,7 +109,7 @@
 		            <div class="form-group">
 		                <div class="col-sm-offset-4 col-sm-4 col-xs-12">
 
-		                    <input type="submit" class="btn btn-s btn-lg" value="Registrar cajero" ng-disabled="formNewCashier.$invalid" ng-click= "cashierRegister()">
+		                    <input type="submit" class="btn btn-s btn-lg" value="Registrar cajero" ng-disabled="formNewCashier.$invalid">
 
 		                </div>
 		            </div> <!-- form group end -->

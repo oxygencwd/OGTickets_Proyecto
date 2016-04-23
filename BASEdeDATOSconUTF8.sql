@@ -8,7 +8,8 @@ Pasos para crear la base de datos:
 */
 #drop database OG_Tickets;
 
-create database OG_Tickets;
+create database OG_Tickets CHARACTER SET utf8 COLLATE utf8_general_ci;
+
 
 use  OG_Tickets;
 #crear el usuario
@@ -24,10 +25,10 @@ FLUSH PRIVILEGES;
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTipoUsuario` (
   `idTipoUsuario` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'ut',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idTipoUsuario)) VIRTUAL,
-  `NombreTipoUsuario` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idTipoUsuario`));
+  `prefijo` VARCHAR(10) COLLATE utf8_general_ci NOT NULL DEFAULT 'ut',
+  `NombreTipoUsuario` VARCHAR(45) COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (`idTipoUsuario`)) 
+  ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
   
 
 /*-- ----------------------------------------------------
@@ -35,15 +36,14 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTipoUsuario` (
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbUsuario` (
   `idUsuario` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'us',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idUsuario)) VIRTUAL,
-  `PrimerNombre` VARCHAR(45) NOT NULL,
-  `SegundoNombre` VARCHAR(45) NULL,
-  `PrimerApellido` VARCHAR(45) NULL,
-  `SegundoApellido` VARCHAR(45) NULL,
-  `Cedula` VARCHAR(15) NOT NULL,
-  `Email` VARCHAR(80) NOT NULL,
-  `password` VARCHAR(255) NOT NULL,
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'us',
+  `PrimerNombre` VARCHAR(45) COLLATE utf8_spanish_ci NOT NULL,
+  `SegundoNombre` VARCHAR(45) COLLATE utf8_spanish_ci NULL,
+  `PrimerApellido` VARCHAR(45) COLLATE utf8_spanish_ci NULL,
+  `SegundoApellido` VARCHAR(45) COLLATE utf8_spanish_ci NULL,
+  `Cedula` VARCHAR(15) COLLATE utf8_spanish_ci NOT NULL,
+  `Email` VARCHAR(80) COLLATE utf8_spanish_ci NOT NULL,
+  `password` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
   `Activo` TINYINT(1) NOT NULL DEFAULT 1,
   `TbTipoUsuario_idTipoUsuario` INT NOT NULL,
   PRIMARY KEY (`idUsuario`),
@@ -53,7 +53,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbUsuario` (
     FOREIGN KEY (`TbTipoUsuario_idTipoUsuario`)
     REFERENCES `OG_Tickets`.`TbTipoUsuario` (`idTipoUsuario`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 
@@ -62,9 +63,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbUsuario` (
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `og_tickets`.`tbAdministrador` (
   `idAdmin` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'ad',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idAdmin)) VIRTUAL,
-  `nombreRol` VARCHAR(100) NOT NULL DEFAULT 'Administrador',
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'ad',
+  `nombreRol` VARCHAR(100) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'Administrador',
   `TbUsuario_idUsuario` INT NOT NULL,
   PRIMARY KEY (`idAdmin`),
   UNIQUE INDEX `idAdmin_UNIQUE` (`idAdmin` ASC),
@@ -73,16 +73,16 @@ CREATE TABLE IF NOT EXISTS `og_tickets`.`tbAdministrador` (
     FOREIGN KEY (`TbUsuario_idUsuario`)
     REFERENCES `OG_Tickets`.`TbUsuario` (`idUsuario`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*-- -----------------------------------------------------
 -- Table `OG_Tickets`.`TbCliente`
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbCliente` (
   `idCliente` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(45) NOT NULL DEFAULT 'cl',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idCliente)) VIRTUAL,
-  `nombreRol` VARCHAR(100) NOT NULL DEFAULT 'Cliente',
+  `prefijo` VARCHAR(45) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'cl',
+  `nombreRol` VARCHAR(100) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'Cliente',
   `FechaNacimiento` DATETIME NOT NULL,
   `Telefono` INT(8) NOT NULL,
   `Genero` CHAR(1) NOT NULL,
@@ -97,21 +97,21 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbCliente` (
     FOREIGN KEY (`TbUsuario_idUsuario`)
     REFERENCES `OG_Tickets`.`TbUsuario` (`idUsuario`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*-- -----------------------------------------------------
 -- Table `OG_Tickets`.`TbPromotor`
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbPromotor` (
   `idPromotor` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'pr',
-  `appId` VARCHAR(20) GENERATED ALWAYS AS (concat(prefijo,idPromotor)) VIRTUAL,
-  `nombreRol` VARCHAR(30) NOT NULL DEFAULT 'Promotor',
-  `nombreJuridico` VARCHAR(60) NULL,
-  `AreaEspecializacion` VARCHAR(60) NOT NULL,
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'pr',
+  `nombreRol` VARCHAR(30) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'Promotor',
+  `nombreJuridico` VARCHAR(60) COLLATE utf8_spanish_ci NULL,
+  `AreaEspecializacion` VARCHAR(60) COLLATE utf8_spanish_ci NOT NULL,
   `PrimerTelefono` INT(8) NOT NULL,
   `SegundoTelefono` INT(8) NULL,
-  `Ubicacion` VARCHAR(255) NOT NULL,
+  `Ubicacion` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
   `TbUsuario_idUsuario` INT NOT NULL,
   PRIMARY KEY (`idPromotor`),
   INDEX `fk_TbPromotor_TbUsuario1_idx` (`TbUsuario_idUsuario` ASC),
@@ -119,7 +119,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbPromotor` (
     FOREIGN KEY (`TbUsuario_idUsuario`)
     REFERENCES `OG_Tickets`.`TbUsuario` (`idUsuario`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 /*-- -----------------------------------------------------
@@ -127,9 +128,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbPromotor` (
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbCajero` (
   `idCajero` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'cs',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idCajero)) VIRTUAL,
-  `nombreRol` VARCHAR(30) NOT NULL DEFAULT 'Cajero',
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'cs',
+  `nombreRol` VARCHAR(30) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'Cajero',
   `FechaNacimiento` DATETIME NOT NULL,
   `Telefono` DECIMAL(8) NOT NULL,
   `Genero` CHAR(1) NOT NULL,
@@ -141,7 +141,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbCajero` (
     FOREIGN KEY (`TbUsuario_idUsuario`)
     REFERENCES `OG_Tickets`.`TbUsuario` (`idUsuario`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 /*-- -----------------------------------------------------
@@ -149,14 +150,14 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbCajero` (
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTipoEvento` (
   `idTipoEvento` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'et',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idTipoEvento)) VIRTUAL,
-  `Nombre` VARCHAR(255) NOT NULL,
-  `Descripcion` VARCHAR(255) NOT NULL,
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'et',
+  `Nombre` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
+  `Descripcion` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `Foto` BLOB NULL,
   `Activo` TINYINT(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`idTipoEvento`),
-  UNIQUE INDEX `idTipoEvento_UNIQUE` (`idTipoEvento` ASC));
+  UNIQUE INDEX `idTipoEvento_UNIQUE` (`idTipoEvento` ASC))
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 -- -----------------------------------------------------
@@ -164,10 +165,9 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTipoEvento` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbEvento` (
   `idEvento` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'ev',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idEvento)) VIRTUAL,
-  `Nombre` VARCHAR(100) NOT NULL,
-  `Descripcion` TEXT NOT NULL,
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'ev',
+  `Nombre` VARCHAR(100) COLLATE utf8_spanish_ci NOT NULL,
+  `Descripcion` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `FechaEvento` DATETIME NOT NULL,
   `CapacidadPersonas` INT NOT NULL,
   `HoraInicio` TIME NOT NULL,
@@ -182,35 +182,36 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbEvento` (
     FOREIGN KEY (`TbTipoEvento_idTipoEvento`)
     REFERENCES `OG_Tickets`.`TbTipoEvento` (`idTipoEvento`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*-- -----------------------------------------------------
 -- Table `OG_Tickets`.`TbSitio`
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbSitio` (
   `idSitio` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'si',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idSitio)) VIRTUAL,
-  `Nombre` VARCHAR(80) NOT NULL,
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'si',
+  `Nombre` VARCHAR(80) COLLATE utf8_spanish_ci NOT NULL,
   `PrimerTelefono` INT(8) NOT NULL,
   `SegundoTelefono` INT(8) NULL,
   `Capacidad` INT NOT NULL,
   `UbicacionLongitud` FLOAT NOT NULL,
   `UbicacionLatitud` FLOAT NOT NULL,
-  `Direccion` VARCHAR(255) NOT NULL,
+  `Direccion` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
   `Foto` BLOB NULL,
   `Activo` TINYINT(1) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`idSitio`));
+  PRIMARY KEY (`idSitio`))
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*-- -----------------------------------------------------
 -- Table `OG_Tickets`.`TbTipoTransaccion`
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTipoTransaccion` (
   `idTipoTransaccion` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'tt',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idTipoTransaccion)) VIRTUAL,
-  `TipoTransaccion` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`idTipoTransaccion`));
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'tt',
+  `TipoTransaccion` VARCHAR(20) COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`idTipoTransaccion`))
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 /*-- -----------------------------------------------------
@@ -218,10 +219,9 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTipoTransaccion` (
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTransaccion` (
   `idTransaccion` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'tr',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idTransaccion)) VIRTUAL,
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'tr',
   `Activo` TINYINT(1) NOT NULL DEFAULT 1, /*default 1 de activo, las reservaciones pueden pasar a estar inactivas*/
-  `Codigo` VARCHAR(100) NOT NULL,
+  `Codigo` VARCHAR(100) COLLATE utf8_spanish_ci NOT NULL,
   `CantidadEspacios` INT NOT NULL,
   `Redimido` TINYINT(1) NULL DEFAULT 0, /*este campo se llena solo en caso de que la transaccion sea una reserva*/
   `TbTipoTransaccion_idTipoTransaccion` INT NOT NULL,
@@ -231,21 +231,23 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTransaccion` (
     FOREIGN KEY (`TbTipoTransaccion_idTipoTransaccion`)
     REFERENCES `OG_Tickets`.`TbTipoTransaccion` (`idTipoTransaccion`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
     
 -- -----------------------------------------------------
 -- Table `OG_Tickets`.`TbTransaccionPorAsiento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbAsientosPorTransaccion` (
   `index` INT NOT NULL AUTO_INCREMENT,
-  `idAsiento` VARCHAR(20) NOT NULL,
+  `idAsiento` VARCHAR(20) COLLATE utf8_spanish_ci NOT NULL,
   `TbTransaccion_idTransaccion` INT NOT NULL,
   PRIMARY KEY (`index`),
   CONSTRAINT `fk_TbAsientosPorTransaccion_TbTransaccion1`
     FOREIGN KEY (`TbTransaccion_idTransaccion`)
     REFERENCES `OG_Tickets`.`TbTransaccion` (`idTransaccion`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
     
 
 /*-- -----------------------------------------------------
@@ -263,7 +265,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTransaccionPorCliente` (
     FOREIGN KEY (`TbTransaccion_idTransaccion`)
     REFERENCES `OG_Tickets`.`TbTransaccion` (`idTransaccion`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 /*-- -----------------------------------------------------
@@ -283,14 +286,15 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbEventoPorSitio` (
     FOREIGN KEY (`TbEvento_idEvento`)
     REFERENCES `OG_Tickets`.`TbEvento` (`idEvento`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
     
     
 /*-- -----------------------------------------------------
 -- Table `OG_Tickets`.`TbButacasPorSitioPorSeccion`
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbButacasPorSitioPorSeccion` (
-  `idSeccion` VARCHAR(45) NOT NULL,
+  `idSeccion` VARCHAR(45) COLLATE utf8_spanish_ci NOT NULL,
   `rowAccount` INT NOT NULL,
   `colAcount` INT NOT NULL,
   `TbSitio_idSitio` INT NOT NULL,
@@ -299,7 +303,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbButacasPorSitioPorSeccion` (
     FOREIGN KEY (`TbSitio_idSitio`)
     REFERENCES `OG_Tickets`.`TbSitio` (`idSitio`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
     
 
 
@@ -310,9 +315,10 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbButacasPorSitioPorEvento` (
   `idEvento` INT NOT NULL,
   `idSitio` INT NOT NULL,
   `idSeccion` INT NOT NULL,
-  `idAsiento` VARCHAR(45) NOT NULL,
+  `idAsiento` VARCHAR(45) COLLATE utf8_spanish_ci NOT NULL,
   `Activo` TINYINT(1) NOT NULL DEFAULT 1, /*default activo 1, si se cancela una reserva debe pasar a 0*/
-  PRIMARY KEY (`idEvento`, `idSitio`,`idSeccion`,`idAsiento`));
+  PRIMARY KEY (`idEvento`, `idSitio`,`idSeccion`,`idAsiento`))
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
   
   
 /*-- -----------------------------------------------------
@@ -332,7 +338,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbEventoPorPromotor` (
     FOREIGN KEY (`TbEvento_idEvento`)
     REFERENCES `OG_Tickets`.`TbEvento` (`idEvento`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 /*-- -----------------------------------------------------
@@ -352,7 +359,8 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTransaccionPorEvento` (
     FOREIGN KEY (`TbEvento_idEvento`)
     REFERENCES `OG_Tickets`.`TbEvento` (`idEvento`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
 /*-- -----------------------------------------------------
@@ -360,22 +368,25 @@ CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbTransaccionPorEvento` (
 -- -----------------------------------------------------*/
 CREATE TABLE IF NOT EXISTS `OG_Tickets`.`TbSolicitudRegistroPromotor` (
   `idSolicitudRegistroPromotor` INT NOT NULL AUTO_INCREMENT,
-  `prefijo` VARCHAR(10) NOT NULL DEFAULT 'rq',
-  `appId` VARCHAR(100) GENERATED ALWAYS AS (concat(prefijo,idSolicitudRegistroPromotor)) VIRTUAL,
+  `prefijo` VARCHAR(10) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'rq',
   `Approved` TINYINT(1) NOT NULL DEFAULT 0,
   `PeddingCheck` TINYINT(1) NOT NULL DEFAULT 1,
-  `PrimerNombre` VARCHAR(45) NULL,
-  `SegundoNombre` VARCHAR(45) NULL,
-  `PrimerApellido` VARCHAR(45) NULL,
-  `SegundoApellido` VARCHAR(45) NULL,
-  `nombreJuridico` VARCHAR(45) NULL,
-  `Cedula` VARCHAR(15) NOT NULL,
-  `Email` VARCHAR(80) NOT NULL,
-  `password` VARCHAR(255) NOT NULL,
-  `AreaEspecializacion` VARCHAR(60) NOT NULL,
+  `PrimerNombre` VARCHAR(45) COLLATE utf8_spanish_ci NULL,
+  `SegundoNombre` VARCHAR(45) COLLATE utf8_spanish_ci NULL,
+  `PrimerApellido` VARCHAR(45) COLLATE utf8_spanish_ci NULL,
+  `SegundoApellido` VARCHAR(45) COLLATE utf8_spanish_ci NULL,
+  `nombreJuridico` VARCHAR(45) COLLATE utf8_spanish_ci NULL,
+  `Cedula` VARCHAR(15) COLLATE utf8_spanish_ci NOT NULL,
+  `Email` VARCHAR(80) COLLATE utf8_spanish_ci NOT NULL,
+  `password` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
+  `AreaEspecializacion` VARCHAR(60) COLLATE utf8_spanish_ci NOT NULL,
   `PrimerTelefono` DECIMAL(8) NOT NULL,
   `SegundoTelefono` DECIMAL(8) NULL,
-  `Ubicacion` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`idSolicitudRegistroPromotor`));
+  `Ubicacion` VARCHAR(255) COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`idSolicitudRegistroPromotor`))
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
+
 
 

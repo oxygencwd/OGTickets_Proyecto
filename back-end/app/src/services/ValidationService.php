@@ -28,7 +28,7 @@ class ValidationService{
     }
 
     /**
-     * Verifica si un stringToCheck es un email válido.
+     * Verifica si un string es un email valido
      *
      * @param string $email
      * @return bool
@@ -66,6 +66,11 @@ class ValidationService{
     }
 
     function isValidDate($date, $format = 'Y-m-d'){
+        $d = DateTime::createFromFormat($format, $date);
+        return $d && $d->format($format) == $date;
+    }
+
+    function isValidTime($date, $format = 'H:i:s'){
         $d = DateTime::createFromFormat($format, $date);
         return $d && $d->format($format) == $date;
     }
@@ -140,6 +145,66 @@ class ValidationService{
         return $result["data"][0]["count"] == 0;
 
     }//end -isEmailAvailable-
+
+
+    /**
+     * verifica que la fecha de creacion del evento sea al menos con 15 dias de anticipacion
+     * @param  string  $eventDate fecha de realizacion del evento inresada por el usuario
+     * @return boolean            
+     */
+    function isValidEventDate($eventDate){
+        $dateNow= new DateTime("now");
+        $eventDate= new DateTime($eventDate);
+        $interval = $dateNow->diff($eventDate);
+        
+        $result= $interval->format('%R%a');
+
+        if($result>=(13)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    /**
+     * Convierte a formato valido de hora un string
+     * @param  string $timeString string de hora
+     * @return string 
+     */
+    function getTime($timeString){
+            $date = new DateTime($timeString);
+            return  $date->format('H:i:s');
+    }
+
+    /**
+     * vefirica que  la ahora de inicio sea menor que la hora de finalizacion
+     * @param  $startHour
+     * @param  $endHour 
+     * @return boolean
+     */
+    function validateEventTimes($startHour, $endHour){
+       // $startHour= $this->getTime($this->$startHour);
+       // $endHour= $this->getTime($this->$endHour);
+       $startHour= new DateTime($startHour);
+       $startHour= $startHour->format('H:i:s');
+
+       $endHour= new DateTime($endHour);
+       $endHour= $endHour->format('H:i:s');
+
+        if($startHour < $endHour){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+
+
+
+
+
 
 
     

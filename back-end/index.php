@@ -69,6 +69,21 @@ $app->post(
     }
 );
 
+
+/*user/getAllUsers*/
+$app->get(
+    '/user/getAllUsers',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $userController= new App\Controllers\UserController();
+        $result= $userController->getAllUsers($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
 /*RUTAS DE CLIENTE*/
 ///client/validateClientInfo-> validar los datos del cliente
 $app->post(
@@ -90,6 +105,31 @@ $app->post(
         /** @var Response $response */
         $clientController= new App\Controllers\ClientController();
         $result= $clientController->registerClient($request);
+        return $response->withJson($result);
+    }
+);
+
+
+//getClientEvents
+$app->get(
+    '/client/getClientEvents/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $clientController= new App\Controllers\ClientController();
+        $result= $clientController->getClientEvents($request);
+        return $response->withJson($result);
+    }
+);
+
+//user/getUserById
+$app->get(
+    '/client/getClientById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $clientController= new App\Controllers\ClientController();
+        $result= $clientController->getClientById($request);
         return $response->withJson($result);
     }
 );
@@ -133,6 +173,30 @@ $app->post(
     }
 );
 
+//registerRequestById
+$app->get(
+    '/promoter/getRegisterRequestById/{id}',
+    function($request, $response){
+         /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->getRegisterRequestById($request);
+        return $response->withJson($result);
+    }
+);
+
+
+$app->get(
+    '/promoter/getPromoterById/{id}',
+    function($request, $response){
+         /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->getPromoterById($request);
+        return $response->withJson($result);
+    }
+);
+
 //promoter/getAllRequest
 $app->get(
     '/promoter/getAllRequest',
@@ -157,6 +221,149 @@ $app->get(
         return $response->withJson($result);
     }
 );
+
+
+//registerEvent
+$app->post(
+    '/event/registerEvent',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->registerEvent($request);
+        return $response->withJson($result);
+    }
+);
+
+
+//getTodayEvents
+$app->get(
+    '/events/getTodayEvents',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getTodayEvents($request);
+        return $response->withJson($result);
+    }
+);
+
+
+//events/getAllActiveEvents
+$app->get(
+    '/events/getAllActiveEvents',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getAllActiveEvents($request);
+        return $response->withJson($result);
+    }
+);
+
+
+//getEventsByCategory/' + eventType;
+$app->get(
+    '/events/getEventsByCategory/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getEventsByCategory($request);
+        return $response->withJson($result);
+    }
+);
+
+
+//getEventById
+$app->get(
+    '/events/getEventById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getEventById($request);
+        return $response->withJson($result);
+    }
+);
+
+//getEventTypeById
+$app->get(
+    '/events/getEventTypeById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getEventTypeById($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
+/*RUTAS DE SITIOS*/
+$app->get(
+    '/sites/getSiteList',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $sitesController= new App\Controllers\SitesController();
+        $result= $sitesController->getSiteList($request);
+        return $response->withJson($result);
+    }
+);
+
+//site/registerSite
+$app->post(
+    '/sites/registerSite',
+    function ($request, $response) {
+        /** @var Request $request */
+        /** @var Response $response */
+        $sitesController= new App\Controllers\SitesController();
+        $result= $sitesController->registerSite($request);
+        return $response->withJson($result);
+    }
+);
+
+
+$app->get(
+    '/sites/getSiteById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $sitesController= new App\Controllers\SitesController();
+        $result= $sitesController->getSiteById($request);
+        return $response->withJson($result);
+    }
+);
+
+
+//RUTAS DE TRANSCCIONES
+//transactions/getReservedSeats 
+$app->post(
+    '/transactions/getReservedSeats',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $transactionsController= new App\Controllers\TransactionsController();
+        $result= $transactionsController->getReservedSeats($request);
+        return $response->withJson($result);
+    }
+);
+
+$app->post(
+    '/transactions/saveTransaction',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $transactionsController= new App\Controllers\TransactionsController();
+        $result= $transactionsController->saveTransaction($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
 
 
 

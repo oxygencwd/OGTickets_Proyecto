@@ -84,30 +84,32 @@ select * from tbcajero;
 
 /*	INSERTS TABLA TIPO EVENTO*/
 INSERT INTO tbtipoevento
-(Nombre, Descripcion) 
+(Nombre, Descripcion, Foto) 
 VALUES 
-('Música', 'Es el arte de combinar los sonidos de la voz humana o de los instrumentos, o de unos y otros a la vez, para crear un determinado efecto.');
+('Música', 'Es el arte de combinar los sonidos de la voz humana o de los instrumentos, o de unos y otros a la vez, para crear un determinado efecto.', 'http://i1097.photobucket.com/albums/g342/David_Ness/music_zpsyb1wbkyy.jpg');
 
 INSERT INTO tbtipoevento
-(Nombre, Descripcion) 
+(Nombre, Descripcion, Foto) 
 VALUES 
-('Cultura', 'Es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada.');
+('Cultura', 'Es una especie de tejido social que abarca las distintas formas y expresiones de una sociedad determinada.', 'http://i1097.photobucket.com/albums/g342/David_Ness/culture_zpscl2piodt.jpg');
 
 INSERT INTO tbtipoevento
-(Nombre, Descripcion) 
+(Nombre, Descripcion, Foto) 
 VALUES 
-('Deportes', 'Es la actividad física pautada conforme a reglas y que se practica con finalidad recreativa, profesional o como medio de mejoramiento de la salud.');
+('Deportes', 'Es la actividad física pautada conforme a reglas y que se practica con finalidad recreativa, profesional o como medio de mejoramiento de la salud.', 'http://i1097.photobucket.com/albums/g342/David_Ness/sports_zpsmqwssdhn.jpg');
 
 INSERT INTO tbtipoevento
-(Nombre, Descripcion) 
+(Nombre, Descripcion, Foto) 
 VALUES 
-('Teatro', 'Es el arte que busca representar historias frente a una audiencia, combinando actuación, discurso, gestos, escenografía, música y sonido.');
+('Teatro', 'Es el arte que busca representar historias frente a una audiencia, combinando actuación, discurso, gestos, escenografía, música y sonido.', 'http://i1097.photobucket.com/albums/g342/David_Ness/theater_zpsl6wogkrk.jpg');
 
 INSERT INTO tbtipoevento
-(Nombre, Descripcion) 
+(Nombre, Descripcion, Foto) 
 VALUES 
-('Arte', 'Es el concepto que engloba todas las creaciones realizadas por el ser humano para expresar una visión sensible acerca del mundo, ya sea real o imaginario.');
+('Arte', 'Es el concepto que engloba todas las creaciones realizadas por el ser humano para expresar una visión sensible acerca del mundo, ya sea real o imaginario.', 'http://i1097.photobucket.com/albums/g342/David_Ness/art_zpskeq8lngd.jpg');
 
+
+[URL=http://s1097.photobucket.com/user/David_Ness/media/art_zpskeq8lngd.jpg.html][IMG][/IMG][/URL]
 SELECT * FROM tbtipoevento;
 
 /*INSERT EN LA TABLA EVENTO*/

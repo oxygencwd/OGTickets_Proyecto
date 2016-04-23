@@ -1,8 +1,10 @@
 angular.module('OGTicketsApp.services')
-.service('eventService', ['localStorageService','userService','$q','$http', function(localStorageService, userService, $q, $http) {
+.service('eventService', ['localStorageService','userService','$q','$http', 'dateService', function(localStorageService, userService, $q, $http, dateService) {
 
-	// Saves on "eventsList" all the events saved on the database, (active and inactive events.)
-    var eventsList = localStorageService.getAll("eventsList");
+	//Saves on "eventsList" all the events saved on the database, (active and inactive events.)
+    var eventsList = [];
+    var eventsByTypeList = [];
+
 
     //Genera un contador de id
     var eventId= localStorageService.setIdCounter("eventIdCounter", 4);
@@ -10,42 +12,70 @@ angular.module('OGTicketsApp.services')
 
     //active events= only active events can be display to clientes
     var activeEvents= function (){
-        result = eventsList.filter(function (item) {
-            return item.active == true;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getAllActiveEvents';
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result;
+        return defer.promise;
     };
+
+
 
     //retrieves the whole event object by its id
     //Param is the event id
-    var retrieveEvent = function (eId){
-        result = eventsList.filter(function (item) {
-            return item.id == eId;
+    var getEventById = function (pId){
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getEventById/' + pId;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result[0];
+        return defer.promise;
     };
 
     //toma los eventos y los filtra paa obtener solo los de fecha actual
     var todayEvents= function (){
-        var date= new Date();
-            date= getParseDate(date);
-        result = eventsList.filter(function (item) {
-            var itemDate= new Date(item.date);
-                itemDate= getParseDate(itemDate);
-            return itemDate == date;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getTodayEvents';
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            console.error(error, status);
         });
-        return result;
+        return defer.promise;
     };
 
     //lista de eventos pertenecientes a un tipo de evento
     //params el id del tipo de evento solicitado
-    var eventsByType= function (typeId){
-        active= activeEvents();
-        result = active.filter(function (item) {
-            return item.eventType == typeId;
+    var eventsByType= function (eventType){
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getEventsByCategory/' + eventType;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result;
-    };
+        return defer.promise;
+    }
 
     //llevar de string a date las fechas
     var getParseDate= function (date) {
@@ -57,22 +87,29 @@ angular.module('OGTicketsApp.services')
         return parseDate;
     };
 
-    //lista de  todos tipos de evento activos
+    //solicita a la base de datos la lista de todos los tipos de eventos que estan activos
     var getEventTypeList= function () {
-        var allTypes= localStorageService.getAll("eventTypeList");
-        result = allTypes.filter(function (item) {
-            return item.active == true;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getAllEventTypes';
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            console.error(error, status);
         });
-        return result;
+        return defer.promise;
     };
 
     //evento devuelve uj tipo de evento identificado por el id parametro
-    var getEventType= function (typeId) {
-        var typeList= getEventTypeList();
-        result = typeList.filter(function (item) {
-            return item.id == typeId;
-        });
-        return result[0];
+    var getEventType= function (eventType) {
+        // var typeList= getEventTypeList();
+        // result = typeList.filter(function (item) {
+        //     return item.id == eventType;
+        // });
+        // return result[0];
 
     };
 
@@ -89,18 +126,24 @@ angular.module('OGTicketsApp.services')
      * @param  event
      * @return promise
      */
-    var registerEvent= function (event) {
+    var registerEvent= function (event, userId, userType) {
+        
         var objEvent= {
-            "eventType": event.eventType ,
-            "siteId": event. ,
-            "name": event. ,
-            "description": event. ,
-            "date": event. ,
-            "startHour": event. ,
-            "endHour": event. ,
-            "ticketsPrice": event. ,
-            "image": event. ,
-        }
+            "eventType": event.eventType,
+            "siteId": event.siteId,
+            "name": event.name,
+            "description": event.description,
+            "date": dateService.setDateTimeFormat(event.date),
+            "startHour": dateService.setTimeFormat(event.startHour),
+            "endHour": dateService.setTimeFormat(event.endHour),
+            "ticketsPrice": event.ticketsPrice,
+            "image": event.image,
+            "userId": userId,
+            "userType": userType
+        };  
+
+       
+        
         var defer= $q.defer();
         var url= 'back-end/index.php/event/registerEvent';
 
@@ -110,7 +153,7 @@ angular.module('OGTicketsApp.services')
         })
         .error(function(error, status) {
         defer.reject(error);
-        $log.error(error, status);
+        console.error(error, status);
         });
 
         return defer.promise;
@@ -131,7 +174,7 @@ angular.module('OGTicketsApp.services')
 
 	return{
 		//setCreditCard: setCreditCard,
-		retrieveEvent: retrieveEvent,
+		getEventById: getEventById,
         activeEvents:activeEvents,
         getEventTypeList:getEventTypeList,
         todayEvents:todayEvents,

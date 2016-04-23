@@ -7,8 +7,44 @@ angular.module('OGTicketsApp.controllers')
 		$location.path('/category/' + categoryId);
 	};
 
-	$scope.eventsList= eventService.activeEvents();
+	$scope.eventsList= [];
+	$scope.eventTypesList= [];
 
-	$scope.todayEvents= eventService.todayEvents();
+
+
+	eventService.activeEvents()
+		.then(function(data) {
+			$scope.eventsList= data.data;		
+		})
+		.catch(function(error) {
+			console.error(error);
+		});
+
+
+	eventService.todayEvents()
+		.then(function(data) {
+			$scope.todayEvents= data.data;		
+		})
+		.catch(function(error) {
+			console.error(error);
+		});
+
+	eventService.getEventTypeList()
+		.then(function(data) {
+			$scope.eventTypesList= data.data;		
+		})
+		.catch(function(error) {
+			console.error(error);
+		});
+
+
+
+
+	
+
+
+
+
+
  
 }]); //end -controller-

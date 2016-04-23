@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('eventTypeService', ['localStorageService', function(localStorageService) {
+.service('eventTypeService', ['localStorageService','$q','$log', '$http', function(localStorageService,$q,$log,$http) {
 
     //Llama a todos los tipos de eventos guardados en eventTypeList.
 	var eventTypes= localStorageService.getAll("eventTypeList");
@@ -43,6 +43,21 @@ angular.module('OGTicketsApp.services')
         return result[0];
     };
 
+    var getEventTypeById= function(pId) {
+        var defer= $q.defer();
+        var url= 'back-end/index.php/events/getEventTypeById/' + pId;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
+        });
+        return defer.promise;
+    };
+
     var replaceEventType= function(eventTypeId, newEventType){
         var newEventTypeList= removeOldEventType(eventTypeId);
         newEventTypeList.push(newEventType);
@@ -61,7 +76,8 @@ angular.module('OGTicketsApp.services')
 		eventTypeRegister:eventTypeRegister,
         retrieveEventType:retrieveEventType,
         replaceEventType:replaceEventType,
-        removeOldEventType:removeOldEventType
+        removeOldEventType:removeOldEventType,
+        getEventTypeById:getEventTypeById
 	};
 
 }]);

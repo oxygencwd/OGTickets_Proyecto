@@ -52,8 +52,9 @@
 		            <div class="form-group">
 		            	<div class="col-sm-6">
 		            		<label for="eventDate">Fecha del evento*</label>
-		            		<input type="date" class="form-control" name="eventDate" id="eventDate" ng-model="newEvent.date" ng-model-options="{ updateOn:'blur'}" required>
-		            		<sub ng-show="eventRegistrationForm.eventDate.$invalid && eventRegistrationForm.eventDate.$touched">Fecha del evento requerida</sub>
+		            		<input type="date" class="form-control" name="eventDate" id="eventDate" ng-model="newEvent.date" ng-model-options="{ updateOn:'blur'}" min="{{minDate | date:'yyyy-MM-dd'}}" required>
+		            		<sub ng-show="eventRegistrationForm.eventDate.$error.required && eventRegistrationForm.eventDate.$touched">Fecha del evento requerida</sub>
+		            		<sub ng-show="eventRegistrationForm.eventDate.$error.min && eventRegistrationForm.eventDate.$touched">No se permite registrar eventos con menos de 15 días de anticipación o con fechas pasadas.</sub>
 		            	</div>
 		            </div> <!-- form group end -->
 		        </div>
@@ -83,7 +84,7 @@
 		        <div class="col-sm-10 col-sm-offset-1">
 		            <div class="form-group col-sm-6">
 		            	<label>Subir fotografía</label>
-		            	<input type="file" ng-model="newEvent.image">
+		            	<input filepicker type="filepicker" data-fp-apikey="AP3Zl3E3sQxCSkz8zv0TAz" data-fp-container="modal" data-fp-mimetype="image/*" data-fp-maxsize="2097152" data-fp-services="COMPUTER,FACEBOOK,INSTAGRAM,URL" data-fp-button-class="fp__btn" data-fp-services="{{services}}" on-success="savePicture(event.fpfile.url)"/>
 		            	<sub>Max 2mb</sub>
 		            </div> <!-- form group end -->
 		        </div>
@@ -103,4 +104,20 @@
 	</div>
 </div>
 
-
+<!-- alert Modal -->
+<div id="eventRegSuccessModal" class="modal fade alert-modal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>    
+      </div>
+      <div class="modal-body">
+        <p class="text-center">{{success}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-clear" data-dismiss="modal" ng-click="goProfile()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

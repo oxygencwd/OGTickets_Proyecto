@@ -24,14 +24,13 @@ angular.module('OGTicketsApp.services')
             "dateBirth": dateService.setDateTimeFormat(objClient.dateBirth),
             "phone": objClient.phone,
             "genre": objClient.genre,
-            "picture": objClient.picture
+            "image": objClient.image
         };
         var id;
         var defer= $q.defer();
         
         validateClientInfo(objClient)
         .then(function(data) {
-            console.log(data);
             if(data.valid){
                 validateUserInfo(objClient)
                 .then(function(data) {
@@ -131,11 +130,34 @@ angular.module('OGTicketsApp.services')
 
     };
 
-    var retrieveClient = function (cId){
-        result = clients.filter(function (item) {
-            return item.id == cId;
+    var retrieveClient = function (pId){
+         var defer= $q.defer();
+        var url= 'back-end/index.php/client/getClientById/' + pId;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result[0];
+        return defer.promise;
+    };
+
+    var getClientEvents= function(userId) {
+        var defer= $q.defer();
+        var url= 'back-end/index.php/client/getClientEvents/' + userId;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
+        });
+        return defer.promise;
     };
 
     var replaceClient= function(clientId, newClient){
@@ -155,6 +177,7 @@ angular.module('OGTicketsApp.services')
 		clientRegister:clientRegister,
         retrieveClient:retrieveClient,
         replaceClient:replaceClient,
-        removeOldClient:removeOldClient
+        removeOldClient:removeOldClient,
+        getClientEvents:getClientEvents
 	};
 }]);

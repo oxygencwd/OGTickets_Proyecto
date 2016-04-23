@@ -21,6 +21,121 @@ class ClientService{
         $this->dateFormat= new DateTimeService();
 	}
 
+
+	//getClientEvents
+	public function getClientEvents($id){  
+        $result=[];
+        $id= trim($id);
+
+        if($this->validation->isValidInt($id)){
+            $id= intval($id);
+
+            $query= "SELECT tbusuario.idUsuario, 
+tbtransaccion.idTransaccion as idTransaccion, tbtransaccion.Codigo, tbtransaccion.CantidadEspacios,
+tbevento.Nombre as eventName, tbevento.FechaEvento as eventDate, tbevento.HoraInicio, tbevento.Foto
+				FROM tbusuario
+				INNER JOIN tbcliente
+				INNER JOIN tbtransaccionporcliente
+				INNER JOIN tbtransaccion
+				INNER JOIN tbtransaccionporevento
+				INNER JOIN tbevento
+				ON tbusuario.idUsuario = tbcliente.TbUsuario_idUsuario
+				AND tbcliente.idCliente = tbtransaccionporcliente.TbCliente_idCliente
+				AND tbtransaccionporcliente.TbTransaccion_idTransaccion = tbtransaccion.idTransaccion
+				AND tbtransaccion.idTransaccion= tbtransaccionporevento.TbTransaccion_idTransaccion
+				AND tbtransaccionporevento.TbEvento_idEvento = tbevento.idEvento
+				WHERE tbusuario.idUsuario= :id";
+
+            // Query params
+            $params = [":id" => $id];
+
+            $getClientEventsResult = $this->storage->query($query, $params);
+
+            $foundRecord = array_key_exists("meta", $getClientEventsResult) &&
+                $getClientEventsResult["meta"]["count"] > 0;
+
+            if ($foundRecord) {
+
+                $result["message"] = "Client events found";
+                $eventsList = $getClientEventsResult["data"];
+
+                foreach ($eventsList as $event) {
+                    $result["data"][] = [
+                        "userId" => $event["idUsuario"],
+                        "transactionId" => $event["idTransaccion"],
+                        "transactionCode" => $event["Codigo"],
+                        "seatsAmount" => $event["CantidadEspacios"],
+                        "eventName" => $event["eventName"],
+                        "date" => $event["eventDate"],
+                        "startHour" => $event["HoraInicio"],
+                        "image" => $event["Foto"]
+                    ];
+                } 
+            } else {
+                $result["message"] = "Client events not found";
+                $result["error"] = true;
+            }
+        }else{
+            $result["error"] = true;
+            $result["message"] = "Id is invalid";
+        }
+        return $result;
+    }//end -getClientEvents-
+	
+	
+	
+	
+
+	//getClientById($id)
+     public function getClientById($id){  
+        $result=[];
+        $id= trim($id);
+
+        if($this->validation->isValidInt($id)){
+            $id= intval($id);
+
+            $query= "SELECT tbusuario.idUsuario as userId, tbusuario.PrimerNombre, tbusuario.SegundoNombre, tbusuario.PrimerApellido, tbusuario.SegundoApellido, 
+tbcliente.Foto
+				FROM tbusuario
+				INNER JOIN tbcliente
+				ON tbusuario.idUsuario = tbcliente.TbUsuario_idUsuario
+				WHERE tbusuario.idUsuario = :id";
+
+            // Query params
+            $params = [":id" => $id];
+
+            $getClientResult = $this->storage->query($query, $params);
+
+            $foundRecord = array_key_exists("meta", $getClientResult) &&
+                $getClientResult["meta"]["count"] > 0;
+
+            if ($foundRecord) {
+
+                $result["message"] = "Client found";
+                $clientList = $getClientResult["data"];
+
+                foreach ($clientList as $client) {
+                    $result["data"][] = [
+                        "userId" => $client["userId"],
+                        "firstName" => $client["PrimerNombre"],
+                        "secondName" => $client["SegundoNombre"],
+                        "lastName" => $client["PrimerApellido"],
+                        "secondLastName" => $client["SegundoApellido"],
+                        "image" => $client["Foto"]
+                    ];
+                } 
+            } else {
+                $result["message"] = "Client not found";
+                $result["error"] = true;
+            }
+        }else{
+            $result["error"] = true;
+            $result["message"] = "Id is invalid";
+        }
+        return $result;
+    }//end -getClientById-
+	
+
 	/*validateClientInfo($dateBirth, $phone, $genre);*/
 	public function validateClientInfo($dateBirth, $phone, $genre){
 		$result=[];

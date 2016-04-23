@@ -12,6 +12,8 @@
     <link rel="import" href="logic/util/bower_components/google-map/google-map.html">
     <link rel="shortcut icon" href="images/logos/title.ico" type="image/x-icon">
 
+	<script src="//api.filepicker.io/v2/filepicker.js"></script>
+	
      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,9 +41,9 @@
 		              <ul class="nav navbar-nav">
 		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut01'" ng-href="#/admin"><span class="user-icon glyphicon glyphicon-user"></span>Administrar</a></li>	
 
-		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut02'" ng-href="#/client-profile/{{appLoggedUser.id}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.name}}</a></li>
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut02'" ng-href="#/client-profile/{{appLoggedUser.userId}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.navBarName}}</a></li>
 
-		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut03'" ng-href="#/promoter-profile/{{appLoggedUser.id}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.name}}</a></li>
+		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut03'" ng-href="#/promoter-profile/{{appLoggedUser.userId}}"><span class="user-icon glyphicon glyphicon-user"></span>{{appLoggedUser.navBarName}}</a></li>
 
 		              	<li><a ng-show="appLoggedUser.isConnected && appLoggedUser.userType == 'ut04'" ng-href="#/redeem-tickets"><span class="user-icon glyphicon glyphicon-tasks"></span>Redimir tiquetes</a></li>
 
@@ -119,8 +121,6 @@
 		</div> <!-- container --> 
 	</footer>
 
-
-
 	<script src="logic/util/angular.min.js"></script>
     <script src="logic/util/angular-route.min.js"></script>
     <script src="logic/util/angular-animate.min.js"></script>
@@ -128,6 +128,8 @@
     <script src="logic/util/angular-cookies.min.js"></script>
     <script src="logic/util/jquery.min.js"></script>
     <script src="logic/util/bootstrap.min.js"></script>
+    <script src="logic/util/angular_filepicker.min.js"></script>
+    
 
     <!-- Router -->
     <script src="logic/appRoute.js"></script>
@@ -146,7 +148,6 @@
     <script src="logic/controllers/clientSignupController.js"></script>
     <script src="logic/controllers/promotorSignupController.js"></script>
     <script src="logic/controllers/cashierSignupController.js"></script>
-	<script src="logic/controllers/cashierEditController.js"></script>
     <script src="logic/controllers/promoterProfileController.js"></script>
     <script src="logic/controllers/redeemTicketsController.js"></script>
     <script src="logic/controllers/allSitesController.js"></script>
@@ -155,7 +156,6 @@
     <script src="logic/controllers/allEventTypesController.js"></script>
     <script src="logic/controllers/eventTypeController.js"></script>
     <script src="logic/controllers/eventTypeRegistrationController.js"></script>
-    <script src="logic/controllers/adminController.js"></script>
     <script src="logic/controllers/promoterRequest.js"></script>
 
     <!-- Directives -->
@@ -167,6 +167,7 @@
     <script src="logic/directives/ogEstadio.js"></script>
     <script src="logic/directives/ogPalacio.js"></script>
     <script src="logic/directives/ogTeatro.js"></script>
+    <script src="logic/directives/myfilepicker.js"></script>
 
     <!-- Filters -->
     <script src="logic/filters/range.js"></script>
@@ -189,7 +190,12 @@
     <script src="logic/services/dateService.js"></script> 
     <script src="logic/services/passwordService.js"></script> 
 
+
+
     
+
+ 
+
      
     <!-- php -->
 </body>

@@ -1,18 +1,41 @@
 angular.module('OGTicketsApp.services')
-.service('siteService', ['localStorageService', 'eventService', function(localStorageService, eventService) {
+.service('siteService', ['localStorageService', '$q', '$http', 'eventService', function(localStorageService, $q, $http, eventService) {
 
 	var sites= localStorageService.getAll("siteList");
 
-	var siteId= localStorageService.setIdCounter("siteIdCounter", 4);
+	//var siteId= localStorageService.setIdCounter("siteIdCounter", 4);
 
     //lista de  todos sitios activos
     var getSiteList= function () {
-        var allSites= sites;
-        result = allSites.filter(function (item) {
-            return item.active == true;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/sites/getSiteList';
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
         });
-        return result;
+        return defer.promise;
     };
+
+
+    var getSiteById= function(pId) {
+        var defer= $q.defer();
+        var url= 'back-end/index.php/sites/getSiteById/' + pId;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
+        });
+        return defer.promise;
+    }
 
     //vefificar si el sitio existe
 	var siteExists= function (site) {
@@ -23,23 +46,23 @@ angular.module('OGTicketsApp.services')
 	}; 
     //registrar el sitio
     var registerSite= function (site) {
-    	var saved= siteExists(site);
-    	var result={};
+    	var defer= $q.defer();
+        var url= 'back-end/index.php/sites/registerSite';
 
-    	if(saved.length>0){
-    		result.value=false;
-    		result.msj="Site already exists";
-    	}else{
-    		site.id= "si" + siteId;
-    		sites.push(site);
-    		localStorageService.set("siteList", sites);
-    		siteId++;
-    		localStorageService.setId("siteIdCounter", siteId);
-    		result.value= true;
-    		result.siteId= site.id;
-    	};
-    	return result;
+        $http.post(url, site)
+        .success(function(data, status) {
+            // console.info(data);
+            defer.resolve(data);
+        })
+        .error(function(error, status) {
+            // console.info(error);
+            defer.reject(error);
+            $log.error(error, status);
+        });
+
+        return defer.promise;
     };
+
     //devulve una lista con los sitios activos
     var activeSites= function () {
         var result= sites.filter(function (item) {
@@ -85,7 +108,7 @@ angular.module('OGTicketsApp.services')
 // puntos de acceso
 	return{
         getSiteList:getSiteList,
-        sites:sites,
+        getSiteById:getSiteById,
 		registerSite:registerSite,
         getEventSite:getEventSite,
         retrieveSite:retrieveSite,

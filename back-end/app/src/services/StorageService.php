@@ -33,6 +33,9 @@ class StorageService {
 
         // Le solicitamos a la conexión que nos notifique de todos los errores.
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->pdo->exec("SET CHARACTER SET utf8");
+
+
 
          /**
          * Sin la siguiente query, tendremos errores en la paginación, ya que PDO al usar `execute` asume que

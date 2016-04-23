@@ -1,5 +1,10 @@
 angular.module('OGTicketsApp.controllers')
-.controller('promotorSignupController', ['$scope','localStorageService', '$timeout','$window', 'formService','promotorService', '$location','$routeParams', function ($scope,localStorageService, $timeout, $window, formService, promotorService, $location,$routeParams) {
+.controller('promotorSignupController', ['$scope','localStorageService', '$timeout','$window', 'formService','promotorService', '$location','$routeParams', 'dateService', function ($scope,localStorageService, $timeout, $window, formService, promotorService, $location,$routeParams,dateService) {
+
+	var resquestId = $routeParams.requestId;
+	var resquestPromotor = promotorService.getRegisterRequestById(resquestId);
+	
+	$scope.newPromotor = resquestPromotor;
 
 	$scope.newPromotor={};
 	$scope.error="";
@@ -14,12 +19,25 @@ angular.module('OGTicketsApp.controllers')
 		}
 	];
 
-	var today = new Date();
-	var minAge = 18;
-	var maxAge = 100;
-	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
-	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
 
+	$scope.typePersonNumber=null;
+
+	var promise=promotorService.getRegisterRequestById(resquestId);
+	promise.then(function(data) {
+		$scope.currentRequest= data.data[0];
+		if ($scope.currentRequest.typePerson=='personaJuridica'){
+			$scope.newPromotor.typePerson='personaJuridica';
+
+		}else{
+			$scope.newPromotor.typePerson='personaFisica';
+		};
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
+
+	$scope.minAge = dateService.minimunAge18;
+	$scope.maxAge = dateService.maximunAge;
 
 	//Funcion del boton de registro promotor, agarra todos los datos del formulario.
 	$scope.promotorRegister=function () {
@@ -36,12 +54,19 @@ angular.module('OGTicketsApp.controllers')
 		}
 	}; 
 
+	$scope.aceptRequest=function (){
+
+	};
+
+	$scope.dismissRequest=function (){
+
+	};
+
 	//Funcion del boton de solicitud de registro de promotor, recolecta los datos que ingreso el usuario y los envia hacia el servicio.
 	$scope.sendRequest= function () {
 		promotorService.registerRequest($scope.newPromotor)
 		.then(function(data) {
 			if(data.valid){
-				console.log(data);
 				$scope.newPromotor={};
 				formService.clear($scope.formNewPromotor);
 				$scope.success= "Solicitud enviada con éxito";
@@ -53,7 +78,7 @@ angular.module('OGTicketsApp.controllers')
 					$scope.success="";
 				}, 1500);	
 			}else{
-				$scope.error="Correo eléctrónico ya utilizado en el sisitema ó datos inválidos";
+				$scope.error="Correo eléctrónico ya utilizado en el sistema ó datos inválidos";
 			}
 		})
 		.catch(function() {
