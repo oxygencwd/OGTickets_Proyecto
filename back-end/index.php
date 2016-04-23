@@ -197,8 +197,6 @@ $app->get(
     }
 );
 
-
-
 //promoter/getAllRequest
 $app->get(
     '/promoter/getAllRequest',
@@ -339,6 +337,19 @@ $app->get(
     }
 );
 
+
+//RUTAS DE TRANSCCIONES
+//transactions/getReservedSeats 
+$app->post(
+    '/transactions/getReservedSeats',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $transactionsController= new App\Controllers\TransactionsController();
+        $result= $transactionsController->getReservedSeats($request);
+        return $response->withJson($result);
+    }
+);
 
 
 
