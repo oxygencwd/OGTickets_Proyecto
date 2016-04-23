@@ -20,6 +20,58 @@ class SitesService {
     }
 
 
+    public function getSiteById($id){  
+        $result=[];
+        $id= trim($id);
+
+        if($this->validation->isValidInt($id)){
+            $id= intval($id);
+
+            $query= "SELECT idSitio, Nombre, PrimerTelefono, SegundoTelefono, Capacidad, UbicacionLongitud, UbicacionLatitud, Direccion, Foto
+                FROM tbsitio
+                WHERE idSitio= :id";
+
+            // Query params
+            $params = [":id" => $id];
+
+            $getSiteResult = $this->storage->query($query, $params);
+
+            $foundRecord = array_key_exists("meta", $getSiteResult) &&
+                $getSiteResult["meta"]["count"] > 0;
+
+            if ($foundRecord) {
+
+                $result["message"] = "Site found";
+                $siteList = $getSiteResult["data"];
+
+                foreach ($siteList as $site) {
+                    $result["data"][] = [
+                        "id" => $site["idSitio"],
+                        "name" => $site["Nombre"],
+                        "phoneOne" => $site["PrimerTelefono"],
+                        "phoneTwo" => $site["SegundoTelefono"],
+                        "capacity" => $site["Capacidad"],
+                        "longitude" => $site["UbicacionLongitud"],
+                        "latitude" => $site["UbicacionLatitud"],
+                        "address" => $site["Direccion"],
+                        "image" => $site["Foto"]
+                    ];
+                } 
+            } else {
+                $result["message"] = "Event not found";
+                $result["error"] = true;
+            }
+        }else{
+            $result["error"] = true;
+            $result["message"] = "Id is invalid";
+        }
+        return $result;
+    }//end -getSiteById-
+
+
+
+
+
     public function getSiteList(){
      	$result=[];
      	$query= "SELECT idSitio, Nombre 

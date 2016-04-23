@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.services')
-.service('seatsService', ['siteService', 'eventService', 'localStorageService', function(siteService, eventService, localStorageService) {
+.service('seatsService', ['siteService', 'eventService', '$http', '$q', 'localStorageService', function(siteService, $http, $q, eventService, localStorageService) {
 
 	var reservedSeatxEventxSite= localStorageService.getAll("reservedSeatxEventxSite");
 
@@ -28,12 +28,34 @@ angular.module('OGTicketsApp.services')
 	};
 
 	var getReserved= function (zoneId, siteId, eventId) {
-		result = reservedSeatxEventxSite.filter(function (item) {
-		return item.eventId == eventId && item.siteId == siteId && item.Zoneid== zoneId;
-		});
-		var idsList= getReservedIds(result);
-		return idsList;
+		var data={
+			"zoneId": zoneId,
+			"siteId": siteId,
+			"eventId":eventId
+		};
+		var defer= $q.defer();
+
+		var url= 'back-end/index.php/events/getReservedSeats';
+
+        $http.get(url)
+        .success(function(data) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
+        });
+
+
+		return defer.promise;
+		// result = reservedSeatxEventxSite.filter(function (item) {
+		// return item.eventId == eventId && item.siteId == siteId && item.Zoneid== zoneId;
+		// });
+		// var idsList= getReservedIds(result);
+		// return idsList;
     };
+
+
 
     var getReservedIds= function (array) {
     	var i=0,

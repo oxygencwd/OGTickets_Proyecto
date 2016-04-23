@@ -264,6 +264,18 @@ $app->post(
 );
 
 
+$app->get(
+    '/sites/getSiteById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $sitesController= new App\Controllers\SitesController();
+        $result= $sitesController->getSiteById($request);
+        return $response->withJson($result);
+    }
+);
+
+
 
 
 
