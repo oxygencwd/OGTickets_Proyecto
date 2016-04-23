@@ -16,6 +16,13 @@ class SitesController{
         $this->sitesService = new SitesService();
     }
 
+
+    public function getSiteById($request) {
+        /** @var Request $request */
+        $id = $request->getAttribute("id", null);
+        return $this->sitesService->getSiteById($id);
+    }
+
     /**
      * retorna todos los toos de evento registrados
      * @return array
