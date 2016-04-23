@@ -89,9 +89,6 @@ angular.module('OGTicketsApp.services')
         return result[0];
     };
 
-
-
-     
     //retrieves the promotor who has the id in the Param
     var getRegisterRequestById = function (pId){
         var defer= $q.defer();
