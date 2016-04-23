@@ -69,6 +69,21 @@ $app->post(
     }
 );
 
+
+/*user/getAllUsers*/
+$app->get(
+    '/user/getAllUsers',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $userController= new App\Controllers\UserController();
+        $result= $userController->getAllUsers($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
 /*RUTAS DE CLIENTE*/
 ///client/validateClientInfo-> validar los datos del cliente
 $app->post(
@@ -90,6 +105,19 @@ $app->post(
         /** @var Response $response */
         $clientController= new App\Controllers\ClientController();
         $result= $clientController->registerClient($request);
+        return $response->withJson($result);
+    }
+);
+
+
+//user/getUserById
+$app->get(
+    '/client/getClientById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $clientController= new App\Controllers\ClientController();
+        $result= $clientController->getClientById($request);
         return $response->withJson($result);
     }
 );
@@ -141,6 +169,18 @@ $app->get(
         /** @var Response $response */
         $promoterController= new App\Controllers\PromoterController();
         $result= $promoterController->getRegisterRequestById($request);
+        return $response->withJson($result);
+    }
+);
+
+
+$app->get(
+    '/promoter/getPromoterById/{id}',
+    function($request, $response){
+         /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->getPromoterById($request);
         return $response->withJson($result);
     }
 );
@@ -237,6 +277,18 @@ $app->get(
     }
 );
 
+//getEventTypeById
+$app->get(
+    '/events/getEventTypeById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getEventTypeById($request);
+        return $response->withJson($result);
+    }
+);
+
 
 
 /*RUTAS DE SITIOS*/
@@ -259,6 +311,18 @@ $app->post(
         /** @var Response $response */
         $sitesController= new App\Controllers\SitesController();
         $result= $sitesController->registerSite($request);
+        return $response->withJson($result);
+    }
+);
+
+
+$app->get(
+    '/sites/getSiteById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $sitesController= new App\Controllers\SitesController();
+        $result= $sitesController->getSiteById($request);
         return $response->withJson($result);
     }
 );

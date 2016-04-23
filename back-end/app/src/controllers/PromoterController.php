@@ -136,6 +136,13 @@ class PromoterController{
         return $this->promoterService->getRegisterRequestById($id);
     }
 
+    //getPromoterById
+    public function getPromoterById($request) {
+        /** @var Request $request */
+        $id = $request->getAttribute("id", null);
+        return $this->promoterService->getPromoterById($id);
+    }
+
 
 
 

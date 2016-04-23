@@ -82,16 +82,24 @@ angular.module('OGTicketsApp.services')
         return defer.promise;
     }
 
+    //promoter/getPromoterById
     var retrievePromotor = function (pId){
-        result = promotors.filter(function (item) {
-            return item.id == pId;
+        var defer= $q.defer();
+        var url= 'back-end/index.php/promoter/getPromoterById/' + pId;
+
+        $http.get(url)
+        .success(function(data, status) {
+            console.info(data),
+            defer.resolve(data);
+        })
+            .error(function(error, status) {
+            defer.reject(error);
+            console.error(error, status);
         });
-        return result[0];
+
+        return defer.promise;
     };
 
-
-
-     
     //retrieves the promotor who has the id in the Param
     var getRegisterRequestById = function (pId){
         var defer= $q.defer();

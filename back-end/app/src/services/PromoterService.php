@@ -21,6 +21,74 @@ class PromoterService{
         $this->dateFormat= new DateTimeService();
 	}
 
+
+
+
+	//getPromoterById
+	public function getPromoterById($id){
+		$result=[];
+		$id= trim($id);
+
+		if($this->validation->isValidInt($id)){
+			$id= intval($id);
+
+			$query=  "SELECT tbusuario.idUsuario as userId, tbusuario.PrimerNombre, tbusuario.SegundoNombre, tbusuario.PrimerApellido, tbusuario.SegundoApellido,
+tbpromotor.idPromotor as idPromotor, tbpromotor.nombreJuridico, tbpromotor.AreaEspecializacion,
+tbevento.idEvento as idEvento, tbevento.Nombre as nombreEvento, tbevento.FechaEvento, tbevento.Foto
+			FROM tbusuario
+			INNER JOIN tbpromotor
+			INNER JOIN tbeventoporpromotor
+			INNER JOIN tbevento
+			ON tbusuario.idUsuario = tbpromotor.TbUsuario_idUsuario
+			AND tbpromotor.idPromotor = tbeventoporpromotor.TbPromotor_idPromotor
+			AND tbeventoporpromotor.TbEvento_idEvento = tbevento.idEvento
+			WHERE tbusuario.idUsuario= :id";
+		
+			// Query params
+		    $params = [":id" => $id];
+
+		    $getRequestResult = $this->storage->query($query, $params);
+
+		    $foundRecord = array_key_exists("meta", $getRequestResult) &&
+	            $getRequestResult["meta"]["count"] > 0;
+
+	        if ($foundRecord) {
+	            $result["message"] = "Promoter info request found";
+	            $promoterInfo = $getRequestResult["data"];
+
+
+	            foreach ($promoterInfo as $promoter) {
+	            	$result["data"][] = [
+	                	"userId" => $promoter["userId"],
+	                	"firstname" => $promoter["PrimerNombre"],
+	                	"secondname" => $promoter["SegundoNombre"],
+	                	"firstlastname" => $promoter["PrimerApellido"],
+	                	"secondlastname" => $promoter["SegundoApellido"],
+	                	"promoterId" => $promoter["idPromotor"],
+	                	"name" => $promoter["nombreJuridico"],
+	                	"specializationArea" => $promoter["AreaEspecializacion"],
+	                	"event.id" => $promoter["idEvento"],
+	                	"event.name" => $promoter["nombreEvento"],
+	                	"event.date" => $promoter["FechaEvento"],
+	                	"event.image" => $promoter["Foto"]
+                	];
+	            } 
+
+	        } else {
+	            $result["message"] = "Promoter register request not found";
+	            $result["error"] = true;
+	        }
+		}else{
+			$result["error"] = true;
+            $result["message"] = "Id is invalid";
+		}
+		return $result;
+	}//getPromoterById
+
+
+
+
+
 	/**
 	 * Buscar una solicitud de registro como promotor por id
 	 */
@@ -84,7 +152,7 @@ class PromoterService{
             $result["message"] = "Id is invalid";
 		}
 		return $result;
-	}
+	}//getById
 
 
 

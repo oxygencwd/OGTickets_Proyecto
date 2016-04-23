@@ -21,6 +21,22 @@ angular.module('OGTicketsApp.services')
         return defer.promise;
     };
 
+
+    var getSiteById= function(pId) {
+        var defer= $q.defer();
+        var url= 'back-end/index.php/sites/getSiteById/' + pId;
+
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
+        });
+        return defer.promise;
+    }
+
     //vefificar si el sitio existe
 	var siteExists= function (site) {
 		var siteExists= sites.filter(function (item) {
@@ -92,6 +108,7 @@ angular.module('OGTicketsApp.services')
 // puntos de acceso
 	return{
         getSiteList:getSiteList,
+        getSiteById:getSiteById,
 		registerSite:registerSite,
         getEventSite:getEventSite,
         retrieveSite:retrieveSite,
