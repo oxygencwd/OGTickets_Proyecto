@@ -29,13 +29,6 @@ angular.module('OGTicketsApp.controllers')
         $location.path('/site-profile-edit/'+siteId);
     };
 
-    
-
-    
-
-
-
-
 	//retrieves site with the id given in the param
     var retrieveSite = function (sId){
         result = siteList.filter(function (item) {
@@ -43,9 +36,7 @@ angular.module('OGTicketsApp.controllers')
         });
         return result[0];
     };
-
-
-
+    
 	var getSiteList = function (){
 		var promise = siteService.getSiteList();
 		promise.then(function (data){
