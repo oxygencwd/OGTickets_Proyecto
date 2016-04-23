@@ -7685,4 +7685,481 @@ Array
 ---- 
 23/04/16 06:01:58 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
-123
+123---- 
+23/04/16 06:08:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+8---- 
+23/04/16 06:10:45 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+8---- 
+23/04/16 06:10:53 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+8---- 
+23/04/16 06:13:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+1---- 
+23/04/16 08:41:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 2001-04-10 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+23/04/16 08:41:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => David
+    [firstlastname] => asd
+    [secondlastname] => 12
+    [personalId] => 1231321311
+    [email] => ADS@sad.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 08:41:26 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:41:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 10
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:41:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 10
+        )
+
+)
+---- 
+23/04/16 08:41:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 2001-04-10 00:00:00
+    [phone] => 22222222
+    [genre] => m
+    [image] => http://i1097.photobucket.com/albums/g342/David_Ness/profile_zpshfecwufv.png
+)
+---- 
+23/04/16 08:41:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+10---- 
+23/04/16 08:41:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 6
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:41:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 6
+        )
+
+)
+---- 
+23/04/16 08:41:53 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 10
+                    [0] => 10
+                    [PrimerNombre] => David
+                    [1] => David
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => asd
+                    [3] => asd
+                    [SegundoApellido] => 12
+                    [4] => 12
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$S3LifD7E3bjPophaeHlpOeo199OZZIDtPZ/Z.tuTinl4Tw5IN3r9q
+                    [6] => $2y$10$S3LifD7E3bjPophaeHlpOeo199OZZIDtPZ/Z.tuTinl4Tw5IN3r9q
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:41:53 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 08:46:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 2001-04-10 00:00:00
+    [phone] => 21312321
+    [genre] => m
+)
+---- 
+23/04/16 08:46:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => sad
+    [firstlastname] => asd
+    [personalId] => 2313123213
+    [email] => sda@sac.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 08:46:40 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:46:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 11
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:46:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 11
+        )
+
+)
+---- 
+23/04/16 08:46:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 2001-04-10 00:00:00
+    [phone] => 21312321
+    [genre] => m
+    [image] => http://i1097.photobucket.com/albums/g342/David_Ness/profile_zpshfecwufv.png
+)
+---- 
+23/04/16 08:46:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+11---- 
+23/04/16 08:46:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:46:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 7
+        )
+
+)
+---- 
+23/04/16 08:47:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 11
+                    [0] => 11
+                    [PrimerNombre] => sad
+                    [1] => sad
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => asd
+                    [3] => asd
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$Fhn08Tw2lRFmGsHs1dIKY.tfDDTDsubqEFG.qW7h8vH8wMmdGpFw6
+                    [6] => $2y$10$Fhn08Tw2lRFmGsHs1dIKY.tfDDTDsubqEFG.qW7h8vH8wMmdGpFw6
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:47:05 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 08:47:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 2001-04-16 00:00:00
+    [phone] => 11111111
+    [genre] => m
+)
+---- 
+23/04/16 08:47:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => asd
+    [secondname] => asd
+    [firstlastname] => asd
+    [secondlastname] => asd
+    [personalId] => 213213213
+    [email] => 12312@asd.com
+    [password] => boca
+    [repeatPass] => boca
+    [userType] => 2
+)
+---- 
+23/04/16 08:47:59 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:48:00 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 12
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:48:00 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 12
+        )
+
+)
+---- 
+23/04/16 08:48:00 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 2001-04-16 00:00:00
+    [phone] => 11111111
+    [genre] => m
+    [image] => http://i1097.photobucket.com/albums/g342/David_Ness/profile_zpshfecwufv.png
+)
+---- 
+23/04/16 08:48:00 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+12---- 
+23/04/16 08:48:01 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:48:01 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 8
+        )
+
+)
+---- 
+23/04/16 08:48:17 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 12
+                    [0] => 12
+                    [PrimerNombre] => asd
+                    [1] => asd
+                    [SegundoNombre] => asd
+                    [2] => asd
+                    [PrimerApellido] => asd
+                    [3] => asd
+                    [SegundoApellido] => asd
+                    [4] => asd
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$KZaq2yWqjmSgpIXKpaH3VeIXSJFlEpx6TPX/TpyMaK6uEpcXjhYcO
+                    [6] => $2y$10$KZaq2yWqjmSgpIXKpaH3VeIXSJFlEpx6TPX/TpyMaK6uEpcXjhYcO
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:48:17 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 08:48:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 12
+                    [0] => 12
+                    [PrimerNombre] => asd
+                    [1] => asd
+                    [SegundoNombre] => asd
+                    [2] => asd
+                    [PrimerApellido] => asd
+                    [3] => asd
+                    [SegundoApellido] => asd
+                    [4] => asd
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$KZaq2yWqjmSgpIXKpaH3VeIXSJFlEpx6TPX/TpyMaK6uEpcXjhYcO
+                    [6] => $2y$10$KZaq2yWqjmSgpIXKpaH3VeIXSJFlEpx6TPX/TpyMaK6uEpcXjhYcO
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 08:48:21 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+boca
