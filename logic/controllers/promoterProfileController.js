@@ -10,6 +10,14 @@ angular.module('OGTicketsApp.controllers')
 
     $scope.promotor = promotorService.retrievePromotor(promoterId);
 
+	var promise=promotorService.retrievePromotor(promoterId);
+	promise.then(function(data) {
+		$scope.currentPromotor= data.data[0];
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
+
     var sites = siteService.sites;
 
     $scope.events = function(){
