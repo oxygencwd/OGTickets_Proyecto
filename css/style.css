@@ -428,6 +428,10 @@ header span.user-icon{
 display: block;
 }
 
+.space{
+	margin-top: 30px;
+}
+
 .signUpView input[type="submit"], .registrationView input[type="submit"]{
 	background-color: #3598dc;
 	color: white;

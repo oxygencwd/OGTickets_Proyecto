@@ -66,6 +66,19 @@
 			    </div>
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+			      <!-- <div class="col-sm-3 no-padding">
+				      <ul class="nav navbar-nav width100">
+							<li class="dropdown width100">      
+								<div class="dropdown width100">
+								  <button class="width100 dropdown-toggle text-center" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Categorías
+								  <span class="caret"></span></button>
+								  <ul class="dropdown-menu">
+								    <li ng-repeat="category in eventTypesList"><a ng-click="viewCategory(category.id)">{{category.name}}</a></li>
+								  </ul>
+								</div>
+							</li>
+					      </ul>
+			      </div><!-- col-sm-m
 			      <div class="col-sm-3 no-padding">
 				      <ul class="nav navbar-nav width100">
 							<li class="dropdown width100">      
@@ -73,13 +86,13 @@
 								  <button class="width100 dropdown-toggle text-center" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Categorías
 								  <span class="caret"></span></button>
 								  <ul class="dropdown-menu">
-								    <li ng-repeat="eventType in getEventTypeList()"><a ng-click="viewCategory(eventType.id)">{{eventType.name}}</a></li>
+								    <li ng-repeat="category in eventTypesList"><a ng-click="viewCategory(category.id)">{{category.name}}</a></li>
 								  </ul>
 								</div>
 							</li>
 					      </ul>
 			      </div><!-- col-sm-m -->
-			      <div class="col-sm-9 no-padding">
+			      <div class="col-sm-12 no-padding">
 				      <form class="navbar-form navbar-left width100 no-padding" role="search" novalidation>
 				        <div class="form-group width100 no-padding p-relative main-search">
 				          <input type="search" ng-model="search" class="form-control" placeholder="Busca eventos"

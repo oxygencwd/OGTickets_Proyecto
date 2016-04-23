@@ -8,6 +8,7 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 	$scope.eventsList= [];
+	$scope.eventTypesList= [];
 
 
 
@@ -23,6 +24,14 @@ angular.module('OGTicketsApp.controllers')
 	eventService.todayEvents()
 		.then(function(data) {
 			$scope.todayEvents= data.data;		
+		})
+		.catch(function(error) {
+			console.error(error);
+		});
+
+	eventService.getEventTypeList()
+		.then(function(data) {
+			$scope.eventTypesList= data.data;		
 		})
 		.catch(function(error) {
 			console.error(error);

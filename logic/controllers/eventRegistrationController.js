@@ -35,10 +35,8 @@ angular.module('OGTicketsApp.controllers')
 //Funcion del boton de registro de evento, toma los datos del formulario y los envia hacia el servicio, despues recibe la respues y muestra el resultado.
 	$scope.registerEvent=function () {
 		var cUser= $scope.appLoggedUser;
-		console.log(cUser);
 		var userId= cUser.userId;
 		var userType= cUser.userType;
-		console.log(userType);
 		$scope.newEvent.image = picture;
 
 		eventService.registerEvent($scope.newEvent, userId)
