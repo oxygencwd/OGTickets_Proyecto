@@ -1,29 +1,25 @@
 angular.module('OGTicketsApp.controllers')
 .controller('allUsersController', ['$scope','$location', 'userService', function ($scope, $location, userService) {
 
-	$scope.allUsers = userService.allUsersButAdmin();
-
-	$scope.users = userService.users;
-
-	var users = $scope.users;
-
 	$scope.userToDisplay = null; 
 
-	$scope.editActive = function(userId){
-		var user = userService.retrieveUser(userId);
-		var index= users.indexOf(user);
+	$scope.getAllUsersButAdmin = function(){
+		var promise = userService.allUsersButAdmin();
+		promise.then(function (data){
+			$scope.allUsers = data.data;
 
-		if (users[index].active) {
-			users[index].active =false;
-		}else{
-			users[index].active = true;
-		}
+			angular.forEach($scope.allUsers, function(user){
+				user.name = userService.parseName(user);
+			})
 
-		users.splice(index, 1);
+			console.log($scope.allUsers);
 
-		users[index]=user;
+		})
+		.catch(function(error){
+			console.log(error);
+		})
+	};
 
-		userService.setUser(users);
-	}
+	$scope.getAllUsersButAdmin();
 
 }]); //end -controller-
