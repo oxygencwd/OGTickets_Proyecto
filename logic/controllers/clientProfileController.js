@@ -10,6 +10,7 @@ angular.module('OGTicketsApp.controllers')
 	if(loggedUser){
 		loggedUserId= loggedUser.id;
 	};
+	
 
 	//Envia al cliente al formulario de editar datos
 	$scope.editClient= function(){
