@@ -22,7 +22,6 @@ angular.module('OGTicketsApp.controllers')
 	$scope.minAge = dateService.minimunAge18;
 	$scope.maxAge = dateService.maximunAge;
 
-
 	//Funcion del boton de registro promotor, agarra todos los datos del formulario.
 	$scope.promotorRegister=function () {
 		result= promotorService.promotorRegister($scope.newPromotor);

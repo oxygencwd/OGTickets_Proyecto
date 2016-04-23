@@ -11,7 +11,7 @@
 		            <div class="form-group">
 			            <div class="col-sm-6">
 			            	<label for="promotorName">Tipo de promotor:</label>
-			            	<input type="text" class="form-control" id="typePerson" ng-init="newPromotor.typePerson = newPromotor.typePerson || typePersonOptions[0].value" ng-model="newPromotor.typePerson" required placeholder="Nombre de empresa" disabled>
+			            	<input type="text" class="form-control" id="typePerson" ng-init="newPromotor.typePerson = newPromotor.typePerson || typePersonOptions[0].value" ng-model="newPromotor.typePerson" required disabled>
 			            </div>
 			        </div> <!-- form group end -->
 		        </div>
@@ -20,7 +20,7 @@
 		            <div class="form-group">
 			            <div class="col-sm-6">
 			            	<label for="promotorName">Nombre</label>
-			            	<input type="text" class="form-control" name="promotorName" id="promotorName" ng-model="newPromotor.name" required disabled>
+			            	<input type="text" class="form-control" name="promotorName" value="" id="promotorName" ng-model="newPromotor.name" required disabled>
 			            </div>
 			        </div> <!-- form group end -->
 		        </div>
@@ -149,6 +149,7 @@
 		            </div> 
 		        </div>
 			</form>
+			
 		</div>
 	</div>
 </div>
