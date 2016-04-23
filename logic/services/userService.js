@@ -20,13 +20,22 @@ angular.module('OGTicketsApp.services')
 		return defer.promise;
 	};
 
+
 	//RetrieveUser by id
-	var retrieveUser = function(userId){
-		var result= users.filter(function (item) {
-			return item.id== userId;
-			});
-			
-		return result[0];
+	var retrieveUser = function(pId){
+		var defer= $q.defer();
+		var url= 'back-end/index.php/user/getUserById/' + pId;
+
+		$http.get(url)
+		.success(function(data, status) {
+			defer.resolve(data);
+		})
+		.error(function(error, status) {
+			defer.reject(error);
+			$log.error(error, status);
+		});
+
+		return defer.promise;
 	};
 
 	var setUser = function(users){
@@ -142,8 +151,9 @@ angular.module('OGTicketsApp.services')
 
 	//devuelve el usuario loggeado 
 	var getLoggedUser= function () {
-		//var cUser= localStorageService.getAll('loggedUser');
-		var cUser= $cookieStore.get("loggedUser");
+		var cUser= localStorageService.getAll('loggedUser');
+		console.log(cUser);
+		//var cUser= $cookieStore.get("loggedUser");
 		if(cUser){
 			return cUser;
 		}else{
