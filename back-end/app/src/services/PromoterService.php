@@ -67,10 +67,10 @@ tbevento.idEvento as idEvento, tbevento.Nombre as nombreEvento, tbevento.FechaEv
 	                	"promoterId" => $promoter["idPromotor"],
 	                	"name" => $promoter["nombreJuridico"],
 	                	"specializationArea" => $promoter["AreaEspecializacion"],
-	                	"event.id" => $promoter["idEvento"],
-	                	"event.name" => $promoter["nombreEvento"],
-	                	"event.date" => $promoter["FechaEvento"],
-	                	"event.image" => $promoter["Foto"]
+	                	"eventId" => $promoter["idEvento"],
+	                	"eventName" => $promoter["nombreEvento"],
+	                	"eventDate" => $promoter["FechaEvento"],
+	                	"eventImage" => $promoter["Foto"]
                 	];
 	            } 
 
