@@ -5416,3 +5416,417 @@ C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 
 1
 =======
 >>>>>>> b46aff840ef4c5bba7a7cca6abb047ef1e3ecb28
+---- 
+23/04/16 03:17:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+4---- 
+23/04/16 03:59:44 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+9---- 
+23/04/16 03:59:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+9---- 
+23/04/16 04:01:46 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+1---- 
+23/04/16 04:01:49 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+2---- 
+23/04/16 04:01:56 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+4---- 
+23/04/16 04:01:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+5---- 
+23/04/16 04:02:01 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+6---- 
+23/04/16 04:02:04 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+7---- 
+23/04/16 04:02:06 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+8---- 
+23/04/16 04:02:10 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+9---- 
+23/04/16 04:02:14 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+10---- 
+23/04/16 04:02:19 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+11---- 
+23/04/16 04:02:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+11---- 
+23/04/16 04:02:31 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+10---- 
+23/04/16 04:02:32 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+9---- 
+23/04/16 04:07:10 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+3---- 
+23/04/16 04:07:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mata
+                    [3] => Mata
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:07:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 04:08:00 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 2
+                    [0] => 2
+                    [PrimerNombre] => Naty
+                    [1] => Naty
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Mata
+                    [3] => Mata
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                    [6] => $2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:08:00 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 04:13:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+3---- 
+23/04/16 04:22:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+2---- 
+23/04/16 04:29:24 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\PromoterController.php: 24
+Array
+(
+    [typePerson] => personaJuridica
+    [name] => Corazon de Melon
+    [legalId] => 21d33dw24d
+    [email] => corazon@melon.com
+    [specializationArea] => Musica
+    [password] => 123
+    [repeatPass] => 123
+    [phone] => 69696969
+    [address] => Coma mierda
+)
+---- 
+23/04/16 04:29:24 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 337
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:29:24 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 354
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:29:24 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\PromoterService.php: 218
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 1
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:32:16 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 30
+Array
+(
+    [dateBirth] => 1995-12-15 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+23/04/16 04:32:16 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => David
+    [firstlastname] => Guillen
+    [personalId] => 2232322341
+    [email] => david@hot.com
+    [password] => lRcZu
+    [repeatPass] => lRcZu
+    [userType] => 4
+)
+---- 
+23/04/16 04:32:16 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:32:17 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 5
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:32:17 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 5
+        )
+
+)
+---- 
+23/04/16 04:32:17 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 69
+Array
+(
+    [dateBirth] => 1995-12-15 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+23/04/16 04:32:17 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\CashierController.php: 84
+5---- 
+23/04/16 04:32:17 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 97
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 2
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:32:17 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\CashierService.php: 113
+Array
+(
+    [message] => Cashier created
+    [meta] => Array
+        (
+            [id] => 2
+        )
+
+)
+---- 
+23/04/16 04:34:30 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+9---- 
+23/04/16 04:36:40 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+11---- 
+23/04/16 04:46:41 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 47
+Array
+(
+    [name] => David
+    [phoneOne] => 23222312
+    [capacity] => 2000
+    [latitude] => 9
+    [longitude] => 84
+    [address] => DAvid
+    [image] => https://cdn.filepicker.io/api/file/Pg2Rad4Tp6BSxvyyOyfS
+)
+---- 
+23/04/16 04:46:42 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 156
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:55:03 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 47
+Array
+(
+    [name] => asd
+    [capacity] => 23
+    [phoneOne] => 21321321
+    [latitude] => 12
+    [longitude] => 12
+    [address] => 123
+    [image] => 
+)
+---- 
+23/04/16 04:55:03 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 156
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:56:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 47
+Array
+(
+    [name] => asd
+    [phoneOne] => 21321322
+    [capacity] => 123
+    [latitude] => 12
+    [longitude] => 12
+    [address] => 213
+    [image] => 
+)
+---- 
+23/04/16 04:56:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 156
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 9
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 04:58:01 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 47
+Array
+(
+    [name] => asd
+    [phoneOne] => 21321222
+    [capacity] => 123
+    [latitude] => 12
+    [longitude] => 12
+    [address] => 123
+    [image] => 
+)
+---- 
+23/04/16 04:58:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 156
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 10
+            [count] => 1
+        )
+
+)
