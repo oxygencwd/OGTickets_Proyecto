@@ -27,17 +27,18 @@ angular.module('OGTicketsApp.services')
 		return colsArray;	
 	};
 
+
 	var getReserved= function (zoneId, siteId, eventId) {
 		var data={
 			"zoneId": zoneId,
 			"siteId": siteId,
 			"eventId":eventId
 		};
+
 		var defer= $q.defer();
+		var url= 'back-end/index.php/transactions/getReservedSeats';
 
-		var url= 'back-end/index.php/events/getReservedSeats';
-
-        $http.get(url)
+        $http.post(url, data)
         .success(function(data) {
            defer.resolve(data);
         })
@@ -45,14 +46,7 @@ angular.module('OGTicketsApp.services')
             defer.reject(error);
             $log.error(error, status);
         });
-
-
 		return defer.promise;
-		// result = reservedSeatxEventxSite.filter(function (item) {
-		// return item.eventId == eventId && item.siteId == siteId && item.Zoneid== zoneId;
-		// });
-		// var idsList= getReservedIds(result);
-		// return idsList;
     };
 
 
