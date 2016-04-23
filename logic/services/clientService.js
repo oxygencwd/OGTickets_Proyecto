@@ -24,7 +24,7 @@ angular.module('OGTicketsApp.services')
             "dateBirth": dateService.setDateTimeFormat(objClient.dateBirth),
             "phone": objClient.phone,
             "genre": objClient.genre,
-            "picture": objClient.picture
+            "image": objClient.image
         };
         var id;
         var defer= $q.defer();
@@ -177,6 +177,7 @@ angular.module('OGTicketsApp.services')
 		clientRegister:clientRegister,
         retrieveClient:retrieveClient,
         replaceClient:replaceClient,
-        removeOldClient:removeOldClient
+        removeOldClient:removeOldClient,
+        getClientEvents:getClientEvents
 	};
 }]);
