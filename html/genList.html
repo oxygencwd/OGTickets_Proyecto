@@ -18,11 +18,6 @@
 				<div class="container-fluid">
 					<div class="row"><!-- body-row -->
 						<div class="col-md-12">
-							<div ng-show="url==allSites || url==allEveTypes || url==allEventsAdmin">
-								<div  class="width80"><span class="glyphicon glyphicon-ok-circle"></span> Activo</div>
-								<div  class="width80"><span class="glyphicon glyphicon-remove-circle"></span> Inactivo</div>
-							</div>
-
 							<ul class="width80" ng-show="url==promReq">
 								<li ng-repeat= "promotor in promPendingCheck track by $index"><a ng-href="#/promotor-request-info/{{promotor.requestId}}">{{promotor.name}}
 								<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
@@ -30,17 +25,17 @@
 							</ul>
 
 							<ul class="width80" ng-show="url==allSites">
-								<li ng-repeat="site in sitesList track by $index"><a ng-href="#/site-profile/{{site.id}}">{{site.name}} <span ng-show="site.active" class="glyphicon glyphicon-ok-circle"></span><span ng-show="!site.active" class="glyphicon glyphicon-remove-circle"></span>
+								<li ng-repeat="site in sitesList track by $index"><a ng-href="#/site-profile/{{site.id}}">{{site.name}}
 								<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
 							</ul>
 
 							<ul class="width80" ng-show="url==allEveTypes">
-								<li ng-repeat="evType in eventTypes track by $index"><a ng-href="#/event-type-profile/{{evType.id}}">{{evType.name}} <span ng-show="evType.active" class="glyphicon glyphicon-ok-circle"></span><span ng-show="!evType.active" class="glyphicon glyphicon-remove-circle"></span>
+								<li ng-repeat="evType in eventTypes track by $index"><a ng-href="#/event-type-profile/{{evType.id}}">{{evType.name}}
 								<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
 							</ul>
 
 							<ul class="width80" ng-show="url==allEventsAdmin">
-								<li ng-repeat="event in eventsList track by $index"><a ng-href="#/event-profile/{{event.id}}">{{event.name}} <span ng-show="event.active" class="glyphicon glyphicon-ok-circle"></span><span ng-show="!event.active" class="glyphicon glyphicon-remove-circle"></span>
+								<li ng-repeat="event in eventsList track by $index"><a ng-href="#/event-profile/{{event.id}}">{event.name}
 								<span class="p ull-right glyphicon glyphicon-chevron-right"></span></a></li>
 							</ul>
 						</div>
