@@ -11,6 +11,13 @@ angular.module('OGTicketsApp.controllers')
 		loggedUserId= loggedUser.id;
 	};
 	
+	var promise=clientService.retrieveClient(clientId);
+	promise.then(function(data) {
+		$scope.currentClient= data.data[0];
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
 
 	//Envia al cliente al formulario de editar datos
 	$scope.editClient= function(){

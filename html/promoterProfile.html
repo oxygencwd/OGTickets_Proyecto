@@ -12,7 +12,7 @@
 						<div class="col-sm-10">
 							<div class="row">
 								<div class="col-lg-12">
-									<h2 >{{currentPromotor.typePerson}}</h2>
+									<h2 ng-show="newPromotor.typePerson=='personaJuridica'">{{currentPromotor.name}}</h2>
 									<h2 ng-show="newPromotor.typePerson=='personaFisica'">{{currentPromotor.firstname}} {{currentPromotor.firstlastname}}</h2>
 								</div>
 							</div>
