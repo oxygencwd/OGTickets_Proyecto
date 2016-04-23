@@ -10,24 +10,25 @@ angular.module('OGTicketsApp.controllers')
 
     var sites = siteService.sites;
 
-    $scope.events = function(){
-    	var events=promotorService.getPromotorEvents(promoterId);
-		angular.forEach(sites, function(item1) {
-			angular.forEach(events, function(item2) {
-				if(item1.id == item2.siteId) {
-				item2.siteId = item1.name;
-				}
-			});
-		});
-
-		return events;
-    };
+    
 
     $scope.retrievePromotor = function (){
     	var promise = promotorService.retrievePromotor(promoterId);
 		promise.then(function(data) {
 			$scope.currentPromotor= data.data[0];
-			$scope.currentPromotor.name = userService.parseName(currentPromotor);
+			if(!$scope.currentPromotor.name){
+				if ($scope.currentPromotor.firstname && $scope.currentPromotor.secondname && $scope.currentPromotor.secondlastname) {
+					$scope.currentPromotor.name = $scope.currentPromotor.firstname + ' ' + $scope.currentPromotor.secondname + ' ' + $scope.currentPromotor.firstlastname + ' ' + $scope.currentPromotor.secondlastname;
+				}else if ($scope.currentPromotor.firstname && $scope.currentPromotor.secondname){
+					$scope.currentPromotor.name = $scope.currentPromotor.firstname + ' ' + $scope.currentPromotor.secondname + ' ' + $scope.currentPromotor.firstlastname;
+				}else if($scope.currentPromotor.firstname && $scope.currentPromotor.secondlastname){
+					$scope.currentPromotor.name = $scope.currentPromotor.firstname + ' ' + $scope.currentPromotor.firstlastname + ' ' + $scope.currentPromotor.secondlastname;
+				}else if($scope.currentPromotor.firstname){
+					$scope.currentPromotor.name = $scope.currentPromotor.firstname + ' ' + $scope.currentPromotor.firstlastname;
+				}
+			}
+			$scope.events = data.data;
+
 		})
 		.catch(function(error) {
 			console.log(error);
