@@ -30,4 +30,49 @@ Array
             [count] => 1
         )
 
+)---- 
+23/04/16 01:52:51 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+2---- 
+23/04/16 01:53:01 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 1
+                    [0] => 1
+                    [PrimerNombre] => oxyGen
+                    [1] => oxyGen
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => CWD
+                    [3] => CWD
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 1
+                    [5] => 1
+                    [password] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                    [6] => $2y$10$DCFpTK0HAZavFKsosLM6i.vCjiOFiJl4RKY.w0fsmzJ5vT94EbNDS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
 )
+---- 
+23/04/16 01:53:01 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+admin---- 
+23/04/16 01:57:50 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+1---- 
+23/04/16 01:57:53 
+C:\xampp\htdocs\Ari\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+5
