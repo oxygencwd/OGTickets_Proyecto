@@ -108,6 +108,7 @@ angular.module('OGTicketsApp.services')
 // puntos de acceso
 	return{
         getSiteList:getSiteList,
+        getSiteById:getSiteById,
 		registerSite:registerSite,
         getEventSite:getEventSite,
         retrieveSite:retrieveSite,

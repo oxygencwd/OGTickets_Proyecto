@@ -204,6 +204,52 @@ class EventsService {
 
 
 
+    //getEventTypeById
+     public function getEventTypeById($id){  
+        $result=[];
+        $id= trim($id);
+
+        if($this->validation->isValidInt($id)){
+            $id= intval($id);
+
+            $query= "SELECT idTipoEvento, Nombre, Descripcion, Foto
+                FROM tbtipoevento
+                WHERE idTipoEvento= :id";
+
+            // Query params
+            $params = [":id" => $id];
+
+            $getEventTypeResult = $this->storage->query($query, $params);
+
+            $foundRecord = array_key_exists("meta", $getEventTypeResult) &&
+                $getEventTypeResult["meta"]["count"] > 0;
+
+            if ($foundRecord) {
+
+                $result["message"] = "Event type found";
+                $eventTypeList = $getEventTypeResult["data"];
+
+                foreach ($eventTypeList as $type) {
+                    $result["data"][] = [
+                        "id" => $type["idTipoEvento"],
+                        "name" => $type["Nombre"],
+                        "description" => $type["Descripcion"],
+                        "image" => $type["Foto"]
+                    ];
+                } 
+            } else {
+                $result["message"] = "Event type not found";
+                $result["error"] = true;
+            }
+        }else{
+            $result["error"] = true;
+            $result["message"] = "Id is invalid";
+        }
+        return $result;
+    }//end -getEventTypeById-
+
+
+
     /**
      * getEventById
      */
@@ -255,6 +301,7 @@ class EventsService {
                         "eventTypeId" => $event["idTipoEvento"],
                         "eventTypeName" => $event["nombreTipoEvento"],
                         "siteId" => "si0" . $event["idsitio"],
+                        "siteIdNumber" => $event["idsitio"],
                         "siteName" => $event["nombreSitio"],
                         "userId"  => $userId
                     ];

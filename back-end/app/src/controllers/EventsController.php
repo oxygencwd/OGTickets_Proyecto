@@ -42,6 +42,13 @@ class EventsController{
         return $this->eventsService->getEventById($id);
     }
 
+    //getEventTypeById
+    public function getEventTypeById($request) {
+        /** @var Request $request */
+        $id = $request->getAttribute("id", null);
+        return $this->eventsService->getEventTypeById($id);
+    }
+
     public function getEventsByCategory($request){
         /** @var Request $request */
         $id = $request->getAttribute("id", null);

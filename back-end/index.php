@@ -69,6 +69,21 @@ $app->post(
     }
 );
 
+
+/*user/getAllUsers*/
+$app->get(
+    '/user/getAllUsers',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $userController= new App\Controllers\UserController();
+        $result= $userController->getAllUsers($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
 /*RUTAS DE CLIENTE*/
 ///client/validateClientInfo-> validar los datos del cliente
 $app->post(
@@ -233,6 +248,18 @@ $app->get(
         /** @var Response $response */
         $eventsController= new App\Controllers\EventsController();
         $result= $eventsController->getEventById($request);
+        return $response->withJson($result);
+    }
+);
+
+//getEventTypeById
+$app->get(
+    '/events/getEventTypeById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $eventsController= new App\Controllers\EventsController();
+        $result= $eventsController->getEventTypeById($request);
         return $response->withJson($result);
     }
 );
