@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('appController', ['$scope', 'localStorageService', 'BDService', 'userService', function ($scope, localStorageService, BDService, userService) {
+.controller('appController', ['$scope', '$rootScope', 'localStorageService', 'BDService', 'userService', function ($scope, $rootScope, localStorageService, BDService, userService) {
 
 	$scope.init= function () {
 		$scope.appLoggedUser={

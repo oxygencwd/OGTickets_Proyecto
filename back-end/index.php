@@ -109,6 +109,19 @@ $app->post(
     }
 );
 
+
+//user/getUserById
+$app->get(
+    '/client/getClientById/{id}',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $clientController= new App\Controllers\ClientController();
+        $result= $clientController->getClientById($request);
+        return $response->withJson($result);
+    }
+);
+
 /*RUTAS DE CAJERO*/
 //cashier/validateCahierInfo
 $app->post(
@@ -156,6 +169,18 @@ $app->get(
         /** @var Response $response */
         $promoterController= new App\Controllers\PromoterController();
         $result= $promoterController->getRegisterRequestById($request);
+        return $response->withJson($result);
+    }
+);
+
+
+$app->get(
+    '/promoter/getPromoterById/{id}',
+    function($request, $response){
+         /** @var Request $request */
+        /** @var Response $response */
+        $promoterController= new App\Controllers\PromoterController();
+        $result= $promoterController->getPromoterById($request);
         return $response->withJson($result);
     }
 );
