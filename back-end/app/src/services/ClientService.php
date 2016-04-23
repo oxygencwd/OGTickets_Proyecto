@@ -21,6 +21,56 @@ class ClientService{
         $this->dateFormat= new DateTimeService();
 	}
 
+	//getClientById($id)
+     public function getClientById($id){  
+        $result=[];
+        $id= trim($id);
+
+        if($this->validation->isValidInt($id)){
+            $id= intval($id);
+
+            $query= "SELECT tbusuario.idUsuario as userId, tbusuario.PrimerNombre, tbusuario.SegundoNombre, tbusuario.PrimerApellido, tbusuario.SegundoApellido, 
+tbcliente.Foto
+				FROM tbusuario
+				INNER JOIN tbcliente
+				ON tbusuario.idUsuario = tbcliente.TbUsuario_idUsuario
+				WHERE tbusuario.idUsuario = :id";
+
+            // Query params
+            $params = [":id" => $id];
+
+            $getClientResult = $this->storage->query($query, $params);
+
+            $foundRecord = array_key_exists("meta", $getClientResult) &&
+                $getClientResult["meta"]["count"] > 0;
+
+            if ($foundRecord) {
+
+                $result["message"] = "Client found";
+                $clientList = $getClientResult["data"];
+
+                foreach ($clientList as $client) {
+                    $result["data"][] = [
+                        "userId" => $client["userId"],
+                        "firstName" => $client["PrimerNombre"],
+                        "secondName" => $client["SegundoNombre"],
+                        "lastName" => $client["PrimerApellido"],
+                        "secondLastName" => $client["SegundoApellido"],
+                        "image" => $client["Foto"]
+                    ];
+                } 
+            } else {
+                $result["message"] = "Client not found";
+                $result["error"] = true;
+            }
+        }else{
+            $result["error"] = true;
+            $result["message"] = "Id is invalid";
+        }
+        return $result;
+    }//end -getClientById-
+	
+
 	/*validateClientInfo($dateBirth, $phone, $genre);*/
 	public function validateClientInfo($dateBirth, $phone, $genre){
 		$result=[];

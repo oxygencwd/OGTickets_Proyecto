@@ -15,6 +15,15 @@ class ClientController{
         $this->clientService = new ClientService();
     }
 
+
+
+    //getClientById
+    public function getClientById($request) {
+        /** @var Request $request */
+        $id = $request->getAttribute("id", null);
+        return $this->clientService->getClientById($id);
+    }
+
     /**
      * @param request $request
      * @return []
