@@ -92,7 +92,16 @@ angular.module('OGTicketsApp.controllers')
             $scope.seatsDisplay= true;
             $scope.rows= seatsService.getRows(rows);
             $scope.cols= seatsService.getCols(cols);
-            reserved= seatsService.getReserved(zoneId, site, eventId);
+
+            var promise = seatsService.getReserved(zoneId, site, eventId);
+            promise.then(function(data) {
+                reserved= data.data;
+
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
+
             $scope.showMap= false;
 
             sectionId = zoneId;
