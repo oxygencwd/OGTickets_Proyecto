@@ -259,28 +259,10 @@ class EventsService {
                         "userId"  => $userId
                     ];
                 } 
-
-                
-
-               
-                
-                /*
-                SELECT tbusuario.idUsuario
-                FROM tbeventoporpromotor 
-                INNER JOIN tbpromotor
-                INNER JOIN tbusuario
-                ON  tbeventoporpromotor.TbPromotor_idPromotor = tbpromotor.idPromotor
-                AND tbpromotor.TbUsuario_idUsuario = tbusuario.idUsuario
-                WHERE tbeventoporpromotor.TbEvento_idEvento = :eventId
-                 */
-
-
             } else {
                 $result["message"] = "Event not found";
                 $result["error"] = true;
             }
-
-
         }else{
             $result["error"] = true;
             $result["message"] = "Id is invalid";
