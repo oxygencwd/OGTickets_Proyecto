@@ -21,13 +21,12 @@ class UserService {
     }
 
 
-
     //getAllUsers
     public function getAllUsers(){
         $result=[];
-        $query= "SELECT idSitio, Nombre 
-                FROM tbsitio 
-                WHERE Activo=1";
+        $query= "SELECT idUsuario, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Email, TbTipoUsuario_idTipoUsuario
+            FROM tbusuario
+            WHERE idUsuario !=1";
 
         // Query params
         $params = [];
@@ -38,17 +37,23 @@ class UserService {
             $getAllResult["meta"]["count"] > 0;
 
         if ($foundRecords) {
-            $result["message"] = "Sites found";
-            $sites = $getAllResult["data"];
+            $result["message"] = "users found";
+            $users = $getAllResult["data"];
 
-            foreach ($sites as $site) {
+            foreach ($users as $user) {
                 $result["data"][] = [
-                    "id" => $site["idSitio"],
-                    "name" => $site["Nombre"]
+                    "userId" => $user["idUsuario"],
+                    "firstName" => $user["PrimerNombre"],
+                    "secondName" => $user["SegundoNombre"],
+                    "lastName" => $user["PrimerApellido"],
+                    "secondLastName" => $user["SegundoApellido"],
+                    "email" => $user["Email"],
+                    "userType"=>"ut0".$user["TbTipoUsuario_idTipoUsuario"],
+                    "userTypeNumber" => $user["TbTipoUsuario_idTipoUsuario"]
                 ];
             } 
         } else {
-            $result["message"] = "Sites not found";
+            $result["message"] = "users not found";
             $result["error"] = true;
         }
 
