@@ -5,10 +5,19 @@ angular.module('OGTicketsApp.services')
 
 	//All users but admin
 	var allUsersButAdmin= function (){
-		result = users.filter(function (item) {
-            return item.userType !== 'ut01';
-        });
-        return result;
+		var defer= $q.defer();
+		var url= 'back-end/index.php/user/getAllUsers';
+
+		$http.get(url)
+		.success(function(data, status) {
+			defer.resolve(data);
+		})
+		.error(function(error, status) {
+			defer.reject(error);
+			$log.error(error, status);
+		});
+
+		return defer.promise;
 	};
 
 	//RetrieveUser by id
