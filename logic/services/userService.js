@@ -152,7 +152,7 @@ angular.module('OGTicketsApp.services')
 	//devuelve el usuario loggeado 
 	var getLoggedUser= function () {
 		var cUser= localStorageService.getAll('loggedUser');
-		console.log(cUser);
+		
 		//var cUser= $cookieStore.get("loggedUser");
 		if(cUser){
 			return cUser;
