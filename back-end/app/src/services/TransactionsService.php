@@ -146,9 +146,6 @@ class TransactionsService {
 
                                             $result["TransactionxEventIndex"]= $resultIndexTransactionxEvent;
 
-
-
-
 										}else{//9
 											$result["error"] = true;
         									$result["message"] = "transactionCode is invalid";
@@ -301,6 +298,14 @@ class TransactionsService {
         }
         return $result;
     }//createTransactionClientIndex
+
+
+    //seatsSiteEventIndex($eventId, $siteId, $sectionId, $seatsList);
+    // private function seatsSiteEventIndex($eventId, $siteId, $sectionId, $seatsList){
+    // 	foreach ($seatsList as $key => $value) {
+    // 		# code...
+    // 	}
+    // }
 
 
 

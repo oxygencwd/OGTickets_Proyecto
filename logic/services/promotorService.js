@@ -131,11 +131,18 @@ angular.module('OGTicketsApp.services')
 
     //get the events by promotor id
     var getPromotorEvents = function(pId){
-        result = eventService.eventsList.filter(function (item){
-            return item.promoterId == pId;
-        })
+        var defer= $q.defer();
+        var url= 'back-end/index.php/client/getClientEvents/' + userId;
 
-        return result;
+        $http.get(url)
+        .success(function(data, status) {
+           defer.resolve(data);
+        })
+        .error(function(error, status) {
+            defer.reject(error);
+            $log.error(error, status);
+        });
+        return defer.promise;
     }
 
 
