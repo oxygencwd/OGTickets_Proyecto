@@ -2,23 +2,36 @@ angular.module('OGTicketsApp.controllers')
 .controller('siteProfileController', ['$scope', '$routeParams', 'siteService','$location', function ($scope, $routeParams, siteService,$location) {
 	
 	$scope.init = function (){
-    	getSiteList();
+    	//getSiteList();
+    	//$scope.currentSite={};
     }
 
 	var siteId = $routeParams.siteId;
 
+	var promise=siteService.getSiteById(siteId);
+	promise.then(function(data) {
+		$scope.currentSite= data.data[0];
+	})
+	.then(function() {
+		var map = document.querySelector('google-map');
+		map.latitude = $scope.currentSite.latitude;
+		map.longitude = $scope.currentSite.longitude;
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
+
 	// Sets on "currentSite" the whole event by the id
-    $scope.currentSite = retrieveSite(siteId);
+   // $scope.currentSite = retrieveSite(siteId);
     
 	//Envia al administrado al formulario de editar sitio
 	$scope.editSite= function(){
         $location.path('/site-profile-edit/'+siteId);
     };
 
-    var map = document.querySelector('google-map');
+    
 
-    map.latitude = $scope.currentSite.latitude;
-	map.longitude = $scope.currentSite.longitude;
+    
 
 
 

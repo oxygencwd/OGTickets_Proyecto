@@ -36,6 +36,7 @@ angular.module('OGTicketsApp.controllers')
             $scope.currentEvent= event;
             $scope.eventSiteId = event.siteId;
             $scope.eventSiteName= event.siteName;
+            $scope.siteIdNumber= event.siteIdNumber;
 
             //varifica el id del sitios para establacer si el sitio posee mapa de asientos o no.
             if( $scope.eventSiteId!=='si01' &&  $scope.eventSiteId!=='si02' &&  $scope.eventSiteId!=='si03' &&  $scope.eventSiteId!=='si04'){

@@ -19,6 +19,11 @@ class UserController {
         $this->userService = new UserService();
     }
 
+
+    public function getAllUsers(){
+        return $this->userService->getAllUsers();
+    }
+
     /**
      *
      * @param Request $request

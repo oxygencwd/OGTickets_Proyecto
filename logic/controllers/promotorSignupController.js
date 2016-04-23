@@ -19,9 +19,25 @@ angular.module('OGTicketsApp.controllers')
 		}
 	];
 
+
+	$scope.typePersonNumber=null;
+
+	var promise=promotorService.getRegisterRequestById(resquestId);
+	promise.then(function(data) {
+		$scope.currentRequest= data.data[0];
+		if ($scope.currentRequest.typePerson=='personaJuridica'){
+			$scope.newPromotor.typePerson='personaJuridica';
+
+		}else{
+			$scope.newPromotor.typePerson='personaFisica';
+		};
+	})
+	.catch(function(error) {
+		console.error(error);
+	});
+
 	$scope.minAge = dateService.minimunAge18;
 	$scope.maxAge = dateService.maximunAge;
-
 
 	//Funcion del boton de registro promotor, agarra todos los datos del formulario.
 	$scope.promotorRegister=function () {
@@ -37,6 +53,14 @@ angular.module('OGTicketsApp.controllers')
 			$scope.error="Ya existe una cuenta registrada con ese correo electronico";
 		}
 	}; 
+
+	$scope.aceptRequest=function (){
+
+	};
+
+	$scope.dismissRequest=function (){
+
+	};
 
 	//Funcion del boton de solicitud de registro de promotor, recolecta los datos que ingreso el usuario y los envia hacia el servicio.
 	$scope.sendRequest= function () {
