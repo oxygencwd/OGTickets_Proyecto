@@ -3,6 +3,7 @@ angular.module('OGTicketsApp.services')
 
 	//Saves on "eventsList" all the events saved on the database, (active and inactive events.)
     var eventsList = [];
+    var eventsByTypeList = [];
 
 
     //Genera un contador de id

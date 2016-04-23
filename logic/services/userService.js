@@ -56,6 +56,7 @@ angular.module('OGTicketsApp.services')
 		appLoggedUser.isConnected= true;
 
 		var usr= {};
+
 		usr.userId= objUsr.userId;
 		usr.userType= objUsr.userType;
 		usr.navBarName= parseName(objUsr);

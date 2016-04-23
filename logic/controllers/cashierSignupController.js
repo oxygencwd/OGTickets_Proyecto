@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('cashierSignupController', ['$scope','formService','cashierService', '$window', '$location', function ($scope, formService, cashierService, $window, $location) {
+.controller('cashierSignupController', ['$scope','formService','cashierService', '$window', '$location','dateService', function ($scope, formService, cashierService, $window, $location, dateService) {
 
 	$scope.newCashier={};
 		/*
@@ -20,12 +20,8 @@ angular.module('OGTicketsApp.controllers')
 	$scope.success="";
 
 	
-
-	var today = new Date();
-	var minAge = 18;
-	var maxAge = 100;
-	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
-	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
+	$scope.minAge = dateService.minimunAge18;
+	$scope.maxAge = dateService.maximunAge;
 
 	//Funcion del boton de registro de cajero, agarra todos los datos del formulario.
 	$scope.cashierRegister= function () {
@@ -35,14 +31,11 @@ angular.module('OGTicketsApp.controllers')
 			if(data.valid){
 				$scope.newCashier={};
 				formService.clear($scope.formNewCashier);
-				
 				$scope.showPass= password;
 				$scope.openModal("#cashierRegSuccessModal");
 				$scope.success= "Cajero creado con éxito";
 				$scope.error="";
 			}
-
-			$scope.goHome();
 
 		})
 		.catch(function(error) {
@@ -56,7 +49,7 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 	$scope.goHome= function() {
-		$location.path('/admin');
+		$window.location.href = ('#/admin');
 	}
 
 }]);

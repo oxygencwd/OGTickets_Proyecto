@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('clientSignupController', ['$scope','formService','$window','clientService', '$window', '$routeParams', '$location', '$timeout', function ($scope, formService, $window, clientService, $window, $routeParams, $location, $timeout) {
+.controller('clientSignupController', ['$scope','formService','$window','clientService', '$window', '$routeParams', '$location', '$timeout','dateService', function ($scope, formService, $window, clientService, $window, $routeParams, $location, $timeout,dateService) {
 
 	$scope.newClient={};
 		/*
@@ -23,12 +23,8 @@ angular.module('OGTicketsApp.controllers')
 	$scope.error="";
 	$scope.success="";
 	
-	var today = new Date();
-	var minAge = 15;
-	var maxAge = 100;
-	$scope.minAge = new Date(today.getFullYear() - minAge, today.getMonth(), today.getDate());
-	$scope.maxAge = new Date(today.getFullYear() - maxAge, today.getMonth(), today.getDate());
-
+	$scope.minAge = dateService.minimunAge15;
+	$scope.maxAge = dateService.maximunAge;
 
 	var picture = '';
 	//Saves on src the url generated for the picture
@@ -60,8 +56,6 @@ angular.module('OGTicketsApp.controllers')
 		.catch(function() {
 			console.log("Error registrando el nuevo cliente");
 		});
-		
-
 	 }; 
 
 	$scope.openModal= function (modalId) { 

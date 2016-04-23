@@ -31,7 +31,6 @@ angular.module('OGTicketsApp.services')
         
         validateClientInfo(objClient)
         .then(function(data) {
-            console.log(data);
             if(data.valid){
                 validateUserInfo(objClient)
                 .then(function(data) {

@@ -28,7 +28,6 @@ angular.module('OGTicketsApp.controllers')
         eventService.getEventById(eventId)
         .then(function(data) {
             var event= data.data[0];
-            console.log(event);
             $scope.currentEvent= event;
             $scope.eventSiteId = event.siteId;
             $scope.eventSiteName= event.siteName;
@@ -170,9 +169,6 @@ angular.module('OGTicketsApp.controllers')
         $scope.showResume= function() {
             alert("si funiona");
             $scope.resume= true;
-
-
-
         };
         
 
