@@ -5409,4 +5409,7 @@ Array
 ---- 
 23/04/16 01:55:17 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
-admin
+admin---- 
+23/04/16 02:01:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
+1
