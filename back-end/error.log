@@ -4934,6 +4934,7 @@ admin----
 22/04/16 16:46:10 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 430
 7---- 
+<<<<<<< HEAD
 22/04/16 19:03:26 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 430
 4---- 
@@ -4988,3 +4989,41 @@ Array
 22/04/16 20:01:35 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 53
 admin
+=======
+22/04/16 20:23:37 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 412
+4---- 
+22/04/16 20:35:09 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 412
+4---- 
+22/04/16 20:35:51 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 412
+4---- 
+22/04/16 20:39:11 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+4---- 
+22/04/16 20:40:06 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+4---- 
+22/04/16 20:43:34 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+4---- 
+22/04/16 20:44:58 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+4---- 
+22/04/16 21:01:39 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+8---- 
+22/04/16 21:01:52 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+1---- 
+22/04/16 21:02:42 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+5---- 
+22/04/16 21:02:48 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+11---- 
+22/04/16 21:04:58 
+C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 413
+10
+>>>>>>> 1d275285309c9b75a75a5e7850d1b273c9666227
