@@ -351,6 +351,20 @@ $app->post(
     }
 );
 
+$app->post(
+    '/transactions/saveTransaction',
+    function($request, $response){
+        /** @var Request $request */
+        /** @var Response $response */
+        $transactionsController= new App\Controllers\TransactionsController();
+        $result= $transactionsController->saveTransaction($request);
+        return $response->withJson($result);
+    }
+);
+
+
+
+
 
 
 
