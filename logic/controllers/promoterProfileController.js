@@ -1,5 +1,5 @@
 angular.module('OGTicketsApp.controllers')
-.controller('promoterProfileController', ['$scope', '$routeParams', '$location', 'promotorService', 'siteService', function ($scope, $routeParams, $location, promotorService, siteService){
+.controller('promoterProfileController', ['$scope', '$routeParams', '$location', 'promotorService', 'siteService','userService', function ($scope, $routeParams, $location, promotorService, siteService,userService){
 
 	var promoterId = $routeParams.promoterId;
 
@@ -7,8 +7,6 @@ angular.module('OGTicketsApp.controllers')
 	$scope.editPromotor= function(){
         $location.path('/promoter-profile-edit/'+promoterId);
     };
-
-    $scope.promotor = promotorService.retrievePromotor(promoterId);
 
     var sites = siteService.sites;
 
@@ -25,6 +23,19 @@ angular.module('OGTicketsApp.controllers')
 		return events;
     };
 
+    $scope.retrievePromotor = function (){
+    	var promise = promotorService.retrievePromotor(promoterId);
+		promise.then(function(data) {
+			$scope.currentPromotor= data.data[0];
+			$scope.currentPromotor.name = userService.parseName(currentPromotor);
+		})
+		.catch(function(error) {
+			console.log(error);
+		})
+    };
+
     $scope.eventToDisplay = null; 
+
+    $scope.retrievePromotor();
 
 }]); //end -controller-
