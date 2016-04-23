@@ -2,6 +2,8 @@ angular.module('OGTicketsApp.controllers')
 .controller('allEventsController', ['$scope', 'eventService','$routeParams', function ($scope, eventService, $routeParams) {
 	/*displat events, serch bar*/
 
+	var eventTypeId = $routeParams.categoryId;
+
 	$scope.init = function (){
 		//eventsByType();
 		//getEventType();
@@ -9,6 +11,7 @@ angular.module('OGTicketsApp.controllers')
 		//
 		var categoryId = $routeParams.categoryId;
 		isCategory(categoryId);
+		eventsByType();
 	}
 
 
@@ -41,7 +44,19 @@ angular.module('OGTicketsApp.controllers')
 	};
 
 	var eventsByType = function (categoryId){
-		eventService.eventsByType($scope.categoryId);
+		var promise = eventService.eventsByType($scope.categoryId);
+		promise.then(function(data) {
+			var eventListByType = data.data
+			if($scope.categoryId){
+				$scope.hideCatTitle=true;
+			}else{
+				$scope.eventsListByType = eventListByType;
+				$scope.hideCatTitle=false;
+			};
+		})
+		.catch(function(error) {
+			console.log(error);
+		})
 		// promise.then(function(data){
 		// 	var eventListByType = data.data;
 		// })

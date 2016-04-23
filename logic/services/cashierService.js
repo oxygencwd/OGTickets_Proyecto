@@ -46,7 +46,6 @@ angular.module('OGTicketsApp.services')
         
         validateCashierInfo(objCashier)
         .then(function(data) {
-            console.log(data);
             if(data.valid){
                 validateUserInfo(objCashier, password)
                 .then(function(data) {
@@ -84,12 +83,6 @@ angular.module('OGTicketsApp.services')
         
         return defer.promise;    
     };
-
-
-
-
-
-
 
     /**
      * Envia la información correspondiente a la tabla de cajero a validar.
@@ -149,9 +142,6 @@ angular.module('OGTicketsApp.services')
         })
         return defer.promise;
     };
-
-
-
 
 	return{
 		cashierRegister:cashierRegister

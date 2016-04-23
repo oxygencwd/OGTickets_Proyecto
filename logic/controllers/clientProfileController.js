@@ -16,8 +16,6 @@ angular.module('OGTicketsApp.controllers')
         $location.path('/client-profile-edit/'+clientId);
     };
 
-
-
     $scope.events = function(){
 		angular.forEach(transactions, function(item) {
 			var events = transactionService.getEventsFromTransactions(item.eventId);
@@ -26,7 +24,5 @@ angular.module('OGTicketsApp.controllers')
 
 		return events;
     };
-
-    console.log($scope.events());
 
 }]); //end -controller-
