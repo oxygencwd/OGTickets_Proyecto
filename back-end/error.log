@@ -6329,4 +6329,1360 @@ Array
 ---- 
 23/04/16 05:13:55 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 05:46:07 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 47
+Array
+(
+    [name] => as
+    [phoneOne] => 23213213
+    [capacity] => 21
+    [latitude] => 12
+    [longitude] => 12
+    [address] => 1221
+    [image] => http://i1097.photobucket.com/albums/g342/David_Ness/site_zpslsgewcko.jpg
+)
+---- 
+23/04/16 05:46:07 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 156
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 11
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:47:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\SitesController.php: 47
+Array
+(
+    [name] => asd
+    [phoneOne] => 23213221
+    [capacity] => 21
+    [latitude] => 12
+    [longitude] => 12
+    [address] => 123
+    [image] => https://cdn.filepicker.io/api/file/Eg2lmgoiR3SLiL9ZcPdQ
+)
+---- 
+23/04/16 05:47:33 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\SitesService.php: 156
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 12
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 12
+        )
+
+)
+---- 
+23/04/16 05:50:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 12
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:24 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:24 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 13
+        )
+
+)
+---- 
+23/04/16 05:50:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 13
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:25 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 14
+        )
+
+)
+---- 
+23/04/16 05:50:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 14
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:26 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 15
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 15
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 16
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 16
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 17
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 18
+        )
+
+)
+---- 
+23/04/16 05:50:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 18
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:28 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:29 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:29 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 19
+        )
+
+)
+---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 19
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:34 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 20
+        )
+
+)
+---- 
+23/04/16 05:50:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 20
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:35 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 21
+        )
+
+)
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 21
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 343
+ut03---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 607
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 22
+        )
+
+)
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 394
+Array
+(
+    [message] => Event created
+    [meta] => Array
+        (
+            [id] => 22
+        )
+
+    [createEventSiteIndex] => Array
+        (
+            [message] => Index created
+            [meta] => Array
+                (
+                    [id] => 0
+                )
+
+        )
+
+)
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 518
+3---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 501
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 0
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:50:47 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 398
+Array
+(
+    [message] => Index Promoter Event created
+    [meta] => Array
+        (
+            [id] => 0
+        )
+
+)
+---- 
+23/04/16 05:52:44 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 2001-04-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+)
+---- 
+23/04/16 05:52:44 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => David
+    [firstlastname] => Guillen
+    [personalId] => 121323212
+    [email] => asd@sca.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 05:52:44 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:52:45 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 6
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:52:45 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 6
+        )
+
+)
+---- 
+23/04/16 05:52:45 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 2001-04-10 00:00:00
+    [phone] => 88888888
+    [genre] => m
+    [image] => 
+)
+---- 
+23/04/16 05:52:45 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+6---- 
+23/04/16 05:52:46 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 2
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:52:46 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 2
+        )
+
+)
+---- 
+23/04/16 05:53:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 6
+                    [0] => 6
+                    [PrimerNombre] => David
+                    [1] => David
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => Guillen
+                    [3] => Guillen
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$X4PqgV4h29Z9sdmnX.AByO1JDqhgewKlqI5UeVPAElR5xxdaxJiHe
+                    [6] => $2y$10$X4PqgV4h29Z9sdmnX.AByO1JDqhgewKlqI5UeVPAElR5xxdaxJiHe
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:53:02 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 05:55:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 2001-04-09 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+23/04/16 05:55:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asd
+    [personalId] => 2131232132
+    [email] => asd@ads.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 05:55:12 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:55:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 7
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:55:12 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 7
+        )
+
+)
+---- 
+23/04/16 05:55:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 2001-04-09 00:00:00
+    [phone] => 22222222
+    [genre] => m
+    [image] => 
+)
+---- 
+23/04/16 05:55:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+7---- 
+23/04/16 05:55:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 3
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:55:13 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 3
+        )
+
+)
+---- 
+23/04/16 05:55:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 7
+                    [0] => 7
+                    [PrimerNombre] => asd
+                    [1] => asd
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => asd
+                    [3] => asd
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$mKAwAF9B8N/a1Qa8yRgB0e.v48N0mDNb.bLDcTVasEXkSuxmfv0UW
+                    [6] => $2y$10$mKAwAF9B8N/a1Qa8yRgB0e.v48N0mDNb.bLDcTVasEXkSuxmfv0UW
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:55:27 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 05:56:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 2001-04-23 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+23/04/16 05:56:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => asd
+    [firstlastname] => asd
+    [personalId] => 213123212
+    [email] => asd@cas.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 05:56:51 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:56:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 8
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:56:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 8
+        )
+
+)
+---- 
+23/04/16 05:56:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 2001-04-23 00:00:00
+    [phone] => 22222222
+    [genre] => m
+    [image] => http://i1097.photobucket.com/albums/g342/David_Ness/profile_zpshfecwufv.png
+)
+---- 
+23/04/16 05:56:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+8---- 
+23/04/16 05:56:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 4
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:56:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 4
+        )
+
+)
+---- 
+23/04/16 05:56:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 8
+                    [0] => 8
+                    [PrimerNombre] => asd
+                    [1] => asd
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => asd
+                    [3] => asd
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$yMxGWBsEcUbrs8r0pn93Je9hRbNA17yhJc5Dx07bwRWrT3LtwBvA2
+                    [6] => $2y$10$yMxGWBsEcUbrs8r0pn93Je9hRbNA17yhJc5Dx07bwRWrT3LtwBvA2
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 05:56:59 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
+123---- 
+23/04/16 06:01:51 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 45
+Array
+(
+    [dateBirth] => 2001-04-03 00:00:00
+    [phone] => 22222222
+    [genre] => m
+)
+---- 
+23/04/16 06:01:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\UserController.php: 113
+Array
+(
+    [firstname] => sdad
+    [firstlastname] => asdsad
+    [personalId] => 213232322
+    [email] => asd@as.com
+    [password] => 123
+    [repeatPass] => 123
+    [userType] => 2
+)
+---- 
+23/04/16 06:01:52 
+: 
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [count] => 0
+                    [0] => 0
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 06:01:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 202
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 9
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 06:01:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 255
+Array
+(
+    [message] => User created
+    [meta] => Array
+        (
+            [id] => 9
+        )
+
+)
+---- 
+23/04/16 06:01:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 84
+Array
+(
+    [dateBirth] => 2001-04-03 00:00:00
+    [phone] => 22222222
+    [genre] => m
+    [image] => http://i1097.photobucket.com/albums/g342/David_Ness/profile_zpshfecwufv.png
+)
+---- 
+23/04/16 06:01:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\controllers\ClientController.php: 103
+9---- 
+23/04/16 06:01:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 214
+Array
+(
+    [data] => 
+    [meta] => Array
+        (
+            [id] => 5
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 06:01:52 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\ClientService.php: 230
+Array
+(
+    [message] => Client created
+    [meta] => Array
+        (
+            [id] => 5
+        )
+
+)
+---- 
+23/04/16 06:01:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 88
+Array
+(
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [idUsuario] => 9
+                    [0] => 9
+                    [PrimerNombre] => sdad
+                    [1] => sdad
+                    [SegundoNombre] => 
+                    [2] => 
+                    [PrimerApellido] => asdsad
+                    [3] => asdsad
+                    [SegundoApellido] => 
+                    [4] => 
+                    [TbTipoUsuario_idTipoUsuario] => 2
+                    [5] => 2
+                    [password] => $2y$10$Fl20Vm73Gfk6aMTkZHlh7OYVZUwYURHmYb/CS2h0Ha034BbTaslnS
+                    [6] => $2y$10$Fl20Vm73Gfk6aMTkZHlh7OYVZUwYURHmYb/CS2h0Ha034BbTaslnS
+                )
+
+        )
+
+    [meta] => Array
+        (
+            [count] => 1
+        )
+
+)
+---- 
+23/04/16 06:01:58 
+C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
 123

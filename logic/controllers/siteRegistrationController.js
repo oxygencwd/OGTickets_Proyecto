@@ -16,11 +16,15 @@ angular.module('OGTicketsApp.controllers')
 //Funcion del boton de registro de evento, agarra todos los datos del formulario.
 	$scope.registerSite=function () {
 		$scope.newSite.image = picture;
+		if ($scope.newSite.image==false){
+			$scope.newSite.image='http://i1097.photobucket.com/albums/g342/David_Ness/site_zpslsgewcko.jpg';
+		};
 		siteService.registerSite($scope.newSite)
 		.then(function(data) {
 			if(data.valid){
 				$scope.newSite={};
 				formService.clear($scope.formNewSite);
+				console.log
 				$timeout(function() {
 					$scope.openModal("#siteRegSuccessModal");
 					$scope.error="";
