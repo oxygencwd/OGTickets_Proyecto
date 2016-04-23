@@ -63,6 +63,7 @@ angular.module('OGTicketsApp.services')
 //puntos de acceso de los metodos del servicio:
 	return{
 	setCreditCard:setCreditCard,
+    setTransaction:setTransaction,
 	generatePurchaseCode:generatePurchaseCode,
 	generateReservationCode:generateReservationCode,
     transactions:transactions,

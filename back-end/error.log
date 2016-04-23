@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---- 
 22/04/16 15:24:23 
 C:\xampp\htdocs\NATY\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 45
@@ -5413,3 +5414,5 @@ admin----
 23/04/16 02:01:33 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\EventsService.php: 459
 1
+=======
+>>>>>>> b46aff840ef4c5bba7a7cca6abb047ef1e3ecb28
