@@ -13,16 +13,11 @@
 					</form>
 				</div> <!-- headerRow -->
 				<div class="container-fluid">
-					<div class="row">
-						<div  class="width90"><span class="glyphicon glyphicon-ok-circle"></span> Activo</div>
-						<div  class="width90"><span class="glyphicon glyphicon-remove-circle"></span> Inactivo</div>
-					</div>
 					<div class="row"><!-- body-row -->
 
 						<div class="allUsers col-md-6" ng-hide="search.length>0">
 							<ul class="width90">
 								<li ng-repeat="user in allUsers track by $index"><a ng-click=" $parent.userToDisplay = user;">{{user.name}}
-								<span ng-show="user.active" class="glyphicon glyphicon-ok-circle"></span><span ng-show="!user.active" class="glyphicon glyphicon-remove-circle"></span>
 								<span class="pull-right glyphicon glyphicon-chevron-right"></span></a></li>
 							</ul>
 						</div>
@@ -42,10 +37,7 @@
 							<div ng-show="userToDisplay" class="user-info-container width90">
 								<div class="user-item-info">
 									<h3>{{userToDisplay.name}}</h3>
-									<p><strong>id:</strong> {{ userToDisplay.id }}</p>
-								</div>
-								<div class="user-item-info">
-									<p><strong>E-mail:</strong> {{ userToDisplay.email }}</p>
+									<p><strong>id:</strong> {{ userToDisplay.userId }}</p>
 								</div>
 								<div class="user-item-info">
 									<p><strong>Tipo de Usuario: </strong>
@@ -54,7 +46,9 @@
 									<span ng-show="userToDisplay.userType == 'ut04'">Cajero</span>
 									</p>
 								</div>
-								<button class="btn btn-warning center-block" ng-click="editActive(userToDisplay.id)"><span ng-show="!userToDisplay.active">Activar</span><span ng-show="userToDisplay.active">Inactivar</span> usuario</button>
+								<div class="user-item-info">
+									<p><strong>E-mail:</strong> {{ userToDisplay.email }}</p>
+								</div>
 							</div>
 						</div>
 
