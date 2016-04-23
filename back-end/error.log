@@ -30,6 +30,7 @@ Array
             [count] => 1
         )
 
+<<<<<<< HEAD
 )
 ---- 
 22/04/16 15:24:23 
@@ -5297,3 +5298,6 @@ Array
 23/04/16 01:23:47 
 C:\xampp\htdocs\OGTickets_Proyecto\back-end\app\src\services\UserService.php: 96
 admin
+=======
+)
+>>>>>>> 2277292462c7fe01b4daa9f1f17ff8f04a4ea37d

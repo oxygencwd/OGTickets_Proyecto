@@ -43,16 +43,10 @@
 			<og-estadio ng-if="eventSiteId=='si01'"></og-estadio> 
 			<og-palacio ng-if="eventSiteId=='si04'"></og-palacio>
 			<div>
-				<form name="siteAmountForm" class="siteAmountForm" novalidate ng-if="haveMap">
-					<label>Cantidad de asientos / espacios:</label>
-					<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="3" min="1" max="100" ng-model="seatAmount" ng-change="showResume()">
-				</form>
 			</div>
 		</div>
 	</div>
 
-
-	<!-- BUTACAS DE CARMIOL -->
 	<div class="row">
 		<div class="col-md-12" ng-show="seatsDisplay">
 				<div class="content">
@@ -91,17 +85,15 @@
 
 	<div class="row" ng-show="inputPanel">
 		<div class="col-lg-8 col-lg-offset-2">
-			<form name="siteAmountForm" class="siteAmountForm" novalidate ng-if="haveMap" >
+			<form>
 				<label>Cantidad de asientos / espacios:</label>
-				<input name="amount" type="number" class="width100" required ng-minlength="1" ng-maxlength="2" ng-model= "seatAmount" ng-init=0 ng-change="showResume()">
-				<!-- <p ng-bind="seatAmount"></p> -->
-				<!-- <p ng-if="seatAmount!==''">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae recusandae, veniam quaerat accusamus tempore cum enim voluptate beatae amet nam non, quo mollitia a consectetur modi fugit officiis laboriosam nostrum?</p> -->
-  
+				<input type="number" class="width100" name="amountseats" min="1" max="99" ng-model="seatsAmount">
 			</form>
+				
 		</div>
 	</div>
 
-	<div class="row paymentDetailsRow">
+	<div class="row paymentDetailsRow" >
 		<div class="col-xs-12">
 			<h2 class="title text-center" ng-show="resume">Resumen</h2>
 			<div class="buttons">
@@ -121,7 +113,7 @@
 			<div ng-show="buttons">
 		        <!--<button ng-click="showSelected()" class="btn btn-block btn-lg eventsBtnRed">Comprar</button>-->
 		        <button  class="btn btn-block btn-lg eventsBtnRed" data-toggle="modal" data-target="#paymentModal">Comprar</button>
-		        <button class="btn btn-block btn-lg eventsBtnBlue">Reservar</button>
+		        <button class="btn btn-block btn-lg eventsBtnBlue" data-toggle="modal" data-target="#reservationModal" ng-click="getReservation()">Reservar</button>
 			</div>
 		</div>
 	</div>
@@ -236,21 +228,41 @@
 						</div>
 					</div>	
 
-					<div class="col-sm-10 col-sm-offset-1">
-						<div class="reservationInfo" ng-show="successfulPurchase && isReservation">
-							<h4>Resumen de la reservación</h4>
-							<p>Código de Reservación: </p>
-							<p>Cantidad de boletos: {{ticketsNumber}}</p>
-							<p>Evento: {{currentEvent.name}}</p>
-							<p>Lugar: </p>
-							<p>Total a cancelar: {{total | currency: '¢'}}</p>
-							<p>Hora del evento: </p>
-							<p>Asientos: {{purchaseInfo.seats}}</p>
-						</div><!-- row purchaseInfo -->
-					</div>
+					
 				</div><!-- row -->
 
 			</div>
 		</div>
+	</div>
+</div>
+<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel">
+	<div class="modal-dialog" role="document">
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="reservationModalLabel">Reserva exitosa</h4>
+			</div>
+			<div class="modal-body">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div class="reservationInfo">
+						<h4>Resumen de la reservación</h4>
+						<p>Código de Reservación: {{reservationInfo.code}}</p>
+						<p>Cantidad de boletos: {{reservationInfo.ticketAmount}}</p>
+						<p>Evento: {{reservationInfo.eventName}}</p>
+						<p>Lugar: {{reservationInfo.place}}</p>
+						<p>Total a cancelar: {{reservationInfo.total | currency: '¢'}}</p>
+						<p>Hora del evento: {{reservationInfo.datetime}}</p>
+						<p>Asientos: {{reservationInfo.seats}}</p>
+					</div><!-- row purchaseInfo -->
+				</div>
+				<div class="modal-footer">
+					<div class="col-sm-10 col-sm-offset-1">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
 	</div>
 </div>
