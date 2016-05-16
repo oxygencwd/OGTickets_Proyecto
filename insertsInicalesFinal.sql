@@ -39,7 +39,10 @@ VALUES
 INSERT INTO tbusuario
 (PrimerNombre, PrimerApellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario) 
 VALUES 
-('Ariana', 'Aguilar', 125638963, 'ari@cenfo.com', '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS', 3);
+('Ariana', 'Aguilar', 125638963, 'ari@cenfo.com', '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS', 3),
+('Miguel', 'Brenes', 114023963, 'migue@gmail.com', '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS', 3),
+('Daniela', 'Jimenez', 111033943, 'dani@hotmail.com', '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS', 3),
+('Rodrigo', 'Duran', 112462301, 'rodri@gmail.com', '$2y$10$Sf2DbHxDcMzLswtfEKWqSeEoFuFH2qMnpgwsr2tB.SLHKSh/abdeS', 3);
 
 INSERT INTO tbusuario
 (PrimerNombre, PrimerApellido, Cedula, Email, password, TbTipoUsuario_idTipoUsuario) 

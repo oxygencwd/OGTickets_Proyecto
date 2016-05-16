@@ -35,6 +35,9 @@ angular.module('OGTicketsApp.controllers')
 	//Funcion del boton de registro de cliente, toma todos los datos del formulario y los envia hacia el clientService.
 	$scope.clientRegister=function () {
 		$scope.newClient.image = picture;
+		if ($scope.newClient.image==false){
+			$scope.newClient.image='http://i1097.photobucket.com/albums/g342/David_Ness/profile_zpshfecwufv.png';
+		};
 		clientService.clientRegister($scope.newClient)
 		.then(function(data) {
 			if(data.valid){

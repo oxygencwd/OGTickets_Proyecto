@@ -38,7 +38,9 @@ angular.module('OGTicketsApp.controllers')
 		var userId= cUser.userId;
 		var userType= 3;
 		$scope.newEvent.image = picture;
-
+		if ($scope.newEvent.image==false){
+			$scope.newEvent.image='http://i1097.photobucket.com/albums/g342/David_Ness/event_zpsczmpqtzr.jpg';
+		};
 		eventService.registerEvent($scope.newEvent, userId)
 		.then(function(data) {
 			console.log(data);
