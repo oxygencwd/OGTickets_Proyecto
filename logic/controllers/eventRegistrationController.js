@@ -36,11 +36,12 @@ angular.module('OGTicketsApp.controllers')
 	$scope.registerEvent=function () {
 		var cUser= $scope.appLoggedUser;
 		var userId= cUser.userId;
-		var userType= cUser.userType;
+		var userType= 3;
 		$scope.newEvent.image = picture;
 
 		eventService.registerEvent($scope.newEvent, userId)
 		.then(function(data) {
+			console.log(data);
 			if(data.valid){
 				$scope.newEvent={};
 				formService.clear($scope.eventRegistrationForm);
